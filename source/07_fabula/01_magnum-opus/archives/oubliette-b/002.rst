@@ -1,172 +1,68 @@
 .. TITLE: Magnum Opus
 .. SECTION: Archives
-.. SUBSECTION: Oubliette B: The Capital Reliquary
+.. SUBSECTION: Oubliette B
 
-.. _oubielette-b-002:
+.. _oubliette-b-002:
 
-Post Office Field Reports
--------------------------
+Mysterium Hyperboreum: Sive, De Spiritu Mundi in Materia Spitsbergensi Captivo
+------------------------------------------------------------------------------
 
 .. important::
 
-    The following documents were obtained from the records of the United States Postal Service, with permission from the acting Postmaster General. 
+    The following document was retrieved from the Archivio Apostolico Vaticano.
 
---------------------------------
-Status Report: January 9th, 1837
---------------------------------
+**A Private and Faithful Relation touching the Strange Nature of the Luminous Nitre of the North**
 
-Albany, NY
+*Humbly submitted to the Feet of His Holiness, Mutio Vitelleschi, by his most loyal and unworthy servant, Kenelm Digby, Knight, in the year of the Lord Jesus Christ, 1641.*
 
-**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
+Pax Christi.
 
-The second I got off the barge, I hated this goddamn place. I hated it before I knew it existed. I hated it in the womb, I tell you. I know you're reading this, Billy. Probably laughing, too. Truly, from the bottom of my heart, go fuck yourself, you ugly son of a bitch.
+I apologize beforehand for the length of this missive, but in writing these words, I continually found them lacking the substance they required until I introduced the personal element. Your Holiness is one of seven individuals that knows the nature of my operations in England; I have thus found myself compelled to detail not only the actual events that have occurred, but also my state of mind and thoughts during the time in question, since Your Holiness is perhaps the only person in the world capable of comprehending their significance. I have come to believe through subsequent analysis the mental variable is vital to understanding the course of events. 
 
-You'd stand out worse than me with that mug of yours. Everybody here's got clean boots and stiff collars. The dames pretend they don't even see you. The West Side ain't never seemed so far than it does right now. Everybody's so damn pretty, it's infuriating. I might as well be strolling down the street in my britches the looks I get. Like I got two heads or something.
+So I shall attempt to start at the beginning, though that is no easy task; There are many beginnings, as you well know, to any story. While I was officially inducted into the Society of Jesus when I ascended from the Mithraeum beneath the holy basilica on my fifteenth birth year, you are no doubt aware the sacrifice my father made for the Order when I was but a boy. The true beginning of this story can be traced to a single day: the day my father was dragged in front of a roaring Anglican crowd. It would be unseemly to disgrace this letter to Your Holiness with the barbaric details of his execution. Suffice to say, even when presented with his own beating heart, my father's faith in the Order never faltered. If I could have but a tenth of his honor, then that would be ten times the quantity alloted to the Protestant devils.
 
-Every house been here for two hundred years or more, got some story. Everywhere you turn, you find another spot Alexander Hamilton took a shit before writing the Declaration of Independence. Like I'm supposed to care. If that ain't enough, try getting a drink around here. All anyone will talk about is van Buren. Apparently, he's from here and now everybody who ever said a word to him got it in their heads they're some big shot. 
+I have therefore dedicated the entirety of my life to uprooting this blasphemous weed from the soils of England. Many years I have labored and many hardships I have suffered, but always I have drawn strength from my father's memory and his unwavering faith. Though I admit the deception has taken its toll, turning every friend into a potential enemy, never once have I strayed from the path set before me. Even when the Lord took from me my dear Venetia and left me as broken as shattered glass, even then, fallen into the depths of my grief, I still faithfully executed every order received by Your Holiness. You will understand, then, the astonishment with which I received your previous letter.
 
-Anyway, I'll start casing the place tomorrow after I get settled in. Be sure you tell Billy I said he was ugly.
+It is only now the seeds we carefully planted over these long decades have begun to sprout and bear fruit; The fool on the throne has cut off his right hand with the execution of Wentworthl; Meanwhile, Henrietta is confident the Lords of the Pale will soon raise an army beneath the banner of Rome. When I left for France in the summer, the hysteria in London had only just begun. The kingdoms teeter on the edge of chaos. The moment we have been crafting in secret, for which we have sacrified everything, has finally arrived.
 
-- Field Agent Maldoon
+Yet your letter informed me I was to go to Saint-Jean-de-Luz to meet a Basque whaler and gather information on Dutch activity in the Arctic Sea. Even in my wildest imaginings, I could not have conceived a stranger request at so pivotal a moment. I confess that I doubted Your Holiness and thought perhaps you had gone mad. To abandon our plans at such a critical juncture and chase the rumors of sailors seemed nothing short of lunacy. With the benefit of hindsight, it is now clear Your Holiness was acting as a vessel for the Lord, and I am shameful for ever having nurtured such thoughts.
 
-.. list-table:: Weekly Expenses
-  :widths: 15 15
-  :header-rows: 1
+I should have seen the threads of providence at once. Saint-Jean-de-Luz was the sanctuary where the Order sheltered me while my father's head still rotted upon the heathen's spike. It was here that I first met Your Holiness, in my darkest hour. It was here I received my holy mission in sight of my brothers, here where I wet the blade of our Order with my blood in sacred vow. And it is here, at the culmination of my life's work, where the Lord has called me once again to bear witness.
 
-  * - Item
-    - Amount
-  * - Hotel 
-    - $8
-  * - Booze
-    - $6
-  * - Food
-    - $2.50
-  * - Whores 
-    - $5
+Upon arrival, I met our contact along the cobbled streets of the harbor. Father Pere Jean de Lohobiague provided the full report on the petient whaler. The confession contains extraordinary claims. It is best to read the whaler's words for yourself.
 
----------------------------------
-Status Report: January 16th, 1837
----------------------------------
+.. topic:: The Confession of Esteban Sopite
 
-Albany, NY
+    **Fr. Pere**: My son, what brings you here today?
 
-**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
+    **Esteban**: I confess to almighy God that I have greatly sinned in my thoughts and in my words, in what I have done and in what I have failed to do; through my fault, through my fault, through my most grievous fault; therefore I ask Mary ever-Virgin, all the Angels and Saints, to pray for me to the Lord our God. 
 
-Something definitely ain't right, I'll say that much. Might not be what we're after, but it definitely stinks.
+    **Fr. Pere**: The Lord shall know of your suffering. Tell me, my son, what sins have you committed?
 
-I went for a surprise inspection and the place was filled with dandies. They was in the middle of talking about something and stopped soon as I came through. Kept looking at me like I was interrupting some secret meeting. Solomon introduced us. A bunch of newspaper men hanging out in the post office mailroom, just your typical Tuesday afternoon. Seemed like a big wig by the name of Weed was running things. 
+    **Esteban**: I have--I have killed a man, father.
 
-Not sure how much Solomons knows. I told him who I was, but he didn't seem to much care. He showed me around the whole operation without asking to see my card or nothing. Didn't know what I was getting myself into or I might have declined. He shuffles around with a cane so slow I didn't know we'd ever be done. Man's got six musket balls rattling around in his chest, way he tells it. Only reason I know is he told me so three different times. He prattled on the whole time. He sure is good at saying a lot without saying nothing. It's a family trait, I'd wager. 
+    **Fr. Pere**: Who?
 
-The operation's nothing special. Usual fare. Twenty clerks, give or take, sorting and stacking letters. Nothing out of the ordinary, as far as I can tell.
+    **Esteban**: I don't know.
 
-I've been watching the place day and night for a week, but I don't see no evidence of any smuggling operation. The guy's crooked, that's for sure, but he's careful. This one might take a while.
+    **Fr. Pere**: How did this happen? 
 
-- Field Agent Maldoon
+    **Esteban**: I'm not sure, father. It hasn't happened yet. 
 
-.. list-table:: Weekly Expenses
-  :widths: 15 15
-  :header-rows: 1
+    **Fr. Pere**: I do not understand.
 
-  * - Item
-    - Amount
-  * - Hotel 
-    - $8 
-  * - Booze
-    - $8
-  * - Food
-    - $3.50
+    **Esteban**: I know, father. It doesn't make sense to me either, but I know it to be true. I saw him die and my hands were covered in his blood.
 
----------------------------------
-Status Report: January 23rd, 1837
----------------------------------
+    **Fr. Pere**: You are speaking madness. Slow down, collect yourself and tell me what has happened to you.
 
-Albany, NY
+    **Esteban**: Of course, father. You're right. 
 
-**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
+    TODO 
 
-Got a gut feeling I'm chasing down. Solomon's got a brother. Apparently he's the richest stiff the state's ever known. Big politican, too. There's a portrait of 'em in every library and public office. He's got his knubby fingers in everything over here, even some fancy school up on the northside. One thing I learnt back in Mud City, if you're looking for a crime, you're looking for a politician. 
+    **Fr. Pere**: Ego te absolvo a peccatis tuis in nomine Patris et Filii et Spiritus Sancti.
 
-They say the old man's near death, though. Nobody expects him to live out the year. Another thing I learned back on the West Side, the rats come crawling out as soon as the body hits the ground. 
+.. IN PROGRESS: The murder happens three days later. Digby finds Esteban before his execution and takes his final confession.
 
-- Field Agent Maldoon
+.. IN PROGRESS: While in exile in 1641, he is dispatched to investigate a pentient report from a Basque whaler who confessed he had witnessed unnatural phenomenon in the Dutch Spitsbergen whaling colony. Septentrional Zone.
 
-.. list-table:: Weekly Expenses
-  :widths: 15 15
-  :header-rows: 1
-
-  * - Item
-    - Amount
-  * - Hotel 
-    - $8 
-  * - Booze
-    - $6
-  * - Food
-    - $2.15
-
----------------------------------
-Status Report: January 30th, 1837
----------------------------------
-
-Albany, NY
-
-**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
-
-Give this to Preston and don't let the squirelly fuck out of your sight til you're sure he's read it. Tell him I ain't coming back til I get my raise. I got the filthy fuckers. Well, I ain't *got-him* got him, but I found the thread to pull to get him.
-
-I went to check out that school I told you about. It's called the Renssalaer Institute, wouldn't you believe it. Never would have guessed. Anyway, there I am, getting the campus tour from this skirt, when who should pull up in their stagecoach? That's right, the United States Postal Service. They must've unloaded twenty crates right in front of me. I asked the boys what they were up to. Of course, they said they's delivering the mail. Yeah, but whose? It don't take no genius.
-
-Oh, but it don't end there, boys. Them crate's was going into a building called Winslow Chemical Laboratory. A real stuck-up air about the place, filled to the brim with fops and easy marks. So, I stroll on up to the desk, easy as you please, and ask the nice man on duty what's inside the boxes them boys are delivering. He tells me, "Cumberland Graphite". I don't rightly know what that is, but it ain't textbooks that's for damn sure. 
-
-.. list-table:: Weekly Expenses
-  :widths: 15 15
-  :header-rows: 1
-
-  * - Item
-    - Amount
-  * - Hotel 
-    - $8 
-  * - Booze
-    - $3.50
-  * - Food
-    - $2.05
-
-.. IN PROGRESS
-
----------------------------------
-Status Report: February 7th, 1837
----------------------------------
-
-Albany, NY
-
-**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
-
-Lotta stuff going in, but nothing coming out. Stagecoaches seem to be making deliveries on a weekly basis. 
-
-What's more, them newspaper boys show up at Solomon's office on the daily. That's just the ones I know. Plenty more top hats going in and out all the time I can't place. Starting think ol' Solomon's got his thumb in more than one pie. 
-
-.. list-table:: Weekly Expenses
-  :widths: 15 15
-  :header-rows: 1
-
-  * - Item
-    - Amount
-  * - Hotel 
-    - $8 
-  * - Booze
-    - $2.50
-  * - Food
-    - $1.85
-
-----------------------------------
-Status Report: February 14th, 1837
-----------------------------------
-
-Albany, NY
-
-**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
-
-Unless  I ain't no scientist, but something don't add up here. They got their third delivery, bringing the total up to sixty cases or thereabout. They ain't burning nothing far as I can tell. Unless they got tunnels in that building, they are accumulating quite a stock pile of that graphite stuff. Pretty soon it'll be pouring out the windows.
-
-.. IN PROGRESS
- 
+.. IN PROGRESS: The Basque details the mining operation the Dutch have set up beneath Spitsbergen. The material.

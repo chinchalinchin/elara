@@ -1,23 +1,23 @@
 .. TITLE: Magnum Opus
-.. SECTION: Archive
-.. SUBSECTION: Oubliette C: Renselaerwyck Reliquary
+.. SECTION: Archives
+.. SUBSECTION: Oubliette C: The Capital Reliquary
 .. TABLE OF CONTENTS:
-.. - 000: Journal of Captain Ryckert van Rensselaer
-.. - 001: Being An Account of Nicolaes van Rensselaer's Prophecy to the exiled King, Charles II
-.. - 002: The Correspondences of Stephen van Rensselaer
-.. - 003: Notes from Joseph Henry's Lectures
-.. - 004: Centennial Exposition Flyer
-.. - 005: The Correspondences of Killaen Maunsell van Rensselaer
+.. - 003: Illustrations of Masonry
+.. - 004: Police Report Concerning the Death of William Morgan
+.. - 005: Post Office Field Reports
+.. - 006: The Coriolis File
+.. - 007: Falkland Islands Dispatch
+.. - 008: The Euphemia Experiments
 
 .. _oubliette-c:
 
-Oubliette C: Renselaerwyck Reliquary
-====================================
+Oubliette C: Capital Reliquary
+==============================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Renselaerwyck  eliquary
-   
+   :caption: Capital Reliquary
+
    000
    001
    002

@@ -1,9 +1,9 @@
 .. TITLE: Magnum Opus
 .. SECTION: Archives
-.. SUBSECTION: Oubliette D: Armilus Reliquary
+.. SUBSECTION: Oubliette E: Armilus Reliquary
 .. SUBSUBSECTION: Notice of Discovery Production
 
-.. _oubliette-d-discovery-001:
+.. _oubliette-e-discovery-001:
 
 Document 001: Mesmeria van Rensselaer's Harddrive
 -------------------------------------------------

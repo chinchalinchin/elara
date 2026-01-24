@@ -1,75 +1,66 @@
 .. TITLE: Magnum Opus
-.. SECTION: Archive
-.. SUBSECTION: Oubliette C: van Renselaer Reliquary
+.. SECTION: Archives
+.. SUBSECTION: Oubliette C: The Capital Reliquary
 
-.. _oubliette-c-003:
+.. _oubielette-c-003:
 
-Notes from Joseph Henry's Lectures 
-----------------------------------
+The Coriolis File
+-----------------
 
-**Day 1**
+.. note::
 
-(*Brief intro, thank Stephen.*)
+    These records were obtained from the public databases of the Office of Naval Intelligence, made available pursuant to statute § 33(a) of the Freedom of Data Act. All information has been sanitized and aligned according to the latest model censor guidelines published by the National Institute of Standards and Technology.
 
-Good evening, gentlemen. I would like to thank Stephen for the opportunity to present my findings to the larger group. Moreover, I would like to thank everyone present for the opportunity to examine and study the device you have constructed. It is truly remarkable. I have pondered your findings for many nights. As requested, I believe I have found the theoretical underpinnings of the phenomenon you have discovered. From this, I will suggest several ways to improve and scale your operations.
+**TOP SECRET EYES ONLY, COPY 1 OF 3**
 
-I start by positing to you a theory. The core principle that motivates the Fulminated Loadstone is a hitherto unknown relation that I shall term the Axiom of Unity. It may be stated as follows: Motion, Ponderable Matter and Galvanic Fluid are convertible states of matter. By rotating the Fulminated Loadstone, we wind the aether around its molecular lattice, condensing from its circular motion a temporary mass. Upon reaching a critical threshold, this mass collapses into electrical tension. 
+**DEPARTMENT OF THE NAVY OFFICE OF THE CHIEF OF NAVAL OPERATIONS WASHINGTON 25, D.C.**
 
-To make these notions more precise, we begin with the foundations of Natural Law, and the assumptions we must revise to account for the existence of the Loadstone. The Mechanics of Newton assume the Ponderable Matter is constant. For the Loadstone, however, its Mass is a function of its Verticity. Our experimental data suggest,
+**DATE**: 24 February 1947 
 
-(*Be sure to number on chalkboard*)
+**FROM**: Rear Admiral R.H. Cruzen, Commander, Task Force 68 
 
-.. math::
+**TO**: Fleet Admiral C.W. Nimitz, Chief of Naval Operations 
 
-    M(\omega) = M_0 + \gamma \cdot \omega^2 \quad (1)
+**VIA**: The Secretary of the Navy
 
-Where :math:`M_0` is the Loadstone's initial mass, :math:`\omega` is its Verticity and :math:`\gamma` is the Coefficient of Aetheric Friction. As we know from Newton, the moment of the Loadstone can be approximated by,
+**SUBJECT**: AFTER-ACTION REPORT: LOSS OF SPECIAL TASK GROUP 68.9 (PROJECT "CORIOLIS")
 
-.. math::
+**SUMMARY OF INCIDENT** 
 
-    I = \frac{2}{5} \cdot M_0 \cdot r^2 \quad (2)
+At 0800 hours ZULU on 19 February 1947, Special Task Group 68.9, consisting of USS Sennet (SS-408), USS Threadfin (SS-410), and the auxiliary tender USS YW-125, initiated the scheduled field test of the CORIOLIS device within the anchorage of Port Foster, Deception Island. Activation occurred at 0801. Telemetry indicates the device achieved target RPM immediately. At T-plus-5 seconds, the localized geological structure of the caldera floor underwent catastrophic thixotropic failure (liquefaction). The seabed lost structural integrity. All three vessels lost buoyancy due to extreme water aeration and the collapse of the bay floor. Vessels were observed to submerge vertically. Total submersion was complete by T-plus-15 seconds.
 
-Where :math:`r` is its radius. Thanks to the discoveries of Eaton and team, we know as we spin the Loadstone, its mass increases over time, :math:`t`. Hitherto this has been done through a gyroscopic device and handcranks. Tomorrow I shall detail my schematics for an engine that takes the basic principles you have unveiled and applies them on an industrial scale.
+**CASUALTY REPORT**
 
-But I get ahead of myself. To accelerate the Loadstone, we apply torque. The Second Law of Newton tells us Torque, :math:`\tau`, is equal to the time fluxion of Angular Momentum,
+- Vessels Lost: 3
+- Personnel MIA/Presumed KIA: 194 Officers and Enlisted men.
+- Survivors: 0 (from surface vessels).
 
-.. math::
+**WITNESS STATUS AND CONTAINMENT** 
 
-    \tau = \frac{dL}{dt} = \frac{d(I \cdot \omega)}{dt} \quad (3)
+Visual confirmation was provided by a Sikorsky HO3S-1 rotorcraft (BuNo 12256), launched from USS Burton Island prior to the event for perimeter ice-spotting. The craft was piloted by Lt. Cmdr. :redacted:`REDACTED`
 
-Now, here is where our theory begins to depart from the orthodox, for :math:`I` is usually treated as a constant and factored out of the fluxion, but as the Fulminated Loadstone clearly shows and the Axiom of Unity posits, this assumption cannot be justified. Therefore, we expand this rule with the methods of Cauchy and Lagrange,
+The aircraft effected an emergency landing at the Hektor Whaling Station ruins (Whalers Bay) following the incident. The pilot was intercepted by British personnel attached to FIDS "Base B." The pilot was in a state of severe shock and reportedly vocalized the nature of the sinking to foreign nationals. 
 
-.. math::
+A recovery team from USS Philippine Sea has secured the pilot. He is currently under sedation in the brig. Recommendation is immediate transfer to Bethesda Naval Hospital for psychiatric evaluation followed by medical retirement. 
 
-    \tau = I \cdot \frac{d\omega}{dt} + \omega \cdot \frac{dI}{dt} \quad (4)
+Diplomatic cables have been dispatched to London. The narrative provided to Base B personnel is that the pilot was suffering from hypoxia and hallucinations. They have been strongly advised that the area is chemically hazardous due to "volcanic venting."
 
-This is the key principle that governs the device: rotation must overcome not only the inertial force of the Loadstone, :math:`I \cdot \frac{d\omega}{dt}`, but also the rate at which moment accumulates, :math:`\frac{dI}{dt}`!
+**THE COVER STORY (OPERATION "WHITEOUT")** 
 
-Combining Equations 3 and 4, we arrive at the formula describing the Torque Load of the Fulminated Loadstone,
+To preserve the secrecy of the CORIOLIS technology and prevent Soviet inquiry, the following official narrative is effective immediately:
 
-.. math::
+The vessels were lost during a severe katabatic storm while attempting to navigate Neptune’s Bellows. High seas and low visibility resulted in a collision with Ravn Rock, followed by a boiler explosion on the tender. The depth of the water and the "dangerous volcanic currents" make salvage impossible. The site is designated a War Grave. Families will be notified via standard telegram. Casualty assistance officers are instructed to emphasize the "heroic nature of polar exploration."
 
-    \tau = \frac{2}{5} \cdot r^2 \cdot [(M_0 + 3 \cdot \gamma \cdot \omega^2) \cdot \frac{d\omega}{dt}]
+**GEOLOGICAL AFTERMATH**
 
-As can be seen, the force of Aetheric Friction grows with the square of Verticity. Therefore, to achieve :strike:`saturation` (*don't say that*) "citrinitas", the device must overcome an inertial threshold. The material within the Fulminated Loadstone is the first empirical evidence of the luminous aether!
+The device appears to have fused with the caldera floor. Soundings taken 12 hours post-event indicate the harbor depth has increased by 40 fathoms in the central sector. The seabed has re-solidified. There is no wreckage visible.
 
-(*Pause*)
+**RECOMMENDATIONS**
 
-This in and of itself is enough to shake the world of natural philosophy to its core, but this is merely prologue to the real revolution that Eaton and his team have enabled. 
+Port Foster is to be removed from all standard navigational charts as a safe anchorage. Mark as "Magnetic Anomaly / Unsurveyed." Release rumors through channels that the Sennet and Threadfin were transferred to the Turkish Navy under secret lend-lease, to explain their disappearance from registries.
 
-.. The Fixation Modulus: :math:`\mathfrak{F}`, the maximum density of condensed aether the loadstone can sustain.
-.. \omega_c (critical verticity): The speed at which :math:`M(\omega)` reaches this saturation point.
+Despite the incident and coverup, Project CORIOLIS is to be considered a resounding success.
 
-.. Once :math:`\omega > \omega_c`, the mass locks at :math:`M_max`. The term :math:`\frac{dM}{dt}` drops to zero, replaced instantaneoulsy by "Inductive Electrogenesis".
+- R.H. Cruzen Rear Admiral, USN Commander, Task Force 68
 
-.. The excess Vis Viva is shunted into the commutator.
-
-.. :math:`i = \alpha \cdot \omega`, where :math:`\alpha` is the conductivity of the interface.
-
-.. math:`P \propto i^2 \propto \omega^2`
-
-.. Produces more electricity than steam used to power it.
-
-.. Temperature drops around device when in use. "Latent caloric absorption"
-
-.. The device must be sealed in a graphite and lead box to prevent "Atmospheric Caloric Potential" from being leeched.
+**TOP SECRET EYES ONLY, DESTROY AFTER READING**

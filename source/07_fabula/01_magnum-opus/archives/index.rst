@@ -10,7 +10,7 @@ Father died in blinding pain. I held his hand at the end, when the last convulsi
 
 The doctors said he had past the point of no return weeks prior, that it was a miracle he still clung to life, but I failed to see anything miraculous about his condition. To me, it appeared opposite. I had read the Authority's report, that he fallen through a collapsed tunnel beneath the Pedreira and broken his respirator. By the time anyone could get to him, he had been inhaling the unfiltered clouds of fungal spores that pooled in the underground mines for hours. 
 
-They showed me the sonograms, the acoustic maps that charted the progression of the infection. Sterile black and white photographs carouselled across the screens, an expanding web of nodes that ate through his lungs and travelled up his spine to make its home in his brain. Towards the end, they stopped bringing me updates. 
+They showed me the sonograms, the acoustic maps that charted the progression of the infection. Sterile black and white photographs carouselled across the screen, an expanding web of nodes that ate through his lungs and travelled up his spine to make its home in his brain. Towards the end, they stopped bringing me updates. 
 
 .. IN PROGRESS
 
@@ -32,3 +32,4 @@ What else do we have but words to hold our loved ones after they die?
    oubliette-b/index
    oubliette-c/index
    oubliette-d/index
+   oubliette-e/index

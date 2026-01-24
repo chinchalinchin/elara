@@ -1,12 +1,12 @@
 .. TITLE: Magnum Opus
 .. SECTION: Archives
-.. SUBSECTION: Oubliette A: Armilus Reliquary
+.. SUBSECTION: Oubliette E: Armilus Reliquary
 .. SUBSUBSECTION: Notice of Discovery Production
 .. TABLE OF CONTENTS:
 .. - 000: Mesmeria Van Rensselaer Interrogation
 .. - 001: Mesmeria van Rensselaer's Harddrive
 
-.. _oubliette-d-discovery:
+.. _oubliette-e-discovery:
 
 ==============================
 Notice of Discovery Production

@@ -1,491 +1,274 @@
 .. TITLE: Magnum Opus
-.. SECTION: Archive
-.. SUBSECTION: Oubliette C: van Renselaer Reliquary
+.. SECTION: Archives
+.. SUBSECTION: Oubliette C: The Capital Reliquary
 
 .. _oubliette-c-000:
 
-Journal of Captain Ryckert van Renssalaer
------------------------------------------
+Illustrations of Masonry
+------------------------
 
------
-March
------
+.. important::
 
-.. epigraph::
+    This manuscript was published in 1826 and had a circulation of less than two hundred copies. The last remaining copy was obtained from the Batavia Public Library and scanned into the Library of Congress.
 
-    Father and Johannes [#oubliette_c_000]_ watched from the crowds as the procession boarded the ferry for Texel today. Amidst the cheering, they alone bore the solemn faces of the grieving. As the bands played and the ale was poured, we exchanged our final, silent words. Mother, true to her promise, was not present. 
+---------
+Chapter 3
+---------
 
-    Beyond my perfunctory appearance, I could not bring myself to participate in the pagentry and festivities that accompany the inauguration of this voyage. The recruits enjoyed the attention their new positions afforded them well enough, while even the officers were given to excess. Truly, never before have I seen Pieter smile. He and Nicolas led the beer hall in song just last night, though I do not think he will admit to the display this morning.
+As an apprentice of the Grand Lodge of New York, I was often invited to attend various social functions in my capacity as a representative of the Order. The expected invitation arrived in late autumn of 1825. I was to attend the ceremonial procession of the *Seneca Chief* flotilla into Rochester. It was there and then I first encountered the Grand Master, Stephen Van Renssalaer III. 
+
+The crowds had gathered upon the cobblestone paths of the Genesee Aqueduct, a marvel of modern masonry. The investiture of two years of hard labor had born spectacular results. The aqueduct arched over the Genesee River with the grace of a dancer, carrying perpendicular to the course of the river an entirely new waterway, which was to be inaugurated with the economic lifeblood of the country this very day. Few had gathered who could appreciate the master craftsmanship, the perfection embodied in its angles and struts. Not since the days of the caeasars and pharaohs had the world seen such construction.
+
+When the sun began its downward descent, we saw the horses round the corner, drawing behind them the *Seneca Chief*. Upon the deck of the barge stood Governor Clinton, upright and chest pushed out in victory. Beside him stood the man I would come to know as Stephen Van Renssalaer, an enigma in a frock coat. The pagentry commenced when the boat docked at the entrance to the aqueduct fired a performative musket shot into the air, silencing the commotion. A lone voice called to challenge the approaching vessel, "Who comes there?"
+
+The Governor, revelling in the pomp, called back, "Your brothers from the West, on the waters of the Great Lakes!"
+
+The reply came, "By what means have they been diverted so from their natural course?"
+
+To which the Governor in turn replied, "By the channel of the Grand Erie Canal!"
+
+Not a soul beyond the initiated realized the meaning of this ritual, nearly identical to challenge a Brother of the Order must meet to enter the Temple. It was only later that I myself realized the significance of Stephen's presence. With this performance, Stephen had ensured the symbolic victory of the Masonic Order, its utter dominion over the natural elements. Nature had not just been tamed, it had been willfully organized contrary to its wishes. The mark of its maker was now imbued into the very foundations of the current itself. 
+
+The *Seneca Chief* docked as the commotion re-ignited and crescendoed into a flurry of bands and confetti. Speeches were given, but none of consequence. The dignitaries retired to the Mansion House hotel on State Street for the banquet and ball. As the parade moved through the city streets and the evening rose in the sky, candles were placed into the windows. An ethergeal glow hung just above our heads, casting out the encroaching dark. As we passed under this angelic light, an esctatic delirium descended upon us. Rochester seemed as though it flowed through a dream, a vision of music and dance. 
+
+...
+
+.. IN PROGRESS: Mansion House, hotel on State Street. Formal dinner.
+
+After his bloviating, the Governor introduced the man I had silently been waiting to hear. Of course, I knew of the Grand Master, his name being commonplace among the brothers at the Lodge, but never before had I seen him or heard him talk. His exploits need no further explanation; Any student of history will find them writ large within the annals of America. That night, still awash with the spirits of celebration, I transcribed his speech to best of my recollection, which I now reproduce below, 
     
-    The maiden voyage of father's new empire, sanctioned by the Prince of Orange. These men believe in a year's time they will return to this land as lords, rich beyond their imagination. That may be, but not in the fashion they expect. Let them enjoy their ignorance with what little leisure time remains before our godly duties are to be dispensed.
+    Thank you all for coming. I would especially like to extend my gratitude to the people of Rochester for putting together the feast we are about to sit down and enjoy. But more than anyone else on the dais, there is one indvidual who deserves recognition for making this night possible. And no, it is not Governor Clinton, though he might tell you otherwise. (*Laughter*) I am talking, of course, of Mr. Jesse Hawley. Indeed, it was Mr. Hawley who conceived this grand endeavor many years ago. Or should I say "Hercules"? (*Laughter*) At any rate, Mr. Hawley or Hercules, it was the man you see sitting here whose brilliant prose deposited this idea into my head.
 
-    Our true cargo arrives under the cover of darkness tonight. Hendrick will receive her and help her board the *Eden* before the crew wakes. 
+    At the time, few believed the words of Mr. Hawley. His vision was too large to be contained in the minds of simple men. Yet, with the utter precision of numbers and an unyielding faith in the Architect's designs, he hewed from the rough ashlar of what is the perfection of what could be. Perhaps people will say this Canal belongs to me, and while it is true my family's coffers were the engine of this enterprise, this Canal is not my accomplishment to claim. Others will say it belongs to the administration, and even I, the loyal opposition, must concede without Governor Clinton's steady hand, this project would have unravelled long before its completion. Statues may be erected and crumble; Histories may be written and revised; But forever unto the ends of the Earth, from this moment on, this world will bear the mark of Mr. Hawley. 
 
-    -- March 14th, 1637
+...
 
-.. epigraph::
+.. IN PROGRESS: The 47th Problem.
 
-    The *Eden* set sail from Rede van Texel before dawn, bearing the sigil of the Lord, Jesus Christ. A finer vessel has never been produced by Dutch shipyards. Much has already been written about her in the papers, but a larger portion has been hidden from all but my family and the Stadtholders. Most of the talk has been deliberately centered around her innovative hull. With a razor-sharp bow, she cuts an imposing figure for onlookers. Father saved the headline from one of local corantos, *Her Sides Are Steep and Her Draft is Deep*, well before the press start scandalizing his deal with the Prince of Orange.
-    
-    Less is said of her sheathe, except among the other captains. Coated in copper panels, she shimmers in the sun like an angel from God. She flies like one as well, clocked at 15 knots with a favorable wind behind her. When the elements turn against us, as they inevitably will the closer we get to our goal, her Bermuda sloop will let her glide as though she were a ghost, unanswerable to anyone except the Almighty.
-        
-    Within her hull she bears enough salted beef, hardtack, beer, water and dried peas for 18 months. Hendrick reports some questions have arisen among the crew regarding the size and extent of supplies. Already there are rumors spreading our voyage is not what it appears. It is to be expected. The *Eden* has not been fitted with cannons, under the pretense of maximizing our profits with heavier cargos. A sailor without a cannon is rightfully nervous, but Jeremias is correct to assure them. The *Eden* can outrun any English privateer or Spanish dog upon which she might chance. We have no need for weapons of war.
-    
-    Hendrick suggested having one of the gossip-mongers caned, but it is far too early for those sorts of measures. Though he serves his purpose, I often forget the number of Spaniards who have suffered under Hendrick's hand. He betrays his common stock with his barbarism. His first instinct is always violence. Were he not my milk brother and utterly loyal to a fault, I might reconsider his presence on this voyage. However, whatever his disposition, his presence is necessary, being the only other soul aboard that knows the scope of the *Eden*'s mission. For years, we have studied together. For years, we haved waited for this moment. The day is finally near when we will finish of the work of the Lord Savior Jesus Christ.
+The discussion among the brothers entered the realm of geometry.
 
-    -- March 15th, 1637
+...
 
-.. epigraph:: 
+.. IN PROGRESS: Morgan impresses Stephen with the Legendre Proof. 
 
-    That we do the Great Work is apparent. For three days straight we have enjoyed the wind at our backs. The *Eden* sails at breathtaking speed, faster even than the Dunkirkers' frigates. Already Jeremias calculates that we will reach the open ocean tomorrow. None of us would believe it except that we see its proof with our own eyes every waking moment. We move with the fleetness of Gabriel. The Word of God carries our sails to the furthest reaches of the globe.
+"My cousin went to France and returned with a remarkable proof of the 47th problem they have discovered."
 
-    -- March 18th, 1637
+..
 
-.. epigraph::
+"You see, if one drops a perpendicular from the highest angle, then by necessity the angles formed on the hypotenuse are right. Furthermore, since the opposing angles untouched by the perpendicular are complementary, the remaining angles must also be opposed. Therefore, by the grace of divine logic, the triangles formed by the perpendicular are similar. From this, it is deduced their sides must exist in equal ratio. Two smaller right triangles are thus cut from the larger, and their perfection forms the parts of the larger's perfection. It follows simply from algebra the theorem of Pythagoras."
 
-    We picked up a tail as we left the channel. She is one of the new English raiders, built to chase down the pirates off the Moroccan coast. I admit, the seamen in me is impressed with her construction, but even with her oars, she is no match for the *Eden*. Jeremias says she will disappear into the horizon before sundown. She flings her cannonballs at us, but her gunners were not trained to offset their targets enough to catch us. The crew gathers round the deck now to watch the geysers sprout behind us as the fools throw their artillery into the sea. Each time they miss, a cheer rises from the crew on deck. By the time we reach Ushuant, Jeremias estimates the English will have spent three years worth of a sailor's wages in wasted munitions. A more fitting farewell to Europe I could scarcely imagine for the *Eden*.
+Several nodded their heads, pretending to grasp the elegance of the proof. Fewer mulled my words, tracing its deductions in silent mental steps. After a brief pause, Stephen raised his eyes to me and said, "If I follow your logic, then the perfection is infinite. One could continue in this fashion until the ends of time, devising ever smaller triangles, each manifesting the same ratio."
 
-    -- March 19th, 1637
+"Indeed, Brother", I replied with a grin, awed by his ability to instantly absorb the mechanics of the proof, "As above, so below."
 
-.. epigraph::
+...
 
-    These eyes, which have seen clippers beach Spanish galleons off the coast of Cuba, still scarcely believe how swiftly the *Eden* cuts through the ocean. She made a journey calculated for ordinary vessel to take two months in mere weeks. The *Eden* disembarked from Sierra Leone just today after resupplying. 
-    
-    During the brief, Hendrick tallied our numbers. At port, we lost two men, deserters gone without a trace. None of the officers could produce a reason as to why. Their names were noted and left at port. If the authorities find them, I have left instructions to have their bodies shipped back to Amsterdam. Cowards they may be, yet no Dutchman deserves to be buried in this foreign land. 
+.. IN PROGRESS: Secret meeting of the Masons after banquet to consecrate the aqueduct.
 
-    Nicolas raised concerns about unrest simmering among the crew. They wanted to know why we had not taken on any stock from the slave yards, nor loaded any gems from the mines. Instead, the hull was restocked with provisions and filled to the brim with lemons.
+.. IN PROGRESS
 
-    Once we lost sight of land, I had Nicolas gather the other officers of the crew in my cabin. I could no longer bear the deception, although I may have erred by showing them the map of Macrobius. [#oubliette_c_001]_ Knowledge of the Terra Incognita is no easy burden for the mortal mind to bear. Hendrick said as much with his glaring eyes, but I bade him retrieve it. 
+"The world is made of secrets," Stephen explained, "When you are young, you believe them finite. You convince yourself they can be catalogued and put to paper, and the world will yield to you its mysteries once you have encompassed them. Every boy whoever came of age since the dawn of man was born from this fatal curiosity: to understand and tame the world of adults. Our nature is contained in the fruit of knowledge, in our arrogance to become the gods we imagine our parents to be. This is the promise of the pyramid, to ascend from the morass of mud to a etched point of the purest stone and behold the scope of creation condensed down into a singularity."
 
-    Jeremias scoffed, as expected. Pieter, always the soldier, took the news without flinching. The rest of their reactions I do not possess the skill to decipher. Suffice to say, they believed themselves set for Patagonia, only to be told at the final hour this subterfuge was a calculated manuever and our true path lie in the direction of the Austral Zone. The voyage of the *Eden* shall be written in no manifests. 
+He tapped the leatherbound cover of the *La Maçonnerie Égyptienne* [#oubliette_b_000]_, "But to grow old is to realize the folly of this. Each secret begets another and another and another, endlessly. The stairs do not narrow as you ascend, but grow steeper and more treacherous, until the ground you walk is inverted and the very laws of gravity give way."
 
-    Heaven help me if they discover what's in the hull.
+Stephen often spoke in this manner, as if the world were the audience to his monologue. He did not speak to me in that moments, not directly. I was merely a spectator to his thoughts, a witness to his despair. If I had said a word, it would have fallen on deaf ears, for Stephen was somewhere else, lost in his mind. 
 
-    -- March 29th, 1637
+...
 
------
-April
------
+.. IN PROGRESS
 
-.. epigraph::
+"I have need of men like you, William," He said grimly, "But I must be absolutely certain of your loyalty."
 
-    Hendrick came to me with troubling news. The French boy, Francis, is a Jesuit. His proof? The boy pointed out the Medicean Stars to him while they were on watch last night. I confess it hard to believe a sheep farmer's son would be schooled in the astronomical arts. Considering our goal, the sheer coincidence is too improbable to believe. Under normal circumstances, this would warrant nothing more than careful observation, but Hendrick is right. These are no normal circumstances. The risk is too great. The boy must go.
+---------
+Chapter 4
+---------
 
-    -- April 2nd, 1637
+That night, as agreed, I sat blindfolded in my parlor chair, with a single candle burning in my window. I waited in stillness for what seemed a lifetime before the knock on my door came well past the hour of the owl. I felt the sudden rush of panic. Here was I, a man of no notoriety but to be a simple brick layer and stone cutter, cavorting with the gentry of Albany in some mad ritual, whose dubious origins even then weighed heavily on my mind. I had a choice in that moment. I could simply remain silent and let them leave, living out the rest of my life as if nothing had ever occurred. Nonetheless, within the turmoil heaving around my guts, spinning fast in the overwhelming fear, I felt a glimmer of excitement, as though I were on the precipice of a secret world, whose laws and customs were alien to my own. 
 
-.. epigraph::
+"Who comes there?" The words were spoken as though I dreamed. 
 
-    Dear Lord, grant me the strength to see Thy Will be done. I am a weak and miserable mortal, condemned to wallow in sin. Mold my heart in Thy Image and make me worthy to behold the glory of Thy Throne. Speak Thy Words into my heart. Lord, I am weary of my own deadness. I wish to quit this world of sin and wash these stains from my palms. Quicken me according to Thy Word. Let me not be deluded by a false peace, but grant me that true assurance that comes only from Faith in Christ’s finished work. I surrender my will to Thine; do with me as seem good in Thy sight, only cast me not away from Thy presence.  
+"Your brothers, from the South and North," came the reply.
 
-    -- April 3rd, 1637
+"By what means have you arrived?" I cried on cue.
 
-.. epigraph::
+And then the response whose significance and meaning to this day I have not unravelled, "From the ice within the fire, the above which came below, the after now before."
 
-    The winds have died. Whispers say our expedition has been cursed, though none will claim the superstition as their own. The heathens need not speak to be identified; their eyes tell me all that I need know. When I am on deck, I cannot help but notice the looks I receive from those bold enough to gaze upon their captain.
-    
-    The vastness of the ocean often plays tricks on the mind. More than a few I have seen picked apart by her enchantments. No doubt the boy's disappearance contributes to the air. The men idle and in their sloth, they invent idols to keep their weak minds occupied. 
+With that, I cannot say with any certainty what happened next. My front door creaked with their entrance and their footsteps approached. Their number I cannot estimate, but I had the sense my room was filled with their presence. I know that I was made to walk forty paces from my front door and then placed into a carriage. The ride lasted no longer than an hour, though I admit my nerves may have disturbed the count as I bounced haplessly against ever rut and gutter in the road. Not a word was said the entire time. 
 
-    Once the wind returns and the Work resumes, their thoughts will turn again to the task at hand, leaving no room to fill with fanciful notions. Man is only truly at peace in his work. In idleness lay the source of all the world's evil. This festering sin can only be rooted out with honest work and a stern hand. Fortunately, Hendrick and I are of a mind on these matters. 
-    
-    -- April 6th, 1637
+When we came to a stop and they brought me out, the ever present grinding and hum of the city was gone, replaced by the unmistakable chirp of crickets in the dead night air of the countryside. Confirming my suspicions, they led me through field after field. Blinded as I was, I stumbled over rocks and fell to my hands at least three times. On the last fall, beneath my fingertips, before they carried to me my feet, I felt the momentary impression of engravings upon the stone, deliberate etchings carved deep and angular. 
 
-.. epigraph::
+Through the midnight grass I was herded until our footsteps began to echo against earthen walls and the air I breathed grew heavy with moisture. Each step was made on faith alone as my brothers pushed me relentlessly forward in front of them. We descended atleast a mile, or so I believe, through a series of caves into a subterranean cavern. It was there my blindfold was removed and I observed the spectacle arrayed before me.
 
-    The ship languishes in calm water while the crew seethes and boils. The boy was a mistake. How was I to know he was kin to Nicolas? What madness drives a Dutchman into the bed of a French whore? I should have listened to Hendrick from the start. It was pure folly to take on an Frenchmen, no matter how well he knew the yardarm. 
-    
-    Lord, take pity on your poor servant. The sin is too much for me to bear. I fear it only just begins.  
+My brothers, robed and hooded, their faces obscured by shadow, lined the walls of the cavern. In the center of the enclosed area, hewn from the natural stone in perfect lines, an altar was raised, upon which stood an enormous statue. The figure radiated obscurely in the darkness before my eyes resolved its shape: a bull, with its head reared up towards heavens, pointing directly to an occulus in the ceiling through which the moon peered it pale white face upon the proceedings.
 
-    -- April 7th, 1637
+From a pit of darkness beyond the edge of illumination, a man stepped into view and the room fell into total silence, or perhaps it was then I noticed the lack of sound. The surprise which I felt makes the exact recollection difficult. 
 
-.. epigraph::
+The man who had been Stephen now stood before me a different person altogether. This man, I would learn in my studies, though he looked and sounded like Stephen, was the *Grand Cophta*, the master of the ceremony. He wore a flowing robe of white, crossed with a sash of crimson. His face had been powdered and dark circles drawn around his eyes. Over his shoulders, he bore vestments the color of the sky and on his hip, he carried an ornamental sword, grasping its ivory hilt with straining knuckles. 
 
-    I woke to a pounding on my cabin door mere moments ago. The night still lingers in the sky and weariness beggars my senses, but sleep is no longer a possibility. Hendrick came bearing reports made by the crew. Those on duty heard chanting during the midnight watch. One of them swears he heard a woman singing. 
+"Brother Morgan", The Grand Cophta intoned from the center of the room, standing in a pool of moonlight, "You have been chosen to bear witness to the Ancient and Primitive Right of the Mishraim. Do you accept?"
 
-    Hendrick assures me the rumors will not be allowed to take spread.
+Meekly, I nodded, choking out my barely audible consent, "Yes."
 
-    -- April 8th, 1637
+At once, the cavern filled with the ruddy light of fire. The altar, I realized, was a furnace, and now its grating shown with the flicker of angry flames.
 
-.. epigraph::
+"You have been taught a myriad of lies," The Grand Cophta boomed, as the brothers behind him rushed into place to pump the bellows built into the altar, "Tonight the fog is lifted and you shall see the tip of truth that lies submerged."
 
-    Reports multiply, growing more disturbed and deranged. Every morning, Hendrick details another lurid account. Yesterday, the cook claimed to have seen swirling lights in the night sky, following the *Eden*. Today, a deck hand lay unconscious in the infirmary after drinking a stomach full of sea water for reasons unbeknownst to anyone. Add to these strains, the steady whispers of the midnight chant, now all but general knowledge.
-    
-    Moreover, tales have spread that Francis, the boy, was keelhauled during the night watch. Hendrick assures me this is preposterous and nothing of the sort happened. I swear the man, whom I have trusted for decades with my life, smirked at me when I asked him.
+Serpentine flames lept in plumes from the vents and spilled along the sides of the giant brass bull. The metal began to glow like molten gold and steam hissed from its nostrils. As the fire poured into its stomach, churning the substance with its vital heat, the statue came to life. Its cries and snorts filled the chamber, as though a human screamed inside of its contours. The brother surrounding me began to chant an ancient verse,
 
-    -- April 10th, 1637
+    | Noctes atque dies
+    | patet atri ianua Ditis
+    | sed revocare gradum
+    | superasque evadere ad auras
+    | hoc opus, hic labor est
 
-.. epigraph::
+The Grand Cophta placed a plain ceramic bowl upon the glowing hearth at the foot of the bull. He turned and spoke, "You have been told what is heated becomes hot."
 
-    The crew rallies around Nicolas. He spins fantasies about my father and the Prince of Orange. It is true my father secured amnesty from the Sounds Toll to build this vessel, but his accusations go too far. This has gone on long ehough. I must take matters into my own hands.
+From the solitary line of brothers, one stepped forward bearing an ornate chest wrought in gold and silver. The Grand Cophta flung it open and produced high above his head a tiny stone, no bigger than a coin, but darker even than the shadows from which it was produced. Stepping back to the altar, he placed the stone into the ceramic bowl. It rattled violently against the heat as though it spun against its prison.
 
-    -- April 11th, 1637
+He then turned to me again and spoke softer, "You have been told what ages becomes old."
 
-.. epigraph::
+At that, my heart stopped, for a small child stepped into the chamber. Barefoot in a gown of pure silken white, she approached the altar and knelt. The Grand Cophta placed before the child a crystal carafe of water. 
 
-    After speaking with Nicolas, he has seen the error of his ways. Hendrick can be most persuasive. 
+Finally, he spoke to the blackness of the cavern, "You have been told what falls becomes fallen."
 
-    -- April 11th, 1637
+With those words, he dipped a crucible into the glowing potion within the ceramic bowl and brought over to the child an illumined residue. With a splash that pierced the ears like cracking glass, he poured the molten substance into the water. The liquid boiled with a fierceness approaching the fear that once again wracked my stomach, as the carafe overflowed and belched a mist of murky yellow into the cavern air.
 
-.. epigraph::
+Wordless and obedient to a script I can only surmise, the girl dipped her head into the cloud and breathed deep the vapours that pooled around her huddled form. While I stood in stunned silence, the mist spread thin throughout the cavern and dissolved into the darkness. As my eyes watered and my head grew light, I watched the poor child convulse on the stone floor, arching her back against some phantom pain and kicking her toes bloody against the jagged ground.
 
-    The morning began with a cry: the wind has returned! I led a devotion on deck to restore the morale of the crew. Speaking the words from memory, I transcribe them now again for the comfort they give,
+The Grand Cophta knelt before the flailing child and spoke in a voice that would stop armies in their tracks, "I command you, Euphemia, to see the Angel Cassiel!"
 
-    | They that go down to the sea in ships, that do business in great waters;
-    | 
-    | These see the works of the Lord, and his wonders in the deep.
-    |
-    | For he commandeth, and raiseth the stormy wind, which lifteth up the waves thereof.
-    |
-    | They mount up to the heaven, they go down again to the depths: their soul is melted because of trouble. 
-    |
+"Father!" She screamed in a guttural voice no child should produce, "The fire!"
 
-    The Lord Christ spoke truly when he said to Matthew that seeing they do not see, and hearing they do not hear. The secrets are easily found for anyone that searches for them. They need look no further than His Word.
+"Bring him forth, child," The Grand Cophta disappeared, for now I saw clearly that a father knelt to hold a shaking daughter in his arms as she wept uncontrollably into his chest. He spoke softer, addressing her directly, "Tell us what you see."
 
-    When the service dispersed, the crew was visibly lifted in spirit. All talk of my father and the Prince of Orange has ceased. Murmurs of Francis can still be heard, but the men are far too exhausted to give countenance anything else, especially what we might actually be transporting.
+"The sky burns with...*logos*...," She struggled to whisper. The child lifted her head and gazed around the chamber. Her eyes were of obsidian. I shall never forget her visage as long as I draw breath. Her skin had gone grey and the hollows of her cheeks pooled with the ink of shadows, but a deeper darkness yet claimed her eyes, pits where no light could find purchase. Her hair, now brittle and white, fell to the floor in clumps as she scanned the row of brothers clinging to the stone. She moved to speak, but the words became gasps as her strength failed and she fell back into her father's arms, "*Hoi ouranoi...rheousin...pyri*" [#oubliette_b_001]_
 
-    -- April 12th, 1637
+And then she went limp and spoke no more. 
 
-.. epigraph::
+---------
+Chapter 5
+---------
 
-    I could hardly believe the news. Recife has been sighted ten days ahead of schedule. Even at the *Eden*'s speed, this should not be possible. Jeremias' calculations confirm it. Our current position is a mathematical impossibility. Pieter suggests the *Eden* is pushed by a magnetic current, but Jeremias is adamant that too is impossible since we are *moving away* from the Rupes Nigra. According to our esteemed navigator, there is no explanation for our early arrival, yet we are here nonetheless. Whatever the reason, the crew will be pleased to rest for a fortnight. 
+A fortnight I was left to ponder what I had witnessed. My study became obsessive. I poured through the shelves of the Lodge, in search of the cipher that would help me decode the mysteries of the ritual. The librarian, Brother Eliphalet, became my Virgil, guiding me through the arcana the Lodge had accumulated over the years. I delved into their stockpile of magical tomes, some written in languages I could not begin to understand, but Brother Eliphalet lent me the endless repository of esoteric knowledge that made its home in his brain, versed as it was in the dead tongues of the ancients, though the Lodge posssessed texts even he could not read. 
 
-    Tonight, after they are sufficiently in their cups, Hendrick and I will unlock the hold within the hull and take our guest to see the Potiguarra.
+I came to understand in those days before Stephen re-entered my life the nature of what had been revealed. Initially, I believed the ritual to be an act of pagentry, some sort of liturgical play, but the more I dwelt on the child, Euphemia, the more this notion became senseless. I had seen her transfigurement with my own eyes. I had heard her speak in tongues. Her words were seared into my brain, though at that moment I did not yet understand them.
 
-    -- April 20th, 1637
+The key, of course, was the alchymical mixture around which the ritual was centered. Of this, I was certain. The child had inhaled the vapors produced through distillation, and had unlocked a sight which penetrated the fog of which Stephen spoke.
 
-.. epigraph::
+Brother Eliphalet delievered to me the first irrefutable link in the chain I now yanked. I followed the sickly man up spiralled iron stairwells, ascending past the histories and archives, into the attic of the Lodge, where my esteemed guide lit a candle at a plain wooden table and stool, the nook of the Lodge that was to become my home for the next two weeks. He placed before me a book as large as my chest and as thick as forearm. Emblazoned in overwrought jewels, the title read *Thesaurus Thesaurorum*. He flipped the oversized pages to a marked section towards the end that began with the heading *Magus, the 9th Degree*. As I understood its rudiments from my days of brick laying in the rowdy streets of Rochester, I let the harsh German purse my lips as I read the words aloud,
 
-    My family acquired Coaraci when our claim to Recife amounted to nothing more than the slaves we could run through the Portuguese blockades. I still remember when they unloaded her upon the dock in Amsterdam, untouched by the voyage back across the Atlantic, a defiant vision among the pitiful, broken specimens. I had no notion then, gazing upon her alien form, how intimately she would become woven into my life.
-    
-    The ways of God are unknown to mere men, but looking upon her, I often what wonder great mysteries the Lord reveals to the feminine soul. She commanded the heathens last night as though the heavens had ordained it. They fell under her spell within moments of laying eyes upon her. Their tongue does not yield to the European mind despite my best attempts, but she tells me she simply explained to them that we possess the map to the Land Without Evil.
-    
-    Hendrick and I watched from the edge of the village as the heathens set fire to their own homestead. The hillside burned for hours. Coaraci explained the Potiguarra honor Monan by giving their belongings to the flame. They believe the current world we inhabit is made from fire and water, that they are remnants of a sinful race that was scourged from paradise by the purifying flame of the Almighty. He took pity upon the lone survivor and sent a flood to put out the fire.
+    Habe bey der Hand eine Kugel, so aus der Electrum gegossen ist. [#oubliette_b_002]_
 
-    The Word of the Lord precedes us in this land and prepares our way. Hendrick agrees these pagan myths align precisely with the accounts in Genesis. Monan, Elohim, Yahweh. All names attached to the source of creation by the feeble human mind that fails to comprehend its nameless form. 
-    
-    If that is true, then by year's end we will be the first humans to return to the garden stolen from us by our original sin.
-    
-    We return to Recife tomorrow followed by a retinue of Potiguarra shamans. I shall tell the men our true purpose and rally their spirits.
+I tested the word on my tongue. *Electrum*. At that moment, I was aware that I had begun a dark journey, as though the word had conjured the portents in my mind without any intervention on my part. Despite the impulse to flee, to abandon this mad venture, overcome with curiosity, I continued reading. By the next day, I had found the passage in te tome that would vex my dreams henceforth, 
 
-    -- April 21st, 1637
+    Dieser Stein offenbaret ihm die verborgenen Dinge. [#oubliette_b_003]_
 
-.. epigraph::
+The stone, which the text had named *Stein des Electrums*, revealed the *verborgenen Dinge*, the hidden things. At that, I shut the book and lets thought boil over for several minutes as I studied the cover of the *Thesaurus Thesaurorum*. The jewels worked into its leather cover multiplied in their facets the candlelight so that it seemed my world receded upon their smooth surfaces in infinite regress. I closed my eyes and could not help but remember the monsterous sounds that came from the mouth of the child, Euphemia.
 
-    Hendrick put the losses at a dozen, Nicolas and Jeremias among them. According to Pieter, they left yesterday morning after plundering the hold for supplies. He could not say where, but no doubt they made for Olinda. A party of men might be able to track them, but we would lose another week, maybe more, and to compound matters, it is not certain they would even be found. It is ironic I must now, without Jeremias, calculate the ends upon which we gamble. If the rotations are lengthened, fifty sailors is more than enough to man the *Eden* at all hours, but the loss of Jeremias will be felt. 
+I found Brother Eliphalet and inquired of him the authors. His dour expression, so oft affixed to melancholy, lit up at the chance to discuss a subject I would stake he did not discuss with many brothers. He smirked unnaturally, for his features were not made to hold the happier emotions, "The question of authorship is secondary to the question of possession, my brother."
 
-    The prospect of reembarking without a navigator bothers me, but the betrayal stings even worse. Jeremias has sailed with me since Matzanas. I cannot fathom why he would abandon me now. He left without explanation or clue. I am certain Nicolas got into his head with his conspiracies and convinced him of some fantasy.  
+"Do you speak in riddles intentionally?" I snapped, allowing my nerves to manifest in a momentary flash of irritation, "Tell me what you know regarding the book and its history."
 
-    If I cannot even trust the men who are closest to me with the Terra Incognita, what folly would it be to tell the others? No, this burden is mine to bear, my duty to carry out, as it is their duty to follow me. I shall prepare a sermon to remind them of their place.
+He bowed his head, although his sincerity in such gestures was impossible to gauge, and explained, "The *Thesaurus Thesaurorum* belonged to the late King of Prussia, Frederick William II."
 
-    -- April 22nd, 1637
+It was not the answer I had expected, but not entirely unexpected. Considering its extravagant cover, it was obviously noble in origin, though the extra prestige of royalty added another layer of intrigue to the mysteries that now swirled around me like a hurricane. I asked, unable to halt the curiosity animating my tongue, "And how did it come to be in the Lodge?"
 
-.. epigraph::
+"When the king died, his son was not as...," He paused, searching for the word, "...accomodating to our Order as his father. Many of us had to flee."
 
-    Another five are gone this morning. Pieter says when they learned of Coaraci, the crew dissolved into argument. Of course, in their ignorance, they could not understand why I might conceal her presence. I have seen the depths of carnal sin into which men alone at sea will fall.
-    
-    Hendrick and I both agree that we disembark by the week's end before we lack the crew to man the *Eden*, which leaves only a few days to make the adhoc modifications. Maurits has given us a handful of slaves to aid the task and I have given Hendrick leave to do what is necessary to ensure the *Eden* is outfitted with the Ipe panels on time. If what the Potiguarra say is true, then we cannot leave Recife without reinforcing her hull.
+"*Us*?" I inquired, realizing the remnants of Eliphalet's accent were yet another clue in this endless, twisted mystery.
 
-    -- April 23rd, 1637
+"Indeed, myself and four others fled the empire and crossed the border at Ostfriesland into the Netherlands," He frowned, "We brought with us what we could, but it was not much. We left far more behind than we brought."
 
-.. epigraph::
+After a moment, he added, without prompt, "The price of our passage was the books you now read. Or a significant fraction of them at least. The Grand Master has assembled the Lodge library from many different sources, though I wager the Rosicrucian texts we added to his walls are his true pride."
 
-    Yet another deserter, Frederick, made an attempt last night. Hendrick currently exacts the penalty of his transgression for all to see. The screams are awful, but the Work must be done. He will forget the momentary pain and fall to his knees in gratitude when the *Eden* runs ashore of her namesake. 
-    
-    The heresy started when Frederick learned what we mean to do with the Ipe panels. Since yesterday, the Potiguarra venture into the "Anguera" and return hourly, bearing on their backs the hardwood from the forest interior. It grows in piles before the *Eden*. The Africans have been set to work melding this raw material into panels for her. Frederick called it madness. Without Jeremias to assure him with his indisputable calculations, I could not convince Frederick the weight was insufficient to endanger our voyage. He persisted in his folly and now bears the consequences.
+"The Grand Master," I shook my head with another yet question, though this one's answer I already knew, "Stephen, you mean?" 
 
-    To tell the truth, I myself am uncertain of the calculations, though I would never tell the crew, not even Hendrick. I have gone through them several times, unable to find a mistake, but I cannot say with confidence I have accounted for every eventuality. The ways of the Lord are infinite and I would be arrogant to presume I possessed the ability to enumerate them. The only assurance I have is the knowledge the Lord wrote the *Eden*'s fate before the wind ever touched her sail.
+He nodded. Would that I had the will to stop my investigation there, and rest in the knowledge that what I had seen had been mere chemistry, albeit of the sacred genre, that the child had seen a vision induced by the alchymical transubstantion of this *Electrum*, but fool that I was, I bade Eliphalet help me trace this yarn back to its source. Dutifully, my brother produced the books in which I was to make my education of the dark arts.
 
-    -- April 24th, 1637
+As I pulled the loose threads, they unwound down through the ages. Each loop I unravelled and found the circumference returned to an earlier era, deeper into the mystery that twisted around the shapes of history and shot it through with its circuitous rungs. 
 
-.. epigraph::
+The next shelf to hold my weight as I climbed the towering helix was the *Picatrix*, an artifact from the 10th century. Its edges frayed and torn with untold years, I delicately turned the pages until I found the passage I knew I would find as soon as I hefted the book from its dusty hermitage in the corners of the Lodge's attic. Under Brother Eliphalet's tutelage, I began to pry from the dry parchment some semblance of meaning, acclimating to the general principles of Latin after several intense days of indoctrination. 
 
-    This morning, Coaraci brought before me the leader of the Potiguarra, though she says that title is not stricly speaking accurate. He is called Ubiuna, which Coaraci translates as *The Black Spear*. His Dutch is passable, though diminished. I nodded along as the heathen spoke of what lay before us, but waited for Coaraci to translate his pidgin into something more pliable to my ears. 
+Within the *Picatrix*, I found the ancestor of the ritual detailed by the Order of the Golden and Rosy Cross in the *Thesaurus Thesaurorum*. The Rosicrucians had extracted the salient elements and recast them into the language of their era, but the general principle remained the same. A vessel, always a small child, is placed before a medium,
 
-    He says the Land Without Evil is surrounded by endless fields of ice that are only navigable by the pure of heart. Long have the Potiguarra awaited the return of the *Irin-Mage*, the one born of fire, whose heart has been smelted and purified by the wrath of Monan, to show them the way. I told him the one whom he describes has a name, Jesus Christ, and it was He who sent me. 
+    Accipe puerum immaculatum, et pone speculum in manu eius et praecipe ut inspiciat in eum, et dic in aure eius videsne aliquid? [#oubliette_b_004]_
 
-    Ubiuna scoffed and spat, but pledged a dozen able-bodied Potiguarra to our endeavor. Moreover, he has told me, aged and feeble though he may be, he will accompany us himself. 
+Once the vessel and the medium achieved communion, the *Cophta* would conjure a heavenly spirit within the child by calling it to the surface,
 
-    When he left, Coaraci drew close and entangled herself in my arms. She explained that Ubiuna does not believe in the Lord, but rather, he seeks to use me. She spoke as if this were not apparent to me from the very beginning. It makes no matter to me what the heathen believes, I told her. The Lord does not require His instruments to hear His music.
+    Et si dixerit: 'Video', dic ei aperiatur tibi, et angeli Dei intrent in te. In nomine Uriel, Anael, Cassiel... descendite! [#oubliette_b_005]_
 
-    -- April 25th, 1637
+This was no mere pagaent Stephen had enacted, but a profane inheritance from a forgotten past. I had only just begun to understand how distant the origin of this working was from me, what primordial forces Stephen yoked and what *prima materia* he hewed. 
 
-.. epigraph::
+I continued to search for the source. If such a point even exists within the recorded history of man, I have not yet produced any positive evidence, but as I pulled, the thread did not cease to uncoil, binding me ever tighter in its tangled convolutions. 
 
-    Coaraci sang a lovely verse from her tongue this morning while we ate pineapple. I will miss her voice, but the terms were always clear. Her home for mine.
+The *Picatrix* had given me the first concrete association to Stephen's ritual. *Anael*, *Uriel* and *Cassiel*, three of the archangels bound to the divine light. Though I could not claim an encyclopedic knowledge of the alchymical symbolism and its gematrical significance, I knew the basic correspondences. *Anael*, *Venus*, the purity of spiritual love, its soft magnetic power. *Uriel*, the Fire of God, the rays of *Apollo*, the illuminator of the Mind, bearing a flaming sword. And then the one selected for Stephen's invocation, *Cassiel*, the keeper of Decay, the guardian of the Void, the enigmatic *Saturn*. What puzzle had I found myself assembling, that I now write their hallowed names upon this paper? 
 
-    Down below, Hendrick drives the slaves in their tasks. We have been watching for several hours from the window of the Maurits estate, Coaraci and I. The *Eden* armors herself in hardwood panels, layer by layer. Tiny specks of men repel down her hull and bolt each one into place.    
-    
-    She tells me it is right for man to dominate other men, for all men are dominated themselves by the Almighty and are therefore made for it by nature. I find myself dwelling on her words, as I often do. The way her heathen mind yielded to the graces of God so easily and allowed His Divine Insights to penetrate has always been a source of confusion. 
+.. TODO: Zohar II 243a 
 
-    Father also spoke in riddles. When I was young, he would tell me, "That which is above is from that which is below, and that which is below is from that which is above."
+    וּבְהַהוּא הֵיכָלָא, קַיְימִין אֶלֶף וְשִׁית מְאָה מַשִׁרְיָין דְּמַלְאֲכֵי חַבָּלָה דְּמִמְנָן לְאַסְטָאָה וּלְקַטְרְגָא עַל עָלְמָא, וְחַד מְמֻנָּה קָאִים עָלַיְיהוּ וּשְׁמֵיהּ קַצְפִּיאֵל, וּבִידֵיהּ חַד סַיְיפָא פְּגִימָא לְאַשְׁרָאָה דִּינָא עַל אִינוּן דְּלָא נָטְרֵי בְּרִית קַדִּישָׁא [#oubliette_b_006]_
 
-    Looking below me now, I see nothing but slaves at work.
 
-    -- April 28th, 1637
+By the time Stephen summoned me, I had discovered the earliest mention of the ritual I would find, within the *Papyri Graecae Magicae*, an inscrutable text of recipes and spells from before the time when Christ walked the Earth. Eliphalet provided the full translation, 
 
-.. epigraph::
+    Ἐπικαλοῦμαί σε, τὸν κτίσαντα γῆν καὶ οὐρανόν κατάβα, καὶ ἔμπλησόν μοι τὸν παῖδα τοῦτον τῆς σῆς μαντείας. Mὴ μωράνῃς μου τὴν ψυχήν, ἀλλὰ ὑπάκουσόν μοι. Εἴσελθε, καὶ πνεῦσον εἰς αὐτοῦ τὴν διάνοιαν καὶ δεῖξον αὐτῷ τὴν ἀλήθειαν. [#oubliette_b_007]_
 
-    Ubiuna accompanied Hendrick and I as we surveyed the results of the refitting. True to Drebbel's promise, the copper sheathe of his design prevented the buildup of barnacles, making the modifications substantially easier to accomplish. Where before the *Eden* was a shimmering cherub clothed in the vestments of luxury, now she bares the armaments of Michael, a proud warrior in the Lord's army, ready to battle the elements. 
+.. TODO: ἤλεκτρον
 
-    The Shaman spoke to us of our journey ahead. The Potiguarra continue to refer to the garden as the Land Without Evil, though I have made it clear to them the true nature of what we seek. Their stories tell them it lay across the sea, guarded by walls of ice. Beyond these walls lay an oasis of green, where the fruit flowers year long and the sun never sets. The map of Macrobius, the reports of Schouten and Le Maire, these heathen myths. The confluence of evidence is too great to ignore. 
+The unifying theme of this ritual throughout the ages, beyond the vessel of a child and the medium of water, was the *πνεῦμα*, the breath in which lingered the *ψυχή*, the soul. I thought back to the mist Stephen had drawn from the water and again, my thoughts returned to the material, the *Electrum*. 
 
-    He says we must possess *aguyjé*, the purest of spirits, to pierce the veil that separates paradise from this world. I told him there is no purer spirit than the Holy Spirit.
+The mind is a strange resource. These events I have turned over again and again in the year since they unfolded. I recall the vivid details of the entire ceremony, but I cannot be certain how much I saw and how much I dreamt from nothing in the fevered days that followed. I remember the rattle, the way the material spun and danced against the ceramic bowl as the heat fueled its chaotic bouncing. Of this I am certain. The other details, they wax and wane with the vagaries of my attention. I cannot say what color the mist assumed, but I know my memory tells me it was a pallid yellow; I cannot say how long the material reacted with the heat, but my reason tells me it could have no longer than five minutes; I cannot say what sound the material made on contact with the water, but I distinctly recall the sound of shattered glass. All of these details are uncertain in the fog of memory, except the rattle. The material spun, there can be no doubt.
 
-    We depart tomorrow on the final leg of our voyage. Ubiuna and ten Potiguarra will accompany us of their own accord, as planned.
+And her eyes, as empty as the night. This is another certainty. I know not of what significance to make of these details, but if all interrogations of the supernatural are to be made rigorous, then they must rest on certitude. The bare facts must be acknowledge: the material spins with heat, and its distillation via hydrolysis induced a state in the child that can only be described as demonic.
 
-    -- April 30th, 1637
+Though the reader will not believe me, I swear in that moment, I heard the echo of the child through time, gasping with the last vestiges of air her lungs could hold,
 
----
-May
----
+    Οἱ οὐρανοὶ ῥέουσιν πυρί.
 
-.. epigraph::
+Without assistance or Eliphalet's translation, the meaning came to mind without aid, in utter certainty: *the heavens flow with fire*.
 
-    With the addition of Ubiuna and his Potiguarra, the *Eden* is almost back to fighting strength. They are green and heathen, but the sea makes men of us all or in failing, casts us to its depths. They shall be sailors by the week's end or they shall be food for the fish. 
+---------
+Chapter 6
+---------
 
-    The *Eden* hugs the coast until Puerto Deseado and then from that point on, the angles of Macrobius will be our bearing. 
+The extent of the van Rensselaer family's influence in New York cannot be understated. As my carriage navigated the paved streets of Albany, crossing over the Hudson towards the heart of the Rensselaerwyck domicile opposite their vast political fief that sprawled across the downtown on the west side of the river, it was hard not to notice the near oppressive prevalence of their name. The church, the library, the schools, the street names, all bore the mark of the van Rensselears. From whence did this family originate, I wondered? 
 
-    -- May 2nd, 1637
+Any student of the civic arena will at once recognize Stephen van Rensselaer, at various times holding public offices such as State Senator and Lieutenant Governor, and at others, the financial bankroll behind a private empire of real estate and insurance. Add to that, he and his brother were local heroes, veterans of the Second War with Britain; by all accounts, true patriots whose blood now mixed in the ground with its predecessors. 
 
-.. epigraph::
+A week ago, I might have gazed from the carriage out onto the elegant streets of Albany and found myself marvelling at their accomplishment. Albany was clearly the capital city of their kingdom, staked and raised from the seams that formed where the Appalachian foothills mets the snaking course of the Hudson. It lay before me in impressive splendor, an orderly patchwork of stonework and pavement, exemplifying a craftmanship that betrayed a studied hand. The city had been erected with careful planning and a precision known only to the masters in the Lodge. Its very foundation nurtured the roots of the van Rensselaer family and spoke in its architecture of their influence.
 
-    The Potiguarra are a queer sort of people. I have come across many languages in my travels, and while each one has its own distinct register, none compare to the primal music produced by their tongue. One cannot shake the feeling their words are more than mere signs, that they speak with a voice whose concepts precede grammar. Their words work upon them as spells or incantations. Ubiuna stands amongst them when they do their chores, reciting verse from his language, and they move as though driven by his words, as if his voice were their thoughts. Though they have been assigned the menial tasks left by the deserters, such as scrubbing the decks and cranking the bilge, they set to their work with fervor, chattering among themselves in indecipherable grunts. Listening to them converse, one is swept away to a distant past, when man stumbled from the garden and fell into iniquity.  
+Or so I would have thought, had I not spent the previous fortnight in nightmarish study, tracing the spiritual lineage of Stephen through the profane history of magick and arcana. I now questioned the nature of this city. I found myself tracing its street plan in my mind's eye, searching for geometric allusions and possible interpretations. 
 
-    To make matters worse, Ubiuna, when he does speak Dutch, speaks nonsense. Yesterday, while surveying the coast, Ubiuna remarked in broken sentences that it would be a great honor to drink Hendrick's blood. Had Pieter not been there, I do not believe I would have been able to guarantee Ubiuna's life.
+The horses rounded the face of a cliff and ascended to the top of a bluff that overlooked the river. The flags of commerce filled the evening horizon, their sails drawn and tied to mast. There before me, a hundred yards from the cliff's edge, arrayed behind by its sleeping fleet, sat the van Rensselaer family manor, an oblong building with a gambrel roof bearing two wings above which stone railing encircled balconies. Stephen stood on the east wing roof with his hands pressed to the railing, watching my approach.
 
-    -- May 5th, 1637
+...
 
-.. epigraph::
+.. IN PROGRESS
 
-    The sky has begun to redden each evening, and the crew grows nervous. Despite my efforts, this is the one superstition I have been unable to cull from their heads. However, today these false omens speak truly. We are entering the most treacherous water in all of creation.
+"I can see by your face you have begun your study," Stephen nodded sternly.
+D
+.. IN PROGRESS: Meet Stephen again. Euphemia is "fine" (hair regrown, still a child), but mute.
 
-    The Potiguarra have been training on hempen cables, tossing them behind the ship and pulling them back aboard a hundred times an hour. While I would surely prefer the full complement of Dutchmen with which I left Amsterdam, these heathens will serve the *Eden* just as well. A body is a body. The rest of the crew scrambles to secure every opening and bar every port in preparation. Pieter is the only one, besides Hendrick and myself, who has seen the waters of Costa Patagonum, but he has sufficiently instilled the fear into the rest of the crew.
+.. image:: ../../../../_static/img/fabula/magnum-opus/illustrations-of-masonry-excerpt.jpg
+   :width: 70%
+   :alt: Schematic of unknown device.
+   :align: center
 
-    My calculations were never as precise as Jeremias, but by my reckoning, we should enter the stormy abode of Patagonia within the next few days. All of the trials that have beset us these past months were but prologue to what follows. No foe is more unforgiving than the raw, untamed ocean. It is for this reason the sailor is nearer to God than any other individual. A mortal mind will come no closer to grasping the Lord's Divine Nature than when it stares down a 100 foot wave that spans the horizon. 
+...
 
-    The *Eden* sets closer to sea level with her new armor. If our luck holds out, her new center of gravity should keep us from capsizing when the worst of it comes. If not, I have given Hendrick explicit orders to keep the masts at all costs. Strike the tops and shake off the bonnets, but anyone that tries to take an axe to the mast itself will no longer have hands to swing an axe. We will heave-to what we can, but the men must be ready at moment's notice to deploy the drogues and begin scudding. The masts *must* remain. 
+.. IN PROGRESS
 
-    -- May 10th, 1637
+.. [#oubliette_b_000] On the topic of *Egyptian Masonry*, the Capital Reliquary is often contradictory. Here Morgan presents Stephen as possessing the text *La Maçonnerie Égyptienne* in 1825, but the official histories in the Library decrypted from the Reliquary place the establisment of the *Ancient and Primitive Rite of Memphis-Misraïm* within Freemasonry squarely in the latter half of the century, with most sources citing a date between 1840 through 1880. These minor inconsistencies cast doubt on the accuracy of Morgan's account. As will be seen, the claims he makes become more sensational and lurid as the narrative progresses.
 
-.. epigraph::
+.. [#oubliette_b_001] The reader is here referred to the :ref:`exegesis of the Sibylline Prophecies <exegesis-000>`.
 
-    As expected, the world goes gray and the water to chop. A somber air from the pink sky above descends upon the crew this evening. We all see the clouds gathering over the course the *Eden* charts, drawn up from the sea in sprays of fog. A curtain of roiling storm cloaks the ocean from us. Ubiuna spoke to us of the *pampero*, the storms which bellow from the south and west. I have given the men leave to open the winter provisions. Wrapped in fur and their beards full of tallow, they look as their forebearers looked when our Batavian blood spilled from the Rhine and flooded the upper reaches of the North Sea.
+.. [#oubliette_b_002] German: "Have at hand a Sphere, which is cast from Electrum."
 
-    I spoke the final Psalm some of them shall ever hear as the howling gales rose in chorus,
+.. [#oubliette_b_003] German: "This Stone reveals to him the hidden things."
 
-    | He causeth the vapours to ascend from the ends of the earth; 
-    |
-    | he maketh lightnings for the rain; 
-    |
-    | he bringeth the wind out of his treasuries.
-    |
+.. [#oubliette_b_004] Latin: "Take a spotless virgin, and put the mirror in his hand and command him to look into it, and say into his ear, Do you see anything?"
 
-    May these words commend their soul to heaven. 
+.. [#oubliette_b_005] Latin: "And if he says: 'I see', tell him, 'Let it be opened to you, and let the Angels of God enter into you. In the name of Uriel, Anael and Cassiel, come down!'" 
 
-    -- May 12th, 1637
+.. [#oubliette_b_006] Hebrew: "And in that palace, there stand one thousand and six hundred camps of angels of destruction who are appointed to accuse and to bring prosecution upon the world and one supervisor stands over them and his name is Cassiel and in his hand is a notched sword to execute judgment upon those who do not guard the Holy Covenant."
 
-.. epigraph::
-
-    The *Eden* is crippled. The Mizzen Yard was lost the instant the squall hit us. It exploded in a spray of splinters as if vaporized by cannonfire. Pieter caught a face of debris and now lay below deck, his chest rising slower each time I check. They have replaced his bandages three times already. I said a prayer over his unconscious body, but I fear the Lord has already taken him. 
-
-    As we skimmed along the largest of the waves, the bow dipped into the sea twice. Each time, the men were swept against the railing. In total, eleven went overboard, three Potiguarra and eight Dutchmen, swallowed by the violent waters without trace. 
-
-    With the loss of the rear mast, we no longer steer the ship, but fight with all of our strength to keep it on course. I've ordered the remaining crew to man the whipstaff in rotations of three. Everyone is a helmsman now, even the Potiguarra. The exhaustion of the work will quickly take its toll, but if we lose control, we risk spinning out and being left to the mercy of the unforgiving wind. We make for Port Desire for repairs.
-
-    -- May 13th, 1637
-
-.. epigraph::
-
-    It is as the Potiguarra say. There are but two ends in this life: fire or ice. 
-
-    As the men started the makeshift repairs on the *Eden*, I walked along the untouched coast of this land, so different from my own. I see now that we grow complacement in our stone houses and forget the flames of the forge that shaped the Batavian soul in its cradle. Here, in desolate wilderness, where I thought no mortal had glimpsed since the Lord conjured it from the deep, I stumbled in my path upon the charred remains of those who preceded me. Here, where Schouten gave the *Hoorn* to the flame before devoting himself to the completion of his voyage, the very man whose journey foretold mine, whose reports informed my plan, whose essence lives now in this hallowed ground. I take no shame in the tears I shed.
-
-    -- May 14th, 1637
-
-.. epigraph::
-
-    The *Eden* is as seaworthy as we can make her without a full shipyard to make the repairs. Her Mizzen Yard is crooked and raw, still bearing the unpolished knots of the branches the crew hacked from her length, but it will do. We have no other choice. 
-
-    Pieter still clings to life by the Grace of God. He has not opened his eyes for a week, but he yet breathes. I debated his fate with Hendrick. Hendrick's argument has a cold logic to it, but I will not concede. He suggested leaving him, arguing it would be kinder to let him chance the elements ashore than at sea. We shall not see the end of Costa Patagonum until the next moon. The waves will be the death of him for certain, he says. I told him I would hear no more on the matter. Pieter will see the garden, above or below ground, for I owe him that much.
-
-    -- May 17th, 1637
-
-.. epigraph::
-
-    Frederick's body swings from a tree. He would not see reason and refused to set foot back onto the *Eden* until I relinquished my command. I bade him reconsider, but his decision is plain for all to see. We delay another day to bury our dead. The Lord is firm in these matters.
-
-    -- May 18st, 1637
-
-.. epigraph::
-
-    A mist descended this morning as the sun rose. We saw the rays for but a moment before the fog engulfed us. The Potiguarra wailed as the light disappeared. We steer now by dead reckoning alone. I've angled us into deeper waters, to avoid blindly running aground, but the waves grow more fierce in the open ocean.  
-
-    I had Hendrick uncork the brandy and distribute it amongst the crew. The temperature drops and we are not like to see these climes again. 
-
-    -- May 20th, 1637 
-
-.. epigraph::
-
-    A cry from the Crow's Nest roused me from my cabins not moments ago. I stumbled through the thick fog and found the source of alarm. A stranger sight my eyes have surely never seen. Through the dense clouds that cover everything, I heard their bellows and titanic movements before I saw them. They emerged from the haze like otherworldly apparitions. The *Eden* now sails in the company of mammoth beasts, atleast a dozen, though the fog makes it hard to count them. 
-    
-    The crew has gathered along the port side railing to marvel at the convoy that has formed around us. Hendrick says they are whales, but they look as no whales I've ever seen swimming the North Sea. They dwarf the *Eden* by five times atleast. If one opened its mouth, the *Eden* could almost sail right into its stomach. These are surely the creatures that swallowed Job. 
-
-    One surfaced directly beside the ship before releasing a guttural blast into the air. The water heaved aside and set us rocking, as if a mountain had risen from nowhere to cast aside the ocean. It disappeared just as fast back into the depths. 
-    
-    I found Ubiuna in the hull with the other Potiguarra. He told me their presence is a good omen, for they follow the same path we do. He bade me press my ear to the planks. On the other side, I heard the heart beat of the ocean, its thundering pulse. Within the booming chorus, I listened to the echoes of their words, the ancient language of the deep spoken only by the creatures who remember the days when Man still possessed its tongue and built towers to the sky in his arrogant aspirations.
-
-    I explained all this to Pieter, but my words fell on deaf ears. He remains unchanged. I wish he could have seen it.  
-
-    -- May 21st, 1637
-
-.. epigraph::
-
-    Three days ago, we lost sight of the coast. Today, the sea turns to slosh. A layer of broken glass floats atop the water. If this is the ice wall Ubiuna spoke of, then the *Eden* will make short work of it. 
-    
-    As she plows along her course, the ice sheers and sings in high pitched squeals against her hull, swept in her wake through swirling vortices. It is though an angelic chorus heralds the *Eden*'s arrival into the Austral Zone.
-
-    -- May 30th, 1637
-
-----
-June 
-----
-
-.. epigraph::
-
-    The crackle of glass becomes the endless grind of ice. I awoke to its thunderclap before the sun had risen. As I left the confines of my cabin to do my rounds, I discovered the sea had become a solid pane of ice. The *Eden* no longer sails, but drives herself like a nail bludgeoned by the blunt force of the wind into the solid ocean. The sound cannot be described, shrill and piercing, like needles burrowing into your ears. 
-
-    -- June 2nd, 1637
-
-.. epigraph::
-
-    The whales were a harbinger from the Lord of the things to come. Everything in place is scaled to absurd heights. Icebergs lurk in the water like sunken cities, poking their towers above the surface. The *Eden* now navigates the frozen valleys of the mountain range that has grown from sea. The sails have been drawn to prevent speeding through this labyrinth. We cannot risk the *Eden*'s integrity, so she now moves at a snail's pace, carefully skirting the icy doom that threatens her on all sides.
-
-    -- June 4th, 1637 
-
-.. epigraph::
-
-    Hendrick believes he has discovered the secret to navigating this barren maze. He has noticed on his night watch the moonlight is reflected by the ice upon the clouds. According to his theory, the *Eden* should angle into the darkness, where there is no ice to reflect the light. I have heard no better options from anyone else, so I have given orders to make it official. Contrary to every instinct a sailor might have, we now use the darkness as our guide.
-
-    -- June 6th, 1637
-
-.. epigraph::
-
-    Hendrick's idea has born tremendous fruit. Indeed, the ice reflects moonlight! The sails are now full of wind as we cut a course through a cleft in the ice wall.
-
-    -- June 7th, 1637
-
-.. epigraph::
-
-    Two of the Potiguarra, whose names I never learned, froze in their sleep. They could not be roused and upon investigation, it was discovered their furs had fused to their skin. The wool was soaked by a leak overnight and then turned to ice upon their sleeping bodies. Hendrick believes they died in their dreams, never knowing the cold had claimed them.  
-
-    -- June 9th, 1637
-
-.. epigraph::
-
-    The temperature continues to drop as though it will never stop. Each morning, a few more levels have disappeared from the thermoscope. I no longer trust it readings. At the current rate, by the day's end, the instrument will cease to be of use; it cannot read below its lowest marking. 
-
-    The men shiver beneath mounds of fur on deck, for the wood has started to weep with condensation to point where the hold has become a frigid swamp. The stove pit went out several nights ago and everyone has long since given up trying to relight it. Instead they huddle and lean on one another near the rudders in the vain hope of stoking their collected body heat.
-
-    The hold is an issue I had not foreseen. Even with the men running the bilge pump day and night, the provisions fester. I see no other option but to appropriate my cabin and transfer the store before it goes to rot.
-
-    -- June 10th, 1637
-
-.. epigraph::
-
-    Two of the men I sent down into the store have fallen to the chill. The icy water soaked them to the bone and set them with a violent shake. Hendrick says he has seen it before, off the coasts of Norway. The cold now lives inside of them. He says they will be dead soon.
-
-    -- June 11th, 1637
-
-.. epigraph::
-
-    Man was made to suffer. It is no matter. Let the ropes and mast freeze. The men claw at the canvas sails with their knives, like scavenging animals. The Word of God is all the warmth we require.
-
-    | Out of whose womb came the ice? 
-    | 
-    | And the hoary frost of heaven, who hath gendered it? 
-    |
-    | The waters are hid as with a stone, and the face of the deep is frozen.
-    |
-
-    All obstacles are conquered by his Word.
-
-    -- June 12th, 1637
-
-.. epigraph::
-
-    The *Eden* shuddered as she scraped her hull across a sunken spire hidden beneath the surface. On deck, we heard a scream and then an awful smack. Thomas slipped from the Crow's Nest. His body lay mangled on the ice as the crew gathered to call out. Some of them say he replied before he disappeared from view, though I heard nothing.
-
-    -- June 13th, 1637 
-
-.. epigraph::
-
-    This place announces itself every moment a world no man should enter of his own God-given will. We tread through profane waters, where the rational mind can find no purchase. I have seen its profanity with my own eyes. This world has no night. The very sky dissolves into the flames of Hell. Streaks of unnatural colors blaze and ripple across the blackness, obscuring our view of the stars. 
-    
-    To confound the matter, the shelves of ice below continue to batter our hull, as though an inferno did not rage above us. The hardwood has served its purpose, shielding the *Eden*'s hull from the ceaseless assault, but the creaking and splintering takes its toll. Some of the panels still hang only by the grace of God. 
-
-    The Lord continues to test us, but we shall not cease. 
-
-    -- June 15th, 1637
-
-.. epigraph::
-
-    At all hours of the night, the sound is deafening. It never ceases. High-pitched and shrill, it digs into your ears, even when you cover them. The endless rupture of glass. It is enough to drive a man mad. 
-
-    But that is not even the worst of it. I can hardly write my hands shake so. Hendrick says you needn't worry until the shivering stops. That is when you know death is near. 
-
-    -- June 16th, 1637
-
-.. epigraph::
-
-    He was my brother in all but name. It is fitting that the tears which mark his end should burn my face in icy veins and crack the skin beneath. 
-
-    Hendrick is gone and no one can say what has happened to him. He is simply gone, as though he never existed. This place feasts on the souls of the damned, snatching us from the deck of *Eden* in the dead of night. It picks at us, peeling away the crew sailor by sailor. There are less than thirty of us left. I have lost track they fall so quickly. I do not believe any of the Potiguarra remain except Ubiuna, though he will surely die soon. What have I done? To what chamber of Hell have I brought us?
-
-    Lord, I have been your ever faithful servant. This burden is too much to bear. Please, though I have no right, I beg of you, have mercy. 
-
-    -- June 18th, 1637
-
-.. epigraph::
-
-    The wind spews ice as sharp as daggers. We trade the fetid tomb of the hold for the maelstrom above deck. It is simply a matter of which death one chooses. There is no place left to hide from the Lord's Wrath. Cramped between the dwindling stacks of supplies, the men pile into my cabin for what little relief it provides, but even my walls weep and freeze. The *Eden*'s helm has been abandoned as the cold's dominion becomes total. The rudders are stone and the sails are as slabs that hang in solid sheets. She drifts and lists with the whims of God, battered on all sides by the wages of sin.
-
-    -- June 19th, 1637
-
-.. epigraph::
-
-    We wait to die.
-
-    -- June 20th, 1637
-
-.. epigraph::
-
-    The *Eden*, buffeted by tidal winds that would level cities were they bottled and unleashed, whipped beyond our control within the roiling fog and guided by the primordial forces of Earth, she turned to splinters beneath our feet, yet clung defiantly to her remainings mast, tattered though they were in frozen strips, more ice than canvas. The deafening roar of thunderclaps and shrieking nails, plunged into raw thoughts, reduced the crew and I to whimpering wretches, what few remained. We huddled beneath the wreckage to seek whatever shelter could be found from the vengeful gusts of wind and watched the jutting fingers of ice claw the *Eden*'s patchwork armor from her shoulders. We watched her shudder and reel, her death throes twisting through the labyrinth of sea ice that spanned the horizon, the infinite abode of Hell that awaits the damned in eternity. 
-
-    Then all at once, the razor mists and grinding mountains of white fell away, as if the *Eden* had passed through some threshold. The rays of the sun fell upon us and left us in daze. Ubiuna, the last of the Potiguarra not claimed by this icy hell, shed his furs and stood up in nakedness to proclaim, "*Ma'e! Y Marã E'ỹ-pe!*", before he collapsed. The reeling deck sent him overboard before anyone could muster the energy to pull him back towards the jagged ruins of my cabin.
-
-    -- June 21st, 1637
-
-.. epigraph::
-
-    In the ice, a heart beats. God's essence mingles in the elements and rises to the surface. His breath is vital warmth that turns the sea to emerald green, that fogs the glassy sheen with blooms of algae. Here, where creatures from the deep peek their alien eyes from the liquid womb and release their cries of life to the heavens, they receive in exchange for their faith a respite from the cold, a baptism of holy heat that coils in steam as incense burned in sacred ritual. Here, beneath the *Eden*'s ruined hull, the men shed their rags and dive headfirst into an oasis that has materialized in this wasteland.
-
-    The ground we tread is blessed by the divine, radiating with the source of creation. I can feel its heat in the soles of my feet as I walk. I took Pieter's body to its resting place and pondered whether tomorrow he would rise as Lazarus. As I dug his grave beneath the orphic rock and soil, I found within the proof of the Lord's Providence, a solid sphere, perfectly formed and smooth as glass. As I held it in my hands, its ink black surface began to shimmer and glow, nearly blinding me with a sudden flash of brilliant white light. In that instant, I saw the shape of things to come. I still grasp for the words to describe what was shown to me by the Almighty. I did not realize until that moment this journal would be my epistle.
-
-    I did not realize these words were addressed to you, Mesmeria. I have much to tell you before I die tomorrow.
-
-    -- June 22nd, 1637
-
-.. note::
-
-    All entries past this point have been torn from the book's spine.
-
-.. [#oubliette_c_000]   
-    
-    This journal immediately presents itself as an anomaly. The reader is referred to :ref:`genealogy` of the van Rensselaer dynasty, specifically the first generation of the :ref:`elder-branch`, to discover for themselves the discrepancies. 
-
-    From the date signed on each page of the journal and the name "*Johannes*", it is reasonable to infer "*Father*" refers to Killiaen van Rensselaer, the first Patroon. According to the :ref:`Capital Reliquary <oubliette-b>`, Killiaen had five sons: Johannes, Jan Baptist, Jeremias, Nicolaes and Ryckert.
-
-    However, the reader must be careful to examine the birth year of Ryckert in the :ref:`genealogy`. The year of Ryckert's birth in the official record is 1639, two years after the dates in the journal.
-
-.. [#oubliette_c_001]
-
-    One of the Maps of Macrobius can be found in :ref:`oubliette-a-001` of the :ref:`Vatican Reliquary <oubliette-a>`, however sources indicate Macrobius produced a substantial body of work. It is unlikely the recovered map is the one Ryckert references, especially considering its fate, although from the description given in the journal, or lack thereof, there is no reason to reject it as a possibile candidate. Until further evidence is uncovered, this aspect of the Ryckert van Rensselear mystery, like many others, cannot be resolved.
+.. [#oubliette_b_007] Greek: "I call upon You, the one who created earth and heaven, come down, and fill this boy for me with your prophecy. Do not dull my soul, but obey me. Enter, and breathe into his mind and show him the truth."

@@ -1,33 +1,26 @@
 .. TITLE: Magnum Opus
-.. SECTION: Archives
-.. SUBSECTION: Oubliette D: Armilus Reliquary
+.. SECTION: Archive
+.. SUBSECTION: Oubliette D: Renselaerwyck Reliquary
+.. TABLE OF CONTENTS:
+.. - 000: Journal of Captain Ryckert van Rensselaer
+.. - 001: Being An Account of Nicolaes van Rensselaer's Prophecy to the exiled King, Charles II
+.. - 002: The Correspondences of Stephen van Rensselaer
+.. - 003: Notes from Joseph Henry's Lectures
+.. - 004: Centennial Exposition Flyer
+.. - 005: The Correspondences of Killaen Maunsell van Rensselaer
 
 .. _oubliette-d:
 
-Oubliette D: Armilus Reliquary
-==============================
-
-.. admonition:: Case Information
-    
-    Case 
-        #GT17008341-01
-
-    Defendant
-        Mesmeria van Rensselaer
-    
-    Offense Date
-        12/23/2110
-    
-    Trial Date
-        1/12/2111
-
-    - Use of a Firearm or Destructive Device During a Crime of Violence, Violation of 18 U.S.C. § 924(c)(1)(A)
-    - Conspiracy to Murder an Internationally Protected Person, Violation of 18 U.S.C. § 1117
-    - Unauthorized Use of a Weapons Grade Autogenerational Network, Violation of 52 U.S.C. § 1
+Oubliette D: Renselaerwyck Reliquary
+====================================
 
 .. toctree::
-    :maxdepth: 2
-    :caption: Case Files
-
-    discovery/index
-    trial/index
+   :maxdepth: 2
+   :caption: Renselaerwyck Reliquary
+   
+   000
+   001
+   002
+   003
+   004
+   005

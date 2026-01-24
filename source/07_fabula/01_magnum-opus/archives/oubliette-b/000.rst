@@ -1,274 +1,28 @@
 .. TITLE: Magnum Opus
 .. SECTION: Archives
-.. SUBSECTION: Oubliette B: The Capital Reliquary
+.. SUBSECTION: Oubliette B
 
 .. _oubliette-b-000:
 
-Illustrations of Masonry
-------------------------
+The Lost Dialogue of Critias
+----------------------------
 
 .. important::
 
-    This manuscript was published in 1826 and had a circulation of less than two hundred copies. The last remaining copy was obtained from the Batavia Public Library and scanned into the Library of Congress.
+    This document was translated from a palimpest discovered in year 2083 at the Villa of the Papyri in Herculaneum. It was made available to the general public in 2095 by the Renssalaer Polytechnic Institute, and has since been archived in libraries and institutes across the world. According to the current academic consensus, it was written in the year 366 BCE.
 
----------
-Chapter 3
----------
+:socrates: You have spoken at length about the Kings of the Atlantic and their works, Critias, but you have not told us the source of their power. How were these men able to harness the power to produce such wonders? Was their power born of the elements? Was it of fire or water? 
 
-As an apprentice of the Grand Lodge of New York, I was often invited to attend various social functions in my capacity as a representative of the Order. The expected invitation arrived in late autumn of 1825. I was to attend the ceremonial procession of the *Seneca Chief* flotilla into Rochester. It was there and then I first encountered the Grand Master, Stephen Van Renssalaer III. 
+:critias: It was of neither, Socrates. They drew upon the firmament itself. Their first and greatest king, Asterion, as a boy, sailed to the edge of the world and found the veil that separates the mortal sphere from the higher spheres. There he found where Cronos had been imprisoned in ice and forced by the upstart gods to measure the seconds of man. Asterion lit for this fallen Titan a torch to melt his prison and free him. As thanks, the Titan drew from his stomach a metallic stone of immense power and bestowed it upon Asterion, as proof to show his people he had been to realms forbidden to man.
 
-The crowds had gathered upon the cobblestone paths of the Genesee Aqueduct, a marvel of modern masonry. The investiture of two years of hard labor had born spectacular results. The aqueduct arched over the Genesee River with the grace of a dancer, carrying perpendicular to the course of the river an entirely new waterway, which was to be inaugurated with the economic lifeblood of the country this very day. Few had gathered who could appreciate the master craftsmanship, the perfection embodied in its angles and struts. Not since the days of the caeasars and pharaohs had the world seen such construction.
+:socrates: This stone, what was its nature? 
 
-When the sun began its downward descent, we saw the horses round the corner, drawing behind them the *Seneca Chief*. Upon the deck of the barge stood Governor Clinton, upright and chest pushed out in victory. Beside him stood the man I would come to know as Stephen Van Renssalaer, an enigma in a frock coat. The pagentry commenced when the boat docked at the entrance to the aqueduct fired a performative musket shot into the air, silencing the commotion. A lone voice called to challenge the approaching vessel, "Who comes there?"
+:critias: I have heard tell from the priestesses of Sais this *orichalum* was used an anchor, to be placed upon the Pivot around which their vast city had been constructed, and when the kings spun this metal, it stored the motion of the day for use at night. It was said Atlantis blazed at night with the flame of the sun, but never burned. For this reason, its people never went to sleep, as the city never darkened.
 
-The Governor, revelling in the pomp, called back, "Your brothers from the West, on the waters of the Great Lakes!"
+:socrates: And how did they spin this metal, Critias?
 
-The reply came, "By what means have they been diverted so from their natural course?"
+:critias: In this matter lay the most impressive accomplishment of the ancient Kings of the Atlantic, for their whole city had been built around a Pivot that held the stone. During the day, the ritual bulls bred in temples were hitched to long lever arms at four points in the city corresponding to the compass and driven around in circles. These lever arms, being attached to the Pivot through a series of concentric gears, spun it with great speed. 
 
-To which the Governor in turn replied, "By the channel of the Grand Erie Canal!"
+:socrates: But, Critias, this Spindle would, by Necessity, be immense. Something so large could not disappear so easily. Where has it gone? 
 
-Not a soul beyond the initiated realized the meaning of this ritual, nearly identical to challenge a Brother of the Order must meet to enter the Temple. It was only later that I myself realized the significance of Stephen's presence. With this performance, Stephen had ensured the symbolic victory of the Masonic Order, its utter dominion over the natural elements. Nature had not just been tamed, it had been willfully organized contrary to its wishes. The mark of its maker was now imbued into the very foundations of the current itself. 
-
-The *Seneca Chief* docked as the commotion re-ignited and crescendoed into a flurry of bands and confetti. Speeches were given, but none of consequence. The dignitaries retired to the Mansion House hotel on State Street for the banquet and ball. As the parade moved through the city streets and the evening rose in the sky, candles were placed into the windows. An ethergeal glow hung just above our heads, casting out the encroaching dark. As we passed under this angelic light, an esctatic delirium descended upon us. Rochester seemed as though it flowed through a dream, a vision of music and dance. 
-
-...
-
-.. IN PROGRESS: Mansion House, hotel on State Street. Formal dinner.
-
-After his bloviating, the Governor introduced the man I had silently been waiting to hear. Of course, I knew of the Grand Master, his name being commonplace among the brothers at the Lodge, but never before had I seen him or heard him talk. His exploits need no further explanation; Any student of history will find them writ large within the annals of America. That night, still awash with the spirits of celebration, I transcribed his speech to best of my recollection, which I now reproduce below, 
-    
-    Thank you all for coming. I would especially like to extend my gratitude to the people of Rochester for putting together the feast we are about to sit down and enjoy. But more than anyone else on the dais, there is one indvidual who deserves recognition for making this night possible. And no, it is not Governor Clinton, though he might tell you otherwise. (*Laughter*) I am talking, of course, of Mr. Jesse Hawley. Indeed, it was Mr. Hawley who conceived this grand endeavor many years ago. Or should I say "Hercules"? (*Laughter*) At any rate, Mr. Hawley or Hercules, it was the man you see sitting here whose brilliant prose deposited this idea into my head.
-
-    At the time, few believed the words of Mr. Hawley. His vision was too large to be contained in the minds of simple men. Yet, with the utter precision of numbers and an unyielding faith in the Architect's designs, he hewed from the rough ashlar of what is the perfection of what could be. Perhaps people will say this Canal belongs to me, and while it is true my family's coffers were the engine of this enterprise, this Canal is not my accomplishment to claim. Others will say it belongs to the administration, and even I, the loyal opposition, must concede without Governor Clinton's steady hand, this project would have unravelled long before its completion. Statues may be erected and crumble; Histories may be written and revised; But forever unto the ends of the Earth, from this moment on, this world will bear the mark of Mr. Hawley. 
-
-...
-
-.. IN PROGRESS: The 47th Problem.
-
-The discussion among the brothers entered the realm of geometry.
-
-...
-
-.. IN PROGRESS: Morgan impresses Stephen with the Legendre Proof. 
-
-"My cousin went to France and returned with a remarkable proof of the 47th problem they have discovered."
-
-..
-
-"You see, if one drops a perpendicular from the highest angle, then by necessity the angles formed on the hypotenuse are right. Furthermore, since the opposing angles untouched by the perpendicular are complementary, the remaining angles must also be opposed. Therefore, by the grace of divine logic, the triangles formed by the perpendicular are similar. From this, it is deduced their sides must exist in equal ratio. Two smaller right triangles are thus cut from the larger, and their perfection forms the parts of the larger's perfection. It follows simply from algebra the theorem of Pythagoras."
-
-Several nodded their heads, pretending to grasp the elegance of the proof. Fewer mulled my words, tracing its deductions in silent mental steps. After a brief pause, Stephen raised his eyes to me and said, "If I follow your logic, then the perfection is infinite. One could continue in this fashion until the ends of time, devising ever smaller triangles, each manifesting the same ratio."
-
-"Indeed, Brother", I replied with a grin, awed by his ability to instantly absorb the mechanics of the proof, "As above, so below."
-
-...
-
-.. IN PROGRESS: Secret meeting of the Masons after banquet to consecrate the aqueduct.
-
-.. IN PROGRESS
-
-"The world is made of secrets," Stephen explained, "When you are young, you believe them finite. You convince yourself they can be catalogued and put to paper, and the world will yield to you its mysteries once you have encompassed them. Every boy whoever came of age since the dawn of man was born from this fatal curiosity: to understand and tame the world of adults. Our nature is contained in the fruit of knowledge, in our arrogance to become the gods we imagine our parents to be. This is the promise of the pyramid, to ascend from the morass of mud to a etched point of the purest stone and behold the scope of creation condensed down into a singularity."
-
-He tapped the leatherbound cover of the *La Maçonnerie Égyptienne* [#oubliette_b_000]_, "But to grow old is to realize the folly of this. Each secret begets another and another and another, endlessly. The stairs do not narrow as you ascend, but grow steeper and more treacherous, until the ground you walk is inverted and the very laws of gravity give way."
-
-Stephen often spoke in this manner, as if the world were the audience to his monologue. He did not speak to me in that moments, not directly. I was merely a spectator to his thoughts, a witness to his despair. If I had said a word, it would have fallen on deaf ears, for Stephen was somewhere else, lost in his mind. 
-
-...
-
-.. IN PROGRESS
-
-"I have need of men like you, William," He said grimly, "But I must be absolutely certain of your loyalty."
-
----------
-Chapter 4
----------
-
-That night, as agreed, I sat blindfolded in my parlor chair, with a single candle burning in my window. I waited in stillness for what seemed a lifetime before the knock on my door came well past the hour of the owl. I felt the sudden rush of panic. Here was I, a man of no notoriety but to be a simple brick layer and stone cutter, cavorting with the gentry of Albany in some mad ritual, whose dubious origins even then weighed heavily on my mind. I had a choice in that moment. I could simply remain silent and let them leave, living out the rest of my life as if nothing had ever occurred. Nonetheless, within the turmoil heaving around my guts, spinning fast in the overwhelming fear, I felt a glimmer of excitement, as though I were on the precipice of a secret world, whose laws and customs were alien to my own. 
-
-"Who comes there?" The words were spoken as though I dreamed. 
-
-"Your brothers, from the South and North," came the reply.
-
-"By what means have you arrived?" I cried on cue.
-
-And then the response whose significance and meaning to this day I have not unravelled, "From the ice within the fire, the above which came below, the after now before."
-
-With that, I cannot say with any certainty what happened next. My front door creaked with their entrance and their footsteps approached. Their number I cannot estimate, but I had the sense my room was filled with their presence. I know that I was made to walk forty paces from my front door and then placed into a carriage. The ride lasted no longer than an hour, though I admit my nerves may have disturbed the count as I bounced haplessly against ever rut and gutter in the road. Not a word was said the entire time. 
-
-When we came to a stop and they brought me out, the ever present grinding and hum of the city was gone, replaced by the unmistakable chirp of crickets in the dead night air of the countryside. Confirming my suspicions, they led me through field after field. Blinded as I was, I stumbled over rocks and fell to my hands at least three times. On the last fall, beneath my fingertips, before they carried to me my feet, I felt the momentary impression of engravings upon the stone, deliberate etchings carved deep and angular. 
-
-Through the midnight grass I was herded until our footsteps began to echo against earthen walls and the air I breathed grew heavy with moisture. Each step was made on faith alone as my brothers pushed me relentlessly forward in front of them. We descended atleast a mile, or so I believe, through a series of caves into a subterranean cavern. It was there my blindfold was removed and I observed the spectacle arrayed before me.
-
-My brothers, robed and hooded, their faces obscured by shadow, lined the walls of the cavern. In the center of the enclosed area, hewn from the natural stone in perfect lines, an altar was raised, upon which stood an enormous statue. The figure radiated obscurely in the darkness before my eyes resolved its shape: a bull, with its head reared up towards heavens, pointing directly to an occulus in the ceiling through which the moon peered it pale white face upon the proceedings.
-
-From a pit of darkness beyond the edge of illumination, a man stepped into view and the room fell into total silence, or perhaps it was then I noticed the lack of sound. The surprise which I felt makes the exact recollection difficult. 
-
-The man who had been Stephen now stood before me a different person altogether. This man, I would learn in my studies, though he looked and sounded like Stephen, was the *Grand Cophta*, the master of the ceremony. He wore a flowing robe of white, crossed with a sash of crimson. His face had been powdered and dark circles drawn around his eyes. Over his shoulders, he bore vestments the color of the sky and on his hip, he carried an ornamental sword, grasping its ivory hilt with straining knuckles. 
-
-"Brother Morgan", The Grand Cophta intoned from the center of the room, standing in a pool of moonlight, "You have been chosen to bear witness to the Ancient and Primitive Right of the Mishraim. Do you accept?"
-
-Meekly, I nodded, choking out my barely audible consent, "Yes."
-
-At once, the cavern filled with the ruddy light of fire. The altar, I realized, was a furnace, and now its grating shown with the flicker of angry flames.
-
-"You have been taught a myriad of lies," The Grand Cophta boomed, as the brothers behind him rushed into place to pump the bellows built into the altar, "Tonight the fog is lifted and you shall see the tip of truth that lies submerged."
-
-Serpentine flames lept in plumes from the vents and spilled along the sides of the giant brass bull. The metal began to glow like molten gold and steam hissed from its nostrils. As the fire poured into its stomach, churning the substance with its vital heat, the statue came to life. Its cries and snorts filled the chamber, as though a human screamed inside of its contours. The brother surrounding me began to chant an ancient verse,
-
-    | Noctes atque dies
-    | patet atri ianua Ditis
-    | sed revocare gradum
-    | superasque evadere ad auras
-    | hoc opus, hic labor est
-
-The Grand Cophta placed a plain ceramic bowl upon the glowing hearth at the foot of the bull. He turned and spoke, "You have been told what is heated becomes hot."
-
-From the solitary line of brothers, one stepped forward bearing an ornate chest wrought in gold and silver. The Grand Cophta flung it open and produced high above his head a tiny stone, no bigger than a coin, but darker even than the shadows from which it was produced. Stepping back to the altar, he placed the stone into the ceramic bowl. It rattled violently against the heat as though it spun against its prison.
-
-He then turned to me again and spoke softer, "You have been told what ages becomes old."
-
-At that, my heart stopped, for a small child stepped into the chamber. Barefoot in a gown of pure silken white, she approached the altar and knelt. The Grand Cophta placed before the child a crystal carafe of water. 
-
-Finally, he spoke to the blackness of the cavern, "You have been told what falls becomes fallen."
-
-With those words, he dipped a crucible into the glowing potion within the ceramic bowl and brought over to the child an illumined residue. With a splash that pierced the ears like cracking glass, he poured the molten substance into the water. The liquid boiled with a fierceness approaching the fear that once again wracked my stomach, as the carafe overflowed and belched a mist of murky yellow into the cavern air.
-
-Wordless and obedient to a script I can only surmise, the girl dipped her head into the cloud and breathed deep the vapours that pooled around her huddled form. While I stood in stunned silence, the mist spread thin throughout the cavern and dissolved into the darkness. As my eyes watered and my head grew light, I watched the poor child convulse on the stone floor, arching her back against some phantom pain and kicking her toes bloody against the jagged ground.
-
-The Grand Cophta knelt before the flailing child and spoke in a voice that would stop armies in their tracks, "I command you, Euphemia, to see the Angel Cassiel!"
-
-"Father!" She screamed in a guttural voice no child should produce, "The fire!"
-
-"Bring him forth, child," The Grand Cophta disappeared, for now I saw clearly that a father knelt to hold a shaking daughter in his arms as she wept uncontrollably into his chest. He spoke softer, addressing her directly, "Tell us what you see."
-
-"The sky burns with...*logos*...," She struggled to whisper. The child lifted her head and gazed around the chamber. Her eyes were of obsidian. I shall never forget her visage as long as I draw breath. Her skin had gone grey and the hollows of her cheeks pooled with the ink of shadows, but a deeper darkness yet claimed her eyes, pits where no light could find purchase. Her hair, now brittle and white, fell to the floor in clumps as she scanned the row of brothers clinging to the stone. She moved to speak, but the words became gasps as her strength failed and she fell back into her father's arms, "*Hoi ouranoi...rheousin...pyri*" [#oubliette_b_001]_
-
-And then she went limp and spoke no more. 
-
----------
-Chapter 5
----------
-
-A fortnight I was left to ponder what I had witnessed. My study became obsessive. I poured through the shelves of the Lodge, in search of the cipher that would help me decode the mysteries of the ritual. The librarian, Brother Eliphalet, became my Virgil, guiding me through the arcana the Lodge had accumulated over the years. I delved into their stockpile of magical tomes, some written in languages I could not begin to understand, but Brother Eliphalet lent me the endless repository of esoteric knowledge that made its home in his brain, versed as it was in the dead tongues of the ancients, though the Lodge posssessed texts even he could not read. 
-
-I came to understand in those days before Stephen re-entered my life the nature of what had been revealed. Initially, I believed the ritual to be an act of pagentry, some sort of liturgical play, but the more I dwelt on the child, Euphemia, the more this notion became senseless. I had seen her transfigurement with my own eyes. I had heard her speak in tongues. Her words were seared into my brain, though at that moment I did not yet understand them.
-
-The key, of course, was the alchymical mixture around which the ritual was centered. Of this, I was certain. The child had inhaled the vapors produced through distillation, and had unlocked a sight which penetrated the fog of which Stephen spoke.
-
-Brother Eliphalet delievered to me the first irrefutable link in the chain I now yanked. I followed the sickly man up spiralled iron stairwells, ascending past the histories and archives, into the attic of the Lodge, where my esteemed guide lit a candle at a plain wooden table and stool, the nook of the Lodge that was to become my home for the next two weeks. He placed before me a book as large as my chest and as thick as forearm. Emblazoned in overwrought jewels, the title read *Thesaurus Thesaurorum*. He flipped the oversized pages to a marked section towards the end that began with the heading *Magus, the 9th Degree*. As I understood its rudiments from my days of brick laying in the rowdy streets of Rochester, I let the harsh German purse my lips as I read the words aloud,
-
-    Habe bey der Hand eine Kugel, so aus der Electrum gegossen ist. [#oubliette_b_002]_
-
-I tested the word on my tongue. *Electrum*. At that moment, I was aware that I had begun a dark journey, as though the word had conjured the portents in my mind without any intervention on my part. Despite the impulse to flee, to abandon this mad venture, overcome with curiosity, I continued reading. By the next day, I had found the passage in te tome that would vex my dreams henceforth, 
-
-    Dieser Stein offenbaret ihm die verborgenen Dinge. [#oubliette_b_003]_
-
-The stone, which the text had named *Stein des Electrums*, revealed the *verborgenen Dinge*, the hidden things. At that, I shut the book and lets thought boil over for several minutes as I studied the cover of the *Thesaurus Thesaurorum*. The jewels worked into its leather cover multiplied in their facets the candlelight so that it seemed my world receded upon their smooth surfaces in infinite regress. I closed my eyes and could not help but remember the monsterous sounds that came from the mouth of the child, Euphemia.
-
-I found Brother Eliphalet and inquired of him the authors. His dour expression, so oft affixed to melancholy, lit up at the chance to discuss a subject I would stake he did not discuss with many brothers. He smirked unnaturally, for his features were not made to hold the happier emotions, "The question of authorship is secondary to the question of possession, my brother."
-
-"Do you speak in riddles intentionally?" I snapped, allowing my nerves to manifest in a momentary flash of irritation, "Tell me what you know regarding the book and its history."
-
-He bowed his head, although his sincerity in such gestures was impossible to gauge, and explained, "The *Thesaurus Thesaurorum* belonged to the late King of Prussia, Frederick William II."
-
-It was not the answer I had expected, but not entirely unexpected. Considering its extravagant cover, it was obviously noble in origin, though the extra prestige of royalty added another layer of intrigue to the mysteries that now swirled around me like a hurricane. I asked, unable to halt the curiosity animating my tongue, "And how did it come to be in the Lodge?"
-
-"When the king died, his son was not as...," He paused, searching for the word, "...accomodating to our Order as his father. Many of us had to flee."
-
-"*Us*?" I inquired, realizing the remnants of Eliphalet's accent were yet another clue in this endless, twisted mystery.
-
-"Indeed, myself and four others fled the empire and crossed the border at Ostfriesland into the Netherlands," He frowned, "We brought with us what we could, but it was not much. We left far more behind than we brought."
-
-After a moment, he added, without prompt, "The price of our passage was the books you now read. Or a significant fraction of them at least. The Grand Master has assembled the Lodge library from many different sources, though I wager the Rosicrucian texts we added to his walls are his true pride."
-
-"The Grand Master," I shook my head with another yet question, though this one's answer I already knew, "Stephen, you mean?" 
-
-He nodded. Would that I had the will to stop my investigation there, and rest in the knowledge that what I had seen had been mere chemistry, albeit of the sacred genre, that the child had seen a vision induced by the alchymical transubstantion of this *Electrum*, but fool that I was, I bade Eliphalet help me trace this yarn back to its source. Dutifully, my brother produced the books in which I was to make my education of the dark arts.
-
-As I pulled the loose threads, they unwound down through the ages. Each loop I unravelled and found the circumference returned to an earlier era, deeper into the mystery that twisted around the shapes of history and shot it through with its circuitous rungs. 
-
-The next shelf to hold my weight as I climbed the towering helix was the *Picatrix*, an artifact from the 10th century. Its edges frayed and torn with untold years, I delicately turned the pages until I found the passage I knew I would find as soon as I hefted the book from its dusty hermitage in the corners of the Lodge's attic. Under Brother Eliphalet's tutelage, I began to pry from the dry parchment some semblance of meaning, acclimating to the general principles of Latin after several intense days of indoctrination. 
-
-Within the *Picatrix*, I found the ancestor of the ritual detailed by the Order of the Golden and Rosy Cross in the *Thesaurus Thesaurorum*. The Rosicrucians had extracted the salient elements and recast them into the language of their era, but the general principle remained the same. A vessel, always a small child, is placed before a medium,
-
-    Accipe puerum immaculatum, et pone speculum in manu eius et praecipe ut inspiciat in eum, et dic in aure eius videsne aliquid? [#oubliette_b_004]_
-
-Once the vessel and the medium achieved communion, the *Cophta* would conjure a heavenly spirit within the child by calling it to the surface,
-
-    Et si dixerit: 'Video', dic ei aperiatur tibi, et angeli Dei intrent in te. In nomine Uriel, Anael, Cassiel... descendite! [#oubliette_b_005]_
-
-This was no mere pagaent Stephen had enacted, but a profane inheritance from a forgotten past. I had only just begun to understand how distant the origin of this working was from me, what primordial forces Stephen yoked and what *prima materia* he hewed. 
-
-I continued to search for the source. If such a point even exists within the recorded history of man, I have not yet produced any positive evidence, but as I pulled, the thread did not cease to uncoil, binding me ever tighter in its tangled convolutions. 
-
-The *Picatrix* had given me the first concrete association to Stephen's ritual. *Anael*, *Uriel* and *Cassiel*, three of the archangels bound to the divine light. Though I could not claim an encyclopedic knowledge of the alchymical symbolism and its gematrical significance, I knew the basic correspondences. *Anael*, *Venus*, the purity of spiritual love, its soft magnetic power. *Uriel*, the Fire of God, the rays of *Apollo*, the illuminator of the Mind, bearing a flaming sword. And then the one selected for Stephen's invocation, *Cassiel*, the keeper of Decay, the guardian of the Void, the enigmatic *Saturn*. What puzzle had I found myself assembling, that I now write their hallowed names upon this paper? 
-
-.. TODO: Zohar II 243a 
-
-    וּבְהַהוּא הֵיכָלָא, קַיְימִין אֶלֶף וְשִׁית מְאָה מַשִׁרְיָין דְּמַלְאֲכֵי חַבָּלָה דְּמִמְנָן לְאַסְטָאָה וּלְקַטְרְגָא עַל עָלְמָא, וְחַד מְמֻנָּה קָאִים עָלַיְיהוּ וּשְׁמֵיהּ קַצְפִּיאֵל, וּבִידֵיהּ חַד סַיְיפָא פְּגִימָא לְאַשְׁרָאָה דִּינָא עַל אִינוּן דְּלָא נָטְרֵי בְּרִית קַדִּישָׁא [#oubliette_b_006]_
-
-
-By the time Stephen summoned me, I had discovered the earliest mention of the ritual I would find, within the *Papyri Graecae Magicae*, an inscrutable text of recipes and spells from before the time when Christ walked the Earth. Eliphalet provided the full translation, 
-
-    Ἐπικαλοῦμαί σε, τὸν κτίσαντα γῆν καὶ οὐρανόν κατάβα, καὶ ἔμπλησόν μοι τὸν παῖδα τοῦτον τῆς σῆς μαντείας. Mὴ μωράνῃς μου τὴν ψυχήν, ἀλλὰ ὑπάκουσόν μοι. Εἴσελθε, καὶ πνεῦσον εἰς αὐτοῦ τὴν διάνοιαν καὶ δεῖξον αὐτῷ τὴν ἀλήθειαν. [#oubliette_b_007]_
-
-.. TODO: ἤλεκτρον
-
-The unifying theme of this ritual throughout the ages, beyond the vessel of a child and the medium of water, was the *πνεῦμα*, the breath in which lingered the *ψυχή*, the soul. I thought back to the mist Stephen had drawn from the water and again, my thoughts returned to the material, the *Electrum*. 
-
-The mind is a strange resource. These events I have turned over again and again in the year since they unfolded. I recall the vivid details of the entire ceremony, but I cannot be certain how much I saw and how much I dreamt from nothing in the fevered days that followed. I remember the rattle, the way the material spun and danced against the ceramic bowl as the heat fueled its chaotic bouncing. Of this I am certain. The other details, they wax and wane with the vagaries of my attention. I cannot say what color the mist assumed, but I know my memory tells me it was a pallid yellow; I cannot say how long the material reacted with the heat, but my reason tells me it could have no longer than five minutes; I cannot say what sound the material made on contact with the water, but I distinctly recall the sound of shattered glass. All of these details are uncertain in the fog of memory, except the rattle. The material spun, there can be no doubt.
-
-And her eyes, as empty as the night. This is another certainty. I know not of what significance to make of these details, but if all interrogations of the supernatural are to be made rigorous, then they must rest on certitude. The bare facts must be acknowledge: the material spins with heat, and its distillation via hydrolysis induced a state in the child that can only be described as demonic.
-
-Though the reader will not believe me, I swear in that moment, I heard the echo of the child through time, gasping with the last vestiges of air her lungs could hold,
-
-    Οἱ οὐρανοὶ ῥέουσιν πυρί.
-
-Without assistance or Eliphalet's translation, the meaning came to mind without aid, in utter certainty: *the heavens flow with fire*.
-
----------
-Chapter 6
----------
-
-The extent of the van Rensselaer family's influence in New York cannot be understated. As my carriage navigated the paved streets of Albany, crossing over the Hudson towards the heart of the Rensselaerwyck domicile opposite their vast political fief that sprawled across the downtown on the west side of the river, it was hard not to notice the near oppressive prevalence of their name. The church, the library, the schools, the street names, all bore the mark of the van Rensselears. From whence did this family originate, I wondered? 
-
-Any student of the civic arena will at once recognize Stephen van Rensselaer, at various times holding public offices such as State Senator and Lieutenant Governor, and at others, the financial bankroll behind a private empire of real estate and insurance. Add to that, he and his brother were local heroes, veterans of the Second War with Britain; by all accounts, true patriots whose blood now mixed in the ground with its predecessors. 
-
-A week ago, I might have gazed from the carriage out onto the elegant streets of Albany and found myself marvelling at their accomplishment. Albany was clearly the capital city of their kingdom, staked and raised from the seams that formed where the Appalachian foothills mets the snaking course of the Hudson. It lay before me in impressive splendor, an orderly patchwork of stonework and pavement, exemplifying a craftmanship that betrayed a studied hand. The city had been erected with careful planning and a precision known only to the masters in the Lodge. Its very foundation nurtured the roots of the van Rensselaer family and spoke in its architecture of their influence.
-
-Or so I would have thought, had I not spent the previous fortnight in nightmarish study, tracing the spiritual lineage of Stephen through the profane history of magick and arcana. I now questioned the nature of this city. I found myself tracing its street plan in my mind's eye, searching for geometric allusions and possible interpretations. 
-
-The horses rounded the face of a cliff and ascended to the top of a bluff that overlooked the river. The flags of commerce filled the evening horizon, their sails drawn and tied to mast. There before me, a hundred yards from the cliff's edge, arrayed behind by its sleeping fleet, sat the van Rensselaer family manor, an oblong building with a gambrel roof bearing two wings above which stone railing encircled balconies. Stephen stood on the east wing roof with his hands pressed to the railing, watching my approach.
-
-...
-
-.. IN PROGRESS
-
-"I can see by your face you have begun your study," Stephen nodded sternly.
-D
-.. IN PROGRESS: Meet Stephen again. Euphemia is "fine" (hair regrown, still a child), but mute.
-
-.. image:: ../../../../_static/img/fabula/magnum-opus/illustrations-of-masonry-excerpt.jpg
-   :width: 70%
-   :alt: Schematic of unknown device.
-   :align: center
-
-...
-
-.. IN PROGRESS
-
-.. [#oubliette_b_000] On the topic of *Egyptian Masonry*, the Capital Reliquary is often contradictory. Here Morgan presents Stephen as possessing the text *La Maçonnerie Égyptienne* in 1825, but the official histories in the Library decrypted from the Reliquary place the establisment of the *Ancient and Primitive Rite of Memphis-Misraïm* within Freemasonry squarely in the latter half of the century, with most sources citing a date between 1840 through 1880. These minor inconsistencies cast doubt on the accuracy of Morgan's account. As will be seen, the claims he makes become more sensational and lurid as the narrative progresses.
-
-.. [#oubliette_b_001] The reader is here referred to the :ref:`exegesis of the Sibylline Prophecies <exegesis-000>`.
-
-.. [#oubliette_b_002] German: "Have at hand a Sphere, which is cast from Electrum."
-
-.. [#oubliette_b_003] German: "This Stone reveals to him the hidden things."
-
-.. [#oubliette_b_004] Latin: "Take a spotless virgin, and put the mirror in his hand and command him to look into it, and say into his ear, Do you see anything?"
-
-.. [#oubliette_b_005] Latin: "And if he says: 'I see', tell him, 'Let it be opened to you, and let the Angels of God enter into you. In the name of Uriel, Anael and Cassiel, come down!'" 
-
-.. [#oubliette_b_006] Hebrew: "And in that palace, there stand one thousand and six hundred camps of angels of destruction who are appointed to accuse and to bring prosecution upon the world and one supervisor stands over them and his name is Cassiel and in his hand is a notched sword to execute judgment upon those who do not guard the Holy Covenant."
-
-.. [#oubliette_b_007] Greek: "I call upon You, the one who created earth and heaven, come down, and fill this boy for me with your prophecy. Do not dull my soul, but obey me. Enter, and breathe into his mind and show him the truth."
+:critias: The kings grew greedy, Socrates. Long after the time of Asterion, they sought to exploit the power of the Titans for the purposes of petty empire. They spun the stone ever faster, using it to build ever larger armies. Their war-making awoke Cronos and angered him, for he saw the Atlanteans had twisted his gift to their depraved ends. It is said by the priestesses Cronos then yanked the threads of Time and Fate, and caused the city to decay and crumble into the sea.

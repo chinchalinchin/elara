@@ -2,19 +2,12 @@
 .. SECTION: Archives
 .. SUBSECTION: Oubliette A: Vatican Reliquary
 .. TABLE OF CONTENTS:
-.. - 000: The Lost Dialogue of Critias
-.. - 001: Map of Macrobius
-.. - 002: Mysterium Hyperboreum: Sive, De Spiritu Mundi in Materia Spitsbergensi Captivo
-
+.. - 
 .. _oubliette-a:
 
-Oubliette A: Vatican Reliquary
-==============================
+Oubliette A: Ouro Reliquary
+===========================
 
 .. toctree::
    :maxdepth: 2
    :caption: Vatican Reliquary
-
-   000
-   001
-   002

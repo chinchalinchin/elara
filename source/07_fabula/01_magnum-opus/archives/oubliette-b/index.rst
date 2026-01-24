@@ -1,26 +1,20 @@
 .. TITLE: Magnum Opus
 .. SECTION: Archives
-.. SUBSECTION: Oubliette B: The Capital Reliquary
+.. SUBSECTION: Oubliette B: Vatican Reliquary
 .. TABLE OF CONTENTS:
-.. - 003: Illustrations of Masonry
-.. - 004: Police Report Concerning the Death of William Morgan
-.. - 005: Post Office Field Reports
-.. - 006: The Coriolis File
-.. - 007: Falkland Islands Dispatch
-.. - 008: The Euphemia Experiments
+.. - 000: The Lost Dialogue of Critias
+.. - 001: Map of Macrobius
+.. - 002: Mysterium Hyperboreum: Sive, De Spiritu Mundi in Materia Spitsbergensi Captivo
 
 .. _oubliette-b:
 
-Oubliette B: Capital Reliquary
+Oubliette B: Vatican Reliquary
 ==============================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Capital Reliquary
+   :caption: Vatican Reliquary
 
    000
    001
    002
-   003
-   004
-   005

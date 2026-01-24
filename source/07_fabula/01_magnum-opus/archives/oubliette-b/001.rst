@@ -1,10 +1,13 @@
 .. TITLE: Magnum Opus
 .. SECTION: Archives
-.. SUBSECTION: Oubliette B: The Capital Reliquary
+.. SUBSECTION: Oubliette B
 
-.. _oubielette-b-001:
+.. _oubliette-b-001:
 
-Police Report Concerning the Death of William Morgan
-----------------------------------------------------
+Map of Macrobius
+----------------
 
-.. IN PROGRESS
+.. image:: ../../../../_static/img/fabula/magnum-opus/map-of-macrobius.jpg
+   :width: 70%
+   :alt: The northern region and its antipodes
+   :align: center
