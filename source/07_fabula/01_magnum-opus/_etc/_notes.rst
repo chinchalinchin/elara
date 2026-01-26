@@ -153,7 +153,7 @@ Politics
 - The "Triumvirate" (US/Russia/China) that ended the Third Schism has morphed into the "Triage Authority". 
 - "The Prohibition" bans autonomous AI due to the 2120s drone war. All tech is "Human-in-the-loop" (Telepresence/Waldos).
 - Ceramic and crystal cities to resist acid rain. Subterranean fungal agriculture. A culture of "Shift Work" and guilt (The Breaker Complex: the burden of billions dead).
-- Data is not in a cloud. It is rotting in physical "Oubliettes" (e.g., Denver Sector). The Editor is a "Data Archaeologist" using a "Sarcophagus" rig to read dead magnetic media.
+- Data is not in a cloud. It is rotting in physical "Oubliettes" (e.g., Denver Sector). The Editor is a "Data Archaeologist" using a rig to read dead magnetic media.
 - The Directorate is generally unknown to most people. 
 - Tech Paradigm is Analog Supremacy. Direct Brain-Computer Interfaces (digital) are banned for the elite. "Fluidic" and "Optical" analog computers are used for high-level tasks. "Wetware" (biological organoids) is preferred over Silicon.
 - It is a period of reclamation. *Eclusa* are beginning to form around *Creches* as humans return to the surface (Note, this terminology only exists in South America.)
@@ -164,35 +164,33 @@ The Triage Authority (Earth)
 .. topic:: Overview
 
    - *Jurisdiction:* The surface and subterranean bunkers.
-   - *Culture:* mandated shift work, caloric rationing, guilt-ridden ("The Breaker Complex").
-   - *Tech:* Strictly analog/bio-mechanical. AI is banned.
+   - *Culture:* mandated shift work, caloric rationing.
+   - *Tech:* Strictly analog/bio-mechanical.
    - *Relation to Space:* Most are unaware the Directorate exists.
 
 The governments of the 20th and 21st century created a vast network of underground tunnels for their Continuity of Government protocols. This network was taken over by the Triage Authority during the Contraction and opened to those fleeing acid rain, famine and war. 
 
 All of the tunnels are theoretically connected, e.g. there are Transatlantic tunnels, but they are over a century old and not well maintained. It is considered extremely dangerous to use them for travel.
 
-While the Authority is global, this time period is mainly focused on São Tomé das Letras. 
+While the Authority is global, this time period is mainly focused on São Thomé das Letras. 
 
 **Terminlogy**
 
-- Esconderijo: The population centers buried deeper underground for thermal enegry.
+- Esconderijo: The population centers buried deep underground for thermal enegry.
 - Creche: A nursery of workers near the surface.
 - Eclusa: The synthetic towns that emerge near the openings of the Creche.
-- Catadores: An brotherhood within the Pentential Order devoted to gathering data.
+- Catadores: An brotherhood within the Penitential Order devoted to gathering data.
 - Capataz: Overseer of the Creche. 
-- Pedreira: The places where quartzite is mined for radiatian shielding.
 - Galerias: Tunnels surrounding the Esconderijo, connecting it to the Creche and other networks.
-  
-**Saying**
+- O Soturno: The uncharted underground.
 
-- *carregar o fardo*: carrying the burden.
-  
 **Places**
 
-- São Tomé das Letras: A Creche near the surface in the former territory of Brazil. 
-- Gruta do Carimbado: The inner core of the Esconderijo.
+- São Thomé das Letras: A Creche near the surface in the former territory of Brazil. 
+- Gruta do Carimbado: The Esconderijo near São Thomé das Letras.
+- Gruta do Sau Paulo: Esconderijo underneath the former city of Sao Paulo.
 - Ouro Preto: Old mining town in Congonhas, Minas Gerais
+- Pedreira: The quartzite mines outside of São Thomé das Letras.
 
 The Directorate of Archons (Space)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
