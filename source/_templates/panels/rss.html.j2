@@ -1,0 +1,21 @@
+<div class="feed-container">
+    <div class="feed-header">
+        <h2 class="feed-title">צִנּוֹרוֹת</h2>
+        {% if title != 'Aetheric Emanations' %}
+        <a href="/_pages/_hidden/feed.html" class="icon rss-icon" aria-label="Subscribe to RSS Feed">
+            <img src="/_static/svg/rss.svg" alt="RSS Feed" class="icon-svg">
+        </a>
+        {% endif %}
+    </div>
+    {% for item in feed_items %}
+    <a href="{{ item.link }}" class="feed-card-link" aria-label="Read more about {{ item.title }}">
+        <div class="feed-card">
+            <div class="feed-card-content">
+                <p class="feed-card-date">{{ item.pub_date }}</p>
+                <h3 class="feed-card-title">{{ item.title }}</h3>
+                <div class="feed-card-excerpt">{{ item.description }}</div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>

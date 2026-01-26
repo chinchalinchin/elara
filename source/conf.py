@@ -18,8 +18,8 @@ author = 'Grant Moore'
 
 # -- Path setup --------------------------------------------------------------
 
-sys.path.insert(0, os.path.abspath('./_extensions/_roles'))
-sys.path.insert(0, os.path.abspath('./_extensions/_directives'))
+sys.path.insert(0, os.path.abspath('./_extensions/roles'))
+sys.path.insert(0, os.path.abspath('./_extensions/directives'))
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -27,35 +27,28 @@ sys.path.insert(0, os.path.abspath('./_extensions/_directives'))
 extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.mathjax',
-    'sphinx.ext.graphviz',
     'sphinx.ext.extlinks',
     'sphinx_toolbox.collapse',
     'matplotlib.sphinxext.plot_directive',
     'sphinx_design',
     'sphinx_sitemap',
     'sphinxcontrib.mermaid',
-    "sphinx_carousel.carousel",
-      # Custom Directives Extensions
-    'share',
-    'map',
-    'rss',
+    # Custom Directives Extensions
+    'panels',
     # Custom Roles Extensions
-    'back',
-    'redacted',
-    'small',
-    'tiny',
-    'underline',
-    'handwritten',
-    'strike'
+    'widgets',
+    'classes'
 ]
 
 templates_path = [ ]
 
 exclude_patterns = [
-    '_notes/**',
-    '_drafts/**',
-    '_prompts/**',
+    '**/.etc/**',
+    '**/.notes/**',
+    '**/.drafts/**',
+    '**/.prompts/**',
     '**/exc_*',
+    '**/.*.rst',
     '**/_*.rst'
 ]
 

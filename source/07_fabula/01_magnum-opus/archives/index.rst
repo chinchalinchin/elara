@@ -6,23 +6,71 @@
 Archives
 ========
 
-Father died in blinding pain. I held his hand at the end, when the last convulsions of life shuddered through his broken frame. His purpled hands, cold as ice and streaked with white where his knuckles pressed against his skin, clutched my fingers. I said nothing as he spasmed and seized.
+The tunnels that suspend the Esconderijo in the underground core of the Serra da Mantiqueira are a labyrinth of intersecting coils. Once you leave the safety of the Authority's domain and step into the smooth, unadorned passages of the Galerias, the only bulwark against getting lost is memory, the pedantic accounting of every meter and angle, projecting every turn onto the course of maps, hoping nothing has collapsed or shifted since they were written a hundred years ago. Tunnels split like roots that endlessly probe the depths, twisting into knots and growing in chaotic patterns, grafted into the natural caverns, where meandering passages, hewn by the unaccountable forces of nature, meet the intentional straight edges of human design. The further one moves from the Esconderijo, where the geometric surfaces bear the cuts and slices of long dead engineers, the more one relies on the improbable coincidences of geological events, even further removed from the present and more inscrutable in their ends.
 
-The doctors said he had past the point of no return weeks prior, that it was a miracle he still clung to life, but I failed to see anything miraculous about his condition. To me, it appeared opposite. I had read the Authority's report, that he fallen through a collapsed tunnel beneath the Pedreira and broken his respirator. By the time anyone could get to him, he had been inhaling the unfiltered clouds of fungal spores that pooled in the underground mines for hours. 
+When I told father of my intentions, he was furious. He called me a fool and forbade me to leave, but even the clout he had earned serving twenty years as the Creche Capataz could not sway the true believers in the Penitent Order. Despite his protestations to the Authority, the sterile bureaucrats of the ministry had a little interest in, and even less influence over, the church and its affairs. The terms of their contract with the Order were iron-clad. The Authority's interest in Gruta do Carimbado extended no further than the turbines that spun below our feet at all hours of the day, and the system of wells that drew from the mantle a continuous flow of superheated steam. As long as the grid hummed with energy and stayed in good repair, the Authority were content to give the Order substantial leeway in running the Esconderijo.
 
-They showed me the sonograms, the acoustic maps that charted the progression of the infection. Sterile black and white photographs carouselled across the screen, an expanding web of nodes that ate through his lungs and travelled up his spine to make its home in his brain. Towards the end, they stopped bringing me updates. 
+By enrolling in the Catadores, I had found the one place in all of Gruta do Carimbado my father could not control the outcome. His anger was overwhelming. I could not understand why he was acted so irrationally, or why I should be the source of his ire. This was not some whim, some idle thought that staked a momentary claim in my attention, to be gone by the next cycle; it was a compulsion, a fate I could not ignore. 
 
-.. IN PROGRESS
+Everyone on all levels was roiling with news sent through the wire. Another Esconderijo to the south, Gruta do Sao Paulo, had synthesized a material resistant to the surface rain. They were calling the process *crystalis*, a method of mixing the ever abundant quartzite of Serra da Mantiqueira with iron to produce a crystal of the purest white, over which the acidic droplets of rainfall would run harmlessly. The local foundries were already spinning and grinding quartzite into a fine powder, but the smelters lacked the iron ore to complete the formula. 
 
-"I'm glad you're here," He whispered before he fell into the coma from which he would never wake. 
+Father did not seem to comprehend the significance of the discovery, what it represented. The surface need not be hellscape. We could engineer a solution and reclaim what had been lost. What's more, he did not care the Catadores were the only ones with the resources to organize the expedition to the Casa de Pedra mine.
 
-Why had I left? The reasons suddenly seemed so foolish. 
+I left without saying goodbye. 
 
-.. IN PROGRESS
+Brother Agostinho, the stern Prior of the Catadores, spoke to the mission's recruits while we still lingered on the precipice of the Esconderijo, enjoying the last breaths of scrubbed air, not yet forced to wear our respirators like a second skin, "The Order has brought all of you here for a single reason. Before I elaborate, I must warn you the path before us is dangerous and uncertain. The Order cannot guarantee your safety. No one is forcing you to come. If you choose to accompany the Catadores, you do so of your own free will. However, once we step in the Galerias, it is to be understood that everyone, under penalty of death, will obey the commands of myself and Generalist Rostokova."
 
-What else do we have but words to hold our loved ones after they die? 
+Generalist Elena Rostokova, the Authority's representative in this collective endeavor, was to be our navigator, the one who would lead us through the maze of tunnels. She stood apart from the crowd, silent and sullen, studying the group with the eyes of a skeptic. In the pack strung across her back, she carried the residual knowledge of humanity, the maps whose contours and lines still bore the mark of the old world.
 
-- Gruta do Carimbado, 2155
+Agostinho continued, "If anyone would choose to stay behind, then now is the moment to make your decision. We go no further until each of you has assented."
+
+None of us moved. We had already made the decision long before this moment. The eyes of the men and women who stood beside me glimmered with the stories we had whispered in outer halls growing up. Ouro Preto, the City of Black Gold, where the riches of our ancestors lay buried under the ruin of the Contraction. 
+
+.. Generalist Elena Rostokova, navigator. Analyst Moacir, scientist. Brother Agostinho, Catador of the Penitent Order. 
+
+.. cadets: Ricardo, Alberto
+
+...
+
+.. IN PROGRESS: mission to scout Casa de Pedra mine (but secretly to find to explore the Jesuit archive under Igreja de Nossa Senhora do Carmo)
+
+We each bore a pack filled with essentials, should we get separated from the group, but we loaded the magnetic train with the majority of our provisions. The vehicle would be a relief, bearing the stock of our food and supplies, until we reached the boundaries of the Authority's maps, where the underground caverns had yet to be charted, and their connection to the larger network of the Authority unassured. Once we reached that point, the device would become a burden. 
+
+...
+
+.. IN PROGRESS:
+
+We left through the Mar de Morros passage, breaching the seal and disappearing into the gaping mouth of the mountain's core. The pale florescent spheres of sodium lamps curved down the ghostly white passages cut through stone centuries ago. 
+
+...
+
+.. IN PROGRESS: Cave paintings
+
+The creeping pace of the platform, combined with th
+
+...
+
+.. Estrada Real
+
+Among the three clefts wide enough to crawl through, we split into groups and gambled on which would have an outlet. Elena led the first group through the rightmost, Agostinho the center, and Alberto the left. I stood back and watched the press of bodies filter into the solid wall like the flow of liquid into a drain. I took my place at the rear of Alberto's line and waited as the last stragglers peeled their lanterns from the collective pool of light to leave me standing in solitary sphere of illumination, dimmed by the departure of its comrades.
+
+With a final, deep breath, I squeezed through the cracks that bled sunlight, laying my chest against the cold stone to slither through the underground like a serpent. The passage narrowed into a thin slit. My pace slowed as the space closed and I lost sight of the others in front of me. Without room to turn my head for the protuding tubes of my respirator, I pushed forward, the walls compressing my chest, each breath becoming short and labored. I gasped and felt a sharp pain, as though my ribs were being driven into my lungs.
+
+To die is an easy thing. It requires nothing. These thoughts ran through my head as I struggled through the enclosure. To live, however, is where the struggle resides. Everything in this world is a test, to ensure only those who desire life can be found among the living. And so I wrenched my body through unnatural contortions, sieved through the teeth of the Earth, grinding my own as I spit curses to whatever god devised this wheel. Like a slug, I stretched across the slime that coated the surface of this would-be tomb. Indignity upon indignity, it makes no matter. To live is the only imperative.
+
+Like a new-born, I was pushed into the mud beneath the sky, stumbling as my footing gave way. My hands and knees sunk into the muck, my limbs disappearing into a slurry. The ground itself slurped and belched as it attempted to digest me. I strained with all of my strength to free myself, but felt gravity pull deeper.
+
+Suddenly, a iron hand grabbed me by the shoulder and yanked me to solid ground. Dazed, I looked around as long threads of mud dripped like molasses from my fingertips.
+
+.. Casa de Pedra mine. Acid rains leeches iron oxides from the stone, leading to "blood rivers" during rainstorms.
+
+.. Lake of collected rain. Highly metallic. Orangish, ochre.
+
+.. Ground is basically concrete. No more forests.
+
+.. Igreja de Nossa Senhora do Carmo
+
+- Ouro Preto, 2153
 
 .. toctree::
    :maxdepth: 2

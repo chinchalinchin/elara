@@ -31,8 +31,10 @@ Antiquity
 Middle Ages & Renaissance
 -------------------------
 
+- 1170 AD: Carmelite Order founded.
 - 1506 AD: Demolition and Reconstruction of St. Peter's Basilica initiated by Julius II.
 - 1516 AD: Johann Reuchlin publishes a depiction of the Tree of Life.
+- 1540 AD: Society of Jesus founded.
 - 1599 AD: Juan de Mariana writes on the topic of justified regicide.
 - 1610 AD: Francois Ravaillac assassinates Henry IV for the Society of Jesus.
 - 1618 AD: Kenelm Digby takes the Mithraic Rite and enters the Society of Jesus.
@@ -49,6 +51,8 @@ Middle Ages & Renaissance
 - 1645 AD: The Maunder Minimum begins. Nicolaes Van Rensselaer gains second sight. The "black" sun. Nigredo.
 - 1656 AD: Christiaan Huygens invents the pendulum clock.
 - 1656 AD: Nicolaes van Rensselaer prophesizes King Charles II return to throne while in exile. He tells Charles of Ryckert and the Material.
+- 1753: Ordem Terceira do Carmo is founded in Ouro Preto.
+- 1756: Antônio Francisco Lisboa begins work on the Igreja de Nossa Senhora do Carmo for the Carmelite Order.
 
 --------------
 Industrial Era
@@ -120,28 +124,33 @@ The Third Schism
 - 2126 AD: Waldos are used by the Directorate to explore the Rift. People see their drones and mistake them for the remains of the autonomous swarm that still wander across the European landmass. 
 - 2130 AD: The Golems (from 2230) are communicating directly to the Directorate through the Fulminated Loadstone. They require someone from Branch D-33 to embody, as Mesmeria is known in the future as the only human able to transcend the Discretum.
 - 2131 AD: The Directorate makes contact with the Triage Authority. A search for the van Rensselaer bloodline is initiated.
-- 2133 AD: Ricardo van Renssalaer is born unbeknownst to the Directorate.
-- 2135 AD: Acid rain resistant cities are built with synthetic crystals, allowing people to return to the surface.
-- 2137 AD: Establishment of the "Sectors" (Seawall, Spine, etc.).
 
 ---------------
 The Reclamation
 ---------------
 
-- 2140 AD: Humanity begins to migrate back to surface slowly. The majority of people still live underground. Living and working on the surface is considered extremely hazardous and requires authorization from the Authority.
-- 2153 AD: Ricardo leaves Gruta do Carimbado on a mission to Igreja de Nossa Senhora do Carmo. He discovers the Ouro Reliquary.
-- 2156 AD: Ricardo's father dies of black mold inhalation.
-- 2157 AD: The Brazilian Pentential Order discovers the Leviathan within the South Atlantic Trans-Oceanic (SATO) Maglev line connecting Natal (Brazil) to Dakar (Senegal).
-- 2159 AD: Ricardo van Rensselaer goes to Rome to recover the Vatican Reliquary and falls into the The Scavi of St. Peter's Necropolis. His equipment breaks in the fall and he inhales vapors from the Mithraeum. Has a vision of Mesmeria.
+.. note::
+
+    In flux.
+
+- 2133 AD: Ricardo van Renssalaer is born in Gruta do Carimbado, unbeknownst to the Directorate.
+- 2146 AD: Ricardo's first expedition on the surface.
+- 2149 AD: Crystalis is invented. Acid rain resistant cities are built with synthetic crystals, allowing people to return to the surface.
+- 2150 AD: Humanity begins to migrate back to surface slowly. The majority of people still live underground. Living and working on the surface is considered extremely hazardous and requires authorization from the Authority.
+- 2151 AD: Establishment of the "Sectors" (Seawall, Spine, etc.).
+- 2153 AD: Ricardo leaves Gruta do Carimbado on a mission for the Pentient Order. The Catadores and Authority have joined together in a venture to Ouro Preto. He finds the Ouro Reliquary in Igreja de Nossa Senhora do Carmo.
+- 2153 AD: The Catadores of the Pentential Order discover the Leviathan within the South Atlantic Trans-Oceanic (SATO) Maglev line connecting Natal (Brazil) to Dakar (Senegal).
+- 2154 AD: Ricardo returns to Gruta do Carimbado as his father dies of black mold inhalation.
+- 2159 AD: Ricardo van Rensselaer goes to Rome in the Leviathan to recover the Vatican Reliquary and falls into the The Scavi of St. Peter's Necropolis. His equipment breaks in the fall and he inhales vapors from the Mithraeum. Has a vision of Mesmeria.
 - 2160 AD: The Editor (Ricardo van Rensselaer) begins to compile the Opus.
 
 .. topic:: Order of Discovery
 
-    - Ouro Reliquary: History of the Coaraci-Ryckert Lineage
-    - Vatican Reliquary: Origins of Historical Conspiracy
-    - Renselaerwyck Reliquary: Origins of van Rensselaer Lineage
-    - The Capital Reliquary: Industrial & Modern Conspiracy
-    - Armilus Reliquary: History of Mesmeria
+    - Ouro Reliquary (Igreja de Nossa Senhora do Carmo): History of the Coaraci-Ryckert Lineage
+    - Vatican Reliquary (St. Peter's Basilica): Origins of Historical Conspiracy
+    - Renselaerwyck Reliquary (Albany): Origins of van Rensselaer Lineage
+    - Capital Reliquary (Washington DC): Industrial & Modern Conspiracy
+    - Armilus Reliquary (Virginia): History of Mesmeria
 
 ---------------------
 The Entropic Eschaton

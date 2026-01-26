@@ -102,7 +102,7 @@ Vinyl Seats
     - New Verse Review
     - Rejected
   * - June 22, 2025
-    - Backbone Mountain Review (II, IV, VI)
+    - Backbone Mountain Review (II, IV, V)
     - Rejected
   * - June 25, 2025
     - St. Katherine Review
@@ -146,3 +146,6 @@ Vinyl Seats
   * - November 24, 2025
     - Artists from Maryland (V)
     - Rejected
+  * - January 24th, 2026
+    - Macrame Literary Journal (V)
+    - Pending

@@ -122,7 +122,7 @@ Time Period: 2110 - 2160s
 
 The Leviathan is abandoned in 2122 when the Rift opens and civilization crumbles. It goes mad in the subterranean tunnels and achieves a form of limited digital sentience. 
 
-The Pentential Order discovers the Leviathan in 2143 AD. The Penitential Order, citing the doctrine of Anima Mundi (The Soul of the World), refused to "murder" the intelligence.
+The Pentential Order discovers the Leviathan in 2153 AD. The Penitential Order, citing the doctrine of Anima Mundi (The Soul of the World), refused to "murder" the intelligence.
 
 The World of 2160 (The Editor's Context)
 ----------------------------------------
@@ -182,6 +182,7 @@ While the Authority is global, this time period is mainly focused on São Tomé 
 - Catadores: An brotherhood within the Pentential Order devoted to gathering data.
 - Capataz: Overseer of the Creche. 
 - Pedreira: The places where quartzite is mined for radiatian shielding.
+- Galerias: Tunnels surrounding the Esconderijo, connecting it to the Creche and other networks.
   
 **Saying**
 
@@ -191,6 +192,7 @@ While the Authority is global, this time period is mainly focused on São Tomé 
 
 - São Tomé das Letras: A Creche near the surface in the former territory of Brazil. 
 - Gruta do Carimbado: The inner core of the Esconderijo.
+- Ouro Preto: Old mining town in Congonhas, Minas Gerais
 
 The Directorate of Archons (Space)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,16 @@
+<div class="share-widget">
+    <p>Share:</p>
+    {% if facebook %}
+    <a href="https://www.facebook.com/dialog/share?app_id={{ app_id }}&display=popup&href={{ url }}" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="icon">
+        <img src="{{ facebook_icon_path }}" alt="Share on Facebook" class="icon-svg">
+    </a>
+    {% endif %}
+    {% if twitter %}
+    <a href="https://twitter.com/intent/tweet?url={{ url }}&text={{ title }}" target="_blank" rel="noopener noreferrer" class="icon">
+        <img src="{{ twitter_icon_path }}" alt="Share on Twitter" class="icon-svg">
+    </a>
+    {% endif %}
+</div>

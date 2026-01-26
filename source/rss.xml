@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>elara</title>
+    <link>https://elara.chinchalinchin.com</link>
+    <description>no devil lived on</description>
+    <language>en-us</language>
+    <pubDate>Day, DD MM YYYY HH:MM:222 EDT</pubDate>
+    <lastBuildDate>Day, DD MM YYYY HH:MM:222 EDT</lastBuildDate>
+    <generator>elara</generator>
+
+    <item>
+      <title>TODO</title>
+      <link>TODO</link>
+      <description><![CDATA[<p> TODO.</p>]]></description>
+      <pubDate>Day, DD MM YYYY HH:MM:222 EDT</pubDate>
+      <guid isPermaLink="true">todo</guid>
+    </item>
+  </channel>
+</rss>

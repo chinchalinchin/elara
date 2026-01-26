@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg width="200" height="220" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path id="drop" d="m100,110c0,0 15,-19 0,-19c-15,0 0,19 0,19"/>
+<use transform="rotate(72,100,110)" xlink:href="#drop"/>
+<use transform="rotate(-72,100,110)" xlink:href="#drop"/>
+<use transform="rotate(144,100,110)" xlink:href="#drop"/>
+<use transform="rotate(216,100,110)" xlink:href="#drop"/>
+<path id="triangle" d="m100,10l86.602539,150l-86.602539,-50l62.460411,25.85787l-62.460411,-105.85787l-62.460411,105.85787l62.460411,-25.85787l-86.602539,50l86.602539,-150z"/>
+<use transform="rotate(180,100,110)" xlink:href="#triangle"/>
+</svg>

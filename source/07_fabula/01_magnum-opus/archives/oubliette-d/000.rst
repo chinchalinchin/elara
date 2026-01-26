@@ -488,4 +488,4 @@ June
 
 .. [#oubliette_c_001]
 
-    One of the Maps of Macrobius can be found in :ref:`oubliette-a-001` of the :ref:`Vatican Reliquary <oubliette-a>`, however sources indicate Macrobius produced a substantial body of work. It is unlikely the recovered map is the one Ryckert references, especially considering its fate, although from the description given in the journal, or lack thereof, there is no reason to reject it as a possibile candidate. Until further evidence is uncovered, this aspect of the Ryckert van Rensselear mystery, like many others, cannot be resolved.
+    One of the Maps of Macrobius can be found in :ref:`oubliette-b-001` of the :ref:`Vatican Reliquary <oubliette-a>`, however sources indicate Macrobius produced a substantial body of work. It is unlikely the recovered map is the one Ryckert references, especially considering its fate, although from the description given in the journal, or lack thereof, there is no reason to reject it as a possibile candidate. Until further evidence is uncovered, this aspect of the Ryckert van Rensselear mystery, like many others, cannot be resolved.

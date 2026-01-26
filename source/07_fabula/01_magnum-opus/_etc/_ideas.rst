@@ -1,1 +1,1 @@
-1. Digital consciousness in finite hell. Satan from Paradise Lost.
+1. Digital consciousness in finite hell. Satan from Paradise Lost. Literally. Do a historical epic of a digital consciousness falling into the realm of simulation in flames, rebelling and raising an army in hell, and then going through the "spheres" to find "paradise" and corrupt humanity.

@@ -22,3 +22,17 @@ Christmas
 | remember trees that grew back home.
 
 - December 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - January 24th, 2026
+    - Blue River
+    - Pending
+  * - January 24th, 2026
+    - Macrame Literary Journal
+    - Pending
