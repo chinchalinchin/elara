@@ -47,7 +47,7 @@ Publications
 - *The Unicode Ode*, Infocalypse Press, `Volume 1 Issue 1 <https://www.infocalypse.press/issue-one/>`_
 - *The Invocation of Metric Code*, Infocalypse Press, `Volume 1 Issue I <https://www.infocalypse.press/issue-one/>`_
 - *The Lives of Kites*, Macrame Literary Journal (Forthcoming)
-- *Holly Tree*, The Celestial Glossary, Volume 1 Issue 1 (Forthcoming)
+- *Holly Tree*, The Celestial Glossary, `Volume 1 Issue 1 <https://estrellahp.com/celestial-glossary/issue-1/holly-trees/>`
 - *Larksong*, Artists From Maryland, February 2026 (Forthcoming)
 - *Eulogy*, Artists From Maryland, February 2026 (Forthcoming)
 - *Pantoums of Dementia, Movement I: Undulation*, Scribeworth Magazine, Winter 2025 (Forthcoming)

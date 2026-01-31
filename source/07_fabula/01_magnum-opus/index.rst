@@ -13,7 +13,12 @@
 ..
 .. TASK: EDITORIALIZE
 .. 
-.. Provide editorial notes on the following documents for the Author.
+.. - Provide editorial notes on the following documents for the Author, focusing on the Editor's timeline.
+.. - Estimate a word count across all documents (don't include the mermaid markup in the appendix)
+..
+.. ## IGNORE
+..
+.. - Typos (unless they are severe)
 ..
 .. ## CONSTRAINTS
 ..
@@ -150,24 +155,24 @@ It was the first and last time my father ever spoke of my mother in my presence.
 
    
    | Where winter breaks across the bow of ships,
-   | the cold ascends like empires drawn from ice,
-   | the mist dissolved to steam escaping lips
-   | with thoughts that doom, but even still entice.
+   | the cold ascends in empires drawn from ice.
+   | The mist dissolves to steam escaping lips
+   | while warmer thoughts are mourned in sacrifice.
    | 
-   | The cold ascends like empires drawn from ice
-   | as wind returns a harbour street to sleet
-   | with thoughts that doom, but even still entice
-   | his withered bloom in cycles to repeat.
+   | The cold ascends in empires drawn from ice
+   | as wind returns a harbour street to sleet,
+   | while warmer thoughts are mourned in sacrifice,
+   | his letters worn with lines I can't repeat.
    |
    | As wind returns a harbour street to sleet,
    | I think upon the sailor lost at sea,
-   | his withered bloom in cycles to repeat 
+   | his letters worn with lines I can't repeat,
    | the words he said in promises to me.
    | 
    | I think upon the sailor lost at sea
    | where winter breaks across the bow of ships,
-   | the words he said in promises to me,
-   | the mist dissolved to steam escaping lips.
+   | the words he said in promises to me.
+   | The mist dissolves to steam escaping lips.
 
 .. IN PROGRESS:
 

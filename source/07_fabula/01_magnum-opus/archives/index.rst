@@ -60,7 +60,7 @@ In O Soturno, time loses all meaning. The underground swallows all duration. In 
 
 .. Estrada Real
 
-Among the three clefts wide enough to crawl through, we split into groups and gambled on which would have an outlet. Elena led the one group through the rightmost, Agostinho another through the center, and Alberto the final through the left. I stood back and watched the press of bodies filter into the solid wall like the flow of liquid into a drain. I took my place at the rear of Alberto's line and waited as the last stragglers peeled their lanterns from the collective pool of light to leave me standing in solitary sphere of illumination, dimmed by the departure of its comrades.
+Among the three clefts wide enough to crawl through, we split into groups and gambled on which would have an outlet. Elena led one group through the rightmost, Agostinho another through the center, and Alberto the final through the left. I stood back and watched the press of bodies filter into the solid wall like the flow of liquid into a drain. I took my place at the rear of Alberto's line and waited as the last stragglers peeled their lanterns from the collective pool of light to leave me standing in a solitary sphere of illumination, dimmed by the departure of my comrades.
 
 With a final, deep breath, I squeezed through the cracks that bled sunlight, laying my chest against the cold stone to slither through the underground. The passage narrowed into a thin slit. My pace slowed as the space closed and I lost sight of the others in front of me. Without room to turn my head for the protuding tubes of my respirator, I pushed forward, the walls compressing my chest, each breath becoming short and labored. I gasped and felt a sharp pain, as though my ribs were being driven into my lungs.
 
@@ -68,15 +68,31 @@ To die is an easy thing. It requires nothing. These thoughts ran through my head
 
 Like a new-born, I was pushed out of a fissure into the mud beneath the sky, stumbling as my footing gave way. My hands and knees sunk into muck. My limbs disappeared into a slurry. The ground itself slurped and belched as it attempted to digest me. I strained with all of my strength to free myself, but gravity pulled me deeper.
 
-Suddenly, a vice grip twisted my shoulder and yanked me to my feet. Dazed, I looked around as long threads of mud dripped like molasses from my fingertips. The others stood in groups, provisions hitched to their backs, staring at the sky in wonder. 
+Suddenly, a vice grip twisted my shoulder and yanked me to my feet. Dazed, I looked around as long threads of mud dripped like molasses from my fingertips. The others stood in groups, provisions hitched to their backs, staring at the sky in wonder, unaware I had just emerged from an existential void.
 
-Brother Agostinho slapped me on the back so hard I almost fell back into the pit of mud. He laughed, "Riquinho! Generalist Rostokova feared you lost, but I assured her even one as simple as you could be trusted to follow a straight line without incident," He looked from me to the mud, where my handprints slowly merged back into the ground, and then back to me, before roaring with laughter again, "I see I gave you too much credit!"
+Brother Agostinho slapped me on the back so hard I almost fell back into the pit of mud. He laughed, "Riquinho! Generalist Rostokova feared you lost, but I assured her even one as simple as you could be trusted to follow a straight line without incident," He looked from me to the mud, where my hand and knee prints slowly merged back into the ground, and then back to me, before roaring with laughter again, "I see I gave you too much credit!"
 
 Rostokova stood on a outcropping of rocks, gazing up at the purpling sky as it raised legions of towering clouds on the horizon, each suffused with bright orange filaments that flickered with chemical incandescence. She looked over her shoulder and called out to Agostinho, "Are you two ready?"
 
 The Catador glanced at me, his eyebrows dancing in amusement behind the streaked lens of his googles, "Let's not keep the lady waiting. Get a move on, Riquinho!"
 
-Dutifully, I flung the mud from my arms and pulled the straps of my pack tight. The group fell into files and followed Rostokova up the cliffside. We hiked up the edge of a ravine. The heights ascended through a valley of shelves. As we crawled up the steep inclines, rocks slid under our heels, sending a stream of shale behind us to mark out path. Once we gained a few hundred meters, we peered out from the vantage onto the vast pit that stretched before us, the pock marked surface of an abandoned mine. 
+Dutifully, I flung the mud from my arms and pulled the straps of my pack tight. The group formed into files and followed Rostokova up the cliffside. I fell in beside Alberto. He shot me a raised eyebrow, to which I shrugged, and that was all that needed said between us.
+
+We hiked up the edge of a ravine. The heights ascended through a valley of shelves. As we crawled up the steep inclines, rocks slid under our heels, sending a stream of shale behind us to mark our path. Once we gained a few hundred meters, we peered out from the vantage onto the vast pit that stretched before us. The bottom glimmered with the turquoise sheen of an alien liquid. Thick swirls of black veined the surface, undulating in slow motion through the suspended murk. 
+
+I heard Moacir shouting at the head of the group and saw him pointing down at the lake with wild gesticulations. As I drew near, he pleaded to Agostinho and Rostokova, "I will only be a few minutes. We need samples to know for sure."
+
+Rostokova shook her head, "It will be there tomorrow."
+
+With a presumption I could not fathom, he countered, "Yes, but will we?"
+
+She glared at him with eyes that would brook no argument and said, without changing her tone, "That's enough. Move out."
+
+His shoulders slumped in defeat as he fell behind the others. The Authority's upper echelon were a strange sort of people, with byzantine bylaws I never bothered to understand. As far as I knew, each Esconderijo had A detachment of Generalists and Analysts, dispatched in the years following the Contraction, when the Authority grew to fill the vacuum. None of them were native, imported through the Trans-Oceanic tunnels before they collapsed. The rings of the Gruta do Carimbado were partitioned, and the cadres rarely intermingled with the bureaucrats below the surface. This was the first time I had seen one of the Analysts up close.
+
+I caught Alberto's curious gaze affixed to the spectacle and motioned in Moacir's direction. Alberto nodded in reply. We hurried our step to draw up beside the dejected Analyst. 
+
+"*Parceiro*," Alberto inquired, "What was that about?"
 
 .. Casa de Pedra mine. Acid rains leeches iron oxides from the stone, leading to "blood rivers" during rainstorms.
 
@@ -84,7 +100,7 @@ Dutifully, I flung the mud from my arms and pulled the straps of my pack tight. 
 
 .. Ground is basically concrete. No more forests.
 
-.. Igreja de Nossa Senhora do Carmo
+.. Igreja de Nossa Senhora do Carmo. Brother Agostinho knows the code, why the Authority needs the Order.
 
 - Ouro Preto, 2153
 

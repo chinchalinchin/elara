@@ -32,4 +32,4 @@ The Gap
     - Status
   * - January 24th, 2026
     - Blue Rivers
-    - Pending
+    - Rejected

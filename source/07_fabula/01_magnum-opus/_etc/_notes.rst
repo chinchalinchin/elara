@@ -30,9 +30,9 @@ Physics & Metaphysics
 
 **The Material**
 
-- Names: *Orichalum*, *Electrum*, *The Fulminated Loadstone*, *The Coriolis Device*
+- Names: *Orichalum*, *Electrum*, *The Fulminated Loadstone*, *The Coriolis Device*, *The Material*
   
-The Material is a natural substance with unique temporal properties. It is created as a byproduct of evaporating blackholes. When a planet forms from coagulating space dust, the ,,,Material tends to align along the magnetic axis of the planet, hence why it can be found at the north and south poles. 
+The Material is a natural substance with unique temporal properties. It is created as a byproduct of evaporating blackholes. When a planet forms from coagulating space dust, the Material tends to align along the magnetic axis of the planet, hence why it can be found at the north and south poles. 
 
 All particles of the Material are entangled at a quantum level.
 
@@ -59,7 +59,7 @@ Entities from the 2230s are these digital ghosts. Desperate to escape the "Seman
 
 .. topic:: The Challenge
 
-    How to write Infinite/Analog signals onto a Finite/Biological brain without causing death or "Digital Truncation."
+   How to write Infinite/Analog signals onto a Finite/Biological brain without causing death or "Digital Truncation."
 
 1. *Method 1: The Photic Driver (1950s/MKULTRA)*: Subject inhales vapor. A stroboscope powered by the Material's decay flashes patterns into the eyes. "Burning" the signal onto the visual cortex. Highly traumatic. Causes personality fracturing (Dissociative Identity). Used on Euphemia.
 2. *Method 2: The Acoustic Bath (2040s)*: Subject floats in heavy water infused with Material colloids. A "Tuning Fork" of the Material vibrates the tank. "Sympathetic Resonance." The brain's fluid vibrates at the frequency of the future. The subject experiences the data as "Déjà vu" or "Sudden Memory."
@@ -152,7 +152,7 @@ Politics
 - The US is no longer a federal republic but a "Logistical Survival Pact" divided into Sectors based on livability (e.g., The Seawall, The Geothermal Spine).
 - The "Triumvirate" (US/Russia/China) that ended the Third Schism has morphed into the "Triage Authority". 
 - "The Prohibition" bans autonomous AI due to the 2120s drone war. All tech is "Human-in-the-loop" (Telepresence/Waldos).
-- Ceramic and crystal cities to resist acid rain. Subterranean fungal agriculture. A culture of "Shift Work" and guilt (The Breaker Complex: the burden of billions dead).
+- Ceramic and crystal cities to resist acid rain. Subterranean fungal agriculture. A culture of "Shift Work" and guilt (the burden of billions dead).
 - Data is not in a cloud. It is rotting in physical "Oubliettes" (e.g., Denver Sector). The Editor is a "Data Archaeologist" using a rig to read dead magnetic media.
 - The Directorate is generally unknown to most people. 
 - Tech Paradigm is Analog Supremacy. Direct Brain-Computer Interfaces (digital) are banned for the elite. "Fluidic" and "Optical" analog computers are used for high-level tasks. "Wetware" (biological organoids) is preferred over Silicon.
