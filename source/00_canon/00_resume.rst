@@ -61,6 +61,7 @@ Publications
 - *Pantoums of Dementia*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times, (Forthcoming)
 - *Eulogy*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times, (Forthcoming)
 - *Turkey Vultures*, Backbone Mountain Review, (Forthcoming)
+- *Floods*, Four Tulips Magazine, (Forthcoming)
 
 .. _contests:
 
