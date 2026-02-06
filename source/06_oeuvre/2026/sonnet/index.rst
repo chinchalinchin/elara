@@ -1,8 +1,7 @@
+.. _2026-sonnets:
 
-.. _2026-pantoums:
-
-Pantoums
-========
+Sonnets
+=======
 
 .. toctree::
    :maxdepth: 2

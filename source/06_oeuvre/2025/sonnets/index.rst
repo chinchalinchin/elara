@@ -1,4 +1,4 @@
-.. _sonnets:
+.. _2025-sonnets:
 
 Sonnets
 =======

@@ -6,4 +6,5 @@
    :caption: Contents:
 
    pantoums/index
+   sonnets/index
    verse/index

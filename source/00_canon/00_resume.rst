@@ -41,13 +41,13 @@ Education
 Publications
 ============
 
-- *Photographs of Autumn*, Macrame Literary Journal, `Summer 2025 Issue <https://macramelit.com/articles/photographs-of-autumn/>`_
-- *Absurdity*, The Genre Society, `Fall 2025 Issue <https://www.thegenresociety.com/readhere>`_
-- *Father's Lullaby*, Sublimation, `Volume 2 Issue 5 <https://islandofwakwak.com/sublimation-volume-2-2025.html>`_
-- *The Unicode Ode*, Infocalypse Press, `Volume 1 Issue 1 <https://www.infocalypse.press/issue-one/>`_
-- *The Invocation of Metric Code*, Infocalypse Press, `Volume 1 Issue I <https://www.infocalypse.press/issue-one/>`_
+- `Photographs of Autumn, Macrame Literary Journal, Summer 2025 Issue <https://macramelit.com/articles/photographs-of-autumn/>`_
+- `Absurdity, The Genre Society, Fall 2025 Issue <https://www.thegenresociety.com/readhere>`_
+- `Father's Lullaby, Sublimation, Volume 2 Issue 5 <https://islandofwakwak.com/sublimation-volume-2-2025.html>`_
+- `The Unicode Ode, Infocalypse Press, Volume 1 Issue 1 <https://www.infocalypse.press/issue-one/>`_
+- `The Invocation of Metric Code, Infocalypse Press, Volume 1 Issue I <https://www.infocalypse.press/issue-one/>`_
 - *The Lives of Kites*, Macrame Literary Journal (Forthcoming)
-- *Holly Tree*, The Celestial Glossary, `Volume 1 Issue 1 <https://estrellahp.com/celestial-glossary/issue-1/holly-trees/>`
+- `Holly Tree, The Celestial Glossary, Volume 1 Issue 1 <https://estrellahp.com/celestial-glossary/issue-1/holly-trees/>`_
 - *Larksong*, Artists From Maryland, February 2026 (Forthcoming)
 - *Eulogy*, Artists From Maryland, February 2026 (Forthcoming)
 - *Pantoums of Dementia, Movement I: Undulation*, Scribeworth Magazine, Winter 2025 (Forthcoming)
@@ -61,7 +61,7 @@ Publications
 - *Pantoums of Dementia*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times, (Forthcoming)
 - *Eulogy*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times, (Forthcoming)
 - *Turkey Vultures*, Backbone Mountain Review, (Forthcoming)
-- *Floods*, Four Tulips Magazine, (Forthcoming)
+- `Floods, Four Tulips Magazine, 2026 Anthology <https://www.fourtulips.com/archives/floods>`_
 
 .. _contests:
 
