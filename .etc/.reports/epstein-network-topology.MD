@@ -451,9 +451,7 @@ do you think the organizers would allow steve bannon to speak.?
 ### Procurement
 
 ```
-November 27, 2017
-
-Special Agent REDACTED Special Agent REDACTED met with REDACTED a Confidential Human Source with whom the FBI has recently established a relationship. The CHS reported the following:
+On November 27, 2017 Special Agent REDACTED Special Agent REDACTED met with REDACTED a Confidential Human Source with whom the FBI has recently established a relationship. The CHS reported the following:
 
 Jeffrey Epstein ("Epstein") had a compound in New Mexico where he lured and video recorded underage women. He also had a private island. Epstein was President Vladimir Putin's wealth managers and provided the same service for Zimbabwean President Robert Mugabe. Epstein had some connection to REDACTED from MIT Media Lab but CHS was unsure of the details. Epstein had dirt on other people. The logs from his flights were made public at some point. Epstein had a mansion on the Upper West Side. Epstein made his money from charging his clients fees to hide their money offshore. Epstein knew former President Bill Clinton, and was very close to current President Donald Trump. In the spring of 2015, President Trump had just been to Epstein's property for lunch.
 

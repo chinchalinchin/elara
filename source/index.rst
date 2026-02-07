@@ -14,6 +14,7 @@
    05_analecta/index
    06_oeuvre/index
    07_fabula/index
+   08_occulta/index
    
 .. raw:: html
 

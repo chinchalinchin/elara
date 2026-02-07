@@ -126,3 +126,7 @@
 .strike{
     text-decoration: line-through;
 }
+
+#cyber-security .epigraph {
+    border-left: .25em solid var(--pst-color-blockquote-notch) !important;
+}
