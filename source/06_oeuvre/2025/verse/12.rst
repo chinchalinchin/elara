@@ -1,27 +1,32 @@
----------
-Christmas
----------
+------
+Autumn
+------
 
-| the town is dead, in dying dreams 
-| december trees with vying lights,
-| the timbered scenes that blink unseen
-| in eerie angles down the street.
-| on holidays, the graves of men 
-| are warmer than the fallen world,
-| the sheets that form a shawl and tomb,
-| the keepers of the doomed and spring.
-| in dark the corpses grow and rot
-| in pockets kept beneath the snow. 
-| although i wander to and fro,
-| the freeze that slows the world to stop,
-| it wraps around in glowing rings 
-| the steeples pointing up to show 
-| my heart is aimed like arrowed bow,
-| but lowered level to the ground
-| where pounding feet, in treks alone,
-| remember trees that grew back home.
+| the autumn bleeds its fallen leaves,
+| enthralling me with awful dreams
+| of auburn weaves my fingers clasped.
+| 
+| a swirling world that gasps in gales 
+| of colored veils harassing curls
+| unfurled in lines the gusts unwind.
+| 
+| while afterglows of neon bind
+| the blaze between the blinding clouds
+| that breathe their final breath of light.
+| 
+| at dusk, we clung, embraced but stunned,
+| our traces spun through hissing dark
+| in whispered arcs the wind erased.
+|
+| the fallen leaves arrayed your face 
+| within that shaded sprawl of grace,
+| the place that fades as seasons fall.
+|
+| i watch the leaves in seizures pulse,
+| the ether pulled by either force,
+| the fever dreams or season's course.
 
-- December 2025
+- November 2025
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -30,9 +35,9 @@ Christmas
   * - Date
     - Publication
     - Status
-  * - January 24th, 2026
-    - Blue River
-    - Pending
-  * - January 24th, 2026
-    - Macrame Literary Journal
-    - Pending
+  * - November 24, 2025
+    - Artists from Maryland
+    - Rejected
+  * - November 24, 2025
+    - Merion West
+    - Rejected

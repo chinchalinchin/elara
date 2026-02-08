@@ -49,6 +49,9 @@ Cathedral
   * - October 7, 2025
     - Salvation South
     - Rejected
+  * - February 8th, 2026
+    - Macabre Magazine
+    - Pending
 
 .. epigraph::
 

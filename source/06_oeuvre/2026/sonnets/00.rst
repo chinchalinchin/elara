@@ -24,3 +24,15 @@ Roses
 | bouquets of clocks awaiting death to stop
 
 - February 2026
+
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - February 8th, 2026
+    - Macabre Magazine
+    - Pending
