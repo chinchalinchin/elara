@@ -1,4 +1,4 @@
-.. _occulta:
+.. _occulta-intelligence:
 
 ============
 Intelligence
@@ -8,5 +8,7 @@ Intelligence
    :maxdepth: 2
    :caption: Contents:
 
-   00_mkultra/index
-   01_epstein/index
+   appendices/index
+   1940s/index
+   1950s/index
+   2010s/index

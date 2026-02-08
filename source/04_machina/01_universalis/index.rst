@@ -34,7 +34,7 @@ Visual
 
 The following image contains a visual representation of the Language Game.
 
-.. figure:: ../../_static/img/context/etc/language_game.jpg
+.. figure:: ../../_static/img/context/etc/language-game.jpg
   :width: 80%
   :alt: JPG Representation of Language Game
   :align: center
@@ -45,5 +45,5 @@ Relational
 
 The following XML document uses a loose implementation of a `OWL 2 <https://www.w3.org/TR/owl2-overview/>`_ ontology to schematize the Language Game.
 
-.. literalinclude:: ../../_static/xml/etc/language_game.xml
+.. literalinclude:: ../../_static/xml/language-game.xml
   :language: xml
