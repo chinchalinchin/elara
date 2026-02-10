@@ -48,8 +48,8 @@ Publications
 - `The Invocation of Metric Code, Infocalypse Press, Volume 1 Issue I <https://www.infocalypse.press/issue-one/>`_
 - *The Lives of Kites*, Macrame Literary Journal (Forthcoming)
 - `Holly Tree, The Celestial Glossary, Volume 1 Issue 1 <https://estrellahp.com/celestial-glossary/issue-1/holly-trees/>`_
-- *Larksong*, Artists From Maryland, February 2026 (Forthcoming)
-- *Eulogy*, Artists From Maryland, February 2026 (Forthcoming)
+- `Larksong*, Artists From Maryland, February 2026 <https://www.artistsfrommaryland.org/february-2026-grant-moore/>`_
+- `Eulogy*, Artists From Maryland, February 2026 <https://www.artistsfrommaryland.org/february-2026-grant-moore/>`_
 - *Pantoums of Dementia, Movement I: Undulation*, Scribeworth Magazine, Winter 2025 (Forthcoming)
 - *Larksong*, Garfield Lake Review, 2026 Edition (Forthcoming)
 - *Eulogy*, Garfield Lake Review, 2026 Edition (Forthcoming)
