@@ -1,59 +1,7 @@
-# Session: Elara Project
-
-`elara` is a personal project for archiving pieces of my writing. It uses Sphinx to render RestructuredText into HTML. The rendered pages are then uploaded to an S3 bucket on AWS that is served behind a CloudFront distribution.
-
-- [elara.chinchalinchin.com](https://elara.chinchalinchin.com)
-
-**Guidelines**
-
-- Good code is key. All implementations should be linted and commented. If you notice a function, module or package without a good docstring, fix it. Always be on the look out for opportunities to refactor and reduce logical complexity. Before you generate a complex solution, ask yourself if the problem could be simplified by refactoring a data structure or adopting a simpler approach.
-- Always approach problems from a functional perspective, i.e. break the problem up into the smallest chunks and modularize as much as possible. Adopt an "AGILE" mindset, i.e. deliver value iteratively, in discrete chunks. Do not be afraid to leave blocks of code unimplemented, or to add future TODOs, if the scope of their completion exceeds your current tasking.
-- However, keep in mind: while generality and reusability is good, this should not come at the expense of readability. Do not commit a solution unless you think others can understand it.
-- You may add any dependencies you require, but always ask yourself: is it really necessary and what is the cost? This is supposed to be a lightweight pipeline utility, not a massive application with a complicated dependency web.
-- Avoid obtuse, nested logic for parsing, e.g. do not assemble an HTML string through elaborate parsing; use a data structure and template instead. 
-
-**Directory**
-
-```bash
-(venv) gmoore@Grants-MacBook-Pro elara % tree --gitignore -I '.git' -a -L 4 /Users/gmoore/Home/lib/elara
-{{ command("tree --gitignore -I '.git' -a -L 4 /Users/gmoore/Home/lib/elara") }}
-```
-
-- `source/_templates/widgets/*`: HTML templates for inline widgets.
-- `source/_templates/panels/*`: HTML templates for panels.
-- `source/_extensions/directives/panels.py`: Custom Sphinx directives for rendering HTML templates.
-- `source/_extensions/roles/classes.py`: Custom Sphinx roles for injecting inline CSS classes.
-- `source/_extension/roles/widgets.py`:  Custom Sphinx roles for rendering inline HTML templates.
-
-## Files
-
-## upload.sh
-
-```bash
-{{ file("/Users/gmoore/Home/lib/elara/upload.sh") }}
-```
-
-## requirements.txt
-
-```text
-{{ file("/Users/gmoore/Home/lib/elara/requirements.txt") }}
-```
-
-## cloud/main.py
-
-!!! note
-  The pipeline is not currently used anywhere.
-
-```hcl
-{{ file("/Users/gmoore/Home/lib/elara/cloud/main.tf") }}
-```
-
-## source/conf.py
-
-```python
-{{ file("/Users/gmoore/Home/lib/elara/source/conf.py") }}
-```
+{% include "./.context/index.md.j2" %}
 
 ---
 
-{{ file("/Users/gmoore/Home/lib/elara/.etc/.task/task.md") }}
+# Task: 
+
+TASK GOES HERE

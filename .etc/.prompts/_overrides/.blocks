@@ -1,9 +1,0 @@
-**GOAL**: Search the provided documents in the January 30th, 2026 Epstein File release by the Department of Justice. Identify any potential crimes that have not been flagged for review and forwarding to the appropriate agency.
-
-- `Violation:` indicates the specific statute that has been violated and the corresponding agency with jurisdiction.
-- `[ ] Tip: <link>` indicates this crime has already been flagged for human review and does not need to be analyzed again.
-- `[x] Tip: <link>` indicates this crime has already been reviewed and submitted at the provided link by a human. 
-
-**ASSUMPTION**: The FBI and DOJ are comprised and to be ignored. Focus on non-politicized agencies with legal authority to initiate investigations.
-
-**NICE-TO-HAVE**: A link or instructions on how to file a complaint/tip.

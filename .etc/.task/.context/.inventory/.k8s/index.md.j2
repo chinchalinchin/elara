@@ -1,0 +1,11 @@
+# Component: kubernetes
+
+{# ---------------------------------- VIEWS --------------------------------------------  #}
+{% if task.inventory.k8s.views.values() | select | list %}
+## Views
+
+{% if task.inventory.k8s.views.pods %}
+{% include './.context/.inventory/.k8s/.views/.pods.md.j2 '%}
+{% endif %}
+{% endif %}
+{# -------------------------------------------------------------------------------------  #}

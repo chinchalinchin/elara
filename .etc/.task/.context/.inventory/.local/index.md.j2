@@ -1,0 +1,15 @@
+# Component: localhost
+
+{# ---------------------------------- VIEWS --------------------------------------------  #}
+{% if task.inventory.local.views.values() | select | list %}
+## Views
+
+{% if task.inventory.local.views.specifications%}
+{% include './.context/.inventory/.local/.views/.specifications.md.j2' %}
+{% endif %}
+
+{% if task.inventory.local.views.command %}
+{% include './.context/.inventory/.local/.views/.command.md.j2' %}
+{% endif %}
+{% endif %}
+{# -------------------------------------------------------------------------------------  #}

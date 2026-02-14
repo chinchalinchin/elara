@@ -1,0 +1,7 @@
+### Action: Command
+
+```bash
+{{ properties.inventory.local.username }}@localhost % {{ task.inventory.local.actions.command }}
+
+{{ command(task.inventory.local.actions.command) }}
+```

@@ -1,0 +1,96 @@
+{
+    "views"                                     : {
+        "inventory"                             : {
+            "host"                              : {
+
+            },
+            "local"                             : {
+
+            },
+            "k8s"                               : {
+
+            }
+        },
+        "docs"                                  : {
+            "edit"                              : {
+
+            },
+            "jenkins"                           : {
+
+            },
+            "grafana"                           : {
+
+            }, 
+            "sdlc"                              : {
+
+            }
+        },
+        "tools"                                 : {
+            "gitlab"                            : {
+                "apache_conf"                   : {
+                    "title"                     : "Apache Configuration Files",
+                    "files"                     : {
+                        "conf/httpd.conf"       : "conf",
+                        "conf.d/vhosts.conf"    : "conf"
+                    }
+                },
+                "build_pom"                     : {
+                    "title"                     : "",
+                    "files"                     : {
+
+                    }
+                },
+                "build_gradle"                  : {
+                    "title"                     : "",
+                    "files"                     : {
+                        
+                    }
+                }, 
+                "build_docker"                  : {
+                    "title"                     : "",
+                    "files"                     : {
+                        
+                    }
+                },
+                "k8s_prometheus"                : {
+                    "title"                     : "",
+                    "files"                     : {
+                        
+                    }
+                },
+                "java_jetty"                    : {
+                    "title"                     : "",
+                    "files"                     : {
+                        
+                    }
+                },
+                "java_pingone"                  : {
+                    "title"                     : "",
+                    "files"                     : {
+                        
+                    }
+                },
+                "playbook_glt"                  : {
+                    "title"                     : "",
+                    "files"                     : {
+                        
+                    }
+                },
+                "playbook_promtail"             : {
+                    "title"                     : "",
+                    "files"                     : {
+                        
+                    }
+                }
+            },
+            "jenkins"                           : {
+                "config"                        : {
+
+                },
+                "console"                       : {
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "task": {
+        "inventory"                                 : {
+            "host"                                  : {
+                "parameters"                        : {
+                    "hostname"                      : "staging4.glic.io",
+                    "command"                       : "whoami"
+                },
+                "views"                             : {
+                    "certificates"                  : false,
+                    "command"                       : true,
+                    "docker"                        : true,
+                    "specifications"                : false
+                }
+            },
+            "local"                                 : {
+                "parameters"                        : {
+                    "command"                       : "whoami"
+                },
+                "views"                             : {
+                    "specifications"                : false
+                }
+            },
+            "k8s"                                   : {
+                "parameters"                        : {
+                    "namespace"                     : "devops"
+                },
+                "views"                             : {
+                    "pods"                          : false
+                }
+            }
+        }
+    }
+}

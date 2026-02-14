@@ -1,0 +1,20 @@
+{# ------------------------------ TEMPLATE CONFIGURATION -------------------------------  #}  
+{#  - `command`: commands to construct the views                                          #}
+{# -------------------------------------------------------------------------------------  #} 
+{% set commands                     = {
+    "os"                            : "sw_vers"
+} %}
+{# -------------------------------------------------------------------------------------  #} 
+
+## View: Specifications
+
+{% for spec, cmd in commands.items() %}
+### Spec: {{ spec }}
+
+```bash
+{{ properties.inventory.host.username }}@{{ properties.inventory.host.hostname }} % {{ cmd }}
+
+{{ command('ssh ' + properties.inventory.host.username + '@' + properties.inventory.host.hostname + ' ' + cmd) }}
+```
+
+{% endfor %}

@@ -1,0 +1,7 @@
+### View: Command
+
+```bash
+{{ properties.inventory.host.username }}@{{ properties.inventory.host.hostname }} % {{ task.inventory.host.actions.command }}
+
+{{ command(task.inventory.host.actions.command) }}
+```

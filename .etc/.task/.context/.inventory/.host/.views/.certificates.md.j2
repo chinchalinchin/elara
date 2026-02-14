@@ -1,0 +1,14 @@
+{# ------------------------------ TEMPLATE CONFIGURATION -------------------------------  #}  
+{#  - `command`: commands to construct the views                                          #}
+{# -------------------------------------------------------------------------------------  #} 
+{% set commands                         = {
+    "certs"                             : "ls -al /etc/gerberlife/SSL/"
+} %}
+{# -------------------------------------------------------------------------------------  #}
+## View: Certificates
+
+```bash
+{{ properties.inventory.host.username }}@{{ properties.inventory.host.hostname }} % {{ commands.certs }}
+
+{{ command('ssh ' + properties.inventory.host.username + '@' + properties.inventory.host.hostname + ' ' + commands.certs)}}
+```

@@ -1,0 +1,23 @@
+{
+    "properties": {
+        "docs"                                  : {
+            "path"                              : "/Users/gmoore/PIAM/docs/glic/"
+        },
+        "inventory"                             : {
+            "host"                              : {
+                "username"                      : "gmoore"
+            },
+            "local"                             : {
+                "username"                      : "gmoore",
+                "home"                          : "/Users/gmoore/"
+            },
+            "k8s"                               : {
+                "host"                          : "https://172.24.32.28:6443",
+                "username"                      : "gmoore"
+            }
+        },
+        "system"                                :{
+            
+        }
+    }
+}
