@@ -1,5 +1,4 @@
-# GLIC Context Generator
-
+# Context Generator
 
 ## Local Setup
 
