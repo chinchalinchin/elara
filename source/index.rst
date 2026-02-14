@@ -6,14 +6,14 @@
    :caption: Contents:
    :hidden:
 
-   00_canon/index
-   01_epistemia/index
-   02_pedagogy/index
-   03_theurgy/index
-   04_machina/index
-   05_analecta/index
-   06_oeuvre/index
-   07_fabula/index
+   canon/index
+   epistemia/index
+   pedagogy/index
+   theurgy/index
+   machina/index
+   analecta/index
+   oeuvre/index
+   fabula/index
    
 .. raw:: html
 
