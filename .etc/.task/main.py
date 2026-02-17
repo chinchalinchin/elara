@@ -1,33 +1,38 @@
 """
 Jinja2 Template Renderer
 
-This module automates the generation of context-rich Markdown files. It extends the standard Jinja2 
-environment with custom hooks for filesystem access and shell command execution, allowing templates 
-to dynamically include the latest project state.
+This module automates the generation of context-rich Markdown files. It extends the standard Jinja2 environment with custom hooks for filesystem access and shell command execution, allowing templates to dynamically include the latest project state.
 
 Usage:
     python task.py [template_file] [--output output_file] [--vars vars_file]
 
 Dependencies:
     - jinja2
+    - pyyaml
 
 Security Warning:
     This script enables Arbitrary Code Execution (ACE) via the `command` function. Only render templates from trusted sources.
 """
 
+# Standard Libraries
+
+import argparse
+from datetime import datetime
 import os
 import subprocess
-import jinja2
-import argparse
-import json
 import sys
+
+# External Libraries
+
+import jinja2
+import yaml
 
 # -------------------- Configuration
 
-DEFAULT_TEMPLATE                = '.task.md.j2'
-DEFAULT_PROPS_FILE              = '.config/.props.json'
-DEFAULT_VIEWS_FILE              = '.config/.views.json'
-DEFAULT_VARS_FILE               = '.task.json'
+DEFAULT_TEMPLATE                = 'task.md.j2'
+DEFAULT_PROPS_FILE              = 'config/props.yaml'
+DEFAULT_VIEWS_FILE              = 'config/views.yaml'
+DEFAULT_VARS_FILE               = 'task.yaml'
 DEFAULT_OUTPUT_SUBDIR           = 'prompt'
 DEFAULT_OUTPUT_FILE             = 'prompt.md'
 
@@ -89,13 +94,13 @@ def file(file_path: str) -> str:
 
 def load(vars_path: str) -> dict:
     """
-    Loads variables from a JSON file.
+    Loads variables from a YAML file.
 
     Args:
-        vars_path (str): Path to the JSON file.
+        vars_path (str): Path to the YAML file.
 
     Returns:
-        dict: The parsed JSON data, or an empty dict if the file 
+        dict: The parsed YAML data, or an empty dict if the file 
               does not exist or cannot be parsed.
     """
     if not os.path.exists(vars_path):
@@ -105,15 +110,25 @@ def load(vars_path: str) -> dict:
 
     try:
         with open(vars_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
+            # Use safe_load to avoid arbitrary code execution from YAML tags
+            data = yaml.safe_load(f)
             print(f"Loaded variables from '{vars_path}'.")
-            return data
-    except json.JSONDecodeError as e:
-        print(f"Error parsing JSON from '{vars_path}': {e}")
+            return data if data else {}
+    except yaml.YAMLError as e:
+        print(f"Error parsing YAML from '{vars_path}': {e}")
         return {}
     except Exception as e:
         print(f"Error reading vars file '{vars_path}': {e}")
         return {}
+
+
+def now(kind: str = None):
+    dt = datetime.now()
+    if kind == "apache":
+        return dt.strftime("%d/%b/%Y:%H:%M:%S") # 14/Feb/2026:13:36:00
+    if kind == "java":
+        return dt.strftime("%Y-%m-%d %H:%M:%S") # 2026-02-14 13:36:00
+    return dt.strftime("%Y-%m-%d %H:%M:%S") # 2026-02-14 13:36:00
 
 
 def render(template_path: str, output_path: str, vars_path: str) -> None:
@@ -122,12 +137,12 @@ def render(template_path: str, output_path: str, vars_path: str) -> None:
 
     Initializes a Jinja2 Environment with the directory containing this script as the loader.
     Injects the custom `command` and `file` functions into the global namespace,
-    loads optional variables from JSON, renders the specified template, and writes the result to disk.
+    loads optional variables from YAML, renders the specified template, and writes the result to disk.
 
     Args:
         template_path (str): The filename of the Jinja2 template to render.
         output_path (str): The absolute or relative path to save the rendered output.
-        vars_path (str): The path to the variables JSON file.
+        vars_path (str): The path to the variables YAML file.
 
     Raises:
         jinja2.TemplateNotFound: If the specified template file does not exist.
@@ -136,6 +151,7 @@ def render(template_path: str, output_path: str, vars_path: str) -> None:
     # Determine the directory where this script is located
     script_dir = os.path.dirname(os.path.abspath(__file__))
     props_path = os.path.join(script_dir, DEFAULT_PROPS_FILE)
+    views_path = os.path.join(script_dir, DEFAULT_VIEWS_FILE)
 
     # Set up the Jinja2 environment
     # Use FileSystemLoader to load templates from the script's directory
@@ -149,29 +165,24 @@ def render(template_path: str, output_path: str, vars_path: str) -> None:
     # Register custom functions into the Jinja globals
     env.globals['command'] = command
     env.globals['file'] = file
+    env.globals['now'] = now
 
     # Load both context files
     task_data = load(vars_path)
     props_data = load(props_path)
-    
-    # Merge: props_context keys will be added to task_context. 
+    views_data = load(views_path)
+
     # If keys collide, task_context (the specific task) wins.
-    # Swap them (task_context | props_context) if you want props to win.
-    context = props_data| task_data
+    context = props_data | views_data | task_data
 
     try:
-        # Load the template
         template = env.get_template(template_path)
-
-        # Render the template with the context variables
         rendered_output = template.render(**context)
-
-        # Ensure the directory for the output file exists
         output_dir = os.path.dirname(output_path)
+
         if output_dir:
             os.makedirs(output_dir, exist_ok=True)
 
-        # Write the output to a markdown file
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(rendered_output)
 
@@ -185,46 +196,36 @@ def render(template_path: str, output_path: str, vars_path: str) -> None:
 # -------------------- Entrypoint
 
 if __name__ == "__main__":
-    # Initialize argument parser
     parser = argparse.ArgumentParser(
         description="Render Jinja2 templates into Markdown."
     )
 
-    # Add positional argument for the template file
     parser.add_argument(
         "template_file",
-        nargs="?",              # '?' means the argument is optional
+        nargs="?", 
         default=DEFAULT_TEMPLATE,
         help=f"The Jinja2 template file to render (default: {DEFAULT_TEMPLATE})"
     )
 
-    # Add optional argument for the output location
     parser.add_argument(
         "-o", "--output",
         help=f"The output filename. Defaults to '{os.path.join(DEFAULT_OUTPUT_SUBDIR, DEFAULT_OUTPUT_FILE)}' relative to the script directory."
     )
 
-    # Add optional argument for the vars file
     parser.add_argument(
         "-v", "--vars",
-        help=f"Path to a JSON file containing variables (default: {DEFAULT_VARS_FILE} in script directory)."
+        help=f"Path to a YAML file containing variables (default: {DEFAULT_VARS_FILE} in script directory)."
     )
 
     args = parser.parse_args()
 
-    # Determine script directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # Determine output path
-    if args.output:
-        target_output = args.output
-    else:
-        target_output = os.path.join(script_dir, DEFAULT_OUTPUT_SUBDIR, DEFAULT_OUTPUT_FILE)
+    target_output = args.output \
+        or os.path.join(script_dir, DEFAULT_OUTPUT_SUBDIR, DEFAULT_OUTPUT_FILE)
 
-    # Determine vars path
     if args.vars:
         target_vars = args.vars
-        # If user explicitly provided a path, verify it exists before proceeding
         if not os.path.exists(target_vars):
             print(f"Error: The specified variables file '{target_vars}' does not exist.")
             sys.exit(1)

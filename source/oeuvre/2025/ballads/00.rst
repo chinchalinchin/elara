@@ -4,7 +4,7 @@ Absurdity
 
 | One lovely Thursday afternoon
 |   two billion years ago,
-| A star encased by arcs of moon,
+| a star encased by arcing moon,
 |   embraced despair and woe. 
 | 
 | This sordid joke of yellow-red,
@@ -114,6 +114,9 @@ Absurdity
   * - August 16, 2025
     - Rat Bag Lit
     - Rejected
+  * - February 16th, 2026
+    - Infopocalpyse Magazine
+    - Pending
 
 Responses
 ~~~~~~~~~

@@ -1,0 +1,178 @@
+task:
+# ------------------------------------------------
+  context: true
+# ------------------------------------------------
+  ticket: 
+    title: Log Search Test
+    content: |
+      Test
+    shell: []
+# ------------------------------------------------
+  data:
+    logs: 
+      # -----------------------------------------
+      parameters:
+        host: integ1.chinchalinchin
+        app: java-app
+        search:
+          # --- APACHE LOG FORMAT
+          # format: DD/Month/YYYY:HH:MM:SS
+          # --- JAVA LOG FORMAT
+          # format: YYYY-MM-DD HH:MM:SS
+          # ------------------------
+          # start: 14/Feb/2026:13:36:00
+          # end: 14/Feb/2026:13:37:00
+          start: '2026-02-15 11:20:00'
+          end: '2026-02-15 11:21:00'
+      views:
+        search: false
+    mssql: 
+      parameters:
+        query: SELECT 1;
+      views:
+        query: false
+        specifications: false
+    psql:
+      parameters: {}
+      views: {}
+# ------------------------------------------------
+  docs:
+    parameters: {}
+    views:
+      blobs: 
+        edit: false
+      packets:
+        jenkins: false
+        grafana: false
+        sdlc: false
+# ------------------------------------------------
+  inventory:
+    # -------------------------------------------
+    host:
+      # -----------------------------------------
+      # # HOST TASKS
+      # ## PARAMETERS
+      #   - hostname: Hostname of the target.
+      #   - command: Command to run on target.
+      # ## VIEWS
+      #   - certificates: View of the SSL certificates.
+      #   - command: Console output of the command.
+      #   - docker: Summary of the Docker runtime.
+      #   - specifications: Host specifications.
+      # -----------------------------------------
+
+      - parameters:
+          hostname: integ.chinchalinchin.com
+          command: sudo docker ps
+        views:
+          certificates: false
+          command: true
+          docker: false
+          specifications: false
+      - parameters:
+          hostname: testing.chinchalinchin
+          command: sudo docker ps
+        views:
+          command: true
+    # -------------------------------------------
+    k8s: []
+      # -----------------------------------------
+      # # KUBERNETES TASKS
+      # ## PARAMETERS
+      #   - namespace: Kubernetes target namespace.
+      # ## VIEWS
+      #   - pods: Running pods in namespace
+      # -----------------------------------------
+
+      # - parameters:
+      #     namespace: devops
+      #   views:
+      #     pods: true
+      # - parameters:
+      #     namespace: monitoring
+      #   views: 
+      #     pods: true
+# ------------------------------------------------
+  tools:
+    # -------------------------------------------
+    artifactory: []
+      # -----------------------------------------
+      # # ARTIFACTORY TASKS
+      # ## PARAMETERS
+      #   - repo: Artifactory repository name.
+      #   - artifact: Artifactory artifact name.
+      # ## VIEWS
+      #   - latest: Last push to the repository.
+      # -----------------------------------------
+
+    # artifactory:
+      # - parameters:
+      #     repo: chinchalinchin
+      #     artifact: java-app
+      #   views:
+      #     latest: true
+    # -------------------------------------------
+    github: []
+      # -----------------------------------------
+      # # github TASKS
+      # ## PARAMETERS
+      #   - repo:
+      #   - group:
+      # ## VIEWS
+      #   - directory: View of the repository directory structure.
+      #   - apache_conf: Apache Configuration Files
+      #   - build_maven: Maven Build Files
+      #   - build_gradle: Gradle Build Files
+      #   - build_docker: Docker Build Files
+      #   - k8s_prometheus: Prometheus Kubernetes Manifests
+      #   - java_jetty: Jetty Configuration Files
+      #   - java_pingone: Java PingOne Client
+      #   - jenkins_sdlc: Jenkins SDLC Pipelines
+      #   - jenkins_fortify: Jenkins Fortify Scan Pipelines
+      #   - jenkins_libs: Jenkins Shared Libraries
+      #   - playbook_glt: Grafana-Loki-Tempo Playbook
+      #   - playbook_promtail: Promtail Agent Playbook
+      # -----------------------------------------
+    
+    # github:
+      # - parameters:
+      #     repo: gl_eservice
+      #     group: gerberlife_com
+      #   views:
+      #     directory: true
+      #     java_jetty: true
+    # -------------------------------------------
+    prometheus: []
+      # -----------------------------------------
+      # # PROMETHEUS TASKS
+      # ## PARAMETERS
+      #   - hostname:
+      #   - application:
+      # ## VIEWS 
+      #   - metrics: Prometheus scraped metrics.
+      # -----------------------------------------
+
+    # prometheus:
+      # - parameters:
+      #     hostname: testing.chinchalinchin.com
+      #     application: java-app
+      #   views: 
+      #     metrics: true
+    # -------------------------------------------
+    jenkins: []
+      # -----------------------------------------
+      # # JENKINS TASKS
+      # ## PARAMETERS
+      #   - job:
+      # ## VIEWS
+      #   - config: Jenkins build configuration.
+      #   - console: Jenkins build logs.
+      # -----------------------------------------
+
+    # jenkins:
+      # - parameters:
+      #     job: dxs-tasks
+      #   views:
+      #     config: false
+      #     console: false
+    # -------------------------------------------

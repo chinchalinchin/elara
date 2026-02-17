@@ -2,7 +2,6 @@
 Millenia
 --------
 
-
 | the slow motion of lives in the forest depths,
 |
 | empires of pine wage ancient wars against city-states of oak.
@@ -34,3 +33,6 @@ Millenia
   * - October 8, 2025
     - WayWords Literary Journal
     - Accepted
+  * - February 16th, 2026
+    - Infopocalpyse Magazine
+    - Pending

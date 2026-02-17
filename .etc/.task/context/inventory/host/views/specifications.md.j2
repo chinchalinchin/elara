@@ -1,0 +1,14 @@
+{% for task_data in task.inventory.host if task_data.views.specifications %}
+### View: Specifications
+
+{% for spec, cmd in views.inventory.host.specifications.items() %}
+{% set ssh_cmd = 'ssh ' + properties.inventory.host.username + '@' + task.inventory.host.parameters.hostname + ' ' + cmd %}
+=== "Spec: {{ spec }}"
+
+    ```bash
+    {{ properties.inventory.host.username }}@{{ task_data.parameters.hostname }} % {{ cmd }}
+
+    {{ command(ssh_cmd | indent(4, first=False))}}
+    ```
+    
+{% endfor %}

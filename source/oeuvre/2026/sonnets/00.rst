@@ -12,13 +12,13 @@ Roses
 | returned in course to blooms unplucked by hand
 | 
 | where threaded thorns are wreathed with sage and thyme.
-| unfolding flowers thick with youth expand,
+| unfolding flowers thick with youth expand
 | 
-| a nubile blossom stained in bloody red,
-| then sliced precisely where its life begins,
+| to nubile blossoms stained in bloody red,
+| then sliced precisely where their life begins,
 |
 | a bed of loam exchanged for glass instead.
-| suspended lifeless color drains and thins.
+| suspended lifeless, color drains and thins.
 |
 | i measure days in wilted leaves that drop,
 | bouquets of clocks awaiting death to stop
@@ -35,4 +35,10 @@ Roses
     - Status
   * - February 8th, 2026
     - Macabre Magazine
+    - Pending
+  * - February 16th, 2026
+    - Infopocalpyse Magazine
+    - Pending
+  * - February 16th, 2026
+    - Hibiscus Magazine
     - Pending

@@ -1,0 +1,24 @@
+{% if task.context %}
+{% include "./context/index.md.j2" %}
+---
+{{ '\n' }}
+{%- endif -%}
+# Task: {{ task.ticket.title }}
+
+{{ task.ticket.content }}
+{% if task.ticket.shell | length > 0 -%}
+---
+
+# Task: Shell
+
+- This section contains additional information, scraped at prompt-time.
+
+{% for cmd in task.ticket.shell -%}
+```bash
+{{ properties.inventory.local.username }}@localhost % {{ cmd }}
+
+{{ command(cmd) }}
+```
+
+{% endfor %}
+{% endif %}

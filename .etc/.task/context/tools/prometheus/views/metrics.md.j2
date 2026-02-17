@@ -1,0 +1,22 @@
+{# ---------------------------- TEMPLATE CONFIGURATION --------------------------------- #}
+{% set application_ports        = {
+    "java-app"                  = "9093"
+} %}
+{% for task_data in task.tools.prometheus if task_data.views.metrics %}
+{% set port                     = application_ports[task_data.parameters.application] %}
+{% set url                      = 'http://' +task_data.parameters.hostname + ':' + port + '/metrics' %}
+{# ----------------------------------------------------------------------------------- #}
+### View: Metrics 
+
+- Target Application: {{ task_data.parameters.application }}
+
+```bash
+{{ properties.inventory.local.username }}@localhost % curl -s {{ url }} | \
+    grep -E '^(c3p0|jetty|jvm|glowroot)' | \
+    grep -v '^#' | \
+    sort
+
+{{ command("curl -s " + url + " | grep -E '^(c3p0|jetty|jvm|glowroot)' | grep -v '^#' | sort")}}
+```
+{% endfor %}
+{# ----------------------------------------------------------------------------------- #}

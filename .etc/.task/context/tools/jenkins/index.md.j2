@@ -1,0 +1,9 @@
+# Tool: {{ properties.tools.jenkins.url }}
+
+[{{ properties.tools.jenkins.url }}](https://{{ properties.tools.jenkins.url}}) is the build server for the environment.
+
+## Views
+{{ '\n' }}
+{%- include './context/tools/jenkins/views/config.md.j2' -%}
+{{ '\n' }}
+{%- include './context/tools/jenkins/views/console.md.j2' -%}
