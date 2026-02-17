@@ -62,6 +62,11 @@ Publications
 - `Eulogy*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times <https://www.sligocreekpublishing.com/bearing-witness>`_
 - *Turkey Vultures*, Backbone Mountain Review, (Forthcoming)
 - `Floods, Four Tulips Magazine, 2026 Anthology <https://www.fourtulips.com/archives/floods>`_
+- *Absurdity*, Infocalypse Press, Volume III (Forthcoming)
+- *The Gap*, Infocalypse Press, Volume III (Forthcoming)
+- *Cathedral*, Ultramarine Literary Review (Forthcoming)
+- *Christmas*, Ultramarine Literary Review (Forthcoming)
+- *Anniversary*, Ultramarine Literary Review (Forthcoming)
 
 .. _contests:
 
