@@ -1,8 +1,0 @@
-{% set version = 'sqlcmd -S ' + properties.data.mssql.host + ' -d ' + properties.data.mssql.database + ' -U "$MSSQL_USER" -P "$MSSQL_PASSWORD" -Q "' + views.data.mssql.specifications.version + '"'%}
-### View: Specifications
-
-```bash
-{{ properties.inventory.local.username }}@localhost % {{ version }}
-
-{{ command(version) }}
-```

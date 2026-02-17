@@ -35,4 +35,4 @@ Millenia
     - Accepted
   * - February 16th, 2026
     - Infopocalpyse Magazine
-    - Pending
+    - Rejected

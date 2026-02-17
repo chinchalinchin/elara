@@ -7,4 +7,5 @@
 
    pantoums/index
    sonnets/index
+   triolets/index
    verse/index
