@@ -1,0 +1,13 @@
+{% for task_data in task.tools.artifactory if task_data.views.latest %}
+{% set url = 'https://' + properties.tools.artifactory.url + '/artifactory/api/storage/' + task_data.parameters.repo + '/' + task_data.parameters.artifact %}
+{# ------------------------------------------------------------------------------------- #}
+### View: Latest Push
+
+```bash
+curl -s -u $ARTIFACTORY_USERNAME:$ARTIFACTORY_PASSWORD \
+    {{ url }} | \
+    jq '.lastModified' 
+
+{{ command("curl -s -u $ARTIFACTORY_USERNAME:$ARTIFACTORY_PASSWORD " + url + " | jq '.lastModified'") }}
+```
+{% endfor %}

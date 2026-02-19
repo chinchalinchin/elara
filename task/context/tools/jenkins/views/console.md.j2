@@ -1,0 +1,12 @@
+{% for task_data in task.tools.jenkins if task_data.views.console %}
+{% set url = 'https://' + properties.tools.jenkins.url + '/job/' + task_data.parameters.job + '/lastBuild/consoleText' %}
+### View: Build Console
+
+```bash
+{{ properties.inventory.local.username }}@localhost % curl \
+    -u "$JENKINS_USERNAME:$JENKINS_PASSWORD" \
+    {{ url }}
+
+{{ command('curl -u "$JENKINS_USERNAME:$JENKINS_PASSWORD" ' + url) }}
+```
+{% endfor %}

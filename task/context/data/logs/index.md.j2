@@ -1,0 +1,16 @@
+{% set ssh_cmd = 'ssh ' + properties.data.logs.username + '@' + task.data.logs.parameters.host %}
+# Data: {{ task.data.logs.parameters.host }} Logs
+
+```bash
+{{ properties.inventory.local.username }}@localhost % tree -L 3 {{ properties.data.logs.path }}{{ task.data.logs.parameters.app }} 
+
+{{ command(ssh_cmd + " ls -al " + properties.data.logs.path + task.data.logs.parameters.app) }}
+```
+
+{# ---------------------------------- VIEWS --------------------------------------------  #}
+## Views{{ '\n' }}
+{%- if task.data.logs.views.search -%}
+{{ '\n' }}
+{%- include './context/data/logs/views/search.md.j2' -%}
+{%- endif -%}
+{# -------------------------------------------------------------------------------------  #}

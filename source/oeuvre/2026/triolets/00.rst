@@ -12,3 +12,17 @@ Ontology
 | it hides beneath the hides of men
 
 - February 2026
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - February 8th, 2026
+    - Macabre Magazine
+    - Pending
+  * - February 17th, 2026
+    - Altar Literary Magazine
+    - Pending

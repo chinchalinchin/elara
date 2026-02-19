@@ -1,0 +1,14 @@
+{% for task_data in task.inventory.k8s if task_data.views.pods %}
+{% if task_data.parameters.namespace %}
+{% set k8s_cmd = "kubectl get pods -n " + task_data.parameters.namespace %}
+{% else %}
+{% set k8s_cmd = "kubectl get pods -A" %}
+{% endif %}
+### View: Pods
+
+```bash
+{{ properties.inventory.local.username }}@localhost % {{ k8s_cmd }}
+
+{{ command(k8s_cmd) }}
+```
+{% endfor %}

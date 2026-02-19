@@ -1,0 +1,68 @@
+# -----------------------------------------------------------------------------------
+# ----------------------------- VIEW CONFIGURATION ----------------------------------
+# -----------------------------------------------------------------------------------
+# TODO: MACOS Spec Command: system_profiler SPHardwareDataType
+views:
+  # ----------------------------- INVENTORY VIEWS
+  inventory:
+    # --- 1. HOST VIEWS
+    host:
+      certificates:
+        # Command to present certificate context.
+        cmd: ls -al /etc/gerberlife/SSL
+      docker:
+        # Commands to present Docker context.
+        containers: sudo docker ps
+        images: sudo docker images
+        stats: sudo docker stats --no-stream
+      specifications:
+        # Commands to present host context.
+        os: lsb_release -a
+        cpu: lscpu
+        memory: free
+        processes: top -b -n 1 | head -n 17
+    # --- 2. K8S VIEWS
+      k8s:
+        pods: {}
+  # ----------------------------- DATA VIEWS
+  data: 
+    mssql:
+      specifications:
+        version: SELECT @@VERSION;
+  # ----------------------------- TOOLS VIEWS
+  tools:
+    # --- 1. ARTIFACTORY VIEWS
+    artifactory:
+      latest: {}
+    # --- 2. github VIEWS
+    github:
+      blobs:
+        ai_doom_docs:
+          title: "Golem: The DOOM LNN Documentation"
+          mkdocs.yml: yaml
+          docs.sh: bash
+          docs/javascripts/mathjax.js: javascript
+          docs/index.md: markdown
+          docs/environment.md: markdown
+          docs/brain.md: markdown
+          docs/training.md: markdown
+        ai_doom_src:
+          title: "Golem: The DOOM LNN Source Code"
+          files:
+            README.md: markdown
+            requirements.txt: text
+            main.py: python
+            conf/app.yaml: yaml
+            conf/common.cfg: conf
+            app/config.py: python
+            app/dataset.py: python
+            app/record.py: python
+            app/brain.py: python
+            app/inspect.py: python
+            app/train.py: python
+            app/run.py: python
+            app/utils.py: python
+    # --- 2. JENKINS VIEWS
+    jenkins:
+      config: {}
+      console: {}

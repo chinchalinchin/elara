@@ -1,0 +1,10 @@
+{% for task_data in task.tools.github if task_data.views.directory %}
+{% set repo_path = properties.tools.github.groups[task_data.parameters.group] + task_data.parameters.repo %}
+### View: {{ repo_path }} Directory Structure 
+
+```bash
+{{ properties.inventory.local.username }}@localhost % tree -L 3 {{ repo_path }}
+
+{{ command("tree -L 3 " + repo_path) }}
+```
+{% endfor %}

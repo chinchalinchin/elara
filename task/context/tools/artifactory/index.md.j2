@@ -1,0 +1,7 @@
+# Tool: {{ properties.tools.artifactory.url }}
+
+[{{ properties.tools.artifactory.url }}](https://{{ properties.tools.artifactory.url }}) is the artifact storage for the environment.
+
+## Views
+{{ '\n' }}
+{%- include './context/tools/artifactory/views/latest.md.j2' -%}

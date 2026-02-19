@@ -1,0 +1,12 @@
+### View: Query
+
+```bash
+{{ properties.inventory.local.username}}@localhost % sqlcmd \
+    -S {{ properties.data.mssql.host }} \
+    -U $MSSQL_USER \
+    -P $MSSQL_PASSWORD \
+    -d {{ properties.data.mssql.database }} \
+    -Q "{{ task.data.mssql.parameters.query }}"
+
+{{ command("sqlcmd -S " + properties.data.mssql.host + " -U $MSSQL_USER -P $MSSQL_PASSWORD -d " + properties.data.mssql.database + " -Q '" + task.data.mssql.parameters.query + "'") }}
+```
