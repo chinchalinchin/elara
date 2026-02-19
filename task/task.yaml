@@ -1,45 +1,29 @@
 task:
 # ------------------------------------------------
   context: true
+# ------------------------------------------------
   system: false
 # ------------------------------------------------
   ticket: 
+    # -------------------------------------------
     title: "Golem: The DOOM LNN"
+    # -------------------------------------------
     content: |
       TASK GOES HERE
+    # -------------------------------------------
     shell:
-      # - ls -lh /Users/gmoore/Home/lib/golem/data
-      # - /Users/gmoore/Home/lib/golem/docs.sh
       - ls -lh /Users/gmoore/Home/games/doom/wads
 # ------------------------------------------------
   data:
+    # -------------------------------------------
     logs:
       parameters: {}
-      views: {} 
-      # -----------------------------------------
-      # parameters:
-      #   host: integ1.chinchalinchin
-      #   app: java-app
-      #   search:
-      #     # --- APACHE LOG FORMAT
-      #     # format: DD/Month/YYYY:HH:MM:SS
-      #     # --- JAVA LOG FORMAT
-      #     # format: YYYY-MM-DD HH:MM:SS
-      #     # ------------------------
-      #     # start: 14/Feb/2026:13:36:00
-      #     # end: 14/Feb/2026:13:37:00
-      #     start: '2026-02-15 11:20:00'
-      #     end: '2026-02-15 11:21:00'
-      # views:
-      #   search: false
+      views: {}
+    # ------------------------------------------- 
     mssql:
       parameters: {}
       views: {}
-      # parameters:
-      #   query: SELECT 1;
-      # views:
-      #   query: false
-      #   specifications: false
+    # -------------------------------------------
     psql:
       parameters: {}
       views: {}
@@ -47,61 +31,23 @@ task:
   inventory:
     # -------------------------------------------
     host: []
-    # host: 
-      # - parameters:
-      #     hostname: integ.chinchalinchin.com
-      #     command: sudo docker ps
-      #   views:
-      #     certificates: false
-      #     command: true
-      #     docker: false
-      #     specifications: false
-
     # -------------------------------------------
     k8s: []
-    # k8s:
-      # - parameters:
-      #     namespace: devops
-      #   views:
-      #     pods: true
-      # - parameters:
-      #     namespace: monitoring
-      #   views: 
-      #     pods: true
 # ------------------------------------------------
   tools:
     # -------------------------------------------
     artifactory: []
-    # artifactory:
-      # - parameters:
-      #     repo: chinchalinchin
-      #     artifact: java-app
-      #   views:
-      #     latest: true
     # -------------------------------------------
-    # github: []
     github:
       - parameters:
           repo: golem
           group: chinchalinchin
         views:
           directory: true
-          ai_doom_docs: true
-          ai_doom_src: true
+          golem_docs: true
+          golem_src: true
     # -------------------------------------------
     prometheus: []
-    # prometheus:
-      # - parameters:
-      #     hostname: testing.chinchalinchin.com
-      #     application: java-app
-      #   views: 
-      #     metrics: true
     # -------------------------------------------
     jenkins: []
-    # jenkins:
-      # - parameters:
-      #     job: dxs-tasks
-      #   views:
-      #     config: false
-      #     console: false
     # -------------------------------------------

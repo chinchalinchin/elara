@@ -37,7 +37,7 @@ views:
     # --- 2. github VIEWS
     github:
       blobs:
-        ai_doom_docs:
+        golem_docs:
           title: "Golem: The DOOM LNN Documentation"
           files:
             README.md: markdown
@@ -48,7 +48,7 @@ views:
             docs/environment.md: markdown
             docs/brain.md: markdown
             docs/training.md: markdown
-        ai_doom_src:
+        golem_src:
           title: "Golem: The DOOM LNN Source Code"
           files:
             requirements.txt: text
