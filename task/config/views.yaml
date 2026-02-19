@@ -39,21 +39,25 @@ views:
       blobs:
         ai_doom_docs:
           title: "Golem: The DOOM LNN Documentation"
-          mkdocs.yml: yaml
-          docs.sh: bash
-          docs/javascripts/mathjax.js: javascript
-          docs/index.md: markdown
-          docs/environment.md: markdown
-          docs/brain.md: markdown
-          docs/training.md: markdown
+          files:
+            README.md: markdown
+            mkdocs.yml: yaml
+            docs.sh: bash
+            docs/javascripts/mathjax.js: javascript
+            docs/index.md: markdown
+            docs/environment.md: markdown
+            docs/brain.md: markdown
+            docs/training.md: markdown
         ai_doom_src:
           title: "Golem: The DOOM LNN Source Code"
           files:
-            README.md: markdown
             requirements.txt: text
             main.py: python
             conf/app.yaml: yaml
             conf/common.cfg: conf
+            app/templates/audit.j2: jinja2
+            app/templates/inspect.j2: jinja2
+            app/audit.py: python
             app/config.py: python
             app/dataset.py: python
             app/record.py: python

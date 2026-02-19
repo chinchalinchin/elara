@@ -1,15 +1,13 @@
 task:
 # ------------------------------------------------
   context: true
-  system: false
+  system: true
 # ------------------------------------------------
   ticket: 
-    title: "Golem: The DOOM LNN"
+    title: "<TITLE>"
     content: |
-      TASK GOES HERE
+      <TASK>
     shell:
-      # - ls -lh /Users/gmoore/Home/lib/golem/data
-      # - /Users/gmoore/Home/lib/golem/docs.sh
       - ls -lh /Users/gmoore/Home/games/doom/wads
 # ------------------------------------------------
   data:
@@ -79,15 +77,15 @@ task:
       #   views:
       #     latest: true
     # -------------------------------------------
-    # github: []
-    github:
-      - parameters:
-          repo: golem
-          group: chinchalinchin
-        views:
-          directory: true
-          ai_doom_docs: true
-          ai_doom_src: true
+    github: []
+    # github:
+    #   - parameters:
+    #       repo: golem
+    #       group: chinchalinchin
+    #     views:
+    #       directory: true
+    #       ai_doom_docs: true
+    #       ai_doom_src: true
     # -------------------------------------------
     prometheus: []
     # prometheus:
