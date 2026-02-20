@@ -2,17 +2,22 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: false
+  system: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Golem: The DOOM LNN"
+    title: "Golem: Refactor Test"
     # -------------------------------------------
     content: |
-      TASK GOES HERE
+      Not yet. The model works exceptionally well, but it's still rough around the edges. We need to tighten things up before we move onto the next phase. Goal right now is to make it easy for users to build, train and test the model. 
+
+      Speaking of testing, let's see if it works...
+
+      Okay, `record`` is working at least. Now, I have a bunch of unorganized training data in the ./data/ directory. Give me a one-off script to organize it into the new structure so we don't lose everything next time we retrain. 
     # -------------------------------------------
-    shell:
-      - ls -lh /Users/gmoore/Home/games/doom/wads
+    shell: 
+      - python /Users/gmoore/Home/lib/golem/main.py record --module deathmatch
+      # - ls -lh /Users/gmoore/Home/games/doom/wads
 # ------------------------------------------------
   data:
     # -------------------------------------------
@@ -44,8 +49,11 @@ task:
           group: chinchalinchin
         views:
           directory: true
-          golem_docs: true
-          golem_src: true
+          golem_docs: false
+          golem_mkdocs: false
+          golem_src: false
+          golem_test: false
+          golem_theory: false
     # -------------------------------------------
     prometheus: []
     # -------------------------------------------

@@ -37,35 +37,53 @@ views:
     # --- 2. github VIEWS
     github:
       blobs:
-        golem_docs:
-          title: "Golem: The DOOM LNN Documentation"
+        golem_mkdocs:
+          title: "Golem MkDocs Configuration"
           files:
-            README.md: markdown
+            .github/workflows/ci.yml: yaml
+            Dockerfile.ci: dockerfile
             mkdocs.yml: yaml
             docs.sh: bash
             docs/javascripts/mathjax.js: javascript
+        golem_docs:
+          title: "Golem Documentation"
+          files:
+            README.md: markdown
             docs/index.md: markdown
+            docs/roadmap.md: markdown
+        golem_theory:
+          title: "Golem Documentation (Theory)"
+          files:
             docs/environment.md: markdown
             docs/brain.md: markdown
             docs/training.md: markdown
         golem_src:
-          title: "Golem: The DOOM LNN Source Code"
+          title: "Golem Source Code"
           files:
             requirements.txt: text
             main.py: python
             conf/app.yaml: yaml
-            conf/common.cfg: conf
+            conf/basic.cfg: conf
+            conf/classic.cfg: conf
+            conf/fluid.cfg: conf
             app/templates/audit.j2: jinja2
             app/templates/inspect.j2: jinja2
-            app/audit.py: python
-            app/config.py: python
-            app/dataset.py: python
-            app/record.py: python
-            app/brain.py: python
-            app/inspect.py: python
-            app/train.py: python
-            app/run.py: python
+            app/handlers/analyze.py: python
+            app/handlers/record.py: python
+            app/handlers/inspect.py: python
+            app/handlers/intervene.py: python
+            app/handlers/train.py: python
+            app/handlers/run.py: python
+            app/models/config.py: python
+            app/models/dataset.py: python
+            app/models/brain.py: python
             app/utils.py: python
+        golem_test:
+          title: "Golem Tests"
+          files:
+            Dockerfile.ci: dockerfile
+            .github/workflows/ci.yml: yaml
+            tests/test_dataset.py: python
     # --- 2. JENKINS VIEWS
     jenkins:
       config: {}

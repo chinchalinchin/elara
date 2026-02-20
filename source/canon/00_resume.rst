@@ -41,12 +41,12 @@ Education
 Publications
 ============
 
-- `Photographs of Autumn, Macrame Literary Journal, Summer 2025 Issue <https://macramelit.com/articles/photographs-of-autumn/>`_
+- `Photographs of Autumn, Macrame Literary Journal, Summer 2025, Issue 1 <https://macramelit.com/articles/photographs-of-autumn/>`_
 - `Absurdity, The Genre Society, Fall 2025 Issue <https://www.thegenresociety.com/readhere>`_
 - `Father's Lullaby, Sublimation, Volume 2 Issue 5 <https://islandofwakwak.com/sublimation-volume-2-2025.html>`_
 - `The Unicode Ode, Infocalypse Press, Volume 1 Issue 1 <https://www.infocalypse.press/issue-one/>`_
-- `The Invocation of Metric Code, Infocalypse Press, Volume 1 Issue I <https://www.infocalypse.press/issue-one/>`_
-- *The Lives of Kites*, Macrame Literary Journal (Forthcoming)
+- `The Invocation of Metric Code, Infocalypse Press, Volume 1, Issue 1 <https://www.infocalypse.press/issue-one/>`_
+- `The Lives of Kites, Macrame Literary Journal, Winter 2026, Issue 3 <https://macramelit.com/articles/the-lives-of-kites/>`_
 - `Holly Tree, The Celestial Glossary, Volume 1 Issue 1 <https://estrellahp.com/celestial-glossary/issue-1/holly-trees/>`_
 - `Larksong, Artists From Maryland, February 2026 <https://www.artistsfrommaryland.org/february-2026-grant-moore/>`_
 - `Eulogy, Artists From Maryland, February 2026 <https://www.artistsfrommaryland.org/february-2026-grant-moore/>`_
