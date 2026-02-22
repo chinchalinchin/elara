@@ -8,7 +8,7 @@ task:
     content: |
       <TASK>
     shell:
-      - ls -lh /Users/gmoore/Home/games/doom/wads
+      - <cmd>
 # ------------------------------------------------
   data:
     logs:

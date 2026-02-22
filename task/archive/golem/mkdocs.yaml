@@ -1,0 +1,38 @@
+task:
+# ------------------------------------------------
+  context: true
+# ------------------------------------------------
+  system: true
+# ------------------------------------------------
+  ticket: 
+    # -------------------------------------------
+    title: "Documentation Update: {{ target_doc }}"
+    # -------------------------------------------
+    content: |
+      Update the indicated documentation page. Be as thorough and precise as possible. The target audience is technical and versed in the subject matter. 
+
+      Do not remove information. You may edit or add information to bring the documentation up to date with the current state of code, but do not reduce the amount of content.
+    # -------------------------------------------
+    shell: []
+# ------------------------------------------------
+  tools:
+    # -------------------------------------------
+    github: 
+      - parameters:
+          repo: golem
+          group: chinchalinchin
+        views:
+          directory: false
+          # Golem Documentation Views
+          golem_board: false
+          golem_docs: true
+          golem_theory: true
+          golem_mkdocs: true
+          # Golem Source Code Views
+          golem_config: true
+          golem_pipeline: true
+          golem_model: true
+          golem_client: false
+          golem_etc: true
+          # Golem Testing Views
+          golem_ci: false

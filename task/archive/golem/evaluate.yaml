@@ -28,7 +28,6 @@ task:
       - doom.wad, E1M2:
       - doom2.wad, map01:
       - doom2.wad, map02:
-
     # -------------------------------------------
     shell: 
       # ----------------------- MODEL DIAGNOSTICS
@@ -37,34 +36,8 @@ task:
       - python /Users/gmoore/Home/lib/golem/main.py summary
       - python /Users/gmoore/Home/lib/golem/main.py audit --module all --full
       - python /Users/gmoore/Home/lib/golem/main.py run --module combat
-      # --------------------- ARENA BENCHMARKING
-      # - docker logs intelact-agent-1
-      # - docker logs vizdoom-host
-      # - python /Users/gmoore/Home/lib/golem/main.py spectate --module cig_arena
-# ------------------------------------------------
-  data:
-    # -------------------------------------------
-    logs:
-      parameters: {}
-      views: {}
-    # ------------------------------------------- 
-    mssql:
-      parameters: {}
-      views: {}
-    # -------------------------------------------
-    psql:
-      parameters: {}
-      views: {}
-# ------------------------------------------------
-  inventory:
-    # -------------------------------------------
-    host: []
-    # -------------------------------------------
-    k8s: []
 # ------------------------------------------------
   tools:
-    # -------------------------------------------
-    artifactory: []
     # -------------------------------------------
     github: 
       - parameters:
@@ -85,8 +58,3 @@ task:
           golem_etc: false
           # Golem Testing Views
           golem_ci: false
-    # -------------------------------------------
-    prometheus: []
-    # -------------------------------------------
-    jenkins: []
-    # -------------------------------------------

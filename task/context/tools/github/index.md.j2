@@ -3,6 +3,18 @@
 
 [{{ properties.tools.github.url }}](https://{{ properties.tools.github.url }}) is the version control for the environment.
 
+## Table of Contents
+
+!!! "Views"
+    These views are available upon request.
+    
+{% for key, view in views.tools.github.blobs.items() %}
+- {{ view.title }}
+    {% for file, hint in view.files.items() %}
+    - {{ file }}
+    {% endfor %}
+{% endfor %}
+
 ## Views
 {{ '\n' }}
 {%- include './context/tools/github/views/directory.md.j2' -%}

@@ -56,8 +56,8 @@ Publications
 - *Pantoums of Dementia*, Garfield Lake Review, 2026 Edition (Forthcoming)
 - *Ode to Death*, Garfield Lake Review, 2026 Edition (Forthcoming)
 - *The Origin of Lies*, Garfield Lake Review, 2026 Edition (Forthcoming)  
-- *Little Sprout*, WayWords Literary Journal, Issue 21: Theme of Wonder, (Forthcoming)
-- *Millenial Lives*, WayWords Literary Journal, Issue 21: Theme of Wonder, (Forthcoming)
+- `Little Sprout, WayWords Literary Journal, Issue 21: Theme of Wonder <https://www.amazon.com/dp/B0GPJ81RJM>`_
+- `Millenial Lives*, WayWords Literary Journal, Issue 21: Theme of Wonder <https://www.amazon.com/dp/B0GPJ81RJM>`_
 - `Pantoums of Dementia, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times <https://www.sligocreekpublishing.com/bearing-witness>`_
 - `Eulogy*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times <https://www.sligocreekpublishing.com/bearing-witness>`_
 - *Turkey Vultures*, Backbone Mountain Review, (Forthcoming)
