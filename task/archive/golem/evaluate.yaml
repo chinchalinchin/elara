@@ -9,25 +9,113 @@ task:
     title: "Model Evaluation"
     # -------------------------------------------
     content: |
-      Analyze the results of the latest model.
+      Analyze the results of the latest model. Visual results given below, followed by numerical summaries. 
 
-      Results:
+      !!! note
+        No recovery data was used. Results are from baseline training data only.
 
-      **Trained Wads** 
+      !!! note "Changelog"
+        - 
 
-      - basic.wad: 
-      - deadly_corridor.wad: 
-      - defend_the_center.wad: 
-      - defend_the_line.wad: 
-      - take_cover.wad: 
+      !!! note "Prior Observations"
+        - Cortical depth of 4 is too deep.
+        - `training.sequence_length` appears to correlates with reaction time. The longer the sequence length, the longer it takes the model to react to stimuli.
 
-      **Untrained Wads**
 
-      - deathmatch.wad:
-      - doom.wad, E1M1: 
-      - doom.wad, E1M2:
-      - doom2.wad, map01:
-      - doom2.wad, map02:
+      ## Trained Wads
+
+      These WADs are included in the model's training set.
+
+      ### basic.wad
+
+      This wad is static, i.e. the cacodemon spawned in the middle never moves. It spawns at random points along the far end of the wall.
+
+      **Results**
+
+      - {{ }}
+      
+
+      ### my_way_home.wad
+
+      This wad is a labyrinth. No enemies are spawned. It uses different colored walls to lead the user to the exit. The exit consists of a green flashing armor upgrade, to teach the model to go towards the armor.
+
+      **Results**
+
+      - {{ }}
+
+      ### deadly_corridor.wad
+
+      This wad is a long hallway with three rooms connected with open doors. The model spawns with enemies on the left and right. The model has to move through three rooms with the exact same distribution of enemies towards the exit, which is marked by flashing green armor. 
+
+      **Results**
+
+      - {{ }}
+
+      ### defend_the_center.wad
+
+      This wad is a large open arena where enemies spawn at random. There are marines and Pinkies. The marines wander around while the Pinkies charge directly at the model. 
+
+      **Results**
+
+      - {{ }}
+
+      ### defend_the_line.wad
+
+      This wad is a small room where Imps spawn on the far wall along with Pinkies. The Imps throw fireballs while Pinkies charge the model.
+
+      **Results**
+
+      - {{ }}
+
+      ### take_cover.wad 
+
+      This wad is a small room where Imps spawn on the far wall in large numbers and throw fireballs at the model.
+
+      **Results**
+
+      -  {{ }}
+
+      ## Untrained Wads
+
+      These WADs are **not** included in the model's training set.
+
+      ### deathmatch.wad
+
+      This wad is a large arena with four rooms with multiple entrances. Friendly marines spawn in the corner and do not move. Enemies spawn at random.
+
+      The model has historically performed poorly on this map. If the model stays in the arena, it does just fine, but if it gets stuck in a room, it tends to stop in front of a wall and "die". 
+
+      **Results**
+
+      - {{ }}
+
+      ### doom.wad, E1M1
+      
+      The first level of Doom. The first room in Doom 1 is complex. It has pillars, and the room adjacent to it has a stairwell where enemies sit on an elevated surface. The only other egress is an S-shaped hallway. The model has trouble navigating this space. The previous iteration was better, or atleast appeared to be better.
+
+      **Results**
+
+      - {{ }}
+
+      ### doom.wad, E1M2
+      
+      The second level of Doom.
+
+
+      **Results**
+
+      - {{ }}
+
+      ### doom2.wad, map01
+      
+      The first level of Doom 2.
+
+      The model has historically had mixed results on this level.
+
+      **Results**
+
+      - {{ }}
+      
     # -------------------------------------------
     shell: 
       # ----------------------- MODEL DIAGNOSTICS
@@ -35,10 +123,8 @@ task:
       - python /Users/gmoore/Home/lib/golem/main.py inspect --module all
       - python /Users/gmoore/Home/lib/golem/main.py summary
       - python /Users/gmoore/Home/lib/golem/main.py audit --module all --full
-      - python /Users/gmoore/Home/lib/golem/main.py run --module combat
 # ------------------------------------------------
   tools:
-    # -------------------------------------------
     github: 
       - parameters:
           repo: golem

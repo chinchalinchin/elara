@@ -48,7 +48,7 @@ views:
         golem_docs:
           title: "Golem Documentation"
           files:
-            README.md: markdown
+            # README.md: markdown
             docs/configuration.md: markdown
         golem_theory:
           title: "Golem Documentation (Theory)"
@@ -104,7 +104,6 @@ views:
             .github/workflows/ci.yml: yaml
             Dockerfile.ci: dockerfile
             mkdocs.yml: yaml
-            docs.sh: bash
             docs/javascripts/mathjax.js: javascript
         # -------------- EVERYTHING ELSE
         golem_etc:

@@ -6,14 +6,20 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Documentation Update: {{ target_doc }}"
+    title: "Arena Hosting"
     # -------------------------------------------
     content: |
-      Update the indicated documentation page. Be as thorough and precise as possible. The target audience is technical and versed in the subject matter. 
-
-      Do not remove information. You may edit or add information to bring the documentation up to date with the current state of code, but do not reduce the amount of content, unless that content has been deprecated.
+      {{ }}
     # -------------------------------------------
-    shell: []
+    shell: 
+      # --------------------- ARENA BENCHMARKING
+      - ls /Users/gmoore/Home/lib/vdaic
+      - ls /Users/gmoore/Home/lib/vdaic/intelact
+      - docker images | grep 'intelact'
+      - docker-compose up -d
+      - docker logs intelact-agent-1
+      - docker logs vizdoom-host
+      - python /Users/gmoore/Home/lib/golem/main.py spectate --module cig_arena
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -22,17 +28,17 @@ task:
           repo: golem
           group: chinchalinchin
         views:
-          directory: false
+          directory: true
           # Golem Documentation Views
           golem_board: false
           golem_docs: true
-          golem_theory: true
-          golem_mkdocs: true
+          golem_theory: false
+          golem_mkdocs: false
           # Golem Source Code Views
-          golem_config: false
+          golem_config: true
           golem_pipeline: false
           golem_model: false
-          golem_client: false
+          golem_client: true
           golem_etc: false
           # Golem Testing Views
           golem_ci: false
