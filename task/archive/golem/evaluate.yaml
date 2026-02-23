@@ -14,13 +14,18 @@ task:
       !!! note
         No recovery data was used. Results are from baseline training data only.
 
-      !!! note "Changelog"
-        - 
-
       !!! note "Prior Observations"
         - Cortical depth of 4 is too deep.
         - `training.sequence_length` appears to correlates with reaction time. The longer the sequence length, the longer it takes the model to react to stimuli.
 
+      **Model List**
+
+      - simple/2026-02-23.c-3.w-128.v-1.d-1.a-0.t-1.1.focal-a-0_25-g-2_0: 
+        - training.epochs: 150
+        - training.batch_size: 16
+        - training.learning_rate: 0.0001
+        - training.sequence_length: focal
+      - 
 
       ## Trained Wads
 
@@ -115,7 +120,7 @@ task:
       **Results**
 
       - {{ }}
-      
+
     # -------------------------------------------
     shell: 
       # ----------------------- MODEL DIAGNOSTICS

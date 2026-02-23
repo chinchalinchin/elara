@@ -48,15 +48,16 @@ views:
         golem_docs:
           title: "Golem Documentation"
           files:
-            # README.md: markdown
+            README.md: markdown
             docs/configuration.md: markdown
+            docs/guide.md: markdown
         golem_theory:
           title: "Golem Documentation (Theory)"
           files:
-            docs/philosophy.md: markdown
             docs/environment.md: markdown
-            docs/brain.md: markdown
-            docs/training.md: markdown
+            docs/model/philosophy.md: markdown
+            docs/model/brain.md: markdown
+            docs/model/training.md: markdown
         # -------------- SOURCE CODE
         golem_config:
           title: "Golem Configuration & Utilities"
