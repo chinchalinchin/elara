@@ -39,6 +39,51 @@ views:
     # --- 3. GITHUB VIEWS
     github:
       blobs:
+        # ------------------ TERRAFORM
+        # ----------------------------
+        tf_platform:
+          title: 'Terraform Module: Core'
+          files:
+            README.md: markdown
+            data.tf: terraform
+            locals.tf: terraform
+            outputs.tf: terraform
+            variables.tf: terraform
+            metadata/clients.json: json
+            metadata/environments.json: json
+            metadata/regions.json: json
+            metadata/subnets.json: json
+        tf_ec2: 
+          title: 'Terraform Module: S3'
+          files:
+            README.md: markdown
+            data.tf: terraform
+            locals.tf: terraform
+            modules.tf: terraform
+            outputs.tf: terraform
+            resources.tf: terraform
+            terraform.tf: terraform
+            variables.tf: terraform
+            user-data/user-data.sh: bash
+        tf_iam:
+          title: 'Terraform Module: IAM'
+          files: 
+            README.md: markdown
+            data.tf: terraform
+            locals_policies.tf: terraform
+            locals_roles.tf: terraform
+            locals.tf: terraform
+            modules.tf: terraform
+            outputs.tf: terraform
+            resources_policies.tf: terraform
+            resources_roles.tf: terraform
+            terraform.tf: terraform
+            variables.tf: terraform
+            policies/platform/tagging.tftpl: template
+            policies/platform/logging.tftpl: template
+            policies/sts/assume-role.tftpl: template
+        # ---------------------- GOLEM
+        # ----------------------------
         # -------------- DOCUMENTATION
         golem_board:
           title: Golem Task Board
@@ -49,6 +94,7 @@ views:
           title: "Golem Documentation"
           files:
             README.md: markdown
+            # docs/index.md: markdown
             docs/configuration.md: markdown
             docs/guide.md: markdown
         golem_theory:
@@ -59,18 +105,29 @@ views:
             docs/model/brain.md: markdown
             docs/model/training.md: markdown
         # -------------- SOURCE CODE
+        # ----- CONFIGURATION & ENTRYPOINTS
+        golem_core: 
+          title: "Golem Core"
+          files: 
+            main.py: python
+            app/utils/doom.py: python
         golem_config:
-          title: "Golem Configuration & Utilities"
+          title: "Golem Configuration"
           files: 
             requirements.txt: text
             conf/app.yaml: yaml
             conf/simple.cfg: conf
-            main.py: python
-            app/utils/doom.py: python
+        # ----- MODULES
+        golem_metrics:
+          title: "Golem Metrics Source Code"
+          files:
+            app/metrics/audit.py: python
+            app/metrics/examine.py: python
+            app/metrics/inspect.py: python
+            app/metrics/summary.py: python
         golem_pipeline:
           title: "Golem Pipeline Source Code"
           files:
-            app/pipeline/analyze.py: python
             app/pipeline/intervene.py: python
             app/pipeline/record.py: python
             app/pipeline/run.py: python
@@ -91,6 +148,14 @@ views:
             app/client/agent.py: python
             app/client/arena.py: python
             app/client/host.py: python
+        golem_sample:
+          title: "Golem Random Source Code"
+          files:
+            Dockerfile.oblige: dockerfile
+            app/sample/init.py: python
+            app/sample/interfaces.py: python
+            app/sample/generate.py: python
+            app/sample/randomize.py: python
         # -------------- CONTINUOUS INTEGRATION
         golem_ci:
           title: "Golem Continuous Integration"
@@ -111,9 +176,9 @@ views:
           title: "Golem ETC"
           files:
             app/client/__init__.py: python
+            app/metrics/__init__.py: python
             app/models/__init__.py: python
             app/pipeline/__init__.py: python
-            app/pipeline/generate.py: python
             app/utils/conf.py: python
             app/templates/audit.j2: jinja2
             app/templates/inspect.j2: jinja2

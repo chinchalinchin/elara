@@ -6,33 +6,51 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Documentation Update"
+    title: "Extend IAM Module For Machine Learning"
     # -------------------------------------------
     content: |
-      Update the indicated documentation page. Be as thorough and precise as possible. The target audience is technical and versed in the subject matter. 
-
-      Do not remove information. You may edit or add information to bring the documentation up to date with the current state of code, but do not reduce the amount of content, unless that content has been deprecated.
+      Update my IAM module to include the ML instance IAM profile and role.
     # -------------------------------------------
-    shell: []
+    shell: [] 
 # ------------------------------------------------
   tools:
     # -------------------------------------------
     github: 
       - parameters:
-          repo: golem
-          group: chinchalinchin
+          repo: security-iam
+          group: cumberland-cloud
         views:
-          directory: false
-          # Golem Documentation Views
-          golem_board: false
-          golem_docs: true
-          golem_theory: false
-          golem_mkdocs: false
-          # Golem Source Code Views
-          golem_config: false
-          golem_pipeline: false
-          golem_model: false
-          golem_client: false
-          golem_etc: false
-          # Golem Testing Views
-          golem_ci: false
+          directory: true
+          tf_iam: true
+      # - parameters:
+      #     repo: compute-ec2
+      #     group: cumberland-cloud
+      #   views:
+      #     directory: true
+      #     tf_ec2: true
+      # - parameters:
+      #     repo: platform
+      #     group: cumberland-cloud
+      #   views: 
+      #     directory: true
+      #     tf_platform: true
+      # - parameters:
+      #     repo: golem
+      #     group: chinchalinchin
+      #   views:
+      #     directory: false
+      #     # Golem Documentation Views
+      #     golem_board: false
+      #     golem_docs: true
+      #     golem_theory: true
+      #     # Golem Source Code Views
+      #     golem_client: false
+      #     golem_config: true
+      #     golem_core: true
+      #     golem_etc: false
+      #     golem_model: true
+      #     golem_pipeline: true
+      #     golem_sample: true
+      #     # Golem Continuous Integration Views
+      #     golem_ci: false
+      #     golem_mkdocs: false

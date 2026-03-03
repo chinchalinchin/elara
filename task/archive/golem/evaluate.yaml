@@ -11,38 +11,102 @@ task:
     content: |
       Analyze the results of the latest model. Visual results given below, followed by numerical summaries. 
 
-      !!! note
+      !!! note "Baseline"
         No recovery data was used. Results are from baseline training data only.
 
       !!! note "Prior Observations"
         - Cortical depth of 4 is too deep.
-        - `training.sequence_length` appears to correlates with reaction time. The longer the sequence length, the longer it takes the model to react to stimuli.
+        - `training.sequence_length` appears to correlates with reaction time. The longer the sequence length, the longer it takes the model to react to stimuli. This is an observation based on circumstantial evidence and hasn't been rigorously demonstrated.
+        - VizDoom default scenarios bias the model through repetition of the same texture and enemies layouts. To get a generalized model, the training pipeline needs randomized data.
 
-      **Model List**
+      **VizDoom Default Scenarios**
 
-      - simple/2026-02-23.c-3.w-128.v-1.d-1.a-0.t-1.1.focal-a-0_25-g-2_0: 
-        - training.epochs: 150
+      !!! note
+        While the default VizDoom make for poor training data, they are the only maps that can be used for the simple brain configuration. This configuration does not expose USE, and the randomizer has not method of disabling the generation of doors. Therefore, circumstantially, the simple model tends to overfit the repetitive textures and get stuck in static equilibriums.
+
+      - simple/2026-02-24.c-2.w-128.v-1.d-0.a-0.t-0.bce.1.pth
+        - brain.cortical_depth: 2
+        - brain.working_memory: 128
+        - brain.sensors: [ visual ]
         - training.batch_size: 16
         - training.learning_rate: 0.0001
-        - training.sequence_length: focal
-      - 
+        - training.epochs: 100
+        - training.sequence_length: 32
+      - simple/2026-02-24.c-3.w-128.v-1.d-0.a-0.t-0.bce.1.pth
+        - brain.cortical_depth: 3
+        - brain.working_memory: 128
+        - brain.sensors: [ visual ]
+        - training.batch_size: 16
+        - training.learning_rate: 0.0001
+        - training.epochs: 100
+        - training.sequence_length: 32
+      - simple/2026-02-24.c-3.w-128.v-1.d-0.a-0.t-1.bce.1.pth
+        - brain.cortical_depth: 3
+        - brain.working_memory: 128
+        - brain.sensors: [ visual, thermal ]
+        - training.batch_size: 16
+        - training.learning_rate: 0.0001
+        - training.epochs: 100
+        - training.sequence_length: 32
+      - simple/2026-02-24.c-2.w-128.v-1.d-0.a-0.t-0.focal-a025-g15.1
+        - brain.cortical_depth: 2
+        - brain.working_memory: 128
+        - brain.sensors: [ visual ]
+        - loss.focal.alpha: 0.25
+        - loss.focal.gamma: 1.5
+        - training.batch_size: 16
+        - training.learning_rate: 0.0001
+        - training.epochs: 150
+        - training.sequence_length: 32
+      - simple/2026-02-24.c-2.w-128.v-1.d-0.a-0.t-1.focal-a025-g15.1
+        - brain.cortical_depth: 2
+        - brain.working_memory: 128
+        - brain.sensors: [ visual, thermal ]
+        - loss.focal.alpha: 0.25
+        - loss.focal.gamma: 1.5
+        - training.batch_size: 16
+        - training.learning_rate: 0.0001
+        - training.epochs: 150
+        - training.sequence_length: 32
+      - simple/2026-02-24.c-3.w-128.v-1.d-0.a-0.t-0.focal-a025-g15.1
+        - brain.cortical_depth: 3
+        - brain.working_memory: 128
+        - brain.sensors: [ visual ]
+        - loss.focal.alpha: 0.25
+        - loss.focal.gamma: 1.5
+        - training.batch_size: 16
+        - training.learning_rate: 0.0001
+        - training.epochs: 150
+        - training.sequence_length: 32
 
-      ## Trained Wads
+      **Randomized Data Only**
 
-      These WADs are included in the model's training set.
+      - basic/
+        - brain.cortical_depth: 3
+        - brain.working_memory: 128
+        - brain.sensors: [ visual, thermal ]
+        - loss.focal.alpha: 0.25
+        - loss.focal.gamma: 1.5
+        - training.batch_size: 16
+        - training.learning_rate: 0.0001
+        - training.epochs: 150
+        - training.sequence_length: 32
+
+      ## VizDoom WADs
+
+      These WADs constitute the training set of the simple models. No other models use these WADs for their training set.
 
       ### basic.wad
 
-      This wad is static, i.e. the cacodemon spawned in the middle never moves. It spawns at random points along the far end of the wall.
+      This WAD is static, i.e. the cacodemon spawned in the middle never moves. It spawns at random points along the far end of the wall. The WAD ends when the model shoots the cacodemon.
 
       **Results**
 
       - {{ }}
       
-
       ### my_way_home.wad
 
-      This wad is a labyrinth. No enemies are spawned. It uses different colored walls to lead the user to the exit. The exit consists of a green flashing armor upgrade, to teach the model to go towards the armor.
+      This WAD is a labyrinth. No enemies are spawned. It uses different colored walls to lead the model to the exit. The exit consists of a green flashing armor upgrade, to teach the model to go towards the armor.
 
       **Results**
 
@@ -50,7 +114,7 @@ task:
 
       ### deadly_corridor.wad
 
-      This wad is a long hallway with three rooms connected with open doors. The model spawns with enemies on the left and right. The model has to move through three rooms with the exact same distribution of enemies towards the exit, which is marked by flashing green armor. 
+      This WAD is a long hallway with three rooms connected with open doors. The model spawns with enemies on the left and right. The model has to move through three rooms with the exact same distribution of enemies towards the exit, which is marked by flashing green armor. 
 
       **Results**
 
@@ -58,7 +122,7 @@ task:
 
       ### defend_the_center.wad
 
-      This wad is a large open arena where enemies spawn at random. There are marines and Pinkies. The marines wander around while the Pinkies charge directly at the model. 
+      This WAD is a large open arena where enemies spawn at random. There are marines and Pinkies. The marines wander around while the Pinkies charge directly at the model. 
 
       **Results**
 
@@ -66,7 +130,7 @@ task:
 
       ### defend_the_line.wad
 
-      This wad is a small room where Imps spawn on the far wall along with Pinkies. The Imps throw fireballs while Pinkies charge the model.
+      This WAD is a small room where Imps spawn on the far wall along with Pinkies. The Imps throw fireballs while Pinkies charge at the model.
 
       **Results**
 
@@ -74,25 +138,25 @@ task:
 
       ### take_cover.wad 
 
-      This wad is a small room where Imps spawn on the far wall in large numbers and throw fireballs at the model.
+      This WAD is a small room where Imps spawn on the far wall in large numbers and throw fireballs at the model. The number of Imps increases over time, resulting in continuous waves of fireballs.
 
       **Results**
 
       -  {{ }}
 
-      ## Untrained Wads
-
-      These WADs are **not** included in the model's training set.
-
       ### deathmatch.wad
 
-      This wad is a large arena with four rooms with multiple entrances. Friendly marines spawn in the corner and do not move. Enemies spawn at random.
+      This WAD is a large arena with four rooms with multiple entrances. Friendly marines spawn in the corner and do not move. Enemies spawn at random.
 
       The model has historically performed poorly on this map. If the model stays in the arena, it does just fine, but if it gets stuck in a room, it tends to stop in front of a wall and "die". 
 
       **Results**
 
       - {{ }}
+
+      ## Other WADs
+
+      These WADs do not go into the training set of any models.
 
       ### doom.wad, E1M1
       
@@ -104,8 +168,7 @@ task:
 
       ### doom.wad, E1M2
       
-      The second level of Doom.
-
+      The second level of Doom. The first room is a large arena with lots of enemies and explosive barrels. There is a central room with a hallway that connects the ends of the arena together. 
 
       **Results**
 
@@ -114,8 +177,6 @@ task:
       ### doom2.wad, map01
       
       The first level of Doom 2.
-
-      The model has historically had mixed results on this level.
 
       **Results**
 

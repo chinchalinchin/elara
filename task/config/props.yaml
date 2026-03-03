@@ -25,5 +25,6 @@ properties:
       url: github.com/chinchalinchin
       groups: 
         chinchalinchin: /Users/gmoore/Home/lib/
+        cumberland-cloud: /Users/gmoore/Home/tf-modules/
     jenkins:
       url: jenkins.chinchalinchin.com
