@@ -10,7 +10,6 @@
    epistemia/index
    pedagogy/index
    theurgy/index
-   machina/index
    analecta/index
    oeuvre/index
    fabula/index
