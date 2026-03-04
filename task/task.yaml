@@ -2,7 +2,17 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: false
+  system: 
+    guidelines: 
+      coding: true
+      latex: true
+      pronouns: true
+      notation: true
+      interaction: true
+    functions:
+      linguistic: true
+    procedures:
+      poetics: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------

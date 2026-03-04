@@ -1,7 +1,14 @@
 task:
 # ------------------------------------------------
   context: true
-  system: true
+  system: 
+    guidelines: 
+      coding: true
+      latex: true
+    functions:
+      linguistic: true
+    procedures:
+      poetics: true
 # ------------------------------------------------
   ticket: 
     title: "<TITLE>"
