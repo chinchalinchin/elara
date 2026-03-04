@@ -43,11 +43,6 @@ extensions = [
 templates_path = [ ]
 
 exclude_patterns = [
-    '**/.etc/**',
-    '**/.notes/**',
-    '**/.drafts/**',
-    '**/.prompts/**',
-    '**/exc_*',
     '**/.*.rst',
     '**/_*.rst'
 ]
