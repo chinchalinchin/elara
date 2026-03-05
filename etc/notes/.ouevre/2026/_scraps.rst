@@ -1,80 +1,41 @@
-----------
-Hyperborea
-----------
+| Reverberating from the peaks
 
-| The snow descends upon a place
-|       sequestered on a crown,
-| a hidden place the heights embrace
-|       to shield from view a town.
-|
-| This muted morning gone to white
-|       as silence softly falls,
-| concealed beneath its winter blight
-|       a place no one recalls. 
-|
-| Their isolation near complete,
-|       for ages left alone, 
-| as empires spread below by fleet
-|       then toppled overthrown.
-|
-| The world, in time, forgot to look,
-|       erased their name from maps,
-| while hiding in their mountain nook
-|       the nation states collapse.
-|       
-| A bastion left of humankind, 
-|      yet unbeknownst to them 
-| on kingly crags they held enshrined
-|       the final diadem.
-|
-| Tectonic waves had carved a bay
-|       from angled rock to hold
-| the overlapping crests that spray
-|       their music uncontrolled.
-|
-| This madness long had ruled their lands,       
-|       each sound behaved quite strange,
-| each echo roamed in raving bands
-|        across the mountain range.  
-|
-| At first, the words returned in herd
-|       were heard with mirth when said,
-| but over time the curse interred
-|       itself in every head.
-|
+---
+
 | Reflecting echoes from the peaks 
-|       remade terrain deranged. 
+|       remade their thoughts deranged. 
 | For generations honed techniques 
 |       began to leave them changed.
-|
+
+---
+
 | Repeated thoughts retied in knots,
 |       confused conversing tongues.
 | So deeds were drawn where time allots
 |       the meter stressed by lungs. 
-|
+
+---
+
 | Each sentence measured out was taxed,
 |       to keep the noise at bay.
 | And furthermore, the arts were axed,
 |       to keep all verse away. 
-|
+
+---
+
 | Despite these lengths, they went insane
 |       each time their words returned.
 | In times of war, extremists reign
-|       and leave no Earth unburned.
+|       and leave no plot unburned.
 
+---
 
-|
 | This place had placed a clause in laws
 |       to cause a pause to rhymes,
 | for rhymes were crimes within the claws
 |       of lawful paradigms.
-|
 
-
-| The torches light a crowd of men
-|       parading down the street. 
-| By shackles drawn, a citizen 
-|       
+---
 
 | So this defendant stands to rise
 |       as bailiffs introduce
@@ -98,30 +59,40 @@ Hyperborea
 |
 |  "You stand accused of treason here!"
 
-.. IN PROGRESS.
-    
+---
 
+| Part III - The Sentence 
 
+---
+
+| Penelope, my bride to be, 
+|   I'll love you ever more, 
+
+---
 
 | Apocalyptic eras dawn
 
+---
 
 | courts / torts
 
+---
+
 | flabbergasted 
-|
+
+---
 
 | "But don't you see, you rhyme like me!
 |       each word you say "
 
+---
 
 | He starts to stand, but falls aback,
 | The cliffs that echoed back 
 | the world below forgot to check
 | The raucous crowds are rocked and cowed,
 
-
-
+---
 
 | Denials come, but don't be tricked,
 |       inspect his very clothes!"
@@ -172,8 +143,13 @@ Hyperborea
 |       while hangmen tie their knots.
 | Indictment looms; the man ingests
 |       the end his charge allots. 
-|
-| ... in progress ... 
 
-- *Original*: Feburary 2025
-- *Revision*: September 2025
+---
+
+i am a universe of sadness in a hotel lobby.
+    the slow death of children playing legos.
+        weep, for it ends sooner than you expect.
+            momentary, undone.
+noise doesn't let me think.
+    it drives like nails into my ears.
+
