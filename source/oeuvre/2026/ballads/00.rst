@@ -32,20 +32,27 @@ Hyperboreá
 | diverged in course by years and weeks
 |       til clocks told different time.
 |
+| Yet even still, the heights adhere 
+|       to certain timeless laws.
+| The precious seconds disappear
+|       as through the snow she claws.
+|
+| - 
+|
 | The busy world forgot to look,
 |       erased its name from maps,
 | concerns once kept were overtook
 |       by nation states' collapse.
 |
-| -
+| - 1
 |
 | A bastion left of humankind, 
 |      yet unbeknownst to them 
 | on kingly crags this town enshrined
 |       the final diadem.
 |
-| - 
-|
+| - 2
+| 
 | This maid above, unknown below, 
 |       is known up here by name, 
 | her family deeds in pages sow 
@@ -118,7 +125,7 @@ Hyperboreá
 | With shackles locked, a citizen 
 |       is led by hands and feet. 
 |
-| Behind the mob, the sobbing maid 
+| Behind the mob, the trailing maid 
 |       laments the morning crowned,
 | when evening come, his body laid, 
 |       she'll weep upon his mound. 
@@ -128,3 +135,13 @@ Hyperboreá
 - *Original*: Feburary 2025
 - *Revision I*: September 2025
 - *Revision II*: February 2026
+
+.. 1
+.. | The talk on lips as cities fell 
+.. |       ignored the haven town, 
+.. | apocalypse in parallel 
+
+.. 2
+.. | In fact, she passed beneath the arch
+.. |       not sixteen years of age,
+.. |  
