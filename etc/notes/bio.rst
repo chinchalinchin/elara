@@ -13,3 +13,10 @@ His academic background is in the abstract and theoretical worlds of physics (B.
 This same thread of finding clarity in complexity has run through his technical career. He has worked as a full-stack developer, a software engineer, and a DevOps lead for companies ranging from IBM to Booz Allen Hamilton. Whether explaining the elegance of calculus to a student or designing a resilient cloud architecture, the core task remains the same: to understand the rules of a system, find the points of leverage, and build something functional, elegant, and durable.
 
 His life has been a process of translation—from the language of physics to the language of mathematics, from the academic to the corporate, and from the logical to the lyrical. Poetry is the craft that unites these translations. It is the space where the precision of an equation can meet the ambiguity of human emotion, and where the discipline of building a software pipeline can inform the structure of a stanza. Through writing, he explores the patterns, tensions, and narratives that emerge when a life is not simply followed, but actively and sometimes messily, built. He lives and writes in Western Maryland.
+
+Weird
+-----
+
+After shooting from the womb at seventy-five miles per hour and impaling the doctor delivering him, Grant Moore notched his first kill.
+
+Grant Moore is a team of twenty award-winning writers whose consciousness is unified into a cohesive hive mind through a ritual sacrifice offered to an ancient, nameless Sumerian god on the third day of every month. When he is not participating in the infinitely vast godhead of existence, he can be found in an incorporeal state, unable to affect physical reality. His true passion lies in infecting the minds of material beings through the symbolic sequencing of syllables to produce hypnotic sounds that lull targets into a stupor, allowing the hive mind to spread. He enjoys Fleetwood Mac.

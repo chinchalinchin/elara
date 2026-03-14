@@ -1,0 +1,41 @@
+{%- set imgs                 = {
+    "start"                 : "scene-01.png",
+    "end"                   : "scene-02.png",
+    "satan"                 : "satan.png",
+    "pair"                  : "adam-and-eve.png",
+    "adam"                  : "adam-pre-fall.png",
+    "eve"                   : "eve-pre-fall.png"
+} -%}
+{%- set eve                  = "eve.png" -%}
+{%- set book                 = "Book I" -%}
+{%- set current              = "01 - 02" -%}
+{%- set lines                = [
+    "Of Man's first disobedience, and the fruit",
+    "Of that forbidden tree whose mortal taste"
+] -%}
+{%- set visualization        = """
+We view Eve leading Adam by hand to the Tree of Knowledge. They approach the trunk, pluck a fruit from the branch, sit down and begin to eat the forbidden fruit.
+""" -%}
+# Paradise Lost Animation
+
+**Goal**: Animate Paradise Lost, line by line. Start with the initial frame and animate up to the ending frame. 
+
+**Constraint**: The style must be in style of a 17th century ballad illustration.
+
+**Frames**:
+
+- Starting Frame: {{ imgs.start }}
+- Ending Frame: {{ imgs.end }}
+- Character Models (Adam and Eve): {{ imgs.pair }}
+
+## Current Lines
+
+The current lines being animated are provided below in the context. 
+
+- {{ book }}, Lines {{ current }}
+{% for line in lines %}
+> {{ line }}
+{%- endfor %}
+
+## Visualization
+{{ visualization }}
