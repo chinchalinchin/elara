@@ -6,6 +6,7 @@
    :caption: Contents:
 
    ballads/index
+   ghazals/index
    pantoums/index
    sonnets/index
    triolets/index
