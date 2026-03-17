@@ -1,8 +1,10 @@
-2009
-----
+Archive
+-------
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   archive/index
+   00
+   01
+   02
