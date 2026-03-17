@@ -8,5 +8,5 @@ Theurgy
    :maxdepth: 1
    :caption: Contents:
 
-   01_palindromics/index
-   02_poetics/index
+   palindromics/index
+   poetics/index

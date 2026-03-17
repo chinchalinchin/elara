@@ -8,7 +8,7 @@ Epistemia
    :maxdepth: 1
    :caption: Contents:
 
-   00_empiricus/index
-   01_linguisticus/index
-   02_metaphysicus/index
-   03_universalis/index
+   empiricus/index
+   linguisticus/index
+   metaphysicus/index
+   universalis/index

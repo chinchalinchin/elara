@@ -43,8 +43,10 @@ extensions = [
 templates_path = [ ]
 
 exclude_patterns = [
-    '**/.*.rst',
-    '**/_*.rst'
+    '.*.rst',
+    '_*.rst',
+    '**/.*/*.rst',
+    '**/_*/*.rst'
 ]
 
 plot_html_show_source_link = True
