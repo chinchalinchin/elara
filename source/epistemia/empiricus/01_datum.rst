@@ -31,24 +31,43 @@ Historical
 Linguistic
 ----------
 
+**Palindromic Classes**
+
 - :ref:`English Palindromes <palindromics>`
     - :download:`English Palindromes CSV <../../_static/csv/linguistic/palindromes/english-palindromes.csv>`
 - :ref:`Imperfect Palindromes <palindromics>`
     - :download:`Imperfect Palindromes CSV <../../_static/csv/linguistic/palindromes/imperfect-palindromes.csv>`
 - :ref:`Latin Palindromes <palindromics>`
     - :download:`Latin Palindromes CSV <../../_static/csv/linguistic/palindromes/latin-palindromes.csv>`
+
+**Ambiguous Classes**
+
 - :ref:`Ambiguous Sentences <palindromics>`
     - :download:`Ambiguous Sentences CSV <../../_static/csv/linguistic/sentences/ambiguous-sentences.csv>`
 - :ref:`Ambiguous Words <palindromics>`
     - :download:`Ambiguous Words CSV <../../_static/csv/linguistic/words/ambiguous-words.csv>`
+- Ambitone Words
+    - :download:`Ambiguous Words CSV <../../_static/csv/linguistic/words/ambitone-words.csv>`
+
+**Syntactic Classes**
+
 - :ref:`Invertible Words <palindromics>`
     - :download:`Invertible Worlds CSV <../../_static/csv/linguistic/words/invertible-words.csv>`
 - :ref:`Reflective Words <palindromics>`
     - :download:`Reflective Words CSV <../../_static/csv/linguistic/words/reflective-words.csv>`
 - Oronyms
     - :download:`Oronyms CSV <../../_static/csv/linguistic/sentences/oronyms.csv>`
+
+**Poetic Classes**
+
 - :ref:`Masculine Rhymes <poetics-stress>`
     - :download:`Oronyms CSV <../../_static/csv/linguistic/words/masculine-rhymes.csv>`
+- :ref:`Iambs <poetics-stress>`
+    - :download:`Iambic Words CSV <../../_static/csv/linguistic/words/metric/iambic-words.csv>`
+- :ref:`Trochees <poetics-stress>`
+    - :download:`Iambic Words CSV <../../_static/csv/linguistic/words/metric/trochaic-words.csv>`
+- :ref:`Spondees <poetics-stress>`
+    - :download:`Iambic Words CSV <../../_static/csv/linguistic/words/metric/spondaic-words.csv>`
 
 .. _scientific-datasets:
 
