@@ -10,12 +10,15 @@ sphinxcontrib-mermaid
 # Pedagogy Dependencies
 matplotlib-venn
 
-# Palindromes dependencies
+# Research Dependencies
 matplotlib
 numpy
 scipy
 tk
+
+# Linguistic Dependencies
 nltk
+eng-to-ipa
 
 # LLM dependencies
 google-generativeai==0.8.3
