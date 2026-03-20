@@ -14,8 +14,8 @@ except ImportError:
 def add_syllable_dots(ipa_text):
     """
     A heuristic function to approximate phonetic syllabification.
-    Uses lookarounds to prevent overlapping match failures and 
-    handles complex consonant clusters.
+    Uses lookarounds to prevent overlapping match failures, 
+    handles complex consonant clusters, and separates vowel hiatus.
     """
     # Standard IPA vowels commonly produced by eng_to_ipa
     vowels = r'ɑæəɛɪiɔʊuʌaeo'
@@ -35,7 +35,17 @@ def add_syllable_dots(ipa_text):
     # 5. VCV -> V.CV 
     res = re.sub(f'(?<=[{vowels}])([^.ˈˌ{vowels}])(?=[{vowels}])', r'.\1', res)
     
-    # 6. Clean up any accidental double dots or leading/trailing dots
+    # 6. VV -> V.V (Vowel hiatus, e.g., me.di.um -> i.ə)
+    # Insert a dot between ANY two adjacent vowels...
+    res = re.sub(f'(?<=[{vowels}])(?=[{vowels}])', '.', res)
+    
+    # ...and then immediately remove the dot from standard English diphthongs 
+    # so we don't accidentally split a single syllable.
+    diphthongs = ['a.ɪ', 'a.ʊ', 'e.ɪ', 'o.ʊ', 'ɔ.ɪ']
+    for d in diphthongs:
+        res = res.replace(d, d.replace('.', ''))
+    
+    # 7. Clean up any accidental double dots or leading/trailing dots
     res = re.sub(r'\.+', '.', res).strip('.')
     
     return res
