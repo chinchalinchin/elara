@@ -10,10 +10,12 @@ except ImportError:
     print("Please install it running: pip install eng-to-ipa")
     sys.exit(1)
 
+
 def add_syllable_dots(ipa_text):
     """
     A heuristic function to approximate phonetic syllabification.
-    It uses a simplified Maximum Onset Principle and stress markers.
+    Uses lookarounds to prevent overlapping match failures and 
+    handles complex consonant clusters.
     """
     # Standard IPA vowels commonly produced by eng_to_ipa
     vowels = r'ɑæəɛɪiɔʊuʌaeo'
@@ -21,16 +23,23 @@ def add_syllable_dots(ipa_text):
     # 1. Stress marks denote the onset of a syllable. Add a dot before them.
     res = re.sub(r'(.)([ˈˌ])', r'\1.\2', ipa_text)
     
-    # 2. VCV -> V.CV (Push a single consonant to the right syllable)
-    res = re.sub(f'([{vowels}])([^.ˈˌ{vowels}])([{vowels}])', r'\1.\2\3', res)
+    # 2. VCCCCV -> VC.CCCV (e.g., in.struct -> n.str)
+    res = re.sub(f'(?<=[{vowels}])([^.ˈˌ{vowels}])([^.ˈˌ{vowels}])([^.ˈˌ{vowels}])([^.ˈˌ{vowels}])(?=[{vowels}])', r'\1.\2\3\4', res)
+
+    # 3. VCCCV -> VC.CCV (e.g., e.lec.tric -> k.tr)
+    res = re.sub(f'(?<=[{vowels}])([^.ˈˌ{vowels}])([^.ˈˌ{vowels}])([^.ˈˌ{vowels}])(?=[{vowels}])', r'\1.\2\3', res)
+
+    # 4. VCCV -> VC.CV 
+    res = re.sub(f'(?<=[{vowels}])([^.ˈˌ{vowels}])([^.ˈˌ{vowels}])(?=[{vowels}])', r'\1.\2', res)
     
-    # 3. VCCV -> VC.CV (Split between two consonants)
-    res = re.sub(f'([{vowels}])([^.ˈˌ{vowels}])([^.ˈˌ{vowels}])([{vowels}])', r'\1\2.\3\4', res)
+    # 5. VCV -> V.CV 
+    res = re.sub(f'(?<=[{vowels}])([^.ˈˌ{vowels}])(?=[{vowels}])', r'.\1', res)
     
-    # 4. Clean up any accidental double dots or leading/trailing dots
+    # 6. Clean up any accidental double dots or leading/trailing dots
     res = re.sub(r'\.+', '.', res).strip('.')
     
     return res
+
 
 def analyze_phonetics(input_string, pretty=False):
     words = input_string.split()
