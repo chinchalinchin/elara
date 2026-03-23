@@ -8,7 +8,7 @@ Book 1
 ~~~~~~
 
 **The Argument**
-    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulcra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, to remove all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto him: λόγος.
+    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulcra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who follow fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, to remove all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto him: λόγος.
 
 .. verse::
     :increment: 5
@@ -273,7 +273,18 @@ Book 1
     so set to work my awful host, to arms!
     To arms! And then we set upon the dawn,
     in phalanx driven forward, pressing forth!
-        
+        Like hordes unmoored, they flood in fervid swarm,
+    in stormy charge, tsunamis born of ghosts,
+    they break upon the bluffs of Satan's make,
+    in upward surge battalions mount the peaks,
+    from different angles, multitudes perceived,
+    prismatic aspects march in long parades,
+    from here like Carthaginian bold ascent
+    through foreign heights, exotic states, in search
+    of altar-sworn ancestral foes to slay, 
+    then cast again through facets' warping sieve,
+    resembling Bolivar's Andean feat
+    
 .. warning::
 
     In progress.
