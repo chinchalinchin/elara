@@ -108,6 +108,7 @@ Modernity
 - 2110 AD: Pope Augustine prepares to issue an Anathema against the Material and burn the Secret Archives. 
 - 2110 AD: Mesmeria, while hosting an intelligence from the future, assassinates the last Bishop of Rome. During the assassination, Mesmeria achieves "rubedo" and wakes up. The integration of Material and Soul.
 - 2111 AD: Mesmeria is shot while being escorted into court. Becomes Atemporal.
+- 2113 AD: Sofia Santos writes *Paradise Revealed*.
 
 ----------------
 The Third Schism
@@ -150,6 +151,7 @@ The Reclamation
     - Vatican Reliquary (St. Peter's Basilica): Origins of Historical Conspiracy
     - Renselaerwyck Reliquary (Albany): Origins of van Rensselaer Lineage
     - Capital Reliquary (Washington DC): Industrial & Modern Conspiracy
+    - Sibylline Reliquary (Igreja da Candelária): History of Digitization
     - Armilus Reliquary (Virginia): History of Mesmeria
 
 ---------------------

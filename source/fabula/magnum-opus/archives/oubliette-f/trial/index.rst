@@ -12,6 +12,8 @@
 The Trial of Mesmeria van Rensselaer
 ====================================
 
+.. IN PROGRESS
+
 .. toctree::
    :maxdepth: 2
    :caption: Discovery Documents

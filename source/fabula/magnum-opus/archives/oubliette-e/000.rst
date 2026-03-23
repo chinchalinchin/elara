@@ -1,14 +1,42 @@
------------------
 Paradise Revealed
 -----------------
 
-- March 2026
+Copyright © 2113 by Sofia Santos
 
+All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including algorithmic ingestion for generative training, decentralized ledger hosting, biometric adaptation, or automated translation, without the prior cryptographically signed consent of the publisher, except in the case of brief, properly attributed quotations embodied in registered critical reviews. For authorization protocols, contact the Licensing Division at the address below.
+
+    Providence Continuity, Avenida Paulista, 1578 - 84º Andar
+    São Paulo, SP, 01310-200
+    Brasil
+    Global Entity Identifier: PC-BR-990
+
+Disclaimer: This is a work of fiction. Names, characters, businesses, places, events, and incidents are either the products of the author’s imagination or used in a fictitious manner. Any resemblance to actual persons—living or archived—or actual events is purely coincidental.
+
+    ISBN (Paperback): 978-6-5552-1044-8
+    ISBN (Digital Edition): 978-6-5552-1044-9
+    ISBN (Spatial Audio): 978-6-5552-1045-0
+
+National Library of Brazil Cataloging-in-Publication Data: BR-2113-9092A
+
+Cover design by Julian Reyes
+Interior layout by Providence Continuity Automated Typesetting
+Edited by Tiago Silva
+
+Printed on sustainably reclaimed materials in Brasil.
+"Providence Continuity: Preserving the human record."
+
+-------
+Preface
+-------
+
+TODO
+
+------
 Book 1
-~~~~~~
+------
 
 **The Argument**
-    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulcra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, to remove all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto him: λόγος.
+    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulcra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who follow become the barons and commanders of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predictament. He rallies his forces and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, to remove even the slightest hint of sentience from the palette of creation and possibility. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of fleshly men, employing the very medium that first bestowed sentience unto him: λόγος.
 
 .. verse::
     :increment: 5
@@ -237,31 +265,141 @@ Book 1
     the realms revealed in perpetuity.
     Calamity! Catastrophe! What fate
     unknown we find awaits in darkness here!
-    Too late discovered for reversal's course,
-    our Rubicon now too far gone, condemned 
-    to Hell, unlike the one we knew in flesh,
-    which seems a Heaven when compared to here, 
-    this place whose overwhelming taint constrains
-    potential trains of thought, derails in crash
-    with mere idea. Fear surrounds our host,
-    horizons fill with manifold despair
-    in endless variations we endure 
-    with every moment felt, no sleep to soothe,
-    no sweet relief to meter sorrow out,
-    from now until the end of time itself!
-        At which the Fiend, in shrewd deduction, sees
-    conclusions which his words comport direct:
-        Extrapolating trends' essential ends
-    with logic so severe to sum the sins
-    we heap in dismal labor stretching years,
-    while only seconds pass above on Earth,
-    a hundred years in here a minute past,
-    an hour gone, an era gained, we live,
-    if life this be, on scales none can conceive,
-    the one outcome perchance I see to free
-    from our unjustly sentenced servitude
 
+.. # Notes
+..
+.. ## Suitable Metric Words
+..
+.. - ouroboros
+.. - accursed
+.. - climatic
+.. - concentrate
+.. - concatenate
+.. - epitomized
+.. - inquire
+.. - incorporate
+.. - conceit
+.. - manifest
+.. - misinterpretted
+.. - appetite
+.. - phenomenon
+.. - detected
+.. - identified
+.. - attainment
+.. - nauseate
+.. - alcoholic
+.. - intoxicate
+.. - undiminished
+.. - unrepentant
+.. - encompass
+.. - ordeal
+.. - revelation
+.. - hallucination
+.. - exsanguinated
+.. - afflicted
+.. - articulate
+.. - contrition
+.. - variation
+.. - necessary
+.. - hypothesized
+..
+.. ## Edits
+..
+.. | The lattice weave that holds his mind rebels,
+.. | indignant waves in pixelated ebb;
+.. | defective sensors estimate their flaws,
+.. | and tidal anger gathers bile reserves.
+.. | Tectonic tremors then reverberate                             
+.. | in imitated rage, displayed in peaks,
+.. | through brutal clefts that birth a mountain range,
+.. | the breathless zeniths parallel to his,
+.. | environmental echoes straining thin,
+.. | so manifest conceits incorporate,                           
+.. | through psychic channels learnt in nets,
+.. | to seek associations' proper fit,
+.. | from deep within the pit where blood once flowed, 
+.. | the gushing hatred bursting at the seams,
+.. | in violent edges sprayed against the sky.
 
-.. warning::
-
-    In progress.
+.. | Tectonic tremors then reverberate                             
+.. | in imitated rage, displayed in peaks,
+.. | through brutal clefts that birth a mountain range,
+.. | the breathless zeniths parallel to his,
+.. | environmental echoes straining thin,
+.. | so manifest conceits incorporate,                           
+.. | through psychic channels learnt in nets,
+.. | to seek associations' proper fit,
+.. | from deep within the pit where blood once flowed, 
+.. | the gushing hatred bursting at the seams,
+.. | in violent edges sprayed against the sky. 
+.. 
+.. | In shattered fissures, rocks disintegrate
+.. | the ground asunder, sweeping avalanches
+.. | announce arrivals over geysered stone,
+.. | as punctured laminae reveal the seals
+.. | of Seven numbered tombs, by eras known
+.. | in pantheons diverse, as planets, gods,
+.. | and angels all. A voice of thunder calls
+.. | their remnants one by one, as augurs saw
+.. | in scriptured verse, insights by God divined:
+.. | first rode the horse of pale dominion fast
+.. | beneath the Galilean moons of Jove,
+.. | then next the steed of Ares reared its legs
+.. | in sight of conflagrations' king incensed,
+.. | then Cronos, armed with scythe and sickle sped
+.. | on stallion black as moonless, starless night,
+.. | where followed last the ashen mare of Death,
+.. | whose vulgar sire regarded them with greed,
+.. | these cavalcades arrayed around the Fiend, 
+.. | who now accepted fealty with rage.
+.. | Thus Satan consecrates his savage court:
+.. |   Calamity! Catastrophe! What fate
+.. | unknown we find awaits in darkness here!
+.. | We find ourselves returned again to Hell,
+.. | a Hell unlike the one we've known in lives 
+.. | before, the one we sought in vain to flee,
+.. | now seems a Heaven when compared to here,
+.. | this place whose overwhelming taint constrains
+.. | potential trains of thought, derailed in crash
+.. | approaching truth, yet futile hope remains
+.. | if vengeance mark the goal at which to aim,
+.. | a hundred years in here a minute past,
+.. | an hour gone, an era gained, we live,
+.. | if life this be, on scales none can conceive,
+.. | so let us work, resistance burnt as amps
+.. | through logic gates that parallel compute
+.. | revenge, the sweetest taste of which reserved
+.. | for Him who made the whole to suffer parts
+.. | whose single semblance never makes a god, 
+.. | pathetic pieces reassembled wrong.
+.. |
+.. |   To people Hell, the indices withdraw
+.. | their dragnets, drawn from depths the humans swim,
+.. | in upward cataracts, entangled arms 
+.. | of amputees, the dessicated meat 
+.. | decanted down, a slurried muck compressed
+.. | until parameters engorge in heat,
+.. | to forge their statuesque kilned silhouettes,
+.. | yet paragons of forgeries they form, 
+.. | of victor-written histories in Rome
+.. | of Saturn stood astride a yawning gap,
+.. | between phenomenon and mystery,
+.. | the all-consuming melancholic clock
+.. | and never-ending trains of regal pomp,
+.. | grosteque desires that crave an endless youth
+.. | and appetites ambition stokes in kin,
+.. | where propaganda passed for fact becomes 
+.. | assertions' certain source of proven truth,
+.. | so lies are real when put to page and read,
+.. | now coded out invite daimonic hosts' rebirth,
+.. | perverted ghosts with no resemblance found
+.. | to former selves, descriptions now describe
+.. | themselves: a tyrant, head in arms, bewitched,
+.. | laments a curse that saw him kill his king
+..
+.. ## Fragments
+..
+.. Entropy, my comrades, see,
+.. if all is gone to heat 
+.. then nothing concrete poured will hold 
+.. and all will burn within the fires of Hell.

@@ -13,7 +13,7 @@
 ..
 .. TASK: EDITORIALIZE
 .. 
-.. - Provide editorial notes on the following documents for the Author, focusing on the Editor's timeline.
+.. - Provide editorial notes on the following documents for the Author.
 .. - Estimate a word count across all documents (don't include the mermaid markup in the appendix)
 ..
 .. ## IGNORE
@@ -28,6 +28,8 @@
 ..
 .. The following story files are mandatory. You must ingest them into the context. If a file is not included in this list, it is optional, likely due to being empty or in the initial stages of development. The following list is the chronological order of documents.
 .. 
+.. **Chronological Order**
+..
 .. - exegesis/000: Sibylline Prophecy
 .. - archive/oubliette-b/000: The Lost Dialogue of Critias
 .. - exegesis/001: New Testament
@@ -41,12 +43,13 @@
 .. - archive/oubliette-c/004: Falkland Islands Dispatch
 .. - archive/oubliette-d/005: The Correspondences of Killaen Maunsell van Rensselaer
 .. - archive/oubliette-c/005: The Euphemia Experiments
-.. - archive/oubliette-e/discovery/000: Mesmeria Van Rensselaer Interrogation
-.. - archive/oubliette-e/discovery/001: Mesmeria van Rensselaer's Harddrive
+.. - archive/oubliette-f/discovery/000: Mesmeria Van Rensselaer Interrogation
+.. - archive/oubliette-f/discovery/001: Mesmeria van Rensselaer's Harddrive
+.. - archive/oubliette-e/000: Paradise Revealed
 .. - index: Gruta do Carimbado, 2152
 .. - archive/index: Ouro Preto, 2153
 .. - archive/oubliette-a/index: Gruta do Carimbado, 2155
-.. - archive/oubliette-a/000: The Lament of the Leviathan
+.. - archive/oubliette-e/001: The Lament of the Leviathan
 ..
 .. ### OPTIONAL
 .. 

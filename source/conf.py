@@ -40,7 +40,9 @@ extensions = [
     'classes'
 ]
 
-templates_path = [ ]
+templates_path = [ 
+    '_templates'
+]
 
 exclude_patterns = [
     '.*.rst',

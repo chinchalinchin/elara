@@ -2,7 +2,7 @@
 .. SECTION: Archives
 .. SUBSECTION: Oubliette A: Ouro Reliquary
 .. TABLE OF CONTENTS:
-.. - 000: Laments of the Leviathan 
+.. - 000: TODO
 
 .. _oubliette-a:
 

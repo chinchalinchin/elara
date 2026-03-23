@@ -1,11 +1,11 @@
 .. TITLE: Magnum Opus
 .. SECTION: Archives
-.. SUBSECTION: Oubliette D: Armilus Reliquary
+.. SUBSECTION: Oubliette F: Armilus Reliquary
 .. SUBSUBSECTION: The Trial of Mesmeria van Rensselear
 
-.. _oubliette-d-trial-001:
+.. _oubliette-f-trial-000:
 
-Day 2: The Trial of Mesmeria van Rensselaer
+Day 1: The Trial of Mesmeria van Rensselaer
 -------------------------------------------
 
 .. IN PROGRESS

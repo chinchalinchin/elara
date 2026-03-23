@@ -6,13 +6,62 @@ from urllib.parse import quote
 import xml.etree.ElementTree as ET
 from datetime import datetime
 
+# ----------------------------------- VERSE PANEL
+
+class verse_node(nodes.General, nodes.Element):
+    """A custom node for the verse directive."""
+    pass
+
+class VerseDirective(SphinxDirective):
+    """
+    Defines the .. verse:: directive.
+    """
+    has_content = True
+    required_arguments = 0
+    optional_arguments = 0
+    option_spec = {
+        'increment': directives.positive_int,
+    }
+
+    def run(self):
+        # We store the raw content block and the increment option
+        node = verse_node('')
+        node['content'] = self.content
+        node['increment'] = self.options.get('increment', 0)
+        return [node]
+
+def process_verse_nodes(app, doctree, fromdocname):
+    """
+    Finds all `verse_node` instances and replaces them with HTML.
+    """
+    if app.builder.format != 'html':
+        return
+
+    for node in doctree.traverse(verse_node):
+        lines = node['content']
+        increment = node['increment']
+        
+        processed_lines = []
+        # Enumerate through the lines, tracking the actual line number
+        for i, text in enumerate(lines, start=1):
+            number = str(i) if increment and i % increment == 0 else ""
+            processed_lines.append({
+                'text': text,
+                'number': number
+            })
+            
+        html = app.builder.templates.render('panels/verse.html.j2', {
+            'lines': processed_lines
+        })
+        
+        new_node = nodes.raw('', html, format='html')
+        node.replace_self(new_node)
 
 # ----------------------------------- MAPS PANEL
 
 
 class map_node(nodes.General, nodes.Element):
     """A custom node for maps to be replaced later."""
-
     pass
 
 class MapDirective(SphinxDirective):
@@ -221,10 +270,12 @@ def setup(app):
     app.add_node(map_node)
     app.add_node(rss_node)
     app.add_node(share_node)
+    app.add_node(verse_node)
 
     app.add_directive('share', ShareDirective)
     app.add_directive('map', MapDirective)
     app.add_directive('rss', RssDirective)
+    app.add_directive('verse', VerseDirective)
 
     app.add_config_value('facebook_app_id', '', 'html') 
     app.add_config_value('google_maps_api_key', '', 'html')
@@ -232,6 +283,7 @@ def setup(app):
     app.connect('doctree-resolved', process_share_nodes)
     app.connect('doctree-resolved', process_rss_nodes)
     app.connect('doctree-resolved', process_map_nodes)
+    app.connect('doctree-resolved', process_verse_nodes)
 
     return {
         'version': '1.0',

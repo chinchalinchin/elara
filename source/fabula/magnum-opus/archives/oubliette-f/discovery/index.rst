@@ -1,6 +1,6 @@
 .. TITLE: Magnum Opus
 .. SECTION: Archives
-.. SUBSECTION: Oubliette E: Armilus Reliquary
+.. SUBSECTION: Oubliette F: Armilus Reliquary
 .. SUBSUBSECTION: Notice of Discovery Production
 .. TABLE OF CONTENTS:
 .. - 000: Mesmeria Van Rensselaer Interrogation
