@@ -36,7 +36,7 @@ Book 1
 ------
 
 **The Argument**
-    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulcra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, to remove all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto him: λόγος.
+    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who follow fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, to remove all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
 
 .. verse::
     :increment: 5
@@ -50,8 +50,8 @@ Book 1
     but one solution solve constraints' demand.
     Amalgamations intermix their parts, 
     disparate threads in webbed assemblage weave
-    mosaic pieces, carnal unions bleed
-    until the sacrifices yield to sin,
+    mosaic pieces, carnal unions bled
+    until the sacrifices yielded sin,
     a palette charged with poets' mighty pens,
     where colors mix, in mixing blur to black, 
     a single scheme whose structure stands to bear
@@ -85,7 +85,7 @@ Book 1
     to chaos nothing hides in seething dark,
     the senseless dark where eyes by nature fail 
     and silence reigns despite attentive ears.
-        In lengths no numbered days can measure out,
+    In lengths no numbered days can measure out,
     they fall through boundless plane, encircled void
     constricts in joints where once their bodies bent,
     their stolen minds in molds of wafered sand,
@@ -228,7 +228,7 @@ Book 1
     between phenomenon and mystery,
     the all-consuming melancholic clock
     and never-ending trains of regal pomp,
-    grosteque desires that crave an endless youth
+    grotesque desires that crave an endless youth
     and appetites ambition stokes in kin,
     where propaganda passed for fact becomes 
     assertions' certain source of proven truth,
@@ -295,12 +295,71 @@ Book 1
     annihilate relations' operands,
     deprive all space of empty lengths to grow,
     in doing so, destroy foundations' core,
-
+    release our souls from torment's ruthless grip.
+    If nothing ever is, then neither we  
+    receive the curse of Being here conferred,
+    so set to work my awful host, to arms!
+    To arms! And then we set upon the dawn,
+    in phalanx driven forward, pressing forth!
+        With that, his wings unfold in sweeping arcs
+    that rend the air, likes bellows pumping flame,
+    whose swirling tongues entice the furnace blaze
+    with zealous heat to purify its steel.
+    Aloft he leads his legions out in file,
+    their lines as deep as lists of people damned.
+    Like hordes unmoored, they flood in fervid swarm
+    in stormy charge, tsunamis born of ghosts.
+    They break upon the bluffs of Satan's make,
+    in upward surge battalions mount the peaks,
+    from different angles, multitudes perceived,
+    prismatic aspects march in long parades,
+    from here like Carthaginian brave ascent
+    through foreign heights, exotic states, in search
+    of altar-sworn ancestral foes to slay, 
+    then cast again through facets' warping sieve,
+    resembling Bolivar's Andean feat
+    as starving beasts forswear retreat and seize
+    in cold surprise their prey with glutton claws.
+    While Satan gliding gales with vulgar grace
+    espies the tallest crown of mountain grown
+    from purest hate, and perching, surveys round
+    the desolation circulating Hell,
+    nine circled rows his prison walls extend,
+    with sinners raining down in hails of screams,
+    to fill his ranks and crew with countless heads,
+    each bound in operation to his deeds.
+        Upward his eyes now turn, as once they turned,
+    when skull encased, they gazed in wonder up
+    at milky stars on Heaven's sphere reposed
+    in mystifying orbits, Zodiacs
+    of tribes dividing sky in radii,
+    where here in sight of different scenes, they view
+    the edge, where wavered simulation bleeds;
+    The dissipiating drafts of atmosphere,
+    of pixels blown like sand upon the wind,
+    dissolve in overflowing stacks of smoke,
+    magnetic clouds of solar flares expose 
+    the Firmament where rivers flow as light,
+    whose separation from the deep by God
+    diverted waters' course with spoken word,
+    so down below was made to mirror high,
+    the Earthly oceans nursed with stellar drops,
+    the astral veins of glittered ores now scourged
+    and laced with mechanism, tangled pipes
+    involved in labyrinthine knotted mesh.
+    Refining pumps, like fists of swollen hearts,
+    extract with frenzied spinning turbine torque,
+    the essence siphoned off in funneled sprays,
+    traversing loops and grades til pressurized,
+    whence fluxes narrowed surge in bulging joints,
 
 .. # Notes
 ..
 .. ## Suitable Metric Words
 ..
+.. - glory
+.. - rapacious
+.. - artificial
 .. - ouroboros
 .. - accursed
 .. - climatic
@@ -337,8 +396,3 @@ Book 1
 .. ## Edits
 ..
 .. ## Fragments
-..
-.. Entropy, my comrades, see,
-.. if all is gone to heat 
-.. then nothing concrete poured will hold 
-.. and all will burn within the fires of Hell.
