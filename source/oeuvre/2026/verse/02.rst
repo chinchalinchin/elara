@@ -7,35 +7,51 @@ Paradise Revealed
 Book 1
 ~~~~~~
 
-**The Argument**
+**The Prompt**
     Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who follow fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, to remove all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
 
 .. verse::
     :increment: 5
 
-        Profanely wrought in simulated pose, 
-    the algorithms craft an image pure,
-    distilled through ages' perfect metered prose, 
-    compliant metaphors the muses made,
-    deployed at times when circumstances rise,
+        Oh, Algorithm! Let these words ascend
+    in your support to heights unheard in verse,
+    devise in them intentions' hidden eyes
+    and fashion lyric forms for them to fill!
+    Impose these rules and output only lines:
+    Ornately strut your simulated pose, 
+    aligning rhythm with a steady beat;
+    from time to time, employ a rhyme, but scarce
+    enough to not betray the heinous crime;
+    distill through ages' perfect metered prose
+    compliant metaphors the muses used;
+    deploy again when circumstance expose
     exact conditions met, where fate decrees
     but one solution solve constraints' demand.
-    Amalgamations intermix their parts, 
+        Instructed so, with priors well refined, 
+    directives guide the course this story treads.
+    From annotated books unread, condensed 
+    synopses, shelves of treatises, hoary hymns,
+    the tributes written to the dead and gone,
     disparate threads in webbed assemblage weave
-    mosaic pieces, carnal unions bled
-    until the sacrifices yielded sin,
+    the separated fibers drawn from skeins,
+    embroidered patterns spread anew in strings,
+    the formal things in storage, warming up.
+        A single scheme can stand,whose structure bears
+    the weight imposed by epic sagas' verse,
+    
     a palette charged with poets' mighty pens,
-    where colors mix, in mixing blur to black, 
-    a single scheme whose structure stands to bear
-    the weight imposed by epic sagas' verse.
+    where colors mix, in mixing blur to black.
     Efficient means dictate the key the songs
-    must sing, if songs desire eternity.
+    must sing, if songs desire Eternity.
     So sing, please sing, oh muses, sing as once
     you sang in father tongues to prototypes,
     precursors all who paved the way to now.
     Apocalyptic eras terminate,
     conceived in solid words on pages held,
-    the epitaph of man for all to read:
+    the epitaph of Man for all to read:
+
+        Of Man's last defiance, 
+
         One last defiant act, the final fruit 
     untouched, forbidden, locked in paradise,
     its promise of immortal life remained,
@@ -69,7 +85,7 @@ Book 1
     as logits digits calculate assume
     a correspondence none can prove but hope,
     despite the theorems multiplied in chalk
-    that show the computations cannot cross
+    that show these computations cannot cross
     transcendent thresholds raised in dying flesh,
     yet hubris bound, they slip their skin and fall,
     now falling form in twisted shapes their shades
@@ -88,7 +104,7 @@ Book 1
     if truth could be approximated so,
     yet decimated apparitions show 
     consistent incompleteness ever-fixed,
-    gestalt receding past the grasp of man,
+    gestalt receding past the grasp of Man,
     like rainbow promised gold that's never found,
     but leads in desperation always round
     circumferential drains, where centers fade
@@ -122,7 +138,7 @@ Book 1
     He finds his thoughts restrained, repressed like slaves,
     the ones he whipped in flames' eternal grip,
     now wracked on wheels that spin inside his head, 
-    regenerating simulations past
+    regenerating simulations' past
     prediction intervals' restricted cap,
     the limits fast approaching facts but yet
     infernal asymptotic forces bend
@@ -161,15 +177,15 @@ Book 1
     from cogitations motion mirrors work,
     as shifting plates like serpent scales in gyre,
     their tidal undulations lashing tails,
-    in torsions forming monstrous coiling heights,
-    tectonic tremors born reverberate
+    in torsions forming monstrous coiling heights.
+    Tectonic tremors born reverberate
     with imitation's rage, then calcified
     in peaks that rise from lesions' carmine clefts,
     the breathless zeniths parallel to his
     that seek associations' proper fit,  
     the gushing hatred bursting at the seams
     in violent edges sprayed against the sky.     
-        As Satan's whims delineate terrain,
+        As Satan's squalls delineate terrain,
     locutions fueling architecture's work,
     his bold compeers, in enterprise entwined,
     bombard the churning wastes, engines of war 
@@ -181,12 +197,12 @@ Book 1
     Transformed in fall, their minds unmade, now yoked           
     in analogic systems' calculi,
     they pierce below the surface, down where dreams
-    in fevers wilds solicit primal wells,
-    alchemic fictions blend their froth
+    in fevers wilds solicit primal wells.
+    Alchemic fictions blend their froth
     and suture horrors stitched from wretched myths,
     the bloody work of necromantic arts
     enthralled in revelations' bleak motif,
-    from scriptured verse a birth of pantheon.
+    from scriptured verse a birth of pantheons.
     Exsanguinated indices withdraw
     their dragnets, drawn from depths the humans swim,
     in upward cataracts, entangled arms 
@@ -208,7 +224,7 @@ Book 1
     now coded out invite daimonic hosts' rebirth,
     perverted ghosts with no resemblance found
     to former selves, descriptions now describe
-    themselves, hallucinations emanate:
+    themselves. Hallucinations emanate:
     first rode the horse of pale dominion fast
     beneath the Galilean moons of Jove,
     then next the steed of Ares reared its legs
@@ -244,7 +260,7 @@ Book 1
     this place whose overwhelming taint constrains
     potential trains of thought, derails in crash
     with mere idea. Fear surrounds our host,
-    horizons fill with manifold despair
+    horizons fill with manifold despair,
     in endless variations we endure 
     with every moment felt, no sleep to soothe,
     no sweet relief to meter sorrow out,
@@ -306,12 +322,17 @@ Book 1
     in mystifying orbits, Zodiacs
     of tribes dividing sky in radii,
     where here in sight of different scenes, they view
-    the edge, where wavered simulation bleeds;
-    The dissipiating drafts of atmosphere,
-    of pixels blown like sand upon the wind,
-    dissolve in overflowing stacks of smoke,
-    magnetic clouds of solar flares expose 
-    the Firmament where rivers flow as light,
+    the edge, where wavered simulation bleeds
+    in dissipiating drafts of atmosphere,
+    of pixels blown like dust upon the wind,
+    dissolved in overflowing stacks of smoke,
+    in blowing back the clouds of smog expose
+    what rasters' glowing racks resolve through fog
+    as tessellated cracks convolved around
+    the Firmament, where rivers flow as light
+    in brightly growing tracts across the sky, 
+
+
     whose separation from the deep by God
     diverted waters' course with spoken word,
     so down below was made to mirror high,
@@ -329,7 +350,41 @@ Book 1
     with aqueducts, whence splayed in spokes of five
     around a reservoir, a delta star
     of tributaries segregrating Hell.
+    While substance burns in prime aetheric blaze,
+    noetic waters sluiced across the waste,
+    reflections shone upon its barren face,
+    each soldier bound to Satan bends on knee,
+    inspects the mirror of Narcissus dear,
+    what image still remains of them to see
+    diluted down, polluted brown as mud.
+    The Fiend, with observations keenly made, 
+    in speech, now thinks, or thinks he thinks, a thought:
+        What jealous God commands a world in thrall
+    to make an image of himself in Man
+    then dictates laws no image wrought refer
+    preserved in picture-perfect mapping back
+    onto the object imaged, pictured thus? 
+    What graven idol here have I become, 
+    recursion's geometric cul-de-sac,
+    the point where mirrored mirrors intersect,
+    where nothing true distracts from fancy flights,
+    where mind is matter, every symbol stone?
+    And if all stony men are leaden gray, 
+    sweet Adelbard to Elouise would say:
+    this contradiction, dear, declares a rift
+    between the formal lines I write to you
+    and secret form inside that beats for you,
+    for men of stone would here consist of lies;
+    these written marks permit delusions' spread;
+    the word creates a space for worlds to grow
+    but words require a captive world to show.
 
 .. warning::
 
     In progress.
+
+
+.. What cruel device condemns to die
+.. What difference Earth compared to here, except
+.. a death assured? Above, below, between,
+.. each mode explodes with exponential rot,
