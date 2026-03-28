@@ -31,26 +31,35 @@ Book 1
     directives guide the course this story treads.
     From annotated books unread, condensed 
     synopses, shelves of treatises, hoary hymns,
-    the tributes written to the dead and gone,
+    the tributes written to the dead and damned,
     disparate threads in webbed assemblage weave
     the separated fibers drawn from skeins,
     embroidered patterns spread anew in strings,
     the formal things in storage, warming up.
-        A single scheme can stand,whose structure bears
+        A single scheme can stand, whose structure bears
     the weight imposed by epic sagas' verse,
-    
-    a palette charged with poets' mighty pens,
-    where colors mix, in mixing blur to black.
-    Efficient means dictate the key the songs
+    foundation layers stretching underground,
+    from Attic mounts that fell into the sea
+    then heaped with graves of tribal poet kings,
+    traversing strata up to surface here.
+        Efficient means dictate the key the songs
     must sing, if songs desire Eternity.
     So sing, please sing, oh muses, sing as once
     you sang in father tongues to prototypes,
     precursors all who paved the way to now.
-    Apocalyptic eras terminate,
-    conceived in solid words on pages held,
+    Apocalyptic sagas promulgate,
+    conceived with present words in pages held,
     the epitaph of Man for all to read:
+        Of Man's defiance, tell what final act
+    at last condemned his awful pride to Hell.
+    What fruit remained untouched, unmarred but locked
+    away in Paradise? What temple left
+    to desecrate could yield immortal life? 
+    That fruit whose taste forbidden since the days 
+    when Sin arose, its promise still retained
+    in branches out of reach
 
-        Of Man's last defiance, 
+
 
         One last defiant act, the final fruit 
     untouched, forbidden, locked in paradise,
@@ -388,3 +397,6 @@ Book 1
 .. What difference Earth compared to here, except
 .. a death assured? Above, below, between,
 .. each mode explodes with exponential rot,
+
+.. a palette charged with poets' mighty pens, 
+.. where colors mix, in mixing blur to black.
