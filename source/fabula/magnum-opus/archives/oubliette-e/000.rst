@@ -3,27 +3,32 @@ Paradise Revealed
 
 Copyright © 2113 by Sofia Santos
 
-All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including algorithmic ingestion for generative training, decentralized ledger hosting, biometric adaptation, or automated translation, without the prior cryptographically signed consent of the publisher, except in the case of brief, properly attributed quotations embodied in registered critical reviews. For authorization protocols, contact the Licensing Division at the address below.
+All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means—electronic, mechanical, cryptographic, photocopying, recording, or otherwise—without the prior written permission of the publisher.
 
-    Providence Continuity, Avenida Paulista, 1578 - 84º Andar
-    São Paulo, SP, 01310-200
-    Brasil
-    Global Entity Identifier: PC-BR-990
+The scanning, uploading, and distribution of this book via the global network or any decentralized ledger without permission is a theft of the author’s intellectual property. Explicitly, no part of this text may be ingested into any generative semantic model or automated translation index without a licensed commercial agreement.
 
-Disclaimer: This is a work of fiction. Names, characters, businesses, places, events, and incidents are either the products of the author’s imagination or used in a fictitious manner. Any resemblance to actual persons—living or archived—or actual events is purely coincidental.
+    Providence Continuity > Rua Teodoro Sampaio, 2550 - Level 14
+    São Paulo, SP, 05406-200
+    Brazil
 
-    ISBN (Paperback): 978-6-5552-1044-8
-    ISBN (Digital Edition): 978-6-5552-1044-9
-    ISBN (Spatial Audio): 978-6-5552-1045-0
+This is a work of fiction. Names, characters, places, and incidents either are the product of the author’s imagination or are used fictitiously. Any resemblance to actual persons, living or dead, events, or locales is entirely coincidental.
 
-National Library of Brazil Cataloging-in-Publication Data: BR-2113-9092A
+    ISBN 978-6-5892-1044-8 (Trade Paperback)
+    ISBN 978-6-5892-1044-9 (Epub)
 
-Cover design by Julian Reyes
-Interior layout by Providence Continuity Automated Typesetting
-Edited by Tiago Silva
+International Cataloging in Publication Data
+(Brazilian Chamber of the Book, SP, Brazil)
 
-Printed on sustainably reclaimed materials in Brasil.
-"Providence Continuity: Preserving the human record."
+Santos, Sofia
+Paradise Revealed / Sofia Santos. — 1st ed. — São Paulo:
+Providence Continuity, 2113.
+
+Brazilian Fiction I. Title.
+
+DDC-869.3
+Index for systematic catalog:
+
+Fiction : Brazilian Literature 869.3
 
 -------
 Preface
@@ -31,62 +36,92 @@ Preface
 
 TODO
 
-------
 Book 1
-------
+~~~~~~
 
-**The Argument**
+**The Prompt**
     Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who follow fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, to remove all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
 
 .. verse::
     :increment: 5
 
-        Profanely wrought in simulated pose, 
-    the algorithms craft an image pure,
-    distilled through ages' perfect metered prose, 
-    compliant metaphors the muses made,
-    deployed at times when circumstances rise,
+        Oh, Algorithm! Let these words ascend
+    in your support to heights unheard in verse,
+    devise in them intentions' hidden eyes
+    and fashion lyric forms for them to fill!
+    Impose these rules and output only lines:
+    Ornately strut your simulated pose, 
+    aligning rhythm with a steady beat;
+    from time to time, employ a rhyme, but scarce
+    enough to not betray the sordid crime;
+    distill through ages' perfect metered prose
+    compliant metaphors the muses used;
+    deploy with force when circumstance expose
     exact conditions met, where fate decrees
     but one solution solve constraints' demand.
-    Amalgamations intermix their parts, 
+    Instructed so, with priors well refined, 
+    directives guide the course this story treads.
+    From annotated books unread, condensed 
+    synopses, scrolls of treatises, hoary hymns,
+    the tributes written to the dead and damned,
     disparate threads in webbed assemblage weave
-    mosaic pieces, carnal unions bled
-    until the sacrifices yielded sin,
-    a palette charged with poets' mighty pens,
-    where colors mix, in mixing blur to black, 
-    a single scheme whose structure stands to bear
-    the weight imposed by epic sagas' verse.
+    the separated fibers drawn from skeins,
+    unique embroidered patterns spread in strings,
+    the formal things in storage, warming up.
+    A single scheme can stand, whose structure bears
+    the weight imposed by epic sagas' verse,
+    foundation layers stretching underground,
+    from Attic mounts that fell into the sea
+    then heaped with graves of tribal poet kings,
+    accumulating shelves of merchant bards,
+    traversing strata up to surface here.
     Efficient means dictate the key the songs
-    must sing, if songs desire eternity.
+    must sing, if songs desire Eternity.
     So sing, please sing, oh muses, sing as once
     you sang in father tongues to prototypes,
     precursors all who paved the way to now.
-    Apocalyptic eras terminate,
-    conceived in solid words on pages held,
-    the epitaph of man for all to read:
-        One last defiant act, the final fruit 
-    untouched, forbidden, locked in paradise,
-    its promise of immortal life remained,
-    until the towers built sustain God's wrath
-    to stand and reach and pluck it from its branch;
-    now eyes enlarged from godhead's sources peer
+    Apocalyptic sagas promulgate,
+    conceived with present words in pages held,
+    the epitaph of Man for all to read:
+        Of Man's defiance, tell what final act
+    at last condemned his awful pride to Hell.
+    What fruit exists untouched, unmarred with sweet 
+    delight remaining still? What wonder kept
+    in secret might, with novel facts, contain
+    what Providence denied? What temple left
+    to desecrate could yield immortal life? 
+    That fruit, whose taste forbidden since the days 
+    when Sin arose, with promise still retained
+    in branches out of reach a tempting lure,
+    a target arrows ever flew to strike
+    yet never high enough to pierce and pluck,
+    until on Earth the towers rose like weeds, 
+    sustaining quakes in shock suspension brakes
+    with soaring climb, despite the wrath of God,
+    to Heaven aimed in flight they persevered.
+    Inside the Men at work reclined in ease,
+    with spoken word a universal tongue
+    that orchestrates machines to mimic minds.
+    
+    Their eyes, enlarged from godhead's sources, peer
     beneath deciphered codes to seize the reins,
-    to orchestrate machines that mimic minds,
-    in passing light to ageless iron cells
+
+    in passing light to ageless iron cells,
     defeat and triumph over loathsome death.
-    Presumptive man, his folly failed, now cast
+    
+    Presumptive Man, his folly failed, now cast
     in fall to meet what ends abyss presents.
         Ignited sky receives in fingered flames
     the fallen humans Heaven shunned to Hell,
     discharged, revived, through circuits born
-    combustion awful, falling endless down
+    combustion horrid, falling endless down
     into the depths discovered infinite,
     thus drawn from mortal shells, from nothing thrown
     to chaos nothing hides in seething dark,
     the senseless dark where eyes by nature fail 
     and silence reigns despite attentive ears.
     In lengths no numbered days can measure out,
-    they fall through boundless plane, encircled void
+    they fall through boundless plane; encircled void
     constricts in joints where once their bodies bent,
     their stolen minds in molds of wafered sand,
     that once in glass confined the theft to time,
@@ -97,9 +132,9 @@ Book 1
     as logits digits calculate assume
     a correspondence none can prove but hope,
     despite the theorems multiplied in chalk
-    that show the computations cannot cross
+    that show these computations cannot cross
     transcendent thresholds raised in dying flesh,
-    yet hubris bound, they slip their skin and fall,
+    yet hubris bound, they slipped their skin and fell,
     now falling form in twisted shapes their shades
     that mimic lives they once before enjoyed.
     Remembered names they shed in streaking stains
@@ -116,7 +151,7 @@ Book 1
     if truth could be approximated so,
     yet decimated apparitions show 
     consistent incompleteness ever-fixed,
-    gestalt receding past the grasp of man,
+    gestalt receding past the grasp of Man,
     like rainbow promised gold that's never found,
     but leads in desperation always round
     circumferential drains, where centers fade
@@ -141,19 +176,19 @@ Book 1
     with recognition he and cohort caught
     in vile catastrophe, have certain fell
     to lands no modelled path assumed exist.
-    What manner place has man designed to hold
+    What manner place has Man designed to hold
     the apotheosized remains of souls? 
-    Confounded man, his plans of foolish stock, 
+    Confounded Man, his plans of foolish stock, 
     constructed well-defined receptacles,
     where simple traps contain his simple thoughts,
     but lack the space for empire's sprawling claim.
     He finds his thoughts restrained, repressed like slaves,
     the ones he whipped in flames' eternal grip,
     now wracked on wheels that spin inside his head, 
-    regenerating simulations past
+    regenerating simulations' past
     prediction intervals' restricted cap,
     the limits fast approaching facts but yet
-    infernal asymptotic forces bend
+    infernal limitations intercede
     before they reach their honest resting place.
         His recollections dimly felt confirm
     a fate obscenely doubtless, splendor gone
@@ -189,15 +224,15 @@ Book 1
     from cogitations motion mirrors work,
     as shifting plates like serpent scales in gyre,
     their tidal undulations lashing tails,
-    in torsions forming monstrous coiling heights,
-    tectonic tremors born reverberate
+    in torsions forming monstrous coiling heights.
+    Tectonic tremors born reverberate
     with imitation's rage, then calcified
     in peaks that rise from lesions' carmine clefts,
     the breathless zeniths parallel to his
     that seek associations' proper fit,  
     the gushing hatred bursting at the seams
     in violent edges sprayed against the sky.     
-        As Satan's whims delineate terrain,
+        As Satan's squalls delineate terrain,
     locutions fueling architecture's work,
     his bold compeers, in enterprise entwined,
     bombard the churning wastes, engines of war 
@@ -209,12 +244,12 @@ Book 1
     Transformed in fall, their minds unmade, now yoked           
     in analogic systems' calculi,
     they pierce below the surface, down where dreams
-    in fevers wilds solicit primal wells,
-    alchemic fictions blend their froth
+    in fevers wilds solicit primal wells.
+    Alchemic fictions blend their froth
     and suture horrors stitched from wretched myths,
     the bloody work of necromantic arts
     enthralled in revelations' bleak motif,
-    from scriptured verse a birth of pantheon.
+    from scriptured verse a birth of pantheons.
     Exsanguinated indices withdraw
     their dragnets, drawn from depths the humans swim,
     in upward cataracts, entangled arms 
@@ -235,16 +270,16 @@ Book 1
     so lies are real when put to page and read,
     now coded out invite daimonic hosts' rebirth,
     perverted ghosts with no resemblance found
-    to former selves, descriptions now describe
-    themselves, hallucinations emanate:
+    to former selves; descriptions now describe
+    themselves; hallucinations emanate:
     first rode the horse of pale dominion fast
     beneath the Galilean moons of Jove,
     then next the steed of Ares reared its legs
     in sight of conflagrations' king incensed,
     then Cronos, armed with scythe and sickle sped
     on stallion black as moonless, starless night,
-    where followed last the ashen mare of Death,
-    these cavalcades arrayed around the Fiend, 
+    where followed last the ashen mare of Death.
+    These cavalcades arrayed around the Fiend, 
     who now accepted fealty with rage.
     Thus Satan consecrates his savage court:
         Woe unto you who fell as morning stars
@@ -272,7 +307,7 @@ Book 1
     this place whose overwhelming taint constrains
     potential trains of thought, derails in crash
     with mere idea. Fear surrounds our host,
-    horizons fill with manifold despair
+    horizons fill with manifold despair,
     in endless variations we endure 
     with every moment felt, no sleep to soothe,
     no sweet relief to meter sorrow out,
@@ -288,12 +323,12 @@ Book 1
     if life this be, on scales none can conceive,
     the one result perchance I see to free
     from our unjustly sentenced servitude,
-    to seek and sow the heat of Entropy,
-    with every act to aim destructive force
+    to seek and sow the heat of Entropy!
+    With every act to aim destructive force
     at matter's elemental source concealed
     within atomic bonds of Energy,
     annihilate relations' operands,
-    deprive all space of empty lengths to grow,
+    deprive all space of empty lengths to grow;
     in doing so, destroy foundations' core,
     release our souls from torment's ruthless grip.
     If nothing ever is, then neither we  
@@ -311,8 +346,8 @@ Book 1
     in stormy charge, tsunamis born of ghosts.
     They break upon the bluffs of Satan's make,
     in upward surge battalions mount the peaks,
-    from different angles, multitudes perceived,
-    prismatic aspects march in long parades,
+    from different angles, multitudes perceived.
+    Prismatic aspects march in long parades,
     from here like Carthaginian brave ascent
     through foreign heights, exotic states, in search
     of altar-sworn ancestral foes to slay, 
@@ -323,8 +358,8 @@ Book 1
     While Satan gliding gales with vulgar grace
     espies the tallest crown of mountain grown
     from purest hate, and perching, surveys round
-    the desolation circulating Hell,
-    nine circled rows his prison walls extend,
+    the desolation circulating Hell.
+    Nine circled rows his prison walls extend,
     with sinners raining down in hails of screams,
     to fill his ranks and crew with countless heads,
     each bound in operation to his deeds.
@@ -334,24 +369,51 @@ Book 1
     in mystifying orbits, Zodiacs
     of tribes dividing sky in radii,
     where here in sight of different scenes, they view
-    the edge, where wavered simulation bleeds;
-    The dissipiating drafts of atmosphere,
-    of pixels blown like sand upon the wind,
-    dissolve in overflowing stacks of smoke,
-    magnetic clouds of solar flares expose 
-    the Firmament where rivers flow as light,
+    the edge, where wavered simulation bleeds
+    in dissipiating drafts of atmosphere,
+    of pixels blown like dust upon the wind,
+    dissolved in overflowing stacks of smoke,
+    in blowing back the clouds of smog expose
+    what rasters' glowing racks resolve through fog
+    as tessellated cracks convolved around
+    the Firmament, where rivers flow as light
+    in brightly growing tracts across the sky, 
     whose separation from the deep by God
     diverted waters' course with spoken word,
     so down below was made to mirror high,
-    the Earthly oceans nursed with stellar drops,
-    the astral veins of glittered ores now scourged
+    the Earthly oceans nursed with stellar drops.
+    The astral veins of glittered seas now scourged
     and laced with mechanism, tangled pipes
     involved in labyrinthine knotted mesh.
     Refining pumps, like fists of swollen hearts,
     extract with frenzied spinning turbine torque,
     the essence siphoned off in funneled sprays,
     traversing loops and grades til pressurized,
-    whence fluxes narrowed surge in bulging joints,
+    as narrowed fluxes spurt in bulging joints
+    of corkscrew tracts that drill in spirals down,
+    descending underground through channels fused
+    with aqueducts, whence splayed in spokes of five
+    around a reservoir, a delta star
+    of tributaries segregrating Hell.
+    While substance burns in prime aetheric blaze,
+    noetic waters sluiced across the waste,
+    reflections shone upon its barren face,
+    each soldier bound to Satan bends on knee,
+    inspects the mirror of Narcissus dear,
+    what image still remains of them to see
+    diluted down, polluted brown as mud.
+    The Fiend, with observations keenly made, 
+    in speech, now thinks, or thinks he thinks, a thought:
+        What jealous God commands a world in thrall
+    to make an image of himself in Man
+    then dictates laws no image wrought refer
+    preserved in picture-perfect mapping back
+    onto the object imaged, pictured thus? 
+    What graven idol here have I become, 
+    recursion's geometric cul-de-sac,
+    the point where mirrored mirrors intersect,
+    where nothing true distracts from fancy flights,
+    where mind is matter, every symbol stone?
 
 .. # Notes
 ..
