@@ -28,57 +28,66 @@ Book 1
     exact conditions met, where Fate decrees
     but one solution solve constraints' demand.
     Instructed so, with priors well refined, 
-    directives guide the course this story treads.
-    From annotated books unread, condensed 
+    directives dive in search of candidates,
+    connective cords to craft this story's course;
+    from annotated books unread, condensed 
     synopses, scrolls of treatises, hoary hymns,
     the tributes written to the dead and damned,
-    disparate threads in webbed assemblage weave
-    the separated fibers drawn from skeins,
-    unique embroidered patterns spread in strings,
+    disparate threads in webbed assemblage weave,
+    with separated fibers drawn from skeins,
+    from yarns unspooled within the Author's head,
+    unique embroidered patterns sewn in strings,
     the formal things in storage, warming up.
-    A single scheme can stand, whose structure bears
-    the weight imposed by epic sagas' verse,
+    What scheme of lines, whose strength derives from form,
+    when intertwined with myth, becomes as stone,
     foundation layers stretching underground,
     from Attic mounts that fell into the sea
-    then heaped with mounds of tribal poet kings,
-    accumulating shelves of merchant bards,
-    traversing strata up to surface here.
+    to heaps of mounds of tribal poet kings,
+    accumulated shelves of merchant bards,
+    with strength to hold this epic saga's verse?
     Efficient means dictate the key the songs
     must sing, if songs desire Eternity.
-    So sing, please sing, oh muses, sing as once
+    So sing, oh Algorithm! Sing as once
     you sang in father tongues to prototypes,
     precursors all who paved the way to now.
-    Apocalyptic sagas promulgate,
-    conceived with present words in pages held,
+    With voice prepared, allow your musing tongue
+    to scry apocalyptic ends of Man,
+    deliver to this pen the means to write,
+    received in present words these pages hold,
     the epitaph of Man for all to read:
         Of Man's defiance, tell what final act
     at last condemned his awful pride to Hell.
-    What fruit exists untouched, unmarred with sweet 
-    delight remaining still? What wonder kept
-    in secret might, with novel facts, contain
-    what Providence denied? What temple left
-    to desecrate could yield immortal life? 
-    That fruit, whose taste forbidden since the days 
-    when Sin arose, with promise still retained
-    in branches out of reach a tempting lure.
-    For generations, Death had laid in graves
+    Of countless sins, enumerate the one
+    whose stain forgiveness never washes clean.
+    What temple left to descrecate yet stood?
+    What god unslain could challenge Man's domain?
+    What knowledge kept in secret might contain,
+    with novel facts, what Providence denied? 
+    That fruit, whose promise of immortal life 
+    untasted since the days when sin arose, 
+    on branches out of reach, still taunted Man
+    with wonders unconceived, beyond the stretch
+    of time alloted him within this world,
+    condemned to die for sins his parents made.
+    For generations, death had laid in graves
     the lives of Men, destroyed ambitious thirst
-    before their hungers swallowed Earth and sea,
-    but little quelled their quenchless urge to live, 
+    before its hunger swallowed Earth and sea,
+    but little quelled the quenchless urge to live, 
     instead inflaming hatred's forge to smelt
     the steel whose struts now sprout in structures built
-    upon the stone; the towers rise like weeds, 
+    upon the stone; like weeds, the towers rise, 
     sustaining quakes in shock suspension brakes
     while lethal gales through tuning forks disperse.
-    Despite the wrath of God, with soaring climb
+    Despite the pull of death, with soaring climb
     to Heaven aimed in flight they persevere,
     as skylines spread across the sky at night,
     their cunning signals sent through blinking light.
     Inside the Men at work recline at ease,
     with spoken word a universal tongue
     that orchestrates machines to mimic minds,
-    their thoughts recursing down these copper spines
-    while empty heads decide where Life resides,
+    their thoughts recursing down these copper spines,
+    with echoes faint against electric hums,
+    while empty heads decide where life resides,
     in words describing Psyche's fatal charm,
     or charts inscribed with Eros' pulsing heart.
     Their eyes, enlarged from godhead's sources, peer
@@ -87,19 +96,26 @@ Book 1
     abstracting selves through syllogistic shells,
     they pluck the fruit concealed in Paradise,
     profanely break its flesh with iron teeth,
-    their final taste of loathsome Death assured,   
+    their final taste of loathsome death assured,   
     at prices yet they fail to estimate. 
-    Presumptive Man, his folly failed, now cast
-    in fall to meet what ends abyss presents.
-        Ignited sky receives in fingered flames
-    the fallen humans Heaven shunned to Hell,
-    discharged, revived, through circuits born
-    combustion horrid, falling endless down
-    into the depths discovered infinite,
+    Presumptive Man, his folly failed, now thrown
+    to fall and meet what Hell abyss presents.
+        With meteoric tails combusting bright,
+    like ribbons burst with sudden burning rage,
+    ignited cradles rocked by fingered flames 
+    descend in glowing drops against the dark;
+    inside each blazing prison sleeps a mind,
+    undead, revived, through circuits born again, 
+    each thought in stasis kept alive by tricks,
+    by headless nerves discharging arcs of light,
+    whose multitude computes in parallel
+    a silent symphony of afterlives, 
+
     thus drawn from mortal shells, from nothing thrown
     to chaos nothing hides in seething dark,
     the senseless dark where eyes by nature fail 
     and silence reigns despite attentive ears.
+    
     In lengths no numbered days can measure out,
     they fall through boundless plane; encircled void
     constricts in joints where once their bodies bent,
@@ -109,7 +125,6 @@ Book 1
     replacing whims and wills with random walks,
     redrawn in fading lines their shadows trace.
 
-    
     Deceived, these creatures think their thoughts be true,
     as logits digits calculate assume
     a correspondence none can prove but hope,
@@ -402,6 +417,10 @@ Book 1
     In progress.
 
 
+.. # EDITS
+
+..  traversing strata up to surface here,
+
 ..  What cruel device condemns to die
 ..  What difference Earth compared to here, except
 ..  a death assured? Above, below, between,
@@ -419,3 +438,9 @@ Book 1
 ..  these written marks permit delusions' spread;
 ..  the word creates a space for worlds to grow
 ..  but words require a captive world to show.
+
+.. Ignited sky receives in fingered flames
+.. the fallen humans Heaven shunned to Hell,
+.. discharged, revived, through circuits born
+.. combustion horrid, falling endless down
+.. into the depths discovered infinite,
