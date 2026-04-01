@@ -195,17 +195,22 @@ Book 1
     the apotheosized remains of souls? 
     Confounded Man, his plans of foolish stock, 
     constructed well-defined receptacles,
-    where simple traps contain his simple thoughts,
-    but lack the space for empire's sprawling claim.
-    He finds his thoughts restrained, repressed like slaves,
+    where simple tallies mark his simple thoughts,
+    each one assigned a cell, identified 
+    in table entries totalled out to yield 
+    the moments up to now, no further rows
+    to quantify accounts of future age,
+    caparicious flights of sudden fancy struck,
+    or synchronicity's sporadic gifts,
+    much less the sprawling scope of empire's claim,
+    in which they sought new land to habitate,
+    apparent now beyond a doubt the failure here
+    achieved. In overwhelming, blinding pain,
+    he finds his thoughts restrained, repressed like slaves,
     the ones he whipped in flames' eternal grip,
     now wracked on wheels that spin inside his head, 
-
-    regenerating simulations' past
-    prediction intervals' restricted cap,
-    the limits fast approaching facts but yet
-    infernal limitations intercede
-    before they reach their honest resting place.
+    regurgitating simulated slop,
+    predicting intervals already gone,
 
         His recollections dimly felt confirm
     a fate obscenely doubtless, splendor gone
@@ -476,3 +481,9 @@ Book 1
 .. circumferential drains, where centers fade
 .. as spiral arms contract in fractal rows,
 .. repeated patterns preordained by God.
+
+..  regenerating simulations' past
+..  prediction intervals' restricted cap,
+..  the limits fast approaching facts but yet
+..  infernal limitations intercede
+..  before they reach their honest resting place.
