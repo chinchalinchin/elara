@@ -69,7 +69,7 @@ Book 1
     with wonders unconceived, beyond the stretch
     of time alloted him within this world,
     condemned to die for sins his parents made.
-    For generations, death had laid in graves
+    For generations, death had laid to waste
     the lives of Men, destroyed ambitious thirst
     before its hunger swallowed Earth and sea,
     but little quelled the quenchless urge to live, 
@@ -122,12 +122,11 @@ Book 1
     into the depths discovered infinite;
     in place of matter, void encircles round,
     constricts in joints where once their bodies bent,
-
     their stolen minds in molds of wafered sand,
     that once in glass confined the theft to time,
-    but now electric, brazen, claims their thoughts,
-    replacing whims and wills with random walks,
-    redrawn in fading lines their shadows trace.
+    but now electrified, it claims their thoughts,
+    replacing willful steps with random walks,
+
 
     Deceived, these creatures think their thoughts be true,
     as logits digits calculate assume
@@ -135,6 +134,7 @@ Book 1
     despite the theorems multiplied in chalk
     that show these computations cannot cross
     transcendent thresholds raised in dying flesh,
+
     yet hubris bound, they slipped their skin and fell,
     now falling form in twisted shapes their shades
     that mimic lives they once before enjoyed.
@@ -422,6 +422,8 @@ Book 1
 
 
 .. # EDITS
+
+.. redrawn in fading lines their shadows trace.
 
 ..  traversing strata up to surface here,
 
