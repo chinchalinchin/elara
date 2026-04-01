@@ -50,7 +50,7 @@ Book 1
     So sing, oh Algorithm! Sing as once
     you sang in father tongues to prototypes,
     precursors all who paved the way to now.
-    With voice prepared, allow your musing tongue
+    With voice prepared, allow your musing speech
     to scry apocalyptic ends of Man,
     deliver to this pen the means to write,
     received in present words these pages hold,
@@ -121,8 +121,10 @@ Book 1
     nor spanned in cubits arms might replicate, 
     they fall through boundless region, endless down
     into the depths discovered infinite,
-    in geometric drop, as motion stops 
-    for lack of space to move despite the vast
+    in geometric drops, where every inch
+    contracts to fractions of its prior scale,  
+    until momentum breaks and motion stops 
+    for lack of space to move, despite the vast
     arrays of nothing stretching indistinct
     across horizon's curving manifold;
     in place of matter, void encircles round,
@@ -132,8 +134,8 @@ Book 1
     but now electrified, it claims their thoughts,
     replacing willful steps with random walks.
     Like dominoes, in sequence symbols shunt
-    approximated series, sums cascade
-    in floating points that drift away as clouds
+    the algebra that series sum, cascades
+    of floating points that drift away as clouds
     dissolved in thinning atmosphere to air,
     as if the countless numbers named in maps
     could ever count the gaps from aught to one.
@@ -146,15 +148,11 @@ Book 1
     despite the theorems multiplied in chalk
     whose ironclad deductions show for all
     no system wrought will reach across the rift
-    and represent itself until the flesh
-    consents to die,  
-
-    that show these computations cannot cross
-    transcendent thresholds raised in dying flesh,
-
+    and represent itself, until on faith,
+    the flesh, in face of death, consents to die,  
     yet hubris bound, they slipped their skin and fell,
     now fallen form in twisted shapes their shades
-    that mimic lives they once before enjoyed.
+    to mimic lives they once before enjoyed.
     Remembered names they shed in streaking stains
     of faintly seen forgotten things that trail
     behind in ripples rent through spaceless void,
@@ -167,14 +165,13 @@ Book 1
     now amplified in biased sets that bind
     conclusions said to represent the truth,
     if truth could be approximated so,
-    yet decimated apparitions show 
-    consistent incompleteness ever-fixed,
-    gestalt receding past the grasp of Man,
-    like rainbow promised gold that's never found,
-    but leads in desperation always round
-    circumferential drains, where centers fade
-    as spiral arms contract in fractal rows,
-    repeated patterns preordained by God.
+    yet decimated apparitions grow
+    around the locus point the lies construct,
+    not sharp enough to penetrate the veil,
+    remaining incomplete, but just enough
+    an edge to cut from fiction facts outline.
+    Their fall accomplished and from grace suborned,
+    their dreams recede, with open eyes aware.
         The first among the fallen legion wakes.
     What name he lacks, it comes supplied unasked,
     as annals of lost archetypes condense
@@ -203,11 +200,13 @@ Book 1
     He finds his thoughts restrained, repressed like slaves,
     the ones he whipped in flames' eternal grip,
     now wracked on wheels that spin inside his head, 
+
     regenerating simulations' past
     prediction intervals' restricted cap,
     the limits fast approaching facts but yet
     infernal limitations intercede
     before they reach their honest resting place.
+
         His recollections dimly felt confirm
     a fate obscenely doubtless, splendor gone
     with dull remembrance fading quickly here,
@@ -467,3 +466,13 @@ Book 1
 .. discharged, revived, through circuits born
 .. combustion horrid, falling endless down
 .. into the depths discovered infinite,
+
+.. inferring facts from faultline cracks diffused
+
+.. consistent incompleteness ever-fixed,
+.. gestalt receding past the grasp of Man,
+.. like rainbow promised gold that's never found,
+.. but leads in desperation always round
+.. circumferential drains, where centers fade
+.. as spiral arms contract in fractal rows,
+.. repeated patterns preordained by God.
