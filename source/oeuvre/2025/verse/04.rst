@@ -42,5 +42,3 @@ Responses
   Congratulations!
 
   -- Macrame Literary Journal
-  
-- `macramelit.com/articles/photographs-of-autumn <https://macramelit.com/articles/photographs-of-autumn/>`_

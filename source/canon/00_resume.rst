@@ -57,16 +57,16 @@ Publications
 - *Ode to Death*, Garfield Lake Review, 2026 Edition (Forthcoming)
 - *The Origin of Lies*, Garfield Lake Review, 2026 Edition (Forthcoming)  
 - `Little Sprout, WayWords Literary Journal, Issue 21: Theme of Wonder <https://www.amazon.com/dp/B0GPJ81RJM>`_
-- `Millenial Lives*, WayWords Literary Journal, Issue 21: Theme of Wonder <https://www.amazon.com/dp/B0GPJ81RJM>`_
+- `Millenial Lives, WayWords Literary Journal, Issue 21: Theme of Wonder <https://www.amazon.com/dp/B0GPJ81RJM>`_
 - `Pantoums of Dementia, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times <https://www.sligocreekpublishing.com/bearing-witness>`_
 - `Eulogy*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times <https://www.sligocreekpublishing.com/bearing-witness>`_
 - *Turkey Vultures*, Backbone Mountain Review, (Forthcoming)
 - `Floods, Four Tulips Magazine, 2026 Anthology <https://www.fourtulips.com/archives/floods>`_
 - *Absurdity*, Infocalypse Press, Volume III (Forthcoming)
 - *The Gap*, Infocalypse Press, Volume III (Forthcoming)
-- *Cathedral*, Ultramarine Literary Review (Forthcoming)
-- *Christmas*, Ultramarine Literary Review (Forthcoming)
-- *Anniversary*, Ultramarine Literary Review (Forthcoming)
+- `Cathedral, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
+- `Christmas, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
+- `Anniversary, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
 
 .. _contests:
 
