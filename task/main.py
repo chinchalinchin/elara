@@ -35,7 +35,7 @@ DEFAULT_VIEWS_FILE              = 'config/views.yaml'
 DEFAULT_VARS_FILE               = 'task.yaml'
 DEFAULT_OUTPUT_SUBDIR           = 'prompt'
 DEFAULT_OUTPUT_FILE             = 'prompt.md'
-
+OVERRIDES                       = "overrides"
 
 # -------------------- Templating Functions
 
@@ -152,11 +152,12 @@ def render(template_path: str, output_path: str, vars_path: str) -> None:
     script_dir = os.path.dirname(os.path.abspath(__file__))
     props_path = os.path.join(script_dir, DEFAULT_PROPS_FILE)
     views_path = os.path.join(script_dir, DEFAULT_VIEWS_FILE)
+    overrides  = os.path.join(script_dir, OVERRIDES) 
 
     # Set up the Jinja2 environment
     # Use FileSystemLoader to load templates from the script's directory
     env = jinja2.Environment(
-        loader=jinja2.FileSystemLoader(script_dir),
+        loader=jinja2.FileSystemLoader([ script_dir, overrides ]),
         autoescape=False,  # False is preferred for Markdown generation
         trim_blocks=True,
         lstrip_blocks=True

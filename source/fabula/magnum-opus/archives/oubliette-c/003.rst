@@ -9,7 +9,7 @@ The Coriolis File
 
 .. note::
 
-    These records were obtained from the public databases of the Office of Naval Intelligence, made available pursuant to statute § 33(a) of the Freedom of Data Act. All information has been sanitized and aligned according to the latest model censor guidelines published by the National Institute of Standards and Technology.
+    These records were obtained from the public databases of the Office of Naval Intelligence, made available pursuant to statute § 33(a) of the Freedom of Data Act, 2075. All information has been sanitized and aligned according to the latest model censor guidelines published by the National Institute of Standards and Technology.
 
 **TOP SECRET EYES ONLY, COPY 1 OF 3**
 

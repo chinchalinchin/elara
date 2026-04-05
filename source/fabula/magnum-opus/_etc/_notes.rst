@@ -301,8 +301,8 @@ Time Period: 2110s
 - 1947 (Roswell): A reception event. Her signal was drawn towards the "Entropy Dump" initiated by Operation Highjump.
 - 2160 (LaGrange 4): The signals decoded by the Directorate. 
 
-Ricardo
-~~~~~~~
+Ricardo Santos
+~~~~~~~~~~~~~~
 
 Lineage: Descendent of Ryckert van Rensselaer and Coaraci
 Time Period: 2160s

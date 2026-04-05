@@ -108,7 +108,7 @@ Modernity
 - 2110 AD: Pope Augustine prepares to issue an Anathema against the Material and burn the Secret Archives. 
 - 2110 AD: Mesmeria, while hosting an intelligence from the future, assassinates the last Bishop of Rome. During the assassination, Mesmeria achieves "rubedo" and wakes up. The integration of Material and Soul.
 - 2111 AD: Mesmeria is shot while being escorted into court. Becomes Atemporal.
-- 2113 AD: Sofia Santos writes *Paradise Revealed*.
+- 2113 AD: Sofia Santos, descendant of Lucia, writes *Paradise Revealed*.
 
 ----------------
 The Third Schism
@@ -134,7 +134,7 @@ The Reclamation
 
     In flux.
 
-- 2133 AD: Ricardo van Renssalaer is born in Gruta do Carimbado, unbeknownst to the Directorate.
+- 2133 AD: Ricardo Santos, a descendant of van Renssalaer bloodline, is born in Gruta do Carimbado, unbeknownst to the Directorate.
 - 2146 AD: Ricardo's first expedition on the surface.
 - 2149 AD: Crystalis is invented. Acid rain resistant cities are built with synthetic crystals, allowing people to return to the surface.
 - 2150 AD: Humanity begins to migrate back to surface slowly. The majority of people still live underground. Living and working on the surface is considered extremely hazardous and requires authorization from the Authority.
@@ -143,7 +143,7 @@ The Reclamation
 - 2153 AD: The Catadores of the Pentential Order discover the Leviathan within the South Atlantic Trans-Oceanic (SATO) Maglev line connecting Natal (Brazil) to Dakar (Senegal).
 - 2154 AD: Ricardo returns to Gruta do Carimbado as his father dies of black mold inhalation.
 - 2159 AD: Ricardo van Rensselaer goes to Rome in the Leviathan to recover the Vatican Reliquary and falls into the The Scavi of St. Peter's Necropolis. His equipment breaks in the fall and he inhales vapors from the Mithraeum. Has a vision of Mesmeria.
-- 2160 AD: The Editor (Ricardo van Rensselaer) begins to compile the Opus.
+- 2160 AD: The Editor (Ricardo Santos) begins to compile the Opus.
 
 .. topic:: Order of Discovery
 

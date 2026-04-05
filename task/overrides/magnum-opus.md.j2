@@ -1,0 +1,47 @@
+{% set root = "/home/grant/Projects/elara/source/fabula/magnum-opus/" %}
+{% set components = [
+    "index.rst",
+    "archives/index.rst",
+    "archives/oubliette-a/index.rst",
+    "archives/oubliette-a/000.rst",
+    "archives/oubliette-b/index.rst",
+    "archives/oubliette-b/000.rst",
+    "archives/oubliette-b/001.rst",
+    "archives/oubliette-b/002.rst",
+    "archives/oubliette-c/index.rst",
+    "archives/oubliette-c/000.rst",
+    "archives/oubliette-c/001.rst",
+    "archives/oubliette-c/002.rst",
+    "archives/oubliette-c/003.rst",
+    "archives/oubliette-c/004.rst",    
+    "archives/oubliette-c/005.rst",
+    "archives/oubliette-d/index.rst",
+    "archives/oubliette-d/000.rst",
+    "archives/oubliette-d/001.rst",
+    "archives/oubliette-d/002.rst",
+    "archives/oubliette-d/003.rst",
+    "archives/oubliette-d/004.rst",
+    "archives/oubliette-d/005.rst",
+    "archives/oubliette-e/index.rst",
+    "archives/oubliette-e/000.rst",
+    "archives/oubliette-e/001.rst",
+    "archives/oubliette-f/index.rst",
+    "archives/oubliette-f/discovery/index.rst",
+    "archives/oubliette-f/discovery/000.rst",
+    "archives/oubliette-f/discovery/001.rst",
+    "archives/oubliette-f/trial/index.rst",
+    "archives/oubliette-f/trial/000.rst",
+    "archives/oubliette-f/trial/001.rst",
+    "exegesis/index.rst",
+    "exegesis/000.rst",
+    "exegesis/001.rst",
+    "appendices/index.rst",
+    "appendices/000.rst",
+    "_etc/_notes.rst",
+    "_etc/_timeline.rst"
+] %}
+
+{% for component in components %}
+{{ file(root + component) }}
+
+{% endfor %}

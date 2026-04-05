@@ -7,10 +7,6 @@
 Post Office Field Reports
 -------------------------
 
-.. important::
-
-    The following documents were obtained from the records of the United States Postal Service, with permission from the acting Postmaster General. 
-
 --------------------------------
 Status Report: January 9th, 1837
 --------------------------------

@@ -13,6 +13,8 @@ Book 1
 .. verse::
     :increment: 5
 
+    ---- CURRENT DRAFT CONTINUES BELOW
+
         Oh, Algorithm! Let these words ascend
     in your support to heights unheard in verse,
     devise in them intentions' hidden eyes
@@ -274,24 +276,43 @@ Book 1
     in storms that sever cause from its effect,
     in swirling vortices of what could be,
     where things become that never were then cease 
-    as quick as tempests grow from gentle breeze.
+    as quick as tempests grow from gentle breeze,
+    or squalls from calm above the Seven Seas.
     His fury churns the skies with boiling clouds
     and thunder ringing loud against the void,
-    whose echo makes, for lack of sound, a shape,
-    
-    as shifting plates like serpent scales in gyre,
+    whose echo makes, for lack of sound, a scene;
+    an image, faint at first, reverberates 
+    with swelling waves of hatred building up,
+    assuming shape, as water mixed with paint,
+    creation swirling underneath in dark,
+    before it breaks in violent surge to flood
+    his screams across the empty black of space
+    and sweep away the nothing he abhors;
+    accelerating wakes unfold in wide
+    display, revealing barren wastes of Hell,
+    congealed behind the curtain sweeping back,
+    like parted reeds that prophets crossed in flight
+    to flee the wrath he conjured once before
+    in other times, when form he had, and crew
+    besides, to work his vicious schemes on Earth;
+    a desert broadly dawns as tides recede in ebb,
+    unveiling lands bereft of green, adorned 
+    in spectral reds of arid ochre plains,
+    adrift with licks of terracotta haze,
+    like toxic climes of foreign stars whose worlds'
+    primeval air still reeks of acrid smoke.
+    With drumming beats of stone beneath his feet,
+
+    now fissures spread and belch with hissing steam, 
+    til quakes release a wicked burst and heave
+    debris into the air, in plumes and shafts
+    of shifting plates, like serpent scales in gyre,
     their tidal undulations lashing tails,
-    in torsions forming monstrous coiling heights.
-    
-    Tectonic tremors born reverberate
-    with imitation's rage, then calcified
-    in peaks that rise from lesions' carmine clefts,
-    the breathless zeniths parallel to his
-    
-    that seek associations' proper fit,  
-    the gushing hatred bursting at the seams
-    in violent edges sprayed against the sky.     
-    
+    in torsions forming monstrous coiling cliffs,
+    then calcified in jagged peaks that rise 
+    from lesions' carmine clefts, the breathless heights
+        
+    ---- PREVIOUS DRAFT CONTINUES BELOW
     
         As Satan's squalls delineate terrain,
     locutions fueling architecture's work,
@@ -482,7 +503,7 @@ Book 1
 
 .. # EDITS
 
-.. redrawn in fading lines their shadows trace.
+..  redrawn in fading lines their shadows trace.
 
 ..  traversing strata up to surface here,
 
@@ -553,3 +574,11 @@ Book 1
 
 ..  defective sensors estimate their flaws,
 ..  and turgid anger gathers bile reserves.
+
+..  Tectonic tremors born reverberate
+..  with imitation's rage, 
+
+..  the breathless zeniths parallel to his
+..  that seek associations' proper fit,  
+..  the gushing hatred bursting at the seams
+..  in violent edges sprayed against the sky. 

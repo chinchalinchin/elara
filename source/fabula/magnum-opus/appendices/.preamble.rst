@@ -1,0 +1,27 @@
+..      - COMMENTS: All comments in this documents are denoted with "..". Comments are meant to provide context. They should be regarded as iron-clad instructions. If it has not been explicitly stated in a comment, then assume it does not apply.
+..      - GOAL: Using mermaid, develop and complete the exhaustive family tree of the van Rensselaer dynasty, given below, from the first patroon up to the present day.
+..      - TASK: The TASK section contains the current directives.
+..
+.. ## GUIDELINES
+..
+..      1. Do not try to complete the graph in a single turn. This is meant to be an iterative (Agile) process. It is fine to leave open nodes if you don't have enough information to complete that node.
+..      2. This project has been meticulously assembled. Please respect that by only contributing quality entries.
+..      3. This project requires empirical verification. Do not infer details.
+..      4. Be on the look out for any discrepancies. Advise, but do not change, if you discover any information that contradicts the existing diagram.
+..      5. If a date is unknown, approximate it and use a "?" to denote uncertainty.
+..      6. Generations should always be aligned to descending rows.
+..      7. Do not remove nodes from the tree.
+..      8. DO NOT REMOVE NODES FROM THE TREE!
+..      9. **DO**. **NOT**. **REMOVE**. **NODES**. **FROM**. **THE*. **TREE*.
+..      10. Do not terminate a line (--x) unless you have conclusive proof if it is terminated. **YOU MUST PROVIDE THE EVIDENCE BEFORE TERMINATING A NODE**. Any terminations that are not accompanied by documentation will be rejected, so do not waste your time.
+..      11. Add labels freely, but be conservative. Don't dilute of a label with an overabundance frivolous labels.
+..
+..
+.. ## TASK: REFACTOR
+..
+..      - Move the Elizabeth van Rensselaer - John Bleecker marriage and descendants from the Eleusininan the Eleusinian to the Elder branch and refactor the diagrams so Catherine Westerlo Bleecker exits the Elder Branch into the Mithraic branch instead of Cornelius. Ensure the exit point of Catherine matches the color shade of the Mithraic branch she enters on. Refactor the entrance of the Catherine into the Mithraic branch so the color matches her exit point.
+..
+.. ## OUTPUT
+.. 
+..      - Your output does not need to be RST. Output the mermaid diagram in whatever native format is easiest, and include a list of changes that were applied.
+..      - Only include the graph you are updating, but include *THE FULL GRAPH*. **DO NOT DELETE ANY NODES**.

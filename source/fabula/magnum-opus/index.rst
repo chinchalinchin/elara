@@ -14,25 +14,17 @@
 .. TASK: EDITORIALIZE
 .. 
 .. - Provide editorial notes on the following documents for the Author.
-.. - Estimate a word count across all documents (don't include the mermaid markup in the appendix)
+.. - Estimate a word count across all documents. Don't include the mermaid markup in the appendix or the RST markup. Only estimate raw copy. Exactness is not required. A rough estimate will suffice. Focus the majority of your attention on the previous item.
 ..
 .. ## IGNORE
 ..
 .. - Typos (unless they are severe)
 ..
-.. ## CONSTRAINTS
-..
-.. Read the entirety of the work contained in all sub-documents. 
-..
-.. ### MANDATORY
-..
-.. The following story files are mandatory. You must ingest them into the context. If a file is not included in this list, it is optional, likely due to being empty or in the initial stages of development. The following list is the chronological order of documents.
-.. 
-.. **Chronological Order**
+.. ## Chronological Order
 ..
 .. - exegesis/000: Sibylline Prophecy
 .. - archive/oubliette-b/000: The Lost Dialogue of Critias
-.. - exegesis/001: New Testament
+.. - exegesis/001: Gospel of Matthew
 .. - archive/oubliette-d/000: Journal of Captain Ryckert van Rensselaer
 .. - archive/oubliette-b/002: Mysterium Hyperboreum: Sive, De Spiritu Mundi in Materia Spitsbergensi Captivo
 .. - archive/oubliette-c/000: Illustrations of Masonry
@@ -51,19 +43,6 @@
 .. - archive/oubliette-a/index: Gruta do Carimbado, 2155
 .. - archive/oubliette-e/001: The Lament of the Leviathan
 ..
-.. ### OPTIONAL
-.. 
-.. - appendices/000: van Rensselaer Dynasty
-..
-.. ### META
-..
-.. The /_etc/ directory contains two important files:
-..
-.. 1. /_etc/_notes: An outline of the world's mythology, characters and themes.
-.. 2. /_etc/_timeline: An outline of the world' timeline.
-..
-.. These two files should be treated as the "ground truth." They cannot be altered. These files were written by the Author and are not part of the story context, except by way of metalogical considerations.
-..
 .. ------------------------------------------------------------------------------------------------------------------
 ..
 .. SOURCES
@@ -80,7 +59,6 @@
 ..
 .. TITLE: Magnum Opus
 .. TABLE OF CONTENTS:
-.. - _etc: The Author's Notes.
 .. - appendices/index: The Appendix.
 .. - archive/index: Archive of Oubliettes
 .. - exegesis/index: The Editor's Exegesis
