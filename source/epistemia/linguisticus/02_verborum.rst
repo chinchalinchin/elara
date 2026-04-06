@@ -419,6 +419,12 @@ Chiasmus includes the category of :ref:`antimetabole`.
 
     -- An Essay On Criticism, Alexander Pope
 
+.. epigraph::
+
+    | Þider ðe Stephanus forestop, mid Saules stanum oftorfod, þider folgode Paulus, gefultumod þurh Stephanes gebedu.
+
+    -- Ælfric Eynsham, Homily on the Passion of St. Stephen
+
 .. _epanalepsis:
 
 Epanalepsis

@@ -52,9 +52,9 @@ Something definitely ain't right, I'll say that much. Might not be what we're af
 
 I went for a surprise inspection and the place was filled with dandies. They was in the middle of talking about something and stopped soon as I came through. Kept looking at me like I was interrupting some secret meeting. Solomon introduced us. A bunch of newspaper men hanging out in the post office mailroom, just your typical Tuesday afternoon. Seemed like a big wig by the name of Weed was running things. 
 
-Not sure how much Solomons knows. I told him who I was, but he didn't seem to much care. He showed me around the whole operation without asking to see my card or nothing. Didn't know what I was getting myself into or I might have declined. He shuffles around with a cane so slow I didn't know we'd ever be done. Man's got six musket balls rattling around in his chest, way he tells it. Only reason I know is he told me so three different times. He prattled on the whole time. He sure is good at saying a lot without saying nothing. It's a family trait, I'd wager. 
+Not sure how much Solomons knows. I told him who I was, but he didn't seem to much care. Not the usual reaction I get to telling the postmaster who I am, I'll say that much. He was all polite and smiling. He showed me around the whole operation without asking to see my card or nothing. Didn't know what I was getting myself into or I might have declined. He shuffles around with a cane so slow I didn't know we'd ever be done. Man's got six musket balls rattling around in his chest, way he tells it. Only reason I know is he told me so three different times. He prattled on the whole time. He sure is good at saying a lot without saying nothing.
 
-The operation's nothing special. Usual fare. Twenty clerks, give or take, sorting and stacking letters. Nothing out of the ordinary, as far as I can tell.
+The operation's nothing special. Usual fare. Twenty clerks, give or take, sorting and stacking letters. Carriages leave in the morning, come back in the evening. Nothing out of the ordinary, as far as I can tell.
 
 I've been watching the place day and night for a week, but I don't see no evidence of any smuggling operation. The guy's crooked, that's for sure, but he's careful. This one might take a while.
 
@@ -110,9 +110,11 @@ Albany, NY
 
 Give this to Preston and don't let the squirelly fuck out of your sight til you're sure he's read it. Tell him I ain't coming back til I get my raise. I got the filthy fuckers. Well, I ain't *got-him* got him, but I found the thread to pull to get him.
 
-I went to check out that school I told you about. It's called the Renssalaer Institute, wouldn't you believe it. Never would have guessed. Anyway, there I am, getting the campus tour from this skirt, when who should pull up in their stagecoach? That's right, the United States Postal Service. They must've unloaded twenty crates right in front of me. I asked the boys what they were up to. Of course, they said they's delivering the mail. Yeah, but whose? It don't take no genius.
+I went to check out that school I told you about. It's called the Renssalaer Institute, wouldn't you believe it. Never would have guessed. Anyway, there I am, getting the campus tour from this skirt, when who should pull up in their stagecoach? That's right, the United States Postal Service. They must've unloaded twenty crates right in front of me. I asked the boys what they were up to. Of course, they said they's delivering the mail. Yeah, but whose? 
 
 Oh, but it don't end there, boys. Them crate's was going into a building called Winslow Chemical Laboratory. A real stuck-up air about the place, filled to the brim with fops and easy marks. So, I stroll on up to the desk, easy as you please, and ask the nice man on duty what's inside the boxes them boys are delivering. He tells me, "Cumberland Graphite". I don't rightly know what that is, but it ain't textbooks that's for damn sure. 
+
+.. IN PROGRESS
 
 .. list-table:: Weekly Expenses
   :widths: 15 15
@@ -137,9 +139,17 @@ Albany, NY
 
 **To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
 
-Lotta stuff going in, but nothing coming out. Stagecoaches seem to be making deliveries on a weekly basis. 
+Lotta stuff going into that high-falutin' Institute, but nothing coming out. Stagecoaches seem to be making deliveries on a weekly basis. I don't like nothing about this. Something is off, but I can't put my finger on what. 
 
-What's more, them newspaper boys show up at Solomon's office on the daily. That's just the ones I know. Plenty more top hats going in and out all the time I can't place. Starting think ol' Solomon's got his thumb in more than one pie. 
+That post office he's running, it don't seem like no post office I ever been to. None of 'em boys working inside look the part. Any one of 'em you choose is built like an ox, like you could hitch him to a plow and drive him the livelong day without him breaking a sweat. I ain't ever seen a clerk with two hundred pounds of muscle. What's more, them newspaper boys show up at Solomon's office on the daily. That's just the ones I know. Plenty more top hats going in and out all the time I can't place. Starting think ol' Solomon's more than just a postmaster. 
+
+I went in the other day and asked the clerk on duty to see their post bills, looking to find some receipts for all them mysterious crates going into the Institute. Of course, I didn't tell 'em that, but that's what I was on about. The lumbering oaf behind the desk looked at me like I asked him to off his old lady, didn't even try to answer, just sat there, all dumb like. So I ask again, getting angry. He starts spinning some tale about how he don't know nothing about no records, so I show him my card and tell him that's too bad since Section 32 of the Post Office Act says otherwise. Then he just glares at me for a solid thirty seconds, like he's sizing me up, then stands up out of nowhere and says he needs to talk to Solomon.
+
+I stood there what seemed like an hour. The big oaf comes back and says, all hat in hand of a sudden, that Solomon is on his way and he will know everything about the records. 
+
+So there I sat until noon, with the big oaf standing behind the desk the whole time and pretending to work, watching me out of the corner of his eye. Solomon limbs in about lunchtime, like I ain't been sitting there the better part of a day, gives me a whole pony show about being tied up with other matters and that he's real sorry, to come right this way. He tells me Isaac, the big oaf, is a bit slow and doesn't understand the finer points of federal law, being "provincial", which I took to be his way of calling the oaf "dumb" without saying so. Something he said, he values the boy's loyalty over his smarts. That's real interesting to me, a post master worrying about how loyal his clerks are. 
+
+He takes me down to the basement and shows me what I can only describe as an utter mess. They got records all right, but good luck finding 'em. Nearly twenty years of post bills, without any way of telling what's what. Just boxes and boxes of paper, no rhyme or reason. He asked me if I was looking for anything in particular, that he might be able to help, but I didn't want to tell him more than he already knew. Far as he needs to know, I'm just a bean counter.
 
 .. list-table:: Weekly Expenses
   :widths: 15 15
@@ -162,7 +172,51 @@ Albany, NY
 
 **To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
 
-Unless  I ain't no scientist, but something don't add up here. They got their third delivery, bringing the total up to sixty cases or thereabout. They ain't burning nothing far as I can tell. Unless they got tunnels in that building, they are accumulating quite a stock pile of that graphite stuff. Pretty soon it'll be pouring out the windows.
+I ain't no scientist, but something don't add up here. They got their third delivery, bringing the total up to sixty cases or thereabouts. They ain't burning nothing far as I can tell. Unless they got tunnels under that building, they are storing a hefty stock pile of that graphite stuff. Pretty soon it'll be pouring out the windows.
 
 .. IN PROGRESS
  
+----------------------------------
+Status Report: February 21th, 1837
+----------------------------------
+
+Albany, NY
+
+**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
+
+I seen something that don't make no sense. I ain't sure how to explain it, or if it even matters, but I'm short on leads and ain't got nothing else to report, and you always tell us to be thorough, so I'll try my best.
+
+It's easiest to start at the begining, to tell you how I even got myself into the position. I been watching the post office and this institute for weeks now. 
+
+.. IN PROGRESS: DeWitt Clinton Locomotive. Albany and Schenectady Railroad. Learns what graphite is from rail engineer.
+
+
+----------------------------------
+Status Report: February 28th, 1837
+----------------------------------
+
+Albany, NY
+
+**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
+
+.. IN PROGRESS
+
+------------------------------
+Status Report: March 7th, 1837
+------------------------------
+
+Albany, NY
+
+**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
+
+.. IN PROGRESS
+
+-------------------------------
+Status Report: March 14th, 1837
+-------------------------------
+
+Albany, NY
+
+**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
+
+.. IN PROGRESS

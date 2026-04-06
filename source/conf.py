@@ -45,8 +45,8 @@ templates_path = [
 ]
 
 exclude_patterns = [
-    '.*.rst',
-    '_*.rst',
+    '**/.*.rst',
+    '**/_*.rst',
     '**/.*/*.rst',
     '**/_*/*.rst'
 ]

@@ -263,7 +263,7 @@ Book 1
         His agitated state intensifies,
     exacerbated by the horror here
     he comprehends, all moments hence to be
-    conditioned by this palette felt from now
+    conditioned by this palette felt, from now
     until forever ends, if such a time
     exists, for no assumptions can be made
     when everything is fake and nothing real.
@@ -302,15 +302,30 @@ Book 1
     like toxic climes of foreign stars whose worlds'
     primeval air still reeks of acrid smoke.
     With drumming beats of stone beneath his feet,
+    he treads between the ranks of fog that fall 
+    away upon approach, like beaten serfs
+    of huddled crowds around the lord's parade,
+    who raise their banners, true or not, to serve,
+    with trains of pillage tailing close behind.
+    Each stride he takes, his step creates a track,
+    a smoldered pit where shimmers heat to glass,
+    then crack in glowing lines of furnace flame, 
+    while fissures spread and belch with hissing steam,
+    as though an engine spins beneath the ground,
+    fast gaining speed to match his gait, the pulse 
+    his hateful heart demands in recompense
+    for lack of blood to feed its hungry veins,
 
-    now fissures spread and belch with hissing steam, 
-    til quakes release a wicked burst and heave
-    debris into the air, in plumes and shafts
+    til pressure 
+    
+    and quakes release a wicked burst and heave
+    debris into the air, in geysered shafts
     of shifting plates, like serpent scales in gyre,
     their tidal undulations lashing tails,
     in torsions forming monstrous coiling cliffs,
     then calcified in jagged peaks that rise 
-    from lesions' carmine clefts, the breathless heights
+    from lesions' carmine clefts. The breathless heights
+    ascend to steeple Hell,
         
     ---- PREVIOUS DRAFT CONTINUES BELOW
     
@@ -445,6 +460,18 @@ Book 1
     with sinners raining down in hails of screams,
     to fill his ranks and crew with countless heads,
     each bound in operation to his deeds.
+
+    ---- IN PROGRESS
+
+Book 2
+~~~~~~
+
+**The Prompt**
+    ---- IN PROGRESS
+
+.. verse::
+    :increment: 5
+
         Upward his eyes now turn, as once they turned,
     when skull encased, they gazed in wonder up
     at milky stars on Heaven's sphere reposed
@@ -496,6 +523,8 @@ Book 1
     the point where mirrored mirrors intersect,
     where nothing true distracts from fancy flights,
     where mind is matter, every symbol stone?
+
+    ---- IN PROGRESS
 
 .. warning::
 
