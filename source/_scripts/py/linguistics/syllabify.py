@@ -29,13 +29,18 @@ def add_syllable_dots(ipa_text):
     # 3. VCCCV -> VC.CCV (e.g., e.lec.tric -> k.tr)
     res = re.sub(f'(?<=[{vowels}])([^.ˈˌ{vowels}])([^.ˈˌ{vowels}])([^.ˈˌ{vowels}])(?=[{vowels}])', r'\1.\2\3', res)
 
-    # 4. VCCV -> VC.CV 
+    # 4. Complex Onsets (V.CCV)
+    # Catch indivisible consonant clusters FIRST and place the dot before them.
+    complex_onsets = r'(kw|tw|dw|gw|tr|dr|pr|br|kr|gr|fr|θr|ʃr|pl|bl|kl|gl|fl|sl|st|sp|sk|sm|sn)'
+    res = re.sub(f'(?<=[{vowels}])({complex_onsets})(?=[{vowels}])', r'.\1', res)
+
+    # 5. Standard VCCV -> VC.CV 
     res = re.sub(f'(?<=[{vowels}])([^.ˈˌ{vowels}])([^.ˈˌ{vowels}])(?=[{vowels}])', r'\1.\2', res)
     
-    # 5. VCV -> V.CV 
+    # 6. Standard VCV -> V.CV 
     res = re.sub(f'(?<=[{vowels}])([^.ˈˌ{vowels}])(?=[{vowels}])', r'.\1', res)
     
-    # 6. VV -> V.V (Vowel hiatus, e.g., me.di.um -> i.ə)
+    # 7. VV -> V.V (Vowel hiatus, e.g., me.di.um -> i.ə)
     # Insert a dot between ANY two adjacent vowels...
     res = re.sub(f'(?<=[{vowels}])(?=[{vowels}])', '.', res)
     
@@ -45,7 +50,7 @@ def add_syllable_dots(ipa_text):
     for d in diphthongs:
         res = res.replace(d, d.replace('.', ''))
     
-    # 7. Clean up any accidental double dots or leading/trailing dots
+    # 8. Clean up any accidental double dots or leading/trailing dots
     res = re.sub(r'\.+', '.', res).strip('.')
     
     return res
