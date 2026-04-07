@@ -59,7 +59,7 @@ Kolmogorov
 
         \cap_{i=1}^n A_i = \varnothing
 
-    Then the limit as of the probability of this sequence is zero,
+    Then the limit of the probability as the number of events goes to infinity is zero,
 
     .. math::
 

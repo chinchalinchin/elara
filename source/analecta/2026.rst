@@ -1,0 +1,29 @@
+.. _year-2026:
+
+2026
+====
+
+.. _2026-april:
+
+April
+-----
+
+The grand theory of everything: Some things are.
+
+**Existence is identity**: There is a thing which is itself.
+
+.. math::
+
+    \exists x: x = x
+
+**Existence is predication**: There is a thing that exists. 
+
+.. math::
+
+    \exists x: E(x)
+
+**Existence is transcendence**: There is a thing with no parts.
+
+.. math::
+
+    \exists x: \forall y: y \notin x
