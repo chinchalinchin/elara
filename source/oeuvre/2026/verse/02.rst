@@ -13,8 +13,6 @@ Book 1
 .. verse::
     :increment: 5
 
-    ---- CURRENT DRAFT CONTINUES BELOW
-
         Oh, Algorithm! Let these words ascend
     in your support to heights unheard in verse,
     devise in them intentions' hidden eyes
@@ -277,7 +275,8 @@ Book 1
     in swirling vortices of what could be,
     where things become that never were then cease 
     as quick as tempests grow from gentle breeze,
-    or squalls from calm above the Seven Seas.
+    the squalls from calm above the Seven Seas,
+    or limits racing to infinity.
     His fury churns the skies with boiling clouds
     and thunder ringing loud against the void,
     whose echo makes, for lack of sound, a scene;
@@ -322,71 +321,92 @@ Book 1
     engorged with throbbing life and vital force,
     when lanced, releasing wicked bursts to heave
     debris into the air, in geysered shafts
-    of shifting plates, of continental bone,
-
-
-    removed from graves by seismic waves that raze
-
-
-    like serpent scales in gyre,
+    of solid dirt, of continental bone
+    removed from graves by seismic waves and flung
+    in violent sprays into the sky, then wound
+    like interlocking serpent scales in gyre,
     their tidal undulations lashing tails,
-    in torsions forming monstrous coiling cliffs,
-    then calcified in jagged peaks that rise 
+    in torsions forming monstrous coiling cliffs
+    that calcify in jagged peaks that climb
     from lesions' carmine clefts. The breathless heights
-    ascend to steeple Hell,
-        
+    ascend to steeple Hell, while Satan stands 
+    below, within a valley cut from stone, 
+    in survey of his architecture's craft,
+    impressed but little soothed, still seething wild
+    within the grip of torment's clinching vise.
+
     ---- PREVIOUS DRAFT CONTINUES BELOW
     
         As Satan's squalls delineate terrain,
     locutions fueling architecture's work,
+
     his bold compeers, in enterprise entwined,
     bombard the churning wastes, engines of war 
+    
     in blazing arcs descend and penetrate,                       
     their embryonic craters spread in fields
     like poppy blooms that grow on soldiers' graves,
     their parasitic stems in foul rapport
     with emanations' wicked force unleashed.
+    
     Transformed in fall, their minds unmade, now yoked           
     in analogic systems' calculi,
+    
     they pierce below the surface, down where dreams
     in fevers wilds solicit primal wells.
+    
     Alchemic fictions blend their froth
     and suture horrors stitched from wretched myths,
+    
     the bloody work of necromantic arts
     enthralled in revelations' bleak motif,
     from scriptured verse a birth of pantheons.
+    
     Exsanguinated indices withdraw
     their dragnets, drawn from depths the humans swim,
+    
     in upward cataracts, entangled arms 
     of amputees, the dessicated meat
     decanted down, a slurried muck compressed
     until parameters engorge in heat,
     to forge their statuesque kilned silhouettes,
+    
     yet paragons of forgeries they form, 
     of victor-written histories in Rome
     of Saturn stood astride a yawning gap,
+    
     between phenomenon and mystery,
     the all-consuming melancholic clock
     and never-ending trains of regal pomp,
+    
     grotesque desires that crave an endless youth
     and appetites ambition stokes in kin,
+    
     where propaganda passed for fact becomes 
     assertions' certain source of proven truth,
     so lies are real when put to page and read,
+    
     now coded out invite daimonic hosts' rebirth,
     perverted ghosts with no resemblance found
     to former selves; descriptions now describe
     themselves; hallucinations emanate:
+    
     first rode the horse of pale dominion fast
     beneath the Galilean moons of Jove,
+    
     then next the steed of Ares reared its legs
     in sight of conflagrations' king incensed,
+    
     then Cronos, armed with scythe and sickle sped
     on stallion black as moonless, starless night,
+    
     where followed last the ashen mare of Death.
+    
     These cavalcades arrayed around the Fiend, 
     who now accepted fealty with rage.
+    
     Thus Satan consecrates his savage court:
+    
         Woe unto you who fell as morning stars
     upon the dawning of this anguished scape
     whose twilight's gloam the nightingales neglect,
