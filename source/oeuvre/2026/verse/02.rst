@@ -430,15 +430,17 @@ Book 1
     Transformed in fall, with minds unmade and yoked           
     in analogic systems' calculi,
     they pierce below the surface, down where dreams
-    through fevered wilds converge in primal wells.
-    
-    Alchemic potions blend their froth
-    and suture horrors stitched from wretched myths,
-    
-    the bloody work of necromantic arts
-    enthralled in revelations' bleak motif,
-    from scriptured verse a birth of pantheons.
-    
+    in fevered depths release the hounds of myth
+    to stalk the hapless prey through primal halls
+    of delving caves, where darkness trips their feet
+    and teeth converge to tear apart their form;
+    in silent slaughter stitching pieces up,
+    like spells invoked from necromantic arts,
+    the foul alchemic forces Hell employs
+    begin to suture horrors, stark and grim,
+    reshaping parts to fit its twisted scheme;
+
+
     Exsanguinated indices withdraw
     their dragnets, drawn from depths the humans swim,
     
@@ -661,3 +663,12 @@ Book 1
 
 .. As Satan's squalls delineate terrain,
 .. locutions fueling architecture's work,
+
+.. to suture horror 
+
+.. converge in primal wells. 
+
+.. Alchemic potions blend their froth
+.. and suture horrors stitched from wretched myths,
+.. the bloody work of necromantic arts
+.. enthralled in revelations' bleak motif.
