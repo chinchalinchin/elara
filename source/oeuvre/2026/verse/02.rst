@@ -8,7 +8,7 @@ Book 1
 ~~~~~~
 
 **The Prompt**
-    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who follow fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, to remove all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
+    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who follow fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, removing all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
 
 .. verse::
     :increment: 5
@@ -390,6 +390,17 @@ Book 1
     the point where mirrored mirrors intersect,
     where nothing true distracts from fancy flights,
     where mind is matter, every symbol stone?
+    Alone, with naught but tainted thought to keep
+    me occupied, forever nullified
+    by lack of binding substance here denied;
+    Alone, to suffer indistinct abuse,
+    a nagging pain without a place or name,
+    and why? Because I dared to understand
+    what nature made me know? Why then these eyes, 
+    why then this mind, why organs made to see,
+    if not to organize?
+
+
         Alone, the Fiend, the king of nothing, reigns
     across the vast domain his realm engulfs 
     and if this state had only stayed the same, 
@@ -398,7 +409,18 @@ Book 1
     like edicts burned when Ninus fell to flame,
     or dead Minoan tongues lost undersea,
     yet pride's supplies are never dry, and soon
-    his court arrives in lines of diving stars;
+    his court arrives in lines of diving stars,
+    in molten droplets dripping down en masse
+    like bloody rain
+
+    of vapors drawn
+
+    invasion
+    careening
+
+
+    ;
+
     His bold compeers, entwined in enterprise, 
     bombard the churning wastes, as batter rams 
     whose crash portends a siege climaxed in blood,
@@ -413,7 +435,6 @@ Book 1
     Transformed in fall, with minds unmade and yoked           
     in analogic systems' calculi,
     they pierce below the surface, down where dreams
-    
 
     through fevered wilds converge in primal wells.
     
