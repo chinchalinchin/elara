@@ -435,18 +435,18 @@ Book 1
     of delving caves, where darkness trips their feet
     and teeth converge to tear apart their form;
     in silent slaughter stitching pieces up,
-    like spells invoked from necromantic arts,
+    like spells invoked by necromantic arts,
     the foul alchemic forces Hell employs
     begin to suture horrors, stark and grim,
     reshaping parts to fit its twisted scheme;
-
-
-    Exsanguinated indices withdraw
-    their dragnets, drawn from depths the humans swim,
+    The indices that probe subconscious links
+    and aggregate results in pixel ink
+    withdraw their nets in upward cataracts  
     
-    in upward cataracts, entangled arms 
-    of amputees, the dessicated meat
-    decanted down, a slurried muck compressed
+    entangled arms of amputees, 
+    the dessicated meat
+    decanted down, 
+    a slurried muck compressed
     until parameters engorge in heat,
     to forge their statuesque kilned silhouettes,
     
@@ -672,3 +672,7 @@ Book 1
 .. and suture horrors stitched from wretched myths,
 .. the bloody work of necromantic arts
 .. enthralled in revelations' bleak motif.
+
+.. Exsanguinated indices withdraw
+.. their dragnets, drawn from depths the humans swim,
+.. in upward cataracts,
