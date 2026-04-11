@@ -95,7 +95,6 @@ Ancient Hebrew
 
   Ancient Hebrew does not possess a temporal tense modality.
 
-
 1. *יֵשׁ (yēš)*: The affirmative existential particle, e.g. "*there is* ...", "*there are* ...", etc.
 2. *אַיִן (’ayin)*: The negative existential particle, e.g. "*there is not* ...", "*there are not* ...", etc.
 
