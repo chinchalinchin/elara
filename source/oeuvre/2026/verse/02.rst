@@ -463,10 +463,17 @@ Book 1
     perverted ghosts with no resemblance found
     to former selves, descriptions that describe
     themselves, uncanny gaps still left between 
-    phenomenon and boundless mystery
-    like Saturn stood astride a yawning rift
-    from all-consuming melancholic time
-    to never-ending reigns of royal state,
+    phenomenon and boundless mystery.
+        Entombed beneath the ground, their crypts secure
+    and bound with seals of stone across their doors,
+    there Satan finds his comrades locked in sleep, 
+    in blissful, silent sleep, not yet awake,
+    naively dreaming paradise is won,
+    reclined on pillowed leaves of tropic trees 
+    as sun descends and warms their hearts with joy,
+    perhaps to stay within those figments dreamt,
+    except the Fiend cannot abide his fall
+    alone
 
     first rode the horse of pale dominion fast
     beneath the Galilean moons of Jove,
@@ -704,3 +711,7 @@ Book 1
 .. perverted ghosts with no resemblance found
 .. to former selves; descriptions now describe
 .. themselves; hallucinations emanate:
+
+.. like Saturn stood astride a yawning rift
+.. from all-consuming melancholic time
+.. to never-ending reigns of royal state,
