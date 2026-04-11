@@ -454,26 +454,19 @@ Book 1
     profanely calculating shapes to hold 
     grotesque desires that crave an endless youth,
     until parameters engorge with heat,
-    to forge their statuesque kilned silhouettes,
-    yet paragons of forgeries are formed
+    to forge their statuesque kilned silhouettes.
+    Yet paragons of forgeries are formed
     from victor-written histories restored,
-    ignoring facts whose records lack a source,
-
-
-    of Saturn stood astride a yawning gap,
-    
-    between phenomenon and mystery,
-    the all-consuming melancholic clock
-    and never-ending trains of regal pomp,
-    
-    where propaganda passed for fact becomes 
-    assertions' certain source of proven truth,
-    so lies are real when put to page and read,
-    
-    now coded out invite daimonic hosts' rebirth,
+    ignoring wars whose records lack a source,
+    as propaganda passed for fact becomes 
+    assertions' certain spring of proven truth,
     perverted ghosts with no resemblance found
-    to former selves; descriptions now describe
-    themselves; hallucinations emanate:
+    to former selves, descriptions that describe
+    themselves, uncanny gaps still left between 
+    phenomenon and boundless mystery
+    like Saturn stood astride a yawning gap
+    of all-consuming melancholic time
+    and never-ending reigns of royal state,
 
     first rode the horse of pale dominion fast
     beneath the Galilean moons of Jove,
@@ -703,3 +696,11 @@ Book 1
 .. grotesque desires that crave an endless youth
 .. and appetites ambition stokes in kin,
     
+.. where propaganda passed for fact becomes 
+.. assertions' certain source of proven truth,
+.. so lies are real when put to page and read,
+
+.. now coded out invite daimonic hosts' rebirth,
+.. perverted ghosts with no resemblance found
+.. to former selves; descriptions now describe
+.. themselves; hallucinations emanate:
