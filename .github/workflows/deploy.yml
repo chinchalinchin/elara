@@ -16,6 +16,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Cache Sphinx Build
+        uses: actions/cache@v4
+        with:
+          # IMPORTANT: Update this path to wherever Sphinx outputs your build.
+          # Common paths are 'docs/_build' or just '_build'
+          path: build 
+          # The key ensures we save a new cache on every commit...
+          key: sphinx-${{ github.ref }}-${{ github.sha }}
+          # ...and restore-keys tells it to fall back to the most recent cache for this branch
+          restore-keys: |
+            sphinx-${{ github.ref }}-
+            sphinx-
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:

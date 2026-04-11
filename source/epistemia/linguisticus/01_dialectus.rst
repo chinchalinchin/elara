@@ -1,14 +1,31 @@
 Dialectus
 =========
 
-Phonetic representations of English accents.
+English
+-------
 
-Philadelphia
-------------
+-----------
+Anglo-Saxon
+-----------
+
+.. csv-table:: Futhorc Pronounciation
+  :header-rows: 1
+  :file: ../../_static/csv/linguistic/pronunciations/futhorc.csv
+
+-----------
+Old English
+-----------
+
+.. csv-table:: Old English Pronounciation
+  :header-rows: 1
+  :file: ../../_static/csv/linguistic/pronunciations/anglo-saxon-runes.csv 
 
 -------------
+Philadelphian
+-------------
+
 General Rules
--------------
+~~~~~~~~~~~~~
 
 If ever in doubt as to the transliteration of a Philadelphian term into English, the following rules should be applied to arrive at an approximation.
 
@@ -62,9 +79,8 @@ If ever in doubt as to the transliteration of a Philadelphian term into English,
 - **Explanation**: Instead of the tongue-tip touching the roof of the mouth, the back of the tongue is raised.
 - **Examples**: school → skew-oh, pool → pew-oh, towel → ta-oh.
 
-----------
 Dictionary
-----------
+~~~~~~~~~~
 
 .. list-table:: Philadelphia Accent  
   :widths: 15 15
