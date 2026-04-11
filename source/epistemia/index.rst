@@ -9,6 +9,7 @@ Epistemia
    :caption: Contents:
 
    empiricus/index
+   historia/index
    linguisticus/index
    metaphysicus/index
    universalis/index

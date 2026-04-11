@@ -584,7 +584,24 @@ Semantics
 Sinn
 ----
 
-TODO
+.. list-table:: Sinn (noun), German
+  :header-rows: 1
+
+  * - Case
+    - Singular
+    - Plural
+  * - Nominative
+    - Sinn
+    - Sinne
+  * - Genitive
+    - Sinnes / Sinns
+    - Sinne
+  * - Dative
+    - Sinn / Sinne
+    - Sinnen
+  * - Accusative
+    - Sinn
+    - Sinne
 
 .. _synthesis:
 
@@ -613,7 +630,24 @@ Truth
 Vorhandenheit
 -------------
 
-TODO
+.. list-table:: Vorhandenheit (noun), German
+  :header-rows: 1
+
+  * - Case
+    - Singular
+    - Plural
+  * - Nominative
+    - Vorhandenheit
+    - Vorhandenheiten
+  * - Genitive
+    - Vorhandenheit
+    - Vorhandenheiten
+  * - Dative
+    - Vorhandenheit
+    - Vorhandenheiten
+  * - Accusative
+    - Vorhandenheit
+    - Vorhandenheiten
 
 .. _world:
 
@@ -629,4 +663,21 @@ TODO
 Zuhandenheit
 ------------
 
-TODO
+.. list-table:: Zuhandenheit (noun), German
+  :header-rows: 1
+
+  * - Case
+    - Singular
+    - Plural
+  * - Nominative
+    - Zuhandenheit
+    - Zuhandenheiten
+  * - Genitive
+    - Zuhandenheit
+    - Zuhandenheiten
+  * - Dative
+    - Zuhandenheit
+    - Zuhandenheiten
+  * - Accusative
+    - Zuhandenheit
+    - Zuhandenheiten
