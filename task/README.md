@@ -1,4 +1,4 @@
-# Context Generator
+# Elara: Context Generator
 
 The Context Generator is a tool designed to scrape environment data and project state into a consolidated Markdown file. It utilizes Jinja2 templates to combine shell command outputs, file contents, and structured YAML data into a final document.
 

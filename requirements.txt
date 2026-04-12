@@ -10,6 +10,9 @@ sphinxcontrib-mermaid
 # Pedagogy Dependencies
 matplotlib-venn
 
+# Parsing Dependencies
+PyYAML
+
 # Research Dependencies
 matplotlib
 numpy
