@@ -44,6 +44,7 @@ views:
           files:
             requirements.txt: text
             Dockerfile: docker
+            source/conf.py: python
         elara_linguistics:
           title: "Linguistic Script"
           files:
@@ -51,8 +52,6 @@ views:
             source/_scripts/py/linguistics/rhyme.py: python
             source/_scripts/py/linguistics/syllabify.py: python
             source/_scripts/py/linguistics/synonyms.py: python
-
-
         # ------------------ TERRAFORM
         # ----------------------------
         tf_platform:

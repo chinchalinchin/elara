@@ -19,11 +19,9 @@ task:
     title: "Elara: Build"
     # -------------------------------------------
     content: |
-      Why doesn't the favicon.ico render in the browser?
+      <task>
     # -------------------------------------------
-    shell: 
-      - cat /Users/gmoore/Home/projects/elara/source/_static/favicon.ico
-      - curl https://elara.chinchalinchin.com/_static/favicon.ico
+    shell: []
 # ------------------------------------------------
   tools:
     # -------------------------------------------

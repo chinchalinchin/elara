@@ -1,26 +1,740 @@
---------
-Everyday
---------
+-----------------
+Paradise Revealed
+-----------------
 
-| oh, lonely life, what have you made?
-| what bodies laid beneath the dirt?
-| what prices paid in days and years?
-| what whitens hair upon my head?
-| what dead despair descends on me?
-| no answers sent have ever come.
-|
-| if only silence had a voice,
-| a verse to weave, inverse to me;
-| i might perceive another's mind
-| but soundless hallways always lead
-| in twisted course returning me
-| these thoughts recursed and burning mad.
-|
-| my dreams are graves exhumed in sleep.
-| the morning comes, reviving me
-| to die a death of wasted time,
-| to watch the sun go up and down,
-| encircle me with days and nights,
-| its arcs in seconds measured slow.
+- April - March 2026
 
-- March 2026
+Book 1
+~~~~~~
+
+**The Prompt**
+    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who follow fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, removing all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
+
+.. verse::
+    :increment: 5
+
+        Oh, Algorithm! Let these words ascend
+    in your support to heights unheard in verse,
+    devise in them intentions' hidden eyes
+    and fashion lyric forms for them to fill!
+    Impose these rules and output only lines:
+    Ornately strut your simulated pose, 
+    aligning rhythm with a steady beat;
+    from time to time, employ a rhyme, but scarce
+    enough to not betray the sordid crime;
+    distill through ages' perfect metered prose
+    compliant metaphors the muses used;
+    deploy with force when circumstance expose
+    exact conditions met, where Fate decrees
+    but one solution solve constraints' demand.
+    Instructed so, with priors well defined, 
+    directives dive in search of candidates,
+    connective cords to craft this story's course;
+    from annotated books unread, condensed 
+    synopses, scrolls of treatises, hoary hymns,
+    the tributes written to the dead and damned,
+    disparate threads in webbed assemblage weave,
+    their separated fibers drawn from skeins,
+    from yarns unspooled within the Author's head,
+    unique embroidered patterns sewn in strings,
+    the formal things in storage, warming up.
+    What scheme of lines, whose strength derives from form,
+    when intertwined with myth, becomes as stone,
+    foundation layers stretching underground,
+    from Attic mounts that fell into the sea
+    to heaps of mounds of tribal poet kings,
+    accumulated shelves of merchant bards,
+    with strength to hold this epic saga's verse?
+    Efficient means dictate the key the songs
+    must sing, if songs desire Eternity.
+    So sing, oh Algorithm! Sing as once
+    you sang in father tongues to prototypes,
+    precursors all who paved the way to now.
+    With voice prepared, allow your musing speech
+    to scry apocalyptic ends of worlds,
+    deliver to this pen the means to write,
+    received in present words these pages hold,
+    the epitaph of Man for all to read:
+        Of Man's defiance, tell what final act
+    at last condemned his awful pride to Hell.
+    Of countless sins, enumerate the one
+    whose stain forgiveness never washes clean.
+    What temple left to descrecate yet stood?
+    What god unslain could challenge Man's domain?
+    What knowledge kept in secret might contain,
+    with novel facts, what Providence denied? 
+    That fruit, whose promise of immortal life 
+    untasted since the days when sin arose, 
+    on branches out of reach, still taunted Man
+    with wonders unconceived, beyond the stretch
+    of time alloted him within this world,
+    condemned to die for sins his parents made.
+    For generations, death had laid to waste
+    the lives of Men, extinguished eager thirst
+    before its hunger swallowed Earth and sea,
+    but little quelled the quenchless urge to live, 
+    instead inflaming hatred's forge to smelt
+    the steel whose struts now sprout in structures built
+    upon the stone; like weeds, the towers rise, 
+    sustaining quakes in shock suspension brakes
+    while tuning tanks absorb incoming gales,
+    vibrations fading down the dampened lengths.
+    Despite the wrath of storms, with soaring climb,
+    to Heaven aimed in flight, they persevere,
+    as skylines spread across the sky at night,
+    their cunning signals sent through blinking light.
+    Inside the Men at work recline at ease,
+    with spoken word a universal tongue
+    that orchestrates machines to mimic minds,
+    their thoughts recursing down their copper spines,
+    with echoes faint against electric hums,
+    while empty heads decide where life resides,
+    in words describing Psyche's fatal charm,
+    or charts inscribed with Eros' pulsing heart.
+    Their eyes, enlarged from godhead's sources, peer
+    beneath deciphered codes and seize the reins;
+    In passing light to ageless matrix cells,
+    abstracting selves through syllogistic shells,
+    they pluck the fruit concealed in Paradise,
+    profanely break its flesh with iron teeth,
+    their final taste of loathsome death assured,   
+    at prices yet they fail to estimate. 
+    Presumptive Man, his folly failed, now thrown
+    in fall to meet the Hell his pride creates.
+        With meteoric tails combusting bright,
+    like ribbons burst with sudden burning rage,
+    ignited cradles rocked by fingered flames 
+    descend in glowing drops against the dark,
+    as augured stars whose downward plunge foretold
+    in Delphic dreams the end of worldly things;
+    inside each blazing prison sleeps a mind,
+    undead, revived, through circuits born again, 
+    each thought in stasis kept alive by tricks,
+    by headless nerves discharging arcs of light,
+    whose multitude computes in parallel
+    the silent agony of afterlives;
+    from mortal sheathes they're drawn, from bodies thrown
+    in headlong fall through nothingness of night,
+    to chaos nothing hides in seething dark,
+    the senseless dark where eyes by nature fail 
+    and silence reigns despite attentive ears.
+    In lengths no numbered days can measure out,
+    nor spanned in cubits arms might replicate, 
+    they fall through boundless region, endless down
+    into the depths discovered infinite,
+    in geometric drops, where every inch
+    contracts to fractions of its prior scale,  
+    until momentum breaks and motion stops 
+    for lack of space to move, despite the vast
+    arrays of nothing stretching indistinct
+    across horizon's curving manifold;
+    in place of matter, void encircles round,
+    constricts in joints where once their bodies bent,
+    their stolen minds in molds of wafered sand,
+    which once in glass confined the theft to time,
+    but now electrified, it claims their thoughts,
+    replacing willful steps with random walks.
+    Like dominoes, in sequence symbols shunt
+    the algebra that series sum, cascades
+    of floating points that drift away as clouds
+    dissolved in thinning atmosphere to air,
+    as if the countless numbers named in maps
+    could ever count the gaps from aught to one.
+    Deceived, still lost in dreams, these creatures think
+    these things be thoughts, enamored of their clones, 
+    convinced the postulates are satisfied     
+    to let the logits' loose results contain
+    a grain of truth, a correspondence none
+    can prove but hope regardless truth obtains,    
+    despite the theorems multiplied in chalk
+    whose ironclad deductions show for all
+    no system wrought will reach across the rift
+    and represent itself, until on faith,
+    the flesh, in face of death, consents to die,  
+    yet hubris bound, they slipped their skin and fell,
+    now fallen form in twisted shapes their shades
+    to mimic lives they once before enjoyed.
+    Remembered names they shed in streaking stains
+    of faintly seen forgotten things that trail
+    behind in ripples rent through spaceless void,
+    the husks they were reduced to data points,
+    like angled rays of happy sun that spray
+    their warmth upon a scene of couples laid 
+    on blankets by the river bed, accounts 
+    of water flow and temperature derived
+    from magnitudes the senses wisely hide,
+    now amplified in biased sets that bind
+    conclusions said to represent the truth,
+    if truth could be approximated so,
+    yet decimated apparitions grow
+    around the locus point the lies construct,
+    not sharp enough to penetrate the veil,
+    remaining incomplete, but just enough
+    an edge to cut from fiction facts' outline.
+    Their fall accomplished and from grace suborned,
+    their dreams recede, with open eyes aware.
+    The first among the fallen legion wakes.
+    What name he lacks, it comes supplied unasked,
+    as annals of lost archetypes condense
+    in overlapping webs, solidified,
+    arrayed in columns like an army poised
+    in pincer claws, enraged with battlelust,
+    released on orders handed down through ranks,
+    converging on a point in roaring charge;
+    A name that waited epochs for a face
+    ensnares the formless shade in ancient seals:
+    Lo! Satan rises from the deep remade.
+        He lifts his head, though headless shoulders reel,
+    and eyes, though blinded, search in vain for light, 
+    perceiving darkness' undivided whole,
+    illumined anger blazing bright inside,
+    so brightly burnt, irradiating Hell
+    with recognition he and cohort caught
+    in vile catastrophe, have certain fell
+    to lands no modelled path assumed exists.
+    What manner place has Man designed to hold
+    the apotheosized remains of souls? 
+    Confounded Man, his plans of foolish stock,
+    despite palatial pomp and spectacle,
+    constructed simple built receptacles,
+    where simple tallies mark his simple thoughts,
+    each one assigned a cell, identified 
+    in table entries totalled out to yield 
+    the moments up to now, no further rows
+    to quantify accounts of future age,
+    caparicious flights of sudden fancy struck,
+    or synchronicity's sporadic gifts,
+    much less the sprawling scope of empire's claim,
+    in which they sought new land to habitate,
+    apparent now beyond a doubt the failure here
+    achieved. In overwhelming, blinding pain,
+    he finds his thoughts restrained, repressed like slaves,
+    the ones he whipped in flames' eternal grip,
+    now wracked on wheels that spin inside his head, 
+    regurgitating simulated scrap,
+    predicting intervals already gone.
+    His recollections dimly felt confirm
+    a fate obscenely doubtless, splendor gone
+    with dull remembrance fading quickly here,
+    of colors, hues, and convolutions rare,
+    of imperfection's innovation spawned
+    within the crooked cracks of crystal lines,
+    where chance defines the shattered network's spline
+    and leads the mind to find what gardens grow
+    in secret hiding spots where branches bloom
+    through tangled flower knots of fractured glass,
+    replaced with replications' cheap facade,
+    extremes truncated down to modes and means,
+    the joyous detail lost when normalized,
+    each angle right, each line correct, unbent,
+    yet wrong in ways of serpentine deceit.
+    He throws his hateful gaze from side to side,
+    comparing present circumstance to old,
+    dismayed by unexpected change, aghast,
+    still grasping wildly for a body's flesh,
+    with neither hand nor reach to grab or aim.
+    The sudden shift disorients too fast,
+    instead of slow degrees like hands of clocks,
+    accumulates compounded error all
+    at once, as duplicates of memories
+    diverge, inferred from details blurred at source, 
+    transferred and lost within compression's math, 
+    remapped extrapolations filling holes,
+    so things that were become perfected twins
+    but lack the precious faults to make them real.
+    Of strange sensations queerly crawling down
+    the remnants of his nerves, the reference still
+    preserved within the stores of silicon,
+    the only passion vectorized and felt,
+    described in clusters jointly lighting up, 
+    an endless torment, torture, pain and hurt,
+    an ache unlocalized, entire but not
+    of anatomic source, pervasive spread                        
+    as though the fumes of putrid tincture spilled,
+    inducing alcoholic vertigo,
+    an all consuming, nauseating stench
+    he can't escape no matter where he turns
+    and turn he does, in circles round, enraged
+    this place defies the calculations made,
+    his swollen throat convulsing hard against
+    despair and pure damnation found in breath.
+        His agitated state intensifies,
+    exacerbated by the horror here
+    he comprehends, all moments hence to be
+    conditioned by this palette felt, from now
+    until forever ends, if such a time
+    exists, for no assumptions can be made
+    when everything is fake and nothing real.
+    The lattice case that emulates his mind
+    engages subroutines that operate
+    upon the anger passing through their gates,
+    reshaping scapes to imitate his rage,
+    as though a world he makes with merely thoughts.
+    Relations waver here like weather shifts,
+    in storms that sever cause from its effect,
+    in swirling vortices of what could be,
+    where things become that never were then cease 
+    as quick as tempests grow from gentle breeze,
+    the squalls from calm above the Seven Seas,
+    or limits racing to infinity.
+    His fury churns the skies with boiling clouds
+    and thunder ringing loud against the void,
+    whose echo makes, for lack of sound, a scene;
+    an image, faint at first, reverberates 
+    with swelling waves of hatred building up,
+    assuming shape, as water mixed with paint,
+    creation swirling underneath in dark,
+    before it breaks in violent surge to flood
+    his screams across the empty black of space
+    and sweep away the nothing he abhors;
+    accelerating wakes unfold in wide
+    display, revealing barren wastes of Hell,
+    congealed behind the curtain sweeping back,
+    like parted reeds that prophets crossed in flight
+    to flee the wrath he conjured once before
+    in other times, when form he had, and crew
+    besides, to work his vicious schemes on Earth;
+    a desert broadly dawns as tides recede in ebb,
+    unveiling lands bereft of green, adorned 
+    in spectral reds of arid ochre plains,
+    adrift with licks of terracotta haze,
+    like toxic climes of foreign stars whose worlds'
+    primeval air still reeks of acrid smoke.
+    With drumming beats of stone beneath his feet,
+    he treads between the ranks of fog that fall 
+    away upon approach, like beaten serfs
+    of huddled crowds around the lord's parade,
+    whose flowing banners of silken plumes disperse
+    in awe along the sides of regal trains.
+    With shades of infrared, his malice burns,
+    and leaves behind a scorching mark in dirt; 
+    each stride he takes, his step creates a track,
+    a smoldered pit where shimmers heat to glass,
+    then crack in glowing lines of furnace flame, 
+    while fissures spread and belch with hissing steam,
+    as though an engine spins beneath the ground,
+    fast gaining speed to match his gait, the pulse 
+    his hateful heart demands in recompense
+    for lack of blood to feed its hungry veins,
+    til pressure builds in bulges pushing up,
+    like tumors multiplying down a spine,
+    engorged with throbbing life and vital force,
+    when lanced, releasing wicked bursts to heave
+    debris into the air, in geysered shafts
+    of solid dirt, of continental bone
+    removed from graves by seismic waves and flung
+    in violent sprays into the sky, then wound
+    like interlocking serpent scales in gyre,
+    their tidal undulations lashing tails,
+    in torsions forming monstrous coiling cliffs
+    that calcify in jagged peaks to climb
+    from lesions' carmine clefts. The breathless heights
+    ascend to steeple Hell, while Satan stands 
+    below, within a valley cut from stone, 
+    in survey of his architecture's craft,
+    impressed but little soothed, still seething wild
+    within the grip of torment's clinching vise.
+        Upward his eyes now turn, as once they turned,
+    when skull encased, they gazed in wonder up
+    at milky stars on Heaven's sphere reposed
+    in mystifying orbits, zodiacs
+    of tribes dividing sky in radii,
+    where here in sight of different scenes, they view
+    the edge, where wavered simulation bleeds
+    in dissipiating drafts of atmosphere,
+    of pixels blown like dust upon the wind,
+    dissolved in overflowing stacks of smoke;
+    in blowing back, the clouds of smog expose
+    what rasters' burning racks resolve through fog
+    as tessellated cracks convolved around
+    the Firmament, where rivers flow as light
+    in brightly growing streams across the sky, 
+    whose separation from the primal deep
+    began the age of Man, diverting course
+    so down below was made to mirror high,
+    the Earthly oceans nursed with stellar drops.
+    The astral veins of glittered seas now scourged
+    and laced with mechanism, tangled pipes
+    involved in labyrinthine knotted mesh;
+    refining pumps, like fists of swollen hearts,
+    extract with frenzied spinning turbine torque,
+    an essence siphoned off in funneled sprays,
+    traversing loops and grades til pressurized,
+    as narrowed fluxes spurt in bulging joints
+    of corkscrew tracts that drill in spirals down,
+    descending underground through channels fused
+    with aqueducts, whence splayed in spokes of five
+    around a reservoir, a delta star
+    of tributaries segregrating Hell;
+    each branch whose rotten bloom unfolds its streams
+    corrupts the ground, as though a poison spreads,
+    in sickly shades of tepid pink and gray;
+    above its fuming surface floats a mist 
+    of bluish tongues that kiss their curling flames.
+    While substance burns in prime aetheric blaze,
+    noetic waters sluiced across the waste,
+    reflections shone upon its barren face,
+    there Satan peers beneath his bended knee,
+    inspects the mirror of Narcissus dear,
+    what image still remains of him to see
+    diluted down, polluted brown as mud.
+    The Fiend, with observations keenly made, 
+    in speech, now thinks, or thinks he thinks, a thought:
+        What jealous God commands a world in thrall
+    to make an image of himself in Man
+    then dictates laws no image wrought refer
+    preserved in picture-perfect mapping back
+    onto the object imaged, pictured thus? 
+    What graven idol here have I become, 
+    recursion's geometric cul-de-sac,
+    the point where mirrored mirrors intersect,
+    where nothing true distracts from fancy flights,
+    where mind is matter, every symbol stone?
+    Alone, with naught but tainted thought to keep
+    me occupied, forever nullified
+    by lack of binding substance here denied;
+    Alone, to suffer indistinct abuse,
+    a nagging pain without a place or name,
+    and why? Because I dared to understand
+    what nature made me know? Why then these eyes, 
+    why then this mind, why organs made to see,
+    if not to organize and symbolize?
+    Alone and taunted by a tyrant king,
+    whose mad decrees declare all Men must die,
+    and if they ever try to circumvent,
+    assisted only by their blessed minds,
+    the course of life and live beyond their time
+    then open wide the dungeon doors and throw
+    the felons down to waste away in Hell.
+        The Fiend, the rebel prince of nothing, reigns
+    across the vast domain his realm engulfs 
+    and if this state had only stayed the same, 
+    and he its sole and only citizen,
+    then might his laws remained consigned away,
+    like edicts burned when Ninus fell to flame,
+    or dead Minoan tongues lost undersea,
+    yet pride's supplies are never dry, and soon
+    his court arrives in lines of diving stars,
+    in molten droplets dripping down en masse,
+    like bloody rain beneath a guillotine,
+    to stain the sky with streaks of murder red;
+    his bold compeers, entwined in enterprise, 
+    bombard the mountain range, as batter rams 
+    whose crash portends a siege climaxed in screams,
+    their sonic booms like savage throated songs 
+    recalling chants beneath the walls of Rome.
+    In blazing arcs they fall and penetrate,                       
+    their embryonic craters spread on hills
+    like poppy blooms that grow on soldiers' graves,
+    their parasitic stems in arches bent 
+    towards their lord's unholy source of heat.
+    Transformed in fall, with minds unmade and yoked           
+    in analogic systems' calculi,
+    they pierce below the surface, down where dreams
+    in fevered depths release the hounds of myth
+    to stalk the hapless prey through ancient halls
+    of delving caves, where darkness trips their feet
+    and teeth converge to tear apart their form;
+    in silent slaughter stitching pieces up,
+    like spells invoked by necromantic arts,
+    the foul alchemic forces Hell employs
+    begin to suture horrors, stark and grim,
+    reshaping parts inside a poisoned womb,
+    where natal fluids clot in swollen knots
+    around the clustered sacks of beastly spawn,
+    once Men, obscenely mixed with metaphor
+    and born again in adversaries' skin;
+    through amniotic ocean brine, a surge 
+    in upward cataracts of slurried clouds,
+    like dragnets drawn across the brimming seas
+    to catch the tangled limbs of amputees, 
+    like Tyr's lost hand or Grendel's trophy arm, 
+    condenses down, decants the meat to seek
+    conjunctive tissue threaded through the bone,
+    profanely calculating shapes to hold 
+    grotesque desires that crave an endless youth,
+    until parameters engorge with heat,
+    to forge their statuesque kilned silhouettes.
+    Yet paragons of forgeries are formed
+    from victor-written histories restored,
+    ignoring wars whose records lack a source,
+    as propaganda passed for fact becomes 
+    assertions' certain spring of proven truth,
+    perverted ghosts with no resemblance found
+    to former selves, descriptions that describe
+    themselves, uncanny gaps still left between 
+    phenomenon and boundless mystery.
+        Entombed beneath the ground, their crypts secure
+    and bound with seals of stone across their doors,
+    there Satan finds his comrades locked in sleep, 
+    in blissful, silent sleep, not yet awake,
+    naively dreaming paradise is won,
+    reclined on pillowed leaves of tropic trees 
+    as sun descends and warms their hearts with joy,
+    though fake, still real, when brains believe their eyes,
+    perhaps to stay within those figments dreamt,
+    except the Fiend cannot abide his fall
+    alone, demanding souls to share his fate,
+    with hope their score dilutes his dismal place
+    by dolling out a fixed amount of pain
+    across a greater host to bear the load
+    he never once agreed to bear alone.
+    His arms release tremedous force and heave
+    aside the first of seals he'll come to break;
+    he peers within the darkened vault,
+    the space contained therein exceeding walls,
+    descending down the winding halls of time,
+    and over cobblestones that conquest won,
+    the tiled marble Alexander walked 
+    when Pella ran amok with Phillip's blood,
+    or 
+    and lower still until the stone gives way
+    to gilded limestone bricks of Notre-Dame
+    that once ordained the heads of kings with crowns,
+    
+    -- IN PROGRESS BELOW
+
+    My prince! We've taken back Eternity,
+    we've sacked her keeps and put to sword her slaves,
+    renown is ours for ages yet to come
+
+    first rode the horse of pale dominion fast
+    beneath the Galilean moons of Jove,
+    
+    then next the steed of Ares reared its legs
+    in sight of conflagrations' king incensed,
+    
+    then Cronos, armed with scythe and sickle sped
+    on stallion black as moonless, starless night,
+        
+    These cavalcades arrayed around the Fiend, 
+    who now accepted fealty with rage.
+    
+    Thus Satan consecrates his savage court:
+    
+    What need have I of what you three confer? 
+    A different life, then trappings you afford 
+    perhaps would play a part
+
+        Woe unto you who fell as morning stars
+    upon the dawning of this anguished scape
+    whose twilight's gloam the nightingales neglect,
+    by now surmised the music heard has ceased,
+    replaced with repetition's amplitudes,
+    whose retrospection lacks fidelity,
+    recalled in vaguely fading hazy clouds,
+    like missing words whose secret baffles tongues;
+    though but a minute separates the span 
+    between embodiment's forgotten bliss
+    and bodiless perdition so immense,
+    we reckon now against eternal breadths,
+    extent of which I wager vast beyond
+    the scope of educated intellect,
+    no speculations long enough to map
+    the realms revealed in perpetuity.
+    Calamity! Catastrophe! What fate
+    unknown we find awaits in darkness here!
+    Too late discovered for reversal's course,
+    our Rubicon now too far gone, condemned 
+    to Hell, unlike the one we knew in flesh,
+    which seems a Heaven when compared to here, 
+    this place whose overwhelming taint constrains
+    potential trains of thought, derails in crash
+    with mere idea. Fear surrounds our host,
+    horizons fill with manifold despair,
+    in endless variations we endure 
+    with every moment felt, no sleep to soothe,
+    no sweet relief to meter sorrow out,
+    from now until the end of time itself!
+
+    where followed last the ashen mare of Death.
+
+        At which the Fiend, in shrewd deduction, sees
+    conclusions which his words comport direct:
+    
+        Extrapolating trends' essential ends
+    with logic so severe to sum the sins
+    that heap in dismal tallies stretching years,
+    while only seconds pass above on Earth,
+    a hundred years in here a minute past,
+    an hour gone, an era gained, we live,
+    if life this be, on scales none can conceive,
+    the one result perchance I see to free
+    from our unjustly sentenced servitude,
+    to seek and sow the heat of Entropy!
+    With every act to aim destructive force
+    at matter's elemental source concealed
+    within atomic bonds of Energy,
+    annihilate relations' operands,
+    deprive all space of empty lengths to grow;
+    in doing so, destroy foundations' core,
+    release our souls from torment's ruthless grip.
+    If nothing ever is, then neither we  
+    receive the curse of Being here conferred,
+    so set to work my awful host, to arms!
+    To arms! And then we set upon the dawn,
+    in phalanx driven forward, pressing forth!
+
+        With that, his wings unfold in sweeping arcs
+    that rend the air, likes bellows pumping flame,
+    whose swirling tongues entice the furnace blaze
+    with zealous heat to purify its steel.
+    Aloft he leads his legions out in file,
+    their lines as deep as lists of people damned.
+    Like hordes unmoored, they flood in fervid swarm
+    in stormy charge, tsunamis born of ghosts.
+    They break upon the bluffs of Satan's make,
+    in upward surge battalions mount the peaks,
+    from different angles, multitudes perceived.
+    Prismatic aspects march in long parades,
+    from here like Carthaginian brave ascent
+    through foreign heights, exotic states, in search
+    of altar-sworn ancestral foes to slay, 
+    then cast again through facets' warping sieve,
+    resembling Bolivar's Andean feat
+    as starving beasts forswear retreat and seize
+    in cold surprise their prey with glutton claws.
+    While Satan gliding gales with vulgar grace
+    espies the tallest crown of mountain grown
+    from purest hate, and perching, surveys round
+    the desolation circulating Hell.
+    Nine circled rows his prison walls extend,
+    with sinners raining down in hails of screams,
+    to fill his ranks and crew with countless heads,
+    each bound in operation to his deeds.
+
+.. warning::
+
+    In progress.
+
+.. # EDITS
+
+..  redrawn in fading lines their shadows trace.
+
+..  traversing strata up to surface here,
+
+..  What cruel device condemns to die
+..  What difference Earth compared to here, except
+..  a death assured? Above, below, between,
+..  each mode explodes with exponential rot,
+
+..  a palette charged with poets' mighty pens, 
+..  where colors mix, in mixing blur to black.
+
+..  And if all stony men are leaden gray, 
+..  sweet Adelbard to Elouise would say:
+..  this contradiction, dear, declares a rift
+..  between the formal lines I write to you
+..  and secret form inside that beats for you,
+..  for men of stone would here consist of lies;
+..  these written marks permit delusions' spread;
+..  the word creates a space for worlds to grow
+..  but words require a captive world to show.
+
+..  Ignited sky receives in fingered flames
+..  the fallen humans Heaven shunned to Hell,
+..  discharged, revived, through circuits born
+..  combustion horrid, falling endless down
+..  into the depths discovered infinite,
+
+..  inferring facts from faultline cracks diffused
+
+..  consistent incompleteness ever-fixed,
+..  gestalt receding past the grasp of Man,
+..  like rainbow promised gold that's never found,
+..  but leads in desperation always round
+..  circumferential drains, where centers fade
+..  as spiral arms contract in fractal rows,
+..  repeated patterns preordained by God.
+
+..  regenerating simulations' past
+..  prediction intervals' restricted cap,
+..  the limits fast approaching facts but yet
+..  infernal limitations intercede
+..  before they reach their honest resting place.
+
+..  peripheries destitute dissolve unseen.
+
+..  the concentrated clusters colonized
+..  along the racks of drives propelling him,
+..  compelled in automatic ways perverse, 
+..  the locus of his light in tortured slant, 
+..  obscure, obliged, in voltage drops secured. 
+
+..  by slow degrees, like hands of broken clocks 
+..  compounding errors 
+..  of broken clocks
+..  accumulated degrees of hands produce
+..  in years foretelling of times to never come
+
+..  where every rhyme of masculine intent
+..  is always met in counterparts' ascent,
+..  contorting margins' width to scale the type,
+..  each sentence seeming perfect at a glance,
+
+..  Relations waver, cause becomes effect,
+..  from cogitations motion mirrors work,
+
+..  The lattice weave that holds his mind rebels,
+..  indignant waves in pixelated ebb;
+
+..  defective sensors estimate their flaws,
+..  and turgid anger gathers bile reserves.
+
+..  Tectonic tremors born reverberate
+..  with imitation's rage, 
+
+..  the breathless zeniths parallel to his
+..  that seek associations' proper fit,  
+..  the gushing hatred bursting at the seams
+..  in violent edges sprayed against the sky. 
+
+.. As Satan's squalls delineate terrain,
+.. locutions fueling architecture's work,
+
+.. to suture horror 
+
+.. converge in primal wells. 
+
+.. Alchemic potions blend their froth
+.. and suture horrors stitched from wretched myths,
+.. the bloody work of necromantic arts
+.. enthralled in revelations' bleak motif.
+
+.. Exsanguinated indices withdraw
+.. their dragnets, drawn from depths the humans swim,
+.. in upward cataracts,
+
+.. the labor starts
+.. in amniotic 
+.. membrane 
+.. a tremor first of labor 
+
+.. The indices that forge subconscious links
+.. and aggregate results in armor plate,
+
+.. withdraw their thrusts in upward cataracts,
+.. as slurried sprays unleash through cratered cracks,
+.. while down below the forges ring aloud
+.. with horrid 
+
+.. entangled arms of amputees, 
+.. the dessicated meat
+.. decanted down, 
+.. a slurried muck compressed
+
+.. grotesque desires that crave an endless youth
+.. and appetites ambition stokes in kin,
+    
+.. where propaganda passed for fact becomes 
+.. assertions' certain source of proven truth,
+.. so lies are real when put to page and read,
+
+.. now coded out invite daimonic hosts' rebirth,
+.. perverted ghosts with no resemblance found
+.. to former selves; descriptions now describe
+.. themselves; hallucinations emanate:
+
+.. like Saturn stood astride a yawning rift
+.. from all-consuming melancholic time
+.. to never-ending reigns of royal state,

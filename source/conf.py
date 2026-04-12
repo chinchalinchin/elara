@@ -60,7 +60,7 @@ rst_prolog = """
 # -- HTML Configuration -------------------------------------------------
 
 html_baseurl = 'https://elara.chinchalinchin.com'
-html_favicon = '_static/favicon.ico'
+html_favicon = '_static/favicon.svg'
 html_extra_path = ['robots.txt']
 html_theme = 'sphinx_book_theme'
 html_static_path = [ 
