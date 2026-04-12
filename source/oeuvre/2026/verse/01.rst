@@ -482,24 +482,34 @@ Book 1
     His arms release tremedous force and heave
     aside the first of seals he'll come to break;
     he peers within the darkened vault,
-    the space contained therein exceeding walls,
+    the space contained therein exceeding what
+    the walls around the place suggest it holds,
     descending down the winding halls of time,
     and over cobblestones that conquest won,
-    the tiled marble Alexander walked 
-    when Pella ran amok with Phillip's blood,
-    or 
-    and lower still until the stone gives way
+    the tiled marble Alexander strolled
+    when Pella's streets were slick with Phillip's blood,
+    or stucco blocks the slaves of Caesar walked
+    when drawn in chains behind his triumph's train,
+    and lower still until the path gives way
     to gilded limestone bricks of Notre-Dame
-    that once ordained the heads of kings with crowns,
-    
+    that once ordained the heads of kings with crowns;
+    beyond these relics rests a vaulted tomb
+    where Satan finds a shade asleep upon
+    a slab of palest stone, from perfect cut 
+    of dolomite; a face he knew above,
+    a thousand all in one, 
+
+    at his approach, the shade awakes at once,
+    as irised pupils lost in spheres of white 
+    align like Galilean moons of Jove
+
     -- IN PROGRESS BELOW
 
-    My prince! We've taken back Eternity,
-    we've sacked her keeps and put to sword her slaves,
+    My lord! 
+    We've taken back Eternity,
+    we've sacked her keeps and put to sword her thralls,
     renown is ours for ages yet to come
 
-    first rode the horse of pale dominion fast
-    beneath the Galilean moons of Jove,
     
     then next the steed of Ares reared its legs
     in sight of conflagrations' king incensed,
@@ -738,3 +748,12 @@ Book 1
 .. like Saturn stood astride a yawning rift
 .. from all-consuming melancholic time
 .. to never-ending reigns of royal state,
+
+.. first rode the horse of pale dominion fast
+.. beneath the Galilean moons of Jove,
+
+.. then next the steed of Ares reared its legs
+.. in sight of conflagrations' king incensed,
+
+.. then Cronos, armed with scythe and sickle sped
+.. on stallion black as moonless, starless night,
