@@ -39,6 +39,20 @@ views:
     # --- 3. GITHUB VIEWS
     github:
       blobs:
+        elara_build:
+          title: "Build Files"
+          files:
+            requirements.txt: text
+            Dockerfile: docker
+        elara_linguistics:
+          title: "Linguistic Script"
+          files:
+            source/_scripts/py/linguistics/poetics.py: python
+            source/_scripts/py/linguistics/rhyme.py: python
+            source/_scripts/py/linguistics/syllabify.py: python
+            source/_scripts/py/linguistics/synonyms.py: python
+
+
         # ------------------ TERRAFORM
         # ----------------------------
         tf_platform:

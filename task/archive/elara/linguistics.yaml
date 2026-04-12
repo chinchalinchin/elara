@@ -19,17 +19,7 @@ task:
     title: "Elara: Linguistic Scripts"
     # -------------------------------------------
     content: |
-      The output of the `syllabify.py` script is not outputting the correct result for "concrete". According to Meriam Webster,
-
-      ```text
-      con·​crete (ˌ)kän-ˈkrēt  ˈkän-ˌkrēt  kən-ˈkrēt
-      ```
-
-      Is there a way to adjust the script to achieve:
-
-      1. The correct syllabification and stress?
-
-      2. If there are multiple pronunciations, then list them all as a comma separate lists.
+      <task>
     # -------------------------------------------
     shell: 
       - /Users/gmoore/Home/projects/elara/source/_scripts/py/linguistics/syllabify.py concrete

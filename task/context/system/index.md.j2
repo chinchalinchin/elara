@@ -4,20 +4,26 @@
 - The prompter determines which **components** of the environment to include in the prompt. Each **component** has **views**, which are dynamically hydrated when the prompt is generated.
 - The prompter has access to all aspects of the environment. 
 
+{% if task.system.guidelines.values() | select('sameas', true) | list %}
 ## Context: Guidelines
 
-{% for guideline, enabled in system.guidelines.items() if enabled %}
-{% include './context/system/guidelines/' + guideline + '.md.j2'%}
+{% for guideline, enabled in task.system.guidelines.items() if enabled %}
+{% include './context/system/guidelines/' + guideline + '.md.j2' %}
 {% endfor %}
+{% endif %}
 
+{% if task.system.functions.values() | select('sameas', true) | list %}
 ## Context: Functions
 
-{% for function, enabled in system.functions.items() if enabled %}
-{% include './context/system/functions/' + function + '.md.j2'%}
+{% for function, enabled in task.system.functions.items() if enabled %}
+{% include './context/system/functions/' + function + '.md.j2' %}
 {% endfor %}
+{% endif %}
 
+{% if task.system.procedures.values() | select('sameas', true) | list %}
 ## Context: Procedures
 
-{% for procedure, enabled in system.procedures.items() if enabled %}
-{% include './context/system/procedures/' + procedure + '.md.j2'%}
+{% for procedure, enabled in task.system.procedures.items() if enabled %}
+{% include './context/system/procedures/' + procedure + '.md.j2' %}
 {% endfor %}
+{% endif %}
