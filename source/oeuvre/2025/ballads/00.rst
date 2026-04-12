@@ -159,3 +159,11 @@ Responses
 
   -Whitney M.
   Managing Editor
+
+.. epigraph::
+
+  Hello Grant!
+
+  We are thrilled to include two of your poems in our April issue. Contact us at editor@infocalypse.press if you have any questions!
+
+  -- Infocalpyse Press

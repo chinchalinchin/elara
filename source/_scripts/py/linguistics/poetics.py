@@ -27,11 +27,11 @@ ARPABET_TO_IPA = {
 # Define the acceptable stress values for each position in a metrical foot.
 # 0 = Unstressed, 1 = Primary Stress, 2 = Secondary Stress
 METERS = {
-    'iamb': [(0,), (1, 2)],
-    'trochee': [(1, 2), (0,)],
-    'dactyl': [(1, 2), (0,), (0,)],
-    'anapest': [(0,), (0,), (1, 2)],
-    'spondee': [(1, 2), (1, 2)]
+    'iamb'      : [(0,), (1, 2)],
+    'trochee'   : [(1, 2), (0,)],
+    'dactyl'    : [(1, 2), (0,), (0,)],
+    'anapest'   : [(0,), (0,), (1, 2)],
+    'spondee'   : [(1, 2), (1, 2)]
 }
 
 def phoneme_to_ipa(phoneme):
