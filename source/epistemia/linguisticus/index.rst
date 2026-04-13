@@ -8,9 +8,8 @@ Linguisticus
    :maxdepth: 1
    :caption: Contents:
 
-   00_lexicon
-   01_dialectus
-   02_verborum
-   03_consonantia
-   04_palindromos
-   05_commentariat
+   _lexicon
+   _dialectus
+   _verborum
+   _consonantia
+   _palindromos

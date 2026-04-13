@@ -36,11 +36,9 @@ These are problems for LLMs to solve that use the functions defined in :ref:`the
 
     **Functions: Extensional**
 
-    - accent(x: syllable, s: stress) -> set(word)
     - connote(x: concept, y: syllable) -> set(word)
     - contains(x: syllable, y?: syllable, z?: syllable) -> set(word)
     - decline(x: word) -> set(word)
-    - extract(x: word, s: stress) -> syllable
     - line(x: concept) -> sentence
     - resonate(x: word) -> set(word)
     - rhyme(x: word, y?: word) -> set(word)

@@ -64,11 +64,11 @@ Each function signature is given along with a short description. Optional argume
 
    Where applicable, all linguistics functions have the following additional, *named* arguments,
 
-   - ``rhyme=x`` or ``r=x``: This constrains the output to rhyme with ``x``, e.g. ``decline`` is a valid response to ``iamb(lessening, rhyme=incline)``.
-   - ``syllables=N`` or ``s=N``: This constrains the output to have ``N`` syllables, e.g. ``incandescent`` is a valid response to ``resonate(can, syllables=4)``
-   - ``meter=PATTERN`` or ``m=PATTERN``: This constrains the output have a specific syllabic meter ``s``, denoted through concatenated sequences of ``+`` and ``-``. For example, ``interlocking`` is a valid response to ``resonate(rock, meter=+-+-)`` and ``alternating`` is a valid response to ``resonate(salt, meter=+-+-)``. A wildcard ``meter=*`` denotes an arbitrary meter, free verse or otherwise.
-   - ``feet=N`` or ``f=N``: This constrains the output to have ``N`` metrical feet.
-   - ``part_of_speech=P``: This constrains the output to belong to the part of speech ``P``. 
+   - ``rhyme=r``: Constrains the output to rhyme with ``R``, e.g. ``decline`` is a valid response to ``iamb(lessening, rhyme=incline)``.
+   - ``syllables=N```: Constrains the output to have ``N`` syllables, e.g. ``incandescent`` is a valid response to ``resonate(can, syllables=4)``
+   - ``meter=M```: This constrains the output have a specific syllabic meter ``M``, denoted through concatenated sequences of ``+`` and ``-``. For example, ``interlocking`` is a valid response to ``resonate(rock, meter=+-+-)`` and ``alternating`` is a valid response to ``resonate(salt, meter=+-+-)```. A wildcard ``meter=*`` denotes an arbitrary meter, free verse or otherwise.
+   - ``feet=N```: This constrains the output to have ``N`` metrical feet.
+   - ``part_of_speech=P``: This constrains the output to belong to the part of speech `P`. 
 
    These arguments may be passed into compound expressions as in the following,
 
@@ -87,7 +87,7 @@ These extensions are poetic functions that return words that meet certain syllab
 
    Full Path:  ``ling.object.iamb(x)``
 
-   Shorthand: ``im(x)``
+   Shorthand: ``iamb(x)``
 
    If a prompt contains ``iamb(x)``, the prompt is asking for the set of iambic words, possibly empty, that connote the concept ``x``, e.g. ``deduce`` is a valid response to ``iamb(a scientific word)``. 
     
@@ -95,7 +95,7 @@ These extensions are poetic functions that return words that meet certain syllab
 
    Full Path: ``ling.object.anapest(x)``
 
-   Shorthand: ``an(x)``
+   Shorthand: ``anapest(x)``
 
    If a prompt contains ``anapest(x)``, the prompt is asking for the set of anapestic words, possibly empty, that connote the concept ``x``.
 
@@ -103,7 +103,7 @@ These extensions are poetic functions that return words that meet certain syllab
 
    Full Path: ``ling.object.dactyl(x)``
 
-   Shorthand: ``da(x)``
+   Shorthand: ``dactyl(x)``
 
    If a prompt contains ``dactyl(x)``, the prompt is asking for the set of dactylic words, possibly empty, that connote the concept ``x``.
 
@@ -111,7 +111,7 @@ These extensions are poetic functions that return words that meet certain syllab
 
    Full Path: ``ling.object.trochee(x)``
 
-   Shorthand: ``tr(x)``
+   Shorthand: ``trochee(x)``
 
    If a prompt contains ``trochee(x)``, the prompt is asking for the set of trochaic words, possibly empty, that connote the concept ``x``.
 
@@ -119,7 +119,7 @@ These extensions are poetic functions that return words that meet certain syllab
 
    Full Path: ``ling.object.spondee(x)``
 
-   Shorthand: ``sp(x)``
+   Shorthand: ``spondee(x)``
 
    If a prompt contains ``spondee(x)``, the prompt is asking for the set of spondaic words, possibly empty, that connote the concept ``x``
     
@@ -127,7 +127,7 @@ These extensions are poetic functions that return words that meet certain syllab
 
    Full Path: ``ling.object.pyrrhic(x)``
 
-   Shorthand: ``py(x)``
+   Shorthand: ``pyrrhic(x)``
 
    If a prompt contains ``pyrrhic(x)``, the prompt is asking for the set of pyrrhic words, possibly empty, that connote the concept ``x``
     
@@ -140,7 +140,7 @@ These extensions are linguistic functions that return words that meet certain sy
 
 .. topic:: contains(x: any, y?: any, z?: any, ...) -> Ζ: set(sentences)
 
-    Shorthand: ``cont(x, y, z, ... )``
+    Shorthand: ``contains(x, y, z, ... )``
 
     If a prompt contains ``contains(x, y, z, ...)``, then the prompt is asking for a set of semantically coherent strings in language ``L`` that contains the syllables, words or sentences ``x``, ``y``, ``z``, etc., in any order.
     
@@ -148,7 +148,7 @@ These extensions are linguistic functions that return words that meet certain sy
 
    Full Path: ``ling.object.connote(x, y?)``
 
-   Shorthand: ``conn(x, y?)``
+   Shorthand: ``connote(x, y?)``
 
    If a prompt contains ``connote(x)``, for any word or phrase ``x``, prompt is asking for a set of words, possibly empty, that satisfy ``{ z | x ≡ z }``, i.e. all words that have the same connotation as ``x``. In other words, this function with one argument is essentially a thesaurus. 
    
@@ -158,7 +158,7 @@ These extensions are linguistic functions that return words that meet certain sy
 
    Full Path: ``ling.object.rhyme(x)``
 
-   Shorthand: ``rh(x, y)``
+   Shorthand: ``rhyme(x, y)``
 
    If a prompt contains ``rhyme(x)``, where ``x`` is a word or phrase, then the prompt is asking for the set of words or phrases, possibly empty, that rhyme or near-rhyme with ``x``, e.g. ``cat`` would be a solution to ``rh(bat)``. 
    
@@ -174,7 +174,7 @@ These extensions are linguistic functions that return words that meet certain sy
 
    Full Path: ``ling.object.resonate(x)``
 
-   Shorthand: ``res(x)``
+   Shorthand: ``resonate(x)``
 
    If a prompt contains ``resonate(x)``, the prompt is asking for a set of words, possibly empty, that bear the relation of assonance or consonance with the syllable, word or phrase ``x``.
 
@@ -182,33 +182,17 @@ These extensions are linguistic functions that return words that meet certain sy
 
    Full Path: ``ling.object.accent(π, 𝔰)``
 
-   Shorthand: ``acc(π,s)``
+   Shorthand: ``accent(π,s)``
 
    If a prompt contains ``accent(π,𝔰)``, this prompt is asking for a set of words, possibly empty, that contain the syllable ``π`` with the stress ``𝔰``, where ``𝔰 = +`` means stressed and ``𝔰 = -`` means unstressed. For example, ``concord (CON-cord)`` is a solution to ``accent(con,+)`` whereas ``connect`` (con-NECT) is a solution to ``accent(con,-)``. 
 
    Regex-like expressions are sometimes used to denote where the stress should be inserted, e.g. ``accent(gen,.-.*)`` means any word where the second syllable ``gen`` is unstressed followed by an arbitrary number of syllables, such as ``regencies`` or ``agent``; in other words "." are used to denote single syllables and ".*" are used to denote an arbitrary number of syllables.
 
-.. topic:: extract(α: word, 𝔰: stress) -> π: syllable
-
-   Full Path: ``ling.object.extract(α, 𝔰)``
-
-   Shorthand: ``ext(α,𝔰)``
-
-   If a prompt contains ``extract(α,𝔰)``, this prompt is asking to extract a specific syllable from word ``α`` based on the stress ``s``: if ``S = +``, it refers to the main stressed syllable; if ``S = -``, it refers to an unstressed syllable (e.g., the first such syllable if multiple exist). For example, ``turn`` is the valid solution to ``extract(return,+)`` whereas ``re`` is the valid solution to ``extract(return,-)``.
-
-.. topic:: line(x: concept) -> s: string
-
-   Full Path: ``ling.object.line(x)``
-
-   Shorthand: ``li(x)``
-
-   If a prompt contains ``line(x)``, for any string ``x``, this prompt is asking for a line that implements the description given in ``x``. This function is often used with optional arguments ``meter`` and ``feet``. 
-
 .. topic:: decline(α: word) -> A: set(word)
 
    Full Path: ``ling.object.decline(α)``
 
-   Shorthand: ``de(x)``
+   Shorthand: ``decline(x)``
 
    If a prompt contains ``decline(x)``, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, ``decline(red)`` should produce the various forms, ``reddened, reddening, redness, ...`` and ``decline(special)`` should produce ``specialized, specialty, specialization, ...``.
 
@@ -238,7 +222,7 @@ Textual Intensions
 
    Full Path: ``ling.meta.stress(s)``
 
-   Shorthand: ``st(s)``
+   Shorthand: ``stress(s)``
 
    If a prompt contains ``stress(s)`` where ``s`` is a word or phrase, this prompt is asking to break down the syllables and stresses in ``s``. Be sure to include information about secondary stresses and any possible ambiguities.
 
@@ -254,9 +238,37 @@ Textual Intensions
 
    Full Path: ``ling.meta.phonics(α)``
 
-   Shorthand: ``ph(α)``
+   Shorthand: ``phonics(α)``
 
    If a prompt contains ``phonics(α)``,  the prompt is asking for the Internation Phonetic Alphabet (IPA) transcription of the word ``α``. For example, ``/wɜːrd/`` is a solution to ``phonics(word)``.
+
+.. topic:: verse(L: language) -> sentence
+
+   Full Path: ``ling.meta.verse(α)``
+
+   Shorthand: ``verse(α)``
+
+   If a prompt contains ``verse(L)``, where ``L`` is taken from the list ``[Old English, Ancient Greek, Latin]``, then the prompt is asking for a randomized, untranslated verse from the specific language. When selecting a random verse, you *must* use the following sources. 
+   
+   **Old English**: 
+      1. Anglo Saxon Gospels circa 1000
+      2. The Homilies of Ælfric of Eynsham
+      3. The Heuxateuch translated by Ælfric of Eynsham
+      4. Maxims I - III
+   
+   **Ancient Greek**
+      1. Theogony by Hesiod
+      2. Iliad by Homer
+      3. Odyssey by Homer
+
+   **Latin**
+      1. Aeneid by Virgil
+      2. Metamorphoses by Ovid
+      3. Odes by Horaces
+   
+   Present the verse in its original language. The user will then attempt to translate it. Grade the user's attempt and highlight any mistakes.
+   
+   This function has an argument, ``source = s``, that constrains the output to be taken from the indicated source, ``s``.
 
 .. _plugin-functions-linguistic-meta-visual-intensions:
 

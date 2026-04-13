@@ -7,5 +7,5 @@ Exercises
     :maxdepth: 2
     :caption: Language Exercises
     
-    01_rhymations
-    02_games
+    _rhymations
+    _games

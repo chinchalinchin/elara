@@ -12,7 +12,7 @@ Rhyme Families
 /aɪn/ Family
 ------------
 
-.. csv-table:: /ɛnd/ Rhymes
+.. csv-table:: /aɪn/ Rhymes
    :header-rows: 1
    :file: ../../.static/csv/linguistic/words/rhymes/ine-rhymes.csv
 
