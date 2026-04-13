@@ -31,6 +31,7 @@ try:
 except LookupError:
     nltk.download('cmudict', quiet=True)
 
+
 def add_syllable_dots(ipa_text):
     """
     A heuristic function to approximate phonetic syllabification.
@@ -69,6 +70,7 @@ def add_syllable_dots(ipa_text):
     res = re.sub(r'\.+', '.', res).strip('.')
     
     return res
+
 
 def analyze_phonetics(input_string, pretty=False):
     words = input_string.split()
@@ -122,6 +124,7 @@ def analyze_phonetics(input_string, pretty=False):
     if not pretty and ipa_results:
         # If parsing multiple words, separate word blocks by a pipe to avoid comma confusion 
         print(" | ".join(ipa_results) if len(words) > 1 else ipa_results[0])
+
 
 def main():
     parser = argparse.ArgumentParser(

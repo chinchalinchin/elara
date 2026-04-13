@@ -32,6 +32,7 @@ METERS = {
     'dactyl'    : [(1, 2), (0,), (0,)],
     'anapest'   : [(0,), (0,), (1, 2)],
     'spondee'   : [(1, 2), (1, 2)]
+
 }
 
 def phoneme_to_ipa(phoneme):
@@ -48,6 +49,7 @@ def phoneme_to_ipa(phoneme):
         ipa_char = 'ɝ'
         
     return ipa_char, stress
+
 
 def syllabify(phonemes):
     """
@@ -74,6 +76,7 @@ def syllabify(phonemes):
     
     return syllables
 
+
 def format_syllable_ipa(syllable_phonemes):
     """Translates a chunk of phonemes into an IPA string with stress markers."""
     ipa_str = ""
@@ -90,9 +93,11 @@ def format_syllable_ipa(syllable_phonemes):
             
     return stress_marker + ipa_str
 
+
 def get_stresses(pronunciation):
     """Extracts just the numeric stress pattern."""
     return [int(char) for p in pronunciation for char in p if char.isdigit()]
+
 
 def matches_meter(stresses, meter_name):
     """Checks if the word's stresses exactly match repetitions of the chosen foot."""
@@ -151,6 +156,7 @@ def generate_meter_csv(meter_name):
         writer.writerows(output_rows)
         
     print(f"Success! {len(output_rows)} {meter_name} words exported to: {output_path}")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Extract words matching specific metrical patterns from the CMU Pronouncing Dictionary.")

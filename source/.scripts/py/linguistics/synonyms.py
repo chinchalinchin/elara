@@ -16,6 +16,7 @@ def setup_nltk():
     except LookupError:
         nltk.download('omw-1.4', quiet=True)
 
+
 def get_synonyms(word):
     synonyms = set()
     # WordNet groups words into sets of cognitive synonyms called synsets
@@ -30,6 +31,7 @@ def get_synonyms(word):
         synonyms.remove(word.lower())
         
     return sorted(list(synonyms))
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Find synonyms for a given word using NLTK.")

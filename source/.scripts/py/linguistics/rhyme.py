@@ -23,6 +23,7 @@ def get_rhyming_words(target_word, target_syllables):
     # Return a deduplicated, sorted list
     return sorted(list(set(filtered_rhymes)))
 
+
 def main():
     # Set up the CLI parser
     parser = argparse.ArgumentParser(
@@ -55,6 +56,7 @@ def main():
         print(", ".join(rhymes))
     else:
         print(f"No {args.syllables}-syllable rhymes found for '{args.word}'.")
+
 
 if __name__ == "__main__":
     main()
