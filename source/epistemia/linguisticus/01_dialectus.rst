@@ -10,7 +10,7 @@ Anglo-Saxon
 
 .. csv-table:: Futhorc Pronunciation
   :header-rows: 1
-  :file: ../../_static/csv/linguistic/pronunciations/futhorc.csv
+  :file: ../../.static/csv/linguistic/pronunciations/futhorc.csv
 
 -----------
 Old English
@@ -18,14 +18,14 @@ Old English
 
 .. csv-table:: Old English Pronunciation
   :header-rows: 1
-  :file: ../../_static/csv/linguistic/pronunciations/old-english.csv 
+  :file: ../../.static/csv/linguistic/pronunciations/old-english.csv 
 
 Evolution
 ~~~~~~~~~
 
 .. csv-table:: English Pronunciation 
   :header-rows: 1
-  :file: ../../_static/csv/linguistic/pronunciations/english-timeline.csv 
+  :file: ../../.static/csv/linguistic/pronunciations/english-timeline.csv 
 
 
 -------------

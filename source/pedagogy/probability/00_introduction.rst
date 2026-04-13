@@ -174,7 +174,7 @@ Be careful not to confuse the outcome *h* with the event **H**, and likewise the
 
 Consider now flipping the same fair, two-sided coin twice. A :ref:`tree diagram <tree-diagrams>` can help visualize the sample space for this experiment. We represent each each flip as a branch in the tree diagram, with each outcome forking the tree,
 
-.. image:: ../../_static/img/math/probability/sample-space-coin-flip.png
+.. image:: ../../.static/img/math/probability/sample-space-coin-flip.png
     :width: 60%
     :align: center
 
@@ -442,7 +442,7 @@ Symbolic Expression
 
 This corollary should be intuitively obvious, considering the Venn Diagramm of complementary sets,
 
-.. image:: ../../_static/img/math/sets/sets-complement.jpg
+.. image:: ../../.static/img/math/sets/sets-complement.jpg
     :align: center
 
 If the entire rectangle encompassing set **A** in the above diagram is identified as the sample space :math:`S`, then the theorem follows immediately from Axiom 2, namely, :math:`P(S)=1`. 
@@ -572,7 +572,7 @@ Symbolic Expression
 
 Again, from inspection of a :ref:`venn-diagrams` of *overlappying* sets, this theorem should be obvious,
 
-.. image:: ../../_static/img/math/sets/sets-union-overlapping.jpg
+.. image:: ../../.static/img/math/sets/sets-union-overlapping.jpg
 
 The union is the area encompassed by bother circles. When we add the probability of **A** (area of circle **A**) to the probability of **B** (area of circle **B**), we double-count the area :math:`A \cap B`, so to correct the overcount, we must subtract once by the offending area.
 
@@ -604,7 +604,7 @@ Example
 
 The sample space for a selecting a single card from a deck of 52 cards is shown below,
 
-.. image:: ../../_static/img/math/probability/playing-cards.jpg
+.. image:: ../../.static/img/math/probability/playing-cards.jpg
    :width: 60%
    :align: center
 

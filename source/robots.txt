@@ -1,8 +1,8 @@
 User-agent: *
 Disallow: /_sources/
-Disallow: /_static/
-Disallow: /_templates/
-Disallow: /_sphinx_design_static/
+Disallow: /.static/
+Disallow: /.templates/
+Disallow: /_sphinx_design.static/
 Disallow: /_images/
 Disallow: /_downloads/
 

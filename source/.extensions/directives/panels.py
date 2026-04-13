@@ -239,9 +239,9 @@ def process_share_nodes(app, doctree, fromdocname):
         title = env.titles.get(fromdocname, nodes.Text("")).astext()
 
         from_dir = os.path.dirname(fromdocname)
-        facebook_icon_path = os.path.relpath('_static/svg/facebook.svg', from_dir).replace(os.path.sep, '/')
-        twitter_icon_path = os.path.relpath('_static/svg/x.svg', from_dir).replace(os.path.sep, '/')
-        instagram_icon_path = os.path.relpath('_static/svg/instagram.svg', from_dir).replace(os.path.sep, '/')
+        facebook_icon_path = os.path.relpath('.static/svg/facebook.svg', from_dir).replace(os.path.sep, '/')
+        twitter_icon_path = os.path.relpath('.static/svg/x.svg', from_dir).replace(os.path.sep, '/')
+        instagram_icon_path = os.path.relpath('.static/svg/instagram.svg', from_dir).replace(os.path.sep, '/')
         
         html = app.builder.templates.render('panels/share.html.j2', {
                 'facebook': node['facebook'],

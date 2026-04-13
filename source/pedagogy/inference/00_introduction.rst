@@ -128,7 +128,7 @@ Population vs. Sample
 
 The relationship between the *population* and the *sample* can be visualized with the following :ref:`venn diagram <venn-diagrams>`. 
 
-.. image:: ../../_static/img/math/statistics/sample_subset_population.jpg
+.. image:: ../../.static/img/math/statistics/sample_subset_population.jpg
     :align: center
 
 

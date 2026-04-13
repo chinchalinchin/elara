@@ -18,8 +18,8 @@ author = 'Grant Moore'
 
 # -- Path setup --------------------------------------------------------------
 
-sys.path.insert(0, os.path.abspath('./_extensions/roles'))
-sys.path.insert(0, os.path.abspath('./_extensions/directives'))
+sys.path.insert(0, os.path.abspath('./.extensions/roles'))
+sys.path.insert(0, os.path.abspath('./.extensions/directives'))
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -41,7 +41,7 @@ extensions = [
 ]
 
 templates_path = [ 
-    '_templates'
+    '.templates'
 ]
 
 exclude_patterns = [
@@ -54,18 +54,18 @@ exclude_patterns = [
 plot_html_show_source_link = True
 
 rst_prolog = """
-.. include:: /_static/rst/_links.rst
+.. include:: /.static/rst/_links.rst
 """
 
 # -- HTML Configuration -------------------------------------------------
 
 html_baseurl = 'https://elara.chinchalinchin.com'
-html_favicon = '_static/favicon.svg'
+html_favicon = '.static/favicon.svg'
 html_extra_path = ['robots.txt']
 html_theme = 'sphinx_book_theme'
 html_static_path = [ 
-    '_static',
-    '_scripts'
+    '.static',
+    '.scripts'
 ]
 html_css_files = [
     'css/custom.css'

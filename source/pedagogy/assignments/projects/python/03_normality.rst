@@ -185,7 +185,7 @@ The *ideal* distribution is another word for the *population* distribution. The 
 	
 The graph below displays the results of this code snippet,
 
-.. plot:: _scripts/py/plots/distributions/normal/normal_distribution_pdf.py
+.. plot:: .scripts/py/plots/distributions/normal/normal_distribution_pdf.py
 
 This gives us a way of seeing how well the Normal density curve fits the data. This can be useful for *assessing* the normality of a distribution. However, a more foolproof method of checking the normality of a sample is given in the next section.
 
@@ -249,7 +249,7 @@ In short, we need to perform the following operations,
 	
 The graph below displays the results of this code snippet,
 
-.. plot:: _scripts/py/plots/other/qq_plot_example.py
+.. plot:: .scripts/py/plots/other/qq_plot_example.py
 
 .. _project-three-project:
 
@@ -447,23 +447,23 @@ Velocity of Light Data
 
 	You may already have this dataset downloaded into your *Linux Files* directory from when we did :ref:`project-two`.
 
-You can download the full dataset :download:`here <../../../../_static/csv/scientific/velocity-of-light-data.csv>`.
+You can download the full dataset :download:`here <../../../../.static/csv/scientific/velocity-of-light-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Michelson's Velocity of Light Data
-   :file: ../../../../_static/csv/previews/velocity-of-light-data-preview.csv
+   :file: ../../../../.static/csv/previews/velocity-of-light-data-preview.csv
 
 The meaning of the column is clear from the column header: each observation measures the speed of light in meters per second, :math:`\frac{km}{s}`.
 
 Old Faithful
 ------------
 
-You can download the full dataset :download:`here <../../../../_static/csv/scientific/old-faithful-data.csv>`.
+You can download the full dataset :download:`here <../../../../.static/csv/scientific/old-faithful-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Old Faithful Geyser Duration and Wait Time
-   :file: ../../../../_static/csv/previews/old-faithful-data-preview.csv
+   :file: ../../../../.static/csv/previews/old-faithful-data-preview.csv
 
 The first column represents the length of the eruption in minutes. The second column represents the waiting time in minutes until the next eruption.

@@ -38,7 +38,7 @@ In the last decade, **Python** has become the go-to tool for conducting data ana
 
 `Python has excellent documentation <https://docs.python.org/3/tutorial/index.html>`_. If you are ever in doubt (or just want to know more), try using the search bar on the documentation to find an answer:
 
-.. image:: ../../../../_static/img/python/python-doc-search.png
+.. image:: ../../../../.static/img/python/python-doc-search.png
 
 In addition, you can refer to the :ref:`python-reference` section on this web site, where you will find some resources dedicated to the topics in this class.
 

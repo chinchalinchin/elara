@@ -39,7 +39,7 @@ Twitter by Tweets and Followers
 
     The data will be downloaded directly onto the your calculator in class via a cable link. 
 
-    If you want to try out the dataset in **Python** at any point, you can download the full dataset `here <../../_static/csv/cultural/celebrity-twitter-data.csv>`_
+    If you want to try out the dataset in **Python** at any point, you can download the full dataset `here <../../.static/csv/cultural/celebrity-twitter-data.csv>`_
 
 The following table lists the top 20 **Twitter** users by follower count (as of 2022).
 
@@ -158,7 +158,7 @@ A research center conducted a national survey about teenage behavior. Teens were
    
 The following histograms summarize the teaching year for the teachers at two high schools, A and B.
 
-.. image:: ../../../_static/img/problems/2018-apstats-frp-05.png
+.. image:: ../../../.static/img/problems/2018-apstats-frp-05.png
     :align: center
 
 Teaching year is recorded as an integer, with first-year teachers recorded as 1, second-year teachers recorded as 2, and so on. Both sets of data have a mean teaching year of 8.2, with data recorded from 200 teachers at High School A and 221 teachers at High School B. On the histograms, each interval represents possible integer values from the left endpoint up to but not including the right endpoint.
@@ -171,7 +171,7 @@ Teaching year is recorded as an integer, with first-year teachers recorded as 1,
 
 Two large corporations, A and B, hire many new college graduates as accountants at entry-level positions. In 2009 the starting salary for an entry-level accountant position was $36,000 a year at both corporations. At each corporation, data were collected from 30 employees who were hired in 2009 as entry-level accountants and were still employed at the corporation five years later. The yearly salaries of the 60 employees in 2014 are summarized in the boxplots below.
 
-.. image:: ../../../_static/img/problems/2015-apstats-frp-1.png
+.. image:: ../../../.static/img/problems/2015-apstats-frp-1.png
     :align: center
 
 a. Write a few sentences comparing the distributions of the yearly salaries at the two corporations.
@@ -192,7 +192,7 @@ For the experiment, 75 children were randomly assigned to one of three groups, A
 
 After the program, the children were offered a choice between the two snacks. The table below summarizes their choices.
 
-.. image:: ../../../_static/img/problems/2016-apstats-frp-02.png
+.. image:: ../../../.static/img/problems/2016-apstats-frp-02.png
     :align: center
 
 Use this information to answer the following questions.
@@ -203,7 +203,7 @@ Use this information to answer the following questions.
 
 5. **2009, Free Response Form B, #1**
 
-.. image:: ../../../_static/img/problems/2009-apstats-frp-formb-01.png
+.. image:: ../../../.static/img/problems/2009-apstats-frp-formb-01.png
     :align: center
     
 As gasoline prices have increased in recent years, many drivers have expressed concern about the taxes they pay on gasoline for their cars. In the United States, gasoline taxes are imposed by both the federal government and by individual states. The boxplot above shows the distribution of the state gasoline taxes, in cents per gallon, for all 50 states on January 1, 2006.
@@ -221,7 +221,7 @@ Point Estimation
 
 The sizes, in square feet, of the 20 rooms in a student residence hall at a certain university are summarized in the following histogram.
 
-.. image:: ../../../_static/img/problems/2019-apstats-frp-01a.png
+.. image:: ../../../.static/img/problems/2019-apstats-frp-01a.png
     :align: center
 
 Use this information to answer the following questions.
@@ -230,10 +230,10 @@ Use this information to answer the following questions.
 
 	b. Summary statistics for the sizes are given in the following table.Determine whether there are potential outliers in the data. Then use the following grid to sketch a boxplot of room size.
 
-.. image:: ../../../_static/img/problems/2019-apstats-frp-01b.png
+.. image:: ../../../.static/img/problems/2019-apstats-frp-01b.png
     :align: center
 
-.. image:: ../../../_static/img/problems/2019-apstats-frp-01c.png
+.. image:: ../../../.static/img/problems/2019-apstats-frp-01c.png
     :align: center
     
 Use the graph you created to answer the following question.
@@ -244,7 +244,7 @@ Use the graph you created to answer the following question.
 
 Robin works as a server in a small restaurant, where she can earn a tip (extra money) from each customer she serves. The histogram below shows the distribution of her 60 tip amounts for one day of work.
 
-.. image:: ../../../_static/img/problems/2016-apstats-frp-01.png
+.. image:: ../../../.static/img/problems/2016-apstats-frp-01.png
 	:align: center
 
 Use this information to answer the following questions.
@@ -264,13 +264,13 @@ Use this information to answer the following questions.
 
 Two parents have each built a toy catapult for use in a game at an elementary school fair. To play the game, students will attempt to launch Ping-Pong balls from the catapults so that the balls land within a 5-centimeter band. A target line will be drawn through the middle of the band, as shown in the figure below. All points on the target line are equidistant from the launching location.
 
-.. image:: ../../../_static/img/problems/2006-apstats-frp-1a.png
+.. image:: ../../../.static/img/problems/2006-apstats-frp-1a.png
     :align: center
 
 If a ball lands within the shaded band, the student will win a prize. The parents have constructed the two catapults according to slightly different plans. They want to test these
 catapults before building additional ones. Under identical conditions, the parents launch 40 Ping-Pong balls from each catapult and measure the distance that the ball travels before landing. Distances to the nearest centimeter are graphed in the dotplots below.
 
-.. image:: ../../../_static/img/problems/2006-apstats-frp-1b.png
+.. image:: ../../../.static/img/problems/2006-apstats-frp-1b.png
     :align: center
 
 Use this information to answer the following questions.
@@ -302,7 +302,7 @@ Use this information to answer the following questions.
 
 A large regional real estate company keeps records of home sales for each of its sales agents. Each month, the company publishes the sales volume for each agent. Monthly sales volume is defined as the total sales price of all homes sold by the agent during a month. The figure below displays the cumulative relative frequency plot of the most recent monthly sales volume (in hundreds of thousands of dollars) for these agents.
 
-.. image:: ../../../_static/img/problems/2016-apstats-frp-formb-01.png
+.. image:: ../../../.static/img/problems/2016-apstats-frp-formb-01.png
 	:align: center
 	
 Use this information to answer the following questions.
@@ -323,7 +323,7 @@ The 25 bags in the control group were sealed. The preservative was added to the 
 
 The dotplots below show the distributions of discoloration rating for the control and treatment groups.
 
-.. image:: ../../../_static/img/problems/2007-apstats-frp-01.png
+.. image:: ../../../.static/img/problems/2007-apstats-frp-01.png
     :align: center
 
 Use this information to answer the following questions.
@@ -340,7 +340,7 @@ To determine the amount of sugar in a typical serving of breakfast cereal, a stu
 
 The student noticed that the side panels of some of the cereal boxes showed sugar content based on one-cup servings, while others showed sugar content based on three-quarter-cup servings. Many of the cereal boxes with side panels that showed three-quarter-cup servings were ones that appealed to young children, and the student wondered whether there might be some difference in the sugar content of the cereals that showed different-size servings on their side panels. To investigate the question, the data were separated into two groups. One group consisted of 29 cereals that showed one-cup serving sizes; the other group consisted of 31 cereals that showed three-quarter-cup serving sizes. The boxplots shown below display sugar content (in grams) per serving of the cereals for each of the two serving sizes.
 
-.. image:: ../../../_static/img/problems/data-transformations-01.png
+.. image:: ../../../.static/img/problems/data-transformations-01.png
     :align: center
 
 Two box plots are shown using the same horizontal axis, which shows sugar content per serving in grams and is labeled from 0 to 22 in increments of 2. The bottom plot is for three quarters of a cup. The box extends from 8 to 12 with a vertical line at 10 dividing it into two regions. A horizontal line off the left of the box extends to 4 and a horizontal line off the right extends to 14. The top plot is for one cup. The box extends from 4 to 14 with a vertical line at 12 dividing it into two regions. A horizontal line off the left of the box extends to 0 and a horizontal line off the right extends to 20.
@@ -349,7 +349,7 @@ Two box plots are shown using the same horizontal axis, which shows sugar conten
 
 After analyzing the boxplots on the preceding page, the student decided that instead of a comparison of sugar content per recommended serving, it might be more appropriate to compare sugar content for equal-size servings. To compare the amount of sugar in serving sizes of one cup each, the amount of sugar in each of the cereals showing three-quarter-cup servings on their side panels was multiplied by 4/3. The bottom boxplot shown below displays sugar content (in grams) per cup for those cereals that showed a serving size of three-quarter-cup on their side panels.
 
-.. image:: ../../../_static/img/problems/data-transformations-01.png
+.. image:: ../../../.static/img/problems/data-transformations-01.png
     :align: center
     
 Two box plots are shown using the same horizontal axis, which shows adjusted sugar content per serving in grams and is labeled from 0 to 22 in increments of 2. The bottom plot is for three quarters of a cup. The box extends from 10 to 16 with a vertical line at 13 dividing it into two regions. A horizontal line off the left of the box extends to 5 and a horizontal line off the right extends to 20. The top plot is for one cup. The box extends from 4 to 14 with a vertical line at 12 dividing it into two regions. A horizontal line off the left of the box extends to 0 and a horizontal line off the right extends to 20.
@@ -377,7 +377,7 @@ An experiment was conducted to study the effect of temperature on the reliabilit
 
 You may assume that the result for any single device is not influenced by the result for any other device.
 
-.. image:: ../../../_static/img/math/cartesian-plane-blank.jpg
+.. image:: ../../../.static/img/math/cartesian-plane-blank.jpg
 	:align: center
 
 Use this graph to answer the following questions.
@@ -412,7 +412,7 @@ b. After performing the experiment, the researchers recorded the data shown in t
 | Number of birds                       | 8  |  8  |  8  |  8  |  8  |
 +---------------------------------------+----+-----+-----+-----+-----+
 
-.. image:: ../../../_static/img/math/cartesian-plane-blank.jpg
+.. image:: ../../../.static/img/math/cartesian-plane-blank.jpg
 	:align: center
 
 Use this table and graph for the following problems,
@@ -425,7 +425,7 @@ Use this table and graph for the following problems,
 
 The scatterplot below displays the price in dollars and quality rating for 14 different sewing machines.
 
-.. image:: ../../../_static/img/problems/2012-apstats-frp-01-1.png
+.. image:: ../../../.static/img/problems/2012-apstats-frp-01-1.png
 	:align: center
 	
 a. Describe the nature of the association between price and quality rating for the sewing machines.
@@ -434,28 +434,28 @@ b. One of the 14 sewing machines substantially affects the appropriateness of us
 
 c. Chris is interested in buying one of the 14 sewing machines. He will consider buying only those machines for which there is no other machine that has both higher quality and lower price. On the scatterplot reproduced below, circle all data points corresponding to machines that Chris will consider buying.
 
-.. image:: ../../../_static/img/problems/2012-apstats-frp-01-2.png
+.. image:: ../../../.static/img/problems/2012-apstats-frp-01-2.png
 	:align: center
 
 4. **2021, Free Response, #6**
 
 Attendance at games for a certain baseball team is being investigated by the team owner. The following boxplots summarize the attendance, measured as average number of attendees per game, for 47 years of the team's existence. The boxplots include the 30 years of games played in the old stadium and the 17 years played in the new stadium.
 
-.. image:: ../../../_static/img/problems/2021-apstats-frp-06a.png
+.. image:: ../../../.static/img/problems/2021-apstats-frp-06a.png
 	:align: center
 
 a. Compare the distributions of average attendance between the old and new stadiums.
 
 b. The following scatterplot shows average attendance versus year,
 
-.. image:: ../../../_static/img/problems/2021-apstats-frp-06b.png
+.. image:: ../../../.static/img/problems/2021-apstats-frp-06b.png
 	:align: center
 
 Compare the trends in average attendance over time between the old and new stadium.
 
 c. Consider the following scatterplots,
 
-.. image:: ../../../_static/img/problems/2021-apstats-frp-06c.png
+.. image:: ../../../.static/img/problems/2021-apstats-frp-06c.png
 	:align: center
 
 Use these graphs to answer the following question,
@@ -475,14 +475,14 @@ Regression
 
 A newspaper in Germany reported that the more semesters needed to complete an academic program at the university, the greater the starting salary in the first year of a job. The report was based on a study that used a random sample of 24 people who had recently completed an academic program. Information was collected on the number of semesters each person in the sample needed to complete the program and the starting salary, in thousands of euros, for the first year of a job. The data are shown in the scatterplot below.
 
-.. image:: ../../../_static/img/problems/2016-apstats-frp-06a.png
+.. image:: ../../../.static/img/problems/2016-apstats-frp-06a.png
 	:align: center
 
 Use this scatterplot to ansewr the following questions.
 
 	a. Does the scatterplot support the newspaper report about number of semesters and starting salary? Justify your answer.
 
-.. image:: ../../../_static/img/problems/2016-apstats-frp-06b.png
+.. image:: ../../../.static/img/problems/2016-apstats-frp-06b.png
 	:align: center
 
 Use this scatterplot to answer the following questions.
@@ -491,7 +491,7 @@ Use this scatterplot to answer the following questions.
 
 An independent researcher received the data from the newspaper and conducted a new analysis by separating the data into three groups based on the major of each person. A revised scatterplot identifying the major of each person is shown below.
 
-.. image:: ../../../_static/img/problems/2016-apstats-frp-06c.png
+.. image:: ../../../.static/img/problems/2016-apstats-frp-06c.png
 	:align: center
 
 Use this revised scatterplot to answer the following questions.
@@ -506,7 +506,7 @@ Use this revised scatterplot to answer the following questions.
 
 Windmills generate electricity by transferring energy from wind to a turbine. A study was conducted to examine the relationship between wind velocity in miles per hour (mph) and electricity production in amperes for one particular windmill. For the windmill, measurements were taken on twenty-five randomly selected days, and the computer output for the regression analysis for predicting electricity production based on wind velocity is given below. The regression model assumptions were checked and determined to be reasonable over the interval of wind speeds represented in the data, which were from 10 miles per hour to 40 miles per hour.
 
-.. image:: ../../../_static/img/problems/2011-apstats-frp-05.png
+.. image:: ../../../.static/img/problems/2011-apstats-frp-05.png
 	:align: center
 
 Use this information to answer the following questions.
@@ -523,7 +523,7 @@ Use this information to answer the following questions.
 
 The manager of a grocery store selected a random sample of 11 customers to investigate the relationship between the number of customers in a checkout line and the time to finish checkout. As soon as the selected customer entered the end of a checkout line, data were collected on the number of customers in line who were in front of the selected customer and the time, in seconds, until the selected customer was finished with the checkout. The data are shown in the following scatterplot along with the corresponding least-squares regression line and computer output.
 
-.. image:: ../../../_static/img/problems/2018-apstats-frp-01.png
+.. image:: ../../../.static/img/problems/2018-apstats-frp-01.png
 	:align: center
 	
 Use this information to answer the following questions.
@@ -750,7 +750,7 @@ Suppose the pH measured by a randomly selected chemistry student is normally dis
 
 Four different statistics have been proposed as estimators of a population parameter. To investigate the behavior of these estimators, 500 random samples are selected from a known population and each statistic is calculated for each sample. The true value of the population parameter is 75. The graphs below show the distribution of values for each statistic.
 
-.. image:: ../../../_static/img/problems/2008-apstats-frp-02.png
+.. image:: ../../../.static/img/problems/2008-apstats-frp-02.png
 	:align: center
 	
 Use the information to solve the following problems.

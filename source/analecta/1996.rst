@@ -3,7 +3,7 @@
 1996
 ====
 
-.. image:: ../_static/img/personal/dream.jpg
+.. image:: ../.static/img/personal/dream.jpg
     :alt: Dream
     :align: center
     :width: 80%

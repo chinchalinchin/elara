@@ -10,7 +10,7 @@ Myself
 .. collapse:: Recursion, 2014
     :class: hover
 
-    .. image:: ../_static/img/personal/recursive-me.jpg
+    .. image:: ../.static/img/personal/recursive-me.jpg
         :alt: Recursive Me
         :align: center
         :width: 80%
@@ -18,7 +18,7 @@ Myself
 .. collapse:: Booz Allen Employment Badge, 2022
     :class: hover
 
-    .. image:: ../_static/img/personal/employment-badge-me.jpg
+    .. image:: ../.static/img/personal/employment-badge-me.jpg
         :alt: Employment Badge Me
         :align: center
         :width: 80%
@@ -29,7 +29,7 @@ Americorps
 .. collapse:: Exhibit A, 2015
     :class: hover
 
-    .. image:: ../_static/img/personal/americorps/americorps-01.jpg
+    .. image:: ../.static/img/personal/americorps/americorps-01.jpg
         :alt: Americorps #1
         :align: center
         :width: 80%
@@ -37,7 +37,7 @@ Americorps
 .. collapse:: Exhibit B, 2015
     :class: hover
 
-    .. image:: ../_static/img/personal/americorps/americorps-02.jpg
+    .. image:: ../.static/img/personal/americorps/americorps-02.jpg
         :alt: Americorps #2
         :align: center
         :width: 80%
@@ -45,7 +45,7 @@ Americorps
 .. collapse:: Exhibit C, 2015
     :class: hover
 
-    .. image:: ../_static/img/personal/americorps/americorps-03.jpg
+    .. image:: ../.static/img/personal/americorps/americorps-03.jpg
         :alt: Americorps #3
         :align: center
         :width: 80%
@@ -53,7 +53,7 @@ Americorps
 .. collapse:: Exhibit D, 2015
     :class: hover
 
-    .. image:: ../_static/img/personal/americorps/americorps-04.jpg
+    .. image:: ../.static/img/personal/americorps/americorps-04.jpg
         :alt: Americorps #4
         :align: center
         :width: 80%
@@ -61,7 +61,7 @@ Americorps
 .. collapse:: Exhibit E, 2015
     :class: hover
 
-    .. image:: ../_static/img/personal/americorps/americorps-05.jpg
+    .. image:: ../.static/img/personal/americorps/americorps-05.jpg
         :alt: Americorps #5
         :align: center
         :width: 80%
@@ -72,7 +72,7 @@ Cincinnati
 .. collapse:: Fifth and Third Building, 2017
     :class: hover
 
-    .. image:: ../_static/img/personal/cincinnati/cincinnati-00.jpg
+    .. image:: ../.static/img/personal/cincinnati/cincinnati-00.jpg
         :alt: Cincinnati #1
         :align: center
         :width: 80%
@@ -80,7 +80,7 @@ Cincinnati
 .. collapse:: Skyline Chili, 2017
     :class: hover
 
-    .. image:: ../_static/img/personal/cincinnati/cincinnati-01.jpg
+    .. image:: ../.static/img/personal/cincinnati/cincinnati-01.jpg
         :alt: Cincinnati #2
         :align: center
         :width: 80%
@@ -91,7 +91,7 @@ Sketches
 .. collapse:: Self Portrait, 2007
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/self-portrait-01.jpg
+    .. image:: ../.static/img/personal/sketches/self-portrait-01.jpg
         :alt: Self Portrait #1
         :align: center
         :width: 80%
@@ -99,7 +99,7 @@ Sketches
 .. collapse:: Drunkard, 2008
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/drunkard.jpg
+    .. image:: ../.static/img/personal/sketches/drunkard.jpg
         :alt: Drunkard
         :align: center
         :width: 80%
@@ -107,7 +107,7 @@ Sketches
 .. collapse:: Smoking In Diner, 2008
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/smoking-in-diner.jpg
+    .. image:: ../.static/img/personal/sketches/smoking-in-diner.jpg
         :alt: Smoking In Diner
         :align: center
         :width: 80%
@@ -115,7 +115,7 @@ Sketches
 .. collapse:: The End Is Near, 2008
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/the-end-is-near.jpg
+    .. image:: ../.static/img/personal/sketches/the-end-is-near.jpg
         :alt: The End Is Near
         :align: center
         :width: 80%
@@ -123,7 +123,7 @@ Sketches
 .. collapse:: Free Money, 2009
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/free-money.jpg
+    .. image:: ../.static/img/personal/sketches/free-money.jpg
         :alt: Free Money
         :align: center
         :width: 80%
@@ -131,7 +131,7 @@ Sketches
 .. collapse:: Smoking Under Tree, 2009
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/smoking-under-tree.jpg
+    .. image:: ../.static/img/personal/sketches/smoking-under-tree.jpg
         :alt: Smoking Under Tree
         :align: center
         :width: 80%
@@ -139,7 +139,7 @@ Sketches
 .. collapse:: Daydream, 2009
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/day-dream.jpg
+    .. image:: ../.static/img/personal/sketches/day-dream.jpg
         :alt: Day Dream
         :align: center
         :width: 80%
@@ -147,7 +147,7 @@ Sketches
 .. collapse:: Emo, 2009
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/emo.jpg
+    .. image:: ../.static/img/personal/sketches/emo.jpg
         :alt: Emo
         :align: center
         :width: 80%
@@ -155,7 +155,7 @@ Sketches
 .. collapse:: Off Work, 2009
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/off-work.jpg
+    .. image:: ../.static/img/personal/sketches/off-work.jpg
         :alt: Off Work
         :align: center
         :width: 80%
@@ -164,7 +164,7 @@ Sketches
 .. collapse:: Space Travel, 2009
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/space-travel.jpg
+    .. image:: ../.static/img/personal/sketches/space-travel.jpg
         :alt: Space Travel
         :align: center
         :width: 80%
@@ -172,7 +172,7 @@ Sketches
 .. collapse:: Biker, 2010
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/hells-angels.jpg
+    .. image:: ../.static/img/personal/sketches/hells-angels.jpg
         :alt: Hell's Angels
         :align: center
         :width: 80%
@@ -181,7 +181,7 @@ Sketches
 .. collapse:: Roman Battle, 2010
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/roman-battle.jpg
+    .. image:: ../.static/img/personal/sketches/roman-battle.jpg
         :alt: Roman Battle
         :align: center
         :width: 80%
@@ -189,7 +189,7 @@ Sketches
 .. collapse:: Alien World, 2011
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/alien-world.jpg
+    .. image:: ../.static/img/personal/sketches/alien-world.jpg
         :alt: Alien World
         :align: center
         :width: 80%
@@ -197,7 +197,7 @@ Sketches
 .. collapse:: Bank Robbery, 2011
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/bank-robbery.jpg
+    .. image:: ../.static/img/personal/sketches/bank-robbery.jpg
         :alt: Bank Robbery
         :align: center
         :width: 80%
@@ -205,7 +205,7 @@ Sketches
 .. collapse:: Bird Thing, 2011
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/bird-thing.jpg
+    .. image:: ../.static/img/personal/sketches/bird-thing.jpg
         :alt: Bird Thing
         :align: center
         :width: 80%
@@ -213,7 +213,7 @@ Sketches
 .. collapse:: On Break, 2011
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/on-break.jpg
+    .. image:: ../.static/img/personal/sketches/on-break.jpg
         :alt: On Break
         :align: center
         :width: 80%
@@ -221,7 +221,7 @@ Sketches
 .. collapse:: Call Center, 2011
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/call-center.jpg
+    .. image:: ../.static/img/personal/sketches/call-center.jpg
         :alt: Call Center
         :align: center
         :width: 80%
@@ -229,7 +229,7 @@ Sketches
 .. collapse:: Floaty Guy, 2011
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/floaty-guy.jpg
+    .. image:: ../.static/img/personal/sketches/floaty-guy.jpg
         :alt: Floaty Guy
         :align: center
         :width: 80%
@@ -237,7 +237,7 @@ Sketches
 .. collapse:: Police Brutality, 2011
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/police-brutality.jpg
+    .. image:: ../.static/img/personal/sketches/police-brutality.jpg
         :alt: Police Brutality
         :align: center
         :width: 80%
@@ -245,7 +245,7 @@ Sketches
 .. collapse:: Bus Hijacking, 2012
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/hijacking.jpg
+    .. image:: ../.static/img/personal/sketches/hijacking.jpg
         :alt: Bus Hijacking
         :align: center
         :width: 80%
@@ -253,7 +253,7 @@ Sketches
 .. collapse:: Hunter, 2012
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/hunter-guy.jpg
+    .. image:: ../.static/img/personal/sketches/hunter-guy.jpg
         :alt: Hunter Guy
         :align: center
         :width: 80%
@@ -261,7 +261,7 @@ Sketches
 .. collapse:: Myrman, 2012
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/myrman.jpg
+    .. image:: ../.static/img/personal/sketches/myrman.jpg
         :alt: Myrman
         :align: center
         :width: 80%
@@ -269,7 +269,7 @@ Sketches
 .. collapse:: Self Portrait, 2012
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/self-portrait-02.jpg
+    .. image:: ../.static/img/personal/sketches/self-portrait-02.jpg
         :alt: Self Portrait #2
         :align: center
         :width: 80%
@@ -277,7 +277,7 @@ Sketches
 .. collapse:: Weird Guy, 2012
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/ypir.jpg
+    .. image:: ../.static/img/personal/sketches/ypir.jpg
         :alt: Ypir
         :align: center
         :width: 80%
@@ -285,7 +285,7 @@ Sketches
 .. collapse:: Bug Baby, 2012
     :class: hover
 
-    .. image:: ../_static/img/personal/sketches/bug-thing.jpg
+    .. image:: ../.static/img/personal/sketches/bug-thing.jpg
         :alt: Bug Thing
         :align: center
         :width: 80%

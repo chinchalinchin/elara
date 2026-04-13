@@ -316,18 +316,18 @@ Terryology
 ----------
 
 - `One Times One Equals Two <https://tcotlc.com>`_
-    - :download:`OTOET PDF <../_static/pdf/otoet.pdf>`
+    - :download:`OTOET PDF <../.static/pdf/otoet.pdf>`
 
 ---
 
-.. image:: ../_static/img/context/psychological/flower-of-life.png
+.. image:: ../.static/img/context/psychological/flower-of-life.png
    :width: 70%
    :alt: The Flower Of Life
    :align: center
 
 ---
 
-.. image:: ../_static/img/context/psychological/terryology-syllogism.png
+.. image:: ../.static/img/context/psychological/terryology-syllogism.png
    :width: 70%
    :alt: The Walter Russell Periodic Table
    :align: center
@@ -450,7 +450,7 @@ Terryology
 Time Cube
 ---------
 
-.. image:: ../_static/svg/time-cube.svg
+.. image:: ../.static/svg/time-cube.svg
    :width: 70%
    :alt: The Time Cube
    :align: center
@@ -705,7 +705,7 @@ Valis
 Walter Russell Periodic Table
 -----------------------------
 
-.. image:: ../_static/img/context/psychological/walter-russel-periodic-table.png
+.. image:: ../.static/img/context/psychological/walter-russel-periodic-table.png
    :width: 70%
    :alt: The Walter Russell Periodic Table
    :align: center

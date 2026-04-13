@@ -31,7 +31,7 @@ Sum Anatomy
 
 The different parts of the sum are: the **upper limit**, the **lower limit**, the **term** and the **index**. These components can be identified with the following diagram,
 
-.. image:: ../../../_static/img/math/summation-symbol.png
+.. image:: ../../../.static/img/math/summation-symbol.png
     :align: center
 
 A sum contains two important bits of information:

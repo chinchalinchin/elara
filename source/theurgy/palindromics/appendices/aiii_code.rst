@@ -9,7 +9,7 @@ Appendix III: Code
 Data
 ----
 
-.. literalinclude:: ../../../_scripts/py/palindromics/data.py
+.. literalinclude:: ../../../.scripts/py/palindromics/data.py
    :language: python
 
 .. _palindromics-model-code:
@@ -17,7 +17,7 @@ Data
 Functions 
 ---------
 
-.. literalinclude:: ../../../_scripts/py/palindromics/functions.py
+.. literalinclude:: ../../../.scripts/py/palindromics/functions.py
    :language: python
 
 .. _palindromics-graph-code:

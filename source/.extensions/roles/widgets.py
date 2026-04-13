@@ -42,7 +42,7 @@ def process_back_nodes(app, doctree, fromdocname):
 
         # Correctly calculate the relative path for the SVG icon
         from_dir = os.path.dirname(fromdocname)
-        icon_path_from_src = '_static/svg/back.svg'
+        icon_path_from_src = '.static/svg/back.svg'
         icon_path = os.path.relpath(icon_path_from_src, from_dir).replace(os.path.sep, '/')
         
         # Render the template

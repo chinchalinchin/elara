@@ -1,4 +1,4 @@
-.. NOTE: links are loaded through `_static/rst/_links.rst`. See the `rst_prolog` property in the `conf.py` file for more detail.
+.. NOTE: links are loaded through `.static/rst/_links.rst`. See the `rst_prolog` property in the `conf.py` file for more detail.
 
 .. _radix:
 

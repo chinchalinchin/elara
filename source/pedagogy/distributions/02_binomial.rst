@@ -67,13 +67,13 @@ The Binomial Distribution has two parameters.
 
 TODO
 
-.. plot:: _scripts/py/plots/distributions/binomial/binomial_distribution_01.py
+.. plot:: .scripts/py/plots/distributions/binomial/binomial_distribution_01.py
 
-.. plot:: _scripts/py/plots/distributions/binomial/binomial_distribution_02.py
+.. plot:: .scripts/py/plots/distributions/binomial/binomial_distribution_02.py
 
-.. plot:: _scripts/py/plots/distributions/binomial/binomial_distribution_03.py
+.. plot:: .scripts/py/plots/distributions/binomial/binomial_distribution_03.py
 
-.. plot:: _scripts/py/plots/distributions/binomial/binomial_distribution_04.py
+.. plot:: .scripts/py/plots/distributions/binomial/binomial_distribution_04.py
 
 
 .. _binomial-probability:

@@ -110,7 +110,7 @@ In other words, *knowledge* is the process of inferring.
 
 We can visualize this argument with a :ref:`Venn diagram <venn-diagrams>`,
 
-.. image:: ../../_static/img/context/philosophical/syllogism.jpg
+.. image:: ../../.static/img/context/philosophical/syllogism.jpg
 
 In later sections, we will define the relation shown here more precisely as one of *containment* between two sets, i.e. the relation of one set **A** being wholly contained in another set **B**.
 

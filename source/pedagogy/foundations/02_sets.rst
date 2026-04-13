@@ -154,11 +154,11 @@ Venn Diagrams
 
 A *Venn Diagram* is a visual representation of sets and the relations between them. The universal set is represent as rectangle and sets are represented as circles within this rectangle. The simplest *Venn Diagram* is a graphic of a single set :math:`A` shown against the universal set :math:`S`, 
 
-.. plot:: _scripts/py/plots/venns/diagram_set.py
+.. plot:: .scripts/py/plots/venns/diagram_set.py
 
 You will sometimes set *Venn Diagrams* with the elements of the sets written in, as in the following picture,
 
-.. plot:: _scripts/py/plots/venns/diagram_elements.py
+.. plot:: .scripts/py/plots/venns/diagram_elements.py
 
 *Venn Diagrams* are useful for visualizing :ref:`set-relations`. For this reason, we will see more complex examples of *Venn Diagrams* in the next section.
 
@@ -189,7 +189,7 @@ To say the same thing in a different way, if the element *x* belongs to :math:`A
 
 The relation of *subset* can be seen in the following *Venn Diagram*, 
 
-.. plot:: _scripts/py/plots/venns/diagram_subset.py
+.. plot:: .scripts/py/plots/venns/diagram_subset.py
 
 This diagram represents the relationship :math:`A \subseteq B`.
 
@@ -315,7 +315,7 @@ The set containing elements that do not belong to the set :math:`A`.
 
 The complement can be visualized with the following *Venn Diagram*,
 
-.. plot:: _scripts/py/plots/venns/diagram_complement.py
+.. plot:: .scripts/py/plots/venns/diagram_complement.py
 
 .. tip:: 
 
@@ -364,13 +364,13 @@ We have to be careful with *Venn Diagrams* that represent unions, because the tw
 
 The first case, where the two sets have no elements in common is shown below,
 
-.. plot:: _scripts/py/plots/venns/diagram_disjoint.py
+.. plot:: .scripts/py/plots/venns/diagram_disjoint.py
 
 The union would be represented by *both* circles. Notice the circles do not touch. Sets that have no elements in common are called *disjoint*. 
 
 The second case, where the two sets have elements in common is shown in the next diagram,
 
-.. plot:: _scripts/py/plots/venns/diagram_overlapping.py
+.. plot:: .scripts/py/plots/venns/diagram_overlapping.py
 
 The union would be represented by the entire area of both circles. Notice the circles share some elements in this case. Sets that have elements in common, but are not subsets in either direction (i.e. neither :math:`A \subseteq B` nor :math:`B \subseteq A`), are called *overlapping*.
 
@@ -417,7 +417,7 @@ As in the union, there are two cases we need to consider when representing the i
 
 The first case, where the two sets have elements in common is shown in the next diagram,
 
-.. plot:: _scripts/py/plots/venns/diagram_overlapping.py
+.. plot:: .scripts/py/plots/venns/diagram_overlapping.py
 
 The intersection is represented by where the circles meet. In the case of *overlapping* sets, this is non-empty,
 
@@ -427,7 +427,7 @@ The intersection is represented by where the circles meet. In the case of *overl
 
 The second case, where the two sets have no elements in common is shown below,
 
-.. plot:: _scripts/py/plots/venns/diagram_disjoint.py
+.. plot:: .scripts/py/plots/venns/diagram_disjoint.py
 
 The intersection is represented by where the circles meet. In the case of *disjoint sets*, the circles do not meet. Thus,
 
@@ -919,7 +919,7 @@ The number of elements in :math:`A` or :math:`B` is equal to the number of eleme
 
 This is another theorem most easily understood by considering the following :ref:`venn diagram <venn-diagrams>`,
 
-.. plot:: _scripts/py/plots/venns/diagram_overlapping.py
+.. plot:: .scripts/py/plots/venns/diagram_overlapping.py
 
 The area encompassed by both circles is the union :math:`A \cup B`. The overlap in the circles is intersection :math:`A \cap B`. 
 
@@ -980,7 +980,7 @@ The number of elements in any set :math:`A` plus the number of elements in its c
 
 This theorem follows from the :ref:`venn diagram <venn-diagrams>` of a set with its complement,
 
-.. plot:: _scripts/py/plots/venns/diagram_complement.py
+.. plot:: .scripts/py/plots/venns/diagram_complement.py
 
 
 It can proved formally as follows,
@@ -1192,7 +1192,7 @@ The *square of opposition* is constructed by first drawing a table,
 
 In the entries of this table, you draw :ref:`venn-diagrams` that represent the intersection of the row and column. Putting the results together, we get the following picture,
 
-.. image:: ../../_static/img/math/sets/square-of-opposition.jpg
+.. image:: ../../.static/img/math/sets/square-of-opposition.jpg
 	:align: center
 
 Notice the diagonals of the picture, the line that connects the top left to the bottom right and the line that connects the top right to the bottom left, form the contradictory pairs of propositions, namely,

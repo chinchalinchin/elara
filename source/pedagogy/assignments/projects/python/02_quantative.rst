@@ -71,7 +71,7 @@ The `Michelson Velocity of Light Experiment <https://www.gutenberg.org/files/117
 
 Michelson's 1879 experimental results remained one of most accurate estimations of the speed of light until modern times. Using a series of mirrors depicted below, Michelson was able to divert light rays emitting from a common source along separate paths and then measure the fractional time difference it took for the rays to reach the same location.
 
-.. image:: ../../../../_static/img/context/scientific/michelson-experiment.png
+.. image:: ../../../../.static/img/context/scientific/michelson-experiment.png
     :width: 60%
     :align: center
 
@@ -94,7 +94,7 @@ Henry Cavendish performed the first modern, scientific experiment to measure the
 
 Using the mutual gravitational attraction of two heavy metal balls attached to a `torsion balanace <https://en.wikipedia.org/wiki/Torsion_spring#Torsion_balance>`_ to twist a fiber of string, Cavendish measured the force of the tension produced. 
 
-.. image:: ../../../../_static/img/context/scientific/cavendish-torsion-balance.png
+.. image:: ../../../../.static/img/context/scientific/cavendish-torsion-balance.png
 	:width: 60%
 	:align: center
 
@@ -156,7 +156,7 @@ The following code snippet shows how to create a histogram for a simple distribu
 
     plot.show()
 
-.. plot:: _scripts/py/plots/histograms/histogram_simple.py
+.. plot:: .scripts/py/plots/histograms/histogram_simple.py
 
 Notice how easy and painless the whole process is! All we have to do is pass in a list of data to the ``hist()`` function and *matplotlib* will create a gloriously beautiful picture. 
 
@@ -164,7 +164,7 @@ That is all well and good, but often we need a little more control over the feat
 
 As another (more complex) example, the following plot is a histogram generated with :ref:`matplotlib` using *6* classes. Click on the ``source`` button in the top left corner to download the script. Read through the comments to see how it was constructed. 
 
-.. plot:: _scripts/py/plots/histograms/histogram_normal.py
+.. plot:: .scripts/py/plots/histograms/histogram_normal.py
 
 The sample in this graph was randomly generated using a combination of the :ref:`range() function <python-range-function>` and the :ref:`random() function <python-random-package>`.
 
@@ -255,7 +255,7 @@ The following code snippet generates a **CDF** for a sample of data,
 
     plt.show()
 
-.. plot:: _scripts/py/plots/ogives/ogive_simple.py
+.. plot:: .scripts/py/plots/ogives/ogive_simple.py
 
 To create a **CDF**, all we have to do is pass in two extra arguments to ``hist()``, the ``cumulative`` argument and ``density`` argument. For **CDFs**, both of these arguments are set to ``True``. ``cumulative`` tells *matplotlib* to accumulate the frequencies and stack them as it graphs the frequency distribution. ``density`` tells *matplotlib** to scale the vertical axis to 1. 
 
@@ -305,7 +305,7 @@ A boxplot for the example we were just discussing can be created in **Python** w
 
     plot.show()
 
-.. plot:: _scripts/py/plots/boxplots/boxplot_simple.py
+.. plot:: .scripts/py/plots/boxplots/boxplot_simple.py
 
 The `boxplot() <https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html>`_ is, as you might have guessed, :ref:`matplotlib`'s way of generating boxplots. The first argument is the dataset we will wish to graph. 
 
@@ -342,7 +342,7 @@ The following code snippet will create a histogram and boxplot on the plot and t
 
     plot.show()
 
-.. plot:: _scripts/py/plots/other/boxplot_and_histogram.py
+.. plot:: .scripts/py/plots/other/boxplot_and_histogram.py
 
 There are several things to notice about this code. 
 
@@ -556,24 +556,24 @@ The following code snippet will load in a *CSV* spreadsheet named ``example.csv`
 Velocity of Light Data
 ----------------------
 
-You can download the full dataset :download:`here <../../../../_static/csv/scientific/velocity-of-light-data.csv>`.
+You can download the full dataset :download:`here <../../../../.static/csv/scientific/velocity-of-light-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Michelson's Velocity of Light Data
-   :file: ../../../../_static/csv/previews/velocity-of-light-data-preview.csv
+   :file: ../../../../.static/csv/previews/velocity-of-light-data-preview.csv
 
 The meaning of the column is clear from the column header: each observation measures the speed of light in meters per second, :math:`\frac{km}{s}`.
 
 Density of the Earth Data
 -------------------------
 
-You can download the full dataset :download:`here <../../../../_static/csv/scientific/earth-density-data.csv>`.
+You can download the full dataset :download:`here <../../../../.static/csv/scientific/earth-density-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Cavendish's Density of the Earth Data
-   :file: ../../../../_static/csv/previews/earth-density-data-preview.csv
+   :file: ../../../../.static/csv/previews/earth-density-data-preview.csv
 
 The first column corresponds to the experiment number (first, second, third, etc.). The second column is the *ratio of the density of Earth to the density of water*. Recall the density of water by definition is :math:`1 \frac{g}{cm^3}`.
 

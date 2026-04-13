@@ -16,7 +16,7 @@ Shabaka Stone
 
 **2500s BCE**
 
-.. figure:: ../_static/img/context/historical/shabaka-stone.jpeg
+.. figure:: ../.static/img/context/historical/shabaka-stone.jpeg
   :width: 80%
   :alt: The Shabaka Stone
   :align: center

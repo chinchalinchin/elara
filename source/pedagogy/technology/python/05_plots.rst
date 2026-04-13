@@ -182,7 +182,7 @@ All graphing functions in **matplotlib** accept ``color`` and ``ec`` arguments. 
 
 The full list of colors available to use in :ref:`matplotlib` is detailed in the following chart,
 
-.. image:: ../../../_static/img/python/matplotlib-colors.png
+.. image:: ../../../.static/img/python/matplotlib-colors.png
     :align: center
 
 Gallery
@@ -214,7 +214,7 @@ Boxplot
 
     Below is an example of a boxplot, unrelated to the above code snippet.
 
-.. plot:: _scripts/py/plots/boxplots/boxplot_normal.py
+.. plot:: .scripts/py/plots/boxplots/boxplot_normal.py
 
 .. _matplotlib-barchart:
 
@@ -253,7 +253,7 @@ The code snippet below will generate a bar chart for the following frequency dis
 
     Below is an example of a barchart, unrelated to the above code snippet. 
 
-.. plot:: _scripts/py/plots/other/bar_chart.py
+.. plot:: .scripts/py/plots/other/bar_chart.py
 
 Stacked
 *******
@@ -315,17 +315,17 @@ The following code will generate a *stacked bar chart* to visualize the *associa
 
     Below is an example of a stacked bar chart, unrelated to above code snippet.
 
-.. plot:: _scripts/py/plots/other/stacked_bar_chart.py
+.. plot:: .scripts/py/plots/other/stacked_bar_chart.py
 
 Dot Plot
 --------
 
-.. plot:: _scripts/py/plots/other/dot_plot.py
+.. plot:: .scripts/py/plots/other/dot_plot.py
 
 Pie Chart
 ---------
 
-.. plot:: _scripts/py/plots/other/pie_chart.py
+.. plot:: .scripts/py/plots/other/pie_chart.py
     
 Histogram
 ---------
@@ -333,22 +333,22 @@ Histogram
 Normal
 ******
 
-.. plot:: _scripts/py/plots/histograms/histogram_normal.py
+.. plot:: .scripts/py/plots/histograms/histogram_normal.py
 
 Relative
 ********
 
-.. plot:: _scripts/py/plots/histograms/histogram_relative.py
+.. plot:: .scripts/py/plots/histograms/histogram_relative.py
 
 Ogives
 ------
 
-.. plot:: _scripts/py/plots/ogives/ogive_normal.py
+.. plot:: .scripts/py/plots/ogives/ogive_normal.py
 
 Scatterplot
 -----------
 
-.. plot:: _scripts/py/plots/scatterplots/scatterplot_no_correlation.py
+.. plot:: .scripts/py/plots/scatterplots/scatterplot_no_correlation.py
 
 Line Of Best Fit
 ****************
@@ -363,12 +363,12 @@ TODO
 QQ Plots
 ********
 
-.. plot:: _scripts/py/plots/other/qq_plot.py
+.. plot:: .scripts/py/plots/other/qq_plot.py
     
 Time Series
 -----------
 
-.. plot:: _scripts/py/plots/timeseries/timeseries_no_trend.py
+.. plot:: .scripts/py/plots/timeseries/timeseries_no_trend.py
 
 References
 ==========

@@ -211,7 +211,7 @@ Challenge Problem
 
 A local company is interested in supporting environmentally friendly initiatives such as carpooling among employees. The company surveyed all of the 200 employees at the downtown offices. Employees responded as to whether or not they own a car and to the location of the home where they live. The results are shown in the table below.
 
-.. image:: ../../../_static/img/problems/2012-apstats-pe-23.png
+.. image:: ../../../.static/img/problems/2012-apstats-pe-23.png
     :align: center 
 
 Which of the following statements about a randomly chosen person from these 200 employees is true?

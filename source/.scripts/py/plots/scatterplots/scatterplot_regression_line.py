@@ -19,6 +19,22 @@ matplotlib.use('agg')
 import matplotlib.pyplot as mpl
 import statistics as stat
 
+# Manual calculation for Python < 3.10
+def linear_regression(x, y):
+    n = len(x)
+    mu_x = stat.mean(x)
+    mu_y = stat.mean(y)
+    
+    # Calculate covariance and variance manually
+    # slope (beta_1) = sum((x - mu_x) * (y - mu_y)) / sum((x - mu_x)^2)
+    numerator = sum((xi - mu_x) * (yi - mu_y) for xi, yi in zip(x, y))
+    denominator = sum((xi - mu_x) ** 2 for xi in x)
+    
+    slope = numerator / denominator
+    intercept = mu_y - slope * mu_x
+    
+    return slope, intercept
+
 bivariate_data = [
     (2, 1), (8, 3), (1, 1), (2, 0), (9, 4), (3, 2), (5, 3),
     (1, 0), (7, 3), (6, 3), (3, 2), (0, 0), (0, 1), (8, 4),
@@ -32,7 +48,7 @@ bivariate_data = [
 x_data = [ obs[0] for obs in bivariate_data ]
 y_data = [ obs[1] for obs in bivariate_data ]
 
-slope, intercept = stat.linear_regression(x_data, y_data)
+slope, intercept = linear_regression(x_data, y_data)
 f_s = round(slope, 2)
 f_i = round(intercept, 2)
 f_m = f"y-hat = {f_s} * x + {f_i}"

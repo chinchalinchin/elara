@@ -336,7 +336,7 @@ A Sentence Integral, on the other hand, is a distilled quantity that encapsulate
 
 To see the power of Sentence integration, it is instructive to seek out real world data. The following histogram was generated using the Brown University Standard Corpus of Present-Day American English (Brown Corpus). It shows the frequency of Delimiter Count coefficients (i.e. the *2i - l(ζ) - 1* coefficient) for a sample of Sentences of String Length 105. The sample contains several thousand data points,
 
-.. image:: ../_static/img/sentences/english/delimiter_coefficient_distribution_n105.png
+.. image:: ../.static/img/sentences/english/delimiter_coefficient_distribution_n105.png
   :width: 400
   :alt: Delimiter Count Coefficient Distribution
 

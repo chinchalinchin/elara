@@ -1,4 +1,5 @@
-{%- set poems                 = [
+{% set root = "/Users/gmoore/Home/projects/elara/" %}
+{% set poems                 = [
     "source/oeuvre/2025/abstracta/00.rst",
     "source/oeuvre/2025/abstracta/01.rst",
     "source/oeuvre/2025/ballads/00.rst",
@@ -48,8 +49,8 @@
     "source/oeuvre/2026/verse/00.rst",
     "source/oeuvre/2026/verse/01.rst",
     "source/oeuvre/2026/verse/02.rst"
-] -%}
-{% set root = "/Users/gmoore/Home/projects/elara/" %}
+] %}
+
 {% for poem in poems %}
 {{ file(root+poem) }}
 

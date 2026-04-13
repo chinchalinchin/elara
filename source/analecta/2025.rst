@@ -290,7 +290,7 @@ Any assertions about the origin and historical development of :ref:`language <la
 
 As :ref:`language <language>` evolves, its progression into abstraction is apparaent. The correspondence between the signifier and the signified is almost entirely severed as linguistic forms accumulate syntactic functions and these functions become the bearers of meaning beyond the directly indicative; Language is no longer a direct mapping between object and sign. The `following diagram <https://www.britannica.com/topic/writing/Sumerian-writing>`_ shows the evolution of cunieform, from simple pictograms to abstract symbols,
 
-.. image:: ../_static/img/context/anthropological/cuneiform-evolution.jpg
+.. image:: ../.static/img/context/anthropological/cuneiform-evolution.jpg
    :width: 80%
    :alt: Encyclopedia Britannica Cuneiform Table
    :align: center

@@ -72,7 +72,7 @@ Type the following command into your *Linux* terminal,
 
     pip3 install matplotlib tk
 
-.. image:: ../../../../_static/img/python/matplotlib-tk-install.png
+.. image:: ../../../../.static/img/python/matplotlib-tk-install.png
     :align: center 
 
 Output:
@@ -88,7 +88,7 @@ Output:
 
     Successfully installed tk-0.1.0
 
-.. image:: ../../../../_static/img/python/matplotlib-tk-install-done.png
+.. image:: ../../../../.static/img/python/matplotlib-tk-install-done.png
     :align: center 
 
 You should see the packages download and install into your system.
@@ -204,7 +204,7 @@ Recall a standard bar chart is a way of visually representing the marginal frequ
 	
 Up until now we have been living in the stone age, creating these graphs by hand. Welcome to the twenty-first century. Behold, the power of `matplotlib <https://matplotlib.org/>`_,
 
-.. plot:: _scripts/py/plots/other/bar_chart.py
+.. plot:: .scripts/py/plots/other/bar_chart.py
 
 Click on the ``Source Code`` button in the top left corner of the graph to download the *.py* script used to generate this graph. Examine the source code contained therein for generating a *Bar Chart* with :ref:`matplotlib <python-plotting>`. Be sure to read the comments before you execute it, as you will need to tweak a setting to get it to run on your computer. 
 
@@ -250,7 +250,7 @@ The two arguments, ``color`` and ``ec``, affect the *styling* of the bar chart. 
 
 The full list of colors available to use in :ref:`matplotlib` is detailed in the following chart,
 
-.. image:: ../../../../_static/img/python/matplotlib-colors.png
+.. image:: ../../../../.static/img/python/matplotlib-colors.png
     :align: center
 
 Any value in this chart can be used an argument for ``color`` or ``ec``.
@@ -268,7 +268,7 @@ Recall a *stacked bar chart* is a way of visually representing a *conditional di
 
 	P(A \mid B) = \frac{n(A \cap B)}{n(B)}
 	
-.. plot:: _scripts/py/plots/other/stacked_bar_chart.py
+.. plot:: .scripts/py/plots/other/stacked_bar_chart.py
 
 This one is extremely tricky, so read through it carefully. 
 
@@ -458,12 +458,12 @@ The following code snippet will load in a *CSV* spreadsheet named ``example.csv`
 Electric Vehicle Dataset 
 ------------------------
 
-You can download the full dataset :download:`here <../../../../_static/csv/economic/electric-vehicle-population-data.csv>`.
+You can download the full dataset :download:`here <../../../../.static/csv/economic/electric-vehicle-population-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Electric Vehicles in Washington State
-   :file: ../../../../_static/csv/previews/electric-vehicle-population-data-preview.csv
+   :file: ../../../../.static/csv/previews/electric-vehicle-population-data-preview.csv
 
 The meaning of the columns was discussed in more detail in :ref:`project-one-background`. Refer to that section for further information on this dataset.
 

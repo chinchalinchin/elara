@@ -305,7 +305,7 @@ The Emptying Algorithm takes a string *t* as input, which can be thought of as a
 
 ∎
 
-.. graphviz:: ../../_static/dot/palindromes/emptying.dot
+.. graphviz:: ../../.static/dot/palindromes/emptying.dot
     :caption: A diagram of the Emptying Algorithm
     :alt: Emptying Algorithm Diagram
 
