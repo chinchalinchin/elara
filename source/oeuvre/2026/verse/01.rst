@@ -563,13 +563,13 @@ Book 1
     It's true, this place is not what you expect,
     but
 
-    but unless you forget
+    unless 
+    forget
 
     delay despair, 
     
     For this, I'll name to you the Conquest yet 
     to come
-
 
     then next the steed of Ares reared its legs
     in sight of conflagrations' king incensed,
