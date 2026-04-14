@@ -21,7 +21,8 @@ task:
     content: |
       <task>
     # -------------------------------------------
-    shell: []
+    shell: 
+      - cat /Users/gmoore/Home/projects/elara/build/html/index.html
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -33,3 +34,5 @@ task:
           directory: true
           elara_build: true
           elara_linguistics: false
+          elara_extensions: true
+          elara_static: true

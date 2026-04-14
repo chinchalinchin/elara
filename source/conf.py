@@ -52,7 +52,7 @@ exclude_patterns = [
 plot_html_show_source_link = True
 
 rst_prolog = """
-.. include:: /.static/rst/_links.rst
+.. include:: /.static/rst/links.rst
 """
 
 # -- HTML Configuration -------------------------------------------------

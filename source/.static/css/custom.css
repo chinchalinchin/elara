@@ -156,3 +156,8 @@
     user-select: none;
     -webkit-user-select: none;
 }
+
+.sidebar-primary-item .navbar-icon-links {
+    justify-content: center;
+    width: 100%;
+}

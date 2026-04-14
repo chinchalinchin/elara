@@ -19,11 +19,10 @@ task:
     title: "Elara: Build"
     # -------------------------------------------
     content: |
-      Why doesn't the favicon.ico render in the browser?
+      The side menu icons (Docker Hub, Github, PyPi, LinkedIn, Facebook) are not centered above the search bar. How can I accomplish this?
     # -------------------------------------------
     shell: 
-      - cat /Users/gmoore/Home/projects/elara/source/_static/favicon.ico
-      - curl https://elara.chinchalinchin.com/_static/favicon.ico
+      - cat /Users/gmoore/Home/projects/elara/build/html/index.html
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -35,3 +34,5 @@ task:
           directory: true
           elara_build: true
           elara_linguistics: false
+          elara_extensions: true
+          elara_static: true

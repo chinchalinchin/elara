@@ -39,19 +39,37 @@ views:
     # --- 3. GITHUB VIEWS
     github:
       blobs:
+        # ------------------ ELARA
+        # ----------------------------
         elara_build:
-          title: "Build Files"
+          title: "Elara: Build Files"
           files:
             requirements.txt: text
             Dockerfile: docker
             source/conf.py: python
         elara_linguistics:
-          title: "Linguistic Script"
+          title: "Elara: Linguistic Scripts"
           files:
-            source/_scripts/py/linguistics/poetics.py: python
-            source/_scripts/py/linguistics/rhyme.py: python
-            source/_scripts/py/linguistics/syllabify.py: python
-            source/_scripts/py/linguistics/synonyms.py: python
+            source/.scripts/py/linguistics/poetics.py: python
+            source/.scripts/py/linguistics/rhyme.py: python
+            source/.scripts/py/linguistics/syllabify.py: python
+            source/.scripts/py/linguistics/synonyms.py: python
+        elara_extensions:
+          title: "Elara: Extensions"
+          files:
+            source/.extensions/directives/panels.py: python
+            source/.extensions/roles/classes.py: python
+            source/.extensions/roles/widgets.py: python
+            source/.templates/panels/map.html.j2: jinja2
+            source/.templates/panels/rss.html.j2: jinja2
+            source/.templates/panels/verse.html.j2: jinja2
+            source/.templates/widgets/back.html.j2: jinja2
+            source/.templates/widgets/share.html.j2: jinja2
+        elara_static:
+          title: "Elara: Static Files"
+          files:
+            source/.static/css/custom.css: css
+            source/.static/rst/links.rst: rst
         # ------------------ TERRAFORM
         # ----------------------------
         tf_platform:
