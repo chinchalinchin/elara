@@ -1,10 +1,15 @@
-{% for task_data in task.inventory.host if task_data.views.command %}
+{%- for task_data in task.inventory.host %}
+
+### View: Command({{ task_data.parameters.hostname }})
+
+{% for cmd in task_data.parameters.command %}
 {% set ssh_cmd =  'ssh ' + properties.inventory.host.username + '@' + task_data.parameters.hostname %}
-### View: Command
 
 ```bash
-{{ properties.inventory.host.username }}@{{ task_data.parameters.hostname }} % {{ task_data.parameters.command }}
+{{ properties.inventory.host.username }}@{{ task_data.parameters.hostname }} % {{ cmd }}
 
-{{ command(ssh_cmd + ' ' + task_data.parameters.command) }}
+{{ command(ssh_cmd + ' ' + cmd) }}
 ```
+
+{% endfor %}
 {% endfor %}

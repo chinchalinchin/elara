@@ -1,5 +1,6 @@
-{% for task_data in task.inventory.host if task_data.views.docker %}
-## View: Docker
+{%- for task_data in task.inventory.host if task_data.views.docker %}
+
+### View: Docker({{ task_data.parameters.hostname  }})
 
 {% for view, cmd in views.inventory.host.docker.items() %}
 {% set ssh_cmd ='ssh ' + properties.inventory.host.username + '@' + task_data.parameters.hostname + ' ' + cmd %}

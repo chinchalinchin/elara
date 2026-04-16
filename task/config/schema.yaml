@@ -55,10 +55,10 @@ task:
     # host: 
       # - parameters:
       #     hostname: integ.chinchalinchin.com
-      #     command: sudo docker ps
+      #     command: 
+      #       - sudo docker ps
       #   views:
       #     certificates: false
-      #     command: true
       #     docker: false
       #     specifications: false
 
