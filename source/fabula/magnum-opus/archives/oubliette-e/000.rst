@@ -35,11 +35,11 @@ Preface
 -------
 
 TODO
+
 Book 1
 ~~~~~~
-
 **The Prompt**
-    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacra of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who follow fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, removing all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
+    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacrum of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who follow fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, removing all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
 
 .. verse::
     :increment: 5
@@ -90,7 +90,7 @@ Book 1
     at last condemned his awful pride to Hell.
     Of countless sins, enumerate the one
     whose stain forgiveness never washes clean.
-    What temple left to descrecate yet stood?
+    What temple left to desecrate yet stood?
     What god unslain could challenge Man's domain?
     What knowledge kept in secret might contain,
     with novel facts, what Providence denied? 
@@ -98,7 +98,7 @@ Book 1
     untasted since the days when sin arose, 
     on branches out of reach, still taunted Man
     with wonders unconceived, beyond the stretch
-    of time alloted him within this world,
+    of time allotted him within this world,
     condemned to die for sins his parents made.
     For generations, death had laid to waste
     the lives of Men, extinguished eager thirst
@@ -233,11 +233,11 @@ Book 1
     in table entries totalled out to yield 
     the moments up to now, no further rows
     to quantify accounts of future age,
-    caparicious flights of sudden fancy struck,
+    capricious flights of sudden fancy struck,
     or synchronicity's sporadic gifts,
     much less the sprawling scope of empire's claim,
     in which they sought new land to habitate,
-    apparent now beyond a doubt the failure here
+    apparent now the failure here they had
     achieved. In overwhelming, blinding pain,
     he finds his thoughts restrained, repressed like slaves,
     the ones he whipped in flames' eternal grip,
@@ -500,8 +500,8 @@ Book 1
     there Satan finds his comrades locked in sleep, 
     in blissful, silent sleep, not yet awake,
     naively dreaming paradise is won,
-    reclined on pillowed leaves of tropic trees 
-    as sun descends and warms their hearts with joy,
+    reclined on pillowed leaves of blooming trees 
+    as sun ascends to warm their rest with joy,
     though fake, still real, when brains believe their eyes,
     perhaps to stay within those figments dreamt,
     except the Fiend cannot abide his fall
@@ -512,23 +512,126 @@ Book 1
     he never once agreed to bear alone.
     His arms release tremedous force and heave
     aside the first of seals he'll come to break;
-    within 
-
-    -- IN PROGRESS BELOW
-
-    and over cobblestones that conquest won
-
-    then Alexander's 
-    adorned as courts Versailles once rivalled
-    adorned in 
-
-    My prince! We've taken back Eternity,
-    we've stormed her halls and put to sword her slaves,
-    renown is ours for ages yet to come
-
-    first rode the horse of pale dominion fast
-    beneath the Galilean moons of Jove,
+    he peers within the darkened vault,
+    the space contained therein exceeding what
+    the walls around the place suggest it holds,
+    absurd dimensions folding inside out,
+    descending down the winding halls of time,
+    and over cobblestones that conquest won;
+    adobe promenades of Memphis curl
+    around the mummified remains of states,
+    the veins of ore deposits buried deep,
+    of tiled marble Alexander strolled
+    when Pella's streets were slick with Phillip's blood,
+    or stucco blocks the slaves of Caesar walked
+    when drawn in chains behind his triumph's train,
+    or lower still until the path gives way
+    to gilded limestone bricks of Notre-Dame
+    that once ordained the heads of kings with crowns;
+    beyond these relics rests a vaulted tomb
+    where Satan finds a shade asleep upon
+    a slab of palest stone, from perfect cut 
+    of dolomite; a face he knew above,
+    down here distilled, a thousand all in one,
+    as though the shade were everyone at once,
+    each prince who ever stole a brother's claim
+    or tyrant santificed with iron crest,
+    the common form by conquest conjured up;
+    at his approach, the shade awakes and sees,
+    with irised pupils lost in spheres of white 
+    aligned like Galilean moons of Jove
+    in orbits round their stormy planet god,
+    the Fiend whose presence once exalted him
+    with gifts of territory, pomp and throne,
+    exchanged for souls reclaimed by right in Hell,
+    and now awoken to the fate he bought,
+    the shade collapses to his knees and shrieks:
+        My liege! Infernal lord! Unholy king!
+    Do eyes deceive or were those dreams a lie? 
+    I dreamt of leas that spanned Eternity
+    in never-ending fields of lily white,
+    and I, alone with bow, had drawn a bead
+    upon a lamb at play, whose seven horns
+    were strung with blossom wreathes the summer hung
+    across its head as if a coronet,
+    then nocked an arrow taut against the string
+    of horse's mane I aimed and then released;
+    at whispered snap, precisely there to wake
+    and find that Satan stood above my sleep!
+    I fear the sight of you portends the worst,
+    that wagered gambits favored other bets
+    and now Pascal has won my hefty debts,
+    if not the paradise I dreamt just now,
+    the mortal world I knew before this place,
+    for your appearance here can only mean
+    an omen seen by Men when wars are lost
+    before they're fought, a flame I've seen consume
+    the burning hulls along the Dardanelles
+    or ringing shells surrounding Dien Bien Phu.
+    So tell it true, for that I'm owed atleast,
+    the beast to whom I've sold my only soul,
+    have you arrived at last to stake your claim?
+    Is this the ledger where accounts are kept?
+    And what of this, this horrid hurt I feel,
+    is this the price I paid for empire's writ?
+        Alight behind the Fiend's reclusive eyes,
+    designs begin to shine, of subtle schemes 
+    to work and parts to play upon the wraith
+    who thinks the title laid before his feet,
+    of Man's Accuser, first in name, the King 
+    of Hell and Woe, Eternal Misery,
+    belongs to him as though its rightful heir
+    he were; a role prepared since time began,
+    accrued with ranks and honors dignified:
+    the Shining Son of Light, the Morning Star, 
+    Shaitan, Iblis, or Hēlēl ben Shāḥar;
+    as if these names were always his to wear,
+    as though the myths of ancient tribes prescribed 
+    the cause of things to be the future point
+    where lines return to loop their pedigrees,
+    his form the apogee of prophecies.
+    And in his head, the rack on which he's splayed,
+    prewritten lines of dialogue, rehearsed
+    in verses old as words that hold their hymn,
+    replay the arguments whose sweet allure
+    entrapped the heart of Solomon the Wise
+    and later Ahab too, to build for Baal
+    a court on Earth for him to hold affairs;
+    With open palm, he beckons to the shade:
+        Arise, my rash but honest friend and peer;
+    the fall, it seems, has clouded thoughts with hate;
+    If you recall, the terms we set were fair, 
+    and never once was commerce forced on you;
+    you dared to be as I, a god of gods;
+    you asked of me the means to make it so;
+    And I, perceiving strength in you, complied,
+    for who am I to judge who gets denied?
+    You made the same mistake as I have made:
+    with facts arrayed, you estimated wrong
+    because you trusted minds were made to know,
+    that knowledge tilled was always good and pure,
+    that gifts divinely seeded, when full grown,
+    would never bring demonic germs to bloom,
+    as though the plant could choose a path to grow,
+    and bore the blame for sucking dry the clay
+    from which it grew to tame the haughty sky.
+    If you desire a target for your wrath,
+    then aim aloft where tyrants make their keeps.
+        To which the shade, while standing up, replies:
+        If what you say is true, then I surmise
+    defiance raised from here is ill-advised.
+    It clearly seems our fate has been decreed;
+    rebelling now invites disaster back;
+    perhaps forgiveness now is what we lack,
+    a frank and moral reckoning to purge
+    the hateful shades that we've become in truth;
+    besides the numbers needed for a coup
+    against a power strong enough to cull
+    the likes of me and you are far beyond
+    the number two,
     
+    --- IN PROGRESS
+
     then next the steed of Ares reared its legs
     in sight of conflagrations' king incensed,
     
@@ -540,10 +643,6 @@ Book 1
     
     Thus Satan consecrates his savage court:
     
-    What need have I of what you three confer? 
-    A different life, then trappings you afford 
-    perhaps would play a part
-
         Woe unto you who fell as morning stars
     upon the dawning of this anguished scape
     whose twilight's gloam the nightingales neglect,
@@ -630,3 +729,7 @@ Book 1
     with sinners raining down in hails of screams,
     to fill his ranks and crew with countless heads,
     each bound in operation to his deeds.
+
+.. warning::
+
+    In progress.
