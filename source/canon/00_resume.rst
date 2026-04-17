@@ -62,8 +62,8 @@ Publications
 - `Eulogy*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times <https://www.sligocreekpublishing.com/bearing-witness>`_
 - *Turkey Vultures*, Backbone Mountain Review, (Forthcoming)
 - `Floods, Four Tulips Magazine, 2026 Anthology <https://www.fourtulips.com/archives/floods>`_
-- *Absurdity*, Infocalypse Press, Volume III (Forthcoming)
-- *The Gap*, Infocalypse Press, Volume III (Forthcoming)
+- `Absurdity, Infocalypse Press, Volume 1, Issue 2 <https://www.infocalypse.press/issue-2-without-a-face/>`_
+- `The Gap, Infocalypse Press, Volume III <https://www.infocalypse.press/issue-2-without-a-face/>`_
 - `Cathedral, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
 - `Christmas, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
 - `Anniversary, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
