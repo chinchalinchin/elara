@@ -256,7 +256,7 @@ The horses rounded the face of a cliff and ascended to the top of a bluff that o
 D
 .. IN PROGRESS: Meet Stephen again. Euphemia is "fine" (hair regrown, still a child), but mute.
 
-.. image:: ../../../../.static/img/fabula/magnum-opus/illustrations-of-masonry-excerpt.jpg
+.. image:: ../../../../.static/img/oracular/magnum-opus/illustrations-of-masonry-excerpt.jpg
    :width: 70%
    :alt: Schematic of unknown device.
    :align: center

@@ -51,13 +51,13 @@ TODO
 
 Due to the Law of Large Numbers, as the number of simulations increases, the approximation of :math:`\pi` converges to its true value. 
 
-.. image:: ../../../../.static/img/math/statistics/monte-carlo-pi-100.png
+.. image:: ../../../../.static/img/mathematical/statistics/monte-carlo-pi-100.png
     :align: center
    
-.. image:: ../../../../.static/img/math/statistics/monte-carlo-pi-1000.png
+.. image:: ../../../../.static/img/mathematical/statistics/monte-carlo-pi-1000.png
     :align: center
     
-.. image:: ../../../../.static/img/math/statistics/monte-carlo-pi-10000.png
+.. image:: ../../../../.static/img/mathematical/statistics/monte-carlo-pi-10000.png
     :align: center
     
 Areas Under Curves

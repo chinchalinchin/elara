@@ -829,7 +829,7 @@ From this definition, it should be clear *percentiles* only have meaning with re
 
 *Order statistics* give us a way to precisely define a percentile. *Order statistics* divide the interval on which the sample is measured into :math:`n+1` intervals, pictured below,
 
-.. image:: ../../.static/img/math/statistics/order-statistics.jpg
+.. image:: ../../.static/img/mathematical/statistics/order-statistics.jpg
     :align: center
 
 Note all of the intervals are *below* the order statistic except the last one, which is *above* its order statistic. Hence :math:`n+1`.

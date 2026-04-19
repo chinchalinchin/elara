@@ -1192,7 +1192,7 @@ The *square of opposition* is constructed by first drawing a table,
 
 In the entries of this table, you draw :ref:`venn-diagrams` that represent the intersection of the row and column. Putting the results together, we get the following picture,
 
-.. image:: ../../.static/img/math/sets/square-of-opposition.jpg
+.. image:: ../../.static/img/mathematical/sets/square-of-opposition.jpg
 	:align: center
 
 Notice the diagonals of the picture, the line that connects the top left to the bottom right and the line that connects the top right to the bottom left, form the contradictory pairs of propositions, namely,

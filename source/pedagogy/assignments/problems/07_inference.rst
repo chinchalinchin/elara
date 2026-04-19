@@ -285,7 +285,7 @@ Studies have shown that foods rich in compounds known as flavonoids help lower b
 
 The reduction in blood pressure (before minus after) for each of the participants in the two groups is shown in the dotplots below.
 
-.. image:: ../../../.static/img/problems/2022-apstats-frp-05a.png
+.. image:: ../../../.static/img/pedagogical/problems/2022-apstats-frp-05a.png
     :align: center
 
 Use this information to answer the following question.
@@ -298,7 +298,7 @@ The researchers found the mean reduction in blood pressure for those who consume
 	
 A simulation was conducted to investigate whether there is a greater reduction of blood pressure for those who consume dark chocolate than for those who consume white chocolate. The simulation was conducted under the assumption that no difference exists. The results of 120 trials of the simulation are shown in the following dotplot.
 
-.. image:: ../../../.static/img/problems/2022-apstats-frp-05b.png
+.. image:: ../../../.static/img/pedagogical/problems/2022-apstats-frp-05b.png
     :align: center
     
 Use this information to answer the following question.
@@ -309,7 +309,7 @@ Use this information to answer the following question.
 
 Independent random samples of 500 households were taken from a large metropolitan area in the United States for the years 1950 and 2000. Histograms of household size (number of people in a household) for the years are shown below.
 
-.. image:: ../../../.static/img/problems/2012-apstats-frp-03.png
+.. image:: ../../../.static/img/pedagogical/problems/2012-apstats-frp-03.png
     :align: center
     
 Use this information to answer the following questions.
@@ -333,7 +333,7 @@ During one hour, the mean number of fluid ounces of four randomly selected bottl
 
 To determine whether this sample of four bottles provides convincing evidence that the standard deviation of the amount of juice dispensed is greater than 0.05 ounce, a simulation study was performed. In the simulation study, 300 samples, each of size 4, were randomly generated from a normal population with a mean of 12.1 and a standard deviation of 0.05. The sample standard deviation was computed for each of the 300 samples. The dotplot below displays the values of the sample standard deviations.
 
-.. image:: ../../../.static/img/problems/2009-apstats-frp-formb-05.png
+.. image:: ../../../.static/img/pedagogical/problems/2009-apstats-frp-formb-05.png
 	:align: center
 
 Use this information to answer the following question.
@@ -344,7 +344,7 @@ Use this information to answer the following question.
 
 The developers of a training program designed to improve manual dexterity claim that people who complete the 6-week program will increase their manual dexterity. A random sample of 12 people enrolled in the training program was selected. A measure of each person’s dexterity on a scale from 1 (lowest) to 9 (highest) was recorded just before the start of and just after the completion of the 6-week program. The data are shown in the table below.
 
-.. image:: ../../../.static/img/problems/2006-apstats-frp-formb-04.png
+.. image:: ../../../.static/img/pedagogical/problems/2006-apstats-frp-formb-04.png
 	:align: center
 	
 Can one conclude that the mean manual dexterity for people who have completed the 6-week training program has significantly increased? Support your conclusion with appropriate statistical evidence.
@@ -457,7 +457,7 @@ A random sample of 200 students was selected from a large college in the United 
 
 Each response was recorded in one of five categories. The gender of each selected student was noted. The data are summarized in the table below.
 
-.. image:: ../../../.static/img/problems/2003-apstats-frp-05.png
+.. image:: ../../../.static/img/pedagogical/problems/2003-apstats-frp-05.png
     :align: center
 
 Is there sufficient evidence to indicate that the response is dependent on gender? Provide statistical evidence to support your conclusion.

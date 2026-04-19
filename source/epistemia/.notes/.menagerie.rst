@@ -320,14 +320,14 @@ Terryology
 
 ---
 
-.. image:: ../.static/img/context/psychological/flower-of-life.png
+.. image:: ../.static/img/esoterica/flower-of-life.png
    :width: 70%
    :alt: The Flower Of Life
    :align: center
 
 ---
 
-.. image:: ../.static/img/context/psychological/terryology-syllogism.png
+.. image:: ../.static/img/esoterica/terryology-syllogism.png
    :width: 70%
    :alt: The Walter Russell Periodic Table
    :align: center
@@ -705,7 +705,7 @@ Valis
 Walter Russell Periodic Table
 -----------------------------
 
-.. image:: ../.static/img/context/psychological/walter-russel-periodic-table.png
+.. image:: ../.static/img/estoerica/walter-russel-periodic-table.png
    :width: 70%
    :alt: The Walter Russell Periodic Table
    :align: center

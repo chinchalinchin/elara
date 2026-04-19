@@ -11,12 +11,12 @@ The study of Palindromes leads directly into the study of Delimiter distribution
 
 Since, by :ref:`Definition 2.4.2 <palindromics-definition-2-4-2>`, Perfect Palindromes are exactly the class of Sentences that are equal to their own Inverses, the Delimiters in a Perfect Palindrome display symmetry. The following barcharts show the Character indices of Delimiters for these examples. Note the horizontal axes are scaled to the Sentence String Length,
 
-.. image:: ../../../.static/img/results/sentences/palindromes/delimiter_indices_perfect_palindrome_1.png
+.. image:: ../../../.static/img/linguistic/sentences/palindromes/delimiter_indices_perfect_palindrome_1.png
   :align: center
   :alt: Delimiter Indices, Perfect Palindrome, Example #1
   :width: 70%
 
-.. image:: ../../../.static/img/results/sentences/palindromes/delimiter_indices_perfect_palindrome_2.png
+.. image:: ../../../.static/img/linguistic/sentences/palindromes/delimiter_indices_perfect_palindrome_2.png
   :align: center
   :alt: Delimiter Indices, Perfect Palindrome, Example #2
   :width: 70%
@@ -28,12 +28,12 @@ Notice the Delimiter indices are symmetrical about the center. Now consider the 
 
 According to :ref:`Definition 2.3.1 <palindromics-definition-2-3-1>`, Imperfect Palindromes must first be reduced to restore their symmetry. An examination of the corresponding barcharts for these examples show why,
 
-.. image:: ../../../.static/img/results/sentences/palindromes/delimiter_indices_imperfect_palindrome_1.png
+.. image:: ../../../.static/img/linguistic/sentences/palindromes/delimiter_indices_imperfect_palindrome_1.png
   :align: center
   :alt: Delimiter Indices, Imperfect Palindrome, Example #1
   :width: 70%
 
-.. image:: ../../../.static/img/results/sentences/palindromes/delimiter_indices_imperfect_palindrome_2.png
+.. image:: ../../../.static/img/linguistic/sentences/palindromes/delimiter_indices_imperfect_palindrome_2.png
   :align: center
   :alt: Delimiter Indices, Imperfect Palindrome, Example #2
   :width: 70%
@@ -62,17 +62,17 @@ Consider taking Sentences from a Corpus and for each one, calculating and return
 
 If a large Corpus is analyzed so that each Sentence is reduced to a set of Delimiter indices, and then the frequency of Delimiter Counts is plotted, an interesting, but potentially misleading result is obtained. The following histograms show the result of this technique for Sentences of various fixed lengths. 
 
-.. image:: ../../../.static/img/results/sentences/english/delimiter_distribution_n50.png
+.. image:: ../../../.static/img/linguistic/sentences/english/delimiter_distribution_n50.png
   :align: center
   :alt: Delimiter Distribution, Sentence String Length = 50
   :width: 70%
 
-.. image:: ../../../.static/img/results/sentences/english/delimiter_distribution_n100.png
+.. image:: ../../../.static/img/linguistic/sentences/english/delimiter_distribution_n100.png
   :align: center
   :alt: Delimiter Distribution, Sentence String Length = 100
   :width: 70%
 
-.. image:: ../../../.static/img/results/sentences/english/delimiter_distribution_n200.png
+.. image:: ../../../.static/img/linguistic/sentences/english/delimiter_distribution_n200.png
   :align: center
   :alt: Delimiter Distribution, Sentence String Length = 200
   :width: 70%

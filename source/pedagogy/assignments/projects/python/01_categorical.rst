@@ -72,7 +72,7 @@ Type the following command into your *Linux* terminal,
 
     pip3 install matplotlib tk
 
-.. image:: ../../../../.static/img/python/matplotlib-tk-install.png
+.. image:: ../../../../.static/img/pedagogical/technical/python/matplotlib-tk-install.png
     :align: center 
 
 Output:
@@ -88,7 +88,7 @@ Output:
 
     Successfully installed tk-0.1.0
 
-.. image:: ../../../../.static/img/python/matplotlib-tk-install-done.png
+.. image:: ../../../../.static/img/pedagogical/technical/python/matplotlib-tk-install-done.png
     :align: center 
 
 You should see the packages download and install into your system.
@@ -250,7 +250,7 @@ The two arguments, ``color`` and ``ec``, affect the *styling* of the bar chart. 
 
 The full list of colors available to use in :ref:`matplotlib` is detailed in the following chart,
 
-.. image:: ../../../../.static/img/python/matplotlib-colors.png
+.. image:: ../../../../.static/img/pedagogical/technical/python/matplotlib-colors.png
     :align: center
 
 Any value in this chart can be used an argument for ``color`` or ``ec``.

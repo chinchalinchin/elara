@@ -71,7 +71,7 @@ The `Michelson Velocity of Light Experiment <https://www.gutenberg.org/files/117
 
 Michelson's 1879 experimental results remained one of most accurate estimations of the speed of light until modern times. Using a series of mirrors depicted below, Michelson was able to divert light rays emitting from a common source along separate paths and then measure the fractional time difference it took for the rays to reach the same location.
 
-.. image:: ../../../../.static/img/context/scientific/michelson-experiment.png
+.. image:: ../../../../.static/img/scientific/michelson-experiment.png
     :width: 60%
     :align: center
 
@@ -94,7 +94,7 @@ Henry Cavendish performed the first modern, scientific experiment to measure the
 
 Using the mutual gravitational attraction of two heavy metal balls attached to a `torsion balanace <https://en.wikipedia.org/wiki/Torsion_spring#Torsion_balance>`_ to twist a fiber of string, Cavendish measured the force of the tension produced. 
 
-.. image:: ../../../../.static/img/context/scientific/cavendish-torsion-balance.png
+.. image:: ../../../../.static/img/scientific/cavendish-torsion-balance.png
 	:width: 60%
 	:align: center
 

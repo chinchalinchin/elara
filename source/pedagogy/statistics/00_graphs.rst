@@ -838,7 +838,7 @@ A histogram where the classes are symmetric and decreasing around a common point
 
 The line of symmetry in a perfectly symmetrical distribution is the :ref:`median`. The reason for this can seen by equating the *area* under the distribution with the proportion of the sample that belongs to that area. Since the *areas* on either side of a symmetric distribution are equal,
 
-.. image:: ../../.static/img/math/statistics/normal-distribution-graphic.jpg
+.. image:: ../../.static/img/mathematical/statistics/normal-distribution-graphic.jpg
 
 It follows these areas both represent fifty percent of the distribution. 
 
@@ -849,7 +849,7 @@ Example
 
 *Old Faithful* is a famous hot-water geyser in Yellowstone National Park that erupts every 45 minutes to 2 hours. 
 
-.. image:: ../../.static/img/context/scientific/old-faithful.jpg
+.. image:: ../../.static/img/scientific/old-faithful.jpg
     :width: 200
     :align: center
 

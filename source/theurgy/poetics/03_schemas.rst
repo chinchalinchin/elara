@@ -235,7 +235,7 @@ Rondeau
 
 The following diagram shows the different schemata for the rondeau form in 14th-century France,
 
-.. figure:: ../../.static/svg/etc/14th-century-rondeaus.svg
+.. figure:: ../../.static/svg/linguistic/14th-century-rondeaus.svg
   :width: 80%
   :alt: Diagram of 14th century rondeaus
   :align: center
@@ -267,7 +267,7 @@ Note that a *Rondeau Couplet* is simply a :ref:`triolet`.
 
 The following diagrams shows the different schemata for the rondeau form duing the Renaissance, 
 
-.. figure:: ../../.static/svg/etc/renaissance-rondeaus.svg
+.. figure:: ../../.static/svg/linguistic/renaissance-rondeaus.svg
   :width: 80%
   :alt: Diagram of Renaissance rondeaus
   :align: center

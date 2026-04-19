@@ -38,7 +38,7 @@ Yet the symbolism within this verse is not contained merely to the semantic real
 
 In the Gospel of Matthew prior to Verse 16, Jesus has taken the disciples to Caesarea Phillipi, one of the many outposts of the burgeoning Roman Empire. He speaks these words in front of the Cave of Pan.
 
-.. image:: ../../../.static/img/fabula/magnum-opus/cave-of-pan.jpg
+.. image:: ../../../.static/img/oracular/magnum-opus/cave-of-pan.jpg
    :width: 70%
    :alt: The Cave of Pan
    :align: center

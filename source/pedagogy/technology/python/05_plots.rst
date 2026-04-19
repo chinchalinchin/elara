@@ -182,7 +182,7 @@ All graphing functions in **matplotlib** accept ``color`` and ``ec`` arguments. 
 
 The full list of colors available to use in :ref:`matplotlib` is detailed in the following chart,
 
-.. image:: ../../../.static/img/python/matplotlib-colors.png
+.. image:: ../../../.static/img/pedagogical/technical/python/matplotlib-colors.png
     :align: center
 
 Gallery

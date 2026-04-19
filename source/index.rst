@@ -23,7 +23,7 @@
 
 --------------
 
-.. image:: .static/svg/etc/wittgenstein-rabbit-duck.svg
+.. image:: .static/svg/logical/wittgenstein-rabbit-duck.svg
    :width: 70%
    :alt: the eye of the beholder
    :align: center
@@ -38,7 +38,7 @@
 
 --------------
 
-.. image:: .static/img/context/comical/calvin-and-hobbes-inscrutable-exhortations.jpeg
+.. image:: .static/img/comical/calvin-and-hobbes-inscrutable-exhortations.jpeg
    :width: 80%
    :alt: Inscrutable Exhortations
    :align: center

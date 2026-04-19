@@ -29,7 +29,7 @@ Step 1: Update ChromeOS
 
 Ensure you are on the latest version of the ChromeOS operating system.
 
-.. image:: ../../../.static/img/chromeos/chrome-update-os.png
+.. image:: ../../../.static/img/pedagogical/technical/chromeos/chrome-update-os.png
     :align: center
 
 Step 2: Enable Linux Subsystem
@@ -45,7 +45,7 @@ Step 2: Enable Linux Subsystem
 
 Enable and install Linux subsystem in the Settings menu,
 
-.. image:: ../../../.static/img/chromeos/chrome-developer-mode.png
+.. image:: ../../../.static/img/pedagogical/technical/chromeos/chrome-developer-mode.png
     :align: center
 
 This will give you access to something called the *command line* (sometimes called a *terminal* or a *shell*). The *command line* is a direct interface to the operating system of your laptop. Let's take a look.
@@ -55,7 +55,7 @@ Step 3: Explore A Little
 
 A new world has now opened up to you, the world of *Linux*. Let's take a little while to familiarize ourselves with it before moving on to **Python**. Open Linux command line (*terminal*),
 
-.. image:: ../../../.static/img/chromeos/chrome-terminal.png
+.. image:: ../../../.static/img/pedagogical/technical/chromeos/chrome-terminal.png
     :align: center
 
 
@@ -63,12 +63,12 @@ A new world has now opened up to you, the world of *Linux*. Let's take a little 
 
     Pin the Linux terminal to your dock for quick access. At the bottom of the screen,
 
-    .. image:: ../../../.static/img/chromeos/chrome-dock.png
+    .. image:: ../../../.static/img/pedagogical/technical/chromeos/chrome-dock.png
         :align: center
 
     Right click the *terminal icon* (or whatever the equivalent of right-click is on the ChromeBook you are using) and then pin it,
 
-    .. image:: ../../../.static/img/chromeos/chrome-pin.png
+    .. image:: ../../../.static/img/pedagogical/technical/chromeos/chrome-pin.png
         :align: center
 
     In this image, it's already pinned. In place of ``Unpinned``, you will see ``Pinned``.
@@ -81,7 +81,7 @@ This is your *operating system*. Let's try a few commands here and see what we c
 
 Press ``ENTER`` and you shoud see the words "*Hello World*" print to screen. The ``echo`` command, as you might have guessed, simply prints the words (a *string* of text) you give it back to screen,
 
-.. image:: ../../../.static/img/linux/bash-echo.png
+.. image:: ../../../.static/img/pedagogical/technical/linux/bash-echo.png
 
 Not very useful. Let's try something a little more interesting,
 
@@ -91,7 +91,7 @@ Not very useful. Let's try something a little more interesting,
 
 Press ``ENTER`` and you will see something along the lines of (the actual output will vary from computer to computer), 
 
-.. image:: ../../../.static/img/linux/bash-df.png
+.. image:: ../../../.static/img/pedagogical/technical/linux/bash-df.png
     :align: center
 
 These are your computer filesystems. This is where all of the data on your computer lives. Let's not mess around with it. While you can't physically break your computer by entering commands, it is possible to break your *operating system* to the point where it will need re-installed. That is not something you want to happen. For that reason, let's move on to other, safer areas.
@@ -104,7 +104,7 @@ The *Linux* world is a hierarchy of files. Everything in *Linux* is a file, even
 
 You can imagine a tree like the following picture exists somewhere inside your computer,
 
-.. image:: ../../../.static/img/linux/folder-system.png
+.. image:: ../../../.static/img/pedagogical/technical/linux/folder-system.png
     :align: center
 
 When you open your *terminal*, you open it *in* one of the folders in this tree. The *terminal* allows you traverse the different nodes and branches of this tree. To see where you currently located in the tree, type the following command and press ``ENTER``,
@@ -113,7 +113,7 @@ When you open your *terminal*, you open it *in* one of the folders in this tree.
 
     pwd 
 
-.. image:: ../../../.static/img/linux/bash-pwd.png
+.. image:: ../../../.static/img/pedagogical/technical/linux/bash-pwd.png
     :align: center
 
 This stands for "*present working directory*". When you type ``ENTER``, you will see a file path print to screen. This is the directory where you terminal is currently idling. You can see the contents of the *present working directory* with the command,
@@ -124,7 +124,7 @@ This stands for "*present working directory*". When you type ``ENTER``, you will
 
 This will list the contents of the directory to screen,
 
-.. image:: ../../../.static/img/linux/bash-ls.png
+.. image:: ../../../.static/img/pedagogical/technical/linux/bash-ls.png
     :align: center
 
 You can *change directories* with the next command, 
@@ -166,7 +166,7 @@ Output:
 
     Any version of **Python** greater than *3.7* will be sufficient for the purposes of this class.
 
-.. image:: ../../../.static/img/linux/bash-python-version.png
+.. image:: ../../../.static/img/pedagogical/technical/linux/bash-python-version.png
     :align: center
 
 If you get an error along the lines of "*bash: python command not found*", you will need to install **Python**. You can do this through the *Linux* package repository, an online library of software that you can install from the command line,
@@ -233,19 +233,19 @@ If you want to install **Python** on your home PC or laptop, you can download th
 
 1. Go to *https://www.python.org/downloads** and click the **Download** button,
 
-.. image:: ../../../.static/img/chromeos/chrome-install-step-1.png
+.. image:: ../../../.static/img/pedagogical/technical/chromeos/chrome-install-step-1.png
 
 2. Download the appriopriate operating system distribution,
 
-.. image:: ../../../.static/img/chromeos/chrome-install-step-2.png
+.. image:: ../../../.static/img/pedagogical/technical/chromeos/chrome-install-step-2.png
 
 3. Ensure the option "*Add Python to the PATH*" is checked,
 
-.. image:: ../../../.static/img/chromeos/chrome-install-step-3.png
+.. image:: ../../../.static/img/pedagogical/technical/chromeos/chrome-install-step-3.png
 
 4. Ensure all of the following options are checked,
 
-.. image:: ../../../.static/img/chromeos/chrome-install-step-4.png
+.. image:: ../../../.static/img/pedagogical/technical/chromeos/chrome-install-step-4.png
 
 5. All of the other defaults are fine. Proceed with the installation. When it is done, you will now have icons for the **Python** interpreter and :ref:`IDLE <python-idle>` in your start menu (or your app launcher, if you're one of the weird *Mac* people.)
 
@@ -377,19 +377,19 @@ IDLE
 
 Open up an *IDLE* session,
 
-.. image:: ../../../.static/img/python/idle-shell.png
+.. image:: ../../../.static/img/pedagogical/technical/python/idle-shell.png
 
 This is another version of the **Python** interpretter we encountered a few sections ago, sometimes referred to as a `shell <https://en.wikipedia.org/wiki/Shell_(computing)>`_. You can execute the exact same commands in this *shell* as in the previous section, e.g.,
 
-.. image:: ../../../.static/img/python/idle-shell-command.png
+.. image:: ../../../.static/img/pedagogical/technical/python/idle-shell-command.png
 
 If you navigate to the ``File > New File`` menu option in the top left corner to the *IDLE* shell (you may also hit the ``CTRL + N`` keys at the same time), it will open a text editor,
 
-.. image:: ../../../.static/img/python/idle-editor.png
+.. image:: ../../../.static/img/pedagogical/technical/python/idle-editor.png
 
 You can type commands into this editor, as pictured. You can run these commands by navigating to the ``Run > Run Module`` menu option in the top left corner (you may also hit ``F5``). It will then prompt you to save the script, if you haven't already. After saving it, the *IDLE* shell will reappear with the results of your script,
 
-.. image:: ../../../.static/img/python/idle-editor-results.png
+.. image:: ../../../.static/img/pedagogical/technical/python/idle-editor-results.png
 
 We will sometimes call the *IDLE* text editor a *notebook*. 
 
@@ -453,7 +453,7 @@ Now that you have ``pip3``, we will need to install two additional packages for 
 
     pip3 install matplotlib tk
 
-.. image:: ../../../.static/img/python/matplotlib-tk-install.png
+.. image:: ../../../.static/img/pedagogical/technical/python/matplotlib-tk-install.png
     :align: center 
 
 Output:
@@ -469,7 +469,7 @@ Output:
 
     Successfully installed tk-0.1.0
 
-.. image:: ../../../.static/img/python/matplotlib-tk-install-done.png
+.. image:: ../../../.static/img/pedagogical/technical/python/matplotlib-tk-install-done.png
     :align: center 
 
 You should see the packages download and install into your system.

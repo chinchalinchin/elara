@@ -34,7 +34,7 @@ Visual
 
 The following image contains a visual representation of the Language Game.
 
-.. figure:: ../../.static/img/context/etc/language-game.jpg
+.. figure:: ../../.static/img/various/language-game.jpg
   :width: 80%
   :alt: JPG Representation of Language Game
   :align: center
