@@ -23,6 +23,7 @@ tk
 nltk
 eng-to-ipa
 pronouncing==0.2.0
+text-fabric
 
 # LLM dependencies
 google-generativeai==0.8.3

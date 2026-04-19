@@ -19,10 +19,9 @@ task:
     title: "Elara: Build"
     # -------------------------------------------
     content: |
-      The side menu icons (Docker Hub, Github, PyPi, LinkedIn, Facebook) are not centered above the search bar. How can I accomplish this?
+      Create a Python script.
     # -------------------------------------------
-    shell: 
-      - cat /Users/gmoore/Home/projects/elara/build/html/index.html
+    shell: [ ]
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -32,7 +31,7 @@ task:
           group: chinchalinchin
         views:
           directory: true
-          elara_build: true
+          elara_build: false
           elara_linguistics: false
-          elara_extensions: true
-          elara_static: true
+          elara_extensions: false
+          elara_static: false
