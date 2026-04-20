@@ -11,15 +11,6 @@
 ..
 .. ------------------------------------------------------------------------------------------------------------------
 ..
-.. TASK: EDITORIALIZE
-.. 
-.. - Provide editorial notes on the following documents for the Author.
-.. - Estimate a word count across all documents. Don't include the mermaid markup in the appendix or the RST markup. Only estimate raw copy. Exactness is not required. A rough estimate will suffice. Focus the majority of your attention on the previous item.
-..
-.. ## IGNORE
-..
-.. - Typos (unless they are severe)
-..
 .. ## Chronological Order
 ..
 .. - exegesis/000: Sibylline Prophecy
