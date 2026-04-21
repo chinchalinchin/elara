@@ -22,7 +22,8 @@ task:
       <task>
     # -------------------------------------------
     shell: 
-      - /Users/gmoore/Home/projects/elara/source/_scripts/py/linguistics/syllabify.py concrete
+      -  /Users/gmoore/Home/projects/elara/source/.scripts/py/linguistics/syllabify.py immortalized
+      - /Users/gmoore/Home/projects/elara/source/.scripts/py/linguistics/syllabify.py concrete
 # ------------------------------------------------
   tools:
     # -------------------------------------------

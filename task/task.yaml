@@ -16,12 +16,13 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Elara: Build"
+    title: "Elara: Linguistic Scripts"
     # -------------------------------------------
     content: |
-      Create a Python script.
+      "immortalized" should have a secondary stress on the last syllables. Debug the script to determine why it is not outputting the correct syllabification.
     # -------------------------------------------
-    shell: [ ]
+    shell: 
+      - /Users/gmoore/Home/projects/elara/source/.scripts/py/linguistics/syllabify.py immortalized
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -31,7 +32,5 @@ task:
           group: chinchalinchin
         views:
           directory: true
-          elara_build: false
-          elara_linguistics: false
-          elara_extensions: false
-          elara_static: false
+          elara_build: true
+          elara_linguistics: true
