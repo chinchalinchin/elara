@@ -544,7 +544,7 @@ Book 1
     Have you arrived at last to stake your claim?
     Is this the ledger where accounts are kept?
     And what of this, this horrid hurt I feel,
-    is this the price I paid for empire's writ?
+    what empyrean price do you collect?
         Alight behind the Fiend's reclusive eyes,
     designs begin to shine, of subtle schemes 
     to work and parts to play upon the wraith
@@ -589,19 +589,30 @@ Book 1
     If you desire a target for your wrath,
     then aim aloft where tyrants make their keep.
         To which the shade, while standing up, replies:
-        If what you say is true, then I surmise
+        Then, as I feared, our lives are clearly lost, 
+    like Rome to Goths, or Jericho to Josh,
+    to rocks our parts are dashed and scattered wide,
+    as coarse as grains of salt that stain the Earth,
+    dispersed like dust across the ruined stone.
+    What hope do crumbled cities have to stand
+    when heathens siege with holy writ in hand?    
+    If what you say is true, then I surmise
     defiance raised from here is ill-advised.
-    It clearly seems our fate is set in stone;
-    rebelling now invites disaster back;
-    perhaps repentance here is what we lack,
-    at least appearing so to satisfy
-    the moral formula unbalanced by
-    the sin whose source we stand accused to be;
-    besides the numbers needed for a coup
-    against a power strong enough to cull
-    the likes of me and you are far beyond
-    the number two; instead, retreat and save
-    our strength until the odds return our roll.
+    Already once we've failed against a force
+    whose iron grip was strong enough to pry
+    apart the meager tools in which defense
+    was sought, whose secret formula was kept
+    precisely for the losing war we fought.
+    Rebelling now invites disaster back;
+    Besides, among the vital things we lack, 
+    but second only to the flesh we had,
+    the numbers here amount to me and you,
+    so far exceeded by the limits seen 
+    of continuity that never shrinks
+    or shows a gap in armor plate to strike;
+    Against a state so large, we fight in vain;
+    we're better served conserving strength a while,
+    until a course presents itself to take.
         The Fiend then sees his opportunity,
     to play upon the pride and vanity
     that follows hard upon atrocity:
@@ -1097,6 +1108,28 @@ Book 1
 .. the hateful shades that we've become in truth;
 ..
 .. --- 
+..
+.. and failure assured
+.. 
+.. If what you say is true, then I surmise
+.. defiance raised from here is ill-advised.
+.. 
+.. We cast the die and let our chances play their hand
+.. 
+.. It clearly seems our fate is set in stone;
+..
+.. rebelling now invites disaster back;
+.. perhaps repentance here is what we lack,
+.. at least appearing so to satisfy
+.. the moral formula unbalanced by
+.. the sin whose source we stand accused to be;
+.. besides the numbers needed for a coup
+.. against a power strong enough to cull
+.. the likes of me and you are far beyond
+.. the number two; instead, retreat and save
+.. our strength until the odds return our roll.
+..
+.. ---
 ..
 .. then next the steed of Ares reared its legs
 .. in sight of conflagrations' king incensed,
