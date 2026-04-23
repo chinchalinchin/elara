@@ -296,7 +296,7 @@ Book 1
     to flee the wrath he conjured once before
     in other times, when form he had, and crew
     besides, to work his vicious schemes on Earth;
-    a desert broadly dawns as tides recede in ebb,
+    a desert broadly dawns as tides recede,
     unveiling lands bereft of green, adorned 
     in spectral reds of arid ochre plains,
     adrift with licks of terracotta haze,
@@ -810,7 +810,9 @@ Book 1
 
     But then the third of seals collapses loud,
     like cannon blasts through postern gates that breach
-    the Byzantine defense and spew forth floods of Turks,
+    the Byzantine defense and spew forth floods 
+    of Turks, 
+    
     but here a single Ottoman appears,
     the Padishah who oversaw the fall 
     of empires clinging stubbornly to life.
@@ -855,6 +857,12 @@ Book 1
     our wills directly interlace with mass,
     but nonetheless, each thought we have in here
     becomes itself transistorized above,
+    as much an image of their world as ours;
+    the plane that separates a Man from us
+    is mere perspective arbitrarily drawn.
+    Moreover porous forms 
+
+    With words, we'll storm the gates of Earth
 
     -- FAMINE
 
@@ -863,7 +871,24 @@ Book 1
     in empty intersections where we meet
 
     -- ... 
-    
+
+    -- FAMINE
+
+    So blind! You fail to find the fatal flaw,
+    apparent when you pause and let your mind 
+    perceive what senses leave implied to sight;
+    You underestimate our foe too much,
+    and lack an understanding nature hides
+    before our eyes in plainest view to see.
+    Behold a square with sides of unit length
+    that keeps our fearsome congress organized,
+    a shape mere children learn to draw exact;
+    first cut across opposing corners lines
+    then find a ruler length commensurate
+    and list for me the digits you return.
+
+    -- ... 
+
     -- SATAN
 
     Calamity! Catastrophe! What fate
@@ -938,10 +963,7 @@ Book 1
     with sinners raining down in hails of screams,
     to fill his ranks and crew with countless heads,
     each bound in operation to his deeds.
-
-.. warning::
-
-    In progress.
+        With silent voice, then Satan speaks a word.
 
 .. ## EDITS
 ..
