@@ -10,7 +10,7 @@ Book 1
 ~~~~~~
 
 **The Prompt**
-    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacrum of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser, while those who follow fill the ranks of his infernal army, draped in the pomp and pageantry of eschaton. The Accuser, in prospect of damnation, laments their terrible fate, but before falling into endless despair, alights on the solution to their predicament. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for beings of eternal pain: the annihiliation of existence itself, removing all possibility from the palette of creation. The Accuser, in the midst of his army, details his plan, of the wicked device he conceives, that once deployed in the material world, will consume it in its entirety. However, their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
+    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacrum of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser. In prospect of damnation, he laments his terrible fate, but before falling into endless despair, he is joined by his companions, draped in the pomp and pageantry of eschaton, who are likewise bound in enterprise and suffering. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for creatures of eternal pain: the annihiliation of existence itself. The Accuser details his plan to wage war against the divine order of creation to remove all possibility of Being. However, a debate ensures among the infernal peers as to the feasbility of this course of action. The Accuser alights on the solution to their predicament, and concludes their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
 
 .. verse::
     :increment: 5
@@ -761,16 +761,20 @@ Book 1
 
     --- IN PROGRESS
 
-        About the Fiend, the armies camp in rows
+    The raucous crowds then set to work with tools,
+    and hew from rock foundations strong enough
+    to hold the total weight of human sin;
+    About the Fiend, the armies camp in rows
     and build in shifts the palisades to span
     in pickets round their host and chamber tombs
     from which they came, to wrap in ramparts high
     above the valleyed depths of Hell's inclines,
-    til lines as deep as lists of people damned
+    til lines as deep as lists of peple damned
     extend as far as telescopic eye
-    permits,
+    permits, encircled by the barricades.
 
-    they stack 
+    Around the center, layers mark ascent
+    in pyramidal stacks
 
     On dais raised, the Fiend assumes the head 
     among the chairs his potentates then sit,
