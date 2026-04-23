@@ -862,6 +862,8 @@ Book 1
     no overlapping elements will mix
     in empty intersections where we meet
 
+    -- ... 
+    
     -- SATAN
 
     Calamity! Catastrophe! What fate
