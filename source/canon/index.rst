@@ -8,5 +8,5 @@ Canon
    :maxdepth: 1
    :caption: Contents:
 
-   00_resume
-   01_gallery
+   _resume
+   _gallery

@@ -548,13 +548,26 @@ Psyche
 ------
 
 .. list-table:: ψυχή (noun), Koine Greek
+  :header-rows: 1
 
   * - Case
     - Singular
     - Plural
   * - Nominative
     - ψυχή
-    - ...
+    - ψυχαί
+  * - Genitive
+    - ψυχῆς
+    - ψυχῶν
+  * - Dative
+    - ψυχῇ
+    - ψυχαῖς
+  * - Accusative
+    - ψυχήν
+    - ψυχάς
+  * - Vocative
+    - ψυχή
+    - ψυχαί
 
 .. _semantics:
 
@@ -615,13 +628,58 @@ TODO
 -----
 Truth
 -----
+.. _truth:
 
-.. list-table::
+-----
+Truth
+-----
 
-  * - Greek
+.. list-table:: ἀλήθεια (noun), Koine Greek
+  :header-rows: 1
+
+  * - Case 
+    - Singular
+    - Plural
+  * - Nominative
     - ἀλήθεια
-  * - Latin
+    - ἀλήθειαι
+  * - Genitive
+    - ἀληθείας
+    - ἀληθειῶν
+  * - Dative
+    - ἀληθείᾳ
+    - ἀληθείαις
+  * - Accusative
+    - ἀλήθειαν
+    - ἀληθείας
+  * - Vocative
+    - ἀλήθεια
+    - ἀλήθειαι
+
+.. list-table:: veritas (noun), Latin
+  :header-rows: 1
+
+  * - Case 
+    - Singular
+    - Plural
+  * - Nominative
     - veritas
+    - veritates
+  * - Genitive
+    - veritatis
+    - veritatum
+  * - Dative
+    - veritati
+    - veritatibus
+  * - Accusative
+    - veritatem
+    - veritates
+  * - Ablative
+    - veritate
+    - veritatibus
+  * - Vocative
+    - veritas
+    - veritates
 
 .. _vorhandenheit:
 
