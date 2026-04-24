@@ -1,10 +1,10 @@
 .. academic
 
 .. _A Budget of Paradoxes: https://www.gutenberg.org/files/23100/23100-h/23100-h.htm
-.. _An essay towards solving a problem in the doctrine of chances : https://royalsocietypublishing.org/doi/10.1098/rstl.1763.0053
+.. _An essay towards solving a problem in the doctrine of chances: https://royalsocietypublishing.org/doi/10.1098/rstl.1763.0053
 .. _Foundations of Arithmetic: https://www.gutenberg.org/ebooks/48312
 .. _Function and Concept: https://fitelson.org/proseminar/frege_fac.pdf
-.. _Grundgesetze Der Arithmetik (German): https://archive.org/details/bub_gb_LZ5tAAAAMAAJ/mode/2up
+.. _Grundgesetze Der Arithmetik: https://archive.org/details/bub_gb_LZ5tAAAAMAAJ/mode/2up
 .. _Leibniz Letters: <https://plato.stanford.edu/entries/leibniz-mind/>
 .. _On Concept and Object: https://fitelson.org/proseminar/frege_ocao.pdf
 .. _On Sense and Reference: https://archive.org/details/OnSenseAndReference

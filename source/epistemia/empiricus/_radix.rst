@@ -19,7 +19,7 @@ archive.org
 - `Ideas`_
 - `Introduction to Logic and the Methodology of the Deductive Sciences`_
 - `Introduction to Symbolic Logic and Its Applications`_
-- `Grundgesetze Der Arithmetik (German)`_
+- `Grundgesetze Der Arithmetik`_
 - `Naming and Necessity`_
 - `On Certainty`_
 - `On Sense and Reference`_

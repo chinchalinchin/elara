@@ -628,11 +628,6 @@ TODO
 -----
 Truth
 -----
-.. _truth:
-
------
-Truth
------
 
 .. list-table:: ἀλήθεια (noun), Koine Greek
   :header-rows: 1

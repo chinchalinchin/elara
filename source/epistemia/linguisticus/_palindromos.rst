@@ -35,11 +35,12 @@ English
     - **Perfect Pivots**: ``on no``, ``saw I was``
     - **Imperfect Pivots**: ``as a``, ``now on``
 
-    These lists are by no means exhaustive. 
 
 .. important::
 
     This is a heuristic definition of pivots. See :ref:`Palindromics <palindromics>` for a more rigorous treatment.
+
+These lists are by no means exhaustive. 
 
 .. _perfect-english-palindromes:
 
