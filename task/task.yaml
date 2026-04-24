@@ -19,11 +19,15 @@ task:
     title: "Elara: Linguistic Scripts"
     # -------------------------------------------
     content: |
-      "capitulate" should have a secondary stress on the last syllables. Debug the script to determine why it is not outputting the correct syllabification.
+      - "capitulate" should have a secondary stress on the last syllables. 
+      - "marquis" should either be `ˈmɑr-kwɛs` or `mɑr-ˈki`.
+
+      Debug the script to determine why it is not outputting the correct syllabification.
     # -------------------------------------------
     shell: 
       # - /Users/gmoore/Home/projects/elara/source/.scripts/py/linguistics/syllabify.py immortalized
       - /Users/gmoore/Home/projects/elara/source/.scripts/py/linguistics/syllabify.py capitulate
+      - /Users/gmoore/Home/projects/elara/source/.scripts/py/linguistics/syllabify.py marquis
 # ------------------------------------------------
   tools:
     # -------------------------------------------
