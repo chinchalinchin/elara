@@ -1,0 +1,27 @@
+:root {
+  /* -- Primary Colors (Deep Space Purple) -- */
+  --color-primary-main: #9370DB;
+  --color-primary-light: #B39DDB;
+  --color-primary-dark: #7B1FA2;
+
+  /* -- Secondary Colors (Galactic Blue) -- */
+  --color-secondary-main: #42A5F5;
+  --color-secondary-light: #64B5F6;
+  --color-secondary-dark: #1976D2;
+
+  /* -- Background & Surface Colors -- */
+  --color-background-default: #121212; 
+  --color-background-paper: #1E1E1E;   
+  --color-background-heading: #181818;
+  --color-background-hover: #272727;
+  
+  /* -- UI State Colors -- */
+  --color-error: #CF6679;   
+  --color-warning: #FFAB40; 
+  --color-info: #29B6F6;
+  --color-success: #66BB6A;
+
+  /* -- Text Colors -- */
+  --color-text-primary: rgba(255, 255, 255, 0.87); 
+  --color-text-secondary: rgba(255, 255, 255, 0.6);
+}

@@ -14,6 +14,8 @@
    oeuvre/index
    fabula/index
    
+.. rss::
+   
 .. raw:: html
 
    <div class="text-container">
@@ -24,7 +26,7 @@
 --------------
 
 .. image:: .static/svg/logical/wittgenstein-rabbit-duck.svg
-   :width: 70%
+   :width: 50%
    :alt: the eye of the beholder
    :align: center
 

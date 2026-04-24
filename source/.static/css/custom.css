@@ -127,37 +127,9 @@
     text-decoration: line-through;
 }
 
-/* ----------------------------------- VERSE PANEL */
-
-.verse-block {
-    display: table;
-    width: 100%;
-    margin-bottom: 1.5em;
-    font-family: inherit;
-}
-
-.verse-row {
-    display: table-row;
-}
-
-.verse-line {
-    display: table-cell;
-    white-space: pre-wrap;
-    padding-right: 2rem;
-    word-break: break-word;
-}
-
-.verse-number {
-    display: table-cell;
-    vertical-align: top;
-    text-align: right;
-    width: 3em;
-    color: var(--pst-color-text-muted);
-    user-select: none;
-    -webkit-user-select: none;
-}
 
 .sidebar-primary-item .navbar-icon-links {
     justify-content: center;
     width: 100%;
 }
+

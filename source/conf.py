@@ -67,7 +67,10 @@ html_static_path = [
     '.scripts'
 ]
 html_css_files = [
-    'css/custom.css'
+    'css/theme.css',
+    'css/custom.css',
+    'css/panels/rss.css',
+    'css/panels/verse.css'
 ]
 html_js_files = [
    'js/custom-icons.js'
