@@ -33,7 +33,6 @@ extensions = [
     'sphinx_design',
     'sphinx_sitemap',
     'sphinxcontrib.mermaid',
-    'sphinxcontrib.newsfeed',
     # Custom Directives Extensions
     'panels',
     # Custom Roles Extensions
