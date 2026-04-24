@@ -17,6 +17,14 @@ His life has been a process of translation—from the language of physics to the
 Weird
 -----
 
+---------
+Version 1
+---------
+
 After shooting from the womb at seventy-five miles per hour and impaling the doctor delivering him, Grant Moore notched his first kill.
 
-Grant Moore is a team of twenty award-winning writers whose consciousness is unified into a cohesive hive mind through a ritual sacrifice offered to an ancient, nameless Sumerian god on the third day of every month. When he is not participating in the infinitely vast godhead of existence, he can be found in an incorporeal state, unable to affect physical reality. His true passion lies in infecting the minds of material beings through the symbolic sequencing of syllables to produce hypnotic sounds that lull targets into a stupor, allowing the hive mind to spread. He enjoys Fleetwood Mac.
+---------
+Version 1
+---------
+
+Grant Moore is a team of twenty award-winning writers whose consciousness is unified into a cohesive hive mind through a ritual sacrifice offered to an ancient, nameless Sumerian god on the third day of every month. When not participating in the infinitely vast godhead of existence, he can be found in an incorporeal state, unable to affect physical reality. His true passion lies in infecting the minds of material beings through the symbolic sequencing of syllables to produce hypnotic sounds that lull targets into a stupor, allowing the hive mind to spread. He enjoys Fleetwood Mac.
