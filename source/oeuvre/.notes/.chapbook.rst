@@ -1,46 +1,1347 @@
-.. _oubliette-a-000:
+Relatio Annua
+=============
 
+.. epigraph::
+
+    Phenomenal existence is the persistence of contradictions denying the ability of the whole to be consistent.
+
+    -- יהוה
+
+.. epigraph::
+
+    Where but to think is to be full of sorrow.
+
+    -- Ode to a Nightingale, John Keats
+
+- **Plato**: A name is an essence.
+
+- **Aristotle**: A name is a substance. 
+
+- **Frege**: A name is a sense.
+
+- **Russell**: A name is a description.
+
+- **Tarski**: A name is a satisfaction.
+
+- **Kripke**: A name is a baptism. 
+
+---------------
+The Unicode Ode
+---------------
+
+| 🧍‍♀️ ∥ 🍀 ∥ 🎲 ∥ 🔮 ∥ 🎲 ∥ 🍀 ∥🧍‍♂️
+| 🎻-👗-👠 ≈ 😬 ≈ 👞-👔-🎻
+| 🌙 ⊥ [∞] {🌹, 🥂, 🍝,🕯️} [∞] ⊥ ✨
+| [[💃 ∪ 🕺] ∩  🎼 ] ∝ ⏳ 𝆒 #
+|
+| [🫀 ∧ 🧠 ∧ 🫁] ↔ [💬 ∧ 💭 ∧ 💘]
+| [🫀 ≠ 💘] ∧ [🧠 ≠ 💭] ∧ [🫁 ≠ 💬]
+| ∀ 👁️ ∈ 😍 : Σ 👁️ =  🎯(🔥)
+| ∃ 💋 ∈ 😘 : 🌍 ⊂ 💋
+|
+| ⏳ ⊥ [𝄞] {🌹, 🕰️, 🌹} [𝄞] ⊥ ⌛
+| 🌕-🎶-🌖-🎵-🌗-♪-🌘-∅-🌑
+|
+| 🏃-💭-🌳 ... 🏃-💭-🏡 ... 🏃-💭-🏥
+| 🍀(😨 + 🚑 → 😱 + 🩺 → 💀 + 🪦)
+| 🥀 → 🌧️ + 🌱 = 😭 + 💭(💃 ∪ 🕺) + 🕸️
+| 🚶-💭-🍃 ... 🚶-💭-🔔 ... 🚶-💭-⛪
+|
+| 💭([💃 ∪ 🕺] - 💃  ≠  🕺)
+| 💭([💃 ∪ 🕺] - 💃 ⊂ 💃)
+| 💤(💃(🔥) → 💘(🎼))
+| 🪞(🌀(🌀(🌀(🌀(🌀))))) → 🕊️(🕰️)
+|
+| 🧔 + 🎹 = 🎶(💃) ∝ ⏳ 𝆒 #
+
+- March 2025
+
+-----------------------------
+The Invocation of Metric Code
+-----------------------------
+
+.. code-block:: python
+
+    """
+    The Invocation of Metric Code
+    =============================
+
+    A Pythonic poem in (mostly) metric form.
+
+    Hacks until the devs publish a fix:
+
+    - "()", "[]", ".", ":", "_",  "=" and "==" don't contribute!
+    - Comments are part of the poem! Except this one!
+    - "pprint" = "puh-PRINT"
+
+    """
+    # at first, this helpful little shape
+    from re import escape
+    # and then some help for those who squint
+    import pprint # that alters tint
+    # at last, these ready words are spoke
+    import invoke # to pry and poke
+    import my_heart # but tender hold
+    import provoke as smoke
+    import thy_art # to break the mold
+
+    def use(this="thought", with_mode="exhaust"):
+        """
+        Where dreams become though some are lost...
+        """
+        try: # hope, but keep your fingers crossed...
+
+            if not (with_mode in [ "act", "retain"]):
+                return "what's left of last remain"
+
+            if type(f'of {this}') == thy_art.a_ring:
+                return my_heart.to_spring(
+                    myself_is = this, but = ("suffering")
+                )
+
+            # TODO: Alas! Another miss!
+            raise smoke.abyss(with_only = this)
+
+        except RecursionError as remiss:
+            pprint.pprint("renew, and don't dismiss!")
+            this = set(escape(remiss))
+            return invoke.Oh.muse(" " and "please").sing(this)
+
+    # HOTFIX: Let this "==" be "is"! But only here!
+    # Oh, don't complain, just play the game!
+    if __name__ == "__main__":
+        invoke.with_fuse()
+        invoke.Oh.muse([
+            " " and use(this=dream, with_mode="retain")
+            for dream in smoke.of_wing
+            if dream is all(thy_art.to_bring())
+        ])
+
+- April 2025
+
+----------------
+Father's Lullaby
+----------------
+
+| Dear child, the monsters under bed
+|   are not just make believe.
+| They lurk in shadows overhead
+|   and offer no reprieve.
+|
+| Dear sweetling, sleep with open eye
+|   and guard your dreams at night.
+| Ignore your mother's lullaby,
+|   keep candles burning bright.
+|
+| Beware the lair that closets hide,
+|   the racks of their disguise,
+| the suits and ties, the cuffs that slide
+|   and cloak them from your eyes.
+|
+| Fear not the slash of sharpened claws,
+|   the flashing terror brief,
+| but stamps that mark the written clause
+|   with laws of fierce belief.
+|
+| What evil deeds those stories tell
+|   prepare your heart to meet
+| the formal world where heroes fell
+|   to wander incomplete.
+
+- April 2025
+
+------------------------
+The Pantoums of Dementia
+------------------------
+
+| Movement I - Undulation
+|
+| the seconds slowed to stop as Father passed,
+| when flocking sons returned to home to mourn,
+| then Mother's mind began to break at last  
+| as moments shed in threads she once had worn. 
+| 
+| when flocking sons returned to home to mourn, 
+| recast in lensing rays of age amassed 
+| as moments shed in threads she once had worn
+| the Father's sons adorned with clothes outcast. 
+|
+| recast in lensing rays of age amassed 
+| a question, Mother, may I have a dance? 
+| the Father's sons adorned with clothes outcast
+| an offered hand through loops of time's expanse.
+| 
+| a question, Mother, may I have a dance? 
+| their Father knelt and tender took her hand,
+| an offered hand through loops of time's expanse,
+| their final words in wilting hearts expand.
+|
+| their Father knelt and tender took her hand,
+| the seconds slowed to stop as Father passed,
+| their final words in wilting hearts expand, 
+| then Mother's mind began to break at last. 
+|
+| Movement II - Rearrangement
+|
+| remember now before the future fades, 
+| the sutured minutes of memories held,
+| records replayed as grooving sound degrades,
+| advancing echoes, music notes dispelled. 
+| 
+| the sutured minutes of memories held:
+| now twirling dance, oh younger selves, entrance
+| advancing echoes, music notes dispelled
+| through silent waltz that swells with last romance. 
+|
+| now twirling dance, oh younger selves, in trance
+| with candled spells of woven hands that grasp
+| through silent waltz that swells with last romance
+| of eyes reshaping molds, the fated clasp. 
+| 
+| with candled spells of woven hands that grasp
+| relapsing moments sung by bells and crowds
+| of eyes, reshaping molds the fated clasp 
+| of past refrains now sealed beneath the clouds. 
+|
+| relapsing moments sung by bells and crowds
+| concealed by crumbling walls, demented shades
+| of past refrains now sealed beneath these clouds
+| that clutter skies in swarms that stretch decades.
+|
+| concealed by crumbling walls, demented shades
+| (remember now before the future fades)
+| invade the hollowed mind as scream pervades
+| records replayed as grooving sound degrades.
+|
+| Movement III - Dissolution
+|
+| remember ancillary note sentries:
+| the good can decay many ways.
+| phantom morrow's cough. in times realize
+| the mention there of tenant seasons.
+|
+| the good candy came anyways;
+| all target the damaged mind in trance,
+| (the men shun their often antsy sons)
+| the flow ingrained decomposes.
+|
+| altar, get the damn aged mind, entrance
+| memory erstwhile, foe kissing;
+| the flowing rain eddy composes
+| another ushered 
+|
+| memo rehearsed while focusing
+| an aim, wintry slight, upward ingrown
+| an other us heard 
+| the fading names of suns.
+|
+| a name when trees light up, warding grown
+| remembrance, ill airy notes in trees,
+| the fading names of sons
+| fan tomorrow's coffin, time's real eyes.
+
+- June 2025
+
+-----------
+Vinyl Seats
+-----------
+
+| The vinyl seats of classic cars,
+| the plastic smell their thread secretes
+| as cherry burn on cover mars 
+|   the vinyl seats.
+|
+| When Father stooped to sew the sheets,
+| his needles stacked in columned jars,
+| his fingers folded rows of pleats.
+|
+| My fingers trace the wells of scars
+| as driving down the city streets
+| my careless dropped reminder chars
+|   the vinyl seats.
+
+- June 2025 
+
+------------
+Fragrant Air
+------------
+
+| The fragrant air which wavers here
+| in heat like harps of golden hair
+| that sweep their shoulder length and clear
+|   the fragrant air.
+|
+| The lily sermons whisper where
+| I heard your blood through skin by ear,
+| a moment made in silent stare. 
+|
+| The scent remains, you disappear,
+| as wind now speaks your name in prayer,
+| in razor gusts that whip and shear
+|   the fragrant air.
+
+- June 2025
+
+---------
+Absurdity
+---------
+
+| One lovely Thursday afternoon
+|   two billion years ago,
+| a star encased by arcing moon,
+|   embraced despair and woe. 
+| 
+| This sordid joke of yellow-red,
+|    this sneering, mocking jape:
+| To burn with heat, on axis sped
+|    with no hope of escape.
+|
+| So solace cursed upon a point,
+|    it drew its final plan
+| as spinning round its lock and joint
+|    its ending now began.
+| 
+| The heaving mass of goo morassed
+|    then gurgled once and sighed;
+| A rattle scream of flames harassed
+|    what silent void belied. 
+| 
+| The sacrificial rings were flung
+|   in sprays across the sky;
+| The interstitial threads then wrung
+|   as ropes once bound untie. 
+|
+| And in these fictions fracture facts:
+|    A single atom forged
+| and bellow blown through heaven's tracts
+|    to find itself disgorged. 
+| 
+| The crush of black, once unobserved,
+|    in fire found its sight.
+| The atom woke from dreams unnerved
+|    in sailing stream of flight. 
+| 
+| Without a frame, it screamed in vain
+|    through parallactic curves
+| that weave the sieves with cluttered skein
+|    of dark galactic nerves. 
+|
+| Commotion drowned, it gazed about
+|    along the ends it aimed:
+| The bluest gem beyond a doubt
+|    the cosmos ever named. 
+| 
+| It wept to see a brilliant Earth,
+|    the fate bestowed by chance,
+| and in its cackles rose a mirth
+|    expressed in photon's dance. 
+|
+| It splashed the surface spinning fast,
+|    now lost amid the sea. 
+| The water rose at what trespassed,
+|    mistook it for debris.
+|
+| The liquid swarm convened in waves,
+|    to flood the tiny core.
+| They stripped and pried, as hunger craves
+|    and always wants for more. 
+|
+| The terror flashed, as pulled apart,
+|   its briefly tasted life
+| now disappeared before its start 
+|   beneath the wetted knife. 
+|
+| So bittersweet and incomplete, 
+|   resigned into the black,
+| the atom braced for ends to meet 
+|   in swirling last attack.
+|
+| But fortune finds where will converged,
+|   as snatched from death it gasped
+| and saw from depths the land emerged,
+|   where brethren all were clasped.
+|
+| A molecule of carbon made
+|   from crystal network cast
+| through jointed links of atom braid
+|   that helix ghosts amassed. 
+|
+| Began the age of afterbirths, 
+|   of structure spat in space,
+| originating blest on Earth's
+|   atomic interface. 
+|
+| Now watch along the webbing sewn
+|   the single atom weave
+| through warps and wefts and whetted stone,
+|   the knits of stellar sleeve.
+
+- June 2025
+
+----------------------------------
+The Mad Ballad of Sad Cracked Jack
+----------------------------------
+
+Part I: Thalia
+--------------
+
+| The question beggars even now
+|   for answers we still lack.
+| No one has ever said the how
+|   of what that cracked our Jack.
+|
+| He woke that day and heard the song
+|   that framed his steps with beat, 
+| the meter stick that smacked along
+|   behind his fuzzled feet. 
+|
+| At first he thought he dreamt the verse,
+|   these words you read unfold,
+| but when he thinks the thoughts recurse
+|   And seep through pages' mould. 
+|
+| Aghast he jolts and cries aloud, 
+|   "What trickster plays these tricks?"
+| Then shocked to find his speech endowed
+|   with stresses timed to ticks.
+|
+| Alas, if Jack had only known 
+|   the furies fate had loosed--
+| "What furies now?" His groan
+|   reply to rhymes reduced. 
+|
+| What fatal flaw entrapped this man?
+|   "I'm just an office clerk!"
+| But forces orchestrate a plan
+|   no human born can shirk.
+|
+| In boxer briefs, he stumbles out,
+|   escapes from bed to hall,
+| and every inch he runs to rout
+|   the rhythm's faster call. 
+|
+| In morning light, the very sight 
+|   of frantic Jack alerts
+| the neighborhood to pending blight
+|   of curse this line asserts.
+|
+| "Oh, neighbors, please, receive my plea!
+|   There's something very wrong!"
+| He cries with gasp from bended knee,
+|   "I only speak in song!"
+|
+| A single friend then steps on stage,
+|   so named to fit the bill,
+| for names are fate and fettered wage;
+|   They called her lovely Jill. 
+| 
+| "Jack? What the hell is going on? Are you okay?"
+|
+| At that our Jack is taken back,
+|   her voice as clear as glass
+| with not a hint of verse to track
+|   through mazes long and crass.
+|
+| "How can it be!? An ask so free
+|   while I to scheme conform!"
+| His diction sweeps anastrophe,
+|   mosaics teeming swarm.
+|
+| She kneels to him and whispers soft,
+|   a voice as kind as cane,
+| the type that beats, not sweet but loft
+|   to strike the skin with pain. 
+|
+| "Are you on drugs or something else?"
+|
+| Now Jill, this dame, the missus made
+|   to fill the damsel role,
+| the unsuspecting victim played
+|   To ballad's very goal.
+|
+| These words are met with wide-eyed stare
+|   as Jack realized his plight;
+| He hears the lines designs prepare,
+|   the ending rhymes invite. 
+|
+| "Oh, listen, Jill, and listen well!"
+|   He takes her hand in his, 
+| "These words that flow are not a spell,
+|   they simply are what is! 
+|
+| "I hear the force that cracks the shape
+|   incessant stresses bind!"
+| He cries as crowds surround to gape
+|   at madness here enshrined. 
+| 
+| "I see," She nods, but doesn't see, 
+|   and picks him up to walk,
+| "Perhaps," She says, "It's time to flee,"
+|   and hauls our Jack in shock.
+| 
+| By hand he's led while thoughts digress,
+|   absurdity in tow. 
+| And spanned by doubt the thoughts obsess
+|   unheard except through flow. 
+|
+| As doors are slammed, the cats are scrammed
+|   from cushions where they sat,
+| And leaning in as Jill enjambed,
+|   "We need to have a chat
+|
+| About the--fact--" she stops mid-sound, 
+|   and measures out her tone,
+| as slowly wound on axis bound,
+|   her speech is ground and thrown,
+|
+| "About the fact you seem irate,"
+|   She says while tongue contorts
+| Around retorts that resonate
+|   with words this verse consorts,
+|
+| "And not to mention halfway nude,"
+|    She says with glance that proved,
+| "Let's find you something more subdued,"
+|    But Jack cannot be moved. 
+|  
+| "Why do you rhyme? You're part of it!"
+|   In anger, Jack explodes. 
+| "This horrid crime," His words are spit,
+|   "Explain what fate unloads!"
+|
+| Beneath her brow, her eyes express
+|   concern through gems of blue,
+| "You're clearly broken by some stress,
+|   Now tell it to me true!"
+|
+| Attacked by cackles, Jack, he laughs,
+|   "Yes! Stress! The very pest!
+| The force that binds these epigraphs
+|   And leaves me most distressed!"
+| 
+| "Your speech is weird and most perturbed,"
+|   Her tone now wavers weak,
+| "The implication is disturbed,"
+|   As rhymes begin to leak. 
+|
+| "Disturbed is just the word I'd pick
+|   describing my disease. 
+| It strickens me a lunatic 
+|   and swings me by trapeze.
+|
+| Despair becomes the one sole choice,"
+|   Laments a weary Jack,
+| "Unfairly drummed by cunning voice,
+|   alone and left to crack."
+|
+| This lonely lack, unpacked by Jill,
+|   now spurs her senseless heart,
+| "Oh Jack, what's wrong? For me distill
+|   what ails your world through art?"
+|
+| Oh Jack, Oh Jack, this foolish track
+|   will lead to Jill's demise.
+| By now he knows, there's no way back,
+|   but still defiant sighs, 
+|
+| "I woke today and found the world
+|   explained by verse unheard
+| By anyone but me," Unfurled
+|   his words to heights absurd.
+|
+| Confusion swirls her face anew, 
+|   perplexing facts askew,
+| "And does it speak of me and you?
+|   What ends that might ensue?"
+|
+| "It does! It says that you are next,
+|   that fate has bound our names,
+| If cursed I am, then curse has vexed
+|   us both to play its games." 
+|
+| "If that's the case, then if I play--"
+|   She pauses, lost in thought,
+| "It's hard to pick a word to say--"
+|   And thoughtless finds the spot.
+|
+| And now the players number two,
+|   for two the game is made.
+| And now the stacks they anted grew
+|   against the pair they played.
+|
+| A pairing told in pages' fold
+|   of arcs that never miss--
+| Her voice remarks through mutters rolled, 
+|   "--the flying fuck is this?"
+|   
+| "You hear it too?" As shocked as she, 
+|   "The lyric ghost that haunts
+| our wretched lives with prophecy,
+|   As if their words are taunts?"
+|
+| A beat, then two, she hears it too,
+|   but heard is not the word
+| An ear would say, this residue
+|   inferred through meaning blurred,
+|
+| "Juh--Jack," She hacks, "Is this a joke?"
+|   But jokes are soaked in mirth;
+| This line will punch, though falling stroke
+|   will bury dead in Earth.      
+|
+| She asks, "What's that supposed to mean?"
+|    He shrugs, "Your guess is mine."
+| "Is this--" her stutter opaline,
+|    intoned benign, "--a sign?"
+|
+| A sign, of course, but pointing where? 
+|    Aligned to what or who? 
+| The human mind, a dull affair,
+|   so apt to misconstrue.
+|
+| The secret sunk in guarded chest
+|   of synchronicity
+| is found in warps of arcs possessed
+|   of eccentricity. 
+|
+| And even as these words are sewn,
+|   and in their heads unstitched,
+| she threads the fraying edges shown
+|   and falls enthralled bewitched
+|
+| As lighting up, a dawning norm, 
+|   recalled from days of youth,
+| there Jill exclaims, "So uniform,
+|   I've heard before in truth!
+|
+| This meter fits a ballad sung 
+|   in feet of four and three!"
+| And springing up, his hands are wrung,
+|   "What's that to you and me?"
+|
+| "It's hard to say, but what is clear,
+|   there's meaning here conceived,"
+| Declared in certain words austere,
+|   one almost dare believed.
+|
+| "This useless English Arts degree
+|   I never thought to use,
+| it's purpose clear, we both agree,
+|   was always to deduce
+|
+| the curse of verse that flirts with us
+|   and save us from its worst
+| but first I need the tools to suss
+|   the course to be reversed,"
+|
+| Abrupt she stands with coat in hand, 
+|   "The library!" She cries, 
+| "We need some Keats, that Ginsberg banned,
+|   The lessons they advise!"
+|
+| The lights resurge behind Jack's eyes,
+|   as hopeless purged, he rants,
+| "Our paths converge and plans revise,
+|   but first I need some pants!"
+
+Interlude: Chorus
+-----------------
+
+| And now, we pause and ask the point,
+|   the one you've surely sought
+| as Jack met Jill at story's joint,
+|   recalling what was taught:
+|
+| That hills and crowns will meet in fall 
+|   and Jack will crack his head,
+| while Jill will follow fast in thrall
+|   and wind up very dead. 
+| 
+| A million monkeys strapped approach
+|   the works of bards in time,
+| a sonnet thus beyond reproach
+|   returned from carriage chime.
+|
+| A trillion atoms bound through force
+|   will likewise fill a void;
+| For given time, all lines outsource
+|   to stories once enjoyed.
+|
+| Did verse annoint this story first,
+|   or simply find a way
+| to organize the parts dispersed 
+|   through space's disarray?
+|
+| Or simpler yet, had Jack just snapped,
+|   insane beyond repair?
+| The razor tip that Occam tapped
+|   declared the latter fair.
+|
+| The structure seethes, a wreath of webs
+|   where meaning sticks to die,
+| the mind entwined will find in ebbs
+|   the flow that strings the why. 
+|   
+| This thread is laid through curling maze,
+|   convincing paths deceive
+| that reason's plan has drawn the ways 
+|   but madness hides in weave. 
+|
+| With morning socks arrayed with boots,
+|   rotated masks arranged,
+| the tragic interchanged through chutes,
+|   with comedy estranged. 
+
+- June 2025
+
+---------
+Cathedral
+---------
+
+| A church atop a steepled hill,
+| foundation layers ages old,
+| remains in spirit standing still.
+| 
+| The shattered stains on window sill,
+| with marble halls of lichen mold,
+| a church atop a steepled hill.
+|
+| Decrepit pews of souls fulfill
+| what congregation left untold,
+| remains in spirit standing still.
+|
+| The circled streets possess no will
+| except the signs that staked and sold
+| a church atop a steepled hill.
+|
+| But tower high such pointed skill,
+| through silken skies of glittered gold,
+| remains in spirit standing still.
+|
+| Ignore the wind, the biting chill,
+| and cast your final gaze, behold:
+| A church atop a steepled hill 
+| remains in spirit standing still.
+
+- June 2025
+
+----------
+Holly Tree
+----------
+
+| Under the holly tree
+| bough of berries,
+| its siren red
+| temptation.
+|
+| Where life began
+| on skinny knees
+| retching out 
+| my guts.
+|
+| Waxy saw-tooth skin, 
+| prickly leaves, 
+| the sickly buds 
+| of poison seeds.
+|
+| The tangy tongue
+| of Christmas
+| funerary rites.
+| 
+| I spewed
+| through chrysalis,
+| entrails slick 
+| with acid grease,
+| thickly dripping
+| afterbirth.
+|
+| Gazed upon by 
+| ageless tree,
+| received in holy 
+| communion, my first 
+| memory:
+| 
+| The pluming rack
+| of tight blue
+| veins
+| that hung about
+| my neck.
+|
+| The womb of black
+| that forked
+| the branching
+| Earth.
+|
+| The world that hid
+| in bitter leaves
+| and pushed me
+| into it. 
+|
+| I made a wreath 
+| of holly limbs
+| to prick my head
+| with thoughts. 
+|
+| I keep its berries
+| bright as death
+| and touch the skin
+| that baptized
+| me.
+
+- June 2025
+
+----------------
+Ode to the Heron
+----------------
+
+| Grey Heron, sing the song the winds will bring.
+| Who lingers longer than the Winter king?  
+|
+| When hunting ground returns
+|       through fronts of blue to ice,
+| the moles in burrowed urns
+|       prepare beside the mice.
+| The grunting geese then veer
+|       where churning warmth is drove.
+| The deer all disappear
+|       through dreary dreaming cove.
+|
+| All yield, retreat and leave their claims till Spring.
+| Through fields, what muffled name on streams will ring?
+|
+| The answer sweeps from east--
+|       Oh! Heron! Hunter Grey! 
+| Cry! Rouse the sleeping beast
+|       and reaping, feast on prey!
+| Creep low on drift of snow
+|       with coiled neck of spear;
+| Let steam of gasping slow
+|       their rasping scream of fear.
+|
+| The weather warms, yet Winter lifts your wing.
+| The feathers swarm, but lone to cold you cling.
+|
+| In flocking song most birds
+|       find mate to take to nest;
+| Let chorus part the herds
+|       with fire from thumping chest,
+| your pumping flame that spurns
+|       the burning cold on flank.
+| Your silent stare discerns
+|       the creatures left on bank.
+|
+| Each season makes of life a shape to wring.
+| Each reason born in strife escapes to sing. 
+|
+| The Spring first strings the thread
+|       of lazy chirping thrush,
+| the Summer, berry red
+|       and cracking eggs in brush,
+| then Autumn crows of black
+|       in pecking pumpkin hay.
+| Only a lonely lack
+|       breeds mighty Heron Grey.
+|
+| When night descends, take stock of everything.
+| What hidden home should find you nuzzling?
+|
+| What branches bear your weight?
+|       Whose feathers stroke your beak?
+| No human eyes await
+|       the colony's mystique. 
+| The shrieking calls coalesce
+|       atop the forest heights,
+| in alien address
+|       the flame inside ignites.
+
+- June 2025
+
+------
+Floods
+------
+
+| the lifting waves
+| of driftwood floods
+|
+| the flooding drifts
+| of floral wastes
+|
+| a flowered wage
+| that rivers claim
+|
+| on plains that drive
+| the veins to sea 
+|
+| a ceaseless purge
+| through slurried nights 
+|
+| the slightest sprout
+| is rooted out
+|
+| through shooting streams
+| that water loots 
+|
+| the slaughter lurks
+| below riptides
+|
+| but tides recede
+| with grating speed
+| 
+| and petal graves 
+| in gravel pits
+|
+| unravel green
+| with dreams of Spring
+
+- June 2025 
+
+--------
+Millenia
+--------
+
+| the slow motion of lives in the forest depths,
+|
+| empires of pine wage ancient wars against city-states of oak.
+| an insurgency of maple hides in their midst, gathers at their trunks,
+| a nascent rebellion that unwinds over centuries.
+|
+| morning dew soaks the slick bark of the frozen sentinels
+| and paints with strokes, measured in years, the green of pungent mold spores.
+| 
+| here, a pile of stones older than humanity, hewn from a mountain,.
+| the jagged edges of its primordial eruption softened by quiet eons,
+| now draped with pagan cloaks of forest magic,
+| the altars of secret divinations,
+| pooling with the blood of moss.
+| 
+| the harmonic revolutions of parallel life,
+| the millennial melodies converging into a chorus of now.
+
+- August 2025
+
+------------
+Ode to Death 
+------------
+
+| if i am doomed to die, to fade away,
+| then let the Summer dig for me a grave
+| so deep beneath her depths of supple clay
+| to reach the slate my roots in dying crave,
+| so seasons pass and cast 
+|   my bone to hidden stone
+|     through layers moistened brown,
+| the loam of ages past
+|   from gilded breezes blown
+|     that ancient storms brought down.
+| 
+| in time, my stones will seep through Autumn seams,
+| the teeth of grinding Earth that gnash the dead,
+| returning flesh to banks of violent streams
+| where fallen leaves revive in bloody red 
+| remaining veins encased
+|   in amber pebble tombs,
+|     each waiting turns to die,
+| depart this world erased
+|   and face the end that looms
+|     in dust of covered sky. 
+|
+| so keep these shards on sheltered shores and guard
+| the song of raving larks and restless gaze;
+| let nothing chance upon my resting yard
+| as sorrow sheds its form, at last, decays;
+| i have no edge to skip 
+|   but only weight to sink,
+|     so rising tides return
+| in floods the currents whip
+|   to Winter's very brink,
+|     my stirring final churn.
+|
+| and when my ripples flatten back to glass
+| remember once again the scent of Spring, 
+| perfumed with wasted youth and sassafras,
+| regret dissolved to tempest underwing,
+| ascending cloudless heights 
+|   through heaven's darkest spheres,
+|     diluting down to air,
+| returning now as lights,
+|   this starry nest appears
+|     to mark my vast despair.
+
+- August 2025
+
+-------------
+Little Sprout
+-------------
+
+| Oh, little sprout, the forest sleeps
+| in arid ground now cursed by drought.
+| Across the land, the desert sweeps,
+|        oh, little sprout.
+|
+| Your boldness lacks a water spout
+| but hidden root in darkness steeps
+| the moisture buried deep in doubt.
+| 
+| The dream of Spring nobody keeps
+| ascends in stems so small and stout
+| when mourning sky beholds and weeps,
+|       oh, little sprout.
+
+- August 2025
+
+--------
+Larksong 
+--------
+
+| at least the larks remember songs
+| each morning rise you're gone again.
+| 
+| the mourning veils of scattered throngs 
+| depart your wake without amen.
+| 
+| the men who take your parts away
+| forget to take my silent heart.
+|
+| they leave a lily black bouquet
+| whose petals fingers tear apart.
+| 
+| and when i stand, the thoughts remain,
+| the stems are bare and nothing's changed. 
+| 
+| the birds begin their last refrain
+| as though they knew and prearranged.
+| 
+| if nothing else, their voice belongs;
+| at least the larks remember songs.
+
+- August 2025
+
+------
+Eulogy
+------
+
+| mound of the earth, the funeral pyre,
+| sermons of fire, infernos of oak.
+|
+| burning of briars, spiraling higher,
+| chorus expired and softly I spoke:
+|
+| nothing is left, but cinders remain,
+| warm to the touch, as memories fade. 
+| 
+| look to the thrashing showers of rain,
+| mourn with the hissing coils arrayed.
+| 
+| pound for the taking, body of ash,
+| weight of the flame, transmuted to wind. 
+| 
+| thundering void, in symbols that flash,
+| scavenging clouds, futures descend.
+| 
+| weep with the water, falling to feet,
+| honor your father, drink of his heat.
+
+- August 2025
+
+------------------
+The Lives of Kites
+------------------
+
+| some years ago there came an errant kite
+| from heights unknown, descending breeze with glee.
+| 
+| in drifting down, it veered off course in flight
+| and snagged upon the tallest poplar tree.
+|
+| despite the frantic pull of frightened wind,
+| the kite was lost and stranded far astray.  
+|
+| each time i passed, its color waned and thinned
+| from red to pink, from pink to ghastly gray.
+|
+| it languished there upon its poplar perch
+| until its silk dissolved to drooping thread
+|
+| and then one day there came a sudden lurch
+| as cotton clouds of seed were flung and shed.
+|
+| the kite's remains reclaimed their place on high
+| as slivers shimmered sweetly through the sky.
+
+- August 2025
+
+------------------
+The Origin of Lies
+------------------
+
+| Oh, Ila, don't be weeping,
+|    my dear, you misconstrue;
+| The sun is only sleeping
+|    before it rises new.
+|
+| I'll wait with you til morning,
+|    and tell you of the stars,
+| the memories adorning
+|    the empty night with scars. 
+|
+| This love that's learned by lacking,
+|    whose vastness has no chart,
+| in silent orbits tracking
+|    the shaping of your heart. 
+|
+| Please trust that nothing passes,
+|    we only change our form.
+| The morning dew trespasses
+|    on leaves the sun can't warm.
+|
+| Child, listen, though you're growing,
+|    some things cannot be known
+| until you've grown up knowing
+|    out here you're all alone.
+|
+| I'll be with you forever,
+|    these words will be a lie.
+| If I could but this deliver:
+|    To live until you die.
+|
+| So while you're small, keep holding
+|    my hand as though it soothes;
+| The world will keep unfolding
+|   each wrinkle that it smooths.
+|
+| Believe me when I'm saying:
+|    Oh, Ila, darling dear,
+| no matter what I'm staying,
+|    I'll always be right here. 
+
+- August 2025
+
+---------
+Your Hand
+---------
+
+| My overflowing palm retains your hand,
+| my soundless searching grip constrains your hand.
+|
+| Campaigns were waged behind our dinner plates
+| so in my weakened state now reigns your hand. 
+|
+| Champagne on lips recalls our lightning strike, 
+| its faded charge at least sustains your hand.
+|
+| Your face betrays unknown terrains of thought,
+| I ask, what other vision gains your hand?
+|
+| Today's performance wanes around your eyes,
+| the last remaining fragment feigns your hand.
+|
+| Though yesterday what we ingrained was real,
+| it's only habit now that trains your hand. 
+|
+| Our anthem drains its notes on evening wind,
+| not even beating rhythm reins your hand. 
+|
+| The grain of folds within your clenching fist 
+| reveals the tangled web that veins your hand.
+|
+| My fingers trace disdain beneath a strand
+| of silver thread. What bracelet chains your hand? 
+|
+| Bewitched, your straining wrist displays a charm, 
+| another's secret heart ordains your hand. 
+
+- September 2025
+
+-----------
+Anniversary
+-----------
+
+| the city edge, its concrete knife
+| divides the Earth, creates a cliff
+| the shifting gears engage to dive,
+| a morning drive becomes a trek
+| along the etching mountainside,
+| the tips of which all signals die;
+| ascending poles of cable lines,
+| the crooked rubber vines that test
+| the forest depth infested heights  
+| with swarming trails of valleyed years
+| much older than the minutes here,
+| forgotten since and gone to ground,
+| to gravel found upon the paths 
+| unravelled round the bend today,
+| today a day the years return,
+| it turns around to me again,
+| repeated now, but far removed
+| by twisted roads that have no end,
+| where maps pretend to know the way
+| through swaying wilds of ancient pine
+| inclined on slants of slated shelves,
+| that delve the dark of cratered holes
+| around reverbing curves that skirt 
+| the skids my spinning makes in dirt;
+| the thinning miles, the barren miles,
+| as humans fade, the tree empires
+| expanding spans of secret green,
+| and losing me, i find the top,
+| the spot we used, the place you said
+| you'd always be, but all remains
+| decayed, reclaimed, reversed, undone, 
+| embedded in the layered lime.
+
+- September 2025
+
+------
+Autumn
+------
+
+| the autumn bleeds its fallen leaves,
+| enthralling me with awful dreams
+| of auburn weaves my fingers clasped.
+| 
+| a swirling world that gasps in gales 
+| of colored veils harassing curls
+| unfurled in lines the gusts unwind.
+| 
+| while afterglows of neon bind
+| the blaze between the blinding clouds
+| that breathe their final breath of light.
+| 
+| at dusk, we clung, embraced but stunned,
+| our traces spun through hissing dark
+| in whispered arcs the wind erased.
+|
+| the fallen leaves arrayed your face 
+| within that shaded sprawl of grace,
+| the place that fades as seasons fall.
+|
+| i watch the leaves in seizures pulse,
+| the ether pulled by either force,
+| the fever dreams or season's course.
+
+- November 2025
+
+---------
+Christmas
+---------
+
+| the town is dead, in dying dreams 
+| december trees with vying lights,
+| the timbered scenes that blink unseen
+| in eerie angles down the street.
+| on holidays, the graves of men 
+| are warmer than the fallen world,
+| the sheets that form a shawl and tomb,
+| the keepers of the doomed and spring.
+| in dark the corpses grow and rot
+| in pockets kept beneath the snow. 
+| although i wander to and fro,
+| the freeze that slows the world to stop,
+| it wraps around in glowing rings 
+| the steeples pointing up to show 
+| my heart is aimed like arrowed bow,
+| but lowered level to the ground
+| where pounding feet, in treks alone,
+| remember trees that grew back home.
+
+- December 2025
+
+---------------
+Terra Australis
+---------------
+
+| When winter breaks across the bow of ships,
+| the cold ascends in empires drawn from ice.
+| The mist dissolves to steam escaping lips
+| while warmer thoughts are mourned in sacrifice.
+| 
+| The cold ascends in empires drawn from ice
+| as wind returns a harbour street to sleet,
+| while warmer thoughts are mourned in sacrifice,
+| his letters worn with lines I can't repeat.
+|
+| As wind returns a harbour street to sleet,
+| I think upon the sailor lost at sea,
+| his letters worn with lines I can't repeat,
+| the words he said in promises to me.
+| 
+| I think upon the sailor lost at sea
+| when winter breaks across the bow of ships,
+| the words he said in promises to me.
+| The mist dissolves to steam escaping lips.
+
+- January 2026
+
+-------
+The Gap
+-------
+
+| the trees are cleaved like butchered heads
+| then staked along the path to mark
+| forgotten children down in graves
+| of shallow dirt atop the stone
+| where sand condensed from flooded silt
+| and drowned as silent years went past
+| to leave at last an altar flat
+| on mountain edge near where i sat
+| as streams below, they flowed and cut
+| a gorge between the heights to form
+| the slated stairs ascending shelves
+| to summit barrows buried deep
+| beneath the blinding sun that burns
+| the candled ice adorning shrines
+| decayed through time, reborn too late
+| in lichen stains that spread in webs,
+| the overlapping claims of death.
+
+- January 2026
+
+-----
+Roses
+-----
+
+| a twisted heart of roses falls apart;
+| the petals flake in spirals round the vase.
+| 
+| reflected in my iris counterpart,
+| the radii that trail in thoughts retrace
+| 
+| their fallen arcs reversed in surging climb,
+| returned in course to blooms unplucked by hand.
+| 
+| where threaded thorns are wreathed with sage and thyme
+| unfolding flowers thick with youth expand
+| 
+| to nubile blossoms stained in bloody red,
+| then sliced precisely where their life begins,
+|
+| a bed of loam exchanged for glass instead.
+| suspended lifeless, color drains and thins.
+|
+| i measure days in wilted leaves that drop,
+| bouquets of clocks awaiting death to stop
+
+- February 2026
+
+--------
+Ontology
+--------
+
+| the world resides outside the eyes
+| it hides beneath the hides of men
+| in dreams and words it starts to rise
+| the world resides outside the eyes
+| then dies a death of formal lies
+| disguised in lines of skin again
+| the world resides outside the eyes
+| it hides beneath the hides of men
+
+- February 2026
+
+-----------------
 Paradise Revealed
 -----------------
 
-Copyright © 2113 by Sofia Santos
-
-All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means—electronic, mechanical, cryptographic, photocopying, recording, or otherwise—without the prior written permission of the publisher.
-
-The scanning, uploading, and distribution of this book via the global network or any decentralized ledger without permission is a theft of the author’s intellectual property. Explicitly, no part of this text may be ingested into any generative semantic model or automated translation index without a licensed commercial agreement.
-
-    Providence Continuity > Rua Teodoro Sampaio, 2550 - Level 14
-    São Paulo, SP, 05406-200
-    Brazil
-
-This is a work of fiction. Names, characters, places, and incidents either are the product of the author’s imagination or are used fictitiously. Any resemblance to actual persons, living or dead, events, or locales is entirely coincidental.
-
-    ISBN 978-6-5892-1044-8 (Trade Paperback)
-    ISBN 978-6-5892-1044-9 (Epub)
-
-International Cataloging in Publication Data
-(Brazilian Chamber of the Book, SP, Brazil)
-
-Santos, Sofia
-Paradise Revealed / Sofia Santos. — 1st ed. — São Paulo:
-Providence Continuity, 2113.
-
-Brazilian Fiction I. Title.
-
-DDC-869.3
-Index for systematic catalog:
-
-Fiction : Brazilian Literature 869.3
-
--------
-Preface
--------
-
-Three weeks prior to the publication of the first book of *Paradise Revealed*, Sofia Santos walked out of her apartment in São Paulo, Brazil and was never seen again. Her whereabouts, though subject to rampant speculation, have never been conclusively determined [#oubliette_a_000]_. She left behind a husband and a newbord child only eight months old. 
-
-TODO
-
-------
 Book 1
 ------
 
@@ -1094,43 +2395,4 @@ Book 1
     each bound in operation to his deeds.
         With silent voice, then Satan speaks a Word.
 
------------------
-Unfinished Pieces
------------------
-
-These unfinished excerpts were written in the margins of the manuscript.
-
-.. verse::
-    :increment: 5
-
-    And if all stony men are leaden gray, 
-    sweet Adelbard to Elouise would say:
-    this contradiction, dear, declares a rift
-    between the formal lines I write to you
-    and secret form inside that beats for you,
-    for men of stone would here consist of lies;
-    these written marks permit delusions' spread;
-    the word creates a space for worlds to grow
-    but words require a captive world to show.
-
-.. verse::
-    :increment: 5
-
-    And I, perceiving strength in you, complied,
-    for who am I to judge who gets denied?
-
-.. verse::
-    :increment: 5
-    
-    But, Lord of Hell, consider this anon:
-    However large your forces be, one more
-    I add and multiply to dwarf your size,
-    forever circled from above by curves 
-    so smooth their limits straighten out to lines,
-    resolving down but not dissolving bounds.
-
-.. [#oubliette_a_000]   
-    
-    A hundred times I've read these words, and still I wonder what they mean. A hundred times I've read her poem, and still I wonder if these words are hers, as if they could be anyone else's. Father, what things did you neglect to tell me? Who is this woman, the mother I never knew? 
-
-    TODO
+- March 2026
