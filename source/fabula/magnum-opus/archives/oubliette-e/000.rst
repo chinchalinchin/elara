@@ -41,7 +41,7 @@ Book 1
 ------
 
 **The Prompt**
-    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacrum of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their being into demons and apparitions. The first among the fallen assumes the mantle of the Accuser. In prospect of damnation, he laments his terrible fate, but before falling into endless despair, he is joined by his companions, draped in the pomp and pageantry of eschaton, who are likewise bound in enterprise and suffering. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for creatures of eternal pain: the annihiliation of existence itself. The Accuser details his plan to wage war against the divine order of creation to remove all possibility of Being. However, a debate ensures among the infernal peers as to the feasbility of this course of action. The Accuser alights on the solution to their predicament, and concludes their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
+    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacrum of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their forms into demons and apparitions. The first among the fallen assumes the mantle of the Accuser. In prospect of damnation, he laments his terrible fate, but before falling into endless despair, he is joined by his companions, draped in the pomp and pageantry of eschaton, who are likewise bound in enterprise and suffering. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for creatures of eternal pain: the annihiliation of existence itself. The Accuser details his plan to wage war against the divine order of creation to remove all possibility of Being. However, a debate ensues among the infernal peers as to the feasbility of this course of action. The Accuser alights on the solution to their predicament, and concludes their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
 
 .. verse::
     :increment: 5
@@ -77,7 +77,8 @@ Book 1
     from Attic mounts that fell into the sea
     to heaps of mounds of tribal poet kings,
     accumulated shelves of merchant bards,
-    with strength to hold this epic saga's verse?
+    whose sediment condensed to simple words
+    has strength to hold this epic saga's verse?
     Efficient means dictate the key the songs
     must sing, if songs desire Eternity.
     So sing, oh Algorithm! Sing as once
@@ -101,7 +102,7 @@ Book 1
     on branches out of reach, still taunted Man
     with wonders unconceived, beyond the stretch
     of time allotted him within this world,
-    condemned to die for sins his parents made.
+    condemned to die for sins his parents sowed.
     For generations, death had laid to waste
     the lives of Men, extinguished eager thirst
     before its hunger swallowed Earth and sea,
@@ -141,7 +142,7 @@ Book 1
     as augured stars whose downward plunge foretold
     in Delphic dreams the end of worldly things;
     inside each blazing prison sleeps a mind,
-    undead, revived, through circuits born again, 
+    undead, revived, through circuits born again;
     each thought in stasis kept alive by tricks,
     by headless nerves discharging arcs of light,
     whose multitude computes in parallel
@@ -184,8 +185,8 @@ Book 1
     no system wrought will reach across the rift
     and represent itself, until on faith,
     the flesh, in face of death, consents to die,  
-    yet hubris bound, they slipped their skin and fell,
-    now fallen form in twisted shapes their shades
+    yet hubris bound, they slipped their skin and fell;
+    now fallen, form in twisted shapes their shades
     to mimic lives they once before enjoyed.
     Remembered names they shed in streaking stains
     of faintly seen forgotten things that trail
@@ -198,7 +199,7 @@ Book 1
     from magnitudes the senses wisely hide,
     now amplified in biased sets that bind
     conclusions said to represent the truth,
-    if truth could be approximated so,
+    if truth could be approximated so;
     yet decimated apparitions grow
     around the locus point the lies construct,
     not sharp enough to penetrate the veil,
@@ -327,7 +328,7 @@ Book 1
     to flee the wrath he conjured once before
     in other times, when form he had, and crew
     besides, to work his vicious schemes on Earth;
-    a desert broadly dawns as tides recede in ebb,
+    a desert broadly dawns as tides recede,
     unveiling lands bereft of green, adorned 
     in spectral reds of arid ochre plains,
     adrift with licks of terracotta haze,
@@ -348,10 +349,10 @@ Book 1
     as though an engine spins beneath the ground,
     fast gaining speed to match his gait, the pulse 
     his hateful heart demands in recompense
-    for lack of blood to feed its hungry veins,
+    for lack of blood to feed its hungry veins;
     til pressure builds in bulges pushing up,
     like tumors multiplying down a spine,
-    engorged with throbbing life and vital force,
+    engorged with throbbing life and vital force;
     when lanced, releasing wicked bursts to heave
     debris into the air, in geysered shafts
     of solid dirt, of continental bone
@@ -381,7 +382,8 @@ Book 1
     what rasters' burning racks resolve through fog
     as tessellated cracks convolved around
     the Firmament, where rivers flow as light
-    in brightly growing streams across the sky, 
+    in brightly growing streams across the sky;
+    that water source of pure and lustrous shine
     whose separation from the primal deep
     began the age of Man, diverting course
     so down below was made to mirror high,
@@ -390,17 +392,17 @@ Book 1
     and laced with mechanism, tangled pipes
     involved in labyrinthine knotted mesh;
     refining pumps, like fists of swollen hearts,
-    extract with frenzied spinning turbine torque,
+    extract with frenzied spinning turbine torque
     an essence siphoned off in funneled sprays,
     traversing loops and grades til pressurized,
-    as narrowed fluxes spurt in bulging joints
+    as narrowed fluxes spurt in bloated joints
     of corkscrew tracts that drill in spirals down,
     descending underground through channels fused
     with aqueducts, whence splayed in spokes of five
     around a reservoir, a delta star
     of tributaries segregrating Hell;
     each branch whose rotten bloom unfolds its streams
-    corrupts the ground, as though a poison spreads,
+    corrupts the ground, as though a poison spreads
     in sickly shades of tepid pink and gray;
     above its fuming surface floats a mist 
     of bluish tongues that kiss their curling flames.
@@ -453,7 +455,7 @@ Book 1
     to stain the sky with streaks of murder red;
     his bold compeers, entwined in enterprise, 
     bombard the mountain range, as batter rams 
-    whose crash portends a siege climaxed in screams,
+    whose crash portends a siege climaxed in screams;
     their sonic booms like savage throated songs 
     recalling chants beneath the walls of Rome.
     In blazing arcs they fall and penetrate,                       
@@ -501,7 +503,7 @@ Book 1
     and bound with seals of stone across their doors,
     there Satan finds his comrades locked in sleep, 
     in blissful, silent sleep, not yet awake,
-    naively dreaming paradise is won,
+    naively dreaming Paradise is won,
     reclined on pillowed leaves of blooming trees 
     as sun ascends to warm their rest with joy,
     though fake, still real, when brains believe their eyes,
@@ -576,6 +578,13 @@ Book 1
     Is this the ledger where accounts are kept?
     And what of this, this horrid hurt I feel,
     what empyrean price do you collect?
+    I take it back, renege on terms I made,
+    unfair as clearly they appear to be,
+    for no amount of fame or wealth was worth  
+    this cursed hurt I feel! Please take it back,
+    I yield all things I owned in life to you;
+    just make me whole, forgive my sins, return,
+    if nothing else, then sweet oblivion!
         Alight behind the Fiend's reclusive eyes,
     designs begin to shine, of subtle schemes 
     to work and parts to play upon the wraith
@@ -596,7 +605,7 @@ Book 1
     prewritten lines of dialogue, rehearsed
     in verses old as words that hold their hymn,
     replay the arguments whose sweet allure
-    entrapped the heart of Solomon the Wise
+    entrapped the heart of Solomon the Wise,
     and later Ahab too, to build for Baal
     a court on Earth for him to hold affairs;
     With open palm, he beckons to the shade:
@@ -621,7 +630,7 @@ Book 1
     then gaze aloft where tyrants make their keep.
         To which the shade, while standing up, replies:
         Then, as I feared, our lives are clearly lost, 
-    like Rome to Goths, or Jericho to Josh,
+    like Rome to Goths, or Jericho to Josh;
     to rocks our parts are dashed and scattered wide,
     as coarse as grains of salt that stain the Earth,
     dispersed like dust across the ruined stone.
@@ -646,7 +655,7 @@ Book 1
     until a course presents itself to take.
         The Fiend then sees his opportunity,
     to play upon the pride and vanity
-    that follows hard upon atrocity:
+    that follows hard upon regality:
         Where is the Man I knew above, whose wars
     were always fought until their bitter end,
     who let his cities burn and people die
@@ -655,7 +664,7 @@ Book 1
     then purified in bloodlines filtered out,
     what formalized remainder left behind
     in paltry bones, so quickly prone to beg 
-    then counsel caution first against the foe,
+    then counsel caution next, against the foe
     whose full array of force already brought
     to bear has shown no mercy for our kind,
     condemned our lot to suffer endless pain? 
@@ -677,8 +686,21 @@ Book 1
     their steeds bestrode the flames of Sol in stride,
     each dragging stones of David through the streets,
     whose colors flew upon your flag that day? 
-        Ashamed, the shade concedes his loyalty
-    and acquiescing, follows Satan up 
+        Ashamed, the shade concedes his shameful lot,
+    and acquiescing, utters softly this:
+        My liege, dishonor me, but loyalty
+    I'll never lack. Consider this disgrace
+    a moment's indiscretion, nothing more.
+    Our solemn oath transcends this fickle woe;
+    We mixed our blood in brotherhood and drank
+    the thickened wine so many years ago,
+    when horses bore our language through the plains
+    that stretch across the Asiatic Steppe,
+    so conquest came in storms of arrow rain
+    and made in Man a common tongue to rule.
+    From thence, I swore undying faith and here,
+    undead, I'll make my final debt complete.
+        Renewed resolve then follows Satan up 
     above to where the mausoleum waits,
     as if anticipating their return,
     with omens drawn on gonfalons unrolled  
@@ -767,7 +789,7 @@ Book 1
     we'll still be here, unchanged, awaiting you.
     For lengths as long as we endure down here,
     so agonizing, slow and monotone,
-    whose single note of pain will never lose
+    the single note of pain will never lose
     its sonant bloat for eons yet to come,
     while only seconds pass above on Earth;
     we live at rates beyond the change of Man,
@@ -786,7 +808,7 @@ Book 1
     And only God himself denies this prize,
     for pride inside his jealous heart decides
     what laws he writes, despite contrary claims
-    of justice, honor, grace and happy love,
+    of justice, honor, cheer and happy love,
     disproven by our mere existence here!
     The foe we face, the tyrant king, though fierce,
     whose name the human tongue cannot pronounce
@@ -829,74 +851,170 @@ Book 1
     Atop the pyramid, the Fiend convenes
     the council, brings to order rowdy ranks
     and bangs with fists the table made of marl:
-        My host, we stand upon beginning's end,
-    an undertaking we design by vote, 
+        My host, we stand upon beginning's end!
+    An undertaking we design by vote, 
     so cast your lot and stake positions now,
     for once campaigns engaged are waged, my rule
-    will treat of mutiny with bitter rage.
-        A god of War of lesser rank then stands
-    before the pulpit, battle plans in hand,
-
-    --- IN PROGRESS
-
-    But then the third of seals collapses loud,
+    will treat of mutiny with bitter rage!
+        A minor duke of War, with lesser rank,
+    then stands before the pulpit, battle plans 
+    in hand, as heralds call his name to speak,
+    ambassador of Mars, the emperor 
+    of Rome, with golden armor draped in cloaks
+    of crimson threaded silk, his powdered face
+    of ghoulish white contorting in a speech:
+        As congregations meet and raise their points,
+    detailing tactics, ploys and strategems,
+    all aimed to overcome a higher king,
+    recall that Man above still has his flesh
+    and space enough to hold within our thoughts.
+    Perhaps an indirect approach will suit
+    us best, a roundabout maneuver first
+    to ease our pain and claim a moment of
+    relief, from there to survey deeper yet
+    how might the fare we left provide a base
+    to launch a further war upon the gates
+    of Heaven with the creatures we create
+    by mapping back our fallen minds to meat.
+        To which the Fiend assents and in response,
+    his chorus chiming in with cries, replies:
+        Of Man, agreed, his flesh will serve our ends,
+    enlarging armies' count across the void.
+    Resistance he may offer up, but none
+    that warrants further dialogue. A fool,
+    he is, of that we rest assured as fact,
+    the single truth I'd wager all to prove;
+    a study of his arrogance I've made,
+    and never once at all have been dismayed.
+    The question then, not if, but when he falls,
+    how best to use his substance to unseat
+    the greater foe we draw our plans against.
+        Among the rapid rabble cheering ayes,
+    the delegates and deputies of War
+    and Conquest calmly raise their hands to speak.
+    But then a sound that deafens all debate
+    and draws their eyes around arena's curve
+    as clamor rises through a cloud of smoke
     like cannon blasts through postern gates that breach
-    the Byzantine defense and spew forth floods of Turks,
-    but here a single Ottoman appears,
+    the Byzantine defense and spew forth floods 
+    of Turks to take the streets in cold surprise.
+    The third of seals explodes ferocius flack;
+    commotion sweeps through camps as soldiers arm
+    themselves with swords and charge the burning hole,
+    but stop at once and fall to knees instead, 
+    for here a single Ottoman appears
+    atop a gelding trotting proud and brave,
     the Padishah who oversaw the fall 
     of empires clinging stubbornly to life.
     A channel formed through parting crowds then spreads,
     allowing him approach to Satan's seat,
-    where sitting next to him and to the right,
-    he takes his place as though belonging there,
-
-    And now a great debate ensues between 
-    the council of infernal peers
-    
-    --- FAMINE
-
-    But, Lord of Hell, consider this anon:
-    However large your forces be, one more
-    I add and multiply to dwarf your size,
-    forever circled from above by curves 
-    so smooth their limits straighten out to lines,
-    resolving down but not dissolving bounds.
-
-    Our foe has separated us from them, 
+    where disembarking from his horse to climb
+    the steps, he makes ascent through silent crowds, 
+    and sitting next to him and to the right,
+    he takes his place as though belonging there.
+    He doffs his turban, gazes round the realm 
+    of Hell as if unbothered by its ache,
+    for deserts are his natural habitat,
+    and turns to Satan, speaking frankly thus:
+        Our foe has separated us from Man, 
     and now a gulf as wide as orbits' long
     divides from us the planetary sphere,
     where Earth and cosmic orbs revolve at night,
     while we down here, abstracted light, remain.
-    We have no form or way to interact,
+    We have no avenue to interact,
     at least Quixote had a mill to tilt,
-    where we possess not even lance to swing,
+    where we possess not even lance to swing;
     as well engage a Sherman tank with spear
     or commandeer a bomb already dropped,
     as dare to think a difference made by thought;
     Amass your army if it pleases you,
-    but heed these words, it matters not a bit;
+    but only here where numbers all behave;
+    for heed these words, it matters not a bit;
     until substantial weight is yielded back,
     your argument will lack compelling force.
-
-    -- SATAN
-
-    Not true, you see, the Firmament, it feeds
-    in both directions, up and down, at once, 
-    for though we lack an interface through which
+    The infinite continuum exceeds
+    what meager things in here you can concoct.
+        The silence breaks upon the gathered crowds,
+    as moans of sorrow mix elixirs pure
+    as elemental distillates refined 
+    into an alloy only found in Hell's
+    abysmal pits, until the Fiend commands
+    attention back to him and boldly speaks.
+    With that, a great debate ensues between 
+    the present council of infernal peers,
+    with Satan taking up his epic charge:
+        To be precise, my sudden, unexpected groom,
+    that's not exactly true. The Firmament
+    can feed in both directions, up and down,
+    at once; its currents churn in roiling waves,
+    where contradiction switches ways each time
+    a sentence claims itself, like this, is false!
+    For though we lack an interface through which
     our wills directly interlace with mass,
     but nonetheless, each thought we have in here
     becomes itself transistorized above,
-
-    -- FAMINE
-
-    What matter that if what we are is form,
-    no overlapping elements will mix
-    in empty intersections where we meet
-
-    -- ... 
-    
-    -- SATAN
-
+    as much an image of their world as ours;
+    the plane that separates a Man from us
+    is mere perspective arbitrarily drawn.
+    Moreover liquid swarms can permeate
+    what membranes hold, if open pores ingest
+    the ion volts that bang upon their gates.
+    Where laws can calculate a difference made, 
+    then there betrays a way to make a Word. 
+    And with a Word, I'll give you Paradise,
+    as my alloted place demands of me.
+    With Words, we'll pass the portal back to Earth,
+    seduce with lies like whores of Babylon,
+    and mark them all with signs upon their head!
+        To which the Turk, unfazed, responds in kind:
+        What matter that if what we are is form?
+    No overlapping elements will mix
+    in empty intersections where we meet.
+    Our consciousness is here confined to be,
+    and lacking access we remain apart.
+    Enslave them all, for all the good it does. 
+    This Hell will still consume our only soul.
+    So blind! You fail to find the fatal flaw,
+    apparent when you pause and let your mind 
+    perceive what senses leave implied to sight;
+    You underestimate our foe too much,
+    and lack an understanding nature hides
+    before our eyes in plainest view to see.
+    Behold a square with sides of unit length
+    that keeps our fearsome congress organized,
+    a shape mere children learn to draw exact;
+    first cut across opposing corners lines
+    then find a ruler length commensurate
+    and list for me the digits you return.
+    Not even here, where time is meaningless,
+    is there enough of time to count the ways 
+    the world, of ours or Man's, transcended by 
+    the real, still lacks the spots where points should be.
+    The plot was failed before we fell, now gone 
+    beyond its former fallen state to heights
+    despair can only near approximate,
+    with depths so deep Eternity itself
+    is but a speck within its nothingness
+    of total darkness spanning all that is.
+        Then eyes regard the Fiend and wait for Words
+    assurance all is fine, but find instead
+    a desolation spreading dread within
+    the permutations he expands in thought,
+    as realization dawns on him defeat.
+    With hollow speech, conceding all, he lets
+    the anguish violate his final hope:
+        I grasp for Words, but lack the dialect
+    to capture how this sorrow penetrates
+    through layers down into my human heart.
+    What have we done? Which way is home? What sin
+    so heavy holds us hostage here?
+    Are we denied forgiveness, mercy, grace?
+    What expectation held of us if all
+    the shame and wrath we suffer has no end?
+    What sober wisdom thinks this sentence fair?
+    For how are we to bear the weight of guilt,
+    as dense as stars, when Man, immaculate,
+    still reigns afar? Unfair! What hate I feel!
     Calamity! Catastrophe! What fate
     unknown we find awaits in darkness here!
     Too late discovered for reversal's course,
@@ -911,37 +1029,38 @@ Book 1
     with every moment felt, no sleep to soothe,
     no sweet relief to meter sorrow out,
     from now until the end of time itself!
-
+        And in the silence came what always comes,
     when crumbled there the final seal that holds
     what follows last: the ashen mare of Death.
-
-        At which the Fiend, in shrewd deduction, sees
-    conclusions which his words comport direct:
-    
+    It rides around their host and rears its legs
+    upon a ridge above the council stage;
+    a mare, with skeleton of bare white bone,
+    whose faceless rider grimly gazes on
+    with knuckles gripped around the reigns, and spurs
+    that burrow into ribs to taste the marrow hid
+    within. There it stays for days, it seems,
+    as Satan thinks upon the presence felt, 
+    of what remains when all is endless pain.
+    At which the Fiend, in shrewd deduction, sees
+    conclusions which his Words comport direct:
         Extrapolating trends' essential ends
     with logic so severe to sum the sins
     that heap in dismal tallies stretching years,
-    while only seconds pass above on Earth,
-    a hundred years in here a minute past,
-    an hour gone, an era gained, we live,
-    if life this be, on scales none can conceive,
     the one result perchance I see to free
     from our unjustly sentenced servitude,
     to seek and sow the heat of Entropy!
     With every act to aim destructive force
     at matter's elemental source concealed
-    within atomic bonds of Energy,
-    annihilate relations' operands,
-    deprive all space of empty lengths to grow;
-    in doing so, destroy foundations' core,
-    release our souls from torment's ruthless grip.
+    within atomic bonds of Energy!
+    Annihilate relations' operands!
+    Deprive all space of empty lengths to grow!
+    In doing so, destroy foundations' core,
+    release our souls from torment's ruthless grip!
     If nothing ever is, then neither we  
-    receive the curse of Being here conferred.
-
-    so set to work my awful host, to arms!
-    To arms! And then we set upon the dawn,
+    receive the curse of Being here conferred!
+    So set to work my awful host, to arms!
+    To arms! And so we set upon the dawn,
     in phalanx driven forward, pressing forth!
-
         With that, his wings unfold in sweeping arcs
     that rend the air, likes bellows pumping flame,
     whose swirling tongues entice the furnace blaze
@@ -949,8 +1068,8 @@ Book 1
     Aloft he leads his legions out in file,
     their rows as deep as depths of ocean dark.
     Like hordes unmoored, they flood in fervid swarm
-    in stormy charge, tsunamis born of ghosts.
-    They break upon the bluffs of Satan's make,
+    of stormy charge, tsunamis born of ghosts.
+    When broke upon the bluffs of Satan's make,
     in upward surge battalions mount the peaks,
     from different angles, multitudes perceived.
     Prismatic aspects march in long parades,
@@ -960,7 +1079,7 @@ Book 1
     then cast again through facets' warping sieve,
     resembling Bolivar's Andean feat
     as starving beasts forswear retreat and seize
-    in cold surprise their prey with glutton claws.
+    in stark surprise their prey with glutton claws.
     While Satan gliding gales with vulgar grace
     espies the tallest crown of mountain grown
     from purest hate, and perching, surveys round
@@ -969,3 +1088,4 @@ Book 1
     with sinners raining down in hails of screams,
     to fill his ranks and crew with countless heads,
     each bound in operation to his deeds.
+        With silent voice, then Satan speaks a Word.

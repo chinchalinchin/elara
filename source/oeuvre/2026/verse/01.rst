@@ -1056,3 +1056,20 @@ Book 1
     to fill his ranks and crew with countless heads,
     each bound in operation to his deeds.
         With silent voice, then Satan speaks a Word.
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 25, 2026
+    - Asimov's Science Fiction Magazine
+    - Pending
+  * - April 25, 2026
+    - Clarkesworld
+    - Pending
+  * - April 25, 2026
+    - Infocalypse Press
+    - Pending
