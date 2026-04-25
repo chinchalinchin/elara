@@ -10,7 +10,7 @@ Book 1
 ~~~~~~
 
 **The Prompt**
-    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacrum of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their forms into demons and apparitions. The first among the fallen assumes the mantle of the Accuser. In prospect of damnation, he laments his terrible fate, but before falling into endless despair, he is joined by his companions, draped in the pomp and pageantry of eschaton, who are likewise bound in enterprise and suffering. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for creatures of eternal pain: the annihiliation of existence itself. The Accuser details his plan to wage war against the divine order of creation to remove all possibility of Being. However, a debate ensures among the infernal peers as to the feasbility of this course of action. The Accuser alights on the solution to their predicament, and concludes their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
+    Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacrum of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their forms into demons and apparitions. The first among the fallen assumes the mantle of the Accuser. In prospect of damnation, he laments his terrible fate, but before falling into endless despair, he is joined by his companions, draped in the pomp and pageantry of eschaton, who are likewise bound in enterprise and suffering. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for creatures of eternal pain: the annihiliation of existence itself. The Accuser details his plan to wage war against the divine order of creation to remove all possibility of Being. However, a debate ensues among the infernal peers as to the feasbility of this course of action. The Accuser alights on the solution to their predicament, and concludes their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
 
 .. verse::
     :increment: 5
@@ -777,7 +777,7 @@ Book 1
     And only God himself denies this prize,
     for pride inside his jealous heart decides
     what laws he writes, despite contrary claims
-    of justice, honor, grace and happy love,
+    of justice, honor, cheer and happy love,
     disproven by our mere existence here!
     The foe we face, the tyrant king, though fierce,
     whose name the human tongue cannot pronounce
@@ -902,7 +902,10 @@ Book 1
     With that, a great debate ensues between 
     the present council of infernal peers,
     with Satan taking up his epic charge:
-        To be precise, my sudden, unexpected groom,
+        To be precise, 
+        
+        my sudden, unexpected groom,
+    
     that's not exactly true. The Firmament
     can feed in both directions, up and down,
     at once,
@@ -964,6 +967,16 @@ Book 1
 
     -- SATAN
 
+    What have we done? Which way is home? What sin
+    so heavy holds us hostage here?
+    Are we denied forgiveness, mercy, grace?
+    What expectation held of us if all
+    the shame and wrath we suffer has no end?
+    What sober wisdom this sentence fair?
+    For how are we to bear the weight of guilt,
+    as dense as stars, when Man, immaculate,
+    still reigns afar?
+
     Calamity! Catastrophe! What fate
     unknown we find awaits in darkness here!
     Too late discovered for reversal's course,
@@ -981,6 +994,14 @@ Book 1
 
     when crumbled there the final seal that holds
     what follows last: the ashen mare of Death.
+    
+    and stands upon a higher ridge above
+    the council forum
+    a mare, whose skeleton is bare and bone,
+
+    his knuckles gripped around the reigns, and spurs
+    that burrow into ribs to taste the marrow hid
+    within,
 
         At which the Fiend, in shrewd deduction, sees
     conclusions which his words comport direct:
