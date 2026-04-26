@@ -3,20 +3,29 @@
 Paradise Revealed
 -----------------
 
-Copyright © 2113 by Sofia Santos
+.. sidebar::
+
+    Things click into place. For an instant, the designs of time are visible, the way it stitches threads together, so the all the knots which appear as random, at that moment, apprehended in their entire structure, as perfect geometric shapes whose points and intersections in the course of human affairs, are seen, not as a tangled confusion, but as a glorious whole whose complexity renders lungs unable to breathe. What is the meaning of coincidence? How am I to understand my place in this world, when it is though my path within it is constructed with such deliberate care, as to deliver to me an unending supply of baffling revelations and heartache? 
+
+    Mother, why are your words in the basement of this church?
+
+    - 2153
+
+Copyright © 2113 by Sofia Santos 
 
 All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means—electronic, mechanical, cryptographic, photocopying, recording, or otherwise—without the prior written permission of the publisher.
 
 The scanning, uploading, and distribution of this book via the global network or any decentralized ledger without permission is a theft of the author’s intellectual property. Explicitly, no part of this text may be ingested into any generative semantic model or automated translation index without a licensed commercial agreement.
 
-    Providence Continuity > Rua Teodoro Sampaio, 2550 - Level 14
-    São Paulo, SP, 05406-200
-    Brazil
+Providence Continuity 
+Rua Teodoro Sampaio, 2550 - Level 14
+São Paulo, SP, 05406-200
+Brazil
 
 This is a work of fiction. Names, characters, places, and incidents either are the product of the author’s imagination or are used fictitiously. Any resemblance to actual persons, living or dead, events, or locales is entirely coincidental.
 
-    ISBN 978-6-5892-1044-8 (Trade Paperback)
-    ISBN 978-6-5892-1044-9 (Epub)
+ISBN 978-6-5892-1044-8 (Trade Paperback)
+ISBN 978-6-5892-1044-9 (Epub)
 
 International Cataloging in Publication Data
 (Brazilian Chamber of the Book, SP, Brazil)
@@ -36,15 +45,23 @@ Fiction : Brazilian Literature 869.3
 Preface
 -------
 
+.. sidebar::
+
+    A hundred times I've read these words, and still I wonder what they mean. A hundred times I've read her poem, and still I wonder if these words are hers, as if they could belong to anyone else. 
+    
+    Father, what did you neglect to tell me? Who is this woman? What drives a person to write of Hell and its eternal torment? What madness drove mother? Why are her poems stored in the reliquary of Igreja de Nossa Senhora do Carmo, a place by all accounts holy, when she writes of such blasphemous things? 
+
+    Agostinho ...
+
+    - 2153
+
 Three weeks prior to the publication of the first book of *Paradise Revealed*, Sofia Santos walked out of her apartment in São Paulo, Brazil and was never seen again. Her whereabouts, though subject to rampant speculation, have never been conclusively determined. She left behind a husband and a newbord child only eight months old. In the subsequent years since its publication, her disappearance has become as much as part of the mythology of *Paradise Revealed* as its eclectic mixture of technological, philosophical and theological motifs. 
 
 In its first printing, **Paradise Revealed** sold less than a hundred copies. After the news of Sofia's disappearance broke, along with the discovery of her distant relation to the infamous Mesmeria van Rensselaer, copies began to fly off the shelves. It has since gone on to become one of the best-selling works of epic poetry since the early 20th century. It has also fueled endless conspiracies regarding its ultimate meaning.
 
 TODO
 
-Ultimately, the parallels perceived by some readers between the contents of *Paradise Lost* and Mesmeria
-
-[#oubliette_a_000]_
+Ultimately, the parallels perceived by some readers, between the contents of *Paradise Revealed* and the testimony given by Mesmeria van Rensselaer on the stand, are the product of the timeless and evocative imagery employed by Santos, the versatility demonstrated by its endless permutations and interpretations, mutable yet highly specific, able to engage with a wide array of human experience.
 
 TODO
 
@@ -1139,6 +1156,4 @@ These unfinished excerpts were written in the margins of the manuscript.
 
 .. [#oubliette_a_000]   
     
-    A hundred times I've read these words, and still I wonder what they mean. A hundred times I've read her poem, and still I wonder if these words are hers, as if they could be anyone else's. Father, what things did you neglect to tell me? Who is this woman, the mother I never knew? 
-
-    TODO
+    Here we have a reference to a pre-Contraction city.
