@@ -1,6 +1,13 @@
 
 ## Functions
 
+### Output
+
+When a function specifies output in a specific format, use the following dictionary to determine the format.
+
+- set(x): The output should be strictly formatted with curly brackets, e.g. { a, b, c, ... }.
+- list(x): The output should be strictly formatted with square brackets, e.g. [ a, b, c, ... ]
+
 ### Signatures
 
 Each function signature is given along with a short description. Optional arguments are signified with ``?``. 
@@ -19,56 +26,58 @@ These arguments may be passed into compound expressions as in the following,
 
 This is to be interpretted as shorthand for applying the arguments to all functions involved in the compound expression individually and then applying the indicated set operations to the results.
 
+!!! note
+    `?` denotes optional arguments.
+
+## Definitions
+
 ### Metric Functions
 
 !!! **iamb(x: concept) -> set(word)**
-    If a prompt contains ``iamb(x)``, the prompt is asking for the set of iambic words, possibly empty, that connote the concept ``x``, e.g. ``deduce`` is a valid response to ``iamb(a scientific word)``. 
+    If a prompt contains `iamb(x)`, the prompt is asking for the set of iambic words, possibly empty, that connote the concept `x`, e.g. `deduce` is a valid response to `iamb(a scientific word)`. 
     
 !!! **anapest(x: concept) -> set(word)**
-    If a prompt contains ``anapest(x)``, the prompt is asking for the set of anapestic words, possibly empty, that connote the concept ``x``.
+    If a prompt contains `anapest(x)`, the prompt is asking for the set of anapestic words, possibly empty, that connote the concept `x`.
 
 !!! **dactyl(x: concept) -> set(word)**
-    If a prompt contains ``dactyl(x)``, the prompt is asking for the set of dactylic words, possibly empty, that connote the concept ``x``.
+    If a prompt contains `dactyl(x)`, the prompt is asking for the set of dactylic words, possibly empty, that connote the concept `x`.
 
 !!! **trochee(x: concept) -> set(word)**
-    If a prompt contains ``trochee(x)``, the prompt is asking for the set of trochaic words, possibly empty, that connote the concept ``x``.
+    If a prompt contains `trochee(x)`, the prompt is asking for the set of trochaic words, possibly empty, that connote the concept `x`.
 
 !!! **spondee(x: concept) -> set(word)**
-    If a prompt contains ``spondee(x)``, the prompt is asking for the set of spondaic words, possibly empty, that connote the concept ``x``
+    If a prompt contains `spondee(x)`, the prompt is asking for the set of spondaic words, possibly empty, that connote the concept `x`
     
 !!! **pyrrhic(x: concept) -> set(word)**
-    If a prompt contains ``pyrrhic(x)``, the prompt is asking for the set of pyrrhic words, possibly empty, that connote the concept ``x``
+    If a prompt contains `pyrrhic(x)`, the prompt is asking for the set of pyrrhic words, possibly empty, that connote the concept `x`
 
 ### Linguistic Functions
 
 !!! **contains(x: any, y?: any, z?: any, ...) -> set(string)**
-    If a prompt contains ``contains(x, y, z, ...)``, then the prompt is asking for a set of semantically coherent strings in language ``L`` that contains the syllables, words or sentences ``x``, ``y``, ``z``, etc., in any order.
+    If a prompt contains `contains(x, y, z, ...)`, then the prompt is asking for a set of semantically coherent strings in language `L` that contains the syllables, words or sentences `x`, `y`, `z`, etc., in any order.
     
 !!! **connote(x: concept, y?: concept, z?: concept, ...) -> set(word)**
-    If a prompt contains ``connote(x)``, for any word or phrase ``x``, prompt is asking for a set of words, possibly empty, that satisfy :math:`\{ z \mid x \equiv z }``, i.e. all words that have the same connotation as ``x``. In other words, this function with one argument is essentially a thesaurus. 
-    
-    This function can also be overloaded with a second argument, ``connote(x, y)``. This translates into :math:`\{ z \mid z \equiv y \land z \equiv x }``, i.e. the set of words that have an simultaneously equivalent meaning of the words or phrases ``x`` and ``y`` .
+    If a prompt contains `connote(x)`, for any word or phrase ``x``, prompt is asking for a set of words, possibly empty, that satisfy `\{ z \mid x \equiv z }`, i.e. all words that have the same connotation as `x`. In other words, this function with one argument is essentially a thesaurus. This function can also be overloaded with a second argument, `connote(x, y)`. This translates into `\{ z \mid z \equiv y \land z \equiv x }`, i.e. the set of words that have an simultaneously equivalent meaning of the words or phrases `x` and `y` .
 
-!!! **rhyme(x: any, y?: any, z?: concept, ...) -> set(word ∨ phrase)**
+!!! **rhyme(x: any, y?: any, z?: concept, ...) -> (set(word ∨ phrase)  ∨ description)**
     If a prompt contains `rhyme(x)`, where `x` is a word or phrase, then the prompt is asking for the set of words or phrases, possibly empty, that rhyme or near-rhyme with `x`, e.g. `cat` would be a solution to `rhyme(bat)`. 
     
-    This function can be overloaded, `rhyme(x, Y)` (where `x` is a variable and ``Y`` is a fixed word/phrase), to denote the set of words that rhyme or near-rhyme with ``Y``. This notation is typically used in propositions to quantify over this set. For example, the proposition :math:`\forall α \in \text{rhyme}(α, \text{green}) α \in contains(me)` is asking for words ``α`` such that ``α`` rhymes with ``green`` (i.e., :math:`α \in \{ w \mid w ∥ \text{green} \}``) **and** ``α`` also contains the syllable ``me``. The set of all such words satisfying the entire proposition is :math:`\{ w \mid (w ∥ \text{green}) \land (w \in contains(me)) }`. A valid solution (an element of this solution set) would be ``mean``.
+    This function can be overloaded, `rhyme(x, Y)` (where `x` is a variable and `Y` is a fixed word/phrase), to denote the set of words that rhyme or near-rhyme with `Y`. This notation is typically used in propositions to quantify over this set. For example, the proposition `\forall α \in \text{rhyme}(α, \text{green}) \alpha \in contains(me)` is asking for words `\alpha` such that `\alpha` rhymes with `green` (i.e., `\alpha \in \{ w \mid w \parallel \text{green} \}`) **and** `\alpha` also contains the syllable `me`. The set of all such words satisfying the entire proposition is `\{ w \mid (w \parallel \text{green}) \land (w \in contains(me)) }`. A valid solution (an element of this solution set) would be `mean`. 
     
-    When both arguments are fixed, as in ``rhyme(X,Y)``, the prompt is asking for a detailed syllabic analysis of the rhyme between ``X`` and ``Y``.
+    When both arguments are fixed, as in `rhyme(X,Y)`, the prompt is asking for a detailed syllabic analysis of the rhyme between `X` and `Y`.
 
 !!! **resonate(x: word ∨ phrase) -> set(word)**
-    If a prompt contains ``resonate(x)``, the prompt is asking for a set of words, possibly empty, that bear the relation of assonance or consonance with the syllable, word or phrase ``x``.
+    If a prompt contains `resonate(x)`, the prompt is asking for a set of words, possibly empty, that bear the relation of assonance or consonance with the syllable, word or phrase `x`.
 
 !!! **decline(x: word) -> set(word)**
-    If a prompt contains `decline(x)`, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, ``decline(red)`` should produce the various forms, ``reddened, reddening, redness, ...`` and ``decline(special)`` should produce ``specialized, specialty, specialization, ...``.
-    1. 
+    If a prompt contains `decline(x)`, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, `decline(red)` should produce the various forms, `\{ reddened, reddening, redness, ... \}` and `decline(special)` should produce `\{ specialized, specialty, specialization \}`.
 
 ### Meta Functions
 
 These functions provide lookups or analysis.
 
 !!! **stress(x: string) -> list(stresses)**
-    If a prompt contains `stress(x)` where x is a word or series or words, this prompt is asking to break down the syllables and stresses in the given word ``x``. Always be sure to include information about secondary stresses and any possible ambiguities.
+    If a prompt contains `stress(x)` where x is a word or series or words, this prompt is asking to break down the syllables and stresses in the given word `x`. Use Internation Phonetic Alphabet (IPA) to syllabify words. Always be sure to include information about secondary stresses and any possible ambiguities.
 
 !!! **phonics(x: word) -> description**
     If a prompt contains `phonics(x)`,  the prompt is asking for the Internation Phonetic Alphabet (IPA) transcription of the word `x`. For example, `/wɜːrd/` is a solution to `phonics(word)`.

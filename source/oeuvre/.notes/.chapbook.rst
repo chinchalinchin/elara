@@ -14,15 +14,10 @@ Relatio Annua
     -- Ode to a Nightingale, John Keats
 
 - **Plato**: A name is an essence.
-
 - **Aristotle**: A name is a substance. 
-
 - **Frege**: A name is a sense.
-
 - **Russell**: A name is a description.
-
 - **Tarski**: A name is a satisfaction.
-
 - **Kripke**: A name is a baptism. 
 
 ---------------
