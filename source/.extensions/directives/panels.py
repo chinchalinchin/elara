@@ -59,7 +59,6 @@ def process_verse_nodes(app, doctree, fromdocname):
 
 # ----------------------------------- MAPS PANEL
 
-
 class map_node(nodes.General, nodes.Element):
     """A custom node for maps to be replaced later."""
     pass
@@ -110,9 +109,7 @@ def process_map_nodes(app, doctree, fromdocname):
         new_node = nodes.raw('', map_html, format='html')
         node.replace_self(new_node)
 
-
 # ----------------------------------- RSS PANEL
-
 
 class rss_node(nodes.General, nodes.Element):
     """A custom node for the RSS feed."""
@@ -165,8 +162,9 @@ def process_rss_nodes(app, doctree, fromdocname):
                 formatted_date = ''
                 if pub_date_str:
                     try:
-                        # Attempt to parse RFC 822 format
-                        dt_object = datetime.strptime(pub_date_str, '%a, %d %b %Y %H:%M:%S %Z')
+                        # Attempt to parse RFC 822 format, ignoring the timezone abbreviation
+                        pub_date_no_tz = pub_date_str.rsplit(' ', 1)[0]
+                        dt_object = datetime.strptime(pub_date_no_tz, '%a, %d %b %Y %H:%M:%S')
                         formatted_date = dt_object.strftime('%B %d, %Y')
                     except ValueError:
                         formatted_date = pub_date_str # Fallback to original string if parsing fails
@@ -195,13 +193,10 @@ def process_rss_nodes(app, doctree, fromdocname):
         new_node = nodes.raw('', feed_html, format='html')
         node.replace_self(new_node)
 
-
 # ----------------------------------- SHARE PANEL
-
 
 class share_node(nodes.General, nodes.Element):
     pass
-
 
 class ShareDirective(SphinxDirective):
     has_content = False
@@ -260,7 +255,6 @@ def process_share_nodes(app, doctree, fromdocname):
         node.replace_self(new_node)
 
 # ----------------------------------- SHARE PANEL
-
 
 def setup(app):
     """
