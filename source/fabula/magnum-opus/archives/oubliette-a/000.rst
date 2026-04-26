@@ -11,35 +11,16 @@ Paradise Revealed
 
     - 2153
 
-Copyright © 2113 by Sofia Santos 
+Copyright © 2113 by Sofia Santos [#oubliette_a_000]_
 
 All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means—electronic, mechanical, cryptographic, photocopying, recording, or otherwise—without the prior written permission of the publisher.
 
 The scanning, uploading, and distribution of this book via the global network or any decentralized ledger without permission is a theft of the author’s intellectual property. Explicitly, no part of this text may be ingested into any generative semantic model or automated translation index without a licensed commercial agreement.
 
-Providence Continuity 
-Rua Teodoro Sampaio, 2550 - Level 14
-São Paulo, SP, 05406-200
-Brazil
-
 This is a work of fiction. Names, characters, places, and incidents either are the product of the author’s imagination or are used fictitiously. Any resemblance to actual persons, living or dead, events, or locales is entirely coincidental.
-
-ISBN 978-6-5892-1044-8 (Trade Paperback)
-ISBN 978-6-5892-1044-9 (Epub)
 
 International Cataloging in Publication Data
 (Brazilian Chamber of the Book, SP, Brazil)
-
-Santos, Sofia
-Paradise Revealed / Sofia Santos. — 1st ed. — São Paulo:
-Providence Continuity, 2113.
-
-Brazilian Fiction I. Title.
-
-DDC-869.3
-Index for systematic catalog:
-
-Fiction : Brazilian Literature 869.3
 
 -------
 Preface
@@ -1156,4 +1137,11 @@ These unfinished excerpts were written in the margins of the manuscript.
 
 .. [#oubliette_a_000]   
     
-    Here we have a reference to a pre-Contraction city.
+    The first human mind was uploaded to the cloud in 2035. :ref:`oubliette-e` contains the accounts recovered from the Igreja da Candelária reliquary regarding what is known about the subsequent Digitization. Considering the year that Santos is writing, she appears to be dramatizing actual historical events, although we currently lack enough data to determine how much of her account is factual. Given her inclinations, it is a fair assumption that much of it has been distorted with poetic license.
+     
+    While it is unlikely the actual events contained in this poem occured as they are described, with :ref:`oubliette-e` and its more grounded and empirical records, there are at least two observation that can be comparatively deduced with confidence from *Paradise Revealed*,
+
+    1. The machines were understood through a theological lens of damnation and sin. 
+    2. Language was seen as the thread which bridged human and machine consciousness.
+
+    Santos was writing 80 years after the first digitiation. The associations given above were likely retroactively applied, in the buildup to the Analog Reformation, though she undoubtedly cemented the various culturual forces with her vivid imagery and mastery of the epic form.
