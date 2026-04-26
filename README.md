@@ -164,6 +164,14 @@ npm install -g @mermaid-js/mermaid-cli
 
 ### Emojis
 
+**Emoji Sentiment Valence Matrix**
+
+| Axis | Positive Valence | Neutral Valence | Negative Valence |
+|---|---|---|---|
+| High Arousal | 😂🤩🥳🥰 | 😲 | 😡😨😱😭 |
+| Moderate Arousal | 😄😊🤗 | 😐🙄🤨🤔 | 😥😟😠 |
+| Low Arousal | 😌🙂 | 😶 | 🙁😔 |
+
 **Basic Emotions**
 
 - 😄 🙂 😊 😌 😀 😁 😂 🤣 😃 😅 😆 🤨 😇 😉 😊 😋 😎 😍 😘 🥰 
