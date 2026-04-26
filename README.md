@@ -156,7 +156,7 @@ npm install -g @mermaid-js/mermaid-cli
 
 **Musical Notation** 
 
-- 𝄞 𝄢 𝅝𝅥 𝅘𝅥𝅮 𝅗𝅥 # ♭ 𝆒 
+- 𝄞 𝄢 # ♭ 𝆒 
 
 **Shapes**
 
