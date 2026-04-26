@@ -1,3 +1,5 @@
+.. TASK: Find and list publications that are likely to accept and publish this work. Print publications only, no online only blogs or websites.
+
 -----------------
 Paradise Revealed
 -----------------
@@ -1072,4 +1074,7 @@ Book 1
     - Pending
   * - April 25, 2026
     - Infocalypse Press
+    - Pending
+  * - April 26, 2026
+    - The Tusculum Review 2026 Poetry Chapbook Prize
     - Pending
