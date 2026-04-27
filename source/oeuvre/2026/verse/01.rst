@@ -1071,7 +1071,7 @@ Book 1
     - Pending
   * - April 25, 2026
     - Clarkesworld
-    - Pending
+    - Rejected
   * - April 25, 2026
     - Infocalypse Press
     - Pending

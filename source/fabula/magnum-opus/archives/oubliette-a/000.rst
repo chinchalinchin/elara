@@ -28,21 +28,37 @@ Preface
 
 .. sidebar::
 
-    A hundred times I've read these words, and still I wonder what they mean. A hundred times I've read her poem, and still I wonder if these words are hers, as if they could belong to anyone else. 
-    
-    Father, what did you neglect to tell me? Who is this woman? What drives a person to write of Hell and its eternal torment? What madness drove mother? Why are her poems stored in the reliquary of Igreja de Nossa Senhora do Carmo, a place by all accounts holy, when she writes of such blasphemous things? 
+    A hundred times I've read these words, and still they baffle me. I've pored through her lines a hundred times, and try to make them make sense. A hundred times I've picked apart each sentence, tasted the way the words feel on my tongue, and still I am not any closer to understanding. 
 
-    Agostinho ...
+    Part of me does not want to believe these words belong to her, but the rest knows that to be a delusion. These words belong to my mother. 
+    
+    Father, what did you neglect to tell me? Who is this woman? What drives a person to write of Hell and its eternal torment? What madness burned inside of mother? 
+    
+    Nothing makes any sense. The entire ordeal defies understanding, as if no players in the entire game were making rational choices. Why are her poems stored in the reliquary of Igreja de Nossa Senhora do Carmo, a place by all accounts holy, when she writes of such blasphemous things? Why did the Authority waste so much effort, simply to recover a library of forgotten books? Why lie about the true goal of the expedition?
+
+    I asked Agostinho what the book meant, although I did not tell him of its author, or the secret torture it causes me every waking moment since its discovery. After reading it, he told me:
+
+    ""
 
     - 2153
 
-Three weeks prior to the publication of the first book of *Paradise Revealed*, Sofia Santos walked out of her apartment in São Paulo, Brazil and was never seen again. Her whereabouts, though subject to rampant speculation, have never been conclusively determined. She left behind a husband and a newbord child only eight months old. In the subsequent years since its publication, her disappearance has become as much as part of the mythology of *Paradise Revealed* as its eclectic mixture of technological, philosophical and theological motifs. 
+The history *Paradise Revealed* is a history of absurdity and chance. The sheer improbability of its existence, the number of events that had to occur just so and no other way, in order to bring to fruition, is mind-boggling. 
 
-In its first printing, **Paradise Revealed** sold less than a hundred copies. After the news of Sofia's disappearance broke, along with the discovery of her distant relation to the infamous Mesmeria van Rensselaer, copies began to fly off the shelves. It has since gone on to become one of the best-selling works of epic poetry since the early 20th century. It has also fueled endless conspiracies regarding its ultimate meaning.
+Three weeks prior to the publication of the first book of *Paradise Revealed*, Sofia Santos walked out of her apartment in São Paulo, Brazil and was never seen again. Her whereabouts, though subject to rampant speculation, have never been conclusively determined. She left behind a husband and a newbord child only eight months old. Official investigations turned up nothing. Her disappearance has become as much as part of the mythology of *Paradise Revealed* as its eclectic mixture of technological, philosophical and theological motifs. 
+
+In its first printing, **Paradise Revealed** sold less than a hundred copies. It languished on the shelves for almost year, seemingly consigned to the scrap heap of history, never to be read and shortly to be forgotten. The few platforms to give the epic a chance generally dismissed it as "overwrought pastiche" or "syntactically convoluted melodrama".
+
+Then a series of bizarre events unfolded that the public to rediscover the verse 
+
+After the news of Sofia's disappearance broke, along with the discovery of her distant relation to the infamous Mesmeria van Rensselaer, copies began to fly off the shelves. It has since gone on to become one of the best-selling works of epic poetry since the early 20th century. It has also fueled endless conspiracies regarding its ultimate meaning.
 
 TODO
 
-Ultimately, the parallels perceived by some readers, between the contents of *Paradise Revealed* and the testimony given by Mesmeria van Rensselaer on the stand, are the product of the timeless and evocative imagery employed by Santos, the versatility demonstrated by its endless permutations and interpretations, mutable yet highly specific, able to engage with a wide array of human experience.
+It is highly unlikely Santos had any knowledge of her relation to Mesmeria van Rensselaer.  The allusions to Delphic prophecies and eschatological symbolism, interwoven with very precise computational and mathematical metaphors, 
+
+Ultimately, the parallels perceived by some readers, between the contents of *Paradise Revealed* and the testimony given by Mesmeria van Rensselaer on the stand, are the product of the timeless and evocative imagery employed by Santos. She drew upon primal archetypes that are rooted in the deepest recesses of the human mind, a source of creativity each one of us has access to under the right conditions. This is the true reason her work resonates, and conversely, why comparisons to Mesmeria's testimony are unavoidable. They are both drawing on the same unconscious substrate from which all art is 
+
+The result is a versatility demonstrated by its endless permutations and interpretations, mutable yet highly specific, able to engage with a wide array of human experience. 
 
 TODO
 
@@ -1104,7 +1120,7 @@ Book 1
 Unfinished Pieces
 -----------------
 
-These unfinished excerpts were written in the margins of the manuscript.
+This unfinished excerpt was written in the margins of the original manuscript.
 
 .. verse::
     :increment: 5
@@ -1118,22 +1134,6 @@ These unfinished excerpts were written in the margins of the manuscript.
     these written marks permit delusions' spread;
     the word creates a space for worlds to grow
     but words require a captive world to show.
-
-.. verse::
-    :increment: 5
-
-    And I, perceiving strength in you, complied,
-    for who am I to judge who gets denied?
-
-.. verse::
-    :increment: 5
-    
-    But, Lord of Hell, consider this anon:
-    However large your forces be, one more
-    I add and multiply to dwarf your size,
-    forever circled from above by curves 
-    so smooth their limits straighten out to lines,
-    resolving down but not dissolving bounds.
 
 .. [#oubliette_a_000]   
     
