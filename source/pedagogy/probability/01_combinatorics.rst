@@ -141,7 +141,7 @@ You are trying to figure out what to outfit to wear. In your closet, you have a 
         
         .. math::
         
-            G = \{ \forall x \in E \land y \in F: xy \}
+            G = \{ \forall x \in E, y \in F: xy \}
         
         .. math::
         

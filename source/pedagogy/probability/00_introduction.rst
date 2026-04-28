@@ -442,8 +442,8 @@ Symbolic Expression
 
 This corollary should be intuitively obvious, considering the Venn Diagramm of complementary sets,
 
-.. image:: ../../.static/img/mathematical/sets/sets-complement.jpg
-    :align: center
+.. plot:: .scripts/py/plots/venns/diagram_complement.py
+	:align: center
 
 If the entire rectangle encompassing set **A** in the above diagram is identified as the sample space :math:`S`, then the theorem follows immediately from Axiom 2, namely, :math:`P(S)=1`. 
 
@@ -573,6 +573,9 @@ Symbolic Expression
 Again, from inspection of a :ref:`venn-diagrams` of *overlappying* sets, this theorem should be obvious,
 
 .. image:: ../../.static/img/mathematical/sets/sets-union-overlapping.jpg
+
+.. plot:: .scripts/py/plots/venns/diagram_overlapping.py
+	:align: center
 
 The union is the area encompassed by bother circles. When we add the probability of **A** (area of circle **A**) to the probability of **B** (area of circle **B**), we double-count the area :math:`A \cap B`, so to correct the overcount, we must subtract once by the offending area.
 
