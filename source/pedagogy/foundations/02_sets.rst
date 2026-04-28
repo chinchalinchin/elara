@@ -649,7 +649,7 @@ Theorem 1
 Or equivalently, 
 
 .. math::
-	n(A \cap B) <= n(A)
+	n(A \cap B) \leq n(A)
 
 The intersection of :math:`A` and :math:`B` is a subset of :math:`A`.
 
@@ -665,7 +665,8 @@ Theorem 2
 Or equivalently,
 
 .. math::
-	n(A) <= n(A \cup B)
+
+	n(A) \leq n(A \cup B)
 
 :math:`A` is a subset of the union of :math:`A` and :math:`B`.
 
@@ -682,7 +683,7 @@ Or equivalently,
 
 .. math::
 
-	n(A \cap B) <= n(A \cup B)
+	n(A \cap B) \leq n(A \cup B)
 
 The intersection of two sets :math:`A` and :math:`B` is a subset of the union of those same two sets.
 
@@ -739,7 +740,7 @@ However, we do have,
 
 .. math::
 
-    n(C) <= n(A)
+    n(C) \leq n(A)
 
 But this doesn't help us, because from it, we **cannot** infer,
 
