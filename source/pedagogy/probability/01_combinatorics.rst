@@ -131,21 +131,21 @@ You are trying to figure out what to outfit to wear. In your closet, you have a 
 
     We state the hypothesis and conclusion of the **Counting Principle** in precise symbols below,
 
-        .. math::
-            
-            n(E) = n
-            
-        .. math::
-            
-            n(F) = m
+    .. math::
         
-        .. math::
+        n(E) = n
         
-            G = \{ \forall x \in E, y \in F: xy \}
+    .. math::
         
-        .. math::
-        
-            \implies n(G) = n(E) \cdot n(F)
+        n(F) = m
+    
+    .. math::
+    
+        G = \{ \forall x \in E, y \in F: xy \}
+    
+    .. math::
+    
+        \implies n(G) = n(E) \cdot n(F)
 
 .. _replacement:
 

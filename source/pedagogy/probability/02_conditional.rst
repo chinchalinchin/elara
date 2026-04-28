@@ -115,17 +115,21 @@ The following example and its accompanying solutions serve to illustrate how con
 	
 	Let :math:`(x, y)` represent the ordered pair of outcomes, where :math:`x` represents the face of the coin observed and :math:`y` represents the type of coin selected. The following table illustrates what is meant by this assignment,
 
-	+-------------------------+-----------------------------------------|	
-	| Symbolic Representation |          Interpretation                 |
-	+-------------------------+-----------------------------------------|
-	|       :math:`(h, f)`    |    outcome of heads with fair coin      |
-	+-------------------------+-----------------------------------------|
-	|       :math:`(t,f)`     |    outcome of tails with fair coin      |
-	+-------------------------+-----------------------------------------|
-	|       :math:`(h_1, d)`  | outcome of heads with double-sided coin |	
-	+-------------------------+-----------------------------------------|
-	|       :math:`(h_2, d)`  | outcome of heads with double-sided coin |
-	+-------------------------+-----------------------------------------|
+
+	.. list-table:: Employment
+		:widths: 15 15
+		:header-rows: 1
+
+		* - Symbolic Representation
+		  - Interpretation
+		* - :math:`(h, f)` 
+		  - outcome of heads with fair coin 
+		* - :math:`(t,f)`
+		  - outcome of tails with fair coin 
+		* - :math:`(h_1, d)`
+		  - outcome of heads with double-sided coin
+		* - :math:`(h_2, d)`
+		  - outcome of heads with double-sided coin  
 	
 	Note the two heads on the double-sided coin are distinguished with subscripts. With this notation, the sample space of the experiment is given by,
 	
@@ -133,9 +137,9 @@ The following example and its accompanying solutions serve to illustrate how con
 	
 		S = \{ (h,f), (t,f), (h_1, d), (h_2, d) \}
 			
-    	.. math::
-    	
-        	n(S) = 4 
+	.. math::
+	
+		n(S) = 4 
 
 	The event of selecting the fair coin, :math:`F`, contains the outcomes,
 
@@ -149,13 +153,13 @@ The following example and its accompanying solutions serve to illustrate how con
 
 	Likewise, the event of selecting the double-sided coin, :math:`D`, contains the outcomes,
 
-    	.. math::
-    		
-    		D = \{ (h_1, d), (h_2, d) \}
-    	
-    	.. math::
-        	
-        	n(D) = 2
+	.. math::
+		
+		D = \{ (h_1, d), (h_2, d) \}
+	
+	.. math::
+		
+		n(D) = 2
 
 	The event of getting a head, :math:`H`, contains the outcomes,
 
@@ -165,10 +169,9 @@ The following example and its accompanying solutions serve to illustrate how con
 	
 	.. math::
         
-        	n(H) = 3
+		n(H) = 3
     
 	Note in this formulation the event of getting a head :math:`H` is an abstraction, a logical grouping of possible outcomes, whereas the outcomes ":math:`h`", ":math:`h_1`" and ":math:`h_2`" are the actual things being abstracted, the symbols we use to represent the *physical* occurrence of a possibility. 
-    	
 
 	The problem can then be expressed in terms of the :ref:`conditional-probability-formula`,
 
@@ -186,23 +189,23 @@ The following example and its accompanying solutions serve to illustrate how con
 
 	.. math::
         
-        	D \cap H = \{ (h_1, d), (h_2,d) \}
+		D \cap H = \{ (h_1, d), (h_2,d) \}
 
 	.. math::
         
-        	n(D \cap H) = 2
+		n(D \cap H) = 2
 
 	Whereupon the :ref:`classical-definition-of-probability` can be applied again,
 
 	.. math::
 	
-        	P(D \cap H) = \frac{2}{4} = \frac{1}{2}
+		P(D \cap H) = \frac{2}{4} = \frac{1}{2}
 
 	The conditional probability of **D** given the occurrence of **H** is then calculated from the previously mentioned :ref:`conditional-probability-formula`,
 	
 	.. math::
 	
-	        P(D \mid H) = \frac{\frac{1}{2}}{\frac{3}{4}} = \frac{1}{2} \cdot \frac{4}{3} = \frac{2}{3}
+		P(D \mid H) = \frac{\frac{1}{2}}{\frac{3}{4}} = \frac{1}{2} \cdot \frac{4}{3} = \frac{2}{3}
 
 .. topic:: Solution #2: Reduction of Sample Space Formula
 
@@ -218,30 +221,30 @@ The following example and its accompanying solutions serve to illustrate how con
 	
 		S \mid H = \{ (h,f), (h_1, d), (h_2, d) \}
 
-    	.. math::
-    	
-        	n(S \mid H) = 3
+	.. math::
+	
+		n(S \mid H) = 3
 
-    	In other words, the outcome of tails is removed as a possibility by the additional information a head has been obtained. Then, the event :math:`D` of selecting the two-sided coin conditioned on the event of getting a head remains,
+	In other words, the outcome of tails is removed as a possibility by the additional information a head has been obtained. Then, the event :math:`D` of selecting the two-sided coin conditioned on the event of getting a head remains,
 
-    	.. math::
-        	
-        	D \mid H= \{ (h_1, d), (h_2, d)  \}
+	.. math::
+		
+		D \mid H= \{ (h_1, d), (h_2, d)  \}
+
+	.. math::
+		
+		n(D \mid H) = 2
+
     
-    	.. math::
-        	
-        	n(D \mid H) = 2
+	Therefore, by the *reduction of sample space* formula,
 
-    
-    	Therefore, by the *reduction of sample space* formula,
+	.. math::
+	
+		P(D \mid H) = \frac{n(D \mid H)}{n(S \mid H)}
 
-    	.. math::
-        
-        	P(D \mid H) = \frac{n(D \mid H)}{n(S \mid H)}
-
-    	.. math::
-        
-        	P(D \mid H) = \frac{2}{3}
+	.. math::
+	
+		P(D \mid H) = \frac{2}{3}
 
 .. _monty-hall-problem:
 
