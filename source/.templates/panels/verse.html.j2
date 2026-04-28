@@ -1,7 +1,7 @@
 <div class="verse-block">
   {% for line in lines %}
   <div class="verse-row">
-    <div class="verse-line">{% if line.text %}{{ line.text | e }}{% else %}<br>{% endif %}</div>
+    <div class="verse-line">{% if line.text %}{{ line.text }}{% else %}<br>{% endif %}</div>
     <div class="verse-number">{{ line.number }}</div>
   </div>
   {% endfor %}

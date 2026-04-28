@@ -7,7 +7,6 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 
 # ----------------------------------- VERSE PANEL
-
 class verse_node(nodes.General, nodes.Element):
     """A custom node for the verse directive."""
     pass
@@ -24,11 +23,20 @@ class VerseDirective(SphinxDirective):
     }
 
     def run(self):
-        # We store the raw content block and the increment option
         node = verse_node('')
-        node['content'] = self.content
         node['increment'] = self.options.get('increment', 0)
+        
+        # Parse each line for inline markup (like footnotes) so Sphinx registers them
+        for text in self.content:
+            line_node = nodes.inline('', '', classes=['verse-line-content'])
+            if text.strip():
+                text_nodes, messages = self.state.inline_text(text, self.lineno)
+                line_node.extend(text_nodes)
+                node += messages # Append system messages/errors directly to the parent node
+            node.append(line_node)
+            
         return [node]
+
 
 def process_verse_nodes(app, doctree, fromdocname):
     """
@@ -38,15 +46,25 @@ def process_verse_nodes(app, doctree, fromdocname):
         return
 
     for node in doctree.traverse(verse_node):
-        lines = node['content']
-        increment = node['increment']
-        
+        increment = node.get('increment', 0)
         processed_lines = []
-        # Enumerate through the lines, tracking the actual line number
-        for i, text in enumerate(lines, start=1):
+        
+        # Isolate the line nodes and system messages
+        lines = [c for c in node.children if isinstance(c, nodes.inline) and 'verse-line-content' in c['classes']]
+        messages = [c for c in node.children if isinstance(c, nodes.system_message)]
+        
+        # Enumerate through the lines, using Sphinx's native partial rendering
+        for i, child in enumerate(lines, start=1):
             number = str(i) if increment and i % increment == 0 else ""
+            
+            # Use render_partial to properly translate docutils nodes (like footnotes) into HTML strings
+            rendered = app.builder.render_partial(child)
+            
+            # Handle cross-version compatibility (Sphinx 9.1+ changed the return key to 'fragment')
+            line_html = rendered.get('fragment', rendered.get('body', ''))
+            
             processed_lines.append({
-                'text': text,
+                'text': line_html,
                 'number': number
             })
             
@@ -55,8 +73,9 @@ def process_verse_nodes(app, doctree, fromdocname):
         })
         
         new_node = nodes.raw('', html, format='html')
-        node.replace_self(new_node)
-
+        # Replace the custom node with the rendered HTML and preserve any Sphinx system messages
+        node.replace_self([new_node] + messages)
+        
 # ----------------------------------- MAPS PANEL
 
 class map_node(nodes.General, nodes.Element):

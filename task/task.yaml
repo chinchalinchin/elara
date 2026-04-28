@@ -13,21 +13,21 @@ task:
       linguistic: false
     procedures:
       poetics: false
+      tasking: false
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
     title: "Elara: Linguistic Scripts"
     # -------------------------------------------
     content: |
-      - "capitulate" should have a secondary stress on the last syllables. 
-      - "marquis" should either be `ˈmɑr-kwɛs` or `mɑr-ˈki`.
+      The `verse` directive is not rendering footnotes inside of the directive. Please debug.
 
-      Debug the script to determine why it is not outputting the correct syllabification.
+      - Constraint: Must use Jinja2 template to render the widget.
     # -------------------------------------------
-    shell: 
+    shell: [ ] 
       # - /Users/gmoore/Home/projects/elara/source/.scripts/py/linguistics/syllabify.py immortalized
-      - /Users/gmoore/Home/projects/elara/source/.scripts/py/linguistics/syllabify.py capitulate
-      - /Users/gmoore/Home/projects/elara/source/.scripts/py/linguistics/syllabify.py marquis
+      # - /Users/gmoore/Home/projects/elara/source/.scripts/py/linguistics/syllabify.py capitulate
+      # - /Users/gmoore/Home/projects/elara/source/.scripts/py/linguistics/syllabify.py marquis
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -38,4 +38,5 @@ task:
         views:
           directory: true
           elara_build: true
-          elara_linguistics: true
+          elara_linguistics: false
+          elara_extensions: true

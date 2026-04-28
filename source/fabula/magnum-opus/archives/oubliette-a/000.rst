@@ -5,7 +5,7 @@ Paradise Revealed
 
 .. sidebar::
 
-    Things click into place. For an instant, the designs of time are visible, the way it stitches threads together, so the all the knots which appear as random, at that moment, apprehended in their entire structure, as perfect geometric shapes whose points and intersections in the course of human affairs, are seen, not as a tangled confusion, but as a glorious whole whose complexity renders lungs unable to breathe. What is the meaning of coincidence? How am I to understand my place in this world, when it is though my path within it is constructed with such deliberate care, as to deliver to me an unending supply of baffling revelations and heartache? 
+    Things click into place. For an instant, the designs of time are visible, the way it stitches threads together, so the all the knots which appear as random, at that moment, apprehended in their entire structure, as perfect crystalline structures whose points and intersections in the course of human affairs, are seen, not as a tangled confusion, but as a glorious whole whose complexity renders lungs unable to breathe. What is the meaning of coincidence? How am I to understand my place in this world, when it is though my path within it is constructed with such deliberate care, so as to deliver to me an unending supply of baffling revelations and heartache? 
 
     Mother, why are your words in the basement of this church?
 
@@ -44,11 +44,13 @@ Preface
 
 The history *Paradise Revealed* is a history of improbability and coincidence. The sheer unlikelihood of its existence, the number of events that had to occur just so and no other way, defies all explanation. No other work in the entire written record of literature, except perhaps scripture, can claim to intersect so many different domains simultaneously while commanding as much scrutinty as it does. This state of affairs is, in no small part, due to its unique constitution. In retrospect, it is almost impossible to imagine a world where *Paradise Revealed* did not become a cultural phenomenon. However, this was not always the case. In fact, it is exceedingly likely Sofia Santos had no intentions whatsoever of even publishing the poem in the first place.
 
-Almost two years prior to the publication of the first and only book of *Paradise Revealed*, Sofia Santos, a modestly successful poet in her time, walked out of her apartment in São Paulo, Brazil and was never seen again, leaving behind a husband and a newborn baby. Her whereabouts, though subject to rampant speculation, have never been conclusively determined. Official investigations by the authorities have consistently turned up nothing. 
+Almost two years prior to the publication of the first and only book of *Paradise Revealed*, Sofia Santos, a minor poet in her time who enjoyed modest, if regional, success, walked out of her apartment in São Paulo, Brazil and was never seen again, leaving behind a husband and a newborn baby. Her whereabouts, though subject to rampant speculation, have never been conclusively determined. Official investigations by the authorities have consistently turned up nothing. 
 
-A year before its publication, I received an envelope addressed from her husband. Contained therein was a handwritten manuscript of *Paradise Revealed*. Sofia left the pages in an unorganized state in her studio's filing cabinets. Her husband, Roderigo Santos, had discovered the pages while cleaning out her effects. There is no indication when they were drafted, although considering the themes she explores in its pages and its obsessive adherence to metric and formal principles, consensus places the work sometime between *Terra Australis* and *The Ballad of Mariner*. 
+A year before its publication, I received an envelope addressed from her husband. Contained therein was a handwritten manuscript of *Paradise Revealed*. Sofia left the pages in an unorganized state in her studio's filing cabinet. Her husband, Roderigo Santos, had discovered the pages while cleaning out her effects. There is no indication when they were drafted, although considering the themes she explores in its pages and its obsessive adherence to metric and formal principles, consensus places the work sometime between *Terra Australis* and *The Ballad of Mariner*. 
 
-In its first printing, **Paradise Revealed** sold less than a hundred copies. It languished on the shelves for almost year, seemingly consigned to the scrap heap of history, never to be read and shortly to be forgotten. The few platforms to give the epic a chance generally dismissed it as "overwrought pastiche" or "syntactically convoluted melodrama".
+In its first printing, **Paradise Revealed** sold less than a hundred copies. It languished on the shelves for six months, seemingly consigned to the scrap heap of history, never to be read and shortly to be forgotten. Of the three reviews to give the epic a chance upon its initial release, all of them dismissed it as either "overwrought pastiche", "syntactically convoluted melodrama" or "derivative". No one could overlook the obvious and unabashed appropriation of John Milton's classic *Paradise Lost*; The entire structure of Santos' epic mimics the structure of Milton, from Satan's awakening in Hell, to his assembly of the Infernal Council, and his ultimate goal of waging war on God. Even the style, its archaic vernacular and labyrinthine syntax, are an homage to Milton. However, Santos was not simply rewriting *Paradise Lost*; she was updating it for a modern era, where science and rationality have murdered God, but have discovered this ontological crime had little effect on their damnation.
+
+When I opened the envelope from her husband and read through the piece in a single afternoon, I knew it would be a difficult sell. *Paradise Revealed* is dense and inaccessible. It requires a considerable amount of study in the disparate fields of history, philosophy, logic, mathematics, computer science and theology. Nothing in Santos' work is surface level; everything is layered with overlapping metaphors, to the point where the reader often loses the narrative thread and experiences something similar to the cogntive wasteland Santos herself is describing, as if the syntax of her language is enacting the content it is describing. 
 
 .. Then a series of bizarre events unfolded that the public to rediscover the verse 
 
@@ -117,7 +119,7 @@ Book 1
     deliver to this pen the means to write,
     received in present words these pages hold,
     the epitaph of Man for all to read:
-        Of Man's defiance, tell what final act
+        Of Man's defiance, tell what final act [#oubliette_a_001]_
     at last condemned his awful pride to Hell.
     Of countless sins, enumerate the one
     whose stain forgiveness never washes clean.
@@ -1147,3 +1149,13 @@ This unfinished excerpt was written in the margins of the original manuscript.
     2. Language was seen as the thread which bridged human and machine consciousness.
 
     Santos was writing 80 years after the first digitiation. The associations given above were likely retroactively applied, in the buildup to the Analog Reformation, though she undoubtedly cemented the various culturual forces with her vivid imagery and mastery of the epic form.
+
+.. [#oubliette_a_001]
+
+    Compare to John Milton's *Paradise Lost*,
+
+    | Of Man’s first disobedience, and the fruit
+    | Of that forbidden tree whose mortal taste
+    | Brought death into the World, and all our woe
+
+    Santos is intentionally inverting the structure of Milton's epic, equating their "first disobedience" to their "final defiance". 
