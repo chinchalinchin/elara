@@ -25,7 +25,7 @@ subset_a = 20  # Size of the outer set
 subset_ab = 10  # Size of the inner set (A and B)
 
 # Create the Venn diagram.  The order of subsets is (A only, B only, A and B)
-v = venn2(subsets=(subset_a - subset_ab, 0, subset_ab), set_labels=('A', 'B'))
+v = venn2(subsets=(subset_a - subset_ab, 0, subset_ab), set_labels=('Mammals', 'Whales'))
 
 # Get the individual patches
 outer_set = v.get_patch_by_id('10')
@@ -33,7 +33,7 @@ inner_set = v.get_patch_by_id('11')
 
 # Color the sets
 if outer_set:
-    outer_set.set_color('lightblue')
+    outer_set.set_color('red')
 if inner_set:
     inner_set.set_color('darkblue')
 
