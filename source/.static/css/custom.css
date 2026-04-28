@@ -133,3 +133,6 @@
     width: 100%;
 }
 
+aside.sidebar {
+    padding: 0.5em;
+}
