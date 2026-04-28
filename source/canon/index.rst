@@ -6,7 +6,7 @@ Canon
 
 .. raw:: html
 
-   <div class="text-container">
+   <div class="palindrome-container">
       <div class="center-line">On serif peels</div>
       <div class="center-line">sleep fires, no?</div>
    </div>

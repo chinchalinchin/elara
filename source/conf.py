@@ -68,6 +68,8 @@ html_static_path = [
 html_css_files = [
     'css/theme.css',
     'css/custom.css',
+    'css/simulation.css',
+    'css/palindromes.css',
     'css/panels/rss.css',
     'css/panels/verse.css'
 ]

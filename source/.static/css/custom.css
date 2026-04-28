@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap');
+
 .center {
     text-align: center;
 }
@@ -51,82 +53,10 @@
     font-size: 0.85em !important;
 }
 
-.text-container {
-    width: 80%;
-    max-width: 600px; 
-    margin: 40px auto;
-    padding: 20px; 
-    box-sizing: border-box;
-    position: relative;
-}
-
-.text-container::before {
-    content: '';
-    position: absolute;
-    top: 20px; 
-    bottom: 20px; 
-    left: 50%;
-    width: 1px;
-    background-color: var(--pst-color-text-muted);
-    transform: translateX(-0.5px);
-    z-index: 0;
-}
-
-.center-line {
-    padding: 8px 0;
-    box-sizing: border-box; 
-    text-align: center;
-    position: relative; 
-    z-index: 1;
-}
-
-.center-line:first-child {
-    text-align: right;  
-    padding-right: 49%; 
-    padding-left: 0;
-}
-
-.center-line:last-child {
-    text-align: left;   
-    padding-left: 49%;  
-    padding-right: 0;  
-}
-
-.center-line:first-child:last-child {
-    text-align: center;
-    padding-left: 0;   
-    padding-right: 0;
-}
-
-.handwritten {
-    /* 1. Prioritize specific "handwriting" fonts for different OSs.
-     2. Fallback to generic cursive if none exist.
-    */
-    font-family: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual, cursive;
-
-    /* Visual styling to enhance the handwritten effect 
-    */
-    font-size: 1.2rem;          /* Handwriting usually reads better slightly larger */
-    line-height: 1.5;           /* Gives breathing room like ruled paper */
-    color: #2c2c2c;             /* Slightly off-black looks more like ink */
-    letter-spacing: 0.5px;      /* Slight spacing helps legibility */
-    font-weight: 500;           /* A bit of weight mimics pen pressure */
-
-    /* Optional: Add a slight tilt for a more natural look */
-    transform: rotate(-1deg);
-    display: inline-block; /* Required for transform to work on spans */
-}
-
-.redacted {
-    color: black;
-    background-color: black;
-    user-select: all;
-}
 
 .strike{
     text-decoration: line-through;
 }
-
 
 .sidebar-primary-item .navbar-icon-links {
     justify-content: center;
@@ -135,4 +65,8 @@
 
 aside.sidebar {
     padding: 0.5em;
+}
+
+aside.sidebar ul {
+    margin: 0.5em;
 }

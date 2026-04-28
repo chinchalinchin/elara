@@ -4,8 +4,9 @@ Paradise Revealed
 -----------------
 
 .. sidebar::
+    :class: scrawled
 
-    Things click into place. For an instant, the designs of time are visible, the way it stitches threads together, so the all the knots which appear as random, at that moment, apprehended in their entire structure, as perfect crystalline structures whose points and intersections in the course of human affairs, are seen, not as a tangled confusion, but as a glorious whole whose complexity renders lungs unable to breathe. What is the meaning of coincidence? How am I to understand my place in this world, when it is though my path within it is constructed with such deliberate care, so as to deliver to me an unending supply of baffling revelations and heartache? 
+    Things click into place. For an instant, the designs of time are visible, the way it stitches threads together, so the all the knots which appear as random and disorderly, at that moment, apprehended in their entirety as perfect crystalline structures whose points and intersections in the course of human affairs, are seen, not as a tangled confusion, but as a glorious whole whose complexity renders lungs unable to breathe. What is the meaning of coincidence? How am I to understand my place in this world, when it is though my path within it is constructed with such deliberate care, so as to deliver to me an unending supply of baffling revelations and heartache? 
 
     Mother, why are your words in the basement of this church?
 
@@ -28,6 +29,7 @@ Preface
 -------
 
 .. sidebar::
+    :class: scrawled
 
     A hundred times I've read these words, and still they baffle me. I've pored through her lines a hundred times, and try to make them make sense. A hundred times I've picked apart each sentence, tasted the way the words feel on my tongue, and still I am not any closer to understanding. 
 
@@ -1159,4 +1161,4 @@ This unfinished excerpt was written in the margins of the original manuscript.
     | Of that forbidden tree whose mortal taste
     | Brought death into the World, and all our woe
 
-    Santos is intentionally inverting the structure of Milton's epic, equating their "first disobedience" to their "final defiance". 
+    Santos is intentionally inverting the structure of Milton's epic, equating Man's "first disobedience" to their "final defiance". 

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap');
+
+
+.redacted {
+    color: black;
+    background-color: black;
+    user-select: all;
+}
+
+.scrawled {
+  /* The Font Stack */
+  font-family: 'Caveat', 'Comic Neue', 'Chalkboard SE', 'Comic Sans MS', cursive;
+  
+  /* Sizing & Spacing: Handwriting fonts usually need a slight bump in size */
+  font-size: 1.35rem; 
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  
+  /* The 'Hasty' Effect: A barely perceptible tilt */
+  display: inline-block;
+  transform: rotate(-0.5deg);
+}
+
+.handwritten {
+    /* 1. Prioritize specific "handwriting" fonts for different OSs.
+     2. Fallback to generic cursive if none exist.
+    */
+    font-family: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual, cursive;
+
+    /* Visual styling to enhance the handwritten effect 
+    */
+    font-size: 1.2rem;          /* Handwriting usually reads better slightly larger */
+    line-height: 1.5;           /* Gives breathing room like ruled paper */
+    color: #2c2c2c;             /* Slightly off-black looks more like ink */
+    letter-spacing: 0.5px;      /* Slight spacing helps legibility */
+    font-weight: 500;           /* A bit of weight mimics pen pressure */
+
+    /* Optional: Add a slight tilt for a more natural look */
+    transform: rotate(-1deg);
+    display: inline-block; /* Required for transform to work on spans */
+}
