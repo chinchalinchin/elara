@@ -1,3 +1,11 @@
+.. TASK: Etymological Analysis
+..
+..    Go through the target rhyme family and analyze for further etymological connections. 
+..
+.. - **Target**: 
+.. - **Output**: Output each identified etymological connection with a `topic` RST directive.
+..
+
 .. _consonantia:
 
 Consonantia
@@ -111,6 +119,23 @@ Rhyme Families
       Of or pertaining to
 
    - ``benign``, ``divine``, ``equine``, ``feline``, ``leonine``, ``lupine``, ``saturnine``, ``serpentine``
+
+------------
+/aɪt/ Family
+------------
+
+.. csv-table:: /aɪn/ Rhymes
+   :header-rows: 1
+   :file: ../../.static/csv/linguistic/words/rhymes/ite-rhymes.csv
+
+------------
+/aɪz/ Family
+------------
+
+.. csv-table:: /aɪz/ Rhymes
+   :header-rows: 1
+   :file: ../../.static/csv/linguistic/words/rhymes/ize-rhymes.csv
+
 
 ------------
 /ɛkt/ Family

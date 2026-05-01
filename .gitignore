@@ -12,5 +12,6 @@
 **/*.pyc
 **/__pycache__
 **/*.DS_Store*
+**/.out/**
 **/prompt/*
 !**/prompt/.gitkeep

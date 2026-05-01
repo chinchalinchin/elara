@@ -10,6 +10,7 @@ from sphinx.application import Sphinx
 import argparse
 import os
 import sys 
+import subprocess
 
 project = "elara"
 toc_title = "elara"
@@ -47,6 +48,7 @@ templates_path = [
 exclude_patterns = [
     '**/.*.rst',
     '**/.*/*.rst'
+    '**/out/**'
 ]
 
 plot_html_show_source_link = True
@@ -162,19 +164,34 @@ def build_pdf(source_dir, output_dir, filename):
       confdir=conf_dir, 
       outdir=output_dir, 
       doctreedir=output_dir + '/doctrees',
-      buildername='latexpdf', 
+      buildername='latex', # Changed from 'latexpdf' to the actual builder name
       warningiserror=False
     )
+    
+    # This generates the .tex files
     app.build(force_all=True, filenames=[filename + '.rst'])
+    
+    # Compile the generated LaTeX into a PDF using your xelatex configuration
+    print("\nCompiling PDF...")
+    try:
+        # Sphinx generates a Makefile in the outdir. We invoke it to build the PDF.
+        subprocess.run(
+            ['make', 'LATEX=xelatex', 'all-pdf'], 
+            cwd=output_dir, 
+            check=True
+        )
+        print(f"\nPDF successfully built in: {output_dir}")
+    except subprocess.CalledProcessError as e:
+        print(f"\nError: Failed to compile PDF. {e}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-src", required=True, help="Path to the source RST file")
+    parser.add_argument("src", help="Path to the source RST file")    
     args = parser.parse_args()
 
     source_file = args.src
     source_dir = os.path.dirname(source_file) 
     filename = os.path.splitext(os.path.basename(source_file))[0] 
-    output_dir = os.path.join(source_dir, "out")
+    output_dir = os.path.join(source_dir, ".out")
 
     build_pdf(source_dir, output_dir, filename)

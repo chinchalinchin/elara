@@ -1,9 +1,19 @@
+{% set rhyme_path = "/Users/gmoore/Home/projects/elara/source/.static/csv/linguistic/words/rhymes/" %}
+{% set complete = [
+    "/ɛnd/",
+    "/aɪz/",
+    "/aɪn/",
+    "/ɛkt/",
+    "/eɪn/",
+    "/oʊz/"
+]%}
 # Rhyme Search
 
-- A phoneme or sequence of phonemes that has atleast 20 rhymes. 
+Find a phoneme or sequence of phonemes that has atleast 20 rhymes. Output the rhymes.
 
-!!! "Definition"
-    Rhyme Unit: The phoneme or sequence of phonemes which produces the rhyme, e.g. (hate, fate) have the IPA pronouncation ``ˈheɪt`` and ``ˈfeɪt`` respectively, making ``/eɪt/`` the rhyme unit. 
+**Definitions**
+
+- *Rhyme Unit*: The phoneme or sequence of phonemes which produces the rhyme, e.g. (hate, fate) have the IPA pronouncation ``ˈheɪt`` and ``ˈfeɪt`` respectively, making ``/eɪt/`` the rhyme unit. 
 
 ## Constraints
 
@@ -11,20 +21,16 @@
 - *Interesting* rhymes only, e.g. (reigns, drains) and (refer, infer) are an *interesting* rhyme pairs, but (bat, rat) and (me, see) are not *interesting*.
 - No archaic words. Obscure is fine, but the solution should not be words no one ever uses, e.g. if rhyme unit is /eɪt/, "potestate" is too obscure, whereas "profligate" is the right amount of obscure. 
 - No jargon-y words, e.g. don't select /eɪn/ as the rhyme unit because of the large number of chemical words, e.g. "isobutane", "nitromethane", etc.
-- The rhymes must be perfect, where the final stressed syllable of each word coincides, e.g. (retrains, restrains) is perfect while (snappily, happily) is not.  
 
 The following rhyme units cannot be selected:
 
-- `/ɛnd/`
-- `/aɪz/`
-- ``/aɪn/``
-- ``/ɛkt/``
-- ``/eɪn/``
-- ``/oʊz/``
+{% for comp in complete %}
+- `{{ comp }}`
+{% endfor %}
 
 ## Output
 
-Format the output as a spreadsheet that can be exported as in the following example,
+Format the output as a `.csv` as in the following example,
 
 ```csv
 word,rhyme_unit,ⲣ_1,ⲣ_2,ⲣ_3,ⲣ_4,ⲣ_5,ⲣ_6
@@ -61,9 +67,6 @@ individualize,aɪz,ˌɪn,də,ˈvɪ,dʒə,wə,ˌlaɪz
 institutionalize,aɪz,ˌɪn,stə,ˈtu,ʃ,nə,ˌlaɪz
 ```
 
-!!! note 
-    Use IPA phonetics!
+Output **only** the spreadsheet.
 
-**Analysis**
-
-At the end of the output, in a separate section, provide an an analysis on the thematic, etymological or symbolic relations observed between the rhymes. 
+- **NOTE**: Use IPA Phonetics.
