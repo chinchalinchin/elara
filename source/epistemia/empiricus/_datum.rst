@@ -47,7 +47,7 @@ Linguistic
 - :ref:`Ambiguous Words <palindromics>`
     - :download:`Ambiguous Words CSV <../../.static/csv/linguistic/words/ambiguous-words.csv>`
 - Ambitone Words
-    - :download:`Ambiguous Words CSV <../../.static/csv/linguistic/words/ambitone-words.csv>`
+    - :download:`Ambitone CSV <../../.static/csv/linguistic/words/ambitone-words.csv>`
 
 **Syntactic Classes**
 
@@ -65,9 +65,22 @@ Linguistic
 - :ref:`Iambs <poetics-stress>`
     - :download:`Iambic Words CSV <../../.static/csv/linguistic/words/metric/iambic-words.csv>`
 - :ref:`Trochees <poetics-stress>`
-    - :download:`Iambic Words CSV <../../.static/csv/linguistic/words/metric/trochaic-words.csv>`
+    - :download:`Trochaic Words CSV <../../.static/csv/linguistic/words/metric/trochaic-words.csv>`
 - :ref:`Spondees <poetics-stress>`
-    - :download:`Iambic Words CSV <../../.static/csv/linguistic/words/metric/spondaic-words.csv>`
+    - :download:`Spondaic Words CSV <../../.static/csv/linguistic/words/metric/spondaic-words.csv>`
+
+**Rhyme Families**
+
+- :ref:`/aɪn/ Rhymes <consonantia>`
+    - :download:`/aɪn/ Rhymes CSV <../../.static/csv/linguistic/words/rhymes/ine-rhymes.csv>`
+- :ref:`/aɪt/ Rhymes <consonantia>`
+    - :download:`/aɪt/ Rhymes CSV <../../.static/csv/linguistic/words/rhymes/ite-rhymes.csv>`
+- :ref:`/aɪz/ Rhymes <consonantia>`
+    - :download:`/aɪz/ Rhymes CSV <../../.static/csv/linguistic/words/rhymes/ize-rhymes.csv>`
+- :ref:`/ɛkt/ Rhymes <consonantia>`
+    - :download:`/ɛkt/ Rhymes CSV <../../.static/csv/linguistic/words/rhymes/ect-rhymes.csv>`
+- :ref:`/ɛnd/ Rhymes <consonantia>`
+    - :download:`/ɛnd/ Rhymes CSV <../../.static/csv/linguistic/words/rhymes/end-rhymes.csv>`
 
 .. _scientific-datasets:
 
