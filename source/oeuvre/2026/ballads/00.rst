@@ -2,6 +2,8 @@
 Hyperboreá
 ----------
 
+| I - Into The Middle of Things
+| 
 | The snow descends upon a place
 |       sequestered on a crown,
 | a hidden place the heights embrace
@@ -14,7 +16,7 @@ Hyperboreá
 |
 | A lantern flickers through the storm, 
 |       a single maid who dares
-| the cold with cloaks to keep her warm
+| the cold, with cloaks to keep her warm,
 |       while whispering her prayers.
 |
 | She trudges over covered tracks
@@ -24,11 +26,11 @@ Hyperboreá
 |
 | Its isolation near complete,
 |       for ages left alone, 
-| as empires spread below by fleet
-|       then toppled overthrown.
+| as empires grew below by fleet,
+|       now gone and overthrown.
 |
 | A secret town disguised by peaks
-|       from surface schemes and grime,
+|       from surface schemes and crime,
 | diverged in course by years and weeks
 |       til clocks told different time.
 |
@@ -43,38 +45,51 @@ Hyperboreá
 |       the sky and quickly spreads.
 |
 | She cries aloud, but even here, 
-|       where sound behaves quite weird,
+|       where sounds behave quite weird,
 | in stormy drifts, through drafts severe,
 |       her voice is commandeered. 
 |
-| And like the town, her sound is missed,
+| And like the town, her cry is missed,
 |       for no one thought to glance,
-| yet even still, the goals persist
-|       so onward they advance.
+| yet staunch and firm, her goals persist,
+|       so onward lines advance.
 |
-| -
+| The town and maid are bound in fate,
+|       though neither know it yet,
+| for only love propels her gait,
+|       and drives her thoughts to fret.
 |
-| The busy world forgot to look,
-|       erased its name from maps,
-| concerns once kept were overtook
-|       by nation states' collapse.
+| An understanding fails to come
+|       without a prior ear,
+| attuned to hear the story's hum
+|       beneath this rough veneer.
 |
-| - 1
-|
-| A bastion left of humankind, 
-|      yet unbeknownst to them 
-| on kingly crags this town enshrined
-|       the final diadem.
-|
-| - 2
-| 
 | This maid above, unknown below, 
 |       is known up here by name, 
 | her family deeds in pages sow 
 |       the seeds of royal fame. 
 |
 | -
-| 
+|
+| II - From The Egg
+|
+| Once long ago, when men were brutes,
+|       and mountains hid in knolls,
+| a few of them up here found fruits 
+|       to gather up in bowls.
+|
+| And as they dined upon the flesh,
+|       the world began to change.
+| So when they stood, their minds now fresh,
+|       the world became quite strange.
+|
+| An awful quake then shook the ground
+|       and flung them to the sky,
+| where there they stayed, on summit crowned,
+|       to live and multiply.
+|
+| -
+|
 | Tectonic waves had carved a bay
 |       from angled rock to hold
 | the overlapping crests that spray
@@ -94,12 +109,12 @@ Hyperboreá
 |
 | Their padded walls were thickly made
 |       to soothe their families' dread, 
-| yet even still, the bell's cascade 
-|       at noon invades their head.
+| yet every day, the bell's cascade 
+|       at noon invaded head.
 |
 | With quarries mined and stripped of ores,
 |       the walls arose in rows 
-| but always shaking troubled floors,
+| but always shaking trembled floors,
 |       as echoes split in flows. 
 |
 | A kingdom grew by days deranged,
@@ -155,12 +170,46 @@ Hyperboreá
 - *Revision I*: September 2025
 - *Revision II*: February 2026
 
-.. 1
+.. | clearly, it has to end with an avalanche.
+..
+.. --
+..
+.. | The town and maid are bound in fate,
+.. |       though neither know it yet,
+.. | for only love propels her gait,
+.. |       to drives her thoughts to fret.
+.. |       to stave away regret.
+..
+.. --
+.. 
 .. | The talk on lips as cities fell 
 .. |       ignored the haven town, 
 .. | apocalypse in parallel 
-
-.. 2
+..
+.. --
+..
 .. | In fact, she passed beneath the arch
-.. |       not sixteen years of age,
-.. |  
+.. |       not sixteen years of age, 
+..
+.. --
+..
+.. |
+.. | And like the town, her heart is kept,
+.. |       enrapt 
+..
+.. --
+..
+.. | The busy world forgot to look,
+.. |       erased its name from maps,
+.. | concerns once kept were overtook
+.. |       by nation states' collapse.
+..
+.. --
+..
+.. | A bastion left of humankind, 
+.. |      yet unbeknownst to them 
+.. | on kingly crags this town enshrined
+.. |       the final diadem.
+..
+.. --
+..
