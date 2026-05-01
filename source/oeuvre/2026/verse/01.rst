@@ -1074,7 +1074,15 @@ Book 1
     - Rejected
   * - April 25, 2026
     - Infocalypse Press
-    - Pending
+    - Accepted
   * - April 26, 2026
     - The Tusculum Review 2026 Poetry Chapbook Prize
     - Pending
+
+.. epigraph::
+
+    Hello Grant!
+
+    Your piece is wonderful and challenging and I have many ideas for it. First I would put the entire piece in the issue three prologue which would be in June (the issue lands July 15th), but with your permission, I would love to run pieces of the piece like a "feed" through parts of issue 3. Let me know what you think at editor@infocalypse.press
+
+    -- Katherine Autio, Editor-in-chief, Infocalypse Press

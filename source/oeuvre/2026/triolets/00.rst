@@ -22,7 +22,7 @@ Ontology
     - Status
   * - February 8th, 2026
     - Macabre Magazine
-    - Pending
+    - Rejected
   * - February 17th, 2026
     - Altar Literary Magazine
     - Rejected
