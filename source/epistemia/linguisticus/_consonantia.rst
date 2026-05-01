@@ -24,101 +24,74 @@ Rhyme Families
    :header-rows: 1
    :file: ../../.static/csv/linguistic/words/rhymes/ine-rhymes.csv
 
-**Roots**
+Roots
+~~~~~
 
-.. topic:: Latin Branch, Linea Root
+**Latin Branch**
 
-   **Latin**: *linea* (noun)
-      unit of length 
-
-   - ``line``, ``align``, ``realign``, ``underline``, ``centerline``, ``interline``
-
-.. topic:: Latin Branch, Finis Root
-
-   **Latin**: *finis* (noun)
-      end, limit, border, purpose
-
-   - ``fine``, ``affine``, ``confine``, ``define``, ``redefine``
-
-.. topic:: Latin Branch, Other Roots
-
-   **Latin**: *signare* (verb)
-      to mark, to seal
-      
-   - ``assign``, ``reassign``, ``design``
-
-   **Latin**: *combinare* (verb)
-      to yoke together
-
-   - ``combine``, ``recombine``
-
-   **Latin**: *declinare* (verb)
-      to slope downward
-
+- *linea* (noun): unit of length 
+   - ``line``
+   - ``align``
+   - ``realign``
+   - ``underline``
+   - ``centerline``
+   - ``interline``
+- *finis* (noun): end, limit, border, purpose
+   - ``fine``
+   - ``affine``
+   - ``confine``
+   - ``define``
+   - ``redefine``
+- *signare* (verb): to mark, to seal
+   - ``assign``
+   - ``reassign``
+   - ``design``
+- *combinare* (verb): to yoke together
+   - ``combine``
+   - ``recombine``
+- *declinare* (verb): to slope downward
    - ``decline`` 
-
-   **Latin**: *inclinare* (verb)
-      to tilt, to tip
-
+- *inclinare* (verb): to tilt, to tip
    - ``incline``
-
-   **Latin**: *vinum* (noun)
-      wine
-
+- *vinum* (noun): wine
    - ``wine``
-
-   **Latin**: *pinus* (noun)
-      pine
-   
+- *pinus* (noun): pine  
    - ``pine``
 
-.. topic:: Germanic Branch, Roots
+**Old English Branch**
 
-   **Old English** *brȳne* (noun)
-      salt liquor
-
+- *brȳne* (noun): salt liquor
    - ``brine``
-
-   **Old English** *scīnan* (verb)
-      to shine, be resplendent
-
+- *scīnan* (verb): to shine, be resplendent
    - ``shine``
-   
-   **Old English** *swīn* (noun)
-      pig, hog
-
+- *swīn* (noun): pig, hog
    - ``swine``
-
-   **Old English** *twīn* (noun)
-      double thread
-   
+- *twīn* (noun): double thread
    - ``twine``
-
-   **Old English** *hwīnan* (verb)
-      to whistle through the air
-
+- *hwīnan* (verb): to whistle through the air
    - ``whine``
 
-.. topic:: Greek Branch, roots
+**Greek Branch**
 
-   **Greek**: *ἀνώδυνος* (adjective)
-      free from pain, free from distress
-
+- *ἀνώδυνος* (adjective): free from pain, free from distress
    - ``anodyne``
-
-   **Greek**: *κρυστάλλινος* (Adjective)
-      of crystal
-
+- *κρυστάλλινος* (Adjective): of crystal
    - ``crystalline``
+   
+Stems
+~~~~~
 
-**Stems**
+**Latin Branch**
 
-.. topic:: Latin Branch, -inus Stem
-
-   **Latin**: *-īnus* (feminine *-īna*, neuter *-īnum*)
-      Of or pertaining to
-
-   - ``benign``, ``divine``, ``equine``, ``feline``, ``leonine``, ``lupine``, ``saturnine``, ``serpentine``
+- *-īnus* (feminine *-īna*, neuter *-īnum*): Of or pertaining to
+   - ``benign``
+   - ``divine``
+   - ``equine``
+   - ``feline``
+   - ``leonine``
+   - ``lupine``
+   - ``saturnine``
+   - ``serpentine``
 
 ------------
 /aɪt/ Family
@@ -128,6 +101,135 @@ Rhyme Families
    :header-rows: 1
    :file: ../../.static/csv/linguistic/words/rhymes/ite-rhymes.csv
 
+**Latin Branch**
+
+- *citare* (verb): to set in motion, arouse, call
+   - ``cite``
+   - ``excite``
+   - ``incite``
+   - ``recite``
+   - ``overexcite``
+- *terere* (verb): to rub, wear away
+   - ``trite``
+   - ``contrite``
+- *polire* (verb): to polish, make smooth
+   - ``polite``
+   - ``impolite``
+   - ``overpolite``
+- *dicere* (verb): to say, speak
+   - ``indict``
+- *invitare* (verb): to invite
+   - ``invite``
+- *ignis* (noun): fire
+   - ``ignite``
+- *petere* (verb): to seek, attack
+   - ``appetite``
+- *rudis* (adjective): unlearned, rough
+   - ``erudite``
+- *pes* (noun): foot
+   - ``expedite``
+- *unus* (number): one
+   - ``disunite``
+   - ``reunite``
+- *tradere* (verb): to hand over
+   - ``extradite``
+- *situs* (noun): position, place
+   - ``site``
+   - ``website``
+- *despicere* (verb): to look down upon
+   - ``despite``
+   - ``spite``
+- *ritus* (noun): religious observance, ceremony
+   - ``rite``
+- *spiritus* (noun): breath, spirit
+   - ``sprite``
+- *satelles* (noun): attendant, bodyguard
+   - ``satellite``
+- *pars* (noun): part, piece
+   - ``bipartite``
+- *plebiscitum* (noun): decree of the common people
+   - ``plebiscite``
+- *cellula* (noun): small room, cell
+   - ``cellulite``
+- *delectare* (verb): to charm, please
+   - ``delight``
+
+**Old English Branch**
+
+- *bītan* (verb): to bite
+   - ``bite``
+- *hwīt* (adjective): white
+   - ``white``
+- *mīte* (noun): small insect
+   - ``mite``
+- *riht* (adjective): straight, correct
+   - ``forthright``
+   - ``outright``
+   - ``upright``
+- *gesiht* (noun): things seen, vision
+   - ``sight``
+   - ``insight``
+   - ``oversight``
+- *flyht* (noun): act of flying
+   - ``flight``
+- *fyrhto* (noun): fear, dread
+   - ``fright``
+- *hīehþo* (noun): top, highest point
+   - ``height``
+- *wrītan* (verb): to score, write
+   - ``rewrite``
+- *lēoht* (noun): light
+   - ``alight``
+   - ``twilight``
+- *pliht* (noun): danger, risk
+   - ``plight``
+- *smītan* (verb): to strike, smear
+   - ``smite``
+- *cyta* (noun): bird of prey
+   - ``kite``
+- *niht* (noun): night
+   - ``overnight``
+
+**Old Norse Branch**
+
+- *þéttr* (adjective): watertight, close
+   - ``tight``
+- *slœgð* (noun): slyness, cunning
+   - ``sleight``
+
+**Greek Branch**
+
+- *ἀκόλουθος* (noun): follower, attendant
+   - ``acolyte``
+- *δύναμις* (noun): power, strength
+   - ``dynamite``
+- *φυτόν* (noun): plant, creature
+   - ``neophyte``
+- *σῖτος* (noun): grain, food
+   - ``parasite``
+- *ἄνθραξ* (noun): coal, charcoal
+   - ``anthracite``
+- *προσήλυτος* (noun): newcomer, stranger
+   - ``proselyte``
+- *σταλακτός* (adjective): dripping
+   - ``stalactite``
+- *στάλαγμα* (noun): a drop
+   - ``stalagmite``
+- *Σύβαρις* (noun): Sybaris (ancient city in Italy)
+   - ``sybarite``
+- *λοβός* (noun): lobe, pod
+   - ``trilobite``
+- *πολίτης* (noun): citizen
+   - ``cosmopolite``
+- *Ἑρμαφρόδιτος* (noun): Hermaphroditos
+   - ``hermaphrodite``
+   - ``pseudohermaphrodite``
+- *μετέωρον* (noun): thing high up, meteor
+   - ``meteorite``
+   - ``micrometeorite``
+- *Ἀλέξανδρος* (noun): Alexander
+   - ``alexandrite``
+
 ------------
 /aɪz/ Family
 ------------
@@ -135,7 +237,6 @@ Rhyme Families
 .. csv-table:: /aɪz/ Rhymes
    :header-rows: 1
    :file: ../../.static/csv/linguistic/words/rhymes/ize-rhymes.csv
-
 
 ------------
 /ɛkt/ Family
@@ -145,99 +246,70 @@ Rhyme Families
    :header-rows: 1
    :file: ../../.static/csv/linguistic/words/rhymes/ect-rhymes.csv
 
-**Roots**
 
-.. topic:: Latin Branch, Legere Root
+**Latin Branch**
 
-   **Latin**: *legere* (verb)
-      to choose, to select, to appoint
-
-   - ``collect``, ``elect``, ``neglect``, ``select``, ``intellect``
-
-.. topic:: Latin Branch, Specere Root
-
-   **Latin**: *specere* (verb)
-      to look at, to see
-
-   - ``aspect``, ``expect``, ``inspect``, ``respect``, ``retrospect``
-
-.. topic:: Latin Branch, Facere Root
-
-   **Latin**: *facere* (verb)
-      to do, to make, to produce
-
-   - ``affect``, ``effect``, ``perfect``, ``infect``
-
-.. topic:: Latin Branch, Regere Root
-
-   **Latin**: *regere* (verb)
-      to rule, to guide, to keep straight
-
-   - ``correct``, ``direct``, ``erect``, ``resurrect``
-
-.. topic:: Latin Branch, Iacere Root
-
-   **Latin**: *iacere* (verb)
-      to throw
-
-   - ``eject``, ``inject``, ``reject``, ``subject``
-
-.. topic:: Latin Branch, Other Roots
-
-   **Latin**: *secare* (verb)
-      to cut
-
-   - ``bisect``, ``insect``, ``intersect``
-
-   **Latin**: *flectere* (verb)
-      to bend
-
-   - ``deflect``, ``reflect``
-
-   **Latin**: *nectere* (verb)
-      to bind
-
+- *legere* (verb): to choose, to select, to appoint
+   - ``collect``
+   - ``elect``
+   - ``neglect``
+   - ``select``
+   - ``intellect``
+- *specere* (verb): to look at, to see
+   - ``aspect``
+   - ``expect``
+   - ``inspect``
+   - ``respect``
+   - ``retrospect``
+- *facere* (verb): to do, to make, to produce
+   - ``affect``
+   - ``effect``
+   - ``perfect``
+   - ``infect``
+- *regere* (verb): to rule, to guide, to keep straight
+   - ``correct``
+   - ``direct``
+   - ``erect``
+   - ``resurrect``
+- *iacere* (verb): to throw
+   - ``eject``
+   - ``inject``
+   - ``reject``
+   - ``subject``
+- *secare* (verb): to cut
+   - ``bisect``
+   - ``insect``
+   - ``intersect``
+- *flectere* (verb): to bend
+   - ``deflect``
+   - ``reflect``
+- *nectere* (verb): to bind
    - ``connect``
-
-   **Latin**: *tegere* (verb)
-      to cover
-
+- *tegere* (verb): to cover
    - ``protect``
 
-.. topic:: Greek Branch, Roots
+**Greek Branch**
 
-   **Greek**: *ἀρχιτέκτων* (noun)
-      architect
-
+- *ἀρχιτέκτων* (noun): architect
    - ``architect``
 
-.. topic:: French Branch, roots
+**French Branch**
 
-   **French**: *eschequier* (verb)
-      to play chess
-
+- *eschequier* (verb): to play chess
    - ``checked``
 
-.. topic:: Germanic Branch, roots
+**Dutch Branch**
 
-   **Dutch** *dekken* (verb)
-      to cover
-
+- *dekken* (verb): to cover
    - ``decked``
-
-   **Dutch** *trekken* (verb)
-      to trek
-
+- *trekken* (verb): to trek
    - ``trecked``
 
-   **Norse** *flekka* (verb)
-      to spot, to stain
+**Norse Branch**
 
+- *flekka* (verb): to spot, to stain
    - ``flecked``
-
-   **Norse** *rek* (adjective)
-      driven, pushed
-
+- *rek* (adjective): driven, pushed
    - ``wrecked``
 
 ------------
@@ -248,43 +320,34 @@ Rhyme Families
    :header-rows: 1
    :file: ../../.static/csv/linguistic/words/rhymes/end-rhymes.csv
 
-**Roots**
-
-.. topic:: Latin Branch, Tendere Root
-
-   **Latin**: *tendere* (verb)
-      to stretch, to aim, to extend
-
-   - ``tend``, ``trend``, ``attend``, ``contend``, ``intend``, ``pretend``, ``portend``, ``overextend``
-
-.. topic:: Latin Branch, Prehendere Root
-
-   **Latin**: *prehendere* (verb)
-      to take, to grasp, to seize
-
-   - ``apprehend``, ``comprehend``, ``reprehend``, ``misapprehend``, ``miscomprehend``
-
-.. topic:: Latin Branch, Scandere Root
-
-   **Latin**: *scandere*
-      to climb, to mount, to ascend
-
-   - ``ascend``, ``descend``, ``transcend``, ``condescend``
-
-.. topic:: Latin Branch, Other Roots
-
-   **Latin**: *pendere* (verb)
-      to hang, to suspend
-
-   - ``spend``, ``depend``, ``suspend``
-
-   **Latin**: *fendere*
-      to cut, to split, to pass through 
-
-   - ``fend``, ``defend``
-
-   **Latin**: *menda*
-      mistake, error, blunder
-
-   - ``mend``, ``amend`` 
+- *tendere* (verb): to stretch, to aim, to extend
+   - ``tend``
+   - ``trend``
+   - ``attend``
+   - ``contend``
+   - ``intend``
+   - ``pretend``
+   - ``portend``
+   - ``overextend``
+- *prehendere* (verb): to take, to grasp, to seize
+   - ``apprehend``
+   - ``comprehend``
+   - ``reprehend``
+   - ``misapprehend``
+   - ``miscomprehend``
+- *scandere* (verb): to climb, to mount, to ascend
+   - ``ascend``
+   - ``descend``
+   - ``transcend`` 
+   - ``condescend``
+- *pendere* (verb): to hang, to suspend
+   - ``spend``
+   - ``depend``
+   - ``suspend``
+- *fendere* (verb): to cut, to split, to pass through 
+   - ``fend``
+   - ``defend``
+- *menda*: mistake, error, blunder
+   - ``mend``
+   - ``amend`` 
 
