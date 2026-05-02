@@ -84,16 +84,17 @@ Hyperboreá
 | as magistrates prepare the tongs  
 |       for hooded men on stage.
 | 
-| A man of 
-|
-|
+| A judge of robes unrolls his scrolls,
+|       with edicts inked in black,
+| and to the crowd aloud extols,
+|       while bailiffs crank the rack:
 |      
 | "Tonight, this hallowed eve of Hush,
 |       when winter cloaks the noise,
 |   and yields to us a silence lush
-|       with once forgotten joys
+|       with once forgotten joys,
 |
-| Recall the price we pay for life"
+| recall the price we pay for life"
 |
 | But surface dwellers need accounts 
 |       of how things are designed,
@@ -188,18 +189,6 @@ Hyperboreá
 |
 | III - Echoes & Avalanches
 |
-| - 
-| 
-| Now torches light a crowd of men
-|       parading down the street. 
-| With shackles locked, a citizen 
-|       is led by hands and feet. 
-|
-| Behind the mob, the trailing maid 
-|       laments the morning crowned,
-| when evening come, his body laid, 
-|       she'll weep upon his mound. 
-|
 | -
 
 - *Original*: Feburary 2025
@@ -250,3 +239,12 @@ Hyperboreá
 ..
 .. --
 ..
+.. | Now torches light a crowd of men
+.. |       parading down the street. 
+.. | With shackles locked, a citizen 
+.. |       is led by hands and feet. 
+.. |
+.. | Behind the mob, the trailing maid 
+.. |       laments the morning crowned,
+.. | when evening come, his body laid, 
+.. |       she'll weep upon his mound. 
