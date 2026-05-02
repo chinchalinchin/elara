@@ -136,17 +136,10 @@ Hyperboreá
 | the overlapping crests that spray
 |       their noises uncontrolled.
 |
-| -
-|
 | This madness long had ruled their lands, 
 |       where words, reversed, exchange
-| their echoes back like rubber bands,
+| their echoes back like rubber bands
 |       across the mountain range. 
-|
-| Where down below the wars arose
-|       for power, salt and tin,
-| up here they battle greater foes
-|       of discord, noise and din.
 |
 | At first, the words reheard deferred
 |       the dialogues of friends
@@ -159,14 +152,19 @@ Hyperboreá
 |       as echoes split in flows. 
 |
 | Their padded walls were thickly made
-|       to soothe their families' dread, 
+|       around their claimed homesteads,
 | yet every day, the bell's cascade 
-|       at noon invaded head.
+|       at noon invaded heads.
 |
 | A kingdom grew by days deranged,
 |       remade above the sky,
 | as generations left them changed
 |       and hard to classify.
+|
+| Where down below the wars arose
+|       for power, salt and tin,
+| up here they battled greater foes
+|       of discord, noise and din.
 |
 | Their deeds were drawn in metric feet, 
 |       to cease the wagging tongues. 
@@ -200,7 +198,7 @@ Hyperboreá
 |
 | III - Echoes & Avalanches
 |
-| -
+| IN PROGRESS
 
 - *Original*: Feburary 2025
 - *Revision I*: September 2025
