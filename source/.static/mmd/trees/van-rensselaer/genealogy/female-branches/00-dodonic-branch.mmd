@@ -1,0 +1,50 @@
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES 
+    %% =========================================
+    %% ===================== DODONIC BRANCH (Indigo)
+    %% Start: Indigo 900 -> End: Indigo 600
+    classDef dod1 fill:#1A237E,stroke:#000,stroke-width:2px,color:#fff
+    classDef dod2 fill:#283593,stroke:#000,stroke-width:2px,color:#fff
+    classDef dod3 fill:#303F9F,stroke:#000,stroke-width:2px,color:#fff
+    classDef dod4 fill:#3949AB,stroke:#000,stroke-width:2px,color:#fff
+    %% ===================== EXTERNAL
+    classDef external fill:#FFFFFF,stroke:#F57C00,stroke-width:1px,color:#000
+
+    %% =========================================
+    %% ROOT (Gen 2)
+    %% =========================================
+    ROOT_M{Maria van Rensselaer<br>1673-1713}:::dod1
+    FAM_SCH[Peter Schuyler<br>1657-1724<br>First Mayor of Albany]:::external
+    ROOT_M ---|m. 1691| FAM_SCH
+
+    %% =========================================
+    %% GEN 3: The Schuyler Children
+    %% =========================================
+    
+    FAM_SCH --> S3_MS1[/Gertrude Schuyler<br>b. 1694\]:::dod2
+    FAM_LAN[Johannes Lansing<br>1687-?]:::external
+    S3_MS1 ---|m. 1714| FAM_LAN
+
+    FAM_SCH --x S3_MS2[\Philip Schuyler<br>1696-1758/]:::dod2
+    FAM_SCH --x S3_MS3[\Pieter Schuyler Jr.<br>b. 1698/]:::dod2
+    FAM_SCH --x S3_MS4[\Jeremiah Schuyler<br>1698-1753/]:::dod2
+
+    %% =========================================
+    %% GEN 4: The Lansing Line
+    %% =========================================
+    
+    FAM_LAN --> S4_LAN1[\Johannes Lansing Jr.<br>1715-1790/]:::dod3
+    W4_LAN1{Ariaantje Wendell<br>1713-1780}:::external
+    S4_LAN1 ---|m. c. 1745| W4_LAN1
+
+    %% =========================================
+    %% GEN 5
+    %% =========================================
+    
+    W4_LAN1 --> S5_LAN1[\Sanders Lansing<br>1766-1850/]:::dod4
+    W5_LAN1{Catherine Ten Eyck<br>1769-1850}:::external
+    S5_LAN1 ---|m. 1789| W5_LAN1
+
+    linkStyle default interpolate basis
+

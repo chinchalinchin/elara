@@ -1,0 +1,63 @@
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES 
+    %% =========================================
+    %% ===================== SIBYLLINE BRANCH (Deep Blue)
+    %% Start: Blue 900 -> End: Blue 500
+    classDef sib1 fill:#0D47A1,stroke:#000,stroke-width:2px,color:#fff
+    classDef sib2 fill:#1565C0,stroke:#000,stroke-width:2px,color:#fff
+    classDef sib3 fill:#1976D2,stroke:#000,stroke-width:2px,color:#fff
+    classDef sib4 fill:#2196F3,stroke:#000,stroke-width:2px,color:#000
+    %% ===================== EXTERNAL
+    classDef external fill:#FFFFFF,stroke:#F57C00,stroke-width:1px,color:#000
+
+    %% =========================================
+    %% ROOT (Gen 3)
+    %% =========================================
+    ROOT_M{Maria van Rensselaer<br>1702-c. 1723}:::sib1
+    FAM_FVC[Frederick Van Cortlandt<br>1699-1749]:::external
+    ROOT_M ---|m. 1722| FAM_FVC
+
+    %% =========================================
+    %% GEN 4: Van Cortlandt of Yonkers
+    %% =========================================
+    FAM_FVC --x S4_FVC1[\James Van Cortlandt<br>1727-1781/]:::sib2
+    FAM_FVC --> S4_FVC2[\Augustus Van Cortlandt<br>1728-1823<br>City Clerk of NYC/]:::sib2
+    FAM_FVC --x S4_FVC3[\Frederick Van Cortlandt II<br>1730-1794/]:::sib2
+    
+    FAM_FVC --> S4_FVC4[/Anne Van Cortlandt<br>1736-1790\]:::sib2
+    FAM_NMAR[Nathaniel Marston]:::external
+    S4_FVC4 --- FAM_NMAR
+
+    FAM_FVC --> S4_FVC5[/Eve Van Cortlandt<br>1737-1836\]:::sib2
+    FAM_HWH[Henry White<br>1732-1786]:::external
+    S4_FVC5 --- FAM_HWH
+
+    %% =========================================
+    %% GEN 5
+    %% =========================================
+    
+    W4_FVC2{Elsie Cuyler<br>1737-1761}:::external
+    S4_FVC2 ---|m. 1760| W4_FVC2
+    
+    W4_FVC2 --> S5_FVC2_1[/Anne Van Cortlandt<br>1766-1814\]:::sib3
+    FAM_HWH2[Henry White Jr.]:::external
+    S5_FVC2_1 ---|m. 1785| FAM_HWH2
+    
+    W4_FVC2 --> S5_FVC2_2[/Helen Van Cortlandt<br>1768-1812\]:::sib3
+    FAM_JMO[James Morris<br>1764-1827]:::external
+    S5_FVC2_2 ---|m. 1796| FAM_JMO
+
+    %% =========================================
+    %% GEN 6: The White & Morris Lines
+    %% =========================================
+
+    FAM_HWH2 --> S6_HW1[\Augustus White<br>1786-? /]:::sib4
+    FAM_HWH2 --> S6_HW2[\Augusta White<br>1788-? /]:::sib4
+
+    FAM_JMO --> S6_MO1[\James Van Cortlandt<br>Morris<br>1796-1843/]:::sib4
+    FAM_JMO --> S6_MO2[\Augustus Frederick<br>Morris<br>1797-1859/]:::sib4
+    FAM_JMO --> S6_MO3[\Robert Hunter<br>Morris<br>1802-1855<br>Mayor of NYC/]:::sib4
+
+    linkStyle default interpolate basis
+

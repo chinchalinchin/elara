@@ -1,0 +1,91 @@
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES 
+    %% =========================================
+    %% =========== MITHRAIC BRANCH (Sepia/Coffee Gradient)
+    %% Start: #3E2723 (Sepia 900) -> End: #8D6E63 (Sepia 400)
+    classDef mith1 fill:#3E2723,stroke:#000,stroke-width:2px,color:#fff
+    classDef mith2 fill:#4E342E,stroke:#000,stroke-width:2px,color:#fff
+    classDef mith3 fill:#5D4037,stroke:#000,stroke-width:2px,color:#fff
+    classDef mith4 fill:#6D4C41,stroke:#000,stroke-width:2px,color:#fff
+    classDef mith5 fill:#795548,stroke:#000,stroke-width:2px,color:#fff
+    classDef mith6 fill:#8D6E63,stroke:#000,stroke-width:2px,color:#fff
+
+    %% =========== BRANCH CONNECTIONS
+    classDef external fill:#FFFFFF,stroke:#3E2723,stroke-width:1px,color:#000
+    classDef plebianEnter fill:#290916,stroke:#000,stroke-width:2px,color:#fff
+    classDef delphicEnter fill:#0288D1,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+
+    %% =========================================
+    %% ROOT (From Gen 3 Plebian)
+    %% =========================================
+    ROOT_M[Hendrick van Rensselaer<br>1712-1793]:::mith1
+
+    W4_H1{Elizabeth Van Brugh<br>Van Rensselaer}:::mith1
+    ROOT_M -.-|m. 1735| W4_H1
+
+    %% =========================================
+    %% GEN 4
+    %% =========================================
+    W4_H1 --> S4_H1[Jeremiah van Rensselaer<br>1738-1810]:::mith2
+    W4_H1 --> S4_H4[Killian van Rensselaer<br>1749-1814]:::mith2
+
+    %% =========================================
+    %% GEN 5
+    %% =========================================
+    
+    %% JEREMIAH LINE
+    W5_J1{Judith Bayard<br>1740-1817}:::mith3
+    S4_H1 ---|m. 1760| W5_J1
+    W5_J1 --> S5_JJ[Gen. John Jeremias<br>van Rensselaer<br>1762-1828]:::mith3
+
+    %% =========================================
+    %% GEN 6
+    %% =========================================
+    
+    W6_JJ{Catharine Glen<br>1765-1807}:::mith4
+    S5_JJ ---|m. 1784| W6_JJ
+    W6_JJ --> S6_J1[Dr. Jeremiah van Rensselaer<br>1793-1871]:::mith4
+    W6_JJ --> S6_C1[Rev. Cornelius Glen van Rensselaer<br>1801-1871]:::mith4
+
+    W6_BLE(((Catharine Westerlo Bleecker<br>SEE DELPHIC BRANCH))):::delphicEnter
+    S6_C1 ---|m. 1826| W6_BLE
+
+    %% =========================================
+    %% GEN 7
+    %% =========================================
+    
+    W6_BLE --> S7_C1_V[Visscher van Rensselaer<br>1837-1912]:::mith5
+    W7_C1_V{Mary Augusta Miller<br>1838-1912}:::external
+    S7_C1_V --- W7_C1_V
+    
+    W6_BLE --> S7_C1_C{Catharine Westerlo<br>van Rensselaer<br>1834-1912}:::mith5
+    FAM_UPS[Rev. Anson Judd Upson<br>1823-1902]:::external
+    S7_C1_C --- FAM_UPS
+    
+    W6_BLE --> S7_C1_L[Lydig Montague<br>van Rensselaer<br>1838-1904]:::mith5
+    
+    W6_BLE --> S7_C1_A{Alice van Rensselaer<br>1840-?}:::mith5
+    FAM_SHIP[Edward Shippen<br>1826-1911]:::external
+    S7_C1_A --- FAM_SHIP
+
+    %% JEREMIAH (DR) LINE
+    W7_4{Julia Webster Jaudon<br>1826-1901}:::mith5
+    S6_J1 ---|m. 1846| W7_4
+    W7_4 --> S7_B6[Peyton Jaudon van Rensselaer<br>1863-1919]:::mith5
+
+    %% =========================================
+    %% GEN 8 (Expansion)
+    %% =========================================
+    
+    W7_C1_V --> S8_V_1[Cornelius Glen<br>van Rensselaer<br>1869-1925]:::mith6
+
+    FAM_SHIP --> S8_SHIP1[/Augusta Shippen<br>1869-1934\]:::mith6
+    FAM_SHIP --> S8_SHIP2[/Anna Shippen<br>1871-?\]:::mith6
+
+    W8_5{Mabel Mason<br>1869-1925}:::external
+    S7_B6 ---|m. 1909| W8_5
+    W8_5 --> S8_B7[Peyton J. van Rensselaer Jr.<br>1905-?]:::mith6
+
+    linkStyle default interpolate basis
+

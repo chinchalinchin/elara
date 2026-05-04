@@ -1,0 +1,172 @@
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES 
+    %% =========================================
+    %% =========== PLEBIAN BRANCH (Raisin -> Dusty Rose)
+    classDef clav1 fill:#290916,stroke:#000,stroke-width:2px,color:#fff
+    classDef clav2 fill:#4A1A2C,stroke:#000,stroke-width:2px,color:#fff
+    classDef clav3 fill:#6D2C41,stroke:#000,stroke-width:1px,color:#fff
+    classDef clav4 fill:#904057,stroke:#000,stroke-width:1px,color:#fff
+    classDef clav5 fill:#B4556D,stroke:#000,stroke-width:1px,color:#000
+    classDef clav6 fill:#C87A8D,stroke:#000,stroke-width:1px,color:#000
+    classDef clav7 fill:#DCA0AF,stroke:#000,stroke-width:1px,color:#000
+    classDef clav8 fill:#F0C6D1,stroke:#000,stroke-width:1px,color:#000
+    
+    %% =========== BRANCH ENTRANCES
+    classDef external fill:#FFFFFF,stroke:#6D2C41,stroke-width:1px,color:#000
+    classDef delphicEnter fill:#0288D1,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+    classDef trophEnter fill:#1976D2,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+    
+    %% =========== BRANCH EXITS
+    classDef patricianExit fill:#7E57C2,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+    classDef delphicExit fill:#0288D1,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+    %% MITHRAIC EXIT (Matches Mithraic Start: #3E2723)
+    classDef mithraicExit fill:#3E2723,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+
+    %% =========================================
+    %% ROOTS (From Gen 2/3)
+    %% =========================================
+    S2_3[Hendrick van Rensselaer<br>1667-1740]:::clav1
+    W3_2{Catharina Van Brugh<br>1665-1730}:::clav2
+    S2_3 ---|m. 1689| W3_2
+
+    %% =========================================
+    %% GEN 3: The Children
+    %% =========================================
+    W3_2 --> S3_B1[Kiliaen van Rensselaer<br>1691-1720?]:::clav2
+    W3_2 --> S3_B3{Maria van Rensselaer<br>1689-1771}:::clav2
+    W3_2 --> S3_B4{Catarine van Rensselaer<br>1692-1770}:::clav2
+    W3_2 --> S3_B5{Anna van Rensselaer<br>1696-1756}:::clav2
+    W3_2 --> S3_B6{Helena 'Lena' van Rensselaer<br>1702-1792}:::clav2
+    W3_2 --> S3_B7[Jeremias H. van Rensselaer<br>1705-1730]:::clav2
+    W3_2 --> S3_B2[Johannes van Rensselaer<br>1708-1783]:::clav2
+    W3_2 --> S3_B8[Hendrick van Rensselaer<br>1712-1793]:::clav2
+    W3_2 --> S3_B9[Col. Kiliaen van Rensselaer<br>1717-1781]:::clav2
+
+    %% =========================================
+    %% GEN 4
+    %% =========================================
+    
+    W4_2{Ariantje Schuyler<br>1720-1763}:::clav3
+    S3_B1 ---|m. 1742| W4_2
+    W4_2 --> S4_B1[Henry K. van Rensselaer<br>1744-1816]:::clav3
+    W4_2 --> S4_B2[Philip K. van Rensselaer<br>1747-1798]:::clav3
+
+    FAM_TB2[Ten Broeck]:::external
+    S3_B3 --- FAM_TB2
+    S3_B3 --> S4_TB_M1[\Dirck Wessels Ten Broeck/]:::clav3
+    S3_B3 --> S4_TB_M2[/Catharina Ten Broeck\]:::clav3
+
+    FAM_DOUW[Douw]:::external
+    S3_B5 --- FAM_DOUW
+    S3_B5 --> S4_DOUW1[/Magdalena Douw\]:::clav3
+    
+    %% DOUW EXPANSION
+    S3_B5 --> S4_DOUW2[\Capt. Volkert Petrus Douw<br>1720-1801/]:::clav3
+    S4_DOUW2 --> S5_DOUW1[/Rachel Douw<br>1744-1799\]:::clav4
+
+    FAM_WEN[Wendell]:::external
+    S3_B6 --- FAM_WEN
+    S3_B6 --> S4_WEN2[\Hendrick Jacob 'Henry' Wendell/]:::clav3
+
+    W4_3{Angelica Livingston<br>1698–1747}:::clav3
+    S3_B2 ---|m. 1734| W4_3
+    
+    W4_3 --> S4_B2A{Catherine van Rensselaer<br>1734-1803}:::clav3
+    FAM_PS[Gen. Philip Schuyler<br>1733-1804]:::external
+    S4_B2A ---|m. 1755| FAM_PS
+    
+    %% EXITS TO PATRICIAN AND DELPHIC
+    FAM_PS --> LINK_PAT[[Margarita Schuyler<br>SEE PATRICIAN BRANCH]]:::patricianExit
+    FAM_PS --> LINK_DEL[[John Bradstreet Schuyler<br>SEE DELPHIC BRANCH]]:::delphicExit
+
+    %% RETROACTIVE RULE APPLIED: LINE ENDS
+    FAM_PS --o S5_PS_R[\Rensselaer Schuyler<br>1773-1847/]:::clav4
+    W5_PS_R(((Elizabeth Ten Broeck<br>SEE TROPHONIAN BRANCH))):::trophEnter
+    S5_PS_R ---|m. 1793| W5_PS_R
+    W5_PS_R --x S6_PS_R1[\Philip Rensselaer Schuyler<br>1801-1865/]:::clav5
+    
+    W4_3 --> S4_B2C[Jeremiah van Rensselaer<br>1738-1764]:::clav3
+    
+    W4_3 --> S4_B3[Robert van Rensselaer<br>1740-1802]:::clav3
+    W4_R{Cornelia Rutsen<br>1747-1790}:::external
+    S4_B3 ---|m. 1765| W4_R
+    W4_R --> S5_B4[Jacob Rutsen van Rensselaer<br>1767-1835]:::clav4
+    
+    %% NEW ENTRY: ANN VAN RENSSELAER (TO TROPHONIAN)
+    W4_R --> S5_B4B{Ann van Rensselaer<br>1776-1855}:::clav4
+    FAM_TB_AB[[Abraham Ten Broeck<br>SEE TROPHONIAN BRANCH]]:::trophEnter
+    S5_B4B ---|m. 1799| FAM_TB_AB
+
+    W4_3 --> S4_B2D[Hendrick Livingston<br>van Rensselaer<br>1742-1814]:::clav3
+    
+    %% ==========================================================
+    %% COUSIN MARRIAGE (Dotted Line)
+    %% ==========================================================
+    S4_B2D -.-|m. 1766| S5_DOUW1
+    %% ==========================================================
+    
+    S5_DOUW1 --> S5_H_1{Angelica van Rensselaer<br>1770-1800?}:::clav4
+    
+    W4_3 --> S4_B4[James van Rensselaer<br>1747-1827]:::clav3
+    W4_J{Elsie Schuyler<br>1760-1838}:::external
+    S4_B4 ---|m. 1789| W4_J
+    W4_J --> S5_J1[John van Rensselaer<br>1784-?]:::clav4
+
+    %% ==========================================================
+    %% MITHRAIC EXIT (Corrected Link)
+    %% ==========================================================
+    S3_B8 --> LINK_MITH[[Descendants of Hendrick<br>SEE MITHRAIC BRANCH]]:::mithraicExit
+    
+    W4_K1{Ariaantje Schuyler}:::clav3
+    S3_B9 ---|m. 1742| W4_K1
+    W4_K1 --> S4_N1[Nicholas van Rensselaer<br>1754-1848]:::clav3
+
+    %% =========================================
+    %% GEN 5
+    %% =========================================
+    
+    W5_N1{Elsie Van Buren<br>1759-1844}:::clav4
+    S4_N1 ---|m. 1780| W5_N1
+    W5_N1 --> S5_K1[Kiliaen van Rensselaer<br>1782-1871]:::clav4
+    W5_N1 --> S5_M1{Magdalena van Rensselaer<br>1784-?}:::clav4
+    W5_N1 --> S5_C2[Cornelius van Rensselaer<br>1793-1868]:::clav4
+
+    W5_2{Alida Bratt}:::clav4
+    S4_B1 --- W5_2
+    W5_2 --> S5_B1[Solomon van Rensselaer<br>1774-1852]:::clav4
+
+    W5_3{Maria Sanders<br>1749–1830}:::clav4
+    S4_B2 ---|m. 1768| W5_3
+    W5_3 --> W6_3{Harriet van Rensselaer<br>1775-1840}:::clav5
+
+    W5_4{Helena Lansing}:::clav4
+    S4_B3 --- W5_4
+    
+    W6_4{Cornelia de Peyster<br>1776-1839}:::clav4
+    S5_B4 ---|m. 1801| W6_4
+    W6_4 --> S6_B5[Jeremiah van Rensselaer<br>1812-1874]:::clav5
+    W6_4 --> S5_B4C[Richard van Rensselaer<br>1797-1880]:::clav5
+
+    %% =========================================
+    %% GEN 6
+    %% =========================================
+    
+    S5_B1 -.-|m. 1797| W6_3
+    W6_3 --> S6_4[Adeline van Rensselaer]:::clav5
+    W6_3 --> S6_5[Rensselaer van Rensselaer<br>1802-1873]:::clav5
+    W6_3 --> S6_6{Matilda van Rensselaer<br>1806-1863}:::clav5
+    
+    S5_B4C -.-|m. 1836| S6_6
+    S6_6 --> S6_R1[Maria Elizabeth<br>van Rensselaer<br>1840-?]:::clav6
+
+    %% =========================================
+    %% GEN 7 (Other Lines)
+    %% =========================================
+    
+    W6_4B{Mary Elizabeth Bacot}:::clav6
+    S6_5 --- W6_4B
+    W6_4B --> S7_B1{Maria Elizabeth van Rensselaer}:::clav6
+
+    linkStyle default interpolate basis
+

@@ -1,0 +1,65 @@
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES 
+    %% =========================================
+    %% ================= DELPHIC BRANCH (Carmine/Red Gradient)
+    %% Start: #C62828 (Red 800) -> End: #EF5350 (Red 400)
+    classDef eleus1 fill:#C62828,stroke:#000,stroke-width:2px,color:#fff
+    classDef eleus2 fill:#D32F2F,stroke:#000,stroke-width:2px,color:#fff
+    classDef eleus3 fill:#E53935,stroke:#000,stroke-width:2px,color:#fff
+    classDef eleus4 fill:#EF5350,stroke:#000,stroke-width:2px,color:#000
+    %% ================= EXTERNAL / ENTRIES
+    classDef external fill:#FFFFFF,stroke:#C62828,stroke-width:1px,color:#000
+    classDef elderEnter fill:#311B92,stroke:#000,stroke-width:2px,color:#fff
+    %% ================= EXITS
+    classDef tiresianExit fill:#FF4081,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+    classDef mithraicExit fill:#3E2723,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+
+    %% =========================================
+    %% ROOT (Gen 5)
+    %% =========================================
+    
+    ROOT_JBS[John Bradstreet<br>Schuyler<br>1765-1795]:::eleus1
+    
+    ENT_ELDER(((Elizabeth van Rensselaer<br>SEE ELDER BRANCH))):::elderEnter
+    ROOT_JBS ---|m. 1787| ENT_ELDER
+    
+    FAM_BLE[John Bleecker<br>1763-1833]:::external
+    ENT_ELDER ---|m. 1799| FAM_BLE
+
+    %% =========================================
+    %% GEN 6
+    %% =========================================
+    
+    ROOT_JBS --> S6_JBS1[Philip Schuyler<br>1788-1865]:::eleus2
+    ROOT_JBS --> S6_JBS2[Stephen V.R. Schuyler<br>1792-1859]:::eleus2
+    
+    FAM_BLE --> S6_BLE1[Stephen V.R. Bleecker<br>1803-1827]:::eleus2
+    FAM_BLE --> S6_BLE2{Catharine Westerlo Bleecker<br>1809?-1886}:::eleus2
+    
+    S6_BLE2 --> LINK_MITH[[Rev. Cornelius Glen VR<br>SEE MITHRAIC BRANCH]]:::mithraicExit
+
+    %% =========================================
+    %% GEN 7: Philip's Line
+    %% =========================================
+    W6_PS{Grace Hunter<br>1790-1856}:::external
+    S6_JBS1 ---|m. 1811| W6_PS
+    
+    W6_PS --> S7_PS2{Ruth Catherine Schuyler<br>1813-1901}:::eleus3
+    W6_PS --> S7_PS1[John Schuyler<br>1829-1895]:::eleus3
+
+    %% =========================================
+    %% GEN 7: Stephen's Line (Source of Tiresian)
+    %% =========================================
+    W6_SVR{Catherine Morris<br>1790-1866}:::external
+    S6_JBS2 --- W6_SVR
+    
+    W6_SVR --> S7_SVR1[John Bradstreet Schuyler<br>1822-1887]:::eleus3
+    
+    W6_SVR --> S7_SVR2{Angelica Schuyler<br>1820-1896}:::eleus3
+    FAM_CROS[Clarkson F. Crosby<br>1817-1858]:::external
+    S7_SVR2 ---|m. 1838| FAM_CROS
+    
+    FAM_CROS --> S8_CROS1[[John Schuyler Crosby<br>1839-1914<br>SEE TIRESIAN BRANCH]]:::tiresianExit
+
+    linkStyle default interpolate basis

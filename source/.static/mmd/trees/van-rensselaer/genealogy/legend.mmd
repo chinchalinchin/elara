@@ -1,0 +1,80 @@
+graph TD
+    %% =========================================
+    %% LEGEND STYLES
+    %% =========================================
+    %% ======================== MALE BRANCHES
+    classDef elderLegend fill:#311B92,stroke:#000,stroke-width:2px,color:#fff
+    classDef dutchLegend fill:#283593,stroke:#000,stroke-width:2px,color:#fff
+    classDef patricianLegend fill:#7E57C2,stroke:#000,stroke-width:2px,color:#fff
+    classDef equestrianLegend fill:#880E4F,stroke:#000,stroke-width:2px,color:#fff
+    classDef plebianLegend fill:#290916,stroke:#000,stroke-width:1px,color:#fff
+    classDef mithraicLegend fill:#3E2723,stroke:#000,stroke-width:2px,color:#fff
+    classDef eleusinianLegend fill:#C62828,stroke:#000,stroke-width:2px,color:#fff
+    %% ======================== FEMALE BRANCHES
+    classDef dodonicLegend fill:#1A237E,stroke:#000,stroke-width:2px,color:#fff
+    classDef sibyllineLegend fill:#0D47A1,stroke:#000,stroke-width:2px,color:#fff
+    classDef chthonicLegend fill:#1565C0,stroke:#000,stroke-width:2px,color:#fff
+    classDef trophonianLegend fill:#1976D2,stroke:#000,stroke-width:2px,color:#fff
+    classDef cumaeanLegend fill:#9C27B0,stroke:#000,stroke-width:2px,color:#fff
+    classDef clarianLegend fill:#D81B60,stroke:#000,stroke-width:2px,color:#fff
+    classDef tiresianLegend fill:#FF4081,stroke:#000,stroke-width:2px,color:#fff
+    %% ======================== OTHER
+    classDef externalLegend fill:#FFF8E1,stroke:#F57C00,stroke-width:1px,color:#000
+
+    %% =========================================
+    %% COLORS
+    %% =========================================
+    subgraph Colors [Branch Colors]
+        direction TB
+        subgraph MaleLines [Male Lines]
+            direction LR
+            X1[Elder Branch]:::elderLegend
+            X2[Dutch Branch]:::dutchLegend
+            X3[Patrician Branch]:::patricianLegend
+            X4[Equestrian Branch]:::equestrianLegend
+            X5[Plebian Branch]:::plebianLegend
+            X6[Mithraic Branch]:::mithraicLegend
+            X7[Eleusinian Branch]:::eleusinianLegend
+        end
+        
+        subgraph FemaleLines [Female Lines]
+            direction LR
+            X8[Dodonic Branch]:::dodonicLegend
+            X9[Sibylline Branch]:::sibyllineLegend
+            X10[Chthonic Branch]:::chthonicLegend
+            X11[Trophonian Branch]:::trophonianLegend
+            X12[Cumaean Branch]:::cumaeanLegend
+            X13[Clarian Branch]:::clarianLegend
+            X14[Tiresian Branch]:::tiresianLegend
+        end
+    end
+
+    %% =========================================
+    %% NODES
+    %% =========================================
+    subgraph Nodes [Node Shapes]
+        direction LR
+        S1((1st Patroon))
+        S2{{American Patroon}}
+        S3([Dutch Patroon])
+        S4[Male of Male Descent]
+        S5{Female of Male Descent}
+        S6[\Male of Female Descent/]
+        S7[/Female of Female Descent\]
+        S8[External Family]:::externalLegend
+    end
+
+    %% =========================================
+    %% CONNECTIONS
+    %% =========================================
+    subgraph Connections [Relations]
+        direction LR
+        A1{Mother} --> A2[Son] 
+        B1[Husband] ---|m. Year| B2{Wife}
+        C1[Cousin A] -.-|m. Year| C2{Cousin B}
+        D1{Daughter} --- D2[External Family]
+        E1[Person] --x E2[End of Line]
+        F1[Extinct Ancestor] --o F2[Extinct Descendant]
+        G1[[Branch Exit]]
+        H1(((Branch Enter)))
+    end

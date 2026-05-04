@@ -1,0 +1,138 @@
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES
+    %% =========================================
+    %% =================== EQUESTRIAN BRANCH
+    %% GEN 6
+    classDef equest1 fill:#880E4F,stroke:#000,stroke-width:2px,color:#fff
+    %% GEN 7
+    classDef equest2 fill:#AD1457,stroke:#000,stroke-width:2px,color:#fff
+    %% GEN 8
+    classDef equest3 fill:#C2185B,stroke:#000,stroke-width:2px,color:#fff
+    %% GEN 9
+    classDef equest4 fill:#D81B60,stroke:#000,stroke-width:2px,color:#fff
+    %% GEN 10
+    classDef equest5 fill:#E91E63,stroke:#000,stroke-width:2px,color:#000
+    %% =================== BRANCH ENTRANCES
+    classDef external fill:#FFFFFF,stroke:#000,stroke-width:1px,color:#000
+
+    %% =========================================
+    %% ROOT & GEN 6
+    %% =========================================
+    ROOT_S3[Stephen van Rensselaer III<br>Reference Only]:::equest1
+    W6_2{Cornelia Paterson<br>1780-1844}:::equest1
+    ROOT_S3 ---|m. 1802| W6_2
+
+    W6_2 --> S6_2[William Paterson van Rensselaer<br>1805-872]:::equest1
+    W6_2 --> S6_2C[Cortlandt van Rensselaer<br>1808-1860]:::equest1
+    
+    %% EXPANSION: Henry Bell's Line (The Bankers & Lawyers)
+    W6_2 --> S6_3[Henry Bell van Rensselaer<br>1810-1864<br>U.S. Congressman<br>Civil War General]:::equest1
+    
+    %% EXPANSION: Euphemia's Line (The Real Estate Moguls)
+    W6_2 --> S6_E{Euphemia White van Rensselaer<br>1816-1888}:::equest1
+    
+    W6_2 --> S6_W[Westerlo van Rensselaer<br>1820-1844]:::equest1
+
+    %% =========================================
+    %% GEN 7
+    %% =========================================
+
+    W7_2{Sarah Rogers<br>1810-1887}:::equest2
+    S6_2 ---|m. 1839| W7_2
+    W7_2 --> S7_2[Kiliaen van Rensselaer<br>1845-1905]:::equest2
+
+    W6_2C_W{Catherine Ledyard<br>Cogswell<br>1811-1882}:::equest2
+    S6_2C ---|m. 1850| W6_2C_W
+    W6_2C_W --> S7_2C[Rensselaer van Rensselaer<br>1859-1890?]:::equest2
+
+    %% CRUGER EXPANSION
+    FAM_CR[Nicholas Cruger<br>1813-1872]:::external
+    S6_E ---|m. 1843| FAM_CR
+    FAM_CR --> S7_CR1[\Col. Stephen V.R. Cruger<br>1844-1898<br>Real Estate Manager<br>Trinity Church Corp./]:::equest2
+    W7_CR1{Julia G. Floyd<br>1846-?}:::external
+    S7_CR1 --- W7_CR1
+    
+    %% HENRY BELL'S CHILDREN
+    W7_3{Elizabeth Ray King<br>1815-1887}:::equest2
+    S6_3 ---|m. 1833| W7_3
+    
+    W7_3 --> S7_3D{Mary van Rensselaer<br>1834-1902}:::equest2
+    FAM_SC[John Henry Screven<br>1823-1903]:::external
+    S7_3D --- FAM_SC
+    S7_3D --> S8_3D_1[/Elizabeth Screven<br>1856?-?\]:::equest2
+
+    W7_3 --> S7_3E{Cornelia van Rensselaer<br>1836-1864}:::equest2
+    FAM_KEN[Robert Lenox Kennedy<br>1822-1887<br>Pres. Bank of Commerce]:::external
+    S7_3E --- FAM_KEN
+    S7_3E --x S8_3E_1[/Theodore Kennedy<br>1860?-?\]:::equest2
+
+    W7_3 --> S7_3B[Stephen van Rensselaer<br>1838-1904]:::equest2
+    
+    W7_3 --> S7_3F{Euphemia van Rensselaer<br>1842-1900?<br>Sister Marie Dolores}:::equest2
+
+    W7_3 --> S7_3G{Elizabeth van Rensselaer<br>1845-1911}:::equest2
+    FAM_WAD[George Waddington<br>1840-1915<br>Lawyer]:::external
+    S7_3G --- FAM_WAD
+    S7_3G --> S8_3G_1[\Arthur Waddington<br>1872?-?/]:::equest2
+
+    W7_3 --> S7_3A[John King van Rensselaer<br>1847-1909<br>Pres. Stirling Fire Ins.]:::equest2
+    
+    %% DELAFIELD EXPANSION
+    W7_3 --> S7_3C{Katherine van Rensselaer<br>1849-1901}:::equest2
+    FAM_DEL[Dr. Francis Delafield<br>1841-1915<br>Pres. Assoc. of American Physicians]:::external
+    S7_3C ---|m. 1870| FAM_DEL
+    
+    FAM_DEL --> S8_3C_1[\Gen. John Ross Delafield<br>1874-1964<br>Lawyer & Brigadier Gen./]:::equest3
+    FAM_DEL --> S8_3C_2[\Julia Floyd Delafield<br>1875-? /]:::equest3
+    FAM_DEL --> S8_3C_3[\Cornelia Van R. Delafield<br>1876-? /]:::equest3
+    FAM_DEL --> S8_3C_4[\Edward Coleman Delafield<br>1877-1976<br>Pres. Franklin Trust Co./]:::equest3
+
+    W7_3 --> S7_3H[Rev. Henry van Rensselaer<br>1851-1907<br>Jesuit Priest]:::equest2
+
+    %% =========================================
+    %% GEN 8
+    %% =========================================
+
+    W8_2{Olivia Phelps Atterbury<br>1848-1923}:::equest3
+    S7_2 ---|m. 1870| W8_2
+    W8_2 --> S8_2B{Sarah Elizabeth van Rensselaer<br>1873-1957}:::equest3
+    W8_2 --> S8_2D{Katherine Boudinot van Rensselaer<br>1875-1896}:::equest3
+    W8_2 --> S8_2A[Kiliaen van Rensselaer<br>1879-1949<br>Broker]:::equest3
+    W8_2 --> S8_2C[William Stephen van Rensselaer<br>1886-1930<br>Equitable Trust Co.]:::equest3
+
+    W8_3{May Denning King<br>1848-1925<br>Author & Society Matron}:::equest3
+    S7_3A ---|m. 1871| W8_3
+    W8_3 --> S8_3A[John King van Rensselaer Jr.<br>1872-1919]:::equest3
+    W8_3 --x S8_3A_2[Frederick C. van Rensselaer<br>1874?-1905?]:::equest3
+
+    W8_4{Mathilda Coster<br>Heckscher<br>1838-1915}:::equest3
+    S7_3B ---|m. 1863| W8_4
+    W8_4 --> S8_3B[Charles A. van Rensselaer<br>1867-1935]:::equest3
+    W8_4 --> S8_3B_1{Elizabeth Ray van Rensselaer<br>1873-1945?}:::equest3
+    W8_4 --> S8_3B_2[Stephen van Rensselaer<br>1871-1920?]:::equest3
+    W8_4 --> S8_3B_3{Mathilde van Rensselaer<br>1877-1950?}:::equest3
+
+    %% =========================================
+    %% GEN 9
+    %% =========================================
+    
+    W9_1{Dorothy G. Lyon<br>1885?-1960?}:::equest4
+    S8_2A --- W9_1
+    W9_1 --> S9_1{Barbara van Rensselaer<br>1909-1944}:::equest4
+
+    W9_2{Caroline E. Fitz-Gerald<br>1871-1932}:::equest4
+    S8_3B --- W9_2
+    W9_2 --> S9_2A[Charles A. van Rensselaer Jr.<br>1893-1967]:::equest4
+    W9_2 --> S9_2B[Stephen van Rensselaer<br>1896-1945]:::equest4
+
+    %% =========================================
+    %% GEN 10
+    %% =========================================
+
+    W10_1{Adele Brookfield}:::equest5
+    S9_2A --- W10_1
+    W10_1 --> S10_1[Charles A. van Rensselaer III<br>1925-?]:::equest5
+    W10_1 --> S10_2[Philip van Rensselaer<br>1928-1996<br>Author & Socialite]:::equest5
+    linkStyle default interpolate basis
+

@@ -1,0 +1,110 @@
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES 
+    %% =========================================
+    %% ===================== PATRICIAN BRANCH
+    classDef pat1 fill:#7E57C2,stroke:#000,stroke-width:2px,color:#fff
+    classDef pat2 fill:#9575CD,stroke:#000,stroke-width:2px,color:#fff
+    classDef pat3 fill:#B39DDB,stroke:#000,stroke-width:2px,color:#000
+    classDef pat4 fill:#D1C4E9,stroke:#000,stroke-width:2px,color:#000
+    classDef pat5 fill:#EDE7F6,stroke:#000,stroke-width:2px,color:#000
+    %% ===================== EXTERNAL
+    classDef external fill:#FFFFFF,stroke:#000,stroke-width:1px,color:#000
+    
+    %% ===================== BRANCH EXITS/ENTRIES
+    classDef patricianEnter fill:#7E57C2,stroke:#000,stroke-width:2px,color:#fff
+    classDef plebianEnter fill:#4A1A2C,stroke:#000,stroke-width:2px,color:#fff
+    classDef cumaeanExit fill:#9C27B0,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+    classDef clarianExit fill:#D81B60,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+    classDef tiresianExit fill:#FF4081,stroke:#000,stroke-width:2px,color:#fff
+
+    %% =========================================
+    %% ROOT
+    %% =========================================  
+    ROOT{{Stephen van Renselaer III<br> 1764-1839}}:::patricianEnter
+    ENT_PLEB(((Margarita Schuyler<br>1758-1801<br>SEE PLEBIAN BRANCH))):::plebianEnter
+    ROOT ---|m. 1783| ENT_PLEB
+
+    %% =========================================
+    %% GEN 6
+    %% =========================================
+    ENT_PLEB --> S6_1{{Stephen van Rensselaer IV<br>1789-1868<br>9th Patroon}}:::pat1 
+
+    %% =========================================
+    %% GEN 7 (Children of Stephen IV)
+    %% =========================================
+    W7_1{Harriet Bayard<br>1799-1875}:::pat1
+    S6_1 ---|m. 1817| W7_1
+    
+    W7_1 --> S7_1A{Margaret van Rensselaer<br>1819-1897}:::pat2
+    FAM_JOH[Wilmot Johnson<br>1820-1899]:::external
+    S7_1A --- FAM_JOH
+    S7_1A --> S8_JOH1[\Valerio Johnson<br>1850?-? /]:::pat3
+    
+    %% CUMAEAN EXIT
+    W7_1 --> S7_1B{Cornelia van Rensselaer<br>1823-1897}:::pat2
+    S7_1B --> LINK_CUM[[Descendants of Cornelia<br>SEE CUMAEAN BRANCH]]:::cumaeanExit
+    
+    %% STEPHEN V LINE
+    W7_1 --o S7_1S[Stephen van Rensselaer V<br>1824-1861]:::pat2
+    W7_S{Annie Louise Wild<br>1828-1904}:::pat2
+    S7_1S ---|m. 1858| W7_S
+    W7_S --x S8_1S{Estelle van Rensselaer<br>1859-1942}:::pat3
+
+    %% BERRY LINE EXPANSION
+    W7_1 --> S7_1C{Catherine van Rensselaer<br>1827-1909}:::pat2
+    FAM_BE[Nathaniel Berry<br>1811-1865]:::external
+    S7_1C --- FAM_BE
+    
+    S7_1C --> S8_BE1[/Nathalie Berry<br>1854-1927\]:::pat3
+    FAM_OAK[Walter G. Oakman<br>1845-1922<br>Pres. Guaranty Trust Co.]:::external
+    S8_BE1 ---|m. 1879| FAM_OAK
+    
+    FAM_OAK --> S9_OAK1[/Helen Louisa Oakman<br>1880-?\]:::pat4
+    FAM_OAK --> S9_OAK2[\Walter G. Oakman Jr.<br>1881-1943<br>DSO, Coldstream Guards/]:::pat4
+    FAM_OAK --> S9_OAK3[\Rensselaer Oakman<br>1883-? /]:::pat4
+
+    S7_1C --> S8_BE2[/Catherine Berry<br>1856?-?\]:::pat3
+
+    %% CLARIAN EXIT
+    W7_1 --> S7_1D{Justine van Rensselaer<br>1828-1912}:::pat2
+    S7_1D --> LINK_CLA[[Descendants of Justine<br>SEE CLARIAN BRANCH]]:::clarianExit
+
+    %% BAYARD LINE
+    W7_1 --o S7_1E[Bayard van Rensselaer<br>1833-1859]:::pat2
+    W8_B1{Laura Reynolds<br>1830-1912}:::pat2
+    S7_1E ---|m. 1854| W8_B1
+    W8_B1 --> S8_B1[William Bayard van Rensselaer<br>1856-1909]:::pat3
+    W8_B1_W{Louisa Greenough Lane<br>1860-1926}:::pat3
+    S8_B1 ---|m. 1880| W8_B1_W
+
+    %% TIRESIAN LINK (Marriage)
+    W7_1 --> S7_1F{Harriet van Rensselaer<br>1838-1911}:::pat3
+    S7_1F --> LINK_TIR[[Descendants of Harriet<br>SEE TIRESIAN BRANCH]]:::tiresianExit
+
+    %% EUGENE LINE (Manor House)
+    W7_1 --> S7_1{{Eugene van Rensselaer<br>1840-1925}}:::pat2
+
+    %% =========================================
+    %% GEN 8 (Children of Eugene)
+    %% =========================================
+    W8_1{Sarah Boyd Pendleton<br>1846-1923}:::pat2
+    S7_1 ---|m. 1867| W8_1
+    W8_1 --> S8_1{Elizabeth van Rensselaer<br>1868-1945}:::pat3
+    
+    %% =========================================
+    %% GEN 9 (Descendants of Elizabeth/Eugene)
+    %% =========================================
+    FAM_ARN[Benjamin W. Arnold<br>1865-1932]:::external
+    S8_1 --- FAM_ARN
+    
+    S8_1 --> S9_ARN1[/Katharine Van R. Arnold<br>1896-1988\]:::pat4
+    FAM_COG[Ledyard Cogswell Jr.<br>1878-1954]:::external
+    S9_ARN1 ---|m. 1920| FAM_COG
+    FAM_COG --> S10_COG1[\Arnold Cogswell<br>1924-2006/]:::pat5
+    FAM_COG --> S10_COG2[/Dorothy A. Cogswell<br>1922-2006\]:::pat5
+
+    S8_1 --> S9_ARN2[/Dorothy T. Arnold<br>1900?-?\]:::pat4
+
+    linkStyle default interpolate basis
+

@@ -1,0 +1,122 @@
+graph TD
+    %% =========================================
+    %% STYLES
+    %% =========================================
+    classDef legal fill:#ECEFF1,stroke:#455A64,stroke-width:2px,stroke-dasharray: 5 5,color:#000
+    classDef dutchRole fill:#1A237E,stroke:#000,stroke-width:2px,color:#fff
+    classDef usaRole fill:#B71C1C,stroke:#000,stroke-width:2px,color:#fff
+    classDef crisis fill:#FF6F00,stroke:#000,stroke-width:2px,color:#fff
+    classDef trans fill:#004D40,stroke:#000,stroke-width:2px,color:#fff
+
+    %% =========================================
+    %% PHASE 1: THE JOINT-STOCK ERA (1629-1643)
+    %% =========================================
+    DOC_WIC{{WIC Charter of Freedoms<br>1629}}:::legal
+    
+    subgraph HOLLAND [Amsterdam: The Board]
+        direction TB
+        K1[Managing Partner<br>Kiliaen I]:::dutchRole
+        PARTNERS[Silent Partners<br>Coseveners Shareholding]:::dutchRole
+    end
+
+    subgraph AMERICA [Operations: Rensselaerswyck]
+        direction TB
+        DIR_EMP[Salaried Director<br>The 'Schout']:::usaRole
+        COUNCIL[The Court<br>Local Judiciary]:::usaRole
+    end
+
+    DOC_WIC --> K1
+    K1 --- PARTNERS
+    K1 --"Appoints & Pays"--> DIR_EMP
+    DIR_EMP --- COUNCIL
+
+    %% =========================================
+    %% PHASE 2: THE TRUSTEESHIP (1643-1674)
+    %% =========================================
+    
+    DOC_WILL{{Last Will of Kiliaen I<br>1643}}:::legal
+    K1 --> DOC_WILL
+
+    subgraph HOLLAND_2 [Amsterdam: The Trust]
+        GUAR[The Guardians<br>Executors of the Estate]:::dutchRole
+        HEIR_NL[The Legal Heir<br>Johannes: 2nd Patroon]:::dutchRole
+    end
+
+    subgraph AMERICA_2 [Albany: The Crisis]
+        DIR_JER[The Acting Patroon<br>Jeremias: 3rd Director]:::crisis
+        DIR_NIC[The 'Prophet' Director<br>Nicolaes]:::crisis
+    end
+
+    DOC_WILL --> GUAR
+    GUAR --"Managed for"--> HEIR_NL
+    GUAR --"Instructions"--> DIR_JER
+    
+    %% The friction
+    DIR_JER -."Withheld Revenue".- GUAR
+    HEIR_NL --"Sent to Save Estate"--> DIR_NIC
+
+    %% =========================================
+    %% PHASE 3: THE HOSTILE TAKEOVER (1674-1695)
+    %% =========================================
+    
+    DOC_ENG{{English Conquest &<br>Dongan Patent 1685}}:::legal
+    DIR_NIC --> DOC_ENG
+    
+    subgraph HOLLAND_3 [Amsterdam: The Claimants]
+        HEIR_NL_2[Dutch Heirs<br>Kiliaen III]:::dutchRole
+    end
+
+    subgraph AMERICA_3 [Albany: The Manor]
+        LORD_1[1st Lord of the Manor<br>Kiliaen IV]:::usaRole
+    end
+
+    DOC_ENG --"Grant of Manorial Rights"--> LORD_1
+    HEIR_NL --"Inherited Claim"--> HEIR_NL_2
+    
+    %% =========================================
+    %% PHASE 4: THE RESTRUCTURING (1695-1704)
+    %% =========================================
+
+    %% 1. LEFT: THE BUYOUT
+    TRANS_BUY{{The Great Buyout<br>1695}}:::trans
+    HEIR_NL_2 --"Surrendered Rights"--> TRANS_BUY
+    LORD_1 --"700 Pieces of Eight"--> TRANS_BUY
+
+    %% 2. CENTER: THE CORPORATION
+    subgraph AMERICA_4 [Albany: The Corporation]
+        LORD_2[The Patroon<br>Sole Proprietor]:::usaRole
+        TENANTS[Leasehold Tenants<br>Feudal Obligations]:::usaRole
+    end
+    LORD_1 --> LORD_2
+    TRANS_BUY --"Consolidation"--> LORD_2
+    LORD_2 --"Quarter Sales & Rent"--> TENANTS
+
+    %% 3. RIGHT: THE CLAVERACK SPINOFF
+    subgraph SPINOFF [The Spin-Off]
+        DOC_CLAV{{Claverack Settlement<br>1704}}:::legal
+        LOWER[Lower Manor Claverack<br>Hendrick]:::usaRole
+    end
+    LORD_1 --"Quitclaim Agreement"--> DOC_CLAV
+    DOC_CLAV --"Divestiture of 60k Acres"--> LOWER
+
+    %% FORCE LEFT-TO-RIGHT ORDER: BUYOUT -> CORP -> CLAVERACK
+    TRANS_BUY ~~~ LORD_2 ~~~ DOC_CLAV
+
+    %% =========================================
+    %% PHASE 5: DISSOLUTION (1839-1850s)
+    %% =========================================
+
+    DOC_SPLIT{{Will of Stephen III<br>1839}}:::legal
+    LORD_2 --> DOC_SPLIT
+
+    subgraph LIQUIDATION [Albany: Divestiture]
+        WEST[West Manor<br>Stephen IV]:::usaRole
+        EAST[East Manor<br>William]:::usaRole
+        WAR[Anti-Rent Wars<br>Legal Battles]:::crisis
+    end
+
+    DOC_SPLIT --> WEST
+    DOC_SPLIT --> EAST
+    WEST --- WAR
+    EAST --- WAR
+    WAR --"Conversion to Freehold"--> END[End of Entity]:::trans
