@@ -45,6 +45,9 @@ TODO
 Being
 -----
 
+.. mermaid:: ../../.static/mmd/trees/etymology/being.mmd
+  :zoom:
+
 Ancient Hebrew
 --------------
 

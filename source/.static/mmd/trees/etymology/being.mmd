@@ -1,0 +1,51 @@
+graph TD
+    classDef pie fill:#f9d0c4,stroke:#333,stroke-width:2px;
+    classDef ancient fill:#f5f5dc,stroke:#333,stroke-width:1px;
+    classDef romance fill:#d4f1f9,stroke:#333,stroke-width:1px;
+    classDef germanic fill:#e2f0cb,stroke:#333,stroke-width:1px;
+    classDef english fill:#c9c0ff,stroke:#333,stroke-width:1px;
+
+    %% Proto-Indo-European Roots
+    PIE1["PIE: *h₁es- (to be)<br/>/h₁es/"]:::pie
+    PIE2["PIE: *bʰuH- (to become/grow)<br/>/bʰuH/"]:::pie
+    PIE3["PIE: *wes- (to live/dwell)<br/>/wes/"]:::pie
+    PIE4["PIE: *sed- (to sit)<br/>/sed/"]:::pie
+
+    %% Hellenic
+    AG["Ancient Greek: εἶναι<br/>/êː.nai̯/"]:::ancient
+    PIE1 --> AG
+
+    %% Italic / Latin
+    LAT1["Latin: esse<br/>/ˈes.se/"]:::ancient
+    LAT2["Latin: sedēre<br/>/seˈdeː.re/"]:::ancient
+    PIE1 --> LAT1
+    PIE4 --> LAT2
+
+    %% Romance
+    ROM_IT["Italian: essere<br/>/ˈɛs.se.re/"]:::romance
+    ROM_FR["French: être<br/>/ɛtʁ/"]:::romance
+    ROM_ES["Spanish: ser<br/>/seɾ/"]:::romance
+
+    LAT1 --> ROM_IT
+    LAT1 -->|via Vulgar Latin *essere| ROM_FR
+    LAT2 -->|suppletion of infinitive| ROM_ES
+
+    %% Germanic
+    PG1["Proto-Germanic: *wesaną<br/>/ˈwe.sɑ.nɑ̃/"]:::germanic
+    PG2["Proto-Germanic: *beuną<br/>/ˈbeu̯.nɑ̃/"]:::germanic
+
+    PIE3 --> PG1
+    PIE2 --> PG2
+
+    %% English
+    OE1["Old English: wesan<br/>/ˈwe.zɑn/"]:::english
+    OE2["Old English: bēon<br/>/ˈbeːo̯n/"]:::english
+
+    PG1 --> OE1
+    PG2 --> OE2
+
+    ME["Middle English: been<br/>/beːn/"]:::english
+    OE2 --> ME
+    
+    ModE["Modern English: be<br/>/biː/"]:::english
+    ME --> ModE
