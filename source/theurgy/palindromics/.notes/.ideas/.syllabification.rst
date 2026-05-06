@@ -1,0 +1,7 @@
+**Syllablification**
+
+A syllable, :math:`\phi`, is defined as,
+
+.. math::
+
+    \phi \in \Phi \equiv \exists n \in \mathbb{N}_l(\alpha): \alpha = \varsigma(\Pi_{i=1}^{n} p(i))

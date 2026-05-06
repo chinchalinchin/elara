@@ -245,6 +245,8 @@ But this is exactly the definition of the subset relation in set theory, therefo
 Limitations
 -----------
 
+.. NOTE: If the definition is relaxed to range over strings, then the operation of limitation can be used to define syllabification.
+
 .. _palindromics-definition-1-3-3:
 
 .. topic:: Definition 1.3.3: Phrases

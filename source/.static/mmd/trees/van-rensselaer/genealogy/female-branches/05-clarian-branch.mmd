@@ -1,0 +1,51 @@
+
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES
+    %% =========================================
+    %% ===================== CLARIAN BRANCH (Deep Pink Gradient)
+    %% Start: Pink 600 (#D81B60) -> End: Pink 300 (#F06292)
+    classDef clar1 fill:#D81B60,stroke:#000,stroke-width:2px,color:#fff
+    classDef clar2 fill:#E91E63,stroke:#000,stroke-width:2px,color:#fff
+    classDef clar3 fill:#EC407A,stroke:#000,stroke-width:2px,color:#fff
+    classDef clar4 fill:#F06292,stroke:#000,stroke-width:2px,color:#000
+    classDef clar5 fill:#F48FB1,stroke:#000,stroke-width:2px,color:#000
+    %% ===================== EXTERNAL
+    classDef external fill:#FFFFFF,stroke:#D81B60,stroke-width:1px,color:#000
+
+    %% =========================================
+    %% ROOT (Gen 7)
+    %% =========================================
+    ROOT_J{Justine van Rensselaer<br>1828-1912}:::clar1
+    FAM_TW[Dr. Howard Townsend<br>1823-1867]:::external
+    ROOT_J ---|m. 1851| FAM_TW
+
+    %% =========================================
+    %% GEN 8 (The Townsend Siblings)
+    %% =========================================
+    
+    FAM_TW --> S8_TW1[\Howard Townsend Jr.<br>1858-1935/]:::clar2
+    W8_TW1{Anne Lowndes Langdon<br>1864-1928}:::external
+    S8_TW1 ---|m. 1888| W8_TW1
+
+    FAM_TW --> S8_TW2[\Stephen V.R. Townsend<br>1860-1901/]:::clar2
+    W8_TW2{Janet Eckford King<br>1865-1899}:::external
+    S8_TW2 ---|m. 1888| W8_TW2
+
+    FAM_TW --> S8_TW3[/Justine Townsend<br>1853-1881\]:::clar2
+    FAM_TW --> S8_TW4[/Harriet Townsend<br>1853?-?\]:::clar2
+
+    %% =========================================
+    %% GEN 9
+    %% =========================================
+    
+    W8_TW1 --> S9_TW1_1[\Eugene Langdon Townsend<br>1892-1951/]:::clar3
+    W8_TW1 --> S9_TW1_2[/Anne Langdon Townsend<br>1898-1965\]:::clar3
+
+    W8_TW2 --> S9_TW2_1[/Justine V.R. Townsend<br>1889-1966\]:::clar3
+    W8_TW2 --> S9_TW2_2[\Stephen V.R. Townsend<br>1891-1919/]:::clar3
+    W8_TW2 --> S9_TW2_3[/Janet King Townsend<br>1894-1943\]:::clar3
+    W8_TW2 --> S9_TW2_4[\Philip Schuyler Townsend<br>1896-1933/]:::clar3
+
+    linkStyle default interpolate basis
+

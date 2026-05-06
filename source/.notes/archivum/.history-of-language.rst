@@ -1,0 +1,167 @@
+.. epigraph::
+
+  I shall not try to give a general definition of "proposition", as it is impossible to do so.
+
+  -- Ludwig Wittgenstein
+
+This is a work of non-fiction, although not of the sort where its words should be taken as denoting anything resembling truth. We shall endeavor to show what cannot be shown, and in doing so, contradict ourselves, demonstrating the essential property of language: the endless production of inconsistency. We shall thus rigorously establish the irreconcilably fallacious foundations of language, which, by the law of the excluded middle, namely that a proposition must be either true or false, will imply language cannot objectively exist and therefore any claim the words you are reading are being read by you must be treated as pure conjecture (at best). Let the definitions proceed.
+
+In order to leave no ambiguity for the dullards to misinterpret or avenues for critics to besiege the edifice we construct, we should like to ensure each term we use has its meaning made abundantly clear and precisely fixed before its use. Unfortunately, this is impossible, as all deductive science requires the admission of unprovable axioms, what Aristotle termed the *ἀρχαί*, the starting point from which deductions proceed. The truth of these unprovable axioms can only be justified by their so-called "*ostensive definition*", which to say, by demonstration. A more modern term for this would be "*contextualization*", or "*embedding*". A thing is known through the way in which it relates to other things. 
+
+For example, suppose two individuals sought to establish between themselves a common tongue without prior knowledge of each other's native language. These individuals must define the words of their language in some capacity. The essential component of this operation, no matter the particulars of the specific method the individuals select for transmitting their language to one another, is drawing attention to the analogical way in which sounds can be put into correspondence with phenomenological experience through repetition. In this hypothetical, for example, the *ostensive* definition of "*apple*" is equivalent to one of them pointing at an apple while shouting, "Apple!" over and over again until the other, presumably the less bright one, finally understands. To the outside observer, this may appear synonymous with insanity, but fear not; They are simply *doing language*.
+
+.. warning::
+
+    Attempting to apply *ostensive definitions* to the demonstrative pronouns, "*that*" or "*this*", can result in hospitalization and death.
+
+.. sidebar:: Philosophies of Naming
+
+    - **Plato**: A name is an essence.
+    - **Aristotle**: A name is a substance. 
+    - **Frege**: A name is a reference.
+    - **Russell**: A name is a description.
+    - **Tarski**: A name is a satisfaction.
+    - **Kripke**: A name is a baptism. 
+
+Abstracting away the salient points of the ostensive definition, we have the general formula for a definition,
+
+.. topic:: Definition: Definition
+
+    name = thing
+
+That is to say, a definition allocates a name to a thing. We might go further and claim a mathematical mapping underlies the processing of naming,
+
+.. topic:: Definition: Definition
+
+    name(x) = x 
+
+Or put another, a name is a rule or association. It tells us, for a given thing, what that thing is *called*. For example, borrowing from Gottlob Frege, "*Venus is the morning star*", the name "*Venus*" is defined as "*the morning star*", where "*is*", that indubitable copula, of which there is much to be said, plays the role of *identity*. Simple enough. However, the process of naming has been a perennial problem in the history of human thought. In trying to formalize this operation, we inevitably call upon the equal signs to bear the weight of our assertion and in doing so, implicit assuming certain syntactically properties of reality (what Kant might call *a priori*), namely, that everything is equal to itself,
+
+.. topic:: Ἀρχή of Identity
+
+    .. math::
+
+        x = x
+
+Moreover, if something is equal to something else, than that something else is equal to the original something (reflexivity), 
+
+.. topic:: Ἀρχή of Reflexivity
+    .. math::
+
+        x = y 
+
+        \implies
+
+        y = x
+
+Moreover, and, as will be seen immediately, the most controversial assumption embedded in the notion of equality requires that if a thing is equal to another thing, and that other thing is itself equal to yet another thing, then the identity must transfer across the relation (transivity)
+
+.. topic:: Ἀρχή of Transivitity
+
+    .. math::
+
+        x = y
+
+        y = z 
+
+        \implies
+
+        x = z
+
+For example, a particularly observant individual might declare: 
+
+    John Milton was the author of *Paradise Lost*
+
+    The author of *Paradise Lost* was blind.
+
+    Therefore, John Milton was blind.
+
+All is well and good. The συλλογισμός remains intact. However, as much as we may wish for this simple state of affairs to hold, it is insufficient to capture the gamut of phenomenon we should like to group under the heading of "*names and naming*". Consider the following argument,
+
+    Venus is the morning star. 
+
+    Satan is the morning star.
+
+    Therefore, Satan is Venus.
+
+To which Frege would reply, "Sure, but the *sense* of 'morning star' in each sentence is different; you have asserted a false equivalency and arrived at an absurdity." In other words, the same word can mean totally different things depending on the context. In the terms of logic, this represents a major concession: metaphor is not a formal property. Frege clung to the hope that he might draw blood from a stone and find meaning within logic
+
+.. epigraph::
+
+    | Of whom each strives, nor knows for what he strives,
+    | And each half lives a hundred different lives;
+
+    -- Scholar Gipsy, Matthew Arnold
+
+Logic is a whore. It presents a facade. Consider the proposition,
+
+    If Marlowe wrote Macbeth, then Shakespeare is a fraud.
+
+We should like to define "*logic*" as the judgement which yields the conclusion, that Shakepeare is a fraud, from the hypothesis, Marlowe wrote MacBeth. But this is a misconception, born of thinking of "*logic*" as a "*generator of meaning*", where the conclusion is *logically* produced from the hypothesis. The purview of logic is *equivalence* and *elimination*.
+
+This is logically equivalent to,
+
+    Marlow didn't write Macbeth or Shakespeare is a fraud. 
+
+A definition is a definition. More precisely, a definition decomposes. For instance, following the work of Alfred Tarski in his seminal *The Concept of Truth in Formalized Language*, we can define definition as what results when concatenating the letters "*d*", "*e*", "*f*", "*i*", "*n*", "*i*", "*t*", "*i*", "*o*", "*n*",
+
+.. topic:: Definition: Definition
+
+    definition = concatenate(d, e, f, i, n, i, t, i, o, n)
+
+Clearly, we have effected a great simplification and revealed a deep structural property of language, namely the implicit ordinality 
+
+
+Mathematicians, in their scorched-earth quest utter and absolute clarity, have decomposed the definition of definition into,
+
+.. topic:: Definition: Definition
+
+    definiendum = definiens
+
+Where,
+
+.. topic:: Definition: Definiendum
+
+    definiendum = what is to be defined
+
+.. topic:: Definition: Definiens
+
+    defieniens = definition
+
+Which yields the natural definition of definition,
+
+.. topic:: Definition: Definition (Again)
+
+    what is to be defined = definition 
+
+As should be obvious, this clarifies the proceedings immensely, as instead of appearing on the left-hand side of the equation, we have succeeded "*definition*" to the right side of the equation. However, our work does not aspire to this level of rigor. Instead, we will adopt the shorthand definition of definition,
+
+.. topic:: Definition: Definition
+
+    this = that
+
+as the mass of an object can be decomposed into the ratios of accelerations. Ernst Mach, using Newton's Laws of Motion proposed in 1868 the *operational definition* of mass, which remains unchanged in its essential formulation up to this day. He defined mass in terms of acceleration. 
+
+Acceleration 
+
+.. math::
+
+    F_{21} = F_{12} \quad \text{ Newton's Third Law }
+
+    \implies
+
+    m_1 \cdot a_1 = m_2 \cdot a_2 \quad \text{ Newton's Second Law }
+
+    \implies
+
+    \frac{m_1}{m_2} = \frac{a_2}{a_1}
+
+This can be visualized as placing two masses of different sizes on a compressed spring and then releasing them instantaneously. Selecting a :math:`m_1` as a reference mass as the unit mass, :math:`1`, a structure is then imposed unto the universe of masses.
+
+The essence of definition is the identification of one thing as another. The notion of definition can thus be summarized,
+
+.. epigraph::
+
+    What is not truly one *being*  is not truly *one* being either.
+
+    -- Gottfried Wilhelm Leibniz

@@ -1,0 +1,59 @@
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES 
+    %% =========================================
+    %% ===================== TROPHONIAN BRANCH (Azure)
+    classDef troph1 fill:#1976D2,stroke:#000,stroke-width:2px,color:#fff
+    classDef troph2 fill:#2196F3,stroke:#000,stroke-width:2px,color:#000
+    classDef troph3 fill:#64B5F6,stroke:#000,stroke-width:2px,color:#000
+    classDef troph4 fill:#BBDEFB,stroke:#000,stroke-width:2px,color:#000
+    classDef troph5 fill:#E3F2FD,stroke:#000,stroke-width:2px,color:#000
+    %% ===================== EXTERNAL
+    classDef external fill:#FFFFFF,stroke:#F57C00,stroke-width:1px,color:#000
+    classDef plebianEnter fill:#904057,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+
+    %% =========================================
+    %% ROOT (Gen 4)
+    %% =========================================
+    ROOT_E{Elizabeth van Rensselaer<br>1734-1813}:::troph1
+    FAM_TB[Gen. Abraham Ten Broeck<br>1734-1810<br>Mayor of Albany]:::external
+    ROOT_E ---|m. 1763| FAM_TB
+
+    %% =========================================
+    %% GEN 5: The Ten Broeck Line
+    %% =========================================
+    
+    FAM_TB --> S5_TB1[\Dirck Ten Broeck<br>1765-1833<br>Speaker of NY Assembly/]:::troph2
+    W5_TB1{Cornelia Stuyvesant<br>1768-1825}:::external
+    S5_TB1 --- W5_TB1
+
+    FAM_TB --o S5_TB2[/Elizabeth Ten Broeck<br>1772-1848\]:::troph2
+    FAM_RS[[Rensselaer Schuyler<br>SEE PLEBIAN BRANCH]]:::plebianEnter
+    S5_TB2 ---|m. 1793| FAM_RS
+
+    FAM_TB --> S5_TB3[\Abraham Ten Broeck<br>1775-1841/]:::troph2
+    W5_TB3(((Ann van Rensselaer<br>SEE PLEBIAN BRANCH))):::plebianEnter
+    S5_TB3 ---|m. 1799| W5_TB3
+
+    %% =========================================
+    %% GEN 6
+    %% =========================================
+
+    W5_TB1 --x S6_TB1_1[\Abraham S. Ten Broeck<br>1788-1810/]:::troph3
+    W5_TB1 --> S6_TB1_2[/Margaret S. Ten Broeck<br>1790-1873\]:::troph3
+    W5_TB1 --> S6_TB1_3[\Rev. Petrus S. Ten Broeck<br>1792-1849/]:::troph3
+    
+    W6_TB1_3{Lucretia Loring<br>Cutter<br>1799-?}:::external
+    S6_TB1_3 ---|m. 1819| W6_TB1_3
+
+    FAM_RS --x S6_TB2_1[\Philip Rensselaer Schuyler<br>1801-1865/]:::troph3
+
+    %% =========================================
+    %% GEN 7
+    %% =========================================
+
+    W6_TB1_3 --> S7_TB1_3A[\Peter Stuyvesant<br>Ten Broeck<br>1822-1867/]:::troph4
+
+    linkStyle default interpolate basis
+
+

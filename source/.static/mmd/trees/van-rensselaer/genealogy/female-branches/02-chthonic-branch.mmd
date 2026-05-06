@@ -1,0 +1,51 @@
+
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES 
+    %% =========================================
+    %% ===================== CHTHONIC BRANCH (Standard Blue)
+    %% REFACTORED: Now anchored to #1565C0 to fit the timeline gradient.
+    classDef cht1 fill:#1565C0,stroke:#000,stroke-width:2px,color:#fff
+    classDef cht2 fill:#1976D2,stroke:#000,stroke-width:2px,color:#fff
+    classDef cht3 fill:#1E88E5,stroke:#000,stroke-width:2px,color:#fff
+    classDef cht4 fill:#2196F3,stroke:#000,stroke-width:2px,color:#000
+    %% ===================== EXTERNAL
+    classDef external fill:#FFFFFF,stroke:#F57C00,stroke-width:1px,color:#000
+
+    %% =========================================
+    %% ROOT (Gen 3)
+    %% =========================================
+    ROOT_G{Gertruy van Rensselaer<br>1714-?}:::cht1
+    FAM_AS[Adoniah Schuyler<br>1717-1763]:::external
+    ROOT_G ---|m. 1742| FAM_AS
+
+    %% =========================================
+    %% GEN 4: Schuyler of New Jersey
+    %% =========================================
+    
+    FAM_AS --> S4_AS1[\John Schuyler<br>1745-1806/]:::cht2
+    W4_AS1{Cornelia Van Cortlandt<br>1753-1847}:::external
+    S4_AS1 --- W4_AS1
+
+    FAM_AS --> S4_AS2[\Rensselaer Schuyler/]:::cht2
+    FAM_AS --> S4_AS3[\Peter Schuyler/]:::cht2
+    FAM_AS --> S4_AS4[\Adonijah Schuyler<br>1753-1839/]:::cht2
+    FAM_AS --> S4_AS5[\Philip Schuyler/]:::cht2
+
+    %% =========================================
+    %% GEN 5
+    %% =========================================
+    
+    W4_AS1 --> S5_AS1_1[\Philip J. Schuyler<br>1768-1835/]:::cht3
+    W5_AS1_1{Mary Anna Sawyer}:::external
+    S5_AS1_1 ---|m. 1807| W5_AS1_1
+
+    %% =========================================
+    %% GEN 6
+    %% =========================================
+    
+    W5_AS1_1 --> S6_PJS1[\George Washington<br>Schuyler<br>1810-1888/]:::cht4
+    W5_AS1_1 --> S6_PJS2[/Mary Anna Schuyler<br>1816-?\]:::cht4
+
+    linkStyle default interpolate basis
+

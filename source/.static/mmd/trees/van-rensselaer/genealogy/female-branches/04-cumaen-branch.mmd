@@ -1,0 +1,96 @@
+
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES
+    %% =========================================
+    %% ===================== CUMAEAN BRANCH (Purple/Orchid Gradient)
+    %% Start: Purple 500 (#9C27B0) -> End: Purple 200 (#CE93D8)
+    classDef cum1 fill:#9C27B0,stroke:#000,stroke-width:2px,color:#fff
+    classDef cum2 fill:#AB47BC,stroke:#000,stroke-width:2px,color:#fff
+    classDef cum3 fill:#BA68C8,stroke:#000,stroke-width:2px,color:#fff
+    classDef cum4 fill:#CE93D8,stroke:#000,stroke-width:2px,color:#000
+    classDef cum5 fill:#E1BEE7,stroke:#000,stroke-width:2px,color:#000
+    %% ===================== EXTERNAL
+    classDef external fill:#FFFFFF,stroke:#9C27B0,stroke-width:1px,color:#000
+
+    %% =========================================
+    %% ROOT (Gen 7)
+    %% =========================================
+    ROOT_C{Cornelia van Rensselaer<br>1823-1897}:::cum1
+    FAM_TH[Nathaniel Thayer<br>1808-1883<br>Banker & Philanthropist]:::external
+    ROOT_C ---|m. 1846| FAM_TH
+
+    %% =========================================
+    %% GEN 8 (The Thayer Siblings)
+    %% =========================================
+    
+    FAM_TH --x S8_TH1[\Stephen V.R. Thayer<br>1847-1871/]:::cum2
+    
+    FAM_TH --> S8_TH4[/Cornelia Thayer<br>1849-1903\]:::cum2
+    FAM_ROBB[J. Hampden Robb<br>1846-1911<br>NY State Senator]:::external
+    S8_TH4 --- FAM_ROBB
+    
+    FAM_TH --> S8_TH2[\Nathaniel Thayer III<br>1851-1911/]:::cum2
+    W8_TH2{Pauline Revere}:::external
+    S8_TH2 ---|m. 1881| W8_TH2
+
+    FAM_TH --> S8_TH5[/Harriet Thayer<br>1853-1891\]:::cum2
+    
+    FAM_TH --> S8_TH6[\Eugene Van R. Thayer<br>1855-1907/]:::cum2
+    W8_TH6{Susan Spring<br>1859-1929}:::external
+    S8_TH6 ---|m. 1880| W8_TH6
+    
+    FAM_TH --> S8_TH7[\Bayard Thayer<br>1862-1916/]:::cum2
+    W8_TH7{Ruth Simpkins<br>1864-1941}:::external
+    S8_TH7 ---|m. 1896| W8_TH7
+    
+    FAM_TH --> S8_TH8[\John Eliot Thayer<br>1862-1933<br>Ornithologist/]:::cum2
+    W8_TH8{Evelyn D. Forbes<br>1862-1943}:::external
+    S8_TH8 ---|m. 1886| W8_TH8
+
+    %% =========================================
+    %% GEN 9
+    %% =========================================
+    
+    FAM_ROBB --> S9_ROBB1[\Thayer Robb<br>1877-1938/]:::cum3
+    FAM_ROBB --> S9_ROBB2[/Cornelia Robb<br>1875?-?\]:::cum3
+    
+    W8_TH2 --> S9_TH2_1[/Cornelia Van R. Thayer<br>1881-1925\]:::cum3
+    
+    W8_TH6 --> S9_TH6_1[\Eugene V.R. Thayer Jr.<br>1881-1937<br>Pres. Chase National Bank/]:::cum3
+    W9_TH6_1{Gladys Brooks<br>1882-1955}:::external
+    S9_TH6_1 ---|m. 1903| W9_TH6_1
+    W8_TH6 --> S9_TH6_2[/Susan Thayer<br>1885-1971\]:::cum3
+    W8_TH6 --> S9_TH6_3[/Katherine Thayer<br>1892-1981\]:::cum3
+    
+    W8_TH7 --> S9_TH7_1[/Ruth Thayer<br>1897-1984\]:::cum3
+    W8_TH7 --> S9_TH7_2[\Nathaniel Thayer<br>1898-1971/]:::cum3
+    W8_TH7 --> S9_TH7_3[/Constance Van R. Thayer<br>1900-1976\]:::cum3
+    
+    W8_TH8 --> S9_TH8_1[\John Eliot Thayer Jr.<br>1887-1966/]:::cum3
+    W9_TH8_1{Katherine Lee<br>Bayard Warren<br>1891-1976}:::external
+    S9_TH8_1 ---|m. 1911| W9_TH8_1
+    
+    W8_TH8 --> S9_TH8_2[/Evelyn Thayer<br>1888-1980\]:::cum3
+    FAM_BURR[Isaac Tucker Burr<br>1885-1972<br>Banker]:::external
+    S9_TH8_2 ---|m. 1913| FAM_BURR
+    
+    W8_TH8 --> S9_TH8_3[/Nora Forbes Thayer<br>1889-1959\]:::cum3
+    FAM_GOOD[Francis Abbot Goodhue<br>1883-1967<br>Pres. Bank of Manhattan]:::external
+    S9_TH8_3 ---|m. 1913| FAM_GOOD
+    
+    W8_TH8 --> S9_TH8_4[/Natalie Thayer<br>1894-1975\]:::cum3
+    FAM_HEM[Lawrence Hemenway<br>1891-1966]:::external
+    S9_TH8_4 ---|m. 1915| FAM_HEM
+    
+    W8_TH8 --> S9_TH8_5[\Duncan Forbes Thayer<br>1900-1956/]:::cum3
+    W9_TH8_5{Priscilla P.<br>McHenry<br>1906-1975}:::external
+    S9_TH8_5 ---|m. 1928| W9_TH8_5
+
+    %% =========================================
+    %% GEN 10 (Eugene Jr Line)
+    %% =========================================
+    W9_TH6_1 --> S10_TH6_1B[\Robert Helyer Thayer<br>1901-1984<br>Diplomat/]:::cum4
+
+    linkStyle default interpolate basis
+

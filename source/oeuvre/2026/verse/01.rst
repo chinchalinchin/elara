@@ -1078,6 +1078,9 @@ Book 1
   * - April 26, 2026
     - The Tusculum Review 2026 Poetry Chapbook Prize
     - Pending
+  * - May 6, 2026
+    - New American Press
+    - Pending
 
 .. epigraph::
 

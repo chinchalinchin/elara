@@ -1,0 +1,74 @@
+The Nature of Language
+======================
+
+Formalization
+-------------
+
+---------
+Constants
+---------
+
+1. **Empty**: :math:`\epsilon` is reserved for the *null* (*empty*) character.
+2. **Delimiter**: :math:`\sigma` is reserved for the *delimiter* (*space*) character. 
+
+---------
+Variables
+---------
+
+1. **General**: :math:`x, y, z, ...` are used as generalized string variables.
+2. **Characters**: :math:`\iota` is reserved for character variables.
+2. **Syllables**: :math:`\phi, \pi, \Pi` are used for syllable variables. Lowercase :math:`\pi` is used for unstressed syllables while upppercase :math:`\Pi` is used for stressed syllables. :math:`\phi` is used for any type of syllable, stressed or unstressed.
+3. **Words**: :math:`\alpha` is reserved for word variables.
+4. **Sentences**: :math:`\zeta` is reserved for sentence varibles.
+5. **Phrases**: :math:`\rho` is reserve for phrase variables. A phrase is a defined as an ordered sequence of words, not necessarily grammatic, semantic or syntactic. For example, :math:`\rho = (\text{colorless}, \text{green}, \text{ideas}, \text{sleep}, \text{furiously})`
+
+--------
+Notation
+--------
+
+1. **Character Indexing** For a string :math:`x`, :math:`x[i]` refers to the character at the i:sup:`th` index, where the first character in a string is indexed at 0. For example, :math:`\text{hello}[2] = \text{l}`. 
+2. **Word Indexing** For a sentence :math:`\zeta`, `\zeta{i}` refers to the word at the i:sup:`th` index, where the first word in a sentence is indexed at 0. For example, `\text{hello how are you}{2} = are`. 
+
+---------
+Relations
+---------
+
+1. **Containment**: :math:`\subset_c` is used to represent the relation of containment that exists between two strings. For example, :math:`\text{cab} \subset_c \text{cabbage}` is true, but :math:`\text{rat} \subset_c \text{yarn}` is false.
+2. **Rhymes**: :math:`\parallel` is used to represent of relation of *rhyming* that exists between two strings. For example :math:`\text{tirade} \parallel \text{parade}` is true, but :math:`\text{gush} \parallel \text{garbage}` is false.
+
+----
+Sets
+----
+
+1. **Alphabet**: :math:`\Sigma` is reserved for the set of all characters. For example, :math:`\Sigma = \{ \text{a}, \text{b}, ... , \text{z} \}`. Note, the delimiter character is treated as part of the alphabet, i.e. :math:`\sigma \in \Sigma`.
+2. **Language**: :math:`L` is reserved for the the set of all words in alphabet.
+3. **Corpus**: :math:`C(L)` is reserved for the set of all sentences in a language.
+4. **Phrases**: :math:`P(L)` is reserve for the set of all phrases in a language. 
+5. **Domain**: :math:`S` is reserved for the set of all strings.
+6. **Natural Numbers**: :math:`\mathbb{N}` is reserved for the set of natural numbers. When a subscript is included, :math:`\mathbb{N}_n`, this denotes the finite set of natural numbers up to, and including, :math:`n`. For example, :math:`\mathbb{N}_5 = \{ 1, 2, 3, 4, 5 \}` 
+
+----------
+Operations
+----------
+
+1. **Concatenation**: For any two strings :math:`x` and :math:`y`, their concatenation is written :math:`xy`. The operands of concatenation are often grouped with brackets, e.g. :math:`xy = [x][y]`.
+2. **Escapement**: For any two strings :math:`x` and :math:`y`, their escapement, denoted, :math:`x.y` represents the literal transcription of the strings on separate new lines. Exponents are used as shorthand for denoting multiple successions, e.g. :math:`x.x = x^2`
+3. **Character Length**: For any string :math:`x`, the character length of the string, denoted :math:`\lambda(x)`, represents the number of non-empty characters in a string. For example, :math:`\lambda(\text{cat}) = 3`. Note, :math:`\text{being is} = 8`, due to the presence of the delimiter, :math:`\sigma`.
+4. **Word Length**: For any string :math:`x`, the word length of the string, denoted :math:`\Lambda(x)`, represents the number of words in a string. For example, :math:`\Lambda(\text{the dog runs}) = 3`. However, :math:`\Lambda(\text{cat yunip}) = 1` since :math:`\text{yunip} \notin L`.
+4. **Delimitation**: The delimitation of a phrase, written :math:`\delta(\rho)`, denotes the result of concatenating delimiter characters, :math:`\sigma`, in between each word. For example, :math:`\delta((\text{know}, \text{thyself})) = \text{know thyself}`
+5. **Reduction**: The reduction of a string, written :math:`\varsigma(x)`, denotes the result of removing all delimiter characters, :math:`\sigma`, from a string. For example, :math:`\varsigma(\text{no devil lived on) = \text{nodevillivedon}`
+
+------
+Axioms
+------
+
+1. **Empty**: :math:`\exists! \varepsilon`
+2. **Comprehension** :math:`\iota \in S`
+3. **Identity** :math:`s = s`
+4. **Reflexivity** :math:`s = t \leftrightarrow t = s`
+5. **Associativity** :math:`((s = t) \land (t = u)) \implies (s = u)`
+4. **Decomposition Axiom**: :math:`(s \neq \varepsilon) \implies (s = {\iota}{t}) \lor (s = {t}{\iota})`
+5. **Closure Axiom**: :math:`st \in S`
+6. **Measure Axiom**: :math:`l(\alpha) \neq 0`
+7. **Discovery**: :math:`\alpha[i] \neq \sigma`
+8. **Canonization**: :math:`\alpha \in \mathbb{S}`

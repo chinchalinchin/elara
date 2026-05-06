@@ -1,0 +1,53 @@
+graph TD
+    %% =========================================
+    %% PALETTES & STYLES 
+    %% =========================================
+    %% ===================== TIRESIAN BRANCH (Vibrant Pink Gradient)
+    %% Start: Pink A200 (#FF4081) -> End: Pink A100 (#FF80AB)
+    classDef tir1 fill:#FF4081,stroke:#000,stroke-width:2px,color:#fff
+    classDef tir2 fill:#FF80AB,stroke:#000,stroke-width:2px,color:#000
+    classDef tir3 fill:#FF80AB,stroke:#000,stroke-width:2px,color:#000
+    classDef tir4 fill:#FF80AB,stroke:#000,stroke-width:2px,color:#000
+    %% ===================== EXTERNAL
+    classDef external fill:#FFFFFF,stroke:#FF4081,stroke-width:1px,color:#000
+    classDef patricianEnter fill:#7E57C2,stroke:#000,stroke-width:2px,color:#fff
+
+    %% =========================================
+    %% ROOT (Gen 8)
+    %% =========================================
+    ROOT_J[John Schuyler Crosby<br>1839-1914<br>Gov. of Montana]:::tir1
+    
+    FAM_H(((Harriet van Rensselaer<br>1838-1911<br>SEE PATRICIAN BRANCH))):::patricianEnter
+    ROOT_J ---|m. 1863| FAM_H
+
+    %% =========================================
+    %% GEN 9 (The Crosby Siblings)
+    %% =========================================
+    
+    FAM_H --> S9_CRO1[\Stephen V.R. Crosby<br>1868-1959/]:::tir2
+    W9_CRO1{Henrietta Grew}:::external
+    S9_CRO1 ---|m. 1895| W9_CRO1
+
+    FAM_H --> S9_CRO2[/Angelica Harriet Crosby<br>1870-1907\]:::tir2
+    FAM_HEN[John Brooks<br>Henderson Jr.<br>1870-1923]:::external
+    S9_CRO2 ---|m. 1903| FAM_HEN
+
+    %% =========================================
+    %% GEN 10
+    %% =========================================
+    
+    W9_CRO1 --x S10_CRO1_1[\Henry Grew 'Harry' Crosby<br>1898-1929<br>Poet & Publisher/]:::tir3
+    
+    W9_CRO1 --> S10_CRO1_2[/Katharine Schuyler Crosby<br>b. 1901\]:::tir3
+    FAM_CHO[Robert Burnett Choate<br>1898-1963<br>Publisher, Boston Herald]:::external
+    S10_CRO1_2 ---|m. 1921| FAM_CHO
+
+    FAM_HEN --> S10_HEN1[/Beatrice Henderson<br>1906-?\]:::tir3
+
+    %% =========================================
+    %% GEN 11
+    %% =========================================
+    
+    FAM_CHO --> S11_CHO1[\Robert Burnett Choate Jr.<br>1924-2009<br>Civic Leader & Policy Advocate/]:::tir4
+
+    linkStyle default interpolate basis
