@@ -94,6 +94,9 @@ Larksong
     - Rejected
   * - November 24, 2025
     - Artists from Maryland
+    - Accepted
+  * - May 6, 2026
+    - Georgia Review
     - Pending
 
 Responses
