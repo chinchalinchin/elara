@@ -6,8 +6,8 @@ Cathedral
 | foundation layers ages old,
 | remains in spirit standing still.
 | 
-| The shattered stains on window sill,
-| with marble halls of lichen mold,
+| With shattered stains on window sill,
+| and marble halls of lichen mold,
 | a church atop a steepled hill.
 |
 | Decrepit pews of souls fulfill
@@ -18,9 +18,9 @@ Cathedral
 | except the signs that staked and sold
 | a church atop a steepled hill.
 |
-| But tower high such pointed skill,
-| through silken skies of glittered gold,
-| remains in spirit standing still.
+| What towered hand of pointed skill,
+| whose steadfast faith always consoled,
+| remains in spirit standing still?
 |
 | Ignore the wind, the biting chill,
 | and cast your final gaze, behold:
@@ -28,7 +28,8 @@ Cathedral
 | remains in spirit standing still.
 
 - *Original*: March 2025
-- *Revised*: June 2025
+- *Revised I*: June 2025
+- *Revised II*: May 2026
 
 .. list-table:: Submission History
   :widths: 15 15 15
