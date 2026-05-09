@@ -57,6 +57,14 @@ Cathedral
     - Ultramarine Literary Review
     - Accepted
 
+Links
+~~~~~
+
+- `Cathedral`_, Ultramarine Literary Review
+
+Responses
+~~~~~~~~~
+
 .. epigraph::
 
   Hi Grant,

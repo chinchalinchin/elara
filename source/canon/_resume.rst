@@ -43,7 +43,7 @@ Publications
 
 - `Photographs of Autumn`_, Macrame Literary Journal, Issue 1
 - `Absurdity (1)`_, The Genre Society, Issue 6
-- `Father's Lullaby`_, Sublimation, Volume 2 Issue 5
+- `Father's Lullaby (2)`_, Sublimation, Volume 2 Issue 5
 - `The Unicode Ode`_ & `The Invocation of Metric Code`_, Infocalypse Press, Issue 1
 - `The Lives of Kites`_, Macrame Literary Journal, Issue 3
 - `Holly Tree`_, The Celestial Glossary, Volume 1 Issue 1
@@ -54,7 +54,7 @@ Publications
 - *Turkey Vultures*, Backbone Mountain Review, (Forthcoming)
 - `Floods`_, Four Tulips Magazine, 2026 Anthology
 - `Absurdity (2)`_ & `The Gap`_, Infocalypse Press, Issue 2
-- `Cathedral, Christmas & Anniversary, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
+- `Cathedral`_, `Christmas`_ & `Anniversary`_, Ultramarine Literary Review
 - *Paradise Revealed*, Infocalpyse Press, Issue 3 (Forthcoming)
 
 .. _contests:
@@ -68,8 +68,8 @@ Contests
   :class: transparent
   :width: 50%
   
-- *Father's Lullaby*, 94th Writer's Digest Contest, Runner Up, `2025 <https://www.writersdigest.com/announcing-the-winners-of-the-94th-annual-writers-digest-writing-competition>`_
-- *Ode to Death*, Forgotten: A Marroween Contest, Honorable Mention, `October 2025 <https://marrowmagazine.com/ode-to-death/>`_
+- `Father's Lullaby (1)`_, 94th Writer's Digest Contest, Runner Up
+- `Ode to Death (1)`_, Forgotten: A Marroween Contest, Honorable Mention
 
 .. _experience:
 

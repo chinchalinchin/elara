@@ -1,10 +1,11 @@
 .. # LINKS
-.. 
+..
 .. ## PERSONAL
-.. 
+
 .. _Photographs of Autumn: https://macramelit.com/articles/photographs-of-autumn/
+.. _Father's Lullaby (1): https://www.writersdigest.com/announcing-the-winners-of-the-94th-annual-writers-digest-writing-competition>`_
 .. _Absurdity (1): https://www.thegenresociety.com/readhere
-.. _Father's Lullaby: https://islandofwakwak.com/sublimation-volume-2-2025.html
+.. _Father's Lullaby (2): https://islandofwakwak.com/sublimation-volume-2-2025.html
 .. _Ode To Death (1): https://marrowmagazine.com/ode-to-death/
 .. _The Unicode Ode: https://www.infocalypse.press/issue-one/
 .. _The Invocation of Metric Code: https://www.infocalypse.press/issue-one/
@@ -17,7 +18,6 @@
 .. _The Origin of Lies: https://www.garfieldlakereview.com/recent
 .. _Larksong (2): https://www.garfieldlakereview.com/recent
 .. _Eulogy (2): https://www.garfieldlakereview.com/recent
-.. _Garfield Lake Review, 2026 <https://www.garfieldlakereview.com/recent>`_
 .. _Little Sprout: https://www.amazon.com/dp/B0GPJ81RJM
 .. _Millenial Lives: https://www.amazon.com/dp/B0GPJ81RJM
 .. _Pantoums of Dementia (2): https://www.sligocreekpublishing.com/bearing-witness
@@ -25,12 +25,14 @@
 .. _Floods: https://www.fourtulips.com/archives/floods
 .. _Absurdity (2): https://www.infocalypse.press/issue-2-without-a-face/
 .. _The Gap: https://www.infocalypse.press/issue-2-without-a-face/
+.. _Cathedral: https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore
+.. _Christmas: https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore
+.. _Anniversary: https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore
 
-..
 .. ## EXTERNAL
-.. 
-.. ### ACADEMIC
 ..
+.. ### ACADEMIC
+
 .. _A Budget of Paradoxes: https://www.gutenberg.org/files/23100/23100-h/23100-h.htm
 .. _An essay towards solving a problem in the doctrine of chances: https://royalsocietypublishing.org/doi/10.1098/rstl.1763.0053
 .. _Foundations of Arithmetic: https://www.gutenberg.org/ebooks/48312
@@ -43,15 +45,15 @@
 .. _Introduction to Symbolic Logic and Its Applications: https://archive.org/details/rudolf-carnap-introduction-to-symbolic-logic-and-its-applications
 .. _Principia Mathematica: https://archive.org/details/dli.ernet.247278/page/n29/mode/2up
 .. _The Concept of Truth in Formalized Languages: http://www.thatmarcusfamily.org/philosophy/Course_Websites/Readings/Tarski%20-%20The%20Concept%20of%20Truth%20in%20Formalized%20Languages.pdf
-.. 
+
 .. ### HISTORICAL
-..
+
 .. _The Chinon Parchment: https://www.theknightstemplar.org/chinon-parchment/
 .. _The Histories: https://sacred-texts.com/cla/hh/hh1130.htm
 .. _The Bashaw of Merryland, The Sixth Baron Baltimore and the Dervises of Pera: https://www.jstor.org/stable/26810310
-.. 
+
 .. ### PHILOSOPHICAL
-..
+
 .. _Being and Event: http://www.elimeyerhoff.com/books/Badiou/Badiou-Being_and_Event_Searchable.pdf
 .. _Being and Nothingness: https://archive.org/details/beingnothingness0000unse
 .. _Being and Time: https://archive.org/details/pdfy-6-meFnHxBTAbkLAv/page/n7/mode/2up
@@ -76,14 +78,14 @@
 .. _Wittgenstein Lectures: https://www.marxists.org/reference/subject/philosophy/works/at/wittgens.htm
 .. _World as Will and Representation : https://archive.org/details/worldaswillrepre01scho
 .. _World as Will and Representation (Secondary Source): https://www.gutenberg.org/ebooks/38427
-.. 
+
 .. ### PLAYS
-..
+
 .. _Aeneid: https://classics.mit.edu/Virgil/aeneid.html
 .. _Othello: https://www.gutenberg.org/files/1531/1531-h/1531-h.htm
-.. 
+
 .. ### POETRY
-..
+
 .. _A Century of Roundels: https://en.wikisource.org/wiki/A_Century_of_Roundels
 .. _A Lark in the Mesh: https://www.poemhunter.com/poem/kyrielle-2/
 .. _A Lenten Hymn: https://allpoetry.com/poem/14371059-A-Lenten-Hymn-by-Thomas-Campion
@@ -147,14 +149,14 @@
 .. _Tonight: https://www.poetryfoundation.org/poems/51652/tonight-56d22f898fcd7
 .. _We Wear the Mask: https://www.poetryfoundation.org/poems/44203/we-wear-the-mask
 .. _When I Have Seen By Times Fell Hand Defac'd: https://www.poetryfoundation.org/poems/45096/sonnet-64-when-i-have-seen-by-times-fell-hand-defacd
-..
+
 .. ### PROSE
-..
+
 .. _On The Heights of Despair: https://archive.org/details/on-the-heights-of-despair
 .. _Fasti IV: https://www.theoi.com/Text/OvidFasti4.html
-..
+
 .. ### SPIRITUAL
-..
+
 .. _Amalanth Workings: https://www.sacred-texts.com/oto/lib97.txt
 .. _Atrahasis: https://genius.com/Stephanie-dalley-the-atrahasis-epic-annotated
 .. _Avesta: https://www.avesta.org/yasna/yasna.htm
@@ -187,23 +189,23 @@
 .. _Sefer Yezirah: https://www.sefaria.org/Sefer_Yetzirah?tab=contents
 .. _Septuagint: https://www.septuagint.bible/home
 .. _Shabaka Stone (Lesko Translation): https://omnika.org/texts/328
-..
+
 .. ### TEXTBOOKS
-..
+
 .. _Fundamental Methods of Logic, 1st Edition: https://human.libretexts.org/Bookshelves/Philosophy/Fundamental_Methods_of_Logic_(Knachel)
 .. _Contemporary Mathematics, 1st Edition: https://openstax.org/details/books/contemporary-mathematics
 .. _Introductory Statistics, 1st Edition: https://openstax.org/details/books/introductory-statistics
 .. _Statistics, 1st Edition: https://openstax.org/details/books/statistics
-..
+
 .. ### WEBSITES
-..
+
 .. _noblestatman.com: https://noblestatman.com/index.html
 .. _randomservices.com: https://www.randomservices.org/
 .. _tylervigen.com/spurious-correlation: https://www.tylervigen.com/spurious-correlations
 .. _timecube.com: https://web.archive.org/web/20150506055228/http://www.timecube.com/index.html
-..
+
 .. ### MASONRY
-...
+
 .. _Grand Lodge of A.F & A.M. of Maryland: https://mdmasons.org/
 .. _Mountain Lodge No. 99: https://mountainlodge99.org/index.html
 .. _Perry Hall Lodge No. 235: https://perryhalllodge235.org
@@ -211,9 +213,9 @@
 .. _The Maryland Orient: https://www.mdscottishrite.org/
 .. _The Maryland Scottish Rite: https://www.mdscottishrite.org/organization/
 .. _York Rite of Maryland: https://yorkritemaryland.org/
-..
+
 .. ### ORGANIZATIONS
-..
+
 .. _Communio Templorum: https://communio-templorum.github.io/cuneiform-text-corpus/#!/
 .. _Golden Dawn Library Project: https://hermetic.com/gdlibrary/index
-.. _Society of the Ark and the Dove: https://socarkdove.org/ 
+.. _Society of the Ark and the Dove: https://socarkdove.org/
