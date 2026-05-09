@@ -59,7 +59,7 @@
 }
 
 .sidebar-primary-item .navbar-icon-links {
-    justify-content: center;
+    justify-content: center !important;
     width: 100%;
 }
 
