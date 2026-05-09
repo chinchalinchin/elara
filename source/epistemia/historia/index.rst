@@ -9,3 +9,4 @@ Historia
    :caption: Contents:
 
    _expugnatio
+   _dynastia
