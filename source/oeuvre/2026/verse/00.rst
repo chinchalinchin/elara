@@ -22,7 +22,6 @@ The Gap
 
 - January 2026
 
-
 .. list-table:: Submission History
   :widths: 15 15 15
   :header-rows: 1
@@ -36,3 +35,8 @@ The Gap
   * - February 16th, 2026
     - Infopocalpyse Magazine
     - Accepted
+
+Links
+~~~~~
+
+- `The Gap`_, Infocalypse Press, Issue 2

@@ -41,19 +41,19 @@ Education
 Publications
 ============
 
-- `Photographs of Autumn, Macrame Literary Journal, Issue 1 <https://macramelit.com/articles/photographs-of-autumn/>`_
-- `Absurdity, The Genre Society, Issue 6 <https://www.thegenresociety.com/readhere>`_
-- `Father's Lullaby, Sublimation, Volume 2 Issue 5 <https://islandofwakwak.com/sublimation-volume-2-2025.html>`_
-- `The Unicode Ode & The Invocation of Metric Code, Infocalypse Press, Issue 1 <https://www.infocalypse.press/issue-one/>`_
-- `The Lives of Kites, Macrame Literary Journal, Winter 2026, Issue 3 <https://macramelit.com/articles/the-lives-of-kites/>`_
-- `Holly Tree, The Celestial Glossary, Volume 1 Issue 1 <https://estrellahp.com/celestial-glossary/issue-1/holly-trees/>`_
-- `Larksong & Eulogy, Artists From Maryland, February 2026 <https://www.artistsfrommaryland.org/february-2026-grant-moore/>`_
-- `Pantoums of Dementia, Ode to Death, The Origin of Lies, Larksong & Eulogy, Garfield Lake Review, 2026 <https://www.garfieldlakereview.com/recent>`_
-- `Little Sprout & Millenial Lives, WayWords Literary Journal, Issue 21: Theme of Wonder <https://www.amazon.com/dp/B0GPJ81RJM>`_
-- `Pantoums of Dementia & Eulogy, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times <https://www.sligocreekpublishing.com/bearing-witness>`_
+- `Photographs of Autumn`_, Macrame Literary Journal, Issue 1
+- `Absurdity (1)`_, The Genre Society, Issue 6
+- `Father's Lullaby`_, Sublimation, Volume 2 Issue 5
+- `The Unicode Ode`_ & `The Invocation of Metric Code`_, Infocalypse Press, Issue 1
+- `The Lives of Kites`_, Macrame Literary Journal, Issue 3
+- `Holly Tree`_, The Celestial Glossary, Volume 1 Issue 1
+- `Larksong (1)`_ & `Eulogy (1)`_, Artists From Maryland, February 2026 Edition
+- `Pantoums of Dementia (1)`_, `Ode to Death (2)`_, `The Origin of Lies`_, `Larksong (2)`_ & `Eulogy (2)`_, Garfield Lake Review, 2026
+- `Little Sprout`_ & `Millenial Lives`_, WayWords Literary Journal, Issue 21
+- `Pantoums of Dementia (2)`_ & `Eulogy (3)`_, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times
 - *Turkey Vultures*, Backbone Mountain Review, (Forthcoming)
-- `Floods, Four Tulips Magazine, 2026 Anthology <https://www.fourtulips.com/archives/floods>`_
-- `Absurdity & The Gap, Infocalypse Press, Issue 2 <https://www.infocalypse.press/issue-2-without-a-face/>`_
+- `Floods`_, Four Tulips Magazine, 2026 Anthology
+- `Absurdity (2)`_ & `The Gap`_, Infocalypse Press, Issue 2
 - `Cathedral, Christmas & Anniversary, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
 - *Paradise Revealed*, Infocalpyse Press, Issue 3 (Forthcoming)
 
