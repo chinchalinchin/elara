@@ -44,29 +44,17 @@ Publications
 - `Photographs of Autumn, Macrame Literary Journal, Summer 2025, Issue 1 <https://macramelit.com/articles/photographs-of-autumn/>`_
 - `Absurdity, The Genre Society, Fall 2025 Issue <https://www.thegenresociety.com/readhere>`_
 - `Father's Lullaby, Sublimation, Volume 2 Issue 5 <https://islandofwakwak.com/sublimation-volume-2-2025.html>`_
-- `The Unicode Ode, Infocalypse Press, Volume 1 Issue 1 <https://www.infocalypse.press/issue-one/>`_
-- `The Invocation of Metric Code, Infocalypse Press, Volume 1, Issue 1 <https://www.infocalypse.press/issue-one/>`_
+- `The Unicode Ode & The Invocation of Metric Code, Infocalypse Press, Volume 1 Issue 1 <https://www.infocalypse.press/issue-one/>`_
 - `The Lives of Kites, Macrame Literary Journal, Winter 2026, Issue 3 <https://macramelit.com/articles/the-lives-of-kites/>`_
 - `Holly Tree, The Celestial Glossary, Volume 1 Issue 1 <https://estrellahp.com/celestial-glossary/issue-1/holly-trees/>`_
-- `Larksong, Artists From Maryland, February 2026 <https://www.artistsfrommaryland.org/february-2026-grant-moore/>`_
-- `Eulogy, Artists From Maryland, February 2026 <https://www.artistsfrommaryland.org/february-2026-grant-moore/>`_
-- `Pantoums of Dementia, Movement I: Undulation, Scribeworth Magazine, Winter 2025, Volume I, Issue 4 <https://www.scribeworth.com/magazine>`_
-- *Larksong*, Garfield Lake Review, 2026 Edition (Forthcoming)
-- *Eulogy*, Garfield Lake Review, 2026 Edition (Forthcoming)
-- *Pantoums of Dementia*, Garfield Lake Review, 2026 Edition (Forthcoming)
-- *Ode to Death*, Garfield Lake Review, 2026 Edition (Forthcoming)
-- *The Origin of Lies*, Garfield Lake Review, 2026 Edition (Forthcoming)  
-- `Little Sprout, WayWords Literary Journal, Issue 21: Theme of Wonder <https://www.amazon.com/dp/B0GPJ81RJM>`_
-- `Millenial Lives, WayWords Literary Journal, Issue 21: Theme of Wonder <https://www.amazon.com/dp/B0GPJ81RJM>`_
-- `Pantoums of Dementia, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times <https://www.sligocreekpublishing.com/bearing-witness>`_
-- `Eulogy*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times <https://www.sligocreekpublishing.com/bearing-witness>`_
+- `Larksong & Eulogy, Artists From Maryland, February 2026 <https://www.artistsfrommaryland.org/february-2026-grant-moore/>`_
+- `Pantoums of Dementia, Ode to Death, The Origin of Lies, Larksong & Eulogy, Garfield Lake Review, 2026 <https://www.garfieldlakereview.com/recent>`_
+- `Little Sprout & Millenial Lives, WayWords Literary Journal, Issue 21: Theme of Wonder <https://www.amazon.com/dp/B0GPJ81RJM>`_
+- `Pantoums of Dementia & Eulogy, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times <https://www.sligocreekpublishing.com/bearing-witness>`_
 - *Turkey Vultures*, Backbone Mountain Review, (Forthcoming)
 - `Floods, Four Tulips Magazine, 2026 Anthology <https://www.fourtulips.com/archives/floods>`_
-- `Absurdity, Infocalypse Press, Volume 1, Issue 2 <https://www.infocalypse.press/issue-2-without-a-face/>`_
-- `The Gap, Infocalypse Press, Volume III <https://www.infocalypse.press/issue-2-without-a-face/>`_
-- `Cathedral, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
-- `Christmas, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
-- `Anniversary, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
+- `Absurdity & The Gap, Infocalypse Press, Volume 1, Issue 2 <https://www.infocalypse.press/issue-2-without-a-face/>`_
+- `Cathedral, Christmas & Anniversary, Ultramarine Literary Review <https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore>`_
 
 .. _contests:
 
