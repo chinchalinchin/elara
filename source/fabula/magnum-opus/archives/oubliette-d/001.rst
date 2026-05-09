@@ -1,0 +1,15 @@
+.. TITLE: Magnum Opus
+.. SECTION: Archive
+.. SUBSECTION: Oubliette D: Renselaerwyck Reliquary
+
+.. _oubliette-d-001:
+
+A True Prophecy of Restitution and Restoration of King Charles II
+-----------------------------------------------------------------
+
+.. Nicolaes van Rensselaer's prophecy to King Charles
+
+.. figure:: ../../../../.static/img/oracular/magnum-opus/a-true-prophecy.png
+    :width: 70%
+    :alt: A True Prophecy of Restitution and Restoration of King Charles II
+    :align: center
