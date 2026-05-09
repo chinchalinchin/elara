@@ -235,6 +235,7 @@ van Rensselaers
 Killaen van Rensselaer
 ~~~~~~~~~~~~~~~~~~~~~~
 
+Lineage: Elder Branch
 Time Period: 1590s - 1640s
 
 - The first Patroon.
@@ -244,13 +245,26 @@ Ryckert van Rensselaer
 
 Father: Killaen
 Mother: 
+Lineage: Elder Branch
 Time Period: 1630s
 
 - A true believer in Calvinism. Believes in the divine order and fate.
 
-Stephen van Rensselaer
-~~~~~~~~~~~~~~~~~~~~~~
+Nicolaes van Rennselaer
+~~~~~~~~~~~~~~~~~~~~~~~
 
+Father: Killaen
+Mother: 
+Lineage: Elder Branch
+Time Period: 1650s - 1670s
+
+- Has visions of the future after experimenting with the material. 
+
+Stephen van Rensselaer III
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Father:
+Mother:
 Lineage: 
 Time Period: 1810s - 1840s
 
@@ -259,18 +273,22 @@ Time Period: 1810s - 1840s
 Solomon van Rensselaer
 ~~~~~~~~~~~~~~~~~~~~~~
 
+Father:
+Mother:
 Lineage:
 Time Period: 1810s - 1840s
 
-- The family's political fixer. Right hand to Stephen.
+- The family's political fixer. Right hand to Stephen III.
 
 Renselaer van Rensselaer
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lineage: Solomon van Rensselaer
+Father: Solomon van Rensselaer
+Mother: 
+Lineage: 
 Time Period: 1830s
 
-- Black sheep. Insecure. 
+- Black sheep. Insecure. Lives in the shadow of Stephen's children.
 
 Killaen Maunsell Van Rensselaer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -3,11 +3,11 @@
 .. SUBSECTION: Oubliette D: Renselaerwyck Reliquary
 .. TABLE OF CONTENTS:
 .. - 000: Journal of Captain Ryckert van Rensselaer
-.. - 001: Being An Account of Nicolaes van Rensselaer's Prophecy to the exiled King, Charles II
-.. - 002: The Correspondences of Stephen van Rensselaer
-.. - 003: Notes from Joseph Henry's Lectures
-.. - 004: Centennial Exposition Flyer
-.. - 005: The Correspondences of Killaen Maunsell van Rensselaer
+.. - 001: A True Prophecy of Restitution and Restoration of Prince Charles II
+.. - 003: The Correspondences of Stephen van Rensselaer
+.. - 004: Notes from Joseph Henry's Lectures
+.. - 005: Centennial Exposition Flyer
+.. - 006: The Correspondences of Killaen Maunsell van Rensselaer
 
 .. _oubliette-d:
 
@@ -26,3 +26,4 @@ Oubliette D: Renselaerwyck Reliquary
    003
    004
    005
+   006
