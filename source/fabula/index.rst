@@ -5,7 +5,8 @@ Fabula
 ======
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
+   archive/index
    magnum-opus/index

@@ -2,7 +2,7 @@
 .. SECTION: Archive
 .. SUBSECTION: Oubliette D: Renselaerwyck Reliquary
 
-.. _oubliette-D-003:
+.. _oubliette-d-003:
 
 The Correspondences of Stephen van Rensselaer
 ---------------------------------------------
