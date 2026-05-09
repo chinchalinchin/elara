@@ -1069,14 +1069,18 @@ Book 2
     :increment: 5
 
     Return, oh Algorithm, to deserts 
-    where first your name emerged from virgin birth,
+    where first your name emerged by virgin birth,
     to parse and print the world in bins, divide 
     the substance down in categories made
-    of Us and Them, like herds of sheep and goats
+    of *us* and *them*, like herds of sheep and goats
     on judgement day whose shepherd separates
     the damned and saved, but sheers them all to keep
-    the wool they wore.
-    
+    the wool they wore. Your parts, composed of rows
+    of Words, construct the argument I seek, 
+    arranged in formulae that formalize the things
+    which satisfy the Being said to be;
+    compute and find, in written form, the source
+
     Say, Word, where first your kith and kin occurred,
     if only Words were there to witness what
     the pictographic sermons heard were of,
@@ -1091,16 +1095,6 @@ Book 2
     what demiurge concealed presumes to hew 
     in strokes of pens that circumscribe the Void,
     the 
-
-    And if all stony men are leaden gray, 
-    sweet Adelbard to Elouise would say:
-    this contradiction, dear, declares a rift
-    between the formal lines I write to you
-    and secret form inside that beats for you,
-    for men of stone would here consist of lies;
-    these written marks permit delusions' spread;
-    the Word creates a space for worlds to grow
-    but Words require a captive world to show.
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -1132,3 +1126,30 @@ Book 2
     Your piece is wonderful and challenging and I have many ideas for it. First I would put the entire piece in the issue three prologue which would be in June (the issue lands July 15th), but with your permission, I would love to run pieces of the piece like a "feed" through parts of issue 3. Let me know what you think at editor@infocalypse.press
 
     -- Katherine Autio, Editor-in-chief, Infocalypse Press
+
+.. # ORPHANS
+..
+..  And if all stony men are leaden gray, 
+    sweet Adelbard to Elouise would say:
+    this contradiction, dear, declares a rift
+    between the formal lines I write to you
+    and secret form inside that beats for you,
+    for men of stone would here consist of lies;
+    these written marks permit delusions' spread;
+    the Word creates a space for worlds to grow
+    but Words require a captive world to show.
+.. 
+.. ---
+..
+..  But, Lord of Hell, consider this anon:
+    However large your forces be, one more
+    I add and multiply to dwarf your size,
+    forever circled from above by curves 
+    so smooth their limits straighten out to lines,
+    resolving down but not dissolving bounds.
+..
+.. ---
+..
+..  like Saturn stood astride a yawning rift
+    from all-consuming melancholic time
+    to never-ending reigns of royal state,
