@@ -1,0 +1,63 @@
+.toc {
+    width: 100%;
+    max-width: 800px;
+    margin: 2.5rem auto;
+}
+
+.toc-title {
+    font-family: 'Caveat', cursive;
+    font-size: 3.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    color: var(--color-primary-light);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.toc-item {
+    display: flex;
+    align-items: flex-end; 
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.toc-link {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.toc-link:hover {
+    color: var(--color-primary-light);
+}
+
+.toc-dots {
+    flex-grow: 1;
+    overflow: hidden;
+    color: var(--color-text-secondary);
+    margin: 0 1rem;
+    text-align: right;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.toc-page {
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-left: 2rem; 
+    min-width: 2ch;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.toc-page:hover {
+    color: var(--color-primary-light);
+}

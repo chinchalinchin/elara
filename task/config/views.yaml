@@ -57,6 +57,7 @@ views:
         elara_extensions:
           title: "Elara: Extensions"
           files:
+            source/.extensions/directives/toc.py: python
             source/.extensions/directives/panels.py: python
             source/.extensions/roles/classes.py: python
             source/.extensions/roles/widgets.py: python
@@ -69,6 +70,9 @@ views:
           title: "Elara: Static Files"
           files:
             source/.static/css/custom.css: css
+            source/.static/css/theme.css: css
+            source/.static/css/simulation.css: css
+            source/.static/css/palindromes.css: css 
             source/.static/rst/links.rst: rst
         # ------------------ TERRAFORM
         # ----------------------------

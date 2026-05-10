@@ -36,6 +36,7 @@ extensions = [
     'sphinxcontrib.mermaid',
     # Custom Directives Extensions
     'panels',
+    'toc',
     # Custom Roles Extensions
     'widgets',
     'classes'
@@ -72,6 +73,7 @@ html_css_files = [
     'css/custom.css',
     'css/simulation.css',
     'css/palindromes.css',
+    'css/panels/toc.css',
     'css/panels/rss.css',
     'css/panels/verse.css'
 ]

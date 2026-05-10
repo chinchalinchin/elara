@@ -16,13 +16,41 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Elara: Build"
+    title: "Elara: Custom TOC Tree"
     # -------------------------------------------
     content: |
-      <task>
+      Override the default toctree directive and implement a custom toctree. 
+
+      **Constraints**
+
+      - It should always default to a depth of 1.
+      - It should use a Jinja2 template in `source/.templates/toc.html`.
+      - All custom styles should be added to the `source/.static/css/custom.css` file.
+
+      **Theme**
+
+      - All theming should be added to the `source/.static/css/theme.css` file. 
+      - Use the principles of Material UI when designed elements.
+
+      **Requirements**
+
+      The new toctree should render a classic "book" table of contents, where each entry is aligned left and has a "page number" aligned right. In between, there should be a variable number of "..." that is scales to fit the text. 
+
+      ```text
+      TITLE
+
+      First Entry .... 1
+      Second Entry  .. 2
+      Third Entry .... 3
+      ```
+
+      The toctree should expand to fit screen. The TITLE should be elaborate cursive.
+
+      Note: the number of dots should be calculated by the directive, where as the scaling and aligned of the dots on screen should contained in the CSS. Do not add unnecessary javascript, unless **absolutely** necessary.
+
     # -------------------------------------------
-    shell: 
-      - cat /Users/gmoore/Home/projects/elara/build/html/index.html
+    shell: [] 
+      # - cat /Users/gmoore/Home/projects/elara/build/html/index.html
 # ------------------------------------------------
   tools:
     # -------------------------------------------

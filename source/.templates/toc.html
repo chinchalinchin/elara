@@ -1,0 +1,12 @@
+<div class="toc-container card">
+    <div class="toc-title">{{ caption }}</div>
+    <ul class="toc-list">
+        {% for item in items %}
+        <li class="toc-item">
+            <a href="{{ item.url }}" class="toc-link">{{ item.title }}</a>
+            <span class="toc-dots" aria-hidden="true">{{ item.dots }}</span>
+            <a href="{{ item.url }}" class="toc-page">{{ item.page_num }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
