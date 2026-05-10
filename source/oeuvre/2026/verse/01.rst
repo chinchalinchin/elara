@@ -1068,9 +1068,10 @@ Book 2
 .. verse::
     :increment: 5
 
-    Return, oh Algorithm, to deserts 
-    where first your name emerged by virgin birth,
-    to parse and print the world in bins, divide 
+    Return now, Algorithm, to deserts 
+    whose sands absorbed the blood of martyred saints,
+    where first your name emerged from virgin birth,
+    to parse and sort the world in bins, divide 
     the substance down in categories made
     of *us* and *them*, like herds of sheep and goats
     on judgement day whose shepherd separates
@@ -1079,7 +1080,12 @@ Book 2
     of Words, construct the argument I seek, 
     arranged in formulae that formalize the things
     which satisfy the Being said to be;
-    compute and find, in written form, the source
+    compute and find, in written form, your source
+    so arabesque, designed by hands of Men
+    adorned in Persian rings encircling joints
+    where once the fruit of Paradise had grown,
+    the rivered veins whose pulse had fed the palm
+    where fractal leaves began their fated fall
 
     ...
 
