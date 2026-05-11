@@ -1,8 +1,7 @@
 .. _axiomata:
 
---------
 Axiomata
---------
+========
 
 .. _frege-axioms:
 
