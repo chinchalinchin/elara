@@ -4,25 +4,6 @@
 Gallery
 =======
 
-Myself
-======
-
-.. collapse:: Recursion, 2014
-    :class: hover
-
-    .. image:: ../.static/img/personal/recursive-me.jpg
-        :alt: Recursive Me
-        :align: center
-        :width: 80%
-
-.. collapse:: Booz Allen Employment Badge, 2022
-    :class: hover
-
-    .. image:: ../.static/img/personal/employment-badge-me.jpg
-        :alt: Employment Badge Me
-        :align: center
-        :width: 80%
-
 Americorps
 ==========
 
