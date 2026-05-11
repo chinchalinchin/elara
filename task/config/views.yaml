@@ -61,11 +61,16 @@ views:
             source/.extensions/directives/panels.py: python
             source/.extensions/roles/classes.py: python
             source/.extensions/roles/widgets.py: python
-            source/.templates/panels/map.html.j2: jinja2
-            source/.templates/panels/rss.html.j2: jinja2
-            source/.templates/panels/verse.html.j2: jinja2
-            source/.templates/widgets/back.html.j2: jinja2
-            source/.templates/widgets/share.html.j2: jinja2
+        elara_templates:
+          title: "Elara: Templates"
+          files:
+            source/.templates/theme-switcher.html: jinja2
+            source/.templates/toc.html: jinja2
+            source/.templates/panels/map.html: jinja2
+            source/.templates/panels/rss.html: jinja2
+            source/.templates/panels/verse.html: jinja2
+            source/.templates/widgets/back.html: jinja2
+            source/.templates/widgets/share.html: jinja2
         elara_styles:
           title: "Elara: Styles"
           files:

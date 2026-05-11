@@ -68,7 +68,7 @@ def process_verse_nodes(app, doctree, fromdocname):
                 'number': number
             })
             
-        html = app.builder.templates.render('panels/verse.html.j2', {
+        html = app.builder.templates.render('panels/verse.html', {
             'lines': processed_lines
         })
         
@@ -117,7 +117,7 @@ def process_map_nodes(app, doctree, fromdocname):
         return
     
     for node in doctree.traverse(map_node):
-        map_html = app.builder.templates.render('panels/map.html.j2', {
+        map_html = app.builder.templates.render('panels/map.html', {
             'map_latitude': node['latitude'],
             'map_longitude': node['longitude'],
             'maps_api_key': app.config.google_maps_api_key,
@@ -207,7 +207,7 @@ def process_rss_nodes(app, doctree, fromdocname):
         context['feed_items'] = feed_items
         
         # Render the template
-        feed_html = app.builder.templates.render('panels/rss.html.j2', context)
+        feed_html = app.builder.templates.render('panels/rss.html', context)
         
         new_node = nodes.raw('', feed_html, format='html')
         node.replace_self(new_node)
@@ -257,7 +257,7 @@ def process_share_nodes(app, doctree, fromdocname):
         twitter_icon_path = os.path.relpath('.static/svg/x.svg', from_dir).replace(os.path.sep, '/')
         instagram_icon_path = os.path.relpath('.static/svg/instagram.svg', from_dir).replace(os.path.sep, '/')
         
-        html = app.builder.templates.render('panels/share.html.j2', {
+        html = app.builder.templates.render('panels/share.html', {
                 'facebook': node['facebook'],
                 'twitter': node['twitter'],
                 'instagram': node['instagram'],

@@ -27,7 +27,7 @@ a.feed-card-link, a.feed-card-link:hover, a.feed-card-link:visited {
 
 .feed-card:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 8px 32px rgba(147, 112, 219, 0.4);
+    box-shadow: 0 8px 32px color-mix(in srgb, var(--color-secondary-light) 40%, transparent);
 }
 
 .feed-card-date {

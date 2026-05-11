@@ -46,7 +46,7 @@ def process_back_nodes(app, doctree, fromdocname):
         icon_path = os.path.relpath(icon_path_from_src, from_dir).replace(os.path.sep, '/')
         
         # Render the template
-        html = app.builder.templates.render('widgets/back.html.j2', {
+        html = app.builder.templates.render('widgets/back.html', {
             'link_url': link_url,
             'icon_path': icon_path,
         })
