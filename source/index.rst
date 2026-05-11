@@ -6,12 +6,12 @@
    :caption: Contents:
    :hidden:
 
-   canon/index
-   epistemia/index
-   pedagogy/index
-   theurgy/index
-   analecta/index
-   oeuvre/index
-   fabula/index
+   .content/canon/index
+   .content/epistemia/index
+   .content/pedagogy/index
+   .content/theurgy/index
+   .content/analecta/index
+   .content/oeuvre/index
+   .content/fabula/index
    
 .. rss::

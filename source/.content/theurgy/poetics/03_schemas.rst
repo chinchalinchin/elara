@@ -1,0 +1,480 @@
+
+.. _poetics-schemas:
+
+Section IV: Schemas
+===================
+
+.. _ballad:
+
+Ballad
+------
+
+.. topic:: Schema
+
+    .. math::
+
+        \sum_1^{n} \overline{(a \div \mathfrak{i}_4).(b \div \mathfrak{i}_3).(a:c \div \mathfrak{i}_4).(b \div \mathfrak{i}_3)}
+
+**References**
+
+- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor`_, Frances James Child
+- `The Ballad of the Goodly Fere`_, Ezra Pound
+- `The Ballad of Sir Patrick Stern`_, W. Scott
+- `La Belle Dame sans Merci`_, John Keats
+- `Lord Thomas and Annet`_, Old English Ballad
+- `Tam Lin`_, Old Scottish Ballad
+
+.. _ballade: 
+
+Ballade
+-------
+
+.. topic:: Schema
+    
+    .. math::
+
+        a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + b.c.b.C
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        \overline{[\sum_1^3 {[a.b]^2}.b.c.b.C] + b.c.b.C}
+
+.. topic:: Schema (Ballade Royal)
+
+    .. math::
+
+        [a.b.a + b.b + c.c]:[a.b.a.b + b.c.c]
+
+    :ref:`Reducing <poetics-shorthand>`,
+    
+    .. math::
+
+        [a.b.a + b^2 + c^2]:[[a.b]^2 +b.{c^2}]
+
+.. topic:: Schema (Chant Royal)
+
+    .. math::
+
+        \sum_1^{5} \overline{a.b.a.b.c.c.d.d.e.d.E + [d.d.e.d.E:c.c.d.d.e.d.E]}
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        \sum_1^5 \overline{{[a.b]^2}.{c^2}.{d^2}.e.d.E + [{d^2}.e.d.E:{c^2}{d^2}.e.d.E]}
+
+**References**
+
+None yet found. 
+
+.. _ghazal:
+
+Ghazal
+------
+
+.. topic:: Schema
+
+    .. math::
+
+        p = aA.aA + b.aA + c.aA + ... + x.aA
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        p = [aA]^2 + \sum_{i=1}^{n}[x_i.[aA]]
+
+- The *Matla* (مطلع): The opening couplet.
+- The *Maqta* (مطلع): The final couplet. 
+- The *Qafiya* (قافية): The rhyme.
+- The *Radif* (ردیف): The refrain.
+
+.. note::
+
+    In the formalization,
+
+    1. :math:`\text{Matla} = [aA]^2`
+    2. :math:`\text{Maqta} = x_{n}.[aA]`
+    3. :math:`\text{Qafiya} = a`
+    4. :math:`\text{Radif} = A`
+    
+**References**
+
+- `Tonight`_, Agha Shahid Ali
+
+.. _kyrielle:
+
+Kyrielle
+--------
+
+.. topic:: Schema 
+
+    .. math::
+
+        \sum_1^{n} \overline{[a.a.b.B]:[a.A.b.b]}
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        \sum_1^n \overline{[{a^2}.b.B]:[a.A.{b^2}]}
+
+**References**
+
+- `A Lark in the Mesh`_, John Payne
+- `A Lenten Hymn`_, Thomas Campion
+
+.. _ode:
+
+Ode
+---
+
+No fixed schema.
+
+.. topic:: Horatian Ode (Keatsian Variant)
+
+    .. math::
+
+        \sum_1^8 [{[a.b]^2}.c.d.e \div \mathfrak{i}_5].[c \div \mathfrak{i}_3].[d.e \div \mathfrak{i}_5]
+
+**References**
+
+- `Ode on a Grecian Urn`_, John Keats
+- `Ode to a Nightingale`_, John Keats
+- `Ode to the West Wind`_, Percy Blysse Shelely
+
+.. _ottava:
+
+Ottava
+------
+
+.. topic:: Schema (ottava siciliana)
+
+    .. math::
+
+        a.b.a.b.a.b.a.b
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        [a.b]^4
+
+.. topic:: Schema (strambotto)
+
+    .. math::
+
+        a.b.a.b.c.c.d.d
+
+    :ref:`Reducing <poetics-shorthand>`,
+    
+    .. math::
+        
+        {[a.b]^2}.{c^2}.{d^2}
+
+Each line in a *ottava siciliana* or *strambotto* is a hendecasyllable.
+
+.. topic:: Schema (ottava rima)
+
+    .. math::
+
+        [a.b.a.b.a.b.c.c \div \mathfrak{i}_5]
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        [{[a.b]^3}.{c^2} \div \mathfrak{i}_5]
+        
+**References**
+
+None yet found.
+
+.. _pantoum:
+
+Pantoum
+-------
+
+.. topic:: Schema
+
+    A.B.C.D + B.E.D.F + E.G.F.H + ... + x.y.C.A
+
+**References**
+
+- `Pantoum of the Great Depression`_, Donald Justice
+
+.. _rime-royal:
+
+Rime Royal
+----------
+
+.. topic:: Schema
+
+    .. math::
+
+        [[a.b.a + b.b + c.c]:[a.b.a.b + b.c.c] \div \mathfrak{i}_5]
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        [[a.b.a + b^2 + c^2]:[[a.b]^2 + b.c^2] \div \mathfrak{i}_5]
+
+**References**
+
+None yet found.
+
+.. _rondeau:
+
+Rondeau
+-------
+
+**Medieval Rondeaus**
+
+The following diagram shows the different schemata for the rondeau form in 14th-century France,
+
+.. figure:: ../../../.static/svg/linguistic/14th-century-rondeaus.svg
+  :width: 80%
+  :alt: Diagram of 14th century rondeaus
+  :align: center
+
+.. topic:: Rondeau Schema (Medieval)
+
+    1. Couplet: :math:`A.B.a.A.a.b.A.B`
+    2. Tercet: :math:`A.B.B.a.b.A.B.a.b.b.A.B.B`
+    3. Quatrain: :math:`A.B.B.A.a.b.A.B.a.b.b.a.A.B.B.A`
+    4. Cinquain: :math:`A.A.B.B.A.a.a.b.A.A.B.a.a.b.b.a.A.A.B.B.A`
+
+    This schema can be rewritten to emphasize the *refrain R* within in the form using substitution notation,
+
+    1. Couplet: :math:`R.a.A.a.b.R \mid R = A.B`
+    2. Tercet: :math:`R.a.b.A.B.a.b.b.R \mid R = A.B.B`
+    3. Quatrain: :math:`R.a.b.A.B.a.b.b.a.R \mid R = A.B.B.A`
+    4. Cinquain: :math:`R.a.a.b.A.A.B.a.a.b.b.a.R \mid R = A.A.B.B.A`
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    1. Couplet: :math:`R.a.A.a.b.R \mid R = A.B`
+    2. Tercet: :math:`R.a.b.A.B.a.b^2.R \mid R = A.B^2`
+    3. Quatrain: :math:`R.a.b.A.B.a.b^2.a.R \mid R = A.B^2.A`
+    4. Cinquain: :math:`R.a^2.b.A^2.B.a^2.b^2.a.R \mid R = A^2.B^2.A`
+
+Note that a *Rondeau Couplet* is simply a :ref:`triolet`. 
+
+**Renaissance Rondeaus**
+
+The following diagrams shows the different schemata for the rondeau form duing the Renaissance, 
+
+.. figure:: ../../../.static/svg/linguistic/renaissance-rondeaus.svg
+  :width: 80%
+  :alt: Diagram of Renaissance rondeaus
+  :align: center
+
+.. topic:: Rondeau Schema (Renaissance)
+
+    1. Rondel: :math:`A.B.a.b + a.b.A.B + a.b.b.a.A`
+    2. Rondeau Prime: :math:`(R)a.b.b.a.a.b.R + a.b.b.a.R`
+    3. Rondeau: :math:`(R)a.a.b.b.a + a.a.b + a.a.b.b.a.R`
+
+**Roundel**
+
+.. topic:: Roundel Schema 
+
+    .. math::
+    
+        A.b.a.R + b.a.b + a.b.a.R 
+
+    Where :math:`R \parallel b` and :math:`A \sim R`.
+
+**References**
+
+- `In Flanders Field`_, John McCrae
+- `We Wear the Mask`_, Paul Laurence Dunbar
+
+.. _sestina:
+
+Sestina
+-------
+
+Six sestets followed by a tercet envoi.
+
+.. topic:: Schema
+
+    .. math::
+
+        u(\mathrm{A}).v(\mathrm{B}).w(\Gamma).x(\Delta).y(\mathcal{E}).z(\mathcal{Z}) + 
+    
+    .. math::
+
+        u(\mathcal{Z}).v(\mathrm{A}).w(\mathcal{E}).x(\mathrm{B}).y(\Delta).z(\Gamma) + 
+        
+    .. math::
+
+        u(\Gamma).v(\mathcal{Z}).w(\Delta).x(\mathrm{A}).y(\mathrm{B}).z(\mathcal{E}) +
+        
+    .. math::
+
+        u(\mathcal{E}).v(\Gamma).w(\mathrm{B}).x(\mathcal{Z}).y(\mathrm{A}).z(\Delta) +
+        
+    .. math::
+
+        u(\Delta).v(\mathcal{E}).w(\mathrm{A}).x(\Gamma).y(\mathcal{Z}).z(\mathrm{B}) +
+        
+    .. math::
+
+        u(\mathrm{B}).v(\Delta).w(\mathcal{Z}).x(\mathcal{E}).y(\Gamma).z(\mathrm{A}) + 
+        [t_1:t_2] | 
+    
+    .. math::
+
+        t1 = ((u \circ \mathrm{A}) \circ \mathrm{B}).((v \circ \Gamma) \circ \Delta).((w \circ \mathcal{E}) \circ \mathcal{Z}),
+    
+    .. math::
+
+        t2 = ((u \circ \mathrm{A}) \circ \Delta).((v \circ \mathrm{B}) \circ \mathcal{E}).((w \circ \Gamma) \circ \mathcal{Z}),
+
+.. TODO: Projection Bug
+    I don't think the current definition of projection will ensure `t_1` and `t_2` aren't empty, i.e. I think caesures will satisfy this schema!
+
+.. important::
+
+    Refer to the :ref:`Appendix <poetics-appendix>` for a provisional definition of :ref:`projection <poetics-projection>`.
+    
+**References**
+
+- `Sestina (Bishop)`_, Elizabeth Bishop
+- `Sestina of the Tramp-Royal`_, Rudyard Kipling
+- `Sestina, Travel Notes`_, Weldon Kees
+
+.. _sonnet:
+
+Sonnet
+------
+
+.. topic:: Schema (Petrachan)
+
+    .. math::
+    
+        a.b.b.a.a.b.b.a + c.d.e.c.d.e:c.d.c.d.c.d
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        [a.b^2.a]^2 + [{[c.d.e]^2}:{[c.d]^3}]
+
+.. topic:: Schema (Shakespearan)
+
+    .. math::
+
+        [\sum_i^{3} \overline{a.b.a.b} + a.a \div \mathfrak{i}_5]
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        [\sum_i^{3} \overline{[a.b]^2} + a^2 \div \mathfrak{i}_5]
+
+
+.. topic:: Schema (Spenserian)
+
+    .. math::
+
+        [a.b.a.b + b.c.b.c + c.d.c.d + e.e \div \mathfrak{i}_5]
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        [[a.b]^2 + [b.c]^2 + [c.d]^2 + e^2 \div \mathfrak{i}_5]
+
+.. TODO: Interlocking Specification
+    need some way of representing the interlocking rhyme scheme. Some way of recursive defining the index of the sum! This would be useful for pantoums and terzas as well!
+
+**References**
+
+- `Batter My Heart, Three Person'd God`_, John Donne
+- `Death Be Not Proud`_, John Donne
+- `On the Grasshopper and Cricket`_, John Keats
+- `When I Have Seen By Times Fell Hand Defac'd`_, William Shakespeare
+
+.. _terza:
+
+Terza
+-----
+
+.. topic:: Schema
+
+    .. math::
+
+        a.b.a + b.c.b + c.d.c + d.e.d +  ...
+
+**References**
+
+None yet found.
+
+.. _triolet:
+
+Triolet
+-------
+
+.. topic:: Schema
+
+    .. math::
+
+        [A.B.a.A.a.b.A.B \div \mathfrak{i}_n]
+
+**References**
+
+- `Birds at Winter Nightfall`_, Thomas Hardy
+- `How Great My Grief`_, Thomas Hardy
+
+.. _virelai:
+
+Virelai
+-------
+
+.. topic:: Schema (Ancien)
+    
+    .. math::
+        
+        a.a.♭b.a.a.♭b.a.a.♭b + b.b.♭c.b.b.♭c.b.b.♭c + ... 
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+        
+        [a^2.♭b]^3 + [b^2.♭c]^3 + ... 
+
+.. topic:: Schema (Nouveau)
+
+    .. math::
+
+        A_1.b.b.a.A_2 + B_1.c.c.b.B_2 +  ...
+    
+**References**
+
+- `July`_, Henry Austin Dobson
+- `Spring Sadness`_, John Payne
+
+.. _villanelle:
+
+Villanelle
+----------
+
+.. topic:: Schema 
+
+    .. math::
+
+        A_1.b.A_2 + a.b.A_1 + a.b.A_2 + a.b.A_1 + a.b.A_2 + a.b.A_1.A_2
+
+**References**
+
+- `Do Not Go Gentle into That Good Night`_, Dylan Thomas
+- `Mad Girl's Love Song`_, Sylvia Plath
+- `One Art`_, Elizabeth Bishop
+- `Song`_, John Fuller
+- `The Waking`_, Theodore Roethke
+  
