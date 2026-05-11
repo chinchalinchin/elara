@@ -3,16 +3,26 @@
   --pst-color-primary:  #9370DB !important;
   --pst-color-secondary: #42A5F5 !important;
   --pst-color-link-hover: #64B5F6 !important;
-  
+  --pst-color-warning: #FFAB40; 
+  --pst-color-danger: #CF6679;
+  --pst-color-success: #66BB6A;
+
   /* -- Primary Colors (Deep Space Purple) -- */
-  --color-primary-main: #9370DB;
-  --color-primary-light: #B39DDB;
-  --color-primary-dark: #7B1FA2;
+  --color-primary-glow:     #CBBCE8; /* Lighter, highly legible on dark surfaces */
+  --color-primary-light:    #B39DDB;
+  --color-primary-moderate: #A386DB; /* Midpoint between Light and Main */
+  --color-primary-main:     #9370DB;
+  --color-primary-medium:   #8748BF; /* Shifts hue smoothly toward the warmer Dark */
+  --color-primary-dark:     #7B1FA2;
   
   /* -- Secondary Colors (Galactic Blue) -- */
-  --color-secondary-main: #42A5F5;
-  --color-secondary-light: #64B5F6;
-  --color-secondary-dark: #1976D2;
+  --color-secondary-glow:     #90CAF9; /* Material Blue 200 */
+  --color-secondary-light:    #64B5F6;
+  --color-secondary-moderate: #53ADF6; /* Midpoint between Light and Main */
+  --color-secondary-main:     #42A5F5;
+  --color-secondary-medium:   #2E8EE4; /* Midpoint between Main and Dark */
+  --color-secondary-dark:     #1976D2;
+
 
   /* -- Background & Surface Colors -- */
   --color-background-default: #121212; 

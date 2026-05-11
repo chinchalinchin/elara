@@ -157,7 +157,7 @@ Dodonic Branch
 - Starting Root: Maria van Rensselaer (1673-1713)
 - Source Branch: Elder
 
- .. mermaid:: ../../.static/mmd/trees/van-rensselaer/genealogy/female-branches/00-dodonic-branch.mmd
+.. mermaid:: ../../.static/mmd/trees/van-rensselaer/genealogy/female-branches/00-dodonic-branch.mmd
     :zoom:
 
 Sibylline Branch
@@ -166,7 +166,7 @@ Sibylline Branch
 - Starting Root: Maria van Rensselaer (1702-1723)
 - Source Branch: Elder
 
- .. mermaid:: ../../.static/mmd/trees/van-rensselaer/genealogy/female-branches/01-sibylline-branch.mmd
+.. mermaid:: ../../.static/mmd/trees/van-rensselaer/genealogy/female-branches/01-sibylline-branch.mmd
     :zoom:
 
 Chthonic Branch

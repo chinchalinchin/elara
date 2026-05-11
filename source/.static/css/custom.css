@@ -78,6 +78,22 @@ nav.bd-links .current > a {
     color: var(--color-primary-main);
 }
 
+.bd-sidebar-primary, 
+footer.bd-footer-content,
+aside.topic, 
+div.topic, 
+div.topic.contents, 
+nav.contents {
+    background-color: var(--color-background-paper) !important;
+}
+
+aside.topic, 
+div.topic, 
+div.topic.contents, 
+nav.contents {
+    border-color: var(--color-secondary-glow) !important;
+}
+
 /* -- Table Overrides -- */
 .table {
     --bs-table-color: var(--color-text-primary);
