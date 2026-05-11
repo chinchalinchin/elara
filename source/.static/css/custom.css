@@ -9,7 +9,7 @@
 }
 
 .hover:hover, nav.bd-links li>a:hover {
-    color: var(--color-primary-light);
+    color: var(--color-secondary-light);
 }
 
 .small {

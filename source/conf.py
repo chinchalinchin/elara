@@ -61,40 +61,47 @@ rst_prolog = """
 # -- HTML Configuration -------------------------------------------------
 
 html_baseurl = 'https://elara.chinchalinchin.com'
+
 html_favicon = '.static/favicon.svg'
+
 html_extra_path = ['robots.txt']
+
 html_theme = 'sphinx_book_theme'
+
 html_static_path = [ 
     '.static',
     '.scripts'
 ]
+
 html_css_files = [
     'css/theme.css',
     'css/custom.css',
-    'css/simulation.css',
-    'css/palindromes.css',
+    'css/etc/simulation.css',
+    'css/etc/palindromes.css',
     'css/panels/toc.css',
     'css/panels/rss.css',
     'css/panels/verse.css'
 ]
+
 html_js_files = [
    'js/custom-icons.js'
 ]
+
 html_theme_options = {
     "analytics": {
         "google_analytics_id": "G-BRG311ZM0P"
     },
     "icon_links": [
         {
-            "name": "Docker",
-            "url": "https://hub.docker.com/u/chinchalinchin",
-            "type": "fontawesome",
-            "icon": "fa-custom fa-docker"
-        },{
             "name": "GitHub",
             "url": "https://github.com/chinchalinchin/",
             "type": "fontawesome",
             "icon": "fa-custom fa-github"
+        },{
+            "name": "Docker",
+            "url": "https://hub.docker.com/u/chinchalinchin",
+            "type": "fontawesome",
+            "icon": "fa-custom fa-docker"
         },{
             "name": "PyPi",
             "url": "https://pypi.org/user/chinchalinchin/",
