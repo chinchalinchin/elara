@@ -2,7 +2,7 @@
 /** --- RSS Feed Widget --- **/
 /*****************************/
 
-.feed-container {
+.feed { 
     display: flex;
     flex-direction: column;
     gap: 0.75rem;

@@ -8,11 +8,11 @@ B39DDB primary-light
 42A5F5 secondary-main (Galactic Blue)
 64B5F6 secondary-light
 1976D2 secondary-dark
-121212 background-default (Base page background)
-1E1E1E background-paper (For components like sidebars, code blocks, cards)
-CF6679 error (For errors and danger states)
-FFAB40 warning (For warnings and alerts)
-29B6F6 info (For informational messages)
-66BB6A success (For success states)
-DDDDDD text-primary (Main body text)
-999999 text-secondary (Secondary text, captions)
+121212 background-default
+1E1E1E background-paper
+CF6679 error
+FFAB40 warning
+29B6F6 info
+66BB6A success
+DDDDDD text-primary
+999999 text-secondary

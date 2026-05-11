@@ -1,9 +1,13 @@
 :root {
+  /* -- PyData Overrides -- */
+  --pst-color-primary:  #9370DB;
+  --pst-color-link-hover: ;
+  
   /* -- Primary Colors (Deep Space Purple) -- */
   --color-primary-main: #9370DB;
   --color-primary-light: #B39DDB;
   --color-primary-dark: #7B1FA2;
-
+  
   /* -- Secondary Colors (Galactic Blue) -- */
   --color-secondary-main: #42A5F5;
   --color-secondary-light: #64B5F6;

@@ -66,14 +66,15 @@ views:
             source/.templates/panels/verse.html.j2: jinja2
             source/.templates/widgets/back.html.j2: jinja2
             source/.templates/widgets/share.html.j2: jinja2
-        elara_static:
-          title: "Elara: Static Files"
+        elara_styles:
+          title: "Elara: Styles"
           files:
             source/.static/css/custom.css: css
             source/.static/css/theme.css: css
             source/.static/css/simulation.css: css
             source/.static/css/palindromes.css: css 
-            source/.static/rst/links.rst: rst
+            source/.static/gpl/allegany-galactic.css: css
+            # source/.static/rst/links.rst: rst
         # ------------------ TERRAFORM
         # ----------------------------
         tf_platform:
