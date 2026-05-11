@@ -88,6 +88,7 @@ html_js_files = [
 ]
 
 html_theme_options = {
+    "show_prev_next": False,
     "analytics": {
         "google_analytics_id": "G-BRG311ZM0P"
     },

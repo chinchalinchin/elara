@@ -77,3 +77,46 @@ nav.bd-links .current > a {
     box-shadow: inset max(3px, .1875rem, .12em) 0 0 var(--color-primary-main);
     color: var(--color-primary-main);
 }
+
+/* -- Table Overrides -- */
+.table {
+    --bs-table-color: var(--color-text-primary);
+    --bs-table-bg: var(--color-background-paper);
+    
+    /* Border: 20% opacity of secondary */
+    --bs-table-border-color: color-mix(in srgb, var(--color-secondary-main) 20%, transparent);
+    
+    /* Striped (Alternating): Material standard 4% opacity over surface */
+    --bs-table-striped-color: var(--color-text-primary);
+    --bs-table-striped-bg: color-mix(in srgb, var(--color-secondary-main) 4%, transparent);
+    
+    /* Hover: Material standard 8% opacity over surface */
+    --bs-table-hover-color: var(--color-text-primary);
+    --bs-table-hover-bg: color-mix(in srgb, var(--color-secondary-main) 8%, transparent);
+    
+    /* Active/Selected: Material standard 12% opacity over surface */
+    --bs-table-active-color: var(--color-text-primary);
+    --bs-table-active-bg: color-mix(in srgb, var(--color-secondary-main) 12%, transparent);
+}
+
+/* Enforce Sphinx Docutils row striping and hover states */
+.table tbody tr.row-odd > * {
+    background-color: var(--bs-table-striped-bg);
+    color: var(--bs-table-striped-color);
+}
+
+.table tbody tr:hover > * {
+    background-color: var(--color-primary-light) !important;
+    color: var(--color-background-paper);
+}
+
+/* Emphasize the table headers using the secondary palette */
+.table thead th {
+    color: var(--color-secondary-dark);
+    border-bottom: 2px solid var(--color-secondary-main);
+}
+
+/* Neutralize caption contrast to reduce visual clutter */
+.table caption {
+    color: var(--color-text-secondary);
+}
