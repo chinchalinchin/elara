@@ -71,9 +71,9 @@ views:
           files:
             source/.static/css/custom.css: css
             source/.static/css/theme.css: css
-            source/.static/css/simulation.css: css
-            source/.static/css/palindromes.css: css 
-            source/.static/gpl/allegany-galactic.css: css
+            source/.static/css/etc/simulation.css: css
+            source/.static/css/etc/palindromes.css: css 
+            source/.static/gpl/allegany-galactic.gpl: gpl
             # source/.static/rst/links.rst: rst
         # ------------------ TERRAFORM
         # ----------------------------

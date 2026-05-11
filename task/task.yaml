@@ -21,7 +21,7 @@ task:
     content: |
       If this can be done through the conf.py, do that. If not, override the appropriate template.
 
-      - Remove the <footer> which has the "Next" and "Previous" buttons.
+      - Remove the <footer> which has the "Next" and "Previous" buttons at the bottom of the page.
       - Remove the "dark/light" toggle. Website should always be in dark mode. 
     # -------------------------------------------
     shell: 
