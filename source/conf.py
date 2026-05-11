@@ -14,7 +14,7 @@ import subprocess
 
 project = "elara"
 toc_title = "elara"
-copyright = '2023 - 2026, chinchalinchin industries'
+copyright = '2023 - 2026, allegany galactic nucleus'
 author = 'Grant Moore'
 
 # -- Path setup --------------------------------------------------------------
