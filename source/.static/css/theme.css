@@ -25,10 +25,12 @@
 
 
   /* -- Background & Surface Colors -- */
-  --color-background-default: #121212; 
-  --color-background-paper: #1E1E1E;   
-  --color-background-heading: #181818;
-  --color-background-hover: #272727;
+  --color-background-default: #121212; /* Base / 0dp */
+  --color-background-heading: #181818; /* Subtle contrast */
+  --color-background-paper:   #1E1E1E; /* DP01: 5% overlay */
+  --color-background-hover:   #272727; /* DP04: 9% overlay */
+  --color-background-panel:   #2E2E2E; /* DP08: 12% overlay */
+  --color-background-card:    #353535; /* DP16: 15% overlay */
   
   /* -- UI State Colors -- */
   --color-error: #CF6679;   

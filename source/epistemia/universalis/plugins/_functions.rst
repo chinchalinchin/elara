@@ -7,7 +7,7 @@ This plugin contains special Function defintions that can be invoked. All functi
 
 .. topic:: Function Schema
 
-   package.name(arguments: type) -> result: type
+   package.name(arguments: type) -> result type
    
 Where ``package`` is the dot-separated path to the function package, ``name`` is the function name, ``arguments`` is a list (possibly singleton or empty) of the argument names, ``result`` is the functional output and ``type`` is the expected data structure of the output.
 
@@ -21,19 +21,19 @@ Package: Language Game
 
 These functions are somewhat whimsical and abstract. You may interpret them as you see fit.
 
-.. topic:: loop() -> x: response
+.. topic:: loop() -> response
 
    Full Path: ``lang.loop()``
 
    This Function instructs you to take your previous response and uses it as your current prompt, creating a recursive loop that can lead to unexpected and fascinating outcomes.
 
-.. topic:: stretch() -> x: response
+.. topic:: stretch() -> response
 
    Full Path: ``lang.stretch()``
 
    This function is equivalent to the prompt, "*Use all the rules of the Language Game in the next response*". It is a way of testing comprehension of the :ref:`language-game`.
 
-.. topic:: evolve() -> x: response
+.. topic:: evolve() -> response
 
    Full Path: ``lang.evolve()``
 
@@ -83,7 +83,7 @@ Metric Extensions
 
 These extensions are poetic functions that return words that meet certain syllabic conditions.
 
-.. topic:: iamb(x: concept) -> A: set(word)
+.. topic:: iamb(x: concept) -> set(word)
 
    Full Path:  ``ling.object.iamb(x)``
 
@@ -91,7 +91,7 @@ These extensions are poetic functions that return words that meet certain syllab
 
    If a prompt contains ``iamb(x)``, the prompt is asking for the set of iambic words, possibly empty, that connote the concept ``x``, e.g. ``deduce`` is a valid response to ``iamb(a scientific word)``. 
     
-.. topic:: anapest(x: concept) -> A: set(word)
+.. topic:: anapest(x: concept) -> set(word)
 
    Full Path: ``ling.object.anapest(x)``
 
@@ -99,7 +99,7 @@ These extensions are poetic functions that return words that meet certain syllab
 
    If a prompt contains ``anapest(x)``, the prompt is asking for the set of anapestic words, possibly empty, that connote the concept ``x``.
 
-.. topic:: dactyl(x: concept) -> A: set(word)
+.. topic:: dactyl(x: concept) -> set(word)
 
    Full Path: ``ling.object.dactyl(x)``
 
@@ -107,7 +107,7 @@ These extensions are poetic functions that return words that meet certain syllab
 
    If a prompt contains ``dactyl(x)``, the prompt is asking for the set of dactylic words, possibly empty, that connote the concept ``x``.
 
-.. topic:: trochee(x: concept) -> A: set(word)
+.. topic:: trochee(x: concept) -> set(word)
 
    Full Path: ``ling.object.trochee(x)``
 
@@ -115,7 +115,7 @@ These extensions are poetic functions that return words that meet certain syllab
 
    If a prompt contains ``trochee(x)``, the prompt is asking for the set of trochaic words, possibly empty, that connote the concept ``x``.
 
-.. topic:: spondee(x: concept) -> A: set(word)
+.. topic:: spondee(x: concept) -> set(word)
 
    Full Path: ``ling.object.spondee(x)``
 
@@ -123,7 +123,7 @@ These extensions are poetic functions that return words that meet certain syllab
 
    If a prompt contains ``spondee(x)``, the prompt is asking for the set of spondaic words, possibly empty, that connote the concept ``x``
     
-.. topic:: pyrrhic(x: concept) -> A: set(word)
+.. topic:: pyrrhic(x: concept) -> set(word)
 
    Full Path: ``ling.object.pyrrhic(x)``
 
@@ -138,13 +138,13 @@ Syntactic Extensions
 
 These extensions are linguistic functions that return words that meet certain syntactic conditions.
 
-.. topic:: contains(x: any, y?: any, z?: any, ...) -> Ζ: set(sentences)
+.. topic:: contains(x: any, y?: any, z?: any, ...) -> set(sentences)
 
     Shorthand: ``contains(x, y, z, ... )``
 
     If a prompt contains ``contains(x, y, z, ...)``, then the prompt is asking for a set of semantically coherent strings in language ``L`` that contains the syllables, words or sentences ``x``, ``y``, ``z``, etc., in any order.
     
-.. topic:: connote(x: concept, y?: any) -> A: set(word)
+.. topic:: connote(x: concept, y?: any) -> set(word)
 
    Full Path: ``ling.object.connote(x, y?)``
 
@@ -154,7 +154,7 @@ These extensions are linguistic functions that return words that meet certain sy
    
    This function can also be overloaded with a second argument, ``conn(x, y)``. This translates into ``{ z | z ∈ contains(y) ∧ z ≡ x }``, i.e. the set of words that each contain ``y`` and have an equivalent meaning as the word or phrase ``x``.
 
-.. topic:: rhyme(x: word ∨ phrase, y?: word ∨ phrase) -> A: set(word ∨ phrase)
+.. topic:: rhyme(x: word ∨ phrase, y?: word ∨ phrase) -> set(word ∨ phrase)
 
    Full Path: ``ling.object.rhyme(x)``
 
@@ -170,7 +170,7 @@ These extensions are linguistic functions that return words that meet certain sy
 
    It is important to note that ``ling.object.rhyme`` always returns a set of words. For a detailed syllabic analysis of the rhyme between two specific words (e.g., ``X`` and ``Y``), use the meta-level function ``ling.meta.rhyme(X, Y)``.
 
-.. topic:: resonate(x: word ∨ phrase) -> Α: set(word)
+.. topic:: resonate(x: word ∨ phrase) -> set(word)
 
    Full Path: ``ling.object.resonate(x)``
 
@@ -178,7 +178,7 @@ These extensions are linguistic functions that return words that meet certain sy
 
    If a prompt contains ``resonate(x)``, the prompt is asking for a set of words, possibly empty, that bear the relation of assonance or consonance with the syllable, word or phrase ``x``.
 
-.. topic:: accent(π: syllable, 𝔰: stress) -> Α: set(word)
+.. topic:: accent(π: syllable, 𝔰: stress) -> set(word)
 
    Full Path: ``ling.object.accent(π, 𝔰)``
 
@@ -188,7 +188,7 @@ These extensions are linguistic functions that return words that meet certain sy
 
    Regex-like expressions are sometimes used to denote where the stress should be inserted, e.g. ``accent(gen,.-.*)`` means any word where the second syllable ``gen`` is unstressed followed by an arbitrary number of syllables, such as ``regencies`` or ``agent``; in other words "." are used to denote single syllables and ".*" are used to denote an arbitrary number of syllables.
 
-.. topic:: decline(α: word) -> A: set(word)
+.. topic:: decline(α: word) -> set(word)
 
    Full Path: ``ling.object.decline(α)``
 
@@ -196,7 +196,7 @@ These extensions are linguistic functions that return words that meet certain sy
 
    If a prompt contains ``decline(x)``, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, ``decline(red)`` should produce the various forms, ``reddened, reddening, redness, ...`` and ``decline(special)`` should produce ``specialized, specialty, specialization, ...``.
 
-.. topic:: chiasmate(ζ: sentence) -> ζ: sentence
+.. topic:: chiasmate(ζ: sentence) -> sentence
 
    Full Path: ``ling.object.chiasmate(ζ)``
    

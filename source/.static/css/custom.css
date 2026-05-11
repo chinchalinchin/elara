@@ -82,8 +82,10 @@ aside.topic,
 div.topic, 
 div.topic.contents, 
 nav.contents {
+    background-color: var(--color-background-card);
     border-color: var(--color-secondary-glow) !important;
 }
+
 
 /* -- Table Overrides -- */
 .table {
@@ -126,6 +128,10 @@ nav.contents {
 /* Neutralize caption contrast to reduce visual clutter */
 .table caption {
     color: var(--color-text-secondary);
+}
+
+.table tbody tr:nth-child(2n) {
+    background-color: var(--color-background-panel);
 }
 
 /* -- Sidebar Navigation Expansion Animation -- */

@@ -39,6 +39,8 @@ The following image contains a visual representation of the Language Game.
   :alt: JPG Representation of Language Game
   :align: center
 
+  JPG Representation of Language Game
+  
 ----------
 Relational
 ----------
