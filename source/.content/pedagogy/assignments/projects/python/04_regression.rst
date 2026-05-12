@@ -490,36 +490,36 @@ The following code snippet will load in a *CSV* spreadsheet named ``example.csv`
 Celebrity Twitter
 -----------------
 
-You can download the full dataset :download:`here <../../../.static/csv/cultural/celebrity-twitter-data.csv>`
+You can download the full dataset :download:`here <../../../../../.static/csv/cultural/celebrity-twitter-data.csv>`
 
 The following table is a preview of the data you will be using for this project.
 
 .. csv-table:: Celebrity Twitter Followers and Tweet Count
-    :file: ../../../.static/csv/previews/celebrity-twitter-data-preview.csv
+    :file: ../../../../../.static/csv/previews/celebrity-twitter-data-preview.csv
 
 The fifth column represents the number of followers for a given Twitter user. The sixth column represents the number of tweets for a given Twitter user.
 
 Old Faithful
 ------------
 
-You can download the full dataset :download:`here <../../../.static/csv/scientific/old-faithful-data.csv>`.
+You can download the full dataset :download:`here <../../../../../.static/csv/scientific/old-faithful-data.csv>`.
 
 The following table is a preview of the data you will be using for this project. 
 
 .. csv-table:: Old Faithful Eruption and Waiting Times
-   :file: ../../../.static/csv/previews/old-faithful-data-preview.csv
+   :file: ../../../../../.static/csv/previews/old-faithful-data-preview.csv
 
 The first column represents the length of the eruption in minutes. The second column represents the waiting time in minutes until the next eruption.
 
 Spice Girls Song Length
 -----------------------
 
-You can download the full dataset :download:`here <../../../.static/csv/cultural/spice-girls-song-data.csv>`.
+You can download the full dataset :download:`here <../../../../../.static/csv/cultural/spice-girls-song-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Spice Girl Song Lengths
-   :file: ../../../.static/csv/previews/spice-girls-song-data-preview.csv
+   :file: ../../../../../.static/csv/previews/spice-girls-song-data-preview.csv
 
 The third column represents the song length in milliseconds. The fifth column represents the track number of the song on the studio album on which it was released.
 

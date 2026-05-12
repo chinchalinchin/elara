@@ -48,7 +48,8 @@ The :ref:`cardinality` of a set is found by calculating its :ref:`length <python
     print(total_pets)
 
 .. collapse:: Cardinality Solution
-        
+    :class: collapse-panel
+     
     Output:
 
         5
@@ -66,6 +67,7 @@ The :ref:`union` of two sets is found by,
     print(pets_or_poets)
 
 .. collapse:: Union Solution 
+    :class: collapse-panel
 
     Output:
 
@@ -88,6 +90,7 @@ The :ref:`intersection` of two sets is found by,
     print(four_legs_and_swims)
 
 .. collapse:: Intersection Solution
+    :class: collapse-panel
 
     Output:
 
@@ -106,6 +109,7 @@ The :ref:`set-difference` of two sets is found by,
     print(swims_but_not_warmblooded)
 
 .. collapse:: Difference Solution 
+    :class: collapse-panel
 
     Output:
 

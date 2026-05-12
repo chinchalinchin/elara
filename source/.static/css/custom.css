@@ -155,7 +155,7 @@ nav.contents {
 /* -- Custom Collapse Panels -- */
 
 /* 1. The Container (Unexpanded State) */
-details.hover {
+details.collapse-panel {
     display: block;
     width: 100%;
     background-color: var(--color-background-paper);
@@ -172,7 +172,7 @@ details.hover {
 }
 
 /* 2. The Hover State (Popup Effect) */
-details.hover:hover {
+details.collapse-panel:hover {
     transform: translateY(-4px);
     
     /* Material Design Elevation 4 + Colored Glow */
@@ -182,7 +182,7 @@ details.hover:hover {
 }
 
 /* 3. The Clickable Summary Bar */
-details.hover > summary {
+details.collapse-panel > summary {
     display: flex;
     align-items: center;
     padding: 1rem 1.5rem;
@@ -196,19 +196,19 @@ details.hover > summary {
 }
 
 /* Hide WebKit's specific default marker */
-details.hover > summary::-webkit-details-marker {
+details.collapse-panel > summary::-webkit-details-marker {
     display: none;
 }
 
 /* 4. Active/Open State for the Summary Bar */
-details.hover[open] > summary {
+details.collapse-panel[open] > summary {
     background-color: var(--color-background-hover);
     color: var(--color-primary-light);
     border-bottom: 1px solid color-mix(in srgb, var(--color-primary-main) 30%, transparent);
 }
 
 /* 5. Custom Icon (Spiral SVG) via Masking */
-details.hover > summary::before {
+details.collapse-panel > summary::before {
     content: '';
     display: inline-block;
     width: 1.25rem;
@@ -232,13 +232,13 @@ details.hover > summary::before {
 }
 
 /* 6. Animate the Spiral Icon when expanded */
-details.hover[open] > summary::before {
+details.collapse-panel[open] > summary::before {
     transform: rotate(180deg) scale(1.1);
     background-color: var(--color-primary-light);
 }
 
 /* 7. Inner Content Animation Reveal */
-details.hover > *:not(summary) {
+details.collapse-panel > *:not(summary) {
     display: block; 
     padding: 1.5rem;
     opacity: 0;

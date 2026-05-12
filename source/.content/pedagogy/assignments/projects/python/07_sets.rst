@@ -5,6 +5,7 @@ Sample Spaces
 =============
 
 .. epigraph:: 
+
 	Something
 
 	-- Someone
@@ -41,6 +42,7 @@ There are other types of :ref:`set-operations` that we didn't cover in class. On
 We start with the *formal definition*. The *Cartesian Product* of two sets **A** and **B**, :math:`A x B`, is defined as,
 
 .. math::
+    
     A x B = \{ \forall x \in A, y \in B: (x, y) \}
 
 In plain English,
@@ -50,9 +52,11 @@ In plain English,
 An example will help to show what is meant. Consider the two sets **A** and **B**,
 
 .. math::
+
     A = \{ a, b, c \}
 
 .. math::
+    
     B = \{ d, e, f \}
 
 A simple way to visualize the *Cartesian Product* is by forming a table where the top row corresponds to the elements of **A** and the first column corresponds to elements of **B**. Then, in each entry, write the ordered pair formed by the intersection of rows and columns,

@@ -58,7 +58,7 @@ Suppose you live in the aptly named *Town A* and are planing a road trip to the 
 
 Suppose further there are two routes from *Town A* to *Town B*, and there are three routes from *Town B* to *Town C*. Let us call the routes from *Town A* to *Town B* *a* :sub:`1` and *a* :sub:`2`, respectively. Let us call the routes from *Town B* to *Town C* *b* :sub:`1`, *b* :sub:`2`, and *b* :sub:`3`, respectively. This setup is depicted in the following diagram,
 
-.. image:: ../../.static/img/mathematical/combinatorics/combinatorics-road-trip.png
+.. image:: ../../../.static/img/mathematical/combinatorics/combinatorics-road-trip.png
    :width: 60%
    :align: center
 
@@ -67,12 +67,13 @@ How many different routes can you take from *Town A* to *Town C*, by way of *Tow
 Before toggling the solution below, try and figure out the answer by drawing arrows from *Town A* to *Town B*, and then from *Town B* to *Town C* that represent the possible routes you can take and then count up each distinct route. In other worlds, generate a :ref:`Sample Space <sample-space>` for this "experiment".
 
 .. collapse:: Solution
+    :class: collapse-panel
 
     We start by breaking down the problem into the choices we are making at each stage of the road trip. Starting in *Town A*, we have two possible routes from which we can choose to get to *Town B*. Once we arrive in *Town B*, regardless of the route we took to get there, we then have three possible routes to choose from that lead from *Town B* to *Town C*. To put it a different way, for each route from *Town A* to *Town B*, there are three routes from *Town B* to *Town C*.
 
     Each choice represents a branch. Every time we make a choice, we are narrowing down the set of possible outcomes. With that in mind, we can represent each choice as a *branch* in a tree, as in the following diagram,
 
-    .. image:: ../../.static/img/mathematical/combinatorics/combinatorics-tree-diagram.png
+    .. image:: ../../../.static/img/mathematical/combinatorics/combinatorics-tree-diagram.png
         :width: 60%
         :align: center
 
@@ -118,10 +119,11 @@ Before stating the *Counting Principle* formally, we will take a look at one mor
 You are trying to figure out what to outfit to wear. In your closet, you have a red, green, blue and orange shirt. In your dresser, you have a pair of blue jeans, a pair of khakis and a pair of sweat pants. How many possible choices do you have for your outfit?
 
 .. collapse:: Solution
-    
+    :class: collapse-panel
+
     We have two sets in this problem: the set of shirts in our closet, and the set of pants in our dresser. 
 
-    .. image:: ../../.static/img/mathematical/combinatorics/combinatorics-example.png
+    .. image:: ../../../.static/img/mathematical/combinatorics/combinatorics-example.png
         :width: 60%
         :align: center
 
@@ -182,7 +184,7 @@ Example
 	
 TODO
 
-.. image:: ../../.static/img/mathematical/combinatorics/combinatorics-tree-diagram-coinflips.png
+.. image:: ../../../.static/img/mathematical/combinatorics/combinatorics-tree-diagram-coinflips.png
     :align: center
 
 TODO
@@ -210,6 +212,7 @@ Before stating the first important corollary that follows from the *Generalized 
     In other words, what is the *cardinality* of the *Power Set of A*, :math:`n(\mathcal{P}(A))`?
 
 .. collapse:: Solution
+    :class: collapse-panel
 
     Let **A** represent the set of pizza topping,
     
@@ -268,6 +271,7 @@ Three friends, Aletheia, Bertha and Cornelius, are running a foot race to determ
 *Well*, my fellow statistician, how many ways *can* this race between Aletheia, Bertha and Cornelius finish? Before toggling the solution below, try and figure out the answer by listing each possible outcome and then totaling the number of results.
 
 .. collapse:: Solution
+    :class: collapse-panel
 
     The key to understanding this problem is to recognize the *order* in which these three friends finish the race matters. If we let *a* represent Aletheia finishing the race, *b* represent Bertha finishing the race and *c* represent Cornelius finishing the face, we can enumerate the possible outcomes of the race as *permutations* of the sequence *abc*,
 
@@ -281,7 +285,7 @@ Three friends, Aletheia, Bertha and Cornelius, are running a foot race to determ
 
     This can be visualized through a modified :ref:`tree diagram <tree-diagrams>`, where subsequent branches in the tree diagram are affected by the value of the current branch,
 
-        .. image:: ../../.static/img/mathematical/combinatorics/combinatorics-permuted-tree-diagram.png
+        .. image:: ../../../.static/img/mathematical/combinatorics/combinatorics-permuted-tree-diagram.png
             :width: 60%
             :align: center
 
@@ -294,6 +298,7 @@ Three friends, Aletheia, Bertha and Cornelius, are running a foot race to determ
 **Example**
 
 .. collapse:: Solution 
+    :class: collapse-panel
 
     TODO 
 
@@ -324,6 +329,7 @@ Motivation
 The same three friends from the permutation section, Aletheia, Bertha and Cornelius, have tossed their sneakers aside and decided their talents would be better served enriching the school culture. They each put their names into the running for Prom Committee. Unfortunately, there are only two open positions on the committee. How many ways can these open positions be filled by the three friends?
 
 .. collapse:: Solution
+    :class: collapse-panel
 
     TODO
 
@@ -347,6 +353,7 @@ Formula
     In Maryland's lottery, players pick six different (*natural*) numbers between 1 and 49, order of selection being irrelevant. The lottery commission then randomly selects six of these as the *winning numbers*. A player wins the grand prize if all six numbers that he or she has selected match the winning numbers. He or she wins the second prize if exactly five match, and the third prize if exactly four of the six numbers chosen match with the winning ones. Find the probability that a certain choice of a bettor wins the grand prize, the second prize and the third prize. 
 
 .. collapse:: Solution 
+    :class: collapse-panel
 
     Let **Z** represent the event of selecting all six winning numbers. Let **Y** represent the event of selecting five winning numbers. Let **X** represent the event of selecting four winning numbers.  
 
@@ -402,7 +409,7 @@ If the condition that order is important is removed, then the permutation *ab* a
 
     ab ac bc
     
-.. image:: ../../.static/img/mathematical/combinatorics/combinatorics-connection.png
+.. image:: ../../../.static/img/mathematical/combinatorics/combinatorics-connection.png
         :width: 60%
         :align: center
 

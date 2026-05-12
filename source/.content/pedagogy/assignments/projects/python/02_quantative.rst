@@ -71,7 +71,7 @@ The `Michelson Velocity of Light Experiment <https:/.static/www.gutenberg.org/fi
 
 Michelson's 1879 experimental results remained one of most accurate estimations of the speed of light until modern times. Using a series of mirrors depicted below, Michelson was able to divert light rays emitting from a common source along separate paths and then measure the fractional time difference it took for the rays to reach the same location.
 
-.. image:: ../../../../.static/img/scientific/michelson-experiment.png
+.. image:: ../../../../../.static/img/scientific/michelson-experiment.png
     :width: 60%
     :align: center
 
@@ -94,7 +94,7 @@ Henry Cavendish performed the first modern, scientific experiment to measure the
 
 Using the mutual gravitational attraction of two heavy metal balls attached to a `torsion balanace <https:/.static/en.wikipedia.org/wiki/Torsion_spring#Torsion_balance>`_ to twist a fiber of string, Cavendish measured the force of the tension produced. 
 
-.. image:: ../../../../.static/img/scientific/cavendish-torsion-balance.png
+.. image:: ../../../../../.static/img/scientific/cavendish-torsion-balance.png
 	:width: 60%
 	:align: center
 
@@ -447,57 +447,35 @@ Density of the Earth
 1. Load the :ref:`Density of the Earth <project-two-dataset>` data into a :ref:`Python Script <python-scripts>` using the tecnique outlined in the :ref:`project-two-loading-data` section.
 
 2. Construct a histogram plot for this dataset using eight classes. Answer the following questions in the body of your :ref:`python-docstring`.
-
     a. What type of shape does this distribtion have? 
-
     b. Based on your answer to part *a*, how do you expect the sample mean to compare to the sample median?
 
 3. Construct a cumulative frequency histogram for this dataset *on the same graph as your histogram*. Using the CDF, answer the following questions in the body of your :ref:`python-docstring`.
-
     a. What is the approximate value of the third quartile? 
-
     b. What is the approximate value of the first quartile?
-
     c. What is the approximate value of the median?
-
     d. What is the approximate value of the interquartile range?
-    
     e. On what intervals is the CDF steepest? On what intervals is it approximately flat? Explain what these intervals means in terms of the density of earth. 
 
 4. Construct a boxplot for this dataset *on the same graph as your histogram and CDF*. Using the boxplot, answer the following questions in the body of your :ref:`python-docstring`.
-
     a. What is the approximate value of the third quartile?
-
     b. What is the approximate value of the first quartile?
-
     c. What is the approximate value of the median?
-
     d. What is the approximate value of the interquartile range?
-    
-     e. What does the boxplot tell you about the *shape* of the distribution? Express the answer in terms of the variable being measured. In other words, what does the boxplot tell you about this distribution of measurements? Is it centered? Is it skewed? 
+    e. What does the boxplot tell you about the *shape* of the distribution? Express the answer in terms of the variable being measured. In other words, what does the boxplot tell you about this distribution of measurements? Is it centered? Is it skewed? 
 
 5. Using the :ref:`python-stats-package` library, calculate the following sample statistics. Label all of your calculations with comments.
-
     a. The sample mean.
-
     b. The sample median.
-
     c. The sample standard deviation.
-
     d. The first quartile.
-
     e. The third quartile.
-
     f. The interquartile range.
-
     g. The coefficient of variation.
 
 6. Answer the following questions in your :ref:`python-docstring`. Label any calculations you perform to arrive at your answers with comments.
-
     a. How many standard deviations away from the mean is the third quartile? 
-
     b. How many standard deviations away from the mean is the first quartile?
-
     c. Explain the results of part #b and #c. What features of the distribution cause these quantities to be approximately equal or unequal?
 
 7. Answer the following question in your :ref:`python-docstring`: Based on the IQR rule, are there any possible outliers in this dataset? 
@@ -510,13 +488,9 @@ Comparative Analysis
 --------------------
 
 1. Answer the following questions in your :ref:`python-docstring`.
-
     a. Which experimental distribution of data has more variability? Justify your answer with sample statistics calculated in the previous two sections. 
-
     b. Which distribution is more skewed and in which direction does the skew lie? Justify your answer with sample statistics calculated in the previous two sections.
-
     c. Which experiment yielded a more accurate measure with respect to modern estimates? Justify your answer with sample statistics calculated in the previous two sections.
-
     d. We have encountered normal distributions in a wide array of seemingly unrelated subjects: geyser durations, wine acidity, alpha particle emissions and now: the speed of light and the density of earth. We have not yet explained why the phenomenon of normality occurs so often (so often, you might call it *normal*), but that will soon change. As a precursor of things to come, answer the following question to the best of your current ability: Based on what you have learned so far in this course, why do you think normal distributions occur so often in nature?
 
 .. _project-two-dataset:
@@ -556,24 +530,24 @@ The following code snippet will load in a *CSV* spreadsheet named ``example.csv`
 Velocity of Light Data
 ----------------------
 
-You can download the full dataset :download:`here <../../../../.static/csv/scientific/velocity-of-light-data.csv>`.
+You can download the full dataset :download:`here <../../../../../.static/csv/scientific/velocity-of-light-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Michelson's Velocity of Light Data
-   :file: ../../../../.static/csv/previews/velocity-of-light-data-preview.csv
+   :file: ../../../../../.static/csv/previews/velocity-of-light-data-preview.csv
 
 The meaning of the column is clear from the column header: each observation measures the speed of light in meters per second, :math:`\frac{km}{s}`.
 
 Density of the Earth Data
 -------------------------
 
-You can download the full dataset :download:`here <../../../../.static/csv/scientific/earth-density-data.csv>`.
+You can download the full dataset :download:`here <../../../../../.static/csv/scientific/earth-density-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Cavendish's Density of the Earth Data
-   :file: ../../../../.static/csv/previews/earth-density-data-preview.csv
+   :file: ../../../../../.static/csv/previews/earth-density-data-preview.csv
 
 The first column corresponds to the experiment number (first, second, third, etc.). The second column is the *ratio of the density of Earth to the density of water*. Recall the density of water by definition is :math:`1 \frac{g}{cm^3}`.
 

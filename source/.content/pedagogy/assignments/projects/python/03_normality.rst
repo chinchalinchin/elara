@@ -260,32 +260,20 @@ Normal Calculations
 -------------------
 
 1. Create a Standard Normal Distribution ``object``. Use this ``object`` to answer the following questions.
-
-a. :math:`P(\mathcal{Z} \leq 1.751)`
-
-b. :math:`P(\mathcal{Z} \geq 0.888)`
-
-c. :math:`P(-1.234 \leq \mathcal{Z} \leq 0.545)`
-
-d. :math:`P(\mathcal{Z} \leq z_{\pi}) = 0.975`
-
-e. :math:`P(\mathcal{Z} \geq z_{\pi}) = 0.025`
-
-f. :math:`P(z_{\pi_1} \leq \mathcal{Z} \leq z_{\pi_2}) = 0.50`
+	a. :math:`P(\mathcal{Z} \leq 1.751)`
+	b. :math:`P(\mathcal{Z} \geq 0.888)`
+	c. :math:`P(-1.234 \leq \mathcal{Z} \leq 0.545)`
+	d. :math:`P(\mathcal{Z} \leq z_{\pi}) = 0.975`
+	e. :math:`P(\mathcal{Z} \geq z_{\pi}) = 0.025`
+	f. :math:`P(z_{\pi_1} \leq \mathcal{Z} \leq z_{\pi_2}) = 0.50`
 
 2. Create a Normal Distribution ``object`` with a mean of 50 and a standard deviation of 10. Use this object to answer the following questions.
-
-a. :math:`P(\mathcal{X} \leq 65)`
-
-b. :math:`P(\mathcal{X} \geq 45)`
-
-c. :math:`P(38 \leq \mathcal{X} \leq 62)`
-
-d. :math:`P(\mathcal{X} \leq x_{\pi}) = 0.975`
-
-e. :math:`P(\mathcal{X} \geq x_{\pi}) = 0.025`
-
-f. :math:`P(x_{\pi_1} \leq \mathcal{X} \leq x_{\pi_2}) = 0.50`
+	a. :math:`P(\mathcal{X} \leq 65)`
+	b. :math:`P(\mathcal{X} \geq 45)`
+	c. :math:`P(38 \leq \mathcal{X} \leq 62)`
+	d. :math:`P(\mathcal{X} \leq x_{\pi}) = 0.975`
+	e. :math:`P(\mathcal{X} \geq x_{\pi}) = 0.025`
+	f. :math:`P(x_{\pi_1} \leq \mathcal{X} \leq x_{\pi_2}) = 0.50`
 
 Measuring Normality
 -------------------
@@ -294,18 +282,12 @@ Velocity of Light
 *****************
 
 1. Find the following sample percentiles in Michelson's Velocity of Light sample distribution.
-
-a. 99 :sup:`th` percentile
-
-b. 97.5 :sup:`th` percentile
-
-c. 84 :sup:`th` percentile
-
-d. 16 :sup:`th` percentile
-
-e. 2.5 :sup:`th` percentile
-
-f. 1 :sup:`th` percentile
+	a. 99 :sup:`th` percentile
+	b. 97.5 :sup:`th` percentile
+	c. 84 :sup:`th` percentile
+	d. 16 :sup:`th` percentile
+	e. 2.5 :sup:`th` percentile
+	f. 1 :sup:`th` percentile
 
 .. hint::
 
@@ -324,23 +306,17 @@ f. 1 :sup:`th` percentile
 Old Faithful
 ************
 
-1. Find the following sample percentiles in the Old Faithful **eruption duration** sample distribution.
-
 .. important::
 
 	We are *only* looking at the **eruption duration** variable!
 	
-a. 99 :sup:`th` percentile
-
-b. 97.5 :sup:`th` percentile
-
-c. 84 :sup:`th` percentile
-
-d. 16 :sup:`th` percentile
-
-e. 2.5 :sup:`th` percentile
-
-f. 1 :sup:`th` percentile
+1. Find the following sample percentiles in the Old Faithful **eruption duration** sample distribution.
+	a. 99 :sup:`th` percentile
+	b. 97.5 :sup:`th` percentile
+	c. 84 :sup:`th` percentile
+	d. 16 :sup:`th` percentile
+	e. 2.5 :sup:`th` percentile
+	f. 1 :sup:`th` percentile
 
 .. hint::
 
@@ -447,23 +423,23 @@ Velocity of Light Data
 
 	You may already have this dataset downloaded into your *Linux Files* directory from when we did :ref:`project-two`.
 
-You can download the full dataset :download:`here <../../..//csv/scientific/velocity-of-light-data.csv>`.
+You can download the full dataset :download:`here <../../../../../.static/csv/scientific/velocity-of-light-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Michelson's Velocity of Light Data
-   :file: ../../..//csv/previews/velocity-of-light-data-preview.csv
+   :file: ../../../../../.static//csv/previews/velocity-of-light-data-preview.csv
 
 The meaning of the column is clear from the column header: each observation measures the speed of light in meters per second, :math:`\frac{km}{s}`.
 
 Old Faithful
 ------------
 
-You can download the full dataset :download:`here <../../..//csv/scientific/old-faithful-data.csv>`.
+You can download the full dataset :download:`here <../../../../../.static/csv/scientific/old-faithful-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Old Faithful Geyser Duration and Wait Time
-   :file: ../../../.static/csv/previews/old-faithful-data-preview.csv
+   :file: ../../../../../.static/csv/previews/old-faithful-data-preview.csv
 
 The first column represents the length of the eruption in minutes. The second column represents the waiting time in minutes until the next eruption.

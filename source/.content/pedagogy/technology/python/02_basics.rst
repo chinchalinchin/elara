@@ -434,7 +434,8 @@ Try to figure out what the next example will print to screen before pasting it i
     print(sliced_data)
 
 .. collapse:: Solution 
-    
+    :class: collapse-panel
+
     Output:
 
         ['A', 'B']

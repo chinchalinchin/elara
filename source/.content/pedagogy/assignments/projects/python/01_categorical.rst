@@ -72,7 +72,7 @@ Type the following command into your *Linux* terminal,
 
     pip3 install matplotlib tk
 
-.. image:: ../../../../.static/img/pedagogical/technical/python/matplotlib-tk-install.png
+.. image:: ../../../../../.static/img/pedagogical/technical/python/matplotlib-tk-install.png
     :align: center 
 
 Output:
@@ -88,7 +88,7 @@ Output:
 
     Successfully installed tk-0.1.0
 
-.. image:: ../../../../.static/img/pedagogical/technical/python/matplotlib-tk-install-done.png
+.. image:: ../../../../../.static/img/pedagogical/technical/python/matplotlib-tk-install-done.png
     :align: center 
 
 You should see the packages download and install into your system.
@@ -250,7 +250,7 @@ The two arguments, ``color`` and ``ec``, affect the *styling* of the bar chart. 
 
 The full list of colors available to use in :ref:`matplotlib` is detailed in the following chart,
 
-.. image:: ../../../../.static/img/pedagogical/technical/python/matplotlib-colors.png
+.. image:: ../../../../../.static/img/pedagogical/technical/python/matplotlib-colors.png
     :align: center
 
 Any value in this chart can be used an argument for ``color`` or ``ec``.
@@ -458,12 +458,12 @@ The following code snippet will load in a *CSV* spreadsheet named ``example.csv`
 Electric Vehicle Dataset 
 ------------------------
 
-You can download the full dataset :download:`here <../../../../.static/csv/economic/electric-vehicle-population-data.csv>`.
+You can download the full dataset :download:`here <../../../../../.static/csv/economic/electric-vehicle-population-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Electric Vehicles in Washington State
-   :file: ../../../../.static/csv/previews/electric-vehicle-population-data-preview.csv
+   :file: ../../../../../.static/csv/previews/electric-vehicle-population-data-preview.csv
 
 The meaning of the columns was discussed in more detail in :ref:`project-one-background`. Refer to that section for further information on this dataset.
 

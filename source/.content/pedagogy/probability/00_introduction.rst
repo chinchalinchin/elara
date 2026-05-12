@@ -174,7 +174,7 @@ Be careful not to confuse the outcome *h* with the event **H**, and likewise the
 
 Consider now flipping the same fair, two-sided coin twice. A :ref:`tree diagram <tree-diagrams>` can help visualize the sample space for this experiment. We represent each each flip as a branch in the tree diagram, with each outcome forking the tree,
 
-.. image:: ../../.static/img/mathematical/probability/sample-space-coin-flip.png
+.. image:: ../../../.static/img/mathematical/probability/sample-space-coin-flip.png
     :width: 60%
     :align: center
 
@@ -572,8 +572,6 @@ Symbolic Expression
 
 Again, from inspection of a :ref:`venn-diagrams` of *overlappying* sets, this theorem should be obvious,
 
-.. image:: ../../.static/img/mathematical/sets/sets-union-overlapping.jpg
-
 .. plot:: .scripts/py/plots/venns/diagram_overlapping.py
 	:align: center
 
@@ -607,7 +605,7 @@ Example
 
 The sample space for a selecting a single card from a deck of 52 cards is shown below,
 
-.. image:: ../../.static/img/mathematical/probability/playing-cards.jpg
+.. image:: ../../../.static/img/mathematical/probability/playing-cards.jpg
    :width: 60%
    :align: center
 

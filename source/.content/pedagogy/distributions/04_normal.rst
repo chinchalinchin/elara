@@ -144,12 +144,12 @@ This table can answers questions like,
 
 First, we find the row that corresponds to the two leading digits, `1.4`. 
 
-.. image:: ../../.static/img/mathematical/statistics/tables/table-positive-z-example-step1.png
+.. image:: ../../../.static/img/mathematical/statistics/tables/table-positive-z-example-step1.png
 	:align: center
 
 Then, we find the column that corresonds to the last decimal spot, `0.05`. 
 
-.. image:: ../../.static/img/mathematical/statistics/tables/table-positive-z-example-step2.png
+.. image:: ../../../.static/img/mathematical/statistics/tables/table-positive-z-example-step2.png
 	:align: center
 
 This tells us that `92.65%` of the Standard Normal distribution has a distance less than or equal to 1.45 standard deviations from the mean.
@@ -195,7 +195,7 @@ TODO
 
 The *Empirical Rule* can be visualized through the area underneath the Normal curve,
 
-.. image:: ../../.static/img/mathematical/distributions/normal/normal-distribution-empirical-rule.png
+.. image:: ../../../.static/img/mathematical/distributions/normal/normal-distribution-empirical-rule.png
     :align: center
 
 TODO

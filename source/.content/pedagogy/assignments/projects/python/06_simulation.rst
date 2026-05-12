@@ -5,6 +5,7 @@ Simulation
 ==========
 
 .. epigraph:: 
+
 	Your mind makes it real.
 
 	-- Morpheus, The Matrix
@@ -17,15 +18,10 @@ Instructions
 ============
 
 1. Create a Python ``.py`` script named ``LASTNAME_FIRSTNAME_project_six.py`` in your ``Linux Files`` folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace ``LASTNAME`` and ``FIRSTNAME`` with your last and first name, respectively.
-
 2. Create a :ref:`docstring <python-docstring>` at the very top of the script file. Keep all written answers in this area of the script.
-
 3. Read the :ref:`project-six-background` section.
-
 4. Perform all exercises and answer all questions in the :ref:`project-six-project` section. Label your script with comments where appropriate.
-
 5. When you are done, zip your script in a zip file named ``LASTNAME_FIRSTNAME_project_six.zip``
-
 6. Upload the zip file to the Google Classroom Project Six Assignment.
 
 .. _project-six-background:

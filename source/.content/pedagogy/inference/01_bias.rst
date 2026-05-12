@@ -14,14 +14,15 @@ Classifications
 Selection Bias
 **************
 
-Definition 
+.. topic:: Definition
+
     *Selection bias* occurs when the sampling method is not representative of the entire population.
         
 As an extreme example to illustrate the meaning of this type of *bias*, if you were interested in making assertions about the average height of a United States citizens, selecting a sample of 100 elementary schoolers would lead you to make wildly erroneous conclusions. 
 
 A famous example of *how to avoid selection bias* is the work of Abraham Wald during World War II. Wald was a statistican at Columbia University who was analyzing damage done to aircraft that had taken enemy fire. Had he only used the sample as his disposal, the aircraft that *survived* the war and made their way to Columbia University to be examined by him, he would have erroneously concluded the areas where craft sustained major damaged needed re-inforced with armor. 
 
-.. image:: ../../.static/img/mathematical/statistics/wald-plane-armor.png
+.. image:: ../../../.static/img/mathematical/statistics/wald-plane-armor.png
     :width: 50%
     :align: center
 
@@ -34,7 +35,8 @@ His statistical insight led to a reduction in the number of aircraft causalities
 Response Bias
 *************
 
-Definition
+.. topic:: Definition
+
     *Response bias* occurs when the sampling method is over-representative or under-representative of certain segments of the population, due to individual effects on the observation.
 
 A typical example of this kind of bias can be found in cold-calling telephone surveys. Most people are likely to ignore robo-calls for political polls, and the set of people who do answer the calls are likely not an accurate representation of the entire population. 
@@ -43,34 +45,51 @@ A famous example of this kind of bias is the `1948 Election Between Thomas Dewey
 
 The results of the polls versus the actual result of the election are shown below,
 
-.. [*] The 1948 Presidential Election polls `source <https:/.static/www.randomservices.org/random/data/Election1948.html>`_
+.. list-table:: Truman vs Dewey Polls 
+  :header-rows: 1
 
-========= ======== ====== ===== ======
-Candidate Crossley Gallup Roper Actual
-========= ======== ====== ===== ======
-Truman          45     44    38     50
-Dewey           50     50    53     45
-Other            5      6     9      5
-========= ======== ====== ===== ======
+  * - Candidate
+    - Crossley
+    - Gallup
+    - Roper
+    - Actual
+  * - Truman
+    - 45
+    - 44
+    - 38
+    - 50
+  * - Dewey
+    - 50
+    - 50
+    - 53
+    - 45
+  * - Other
+    - 5
+    - 6
+    - 9
+    - 5
 
 While polls will never agree 100% of the time with reality, the error in this case was extreme. Upon investigating what went wrong, it was discovered the pollsters at the organizations of Crossley, Gallup and Roper were told to survey a certain number of people. Beyond that, they were free to choose who to include in the survey. They ended up calling their friends, family and close relatives. This led to the data they collected being *biased*, resulting in an infamous photograph,
 
-.. image:: ../../.static/img/historical/dewey-defeats-truman.jpg
+.. image:: ../../../.static/img/historical/dewey-defeats-truman.jpg
     :align: center
+
+.. [*] The 1948 Presidential Election polls `source <https:/.static/www.randomservices.org/random/data/Election1948.html>`_
 
 Observer Bias
 *************
 
-Definition
+.. topic:: Definition
+
     *Observer Bias* occurs when the act of observation changes that which is being observed. 
         
 Examples of this type of bias can crop up when pollsters ask leading questions, such as, "Do you *still* drink coffee?" versus the more neutral phrasing, "Do you drink coffee?". Depending on how the question is phrased, a different answer might be given.
 
 A more famous example of this type of bias is the `Milgram Experiment <https:/.static/en.wikipedia.org/wiki/Milgram_experiment>`_ conducted by Dr. Stanley Milgrim at Yale University. The *Milford Experiment* was a psychological study wherein participants were told they were testing the effects of phyiscal punishment, in form of an electric shock, on the memory. Participants were to be paired off as *teacher* and *learner*. The *learner* would be asked to memorize a series of words, and then asked to recite them. If they got the words wrong in the recitation, the *teacher* would administer an electric shock to the *learner*. Each time a wrong answer was given, the voltage of the electric shock was increased.
 
-.. image:: https:/.static/img.youtube.com/vi/Kzd6Ew3TraA/maxresdefault.jpg
+.. image:: https://img.youtube.com/vi/Kzd6Ew3TraA/maxresdefault.jpg
     :alt: Milgram Experiment
-    :target: https:/.static/www.youtube.com/watch?v=Kzd6Ew3TraA
+    :target: https://www.youtube.com/watch?v=Kzd6Ew3TraA
 
 .. admonition:: Milgram Experiment 
 
@@ -126,6 +145,6 @@ In each of these cases, we can identify "*how*" one variable determines the valu
 
 The following image illustrates why we cannot infer *causation* from *correlation*,
 
-.. image:: ../../.static/img/mathematical/statistics/spurious-correlation.jpeg
+.. image:: ../../../.static/img/mathematical/statistics/spurious-correlation.jpeg
     :align: center
 
