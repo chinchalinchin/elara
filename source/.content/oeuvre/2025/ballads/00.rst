@@ -2,95 +2,98 @@
 Absurdity
 ---------
 
-| One lovely Thursday afternoon
-|   two billion years ago,
-| a star encased by arcing moon,
-|   embraced despair and woe. 
-| 
-| This sordid joke of yellow-red,
-|    this sneering, mocking jape:
-| To burn with heat, on axis sped
-|    with no hope of escape.
-|
-| So solace cursed upon a point,
-|    it drew its final plan
-| as spinning round its lock and joint
-|    its ending now began.
-| 
-| The heaving mass of goo morassed
-|    then gurgled once and sighed;
-| A rattle scream of flames harassed
-|    what silent void belied. 
-| 
-| The sacrificial rings were flung
-|   in sprays across the sky;
-| The interstitial threads then wrung
-|   as ropes once bound untie. 
-|
-| And in these fictions fracture facts:
-|    A single atom forged
-| and bellow blown through heaven's tracts
-|    to find itself disgorged. 
-| 
-| The crush of black, once unobserved,
-|    in fire found its sight.
-| The atom woke from dreams unnerved
-|    in sailing stream of flight. 
-| 
-| Without a frame, it screamed in vain
-|    through parallactic curves
-| that weave the sieves with cluttered skein
-|    of dark galactic nerves. 
-|
-| Commotion drowned, it gazed about
-|    along the ends it aimed:
-| The bluest gem beyond a doubt
-|    the cosmos ever named. 
-| 
-| It wept to see a brilliant Earth,
-|    the fate bestowed by chance,
-| and in its cackles rose a mirth
-|    expressed in photon's dance. 
-|
-| It splashed the surface spinning fast,
-|    now lost amid the sea. 
-| The water rose at what trespassed,
-|    mistook it for debris.
-|
-| The liquid swarm convened in waves,
-|    to flood the tiny core.
-| They stripped and pried, as hunger craves
-|    and always wants for more. 
-|
-| The terror flashed, as pulled apart,
-|   its briefly tasted life
-| now disappeared before its start 
-|   beneath the wetted knife. 
-|
-| So bittersweet and incomplete, 
-|   resigned into the black,
-| the atom braced for ends to meet 
-|   in swirling last attack.
-|
-| But fortune finds where will converged,
-|   as snatched from death it gasped
-| and saw from depths the land emerged,
-|   where brethren all were clasped.
-|
-| A molecule of carbon made
-|   from crystal network cast
-| through jointed links of atom braid
-|   that helix ghosts amassed. 
-|
-| Began the age of afterbirths, 
-|   of structure spat in space,
-| originating blest on Earth's
-|   atomic interface. 
-|
-| Now watch along the webbing sewn
-|   the single atom weave
-| through warps and wefts and whetted stone,
-|   the knits of stellar sleeve.
+.. verse::
+  :increment: 5
+
+  One lovely Thursday afternoon
+    two billion years ago,
+  a star encased by arcing moon,
+    embraced despair and woe. 
+
+  This sordid joke of yellow-red,
+    this sneering, mocking jape:
+  To burn with heat, on axis sped
+    with no hope of escape.
+
+  So solace cursed upon a point,
+    it drew its final plan
+  as spinning round its lock and joint
+    its ending now began.
+
+  The heaving mass of goo morassed
+    then gurgled once and sighed;
+  A rattle scream of flames harassed
+    what silent void belied. 
+
+  The sacrificial rings were flung
+    in sprays across the sky;
+  The interstitial threads then wrung
+    as ropes once bound untie. 
+
+  And in these fictions fracture facts:
+    A single atom forged
+  and bellow blown through heaven's tracts
+    to find itself disgorged. 
+
+  The crush of black, once unobserved,
+    in fire found its sight.
+  The atom woke from dreams unnerved
+    in sailing stream of flight. 
+
+  Without a frame, it screamed in vain
+    through parallactic curves
+  that weave the sieves with cluttered skein
+    of dark galactic nerves. 
+
+  Commotion drowned, it gazed about
+    along the ends it aimed:
+  The bluest gem beyond a doubt
+    the cosmos ever named. 
+  
+  It wept to see a brilliant Earth,
+    the fate bestowed by chance,
+  and in its cackles rose a mirth
+    expressed in photon's dance. 
+
+  It splashed the surface spinning fast,
+    now lost amid the sea. 
+  The water rose at what trespassed,
+    mistook it for debris.
+
+  The liquid swarm convened in waves,
+    to flood the tiny core.
+  They stripped and pried, as hunger craves
+    and always wants for more. 
+
+  The terror flashed, as pulled apart,
+    its briefly tasted life
+  now disappeared before its start 
+    beneath the wetted knife. 
+
+  So bittersweet and incomplete, 
+    resigned into the black,
+  the atom braced for ends to meet 
+    in swirling last attack.
+
+  But fortune finds where will converged,
+    as snatched from death it gasped
+  and saw from depths the land emerged,
+    where brethren all were clasped.
+
+  A molecule of carbon made
+    from crystal network cast
+  through jointed links of atom braid
+    that helix ghosts amassed. 
+
+  Began the age of afterbirths, 
+    of structure spat in space,
+  originating blest on Earth's
+    atomic interface. 
+
+  Now watch along the webbing sewn
+    the single atom weave
+  through warps and wefts and whetted stone,
+    the knits of stellar sleeve.
 
 - *Original*: February 2025
 - *Revised*: June 2025
