@@ -1,25 +1,28 @@
 Πόλεμος
 -------
 
-| arrested pink of morning star's descent
-| ablaze again above the eden peaks
-| 
-| while cradled drops like fallen angels rent
-| the infant sky with showered sparking streaks
-|
-| phosphoric rains that drill beneath the ground
-| infernal course from heaven bent to hell
-|
-| received below in crowds of motion drowned
-| through writhing streets where ancient ruins dwell
-|
-| metallic veins engorged with blackened blood
-| encircled serpentinely cold machine
-|
-| each copper bloom of flame in wicked bud
-| unfolded plumes through fumes of gasoline
-|
-| at dawn, the cities burned like candle lamps
-| til evening stars retreated to their camps
+.. verse::
+    :increment: 5
+
+    arrested pink of morning star's descent
+    ablaze again above the eden peaks
+
+    while cradled drops like fallen angels rent
+    the infant sky with showered sparking streaks
+
+    phosphoric rains that drill beneath the ground
+    infernal course from heaven bent to hell
+
+    received below in crowds of motion drowned
+    through writhing streets where ancient ruins dwell
+
+    metallic veins engorged with blackened blood
+    encircled serpentinely cold machine
+
+    each copper bloom of flame in wicked bud
+    unfolded plumes through fumes of gasoline
+
+    at dawn, the cities burned like candle lamps
+    til evening stars retreated to their camps
 
 - March 2026

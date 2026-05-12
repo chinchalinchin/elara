@@ -2,25 +2,28 @@
 Terra Australis
 ---------------
 
-| Where winter breaks across the bow of ships,
-| the cold ascends in empires drawn from ice.
-| The mist dissolves to steam escaping lips
-| while warmer thoughts are mourned in sacrifice.
-| 
-| The cold ascends in empires drawn from ice
-| as wind returns a harbour street to sleet,
-| while warmer thoughts are mourned in sacrifice,
-| his letters worn with lines I can't repeat.
-|
-| As wind returns a harbour street to sleet,
-| I think upon the sailor lost at sea,
-| his letters worn with lines I can't repeat,
-| the words he said in promises to me.
-| 
-| I think upon the sailor lost at sea
-| where winter breaks across the bow of ships,
-| the words he said in promises to me.
-| The mist dissolves to steam escaping lips.
+.. verse::
+  :increment: 5
+
+  Where winter breaks across the bow of ships,
+  the cold ascends in empires drawn from ice.
+  The mist dissolves to steam escaping lips
+  while warmer thoughts are mourned in sacrifice.
+
+  The cold ascends in empires drawn from ice
+  as wind returns a harbour street to sleet,
+  while warmer thoughts are mourned in sacrifice,
+  his letters worn with lines I can't repeat.
+
+  As wind returns a harbour street to sleet,
+  I think upon the sailor lost at sea,
+  his letters worn with lines I can't repeat,
+  the words he said in promises to me.
+
+  I think upon the sailor lost at sea
+  where winter breaks across the bow of ships,
+  the words he said in promises to me.
+  The mist dissolves to steam escaping lips.
 
 - January 2026
 

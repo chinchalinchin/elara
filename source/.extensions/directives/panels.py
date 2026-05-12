@@ -33,6 +33,10 @@ class VerseDirective(SphinxDirective):
                 text_nodes, messages = self.state.inline_text(text, self.lineno)
                 line_node.extend(text_nodes)
                 node += messages # Append system messages/errors directly to the parent node
+            else:
+                # Prevent the browser from collapsing the empty line
+                line_node += nodes.Text('\u00A0')
+                
             node.append(line_node)
             
         return [node]
@@ -53,9 +57,20 @@ def process_verse_nodes(app, doctree, fromdocname):
         lines = [c for c in node.children if isinstance(c, nodes.inline) and 'verse-line-content' in c['classes']]
         messages = [c for c in node.children if isinstance(c, nodes.system_message)]
         
+        line_count = 1
+        
         # Enumerate through the lines, using Sphinx's native partial rendering
-        for i, child in enumerate(lines, start=1):
-            number = str(i) if increment and i % increment == 0 else ""
+        for child in lines:
+            # Check if this line is just the non-breaking space we injected for blank lines
+            is_blank = len(child) == 1 and isinstance(child[0], nodes.Text) and child[0].astext() == '\u00A0'
+            
+            if increment and not is_blank and (line_count % increment == 0):
+                number = str(line_count)
+            else:
+                number = ""
+                
+            if not is_blank:
+                line_count += 1
             
             # Use render_partial to properly translate docutils nodes (like footnotes) into HTML strings
             rendered = app.builder.render_partial(child)

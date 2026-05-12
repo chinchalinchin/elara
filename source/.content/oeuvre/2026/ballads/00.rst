@@ -1,206 +1,211 @@
-.. MODE: DRAFT
-
 ----------
 Hyperboreá
 ----------
 
-| I - Into The Middle of Things
-| 
-| The snow descends upon a place
-|       sequestered on a crown,
-| a hidden place the heights embrace
-|       to shield from view a town.
-|
-| This muted evening taking shape
-|       as silence softly falls,
-| conceals beneath its winter cape
-|       a place no one recalls. 
-|
-| A lantern flickers through the storm, 
-|       a single maid who dares,
-| so cold with cloaks to keep her warm,
-|       while whispering her prayers.
-|
-| She trudges over covered tracks
-|       and braves the icy route. 
-| Her prayers return as winter sacks
-|       this town of no repute. 
-|
-| Its isolation near complete,
-|       for ages left alone, 
-| as empires grew below by fleet,
-|       now gone and overthrown.
-|
-| A secret town disguised by peaks
-|       from surface schemes and crime,
-| diverged in course by years and weeks
-|       til clocks told different time.
-|
-| Yet even still, the heights adhere 
-|       to certain timeless laws.
-| The precious seconds disappear
-|       as over snow she claws.
-| 
-| Ahead, and in the mist, she spots
-|       the crowd of gathered heads, 
-| obscured again as winter blots
-|       her sight and quickly spreads.
-|
-| She cries aloud, but even here, 
-|       where sounds behave so weird,
-| in stormy drifts, through drafts severe,
-|       her voice is commandeered. 
-|
-| And like the town, her cry is missed,
-|       for no one thought to glance,
-| yet staunch and firm, her goals persist,
-|       so onward lines advance.
-|
-| The town and maid are bound in fate,
-|       though neither know it yet,
-| for only love propels her gait,
-|       and drives her thoughts to fret.
-|
-| An understanding fails to come
-|       without a prior ear,
-| attuned to hear the story's hum
-|       beneath this cold veneer.
-|
-| This maid above, unknown below, 
-|       is known up here by name, 
-| her family deeds in pages sow 
-|       the seeds of royal fame. 
-|
-| Despite her claim of regal right, 
-|       against her father's will,
-| she left the castle late at night
-|       and hurried off down hill.
-|
-| And now she chases after him, 
-|       the boy who stole her heart,
-| as crowds surround the gallows' rim
-|       and wait for shows to start.
-|
-| She presses through the silent throngs,
-|       and barely hides her rage,
-| as magistrates prepare the tongs  
-|       for hooded men on stage.
-| 
-| A judge in robes unrolls his scrolls,
-|       with edicts inked in black,
-| and to the crowd aloud extols,
-|       while bailiffs crank the rack,
-|      
-| "Tonight, this hallowed eve of Hush,
-|       when winter cloaks the noise,"
-|  he says unto a silence lush
-|       with once forgotten joys,
-|
-| "Recall what laws up here are held,
-|       and why we keep them still,"
-| as icy winds in tempests swelled
-|       and knives prepared to kill.
-|
-| But surface dwellers need accounts 
-|       of how things are designed,
-| and why a maid, from throne, dismounts,
-|       to leave it all behind.
-|
-| So listen close, behold the parts
-|       phantasmagoria
-| conceals in prose, but still imparts 
-|       to Hyperborea.
-|
-| II - From The Egg
-|
-| Once long ago, when men were brutes,
-|       and mountains hid in knolls,
-| a few of them up here found fruits 
-|       to gather up in bowls.
-|
-| And as they dined upon the flesh,
-|       the world began to change,
-| so when they stood, their minds now fresh,
-|       the world became quite strange.
-|
-| An awful quake then shook the ground
-|       and flung them to the sky,
-| where there they stayed, on summit crowned,
-|       to live and multiply.
-|
-| The first of them to speak then heard
-|       his voice return in sound,
-| an echo loud, distinct but slurred,
-|       and ringing all around.
-|
-| Tectonic waves had carved a bay
-|       from angled rock to hold
-| the overlapping crests that spray
-|       their noises uncontrolled.
-|
-| This madness long had ruled their lands, 
-|       where words, reversed, exchange
-| their echoes back like rubber bands
-|       across the mountain range. 
-|
-| At first, the words reheard deferred
-|       the dialogues of friends
-| but everywhere the curse recurred 
-|       where open air attends. 
-|
-| With quarries mined and stripped of ores,
-|       the walls arose in rows 
-| but always shaking trembled floors,
-|       as echoes split in flows. 
-|
-| Their padded walls were thickly made
-|       around their claimed homesteads,
-| yet every day, the bell's cascade 
-|       at noon invaded heads.
-|
-| A kingdom grew by days deranged,
-|       remade above the sky,
-| as generations left them changed
-|       and hard to classify.
-|
-| Where down below the wars arose
-|       for power, salt and tin,
-| up here they battled greater foes
-|       of discord, noise and din.
-|
-| Their deeds were drawn in metric feet, 
-|       to cease the wagging tongues. 
-| Each beat was marked on ledger sheet,
-|       the real estate of lungs.
-|       
-| A sentence measured out was taxed
-|       at rates none could afford,
-| except the noble lords relaxed
-|       in riches they had stored.
-|
-| Despite these lengths, their words returned
-|       and drove them more insane; 
-| a tyrant promised ease unearned
-|       and seized the throne to reign. 
-|
-| His grace then placed a clause in laws
-|       to cause a pause to rhymes,
-| for rhymes were crimes within the claws
-|       of lawful paradigms.
-|
-| Decrees came down for reasons why
-|       they organized police, 
-| and motions passed to codify
-|       that rhymes disturb the peace.
-|
-| The poets' screams for days decayed
-|       inside the dungeon walls, 
-| then days again when wind replayed
-|       their cries reborn in squalls. 
-|
-| III - Echoes & Avalanches
-|
-| IN PROGRESS
+.. verse::
+    :increment: 5
+
+    I - Into The Middle of Things
+
+    The snow descends upon a place
+        sequestered on a crown,
+    a hidden place the heights embrace
+        to shield from view a town.
+
+    This muted evening taking shape
+        as silence softly falls,
+    conceals beneath its winter cape
+        a place no one recalls. 
+
+    A lantern flickers through the storm, 
+        a single maid who dares,
+    so cold with cloaks to keep her warm,
+        while whispering her prayers.
+
+    She trudges over covered tracks
+        and braves the icy route. 
+    Her prayers return as winter sacks
+        this town of no repute. 
+
+    Its isolation near complete,
+        for ages left alone, 
+    as empires grew below by fleet,
+        now gone and overthrown.
+
+    A secret town disguised by peaks
+        from surface schemes and crime,
+    diverged in course by years and weeks
+        til clocks told different time.
+    
+    Yet even still, the heights adhere 
+        to certain timeless laws.
+    The precious seconds disappear
+        as over snow she claws.
+
+    Ahead, and in the mist, she spots
+        the crowd of gathered heads, 
+    obscured again as winter blots
+        her sight and quickly spreads.
+
+    She cries aloud, but even here, 
+        where sounds behave so weird,
+    in stormy drifts, through drafts severe,
+        her voice is commandeered. 
+
+    And like the town, her cry is missed,
+        for no one thought to glance,
+    yet staunch and firm, her goals persist,
+        so onward lines advance.
+
+    The town and maid are bound in fate,
+        though neither know it yet,
+    for only love propels her gait,
+        and drives her thoughts to fret.
+
+    An understanding fails to come
+        without a prior ear,
+    attuned to hear the story's hum
+        beneath this cold veneer.
+
+    This maid above, unknown below, 
+        is known up here by name, 
+    her family deeds in pages sow 
+        the seeds of royal fame. 
+
+    Despite her claim of regal right, 
+        against her father's will,
+    she left the castle late at night
+        and hurried off down hill.
+
+    And now she chases after him, 
+        the boy who stole her heart,
+    as crowds surround the gallows' rim
+        and wait for shows to start.
+
+    She presses through the silent throngs,
+        and barely hides her rage,
+    as magistrates prepare the tongs  
+        for hooded men on stage.
+
+    A judge in robes unrolls his scrolls,
+        with edicts inked in black,
+    and to the crowd aloud extols,
+        while bailiffs crank the rack,
+
+    "Tonight, this hallowed eve of Hush,
+        when winter cloaks the noise,"
+    he says into a silence lush
+        with once forgotten joys,
+
+    "Recall what laws up here are held,
+        and why we keep them still,"
+    as icy winds in tempests swelled
+        and knives prepared to kill.
+
+    But surface dwellers need accounts 
+        of how things are designed,
+    and why a maid, from throne, dismounts,
+        to leave it all behind.
+
+    So listen close, behold the parts
+        phantasmagoria
+    conceals in prose, but still imparts 
+        to Hyperborea.
+    
+    II - From The Egg
+
+    Once long ago, when men were brutes,
+        and mountains hid in knolls,
+    a few of them up here found fruits 
+        to gather up in bowls.
+
+    And as they dined upon the flesh,
+        the world began to change,
+    so when they stood, their minds now fresh,
+        the world became quite strange.
+
+    An awful quake then shook the ground
+        and flung them to the sky,
+    where there they stayed, on summit crowned,
+        to live and multiply.
+
+    The first of them to speak then heard
+        his voice return in sound,
+    an echo loud, distinct but slurred,
+        and ringing all around.
+
+    Tectonic waves had carved a bay
+        from angled rock to hold
+    the overlapping crests that spray
+        their noises uncontrolled.
+
+    This madness long had ruled their lands, 
+        where words, reversed, exchange
+    their echoes back like rubber bands
+        across the mountain range. 
+
+    At first, the words reheard deferred
+        the dialogues of friends
+    but everywhere the curse recurred 
+        where open air attends. 
+
+    With quarries mined and stripped of ores,
+        the walls arose in rows 
+    but always shaking trembled floors,
+        as echoes split in flows. 
+
+    Their padded walls were thickly made
+        around their claimed homesteads,
+    yet every day, the bell's cascade 
+        at noon invaded heads.
+
+    A kingdom grew by days deranged,
+        remade above the sky,
+    as generations left them changed
+        and hard to classify.
+
+    Where down below the wars arose
+        for power, salt and tin,
+    up here they battled greater foes
+        of discord, noise and din.
+
+    Their deeds were drawn in metric feet, 
+        to cease the wagging tongues. 
+    Each beat was marked on ledger sheet,
+        the real estate of lungs.
+
+    A sentence measured out was taxed
+        at rates none could afford,
+    except the noble lords relaxed
+        in riches they had stored.
+
+    Despite these lengths, their words returned
+        and drove them more insane; 
+    a tyrant promised ease unearned
+        and seized the throne to reign. 
+
+    His grace then placed a clause in laws
+        to cause a pause to rhymes,
+    for rhymes were crimes within the claws
+        of lawful paradigms.
+
+    Decrees came down for reasons why
+        they organized police, 
+    and motions passed to codify
+        that rhymes disturb the peace.
+
+    The poets' screams for days decayed
+        inside the dungeon walls, 
+    then days again when wind replayed
+        their cries reborn in squalls. 
+
+    III - Resonance
+
+    IN PROGRESS
+    
+    IV - Echoes & Avalanches
+
+    IN PROGRESS
 
 - *Original*: Feburary 2025
 - *Revision I*: September 2025

@@ -19,13 +19,21 @@ task:
     title: "Elara"
     # -------------------------------------------
     content: |
-      If this can be done through the conf.py, do that. If not, override the appropriate template.
+      The `verse` directive doesn't perserve newlines, e.g., the following doesn't render a newline between the second and fourth line,
 
-      - Remove the <footer> which has the "Next" and "Previous" buttons at the bottom of the page.
-      - Remove the "dark/light" toggle. Website should always be in dark mode. 
+      .. verse::
+        :increment: 2
+
+        first line
+        second line
+
+        fourth line (because of blank line above)
+        fifth line
+
+      How do I insert new lines into the verse directive?
     # -------------------------------------------
-    shell: 
-      - cat /Users/gmoore/Home/projects/elara/build/html/index.html
+    shell: []
+      # - cat /Users/gmoore/Home/projects/elara/build/html/index.html
 # ------------------------------------------------
   tools:
     # -------------------------------------------
