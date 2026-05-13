@@ -270,3 +270,11 @@ Sketches
         :alt: Bug Thing
         :align: center
         :width: 80%
+
+.. collapse:: Mathplosion, 2014
+    :class: collapse-panel
+
+    .. image:: ../../.static/img/personal/sketches/mathsplosion.jpg
+        :alt: Mathsplosion
+        :align: center
+        :width: 80%
