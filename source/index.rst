@@ -15,3 +15,4 @@
    .content/fabula/index
    
 .. rss::
+   :limit: 10
