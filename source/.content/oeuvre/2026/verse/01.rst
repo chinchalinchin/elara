@@ -1137,6 +1137,9 @@ Book 2
   * - May 6, 2026
     - New American Press (Book I)
     - Pending
+  * - May 15, 2026
+    - Cow Creek Chapbook (Book I)
+    - Pending
 
 Responses
 ~~~~~~~~~
