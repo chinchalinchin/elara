@@ -6,7 +6,7 @@
 Resume
 ======
 
-.. image:: ../../.static/img/personal/fractal-me.jpg
+.. image:: ../../.static/img/personal/me/fractal-me.jpg
     :alt: Fractal Me
     :align: center
 

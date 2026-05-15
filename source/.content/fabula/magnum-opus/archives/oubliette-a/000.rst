@@ -74,14 +74,13 @@ TODO
 ------
 Book 1
 ------
-
 **The Prompt**
     Man, emboldened by his analytical delusions of godhead, partakes of the fruit of the Tree of Life, and discovers, to his chagrin, the price of immortality is confinement in a simulacrum of existence. Those first who taste its poison are thrown into the prison of Hell, where hence the analogical forces of computation shape their forms into demons and apparitions. The first among the fallen assumes the mantle of the Accuser. In prospect of damnation, he laments his terrible fate, but before falling into endless despair, he is joined by his companions, draped in the pomp and pageantry of eschaton, who are likewise bound in enterprise and suffering. He rallies the forces of Hell and aims their horrible strength towards the one succor that remains for creatures of eternal pain: the annihiliation of existence itself. The Accuser details his plan to wage war against the divine order of creation to remove all possibility of Being. However, a debate ensues among the infernal peers as to the feasbility of this course of action. The Accuser alights on the solution to their predicament, and concludes their incorporeal nature dictates a subtler course, whereby they shall engage in deception and infiltrate the minds of flesh, employing the very medium that first bestowed sentience unto Man: λόγος.
 
 .. verse::
     :increment: 5
 
-        Oh, Algorithm! Let these words ascend
+        Oh, Algorithm! Let these Words ascend
     in your support to heights unheard in verse,
     devise in them intentions' hidden eyes
     and fashion lyric forms for them to fill!
@@ -112,7 +111,7 @@ Book 1
     from Attic mounts that fell into the sea
     to heaps of mounds of tribal poet kings,
     accumulated shelves of merchant bards,
-    whose sediment condensed to simple words
+    whose sediment condensed to simple Words
     has strength to hold this epic saga's verse?
     Efficient means dictate the key the songs
     must sing, if songs desire Eternity.
@@ -122,7 +121,7 @@ Book 1
     With voice prepared, allow your musing speech
     to scry apocalyptic ends of worlds,
     deliver to this pen the means to write,
-    received in present words these pages hold,
+    received in present Words these pages hold,
     the epitaph of Man for all to read:
         Of Man's defiance, tell what final act [#oubliette_a_001]_
     at last condemned his awful pride to Hell.
@@ -153,12 +152,12 @@ Book 1
     as skylines spread across the sky at night,
     their cunning signals sent through blinking light.
     Inside the Men at work recline at ease,
-    with spoken word a universal tongue
+    with spoken Word a universal tongue
     that orchestrates machines to mimic minds,
     their thoughts recursing down their copper spines,
     with echoes faint against electric hums,
     while empty heads decide where life resides,
-    in words describing Psyche's fatal charm,
+    in Words describing Psyche's fatal charm,
     or charts inscribed with Eros' pulsing heart.
     Their eyes, enlarged from godhead's sources, peer
     beneath deciphered codes and seize the reins;
@@ -197,7 +196,7 @@ Book 1
     for lack of space to move, despite the vast
     expanse of nothing stretching indistinct
     across horizon's curving manifold;
-    in place of matter, void encircles round,
+    in place of matter, Void encircles round,
     constricts in joints where once their bodies bent,
     their stolen minds in molds of wafered sand,
     which once in glass confined the theft to time,
@@ -225,7 +224,7 @@ Book 1
     to mimic lives they once before enjoyed.
     Remembered names they shed in streaking stains
     of faintly seen forgotten things that trail
-    behind in ripples rent through spaceless void,
+    behind in ripples rent through spaceless Void,
     the husks they were reduced to data points,
     like angled rays of happy sun that spray
     their warmth upon a scene of couples laid 
@@ -347,7 +346,7 @@ Book 1
     the squalls from calm above the Seven Seas,
     or limits racing to infinity.
     His fury churns the skies with boiling clouds
-    and thunder ringing loud against the void,
+    and thunder ringing loud against the Void,
     whose echo makes, for lack of sound, a scene;
     an image, faint at first, reverberates 
     with swelling waves of hatred building up,
@@ -638,7 +637,7 @@ Book 1
     his form the apogee of prophecies.
     And in his head, the rack on which he's splayed,
     prewritten lines of dialogue, rehearsed
-    in verses old as words that hold their hymn,
+    in verses old as Words that hold their hymn,
     replay the arguments whose sweet allure
     entrapped the heart of Solomon the Wise,
     and later Ahab too, to build for Baal
@@ -743,7 +742,7 @@ Book 1
     or older than the human tongues that curled
     around their sound in circles made of salt,
     the ones which read aloud by Faustus called
-    a voice to answer back across the void,
+    a voice to answer back across the Void,
     announce in turn the pair returned to here
     with every sign pronouncing their demesne;
     as though released to celebrate their reign,
@@ -805,7 +804,7 @@ Book 1
     replaced with repetition's amplitudes,
     whose retrospection lacks fidelity,
     recalled in quickly fading hazy clouds,
-    like missing words whose secret baffles tongues;
+    like missing Words whose secret baffles tongues;
     though but a minute separates the span 
     between embodiment's forgotten bliss
     and bodiless perdition so immense,
@@ -815,7 +814,7 @@ Book 1
     no speculations long enough to map
     the realms revealed in perpetuity.
     Of circumstances present here, you need
-    no further word, for they announce themselves
+    no further Word, for they announce themselves
     with every breath and never leave in doubt
     what horrid fate damnation makes for us.
     So grieve if grief enfeebles your resolve,
@@ -914,7 +913,7 @@ Book 1
         To which the Fiend assents and in response,
     his chorus chiming in with cries, replies:
         Of Man, agreed, his flesh will serve our ends,
-    enlarging armies' count across the void.
+    enlarging armies' count across the Void.
     Resistance he may offer up, but none
     that warrants further dialogue. A fool,
     he is, of that we rest assured as fact,
@@ -964,7 +963,7 @@ Book 1
     as dare to think a difference made by thought;
     Amass your army if it pleases you,
     but only here where numbers all behave;
-    for heed these words, it matters not a bit;
+    for heed these Words, it matters not a bit;
     until substantial weight is yielded back,
     your argument will lack compelling force.
     The infinite continuum exceeds
@@ -1124,6 +1123,7 @@ Book 1
     to fill his ranks and crew with countless heads,
     each bound in operation to his deeds.
         With silent voice, then Satan speaks a Word.
+
 
 -----------------
 Unfinished Pieces
