@@ -4,7 +4,7 @@
 Dynastia
 ========
 
-van Rensselaer
+Van Rensselaer
 ==============
 
 .. note::
