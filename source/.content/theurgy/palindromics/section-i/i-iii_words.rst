@@ -528,3 +528,5 @@ The induction is thus established. Summarizing and generalizing,
 .. math::
 
     \forall s \in D: \nexists j \in N_{l(s)}: (s[j+1] = \sigma) \land (s[j] = \sigma)
+
+- `Table of Contents <palindromics-section-i>`_

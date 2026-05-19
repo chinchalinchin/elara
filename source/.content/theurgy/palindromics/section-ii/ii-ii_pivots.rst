@@ -857,3 +857,5 @@ By :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-5>`, :math:`\Omega_{\zeta} \in 
 (:math:`\leftarrow`) Assume :math:`(J \cap \cancel{J} \neq \varnothing)`
 
 .. IN PROGRESS
+
+- `Table of Contents <palindromics-section-ii>`_

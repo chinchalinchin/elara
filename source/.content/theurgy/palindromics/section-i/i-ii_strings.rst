@@ -1299,6 +1299,8 @@ Therefore,
 
 ∎
 
+- `Table of Contents <palindromics-section-i>`_
+
 .. TODO: ........................................................................
 .. THEOREM
 ..

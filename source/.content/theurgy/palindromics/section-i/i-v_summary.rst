@@ -48,3 +48,4 @@ The inversion then "*propagates*" up a level in the semantic hierarchy and resul
 
     The direction of implication in :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>` and :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>` is unidirectional. In other words, while invertibility implies the previous two equations, invertibility cannot be concluded on the basis of the previous two equations. This is an artifact of the formal system's inability to formalize the grammar of Sentences.
 
+- `Table of Contents <palindromics-section-i>`_

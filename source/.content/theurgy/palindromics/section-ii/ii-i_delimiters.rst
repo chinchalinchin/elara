@@ -385,3 +385,5 @@ Which is equivalent to,
     :ref:`Theorem 2.1.5 <palindromics-theorem-1-2-5>` and :ref:`Theorem 2.1.6 <palindromics-theorem-2-1-6>` apply to *all* Strings in :math:`S`. However, the analogue for even Delimiter counts must be restricted to a special subdomain of :math:`S` where the Delimiter structure is regular, i.e. the *Dialect* of a Language, :math:`D`. 
 
     Moreover, the direct analogue of :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>` requires the introduction of a key palindromic structural element, the *Pivot Character*, and the formal proof of a few of its key properties.
+
+- `Table of Contents <palindromics-section-ii>`_

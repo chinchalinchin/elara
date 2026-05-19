@@ -436,3 +436,5 @@ Parity
 **Proof** Let :math:`\zeta in K_{+}`.
 
 .. TODO: ........................................................................
+
+- `Table of Contents <palindromics-section-ii>`_

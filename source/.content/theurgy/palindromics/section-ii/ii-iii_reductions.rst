@@ -496,3 +496,5 @@ Summarizing and generalizing,
 .. The Canon is closed under Reduction.
 ..
 .. \forall s \in \mathbb{S}: \varsigma(s) \in \mathbb{S}
+
+- `Table of Contents <palindromics-section-ii>`_

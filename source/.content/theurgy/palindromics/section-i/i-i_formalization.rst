@@ -224,3 +224,5 @@ Sets
         - :math:`C`
 
     The aggregate of all Sentences is called a *Corpus*.
+
+- `Table of Contents <palindromics-section-i>`_

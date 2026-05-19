@@ -1049,3 +1049,5 @@ Let :math:`t \in S` such that :math:`l(t) = m + 1`.
 .. TODO: ........................................................................
 
 ∎
+
+- `Table of Contents <palindromics-section-i>`_

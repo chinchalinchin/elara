@@ -153,6 +153,8 @@ In fact, the structural properties that determine whether a meta-string belongs 
 
 .. Wouldn't this mean \lvert S \rvert = \lvert \mathbb{S} \rvert? 
 
+- `Table of Contents <palindromics-table-of-contents>`_
+
 .. [#1] Or :math:`\varepsilon\mathfrak{ab}`, or :math:`\mathfrak{ab}\varepsilon\varepsilon`, etc.? 
 
 .. [#2] It should go without saying this is an artifact of the decimal representation of numbers. A different base would correspond to different addition rules, e.g. :math:`5 + 5 = A` in hexidecimal notation. However, the structural feature of :math:`0` exists in all bases, e.g. :math:`\exists 0: x + 0 = x` is true regardless of the physical and literal form of the algebraic abstraction :math:`x`. This is roughly analogous to :math:`\varepsilon` and :math:`\mathfrak{a}`; the former represent a structural feature of concatenated sequences whereas the latter corresponds to a physical character within the alphabet, i.e. the "base" of the system of concatenation. Regardless of the language and alphabet, the logical structure of concatenated expressions requires a metamathematical term to play the role of identity, e.g. :math:`\varepsilon`, whereas the characters, e.g. :math:`\frak{a}`, are symbolic representations of physical entities.

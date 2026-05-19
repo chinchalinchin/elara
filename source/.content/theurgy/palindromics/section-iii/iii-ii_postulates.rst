@@ -118,3 +118,5 @@ Inverse Postulates
         \forall \zeta \in P:  (\zeta[[\Lambda(\zeta)]] \subset_s \zeta^{-1}[[\Lambda(\zeta)]]) \lor (\zeta^{-1}[[\Lambda(\zeta)]] \subset_s \zeta[[\Lambda(\zeta)]])
 
 .. TODO: ........................................................................
+
+- `Table of Contents <palindromics-section-iii>`_
