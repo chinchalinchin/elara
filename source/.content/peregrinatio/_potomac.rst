@@ -4,6 +4,15 @@
 Potomac River
 =============
 
+.. figure:: ../../.static/img/maps/potomac-river-watershed.png
+  :width: 100%
+  :alt: Potomac River Basin
+  :align: center
+
+  The Potomac River Drainage Watershed Basin
+
+  - Kmusser, CC BY-SA 3.0 `<https://creativecommons.org/licenses/by-sa/3.0>`_, via Wikimedia Commons
+
 2026
 ====
 
