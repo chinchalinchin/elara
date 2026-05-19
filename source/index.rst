@@ -10,6 +10,7 @@
    .content/epistemia/index
    .content/pedagogy/index
    .content/theurgy/index
+   .content/peregrinatio/index
    .content/analecta/index
    .content/oeuvre/index
    .content/fabula/index
