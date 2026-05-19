@@ -19,7 +19,6 @@ Supplies
 --------
 
 .. list-table:: Provisions
-  :widths: 15 15 15 15
   :header-rows: 1
 
   * - Item
