@@ -46,7 +46,8 @@ Details
     - `Citizen Watch Promaster Dive <https://www.citizenwatch.com/us/en/product/BN0151-09L.html>`_
     - `Ruby Lens Binoculars <https://www.rexdist.com/products/10x25-br-compact-traveling-ruby-lens-binoculars>`_
     - `QuickSnap Waterproof Disposable Camera <https://www.fujifilm.com/us/en/consumer/films/quicksnap-waterproof>`_
-
+    - `Sony ICF B200 AM/FM Radio <https://www.radiomuseum.org/r/sony_icf_b200.html>`_
+    
 .. list-table:: Provisions
   :header-rows: 1
 
