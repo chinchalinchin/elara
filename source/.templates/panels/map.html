@@ -1,4 +1,3 @@
-{% set margins = {'left': '0 auto 0 0', 'right': '0 0 0 auto', 'center': '0 auto'} %}
-<div class="map-panel" style="width: {{ width }}; margin: {{ margins[align] }};">
+<div class="map-panel {{ align }}" style="width: {{ width }};">
     {{ map_html | safe }}
 </div>

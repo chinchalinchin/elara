@@ -54,6 +54,8 @@ views:
             source/.scripts/py/linguistics/rhyme.py: python
             source/.scripts/py/linguistics/syllabify.py: python
             source/.scripts/py/linguistics/synonyms.py: python
+            source/.scripts/py/palindromics/data.py: python
+            source/.scripts/py/palindromics/functions.py: python
         elara_extensions:
           title: "Elara: Extensions"
           files:

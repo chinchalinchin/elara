@@ -79,7 +79,8 @@ html_css_files = [
     'css/etc/palindromes.css',
     'css/panels/toc.css',
     'css/panels/rss.css',
-    'css/panels/verse.css'
+    'css/panels/verse.css',
+    'css/panels/map.css'
 ]
 
 html_js_files = [

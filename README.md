@@ -20,6 +20,16 @@ To render the mermaid diagrams in `svg` format, the mermaid CLI must be availabl
 npm install -g @mermaid-js/mermaid-cli
 ```
 
+### Build Image
+
+```bash
+docker buildx build \
+    -f Dockerfile \
+    --platform linux/amd64 \
+    --push \
+    -t chinchalinchin/elara-builder:latest . 
+```
+
 ## Documentation
 
 - [ReStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html)

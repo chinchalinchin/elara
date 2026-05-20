@@ -13,6 +13,10 @@ Potomac River
 
   - `Kmusser, CC BY-SA 3.0 via Wikimedia Commons <https://creativecommons.org/licenses/by-sa/3.0>`_
 
+**Resources**
+
+- `Interstate Commission on the Potomac River Basin <https://www.potomacriver.org/resources/>`_
+
 2026
 ====
 

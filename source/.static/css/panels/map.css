@@ -1,0 +1,57 @@
+/* Base Map Panel Container */
+.map-panel {
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    
+    /* Material Design Surface & Shape */
+    background-color: var(--color-background-card);
+    border-radius: 12px;
+    
+    /* Material Elevation (DP04) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 
+                0 1px 3px rgba(0, 0, 0, 0.15);
+                
+    /* Subtle theme-colored border */
+    border: 1px solid color-mix(in srgb, var(--color-secondary-main) 20%, transparent);
+    
+    /* Ensure the internal Folium map respects the rounded corners */
+    overflow: hidden;
+    
+    /* Smooth Material easing for hover states */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s ease;
+}
+
+/* Interactive Hover State (Lifts to DP08) */
+.map-panel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 
+                0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: color-mix(in srgb, var(--color-secondary-main) 50%, transparent);
+}
+
+/* Force Folium's iFrame to respect the container */
+.map-panel iframe {
+    display: block; 
+    border: none !important;
+    border-radius: inherit;
+    width: 100% !important; 
+}
+
+/* Alignment Modifiers */
+.map-panel.left {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.map-panel.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-panel.right {
+    margin-left: auto;
+    margin-right: 0;
+}
