@@ -1,4 +1,6 @@
 import os
+import re
+import folium
 from docutils import nodes
 from docutils.parsers.rst import directives
 from sphinx.util.docutils import SphinxDirective
@@ -99,48 +101,120 @@ class map_node(nodes.General, nodes.Element):
 
 class MapDirective(SphinxDirective):
     """
-    Defines the .. map:: directive.
+    Defines the .. map:: directive to generate a folium map with coordinate markers.
     """
-
-    has_content = False
+    has_content = True
     required_arguments = 0
     optional_arguments = 0
     final_argument_whitespace = True
     option_spec = {
-        'latitude': directives.unchanged_required,
-        'longitude': directives.unchanged_required,
-        'width': directives.unchanged_required,
-        'height': directives.unchanged_required
+        'width': directives.unchanged,
+        'align': lambda arg: directives.choice(arg, ('left', 'center', 'right')),
+        'interpolate': directives.flag
     }
 
     def run(self):
         node = map_node('')
-        node['latitude'] = self.options['latitude']
-        node['longitude'] = self.options['longitude']
-        node['height'] = self.options['height']
-        node['width'] = self.options['width']
+        node['width'] = self.options.get('width', '100%')
+        node['align'] = self.options.get('align', 'center')
+        node['interpolate'] = 'interpolate' in self.options
+        
+        # Structurally parse coordinate pairs and optional labels 
+        coords = []
+        current_coord = None
+        
+        for line in self.content:
+            line = line.strip()
+            # New row triggered by '* -'
+            if line.startswith('* -'):
+                if current_coord is not None and 'lat' in current_coord and 'lon' in current_coord:
+                    coords.append(current_coord)
+                try:
+                    current_coord = {'lat': float(line[3:].strip())}
+                except ValueError:
+                    current_coord = None 
+            # Sequential columns in the row triggered by '-'
+            elif line.startswith('-') and current_coord is not None:
+                val = line[1:].strip()
+                if 'lon' not in current_coord:
+                    try:
+                        current_coord['lon'] = float(val)
+                    except ValueError:
+                        pass 
+                elif 'label' not in current_coord:
+                    current_coord['label'] = val
+                    
+        # Append the final item if valid
+        if current_coord is not None and 'lat' in current_coord and 'lon' in current_coord:
+            coords.append(current_coord)
+            
+        node['coords'] = coords
         return [node]
 
 def process_map_nodes(app, doctree, fromdocname):
     """
-    This function is connected to the 'doctree-resolved' event.
-    It finds all `map_node` instances in the document and replaces
-    them with the final HTML for the Google Maps iframe.
+    Intercepts map nodes, computes bounds, generates Folium iframes, 
+    and translates them to jinja HTML templates.
     """
-
     if app.builder.format != 'html':
         return
     
     for node in doctree.traverse(map_node):
-        map_html = app.builder.templates.render('panels/map.html', {
-            'map_latitude': node['latitude'],
-            'map_longitude': node['longitude'],
-            'maps_api_key': app.config.google_maps_api_key,
-            'maps_width': node['width'],
-            'maps_height': node['height']
+        coords = node.get('coords', [])
+        
+        # Omit block if there are no coordinates provided
+        if not coords:
+            node.replace_self([])
+            continue
+            
+        lats = [c['lat'] for c in coords]
+        lons = [c['lon'] for c in coords]
+        
+        center_lat = sum(lats) / len(lats)
+        center_lon = sum(lons) / len(lons)
+        
+        # Handle single pin vs multi-pin maps
+        if len(coords) == 1:
+            m = folium.Map(location=[center_lat, center_lon], zoom_start=12)
+            item = coords[0]
+            folium.Marker(
+                [item['lat'], item['lon']],
+                tooltip=item.get('label')
+            ).add_to(m)
+        else:
+            m = folium.Map(location=[center_lat, center_lon])
+            
+            # Apply linear interpolation path if requested
+            if node.get('interpolate'):
+                points = [[c['lat'], c['lon']] for c in coords]
+                folium.PolyLine(
+                    points, 
+                    color="#9370DB", 
+                    weight=3.5, 
+                    opacity=0.85
+                ).add_to(m)
+            
+            for item in coords:
+                folium.Marker(
+                    [item['lat'], item['lon']],
+                    tooltip=item.get('label')
+                ).add_to(m)
+                
+            sw = [min(lats), min(lons)]
+            ne = [max(lats), max(lons)]
+            # Fit bounds with a comfortable padding margin
+            m.fit_bounds([sw, ne], padding=(50, 50))
+            
+        # Render the full Folium iFrame HTML
+        map_html = m._repr_html_()
+        
+        rendered_html = app.builder.templates.render('panels/map.html', {
+            'map_html': map_html,
+            'width': node['width'],
+            'align': node['align']
         })
         
-        new_node = nodes.raw('', map_html, format='html')
+        new_node = nodes.raw('', rendered_html, format='html')
         node.replace_self(new_node)
 
 # ----------------------------------- RSS PANEL
@@ -288,7 +362,7 @@ def process_share_nodes(app, doctree, fromdocname):
         new_node = nodes.raw('', html, format='html')
         node.replace_self(new_node)
 
-# ----------------------------------- SHARE PANEL
+# ----------------------------------- SETUP ROUTING
 
 def setup(app):
     """
@@ -306,7 +380,6 @@ def setup(app):
     app.add_directive('verse', VerseDirective)
 
     app.add_config_value('facebook_app_id', '', 'html') 
-    app.add_config_value('google_maps_api_key', '', 'html')
 
     app.connect('doctree-resolved', process_share_nodes)
     app.connect('doctree-resolved', process_rss_nodes)

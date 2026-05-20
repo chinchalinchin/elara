@@ -29,3 +29,8 @@ npm install -g @mermaid-js/mermaid-cli
 - [Sphinx Toolbox](https://sphinx-toolbox.readthedocs.io/en/stable/index.html)
 - [Sphinx Sitemap](https://sphinx-sitemap.readthedocs.io/en/latest/getting-started.html)
 - [Sphinx Mermaid](https://sphinxcontrib-mermaid-demo.readthedocs.io/en/latest/)
+
+### Libraries
+
+- [folium](https://python-visualization.github.io/folium/latest/)
+- [eng-to-ipa](https://pypi.org/project/eng-to-ipa/)

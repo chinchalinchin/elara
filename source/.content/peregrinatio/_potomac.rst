@@ -11,7 +11,7 @@ Potomac River
 
   The Potomac River Drainage Watershed Basin
 
-  - Kmusser, CC BY-SA 3.0 `<https://creativecommons.org/licenses/by-sa/3.0>`_, via Wikimedia Commons
+  - `Kmusser, CC BY-SA 3.0 via Wikimedia Commons <https://creativecommons.org/licenses/by-sa/3.0>`_
 
 2026
 ====
@@ -119,10 +119,10 @@ Parking
 
 .. topic:: MARC Station Parking Lot
 
-  100 S. Maple Ave.	
-  Brunswick, MD 21716
-  Spaces: 675	
-  Price: Free
+  | 100 S. Maple Ave.	
+  | Brunswick, MD 21716
+  | Spaces: 675	
+  | Price: Free
 
   - `MARC Station Parking Details <https://www.mta.maryland.gov/marc-parking-details>`_
 
@@ -130,7 +130,7 @@ Parking
 Train
 -----
 
-.. figure:: ../../.static/pdf/records/2026-hfy-ticket.pdf
+.. figure:: ../../.static/img/personal/records/2026-hfy-ticket.png
   :width: 100%
   :alt: Floridian Line Ticket
   :align: center
@@ -142,6 +142,40 @@ Train
   - Departs: 5:08 PM, Harpers Ferry, WV
   - Arrives: 7:09 PM, Cumberland, MD
 
+Expedition
+----------
+
+----
+Plan
+----
+
+.. map::
+  :width: 80% 
+  :align: center
+
+  * - 39.650153
+    - -78.763389
+    - Cumberland, MD
+  * - 39.524601
+    - -78.538814
+    - Oldtown, MD
+  * - 39.626356
+    - -78.387194
+    - Little Orleans, MD
+  * - 39.651000
+    - -78.048000
+    - Hancock, MD
+  * - 39.599207
+    - -77.826033
+    - Williamsport, MD
+  * - 39.462306
+    - -77.774620
+    - Sharpsburg, MD
+  * - 39.311556
+    - -77.630486
+    - Brunswick, MD
+
+---------
 Departure
 ---------
 

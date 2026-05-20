@@ -1,9 +1,4 @@
-<iframe
-    width="{{ maps_width }}"
-    height="{{ maps_height }}"
-    style="border:0;"
-    loading="lazy"
-    allowfullscreen
-    referrerpolicy="no-referrer-when-downgrade"
-    src="https://www.google.com/maps/embed/v1/place?key={{ maps_api_key }}&q={{ map_latitude }},{{ map_longitude }}">
-</iframe>
+{% set margins = {'left': '0 auto 0 0', 'right': '0 0 0 auto', 'center': '0 auto'} %}
+<div class="map-panel" style="width: {{ width }}; margin: {{ margins[align] }};">
+    {{ map_html | safe }}
+</div>

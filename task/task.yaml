@@ -19,18 +19,30 @@ task:
     title: "Elara"
     # -------------------------------------------
     content: |
-      The `verse` directive doesn't perserve newlines, e.g., the following doesn't render a newline between the second and fourth line,
+      Create a `map` directive that satisfies the following constraints.
 
-      .. verse::
-        :increment: 2
+      - Use the `folium` library.
+      - Accepts a list of GPS coordinates of longitude, latitude
+      - Accepts a width argument in percentages.
+      - Accepts an align argument that can be `left`, `center`, `right` 
+      - Adds pins to those GPS coordinates.
+      - Generates a map graphic with those GPS coordinates centered, with a generous margin to display everything.
+      - Use a Jinja2 template for the panel.
 
-        first line
-        second line
+      **Example Usage**
 
-        fourth line (because of blank line above)
-        fifth line
+      .. map::
+        :width: 80% 
+        :align: center
+        :interpolate:
 
-      How do I insert new lines into the verse directive?
+        * - 39.648851
+          - -78.765985
+          - Cumberland, MD
+        * - 39.528458
+          - -78.587138
+          - Greenspring, WV
+
     # -------------------------------------------
     shell: []
       # - cat /Users/gmoore/Home/projects/elara/build/html/index.html
