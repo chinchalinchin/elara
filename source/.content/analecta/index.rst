@@ -9,6 +9,7 @@ Analecta
    :caption: Contents:
 
    1996
+   2012
    2014
    2015
    2016

@@ -141,10 +141,10 @@ Train
 
   `Amtrack Floridian Line <https://www.amtrak.com/floridian-train>`_
 
-  - Train: #40
-  - Date: May 22, 2026
-  - Departs: 5:08 PM, Harpers Ferry, WV
-  - Arrives: 7:09 PM, Cumberland, MD
+  | Train: #40
+  | Date: May 22, 2026
+  | Departs: 5:08 PM, Harpers Ferry, WV
+  | Arrives: 7:09 PM, Cumberland, MD
 
 Expedition
 ----------
