@@ -1,6 +1,6 @@
-======
-Oeuvre
-======
+=====
+Opera
+=====
 
 .. toctree::
    :maxdepth: 2
