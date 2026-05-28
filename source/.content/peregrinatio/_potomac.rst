@@ -1,3 +1,5 @@
+.. train delay data: https://juckins.net/amtrak_status/archive/html/history.php?train_num=40
+
 .. _potomac-river:
 
 =============
@@ -179,9 +181,50 @@ Plan
     - -77.630486
     - Brunswick, MD
 
----------
-Departure
----------
-
 - Departure Date: 2026/05/23, 6:00 AM
 - Departure Location: North Branch, Cumberland, MD 
+
+------
+Actual
+------
+
+.. map::
+  :width: 80% 
+  :align: center
+
+  * - 39.650153
+    - -78.763389
+    - Cumberland, MD
+  * - 39.524601
+    - -78.538814
+    - Oldtown, MD
+  * - 39.626356
+    - -78.387194
+    - Little Orleans, MD
+  * - 39.655938
+    - -77.930551
+    - Clear Spring, MD
+  * - 39.311556
+    - -77.630486
+    - Brunswick, MD
+
+- Departure Date: 2026/05/24, 6:00 AM
+- Departure Location: North Branch, Cumberland, MD 
+
+.. Logue
+.. -----
+.. 
+.. --------------
+.. May 22nd, 2026
+.. --------------
+..
+..
+.. **Harper's Ferry**, 8:45 pm, cold and raining
+.. 
+.. The rain continues to pour. The train has been ten minutes away for three hours. My phone keeps beeping with updates, telling me the departure has been DELAYED. DELAYED. So I sit here, while it rains and my flat roof in Cumberland accumulates rainfall. I wonder if it has started leaking yet.
+..
+.. I keep thinking, there's nothing to go back to. Nothing left. My home is gone. My father is dead. My mother's mind is broken. I am sitting on a train platform with a wind breaker as the sun sets over Harper's Ferry. The tourist district ascends up an incline opposite the train station, all of the quaint attractions, like a boxcar converted into a diner or a boutique gift shop, are closed. I keep almost shivering, not quite cold enough but almost. Right on the edge, as though the weather were drawing out its torture. 
+..
+.. Geese honk. The man sitting on the platform next to me lights up another cylinder of handrolled tobacco. An hour ago, we lost a college kid, his backpack decorated with patches and keychains proudly proclaiming his allegiance. He paced back and forth, back and forth, anxious for the train. His phone beeped DELAYED, so he cursed and stormed off, leaving the platform, never to be seen again.
+..
+.. The night descends. I charge my phone with the remainder of my laptop battery while looking up the average delays of Amtrack Train #40, the Floridian. The line was formed when Amtrak merged with Capitol Limited, expanding its length across the entire eastern seaboard. Unfortunately, the longer a track is, the more delays accumulate. Spreadsheets calculate the average delay time. One hour and forty minutes. Train #40 was scheduled to leave at 5:00 PM and the current time is 8:37 PM.

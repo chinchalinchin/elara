@@ -9,10 +9,10 @@
    .content/canon/index
    .content/epistemia/index
    .content/pedagogy/index
-   .content/theurgy/index
+   .content/theurgia/index
    .content/peregrinatio/index
    .content/analecta/index
-   .content/oeuvre/index
+   .content/opera/index
    .content/fabula/index
    
 .. rss::
