@@ -1,5 +1,5 @@
 graph TD
-    %% Material UI Tonal Palette Definitions (Legibility focused)
+    %% Material UI Tonal Palette Definitions
     classDef pie fill:#E1BEE7,stroke:#7B1FA2,stroke-width:2px,color:#000;
     classDef ancient fill:#FFECB3,stroke:#FFA000,stroke-width:1px,color:#000;
     classDef romance fill:#B3E5FC,stroke:#0288D1,stroke-width:1px,color:#000;
@@ -19,7 +19,9 @@ graph TD
     %% Italic / Latin
     LAT1["Latin: esse<br/>/ˈes.se/"]:::ancient
     LAT2["Latin: sedēre<br/>/seˈdeː.re/"]:::ancient
+    
     PIE1 --> LAT1
+    PIE2 -->|perfect stem *fui| LAT1
     PIE4 --> LAT2
 
     %% Romance
@@ -29,24 +31,31 @@ graph TD
 
     LAT1 --> ROM_IT
     LAT1 -->|via Vulgar Latin *essere| ROM_FR
+    LAT1 -->|present indicative| ROM_ES
     LAT2 -->|suppletion of infinitive| ROM_ES
 
     %% Germanic
     PG1["Proto-Germanic: *wesaną<br/>/ˈwe.sɑ.nɑ̃/"]:::germanic
     PG2["Proto-Germanic: *beuną<br/>/ˈbeu̯.nɑ̃/"]:::germanic
+    PG3["Proto-Germanic: *immi / *isti<br/>/ˈim.mi/ / /ˈis.ti/"]:::germanic
 
     PIE3 --> PG1
     PIE2 --> PG2
+    PIE1 --> PG3
 
     %% English
-    OE1["Old English: wesan<br/>/ˈwe.zɑn/"]:::english
+    OE1["Old English: wesan<br/>/ˈwe.sɑn/"]:::english
     OE2["Old English: bēon<br/>/ˈbeːo̯n/"]:::english
+    OE3["Old English: eam / is<br/>/æ͜ɑm/ / /is/"]:::english
 
     PG1 --> OE1
     PG2 --> OE2
+    PG3 --> OE3
 
-    ME["Middle English: been<br/>/beːn/"]:::english
+    ME["Middle English: been / am / is<br/>/beːn/ / /am/ / /is/"]:::english
+    OE1 --> ME
     OE2 --> ME
+    OE3 --> ME
     
-    ModE["Modern English: be<br/>/biː/"]:::english
+    ModE["Modern English: be / am / is / are<br/>/biː/ / /æm/ / /ɪz/ / /ɑr/"]:::english
     ME --> ModE
