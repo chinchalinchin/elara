@@ -1,8 +1,8 @@
-.. _theurgy:
+.. _theurgia:
 
-=======
-Theurgy
-=======
+========
+Theurgia
+========
 
 .. toctree::
    :maxdepth: 1
