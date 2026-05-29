@@ -4,6 +4,7 @@
 .. _Oldtown Toll Bridge: https://www.visitmaryland.org/listing/attraction/old-town-historical-toll-bridge
 .. _Floridian: https://www.amtrak.com/floridian-train
 .. _MARC Station Parking Lot: https://www.mta.maryland.gov/marc-parking-details
+.. _ C&O Companion: https://press.jhu.edu/books/title/10639/co-canal-companion
 
 .. _potomac-river:
 
@@ -535,7 +536,28 @@ I have no ill intentions, but it's good rehearsal for the actual show.
 
 **Clear Spring**, 7:58 PM, cloudy with light rain
 
+As soon as I stepped off the kayak in Hancock, a cramp in my lower left leg started screaming. It has gotten worse ever since. I have been limbing the whole evening. Dragging the kayak ashore was an ordeal in and of itself. It feels like the tendons in my leg are severed. I had to haul the kayak across the wooden bridge of Lock 49 and stopped every few yards to rest. The kayak trolley refused to work, wobbling and losing balance every chance it got. It appears the straps are not set correctly. I'll have to adjust them before tomorrow morning.
+
+Paid $5 for a shower at trailhead shop. Hot water was nice, but it burned like a thousand hells across my sunburns whenver they got water on them. I am in a sorry state. 
+
+My hands are calloused and sore from the constant paddling for three days. Found an abandoned pair of biker gloves at the Fifteen Mile camp and have been using them ever since. They have been a godsend. Solar panel works, except it's been cloudy non-stop. I've sene the sun maybe two hours the entire trip. 
+
+Tomorrow is going to be a rough one. By river, I am less than day from my goal. However, there are three dams between me and Brunswick: Dam #5, the Power Plant Dam and Dam #4. I'll have to put ashore above Dam #5 and haul the kayak until I can put in past the Power Plant Dam at Williamsport. Then I'll be able to make ten or so miles by river to Dam #4, before I have to take out one more time and go around. The `C&O Companion Book <C&O Companion>`_ has been indispensable in this regard. 
+
+(There's currently a groundhug snuffling around the ruins of Lock 49.)
+
+The kayak trolley has been hit or miss. Atleast the terrain should be level. Mostly. 
+
+The one saving garve is Lock House #49. The C&O Authority rents it out to hikers, so I used the 15% of my phone to reserve it for tonight, though the door was unlocked. I could have easily squatted in the place, but decided the Authority deserved some compensation for the good luck they have bestowed upon me. $135 a night, but worth it. A bed to sleep in will be a miracle compared the sleepless nights I have been spending, sunburnt, on the rocky ground.
+
+I bought a pack of cigarettes and coffee at Hancock. Couldn't take it anymore. Another addiction, I suppose, I willd tame. Atleast my consumption has been way done, less than a half a pack a day. but that is probably me trying to bargain for my vice.
+
+Started a campfire and fired up some sausage. The meal tasted better than anything I've ever eaten.
+
+Hopefully tomorrow will be the end of this forsaken trip. If not, then Thursday at the latest. It all depends on how quickly i can get around the dams. 
+
 May 27, 2026
 ------------
 
 This was the day I gave up. What you now read are recollections after the fact.
+
