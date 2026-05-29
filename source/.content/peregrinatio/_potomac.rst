@@ -68,7 +68,7 @@ Gear
 .. topic:: Equipment
 
     - `The C&O Companion <http://www.lesserscribe.net/CNOCANweb/index.html>`_
-    - `Set of Potomac River Maps <https://www.potomacriver.org/resources/maps/mapdownload/>`_
+    - `Potomac Watershed Maps <https://www.potomacriver.org/resources/maps/mapdownload/>`_
     - `BigBlue 28W Solar Charger <https://bigblue-tech.com/products/28w-sunpower-solar-charger>`_
     - `Suunto M3 Compass <https://us.suunto.com/products/suunto-m-3-g-compass>`_
     - `Citizen Watch Promaster Dive <https://www.citizenwatch.com/us/en/product/BN0151-09L.html>`_
@@ -78,37 +78,43 @@ Gear
     - `Swiss Army Tinker Knife <https://www.swissknifeshop.com/products/swiss-army-tinker>`_
     - `Swiss Gear Wenger Synergy Backpack <https://www.swissgear.com/products/wenger-synergy-laptop-backpack>`_
     - `Type II PFD Life Vest <https://www.survivalatsea.com/life-jackets/foam/seachoice-type-ii-life-vest-orange.aspx>`_
+    - `Android Galaxy S8 <https://en.wikipedia.org/wiki/Samsung_Galaxy_S8>`_
+    - `Type C USB Cable <https://www.lenovo.com/us/en/p/accessories-and-software/cables-and-adapters/cables/78807615>`_
+    - `Universal Kayak Trolley <https://www.walmart.com/ip/Ozark-Trail-Universal-Kayak-Cart-Model-KA204/10690364183>`_
 
 .. topic:: Supplies
 
-    - 30 ft. twine
-    - 30 ft. rope
-    - 1 insulated thermos
+    - 30 ft. 1" rope
+    - 20 ft. 1/2" rope
+    - 20 ft 1/4" rope
     - 1 roll of duct tape
     - 5 carribeaners
     - 2 waterproof roll bags
     - 1 tarp
-    - 1 first aid kit 
-    - 1 mess kit
+    - 1 mess kit (pan & plate)
     - 1 sleeping bag
-    - 1 tent
+    - 1 1-person dome tent
+    - 4 tent stakes
     - 3 elastic bands with hooks
     - 1 hatchet
-    - 2 pairs of shorts
+    - 1 pairs of shorts
     - 2 pairs of pants
     - 1 tee-shirt
     - 2 thermal shirts
     - 1 toboggan
     - 1 sweatshirt
+    - 1 fleece sherpa jacket
     - 1 rain jacket
+    - 1 poncho
     - 4 50 gallon contractor bags
     - 2 tupperware bins (provisions)
-    - 6 pens
-    - 1 composition notebook
+    - 1 composition notebook & 6 pens
     - 1 pair of sunglasses
     - 1 wallet with $200 and expired identification card
     - 1 toothbrush & toothpaste
     - 1 Bic Multipurpose Lighter
+    - 1 first aid kit (hydrocortisone, alcohol swabs, iodine, bandaids, gauze)
+    - 1 24-count bottle of ibuprofen
 
 .. list-table:: Provisions
   :header-rows: 1
@@ -255,8 +261,9 @@ Current Flow
   :interpolate:
   :title: Shepherdstown Discharge, 2026/05/22 - 2026/05/27
 
+-------
 Journal
---------
+-------
 
 .. verse::
   :increment: 5
@@ -264,11 +271,24 @@ Journal
   My father died alone in blinding pain.
   Dementia drove my mother quite insane.
   
---------------
-May 22nd, 2026
---------------
+May 22, 2026
+------------
 
-**Harper's Ferry**, 8:30 pm, cold and raining
+**Oldtown**, 2:40 PM, raining
+
+Two weeks ago, I paid a two truck to haul my father's 2004 Ford ranger from the ditch in which it had been stuck for the past two and half years.
+
+It wound up there after on of the properties in his estate burned to the ground in a freak accident. I had been hauling scrap metal, on a particularly rainiy day, from the wreckage of the house. The truck struggled up an embankment and then gave up, sliding down into the ditch would become its home.
+
+Over the two and half years since his death, mice had taken up residence in the glove box, infiltrating the cab through a hole rusted through the floor. Unconstrained and uninhibited, they built a bustling little colony in my father's decaying truck. The cab reeked of rodent, the nauseating cloying smell of piss, like an ether-soaked rag. The battery was dead and the tires were flat.
+
+After jumping the battery and filling the tires, I scrubbed for hours, but could not exorcise the smell of rodent piss. When the mechanic who did the oil change came out of the garage, he was wearing a face mask and regarded me as though I were a disgusting degenerate.
+
+Driving the truck through the winding passages of Route 51, where the roads sweep in convoluted trails through the foot hills of the Appalachian Mountains, the engine makes sickening groans, banging over every bump and crevice in the road, as though a creature wants released from the confines of the hood. Every turn feels as through the tires might hydroplane and send me over the edge into the dense Green Ridge Forest. Three times, while making sharp right-angle turns, as the state routes blurred into one another, the back tires lost traction and skidded across the rain-slick roads, seesawing over the double-yellow line. The pedals buck with the force of every pot hole. I feel the pressure of my journey in the tension of the brakes. The truck wants to fall apart. I am not sure what is keeping it together. 
+
+I stopped in Old Town for cofee and gas. A few more hours and I'll be in Brunswick.
+
+**Harper's Ferry**, 8:30 PM, cold and raining
 
 The rain continues to pour. The train has been ten minutes away for three hours. My phone keeps beeping with updates, telling me the departure has been DELAYED. DELAYED. So I sit here, while it rains and my flat roof in Cumberland accumulates rainfall. I wonder if it has started leaking yet.
 
@@ -277,3 +297,24 @@ I keep thinking, there's nothing to go back to. Nothing left. My home is gone. M
 Geese honk. The man sitting on the platform next to me lights up another cylinder of handrolled tobacco. An hour ago, we lost a college kid, his backpack decorated with patches and keychains proudly proclaiming his allegiances. He paced back and forth, back and forth, anxious for the train. His phone beeped DELAYED, so he cursed and stormed off, leaving the platform, never to be seen again.
 
 The night descends. I charge my phone with the remainder of my laptop battery while looking up the `average delays of Amtrack Train #40 <Train Delay Data>`_, the Floridian. The line was formed when Amtrak merged with Capitol Limited, expanding its length across the entire eastern seaboard. Unfortunately, the longer a track is, the more delays accumulate. Spreadsheets calculate the average delay time. One hour and forty minutes. Train #40 was scheduled to leave at 5:00 PM and the current time is 8:37 PM.
+
+May 23, 2026
+------------
+
+**Cumberland**, 11:35 AM, raining 
+
+Today was the day I was supposed to depart. My father's truck sits in a parking lot in Brunswick, waiting for me. The rain is coming down in voluminous sheets, as though it will never stop. The roof, being flat and prone to accumulate water, leaks incessantly.
+
+I inherited the building from my father when he died. It contains all of his old upholstery supplies. His accumulated remains, now in my care. The rose blossom tree that grows on the sidewalk outside of the building constantly sheds its thoughtless petals, which invariably clog the drainage grate on the roof. 
+
+This could all be fixed if I just got up there and cleaned the fucking spout. Instead, I've set up an electric water pump and run a hose down the side of the building. Anytime it rains more than a quarter of a inch, I have to run the pump and start a siphon to stop the water from leaking down into the garage. All because the only way onto the roof is climbing up a 30 foot ladder and navigating the slippery rubber sealed roof. 
+
+May 24, 2026
+------------
+
+**Spring Gap**, 8:17 AM, cold and wet
+
+May 27, 2026
+------------
+
+This was the day I gave up. What you now read are recollections after the fact.
