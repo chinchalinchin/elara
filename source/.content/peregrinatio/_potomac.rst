@@ -4,7 +4,7 @@
 .. _Oldtown Toll Bridge: https://www.visitmaryland.org/listing/attraction/old-town-historical-toll-bridge
 .. _Floridian: https://www.amtrak.com/floridian-train
 .. _MARC Station Parking Lot: https://www.mta.maryland.gov/marc-parking-details
-.. _ C&O Companion: https://press.jhu.edu/books/title/10639/co-canal-companion
+.. _C&O Companion: https://press.jhu.edu/books/title/10639/co-canal-companion
 
 .. _potomac-river:
 
