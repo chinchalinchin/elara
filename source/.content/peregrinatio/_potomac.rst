@@ -27,17 +27,17 @@ Prologmena
 
 I want to speak of endless despair.
 
-It is a river flowing through never ending mountains. It is the incomprehensible weather that cares not a bit what plans humans draw. The afflictions of the body that wrack your sensuous reality, the exposure of the elements that ravage and ruin. The beating rain of sleepless nights as hypothermia tickles your extremities. The alienation of the self in a wilderness more vast than abstractions can grasp. The current, grown bold from rain, that strains the muscles which fight against it.
+It is a river flowing through never-ending mountains. It is the incomprehensible weather that cares not a bit what plans humans draw. The afflictions of the body that wrack your sensuous reality, the exposure of the elements that ravage and ruin. The beating rain of sleepless nights as hypothermia tickles your extremities. The alienation of the self in a wilderness more vast than abstractions can grasp. The current, grown bold from rain, that strains the muscles which fight against it.
 
 It is the annihilation of the soul, the loss of all earthly attachments. It the destruction of a family. The loss of all love and worth. The abject and base alienation of the self from the world. The malaise of not being known to anyone but one's self. It is the realization that one is alone without the possibility of it being otherwise.
 
-Contrary to modern thought, though perhaps elucidated by Whitehead and Cioran, the self is not an abstraction. It is the fundamental constituent of the universe. That is the lesson of Tarskian satisfaction, Kripkean possibility, Sartre's for-itself, Heidegger's Dasein and the irreconcilable uncertainty discovered in quantum theory. Abstractions cannot in and of themselves contain truth; they are purely vacuous and tautologous. To be is, therefore, fundamentally, the descent of the subjective self to the objective world. It is the act of interpretation and observation. To be is how the subjective become objective.
+Contrary to modern thought, though perhaps elucidated by Whitehead and Cioran, the self is not an abstraction. It is the fundamental constituent of the universe. That is the lesson of Tarskian satisfaction, Kripkean possibility, Sartre's for-itself, Heidegger's Dasein and the irreconcilable uncertainty discovered in quantum theory. Abstractions cannot in and of themselves contain truth; they are purely vacuous and tautologous. To be is, therefore, fundamentally, the descent of the subjective self to the objective world. It is the act of interpretation and observation. To be is how the subjective becomes the objective.
 
 The history of thought is replete with examples of the limits of language. All stony men are gray. This sentence is false. The set of sets which don't contain themselves. The predication of the impredicable. 
 
-One cannot know the heights of despair through language. It is internal. One tries to define the river. The best available human models currently struggle to understand rotating fluids through anything but brute force approximation. The infinite energies of Navier Stokes stand like an impassable barrier between the abstraction and the violence which desires nothing, is nothing but raw elemental force.
+One cannot know the heights of despair through language. It is internal. One tries to define the river. The best available human models currently struggle to understand rotating fluids through anything but brute force approximation. The infinite energies of Navier-Stokes stand like an impassable barrier between the abstraction and the violence which desires nothing, is nothing but raw elemental force.
 
-Wittgenstein spoke of how language evolves, of the network of associations that wax and wane like rain. The pragmatics and contextualization of words. How meaning is not a unitary point, but a smear across the horizon of understanding. So we say "it is impossible this cat is green" and also "it is impossible this cat is not a cat" and use the word "impossible" in two different ways. He taught us to think of language as endless nodes connected by endless edges. The inherent contradiction of language that propels it forward is to take this finite structure and somehow use it to enumerate the continuum of all that is. So it spreads like life, like a dark forest dripping with venomous rain, in search of the point in which it becomes itself.
+Wittgenstein spoke of how language evolves, of the network of associations that wax and wane like rain. The pragmatics and contextualization of words. How meaning is not a unitary point, but a smear across the horizon of understanding. So we say "*it is impossible this cat is green*" and also "*it is impossible this cat is not a cat*" and use the word "*impossible*" in two different ways. employing two different meanings with the same symbol. He taught us to think of language as endless nodes connected by endless edges. The inherent contradiction of language that propels it forward is to take this finite structure and somehow use it to enumerate the continuum of all that is. So it spreads like life, like a dark forest dripping with venomous rain, in search of the point in which it becomes itself.
 
 Despair is the realization the very tools we use to think pale in comparison to the task to which we have set them to work. 
 
@@ -110,7 +110,7 @@ Gear
     - 2 tupperware bins (provisions)
     - 1 composition notebook & 6 pens
     - 1 pair of sunglasses
-    - 1 wallet with $200 and expired identification card
+    - 1 wallet with $200 and expired driver's license
     - 1 toothbrush & toothpaste
     - 1 Bic Multipurpose Lighter
     - 1 first aid kit (hydrocortisone, alcohol swabs, iodine, bandaids, gauze)
@@ -276,7 +276,7 @@ May 22, 2026
 
 **Oldtown**, 2:40 PM, raining
 
-Two weeks ago, I paid a two truck to haul my father's 2004 Ford ranger from the ditch in which it had been stuck for the past two and half years.
+Two weeks ago, I paid a tow truck to haul my father's 2004 Ford ranger from the ditch in which it had been stuck for the past two and half years.
 
 It wound up there after on of the properties in his estate burned to the ground in a freak accident. I had been hauling scrap metal, on a particularly rainiy day, from the wreckage of the house. The truck struggled up an embankment and then gave up, sliding down into the ditch would become its home.
 
