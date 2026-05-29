@@ -1,4 +1,6 @@
-.. train delay data: https://juckins.net/amtrak_status/archive/html/history.php?train_num=40
+.. _Train Delay Data: https://juckins.net/amtrak_status/archive/html/history.php?train_num=40
+.. _Will's Creek CFS: https://waterdata.usgs.gov/monitoring-location/USGS-01601500/
+.. _Shepherdstown CFS: https://waterdata.usgs.gov/monitoring-location/USGS-01618000/
 
 .. _potomac-river:
 
@@ -13,14 +15,40 @@ Potomac River
 
   The Potomac River Drainage Watershed Basin
 
-  - `Kmusser, CC BY-SA 3.0 via Wikimedia Commons <https://creativecommons.org/licenses/by-sa/3.0>`_
+  `Kmusser, CC BY-SA 3.0 via Wikimedia Commons <https://creativecommons.org/licenses/by-sa/3.0>`_
 
 **Resources**
 
+- `USGS Water Data <https://waterdata.usgs.gov>`_
 - `Interstate Commission on the Potomac River Basin <https://www.potomacriver.org/resources/>`_
 
-2026
-====
+Prologmena
+==========
+
+I want to speak of endless despair.
+
+It is a river flowing through never ending mountains. It is the incomprehensible weather that cares not a bit what plans humans draw. The afflictions of the body that wrack your sensuous reality, the exposure of the elements that ravage and ruin. The beating rain of sleepless nights as hypothermia tickles your extremities. The alienation of the self in a wilderness more vast than abstractions can grasp. The current, grown bold from rain, that strains the muscles which fight against it.
+
+It is the annihilation of the soul, the loss of all earthly attachments. It the destruction of a family. The loss of all love and worth. The abject and base alienation of the self from the world. The malaise of not being known to anyone but one's self. It is the realization that one is alone without the possibility of it being otherwise.
+
+Contrary to modern thought, though perhaps elucidated by Whitehead and Cioran, the self is not an abstraction. It is the fundamental constituent of the universe. That is the lesson of Tarskian satisfaction, Kripkean possibility, Sartre's for-itself, Heidegger's Dasein and the irreconcilable uncertainty discovered in quantum theory. Abstractions cannot in and of themselves contain truth; they are purely vacuous and tautologous. To be is, therefore, fundamentally, the descent of the subjective self to the objective world. It is the act of interpretation and observation. To be is how the subjective become objective.
+
+The history of thought is replete with examples of the limits of language. All stony men are gray. This sentence is false. The set of sets which don't contain themselves. The predication of the impredicable. 
+
+One cannot know the heights of despair through language. It is internal. One tries to define the river. The best available human models currently struggle to understand rotating fluids through anything but brute force approximation. The infinite energies of Navier Stokes stand like an impassable barrier between the abstraction and the violence which desires nothing, is nothing but raw elemental force.
+
+Wittgenstein spoke of how language evolves, of the network of associations that wax and wane like rain. The pragmatics and contextualization of words. How meaning is not a unitary point, but a smear across the horizon of understanding. So we say "it is impossible this cat is green" and also "it is impossible this cat is not a cat" and use the word "impossible" in two different ways. He taught us to think of language as endless nodes connected by endless edges. The inherent contradiction of language that propels it forward is to take this finite structure and somehow use it to enumerate the continuum of all that is. So it spreads like life, like a dark forest dripping with venomous rain, in search of the point in which it becomes itself.
+
+Despair is the realization the very tools we use to think pale in comparison to the task to which we have set them to work. 
+
+St. John of the Cross said this is equivalent to God's love secretly flooding your spirit and cleaving the way to true discovery and union with the divine. God's love is the suffering of Job. The nature of love is found in despair. In bankruptcy, stricken with ailments, blinded, your family dead, your name forgotten, with nothing at all on which to steady your self. The inescapable fall of the self into the objective world, to be racked, crucified and fed to lions. To drown in the inhuman depths of a raging river. God, says St. John of the Cross, can only be known by the total annihilation of the self and soul.
+
+Preparations
+============
+
+----
+Gear
+----
 
 .. topic:: Vessel 
 
@@ -48,7 +76,6 @@ Potomac River
     - `QuickSnap Waterproof Disposable Camera <https://www.fujifilm.com/us/en/consumer/films/quicksnap-waterproof>`_
     - `Sony ICF B200 AM/FM Crank Radio <https://www.radiomuseum.org/r/sony_icf_b200.html>`_
     - `Swiss Army Tinker Knife <https://www.swissknifeshop.com/products/swiss-army-tinker>`_
-    - `TI-3OX IIS Calculator <https://education.ti.com/en/products/calculators/scientific-calculators/ti-30x-iis>`_
     - `Swiss Gear Wenger Synergy Backpack <https://www.swissgear.com/products/wenger-synergy-laptop-backpack>`_
     - `Type II PFD Life Vest <https://www.survivalatsea.com/life-jackets/foam/seachoice-type-ii-life-vest-orange.aspx>`_
 
@@ -73,12 +100,13 @@ Potomac River
     - 2 thermal shirts
     - 1 toboggan
     - 1 sweatshirt
+    - 1 rain jacket
     - 4 50 gallon contractor bags
     - 2 tupperware bins (provisions)
     - 6 pens
     - 1 composition notebook
     - 1 pair of sunglasses
-    - 1 wallet with $250
+    - 1 wallet with $200 and expired identification card
     - 1 toothbrush & toothpaste
     - 1 Bic Multipurpose Lighter
 
@@ -112,9 +140,9 @@ Potomac River
   * - Spiced Apple Cider Teabags
     - 5 ounces
     - 50 calories
-
-Preflight
----------
+  * - Purified Water
+    - 2 gallons
+    - 0 calories
 
 -------
 Parking
@@ -148,12 +176,9 @@ Train
   | Departs: 5:08 PM, Harpers Ferry, WV
   | Arrives: 7:09 PM, Cumberland, MD
 
-Expedition
-----------
-
-----
-Plan
-----
+-------------
+Planned Route
+-------------
 
 .. map::
   :width: 80% 
@@ -184,9 +209,12 @@ Plan
 - Departure Date: 2026/05/23, 6:00 AM
 - Departure Location: North Branch, Cumberland, MD 
 
-------
-Actual
-------
+Expedition
+==========
+
+------------
+Actual Route
+------------
 
 .. map::
   :width: 80% 
@@ -201,8 +229,8 @@ Actual
   * - 39.626356
     - -78.387194
     - Little Orleans, MD
-  * - 39.655938
-    - -77.930551
+  * - 39.61545202059118
+    - -77.94841434871852
     - Clear Spring, MD
   * - 39.311556
     - -77.630486
@@ -211,20 +239,41 @@ Actual
 - Departure Date: 2026/05/24, 6:00 AM
 - Departure Location: North Branch, Cumberland, MD 
 
-.. Logue
-.. -----
-.. 
-.. --------------
-.. May 22nd, 2026
-.. --------------
-..
-..
-.. **Harper's Ferry**, 8:45 pm, cold and raining
-.. 
-.. The rain continues to pour. The train has been ten minutes away for three hours. My phone keeps beeping with updates, telling me the departure has been DELAYED. DELAYED. So I sit here, while it rains and my flat roof in Cumberland accumulates rainfall. I wonder if it has started leaking yet.
-..
-.. I keep thinking, there's nothing to go back to. Nothing left. My home is gone. My father is dead. My mother's mind is broken. I am sitting on a train platform with a wind breaker as the sun sets over Harper's Ferry. The tourist district ascends up an incline opposite the train station, all of the quaint attractions, like a boxcar converted into a diner or a boutique gift shop, are closed. I keep almost shivering, not quite cold enough but almost. Right on the edge, as though the weather were drawing out its torture. 
-..
-.. Geese honk. The man sitting on the platform next to me lights up another cylinder of handrolled tobacco. An hour ago, we lost a college kid, his backpack decorated with patches and keychains proudly proclaiming his allegiance. He paced back and forth, back and forth, anxious for the train. His phone beeped DELAYED, so he cursed and stormed off, leaving the platform, never to be seen again.
-..
-.. The night descends. I charge my phone with the remainder of my laptop battery while looking up the average delays of Amtrack Train #40, the Floridian. The line was formed when Amtrak merged with Capitol Limited, expanding its length across the entire eastern seaboard. Unfortunately, the longer a track is, the more delays accumulate. Spreadsheets calculate the average delay time. One hour and forty minutes. Train #40 was scheduled to leave at 5:00 PM and the current time is 8:37 PM.
+------------
+Current Flow
+------------
+
+.. graph:: .static/csv/scientific/potomac/wills-creek-2026-05.csv
+  :width: 80%
+  :align: center
+  :interpolate:
+  :title: Will's Creek Discharge, 2026/05/22 - 2026/05/27
+
+.. graph:: .static/csv/scientific/potomac/shepherdstown-2026-05.csv
+  :width: 80%
+  :align: center
+  :interpolate:
+  :title: Shepherdstown Discharge, 2026/05/22 - 2026/05/27
+
+Journal
+--------
+
+.. verse::
+  :increment: 5
+
+  My father died alone in blinding pain.
+  Dementia drove my mother quite insane.
+  
+--------------
+May 22nd, 2026
+--------------
+
+**Harper's Ferry**, 8:30 pm, cold and raining
+
+The rain continues to pour. The train has been ten minutes away for three hours. My phone keeps beeping with updates, telling me the departure has been DELAYED. DELAYED. So I sit here, while it rains and my flat roof in Cumberland accumulates rainfall. I wonder if it has started leaking yet.
+
+I keep thinking, there's nothing to go back to. Nothing left. My home is gone. My father is dead. My mother's mind is broken. I am sitting on a train platform with a wind breaker as the sun sets over Harper's Ferry. The tourist district ascends up an incline opposite the train station; all of the quaint attractions, like a boxcar converted into a diner or a boutique gift shop, are closed. I keep almost shivering, not quite cold enough but almost. Right on the edge, as though the weather were drawing out its torture. 
+
+Geese honk. The man sitting on the platform next to me lights up another cylinder of handrolled tobacco. An hour ago, we lost a college kid, his backpack decorated with patches and keychains proudly proclaiming his allegiances. He paced back and forth, back and forth, anxious for the train. His phone beeped DELAYED, so he cursed and stormed off, leaving the platform, never to be seen again.
+
+The night descends. I charge my phone with the remainder of my laptop battery while looking up the `average delays of Amtrack Train #40 <Train Delay Data>`_, the Floridian. The line was formed when Amtrak merged with Capitol Limited, expanding its length across the entire eastern seaboard. Unfortunately, the longer a track is, the more delays accumulate. Spreadsheets calculate the average delay time. One hour and forty minutes. Train #40 was scheduled to leave at 5:00 PM and the current time is 8:37 PM.

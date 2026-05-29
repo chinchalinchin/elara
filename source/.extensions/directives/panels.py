@@ -1,12 +1,212 @@
 import os
 import re
-import folium
+import csv
 from docutils import nodes
 from docutils.parsers.rst import directives
 from sphinx.util.docutils import SphinxDirective
 from urllib.parse import quote
 import xml.etree.ElementTree as ET
 from datetime import datetime
+from io import StringIO
+
+import folium
+import numpy as np
+import matplotlib
+
+matplotlib.use('Agg') 
+
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+
+from scipy.interpolate import make_interp_spline
+
+# ----------------------------------- GRAPH PANEL
+class graph_node(nodes.General, nodes.Element):
+    """A custom node for graph charts to be replaced later."""
+    pass
+
+class GraphDirective(SphinxDirective):
+    """
+    Defines the .. graph:: directive to generate a scatterplot/spline.
+    Accepts either an absolute/relative file path to a CSV or nested inline data.
+    """
+    has_content = True
+    required_arguments = 0
+    optional_arguments = 1 # Optional CSV file path
+    final_argument_whitespace = True
+    option_spec = {
+        'width': directives.unchanged,
+        'align': lambda arg: directives.choice(arg, ('left', 'center', 'right')),
+        'interpolate': directives.flag,
+        'title': directives.unchanged
+    }
+
+    def run(self):
+        node = graph_node('')
+        node['width'] = self.options.get('width', '100%')
+        node['align'] = self.options.get('align', 'center')
+        node['interpolate'] = 'interpolate' in self.options
+        node['title'] = self.options.get('title')
+
+        headers = []
+        coords = []
+
+        # 1. Prioritize File Argument
+        if self.arguments:
+            filepath = self.arguments[0].strip()
+            if not os.path.isabs(filepath):
+                # Resolve relative paths against the Sphinx source directory
+                filepath = os.path.join(self.env.srcdir, filepath)
+            
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    reader = csv.reader(f)
+                    headers = next(reader) # Assumes header row exists per requirements
+                    coords = [row for row in reader if row]
+            except Exception as e:
+                return [self.state.document.reporter.error(
+                    f"Graph Directive: Failed to read CSV {filepath} - {e}", line=self.lineno)]
+        
+        # 2. Fallback to Content Parsing
+        else:
+            current_row = []
+            for line in self.content:
+                line = line.strip()
+                if line.startswith('* -'):
+                    if current_row:
+                        if not headers: 
+                            headers = current_row
+                        else: 
+                            coords.append(current_row)
+                    current_row = [line[3:].strip()]
+                elif line.startswith('-') and current_row:
+                    current_row.append(line[1:].strip())
+            
+            if current_row:
+                if not headers: 
+                    headers = current_row
+                else: 
+                    coords.append(current_row)
+
+        if not coords or len(coords[0]) < 2:
+            return [self.state.document.reporter.error(
+                "Graph Directive: Insufficient data provided (requires at least 2 columns).", line=self.lineno)]
+
+        node['headers'] = headers
+        node['coords'] = coords
+        return [node]
+
+
+def process_graph_nodes(app, doctree, fromdocname):
+    """
+    Intercepts graph nodes, parses values (float vs datetime), generates a Matplotlib 
+    SVG, and translates it to jinja HTML templates.
+    """
+    if app.builder.format != 'html':
+        return
+    
+    for node in doctree.traverse(graph_node):
+        coords = node.get('coords', [])
+        headers = node.get('headers', ['X', 'Y'])
+        title = node.get('title')
+        
+        if not coords:
+            node.replace_self([])
+            continue
+
+        x_raw = [row[0] for row in coords]
+        y_raw = [float(row[1]) for row in coords]
+
+        # Determine if X-axis is Datetime or Float
+        is_datetime = False
+        try:
+            x_vals = [float(v) for v in x_raw]
+        except ValueError:
+            try:
+                # Naive ISO parser; replaces Z with standard UTC offset for compatibility
+                x_vals = [datetime.fromisoformat(v.replace('Z', '+00:00')) for v in x_raw]
+                is_datetime = True
+            except ValueError:
+                # TODO: Implement categorical x-axis if string data doesn't match isoformat
+                app.logger.warning('Graph Directive: X-axis data could not be parsed as float or datetime.', location=node)
+                node.replace_self([])
+                continue
+
+        # Convert to numeric arrays for robust manipulation and sorting
+        if is_datetime:
+            x_num = mdates.date2num(x_vals)
+        else:
+            x_num = np.array(x_vals)
+            
+        y_num = np.array(y_raw)
+
+        # Sort data to prevent spline looping backwards 
+        sort_idx = np.argsort(x_num)
+        x_sorted = x_num[sort_idx]
+        y_sorted = y_num[sort_idx]
+
+        # Material UI Figure Setup
+        fig, ax = plt.subplots(figsize=(8, 4.5))
+        fig.patch.set_alpha(0.0) 
+        ax.patch.set_alpha(0.0)
+
+        # De-clutter Chart Junk
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.spines['bottom'].set_color('#999999')
+        ax.spines['left'].set_color('#999999')
+        ax.tick_params(colors='#999999')
+        ax.grid(True, linestyle='--', alpha=0.15, color='#DDDDDD')
+        
+        # Apply Headers
+        ax.set_xlabel(headers[0], color='#DDDDDD', fontsize=10, weight='medium')
+        ax.set_ylabel(headers[1], color='#DDDDDD', fontsize=10, weight='medium')
+
+        if title:
+            # Padding pushes the title up slightly to prevent overlap with the chart area
+            ax.set_title(title, color='#FFFFFF', fontsize=12, weight='bold', pad=15)
+
+        # Format X-Axis if Datetime
+        if is_datetime:
+            ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d %H:%M'))
+            fig.autofmt_xdate()
+
+        # Execute Plotting
+        if node.get('interpolate') and len(x_sorted) > 3:
+            # Splines require strictly increasing independent variables
+            x_unique, unique_idx = np.unique(x_sorted, return_index=True)
+            y_unique = y_sorted[unique_idx]
+
+            if len(x_unique) > 3:
+                x_new = np.linspace(x_unique.min(), x_unique.max(), 300)
+                spline = make_interp_spline(x_unique, y_unique, k=3)
+                y_new = spline(x_new)
+
+                # Convert numeric bounds back to datetime for matplotlib
+                plot_x = mdates.num2date(x_new) if is_datetime else x_new
+                
+                # Plot Spline (Primary Deep Space Purple)
+                ax.plot(plot_x, y_new, color='#9370DB', linewidth=2.5, alpha=0.9, zorder=2)
+
+        # Always plot the raw scatter points (Secondary Galactic Blue)
+        plot_scatter_x = [x_vals[i] for i in sort_idx] if is_datetime else x_sorted
+        ax.scatter(plot_scatter_x, y_sorted, color='#42A5F5', s=35, zorder=3, edgecolors='#1E1E1E', linewidths=0.5)
+
+        # Export Plot to SVG
+        svg_buffer = StringIO()
+        fig.savefig(svg_buffer, format='svg', bbox_inches='tight', transparent=True)
+        plt.close(fig)
+        svg_html = svg_buffer.getvalue()
+
+        # Render output component
+        rendered_html = app.builder.templates.render('panels/graph.html', {
+            'svg_html': svg_html,
+            'width': node['width'],
+            'align': node['align']
+        })
+        
+        new_node = nodes.raw('', rendered_html, format='html')
+        node.replace_self(new_node)
 
 # ----------------------------------- VERSE PANEL
 class verse_node(nodes.General, nodes.Element):
@@ -373,11 +573,13 @@ def setup(app):
     app.add_node(rss_node)
     app.add_node(share_node)
     app.add_node(verse_node)
+    app.add_node(graph_node)
 
     app.add_directive('share', ShareDirective)
     app.add_directive('map', MapDirective)
     app.add_directive('rss', RssDirective)
     app.add_directive('verse', VerseDirective)
+    app.add_directive('graph', GraphDirective)
 
     app.add_config_value('facebook_app_id', '', 'html') 
 
@@ -385,7 +587,13 @@ def setup(app):
     app.connect('doctree-resolved', process_rss_nodes)
     app.connect('doctree-resolved', process_map_nodes)
     app.connect('doctree-resolved', process_verse_nodes)
+    app.connect('doctree-resolved', process_graph_nodes)
 
+    return {
+        'version': '1.0',
+        'parallel_read_safe': True,
+        'parallel_write_safe': True,
+    }
     return {
         'version': '1.0',
         'parallel_read_safe': True,

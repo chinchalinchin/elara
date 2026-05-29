@@ -80,7 +80,8 @@ html_css_files = [
     'css/panels/toc.css',
     'css/panels/rss.css',
     'css/panels/verse.css',
-    'css/panels/map.css'
+    'css/panels/map.css',
+    'css/panels/graph.css'
 ]
 
 html_js_files = [
