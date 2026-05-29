@@ -25,6 +25,35 @@ Potomac River
 Prologmena
 ==========
 
+.. topic:: Slack
+
+  **Tuesday, May 12th**
+
+  *Ruth [11:46 AM]*
+  
+  Hey, just FYI - you’ve not taken much vacation time and after the next three payrolls you’ll hit the “ceiling” of what you can earn.  You may want to schedule some time off so you don’t start losing vacation time.  So by the end of June, you’ll want to have taken some time off or you’ll start losing your vacation accrual
+
+  *Grant [11:47 AM]*
+
+  How many do I have to take to not lose any?
+
+  *Ruth [11:48 AM]*
+
+  So the max is 184 hours.  You earn 5.54 hrs each payroll.  After I process the 6/26 payroll, you’ll have 182.78 hrs.
+
+  *Grant [11:49 AM]*
+
+  Oh, I see.
+  
+  *Ruth [11:50 AM]*
+
+  Each payroll is a two-week period.  So starting at the end of June, you’d need to take approx.  6 hrs per payroll just to not lose any. even if you plan a couple of long weekends, that will bring you down so you’re not close to the max.
+
+  Just wanted you to be aware.
+
+Thesis
+======
+
 I want to speak of endless despair.
 
 It is a river flowing through never-ending mountains. It is the incomprehensible weather that cares not a bit what plans humans draw. The afflictions of the body that wrack your sensuous reality, the exposure of the elements that ravage and ruin. The beating rain of sleepless nights as hypothermia tickles your extremities. The alienation of the self in a wilderness more vast than abstractions can grasp. The current, grown bold from rain, that strains the muscles which fight against it.
@@ -137,13 +166,7 @@ Gear
   * - Fruit & Nut Granula
     - 11 ounces
     - 1320 calories 
-  * - StarKist Creations
-    - 18.2 ounces
-    - 700 calories
-  * - Canned Sardines
-    - 10 ounces
-    - 2400 calories
-  * - Spiced Apple Cider Teabags
+  * - Spiced Apple Cider Mix
     - 5 ounces
     - 50 calories
   * - Purified Water
@@ -278,7 +301,7 @@ May 22, 2026
 
 Two weeks ago, I paid a tow truck to haul my father's 2004 Ford ranger from the ditch in which it had been stuck for the past two and half years.
 
-It wound up there after on of the properties in his estate burned to the ground in a freak accident. I had been hauling scrap metal, on a particularly rainiy day, from the wreckage of the house. The truck struggled up an embankment and then gave up, sliding down into the ditch would become its home.
+It wound up there after one of the properties in his estate burned to the ground in a freak accident. I had been hauling scrap metal, on a particularly rainiy day, from the wreckage of the house. The truck struggled up an embankment and then gave up, sliding down into the ditch would become its home.
 
 Over the two and half years since his death, mice had taken up residence in the glove box, infiltrating the cab through a hole rusted through the floor. Unconstrained and uninhibited, they built a bustling little colony in my father's decaying truck. The cab reeked of rodent, the nauseating cloying smell of piss, like an ether-soaked rag. The battery was dead and the tires were flat.
 
@@ -287,7 +310,7 @@ After jumping the battery and filling the tires, I scrubbed for hours, but could
 Driving the truck through the winding passages of Route 51, where the roads sweep in convoluted trails through the foot hills of the Appalachian Mountains, the engine makes sickening groans, banging over every bump and crevice in the road, as though a creature wants released from the confines of the hood. Every turn feels as through the tires might hydroplane and send me over the edge into the dense Green Ridge Forest. Three times, while making sharp right-angle turns, as the state routes blurred into one another, the back tires lost traction and skidded across the rain-slick roads, seesawing over the double-yellow line. The pedals buck with the force of every pot hole. I feel the pressure of my journey in the tension of the brakes. The truck wants to fall apart. I am not sure what is keeping it together. 
 
 I stopped in Old Town for cofee and gas. A few more hours and I'll be in Brunswick.
-
+ 
 **Harper's Ferry**, 8:30 PM, cold and raining
 
 The rain continues to pour. The train has been ten minutes away for three hours. My phone keeps beeping with updates, telling me the departure has been DELAYED. DELAYED. So I sit here, while it rains and my flat roof in Cumberland accumulates rainfall. I wonder if it has started leaking yet.
@@ -298,16 +321,26 @@ Geese honk. The man sitting on the platform next to me lights up another cylinde
 
 The night descends. I charge my phone with the remainder of my laptop battery while looking up the `average delays of Amtrack Train #40 <Train Delay Data>`_, the Floridian. The line was formed when Amtrak merged with Capitol Limited, expanding its length across the entire eastern seaboard. Unfortunately, the longer a track is, the more delays accumulate. Spreadsheets calculate the average delay time. One hour and forty minutes. Train #40 was scheduled to leave at 5:00 PM and the current time is 8:37 PM.
 
+.. topic:: Text Alert
+
+  AMTRAK Travel Update: As of 8:42 PM ET, Train 40 remains stopped north of Rockville (RKV) due to crews performing mechanical assessments. A recovery locomotive is en route from Brunswick and will be added to the trainset. Once completed, service will continue. An additional delay of up to approx. 90 minutes or more is anticipated. We appreciate your patience and will provide an update as more information becomes available. We sincerely apologize for this delay and appreciate your continued pateince.
+
+.. topic:: Text Alert 
+
+  AMTRAK Travel Update: As of 10:04 PM ET, Train 40 has resumed service and is operating approx. 4 hours and 55 minutes late. We sincerely appreciate your continued patience and apologize for the lengthy delay. 
+
 May 23, 2026
 ------------
 
 **Cumberland**, 11:35 AM, raining 
 
+Train didn't get back into Cumberland until around 1 AM. The only thing the lady I sat next said to me was, "*This is the worst train ride I have ever been on*," as we got up to leave. I had to walk three blocks to my office in the rain.
+
 Today was the day I was supposed to depart. My father's truck sits in a parking lot in Brunswick, waiting for me. The rain is coming down in voluminous sheets, as though it will never stop. The roof, being flat and prone to accumulate water, leaks incessantly.
 
 I inherited the building from my father when he died. It contains all of his old upholstery supplies. His accumulated remains, now in my care. The rose blossom tree that grows on the sidewalk outside of the building constantly sheds its thoughtless petals, which invariably clog the drainage grate on the roof. 
 
-This could all be fixed if I just got up there and cleaned the fucking spout. Instead, I've set up an electric water pump and run a hose down the side of the building. Anytime it rains more than a quarter of a inch, I have to run the pump and start a siphon to stop the water from leaking down into the garage. All because the only way onto the roof is climbing up a 30 foot ladder and navigating the slippery rubber sealed roof. 
+This could all be fixed if I just got up there and cleaned the fucking spout. Instead, I've set up an electric water pump and run a hose down the side of the building. Anytime it rains more than a quarter of a inch, I have to run the pump and start a siphon to stop the water from leaking down into the garage. All because the only way onto the roof is climbing up a 30 foot ladder and navigating the slippery rubber sealed roof. I don't understand why I can't just clean the roof, like I'm supposed to, instead of inventing some convoluted patchwork solution.
 
 May 24, 2026
 ------------
