@@ -624,8 +624,43 @@ Started a campfire and fired up some sausage. The meal tasted liked nothing, but
 
 Hopefully tomorrow will be the end of this forsaken trip. If not, then Thursday at the latest. It all depends on how quickly I can get around the dams. 
 
+.. topic:: Text From Paul
+
+  *Paul [10:47 PM]*
+
+  Is this grant? I thought it was spam at first. it's cool man, I've been through a lot too, so I get it. My mom told me a bunch of stuff about Granny that bummed me out. It's obvious she has some form of cognitive impairment, but it's still hard to get guardianship when a person in question still has some cognition left. I'm sorry you're going through that and whatever else on top of that. I miss Bill, he was always so chill about everything.
+
 May 27, 2026
 ------------
 
 This was the day I gave up. What you now read are recollections after the fact.
 
+.. topic:: Texts
+
+  *Grant [1:08 PM]*
+
+  She would have listened to him. 
+
+  *Paul [1:29 PM]*
+
+  Yeah. She went down fast when he passed. I think she lost most of her mind being in that house alone all the time. My mom said Terry is getting tired having to go find her car keys and pocketbook on a daily basis. It makes make sad but I eventually something is bound to happen, whether she falls, causes a fire or pisses off the cops one too many after accusing another innocent person of theft. How many times has she called the cops on you? 
+
+  *Grant [3:07 PM]*
+
+  Not sure at this point. At least three times. I wasn't trying to get guardianship, really. I was trying to get the court to force her to go to a doctor. 
+
+  *Paul [3:13 PM]*
+
+  Oh, that should be a little easier. I think I heard the DMV might make her get checked, or at least a doctor will have to sign off on it. They might do a scan before they sign off. if she got in an accident because of cognitive deficit, they could be liable. She definitely need a guardianship though. Unless she gets better. 
+
+  *Grant [3:23 PM]*
+
+  There's no way to get her to dgo to the doctor without a court ordering it, because she won't go. I used to have POA and healthcare directives. I scheduled MRIs for her, but she cancelled, freaked out. MVA can't make her get an MRI. They can only revoke her license. And she needs a brain scan to determine what is wrong, although it's pretty clear at this point it's some type of fronto-temporal dementia. She has all the symptoms. 
+
+  *Paul [4:42 PM]*
+
+  Yeah, she used to eat Benadryl like candy and now it's suspected to be linked to many dementia cases. Anticholinergics are really bad when used long term. She must be scared they will find something in a scan. She has to know on some level there is something wrong with her.
+
+  *Grant [4:44 PM]*
+
+  She knows they will. I had cameras in the house up until last October. She talked to Bill Wolfe about losing her memory all of the time.
