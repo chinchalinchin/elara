@@ -1,6 +1,9 @@
 .. _Train Delay Data: https://juckins.net/amtrak_status/archive/html/history.php?train_num=40
 .. _Will's Creek CFS: https://waterdata.usgs.gov/monitoring-location/USGS-01601500/
 .. _Shepherdstown CFS: https://waterdata.usgs.gov/monitoring-location/USGS-01618000/
+.. _Oldtown Toll Bridge: https://www.visitmaryland.org/listing/attraction/old-town-historical-toll-bridge
+.. _Floridian: https://www.amtrak.com/floridian-train
+.. _MARC Station Parking Lot: https://www.mta.maryland.gov/marc-parking-details
 
 .. _potomac-river:
 
@@ -191,7 +194,7 @@ Parking
   | Spaces: 675	
   | Price: Free
 
-  - `MARC Station Parking Details <https://www.mta.maryland.gov/marc-parking-details>`_
+  - `MARC Station Parking Details <MARC Station Parking Lot>`_
 
 -----
 Train
@@ -202,7 +205,7 @@ Train
   :alt: Floridian Line Ticket
   :align: center
 
-  `Amtrack Floridian Line <https://www.amtrak.com/floridian-train>`_
+  `Amtrack Floridian Line <Floridian>`_
 
   | Train: #40
   | Date: May 22, 2026
@@ -364,6 +367,15 @@ I am only a few miles from my office. I could walk back in less than two hours. 
 I cried on the river. I miss my dad so much. I wish I could talk to him one more time. 
 
 He told me that he was glad I was there before he died. I wish I could have been a better son.
+
+.. figure:: ../../.static/img/personal/records/oldtown-toll-bridge.jpg
+  :width: 100%
+  :alt: Potomac River Basin
+  :align: center
+
+  The Oldtown Toll Bridge
+
+  `Source <Oldtown Toll Bridge>`_
 
 **Sorrel Ridge**, 2:20 PM, cold and wet
 
