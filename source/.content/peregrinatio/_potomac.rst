@@ -281,13 +281,13 @@ Current Flow
 ------------
 
 .. graph:: .static/csv/scientific/potomac/wills-creek-2026-05.csv
-  :width: 80%
+  :width: 100%
   :align: center
   :interpolate:
   :title: Will's Creek Discharge, 2026/05/22 - 2026/05/27
 
 .. graph:: .static/csv/scientific/potomac/shepherdstown-2026-05.csv
-  :width: 80%
+  :width: 100%
   :align: center
   :interpolate:
   :title: Shepherdstown Discharge, 2026/05/22 - 2026/05/27
@@ -305,29 +305,39 @@ Journal
 May 22, 2026
 ------------
 
-**Oldtown**, 2:40 PM, raining
+**Oldtown**
 
-Two weeks ago, I paid a tow truck to haul my father's 2004 Ford ranger from the ditch in which it had been stuck for the past two and half years.
+- 2:40 PM
+- Raining
+- Mile Marker: 166
 
-It wound up there after one of the properties in his estate burned to the ground in a freak accident. I had been hauling scrap metal, on a particularly rainiy day, from the wreckage of the house. The truck struggled up an embankment and then gave up, sliding down into the ditch would become its home.
+Two weeks ago, I paid a tow truck to haul my father's 2004 Ford Ranger from the ditch in which it had been stuck for the past two and half years.
 
-Over the two and half years since his death, mice had taken up residence in the glove box, infiltrating the cab through a hole rusted through the floor. Unconstrained and uninhibited, they built a bustling little colony in my father's decaying truck. The cab reeked of rodent, the nauseating cloying smell of piss, like an ether-soaked rag. The battery was dead and the tires were flat.
+It wound up there after one of the properties in his estate caught fire in a freak accident. The tenant left a candle burning in the kitchen and went out to get groceries. When she came back, the property was engulfed in flames, encircled by arcs of water glowing red and blue in the commotion. I watched with my mother from the street side as the wooden frame burnt to the ground. 
 
-After jumping the battery and filling the tires, I scrubbed for hours, but could not exorcise the smell of rodent piss. When the mechanic who did the oil change came out of the garage, he was wearing a face mask and regarded me as though I were a disgusting degenerate.
+I had been hauling scrap metal, on a particularly rainy day, from the wreckage of the property. The truck struggled up an embankment, flinging mud behind it in an attempt to stay on solid ground. Eventually, realizing the futility of its course, it gave up, sliding down into the ditch that would become its temporary home.
 
-Driving the truck through the winding passages of Route 51, where the roads sweep in convoluted trails through the foot hills of the Appalachian Mountains, the engine makes sickening groans, banging over every bump and crevice in the road, as though a creature wants released from the confines of the hood. Every turn feels as through the tires might hydroplane and send me over the edge into the dense Green Ridge Forest. Three times, while making sharp right-angle turns, as the state routes blurred into one another, the back tires lost traction and skidded across the rain-slick roads, seesawing over the double-yellow line. The pedals buck with the force of every pot hole. I feel the pressure of my journey in the tension of the brakes. The truck wants to fall apart. I am not sure what is keeping it together. 
+Over the two and half years since his death, mice had taken up residence in the glove box, infiltrating the cab through a hole rusted through the floor. Unconstrained by human law, their mammalian instincts uninhibited, they built a bustling little colony in my father's decaying truck. The cab reeked of rodent, the nauseating, cloying smell of piss, like an ether-soaked rag pressed to your face each time the door opened. The battery was dead and the tires were flat. The passenger side door was crushed into inoperability when the tow truck line pulled it taut against a protuding stump, leaving a long cut across its white surface, a cleft that revealed the barren metal beneeath.
 
-I stopped in Old Town for cofee and gas. A few more hours and I'll be in Brunswick.
+After jumping the battery and filling the tires, I scrubbed for hours, but could not exorcise the smell of rodent piss. When the mechanic who did the oil change came out of the garage, he was wearing a face mask and regarded me as though I were a disgusting degenerate, living in my own filth.
+
+Driving the truck through the winding passages of Route 51, where the roads sweep in convoluted trails through the foot hills of the Appalachian Mountains, the engine makes sickening groans, banging over every bump and crevice in the road, as though a creature wants released from the confines of the hood. The rain has coated the roads with quicksilver, mirrors that peer into the inverted reflections splayed across them. Every turn feels as through the tires might hydroplane and send me over the edge into the dense Green Ridge Forest. Three times, while making sharp right-angle turns, as the state routes blurred into one another, the back tires lost traction and skidded over the rain-slick roads, seesawing along the pivot of the double-yellow line. The pedals buck with the force of every pot hole. I feel the pressure of my journey in the tension of the brakes. The truck wants to fall apart. I am not sure what is keeping it together. 
+
+I stopped in Old Town for coffee and gas. A few more hours and I'll be in Brunswick.
  
-**Harper's Ferry**, 8:30 PM, cold and raining
+**Harper's Ferry**
 
-The rain continues to pour. The train has been ten minutes away for three hours. My phone keeps beeping with updates, telling me the departure has been DELAYED. DELAYED. So I sit here, while it rains and my flat roof in Cumberland accumulates rainfall. I wonder if it has started leaking yet.
+- 8:30 PM
+- Cold and Raining
+- Mile Marker: 60.7
+
+The rain continues to pour. The train has been ten minutes away for three hours. My phone keeps beeping with updates, telling me the departure has been DELAYED. DELAYED. DELAYED. So I sit here, while it pours on the entire state of Maryland and my flat roof in Cumberland accumulates rainfall. I wonder if it has started leaking yet.
 
 I keep thinking, there's nothing to go back to. Nothing left. My home is gone. My father is dead. My mother's mind is broken. I am sitting on a train platform with a wind breaker as the sun sets over Harper's Ferry. The tourist district ascends up an incline opposite the train station; all of the quaint attractions, like a boxcar converted into a diner or a boutique gift shop, are closed. I keep almost shivering, not quite cold enough but almost. Right on the edge, as though the weather were drawing out its torture. 
 
 Geese honk. The man sitting on the platform next to me lights up another cylinder of handrolled tobacco. An hour ago, we lost a college kid, his backpack decorated with patches and keychains proudly proclaiming his allegiances. He paced back and forth, back and forth, anxious for the train. His phone beeped DELAYED, so he cursed and stormed off, leaving the platform, never to be seen again.
 
-The night descends. I charge my phone with the remainder of my laptop battery while looking up the `average delays of Amtrack Train #40 <Train Delay Data>`_, the Floridian. The line was formed when Amtrak merged with Capitol Limited, expanding its length across the entire eastern seaboard. Unfortunately, the longer a track is, the more delays accumulate. Spreadsheets calculate the average delay time. One hour and forty minutes. Train #40 was scheduled to leave at 5:00 PM and the current time is 8:37 PM.
+The night descends. I charge my phone with the remainder of my laptop battery while looking up the `average delays of Amtrack Train 40 <Train Delay Data>`_, the Floridian. The line was formed when Amtrak merged with Capitol Limited, expanding its length across the entire eastern seaboard. Unfortunately, the longer a track is, the more delays accumulate. Spreadsheets calculate the average delay time. One hour and forty minutes. Train 40 was scheduled to leave Harper's Ferry at 5:00 PM and the current time is 8:37 PM.
 
 .. topic:: Text Alert
 
@@ -340,20 +350,28 @@ The night descends. I charge my phone with the remainder of my laptop battery wh
 May 23, 2026
 ------------
 
-**Cumberland**, 11:35 AM, raining 
+**Cumberland**
 
-Train didn't get back into Cumberland until around 1 AM. The only thing the lady I sat next said to me was, "*This is the worst train ride I have ever been on*," as we got up to leave. I had to walk three blocks to my office in the rain.
+- 11:35 AM
+- Raining
+- Mile Marker: 184
+
+Train didn't get back into Cumberland until around 1 AM. The only thing the lady sitting to me said was, "*This is the worst train ride I have ever been on in my entire life*," as we got up to leave. I had to walk three blocks to my office in the rain.
 
 Today was the day I was supposed to depart. My father's truck sits in a parking lot in Brunswick, waiting for me. The rain is coming down in voluminous sheets, as though it will never stop. The roof, being flat and prone to accumulate water, leaks incessantly.
 
 I inherited the building from my father when he died. It contains all of his old upholstery supplies. His accumulated remains, now in my care. The rose blossom tree that grows on the sidewalk outside of the building constantly sheds its thoughtless petals, which invariably clog the drainage grate on the roof. 
 
-This could all be fixed if I just got up there and cleaned the fucking spout. Instead, I've set up an electric water pump and run a hose down the side of the building. Anytime it rains more than a quarter of a inch, I have to run the pump and start a siphon to stop the water from leaking down into the garage. All because the only way onto the roof is climbing up a 30 foot ladder and navigating the slippery rubber sealed roof. I don't understand why I can't just clean the roof, like I'm supposed to, instead of inventing some convoluted patchwork solution.
+This could all be fixed if I just got up there and cleaned the fucking spout. Instead, I've set up an electric water pump and run a hose down the side of the building. Anytime it rains more than a quarter of a inch, I have to run the pump and start a siphon to stop the water from leaking down into the garage. All because the only way onto the roof is climbing up a 30 foot ladder and navigating the slippery rubber-sealed roof. I don't understand why I can't just clean the roof, like I'm supposed to, instead of inventing some convoluted patchwork solution.
 
 May 24, 2026
 ------------
 
-**Spring Gap**, 8:17 AM, cold and wet
+**Spring Gap**
+
+- 8:17 AM
+- Cold And Wet
+- Mile Marker: 173
 
 I miss my dad.
 
@@ -361,9 +379,13 @@ I am down to my last cigarette, smoking it in Spring Gap.
 
 Lost a day to rain. Stayed in Cumberland Saturday because the roof was leaking. Pouring water into my garage. All of dad's old stuff got wet. I pumped the water off of the roof and spent the day moving stuff around. I hauled as much as I could into the confines of the office, and organized the rest in the garage underneath fields of tarps.
 
-I left at 4:00 AM. Hauled the kayak for a mile by hand down to the river. Thought I might die. Thought about giving up, calling this stupid trip a wash, but here I am cold and wet. Thought I might get hypothermia when I pulled off here. I slipped on the embankment as I was pulling the kayak ashored and fell hands and knees into the river, soaking my clothes. I had to rush to get my clothes unpacked from the tangle of ropes and knots, and then change into something dry before I stopped shivering. 
+I left at 4 AM. Hauled the kayak for a mile by hand down to the river, through the silent streets of Cumberland. As I passed the last restaurant, the last vestige of civilization before the Canal, the smell of bacon wafting through vents, a cook smoking a cigarette called out me, "*Hey, brother*". I wiped the sweat from my eyes and waved back. 
 
-I am only a few miles from my office. I could walk back in less than two hours. I could still call it quits. 
+I hauled the kayak up the ramp up to start of the canal, past mile marker 184, where the concrete planes of the flood controls constructed by the Army Corps of Engineers decline in sharp angles towards the rushing water of the Potomac. I rigged the rope around a pole and lowered the kayak's length down the hill. Thought I might die. Thought about giving up, calling this stupid trip a wash, but here I am cold and wet. 
+
+Thought I might get hypothermia when I pulled off here. I slipped on the embankment as I was pulling the kayak ashore and fell hands and knees into the river, soaking my clothes. I had to rush to get my bags unpacked from the tangle of ropes and knots, and then change into something dry before I stopped shivering. 
+
+I am only a few miles from my office. I could walk back in less than a few hours. I could still call it quits. 
 
 I cried on the river. I miss my dad so much. I wish I could talk to him one more time. 
 
@@ -378,13 +400,17 @@ He told me that he was glad I was there before he died. I wish I could have been
 
   `Source <Oldtown Toll Bridge>`_
 
-**Sorrel Ridge**, 2:20 PM, cold and wet
+**Sorrel Ridge**
 
-The current pulled me like a gravity towards the Oldtown Bridge, an old one lane bridge that, when the river levels are normal, barely leaves any clearance to kayak under. I had to lay flat against my kayak and turn my face sideways as the current drove my underneath, the underside of the bridge mere inches from my eyes. 
+- 2:20 PM
+- Cold and Wet
+- Mile Marker: 154
 
-The entire trip so far has been an erratic zigzag across the river, dodging spinning trees and limbs. Every bridge has grown a makeshift dam of detritus, a web of debris that accumulates as it sieves the runoff of the storms. I have to angle the kayak precisely through narrow lanes. The slightest prod or poke sends the kayak reeling.
+The current pulled me like a gravity towards the Oldtown Bridge, an old one lane toll bridge that, when the river levels are normal, barely leaves any clearance under which to kayak. I had to lay flat against the plastic and turn my face sideways as the current drove me underneath, the underside of the bridge mere inches from my eyes, furious waves of water ricocheting off the rusted metal and spraying me. 
 
-I don't think I can go on much longer. I don't know why I am doing any of this. Not just the trip. The whole thing. When I was young and depressed, I always said I would kill myself after my parents died. I hated living, but I did not want them to feel bad. They loved me for some reason and killing myself while they still lived seemed cruel. So I pretended to be a son. I am not sure if I ever grew out of that feeling, as so much as buried it deep, deep down.
+The entire trip so far has been an erratic zigzag across the river, dodging spinning trees and limbs caught in the whirlpools and vortices revealed by the turbulence of the quickening current. Every bridge has grown a makeshift dam of detritus, a web of debris that accumulates as it sieves the runoff of the storm. I have to angle the kayak precisely through narrow lanes. The slightest prod or poke sends the kayak reeling.
+
+I don't think I can go on much longer. I don't know why I am doing any of this. Not just the trip. The whole thing. When I was young and depressed, I always said I would kill myself after my parents died. I hated living, as I suppose as all teenagers do, but I did not want them to feel bad. They loved me for some reason and killing myself while they still lived seemed cruel. So I pretended to be a son. I am not sure if I ever grew out of that feeling, as so much as buried it deep, deep down.
 
 Dad is dead. So is mom, her body just hasn't caught up.
 
@@ -394,36 +420,46 @@ I don't think I am as prepared as I should be. The kayak, cheap as it is, takes 
 
 I am wrapped in my sleeping bag, the one thing that remains totally dry. If the sleeping bag gets wet, I will probably die of hypothermia. Everything else doesn't matter. As long as it stays dry, everything will be fine. 
 
-For whatever reason, unknown even to me, I have no intention of turning back. My father's truck sits in Brunswick. I will get back to it.
+For whatever reason, unknown even to me, I have no intention of turning back. My father's truck sits in Brunswick. I *will* get back to it.
 
-**Sorrel Ridge**, 6:14 pm, cold and wet
+**Sorrel Ridge**
+
+- 6:14 pm
+- Cold And Wet
+- Mile Marker: 154
 
 There is a loneliness in me I can't get rid of. I desparately want a friend. There is no one in my life but me. It's my own fault. 
 
-Chris no longer talks to this side of the family. I never took the time to fully understand why. He and mom never got along. My father wasn't his father, and one day he decided to contact his real father. My mother never forgave him. He stopped coming to family gatherings and dropped out of contact. I have seen him since, but we're not family anymore. That is a strange feeling to describe. Meeting someone who used to be your family.
+Chris no longer talks to this side of the family. I never took the time to fully understand why. He and mom never got along. My father wasn't his father, and one day he decided to contact his real father. My mother never forgave him. He stopped coming to family gatherings and dropped out of contact. I have seen him since, but we're not family anymore. That is a strange feeling to describe. Meeting someone who used to be your family. It is perhaps the closest approximation to the abstract concept of alienation that exists in this life.
 
-Billy wanted me to read his screenplay, which I never did. I don't think he ever forgave me. It's like he's not even there anymore. I wonder if I could have changed things, just by not being so anti-social and distant. I remember when I was trying to get guardianship of my mother, my sister revealed to me that years ago, after my father had been diagnosed with Parkinson's, Billy had a falling out with my mother. He allegedly said, "*The old man needs to die*". I don't know how true that is.
+Billy wanted me to read his screenplay, which I never did. I don't think he ever forgave me. He's always had mental problems, quick to anger and selfish. In his fifties, It's like he's not even there anymore. I wonder if I could have changed things, just by not being so anti-social and distant. I remember when I was trying to get guardianship of my mother, my sister revealed to me that years ago, after my father had been diagnosed with Parkinson's, Billy had a falling out with my mother. He allegedly said, "*The old man needs to die*". I don't know how true that is.
 
-When I sent the letters out to everyone telling them I was going to try and get guardianship of her, I never heard back from Chris. The only thing Billy said, when he came to claim my father's workshop property from his estate, "*She's always been crazy.*". I tried to explain to him it wasn't the normal kind of crazy, that she was losing her memory and I needed to get her to a doctor to find out what was wrong. This was after she had filed police reports about me breaking into her house and stealing things. After she sent me a No Trespassing Order drafted by her lawyer. After I had tried everything to get her to see a doctor. 
+Well after it was apparent dementia had started to claim my mother's mind, well after she started to tell lies she probably believes are true, she told me Billy came to her before Dad's funeral and demanded in anger an answer to the question why I had gotten all of dad's old upholstery supplies. I never asked for any of it. I didn't realize I had gotten something. It was just stuff. Things to take care of. I suppose he wanted to sell all of it. Mom said she gave him $20,000. Again, I don't know how much of this is true. My mother hasn't lived in reality for some time. 
 
-Victor. I am sorry I was never there for you. Your father, Billy, abandoned you, I think. And I never made an effort. You're the last Moore. I won't ever have kids. And I failed you.
+When I sent the letters out to everyone telling them I was going to try and get guardianship of her, I never heard back from Chris. The only thing Billy said, when he came to claim my father's workshop property from his estate, "*She's always been crazy.*". I tried to explain to him it wasn't the normal kind of crazy, that she was losing her memory and I needed to get her to a doctor to find out what was wrong. This was after she had filed police reports about me breaking into her house and stealing common household items, like couch cushions, weed whackers and medication. After she sent me a No Trespassing Order drafted by her lawyer. After I had tried everything to get her to see a doctor. 
+
+Victor. I am sorry I was never there for you. Your father, Billy, abandoned you, I think. And I never made an effort. Never tried to know you. You're the last Moore. I won't ever have kids. And I failed you.
 
 Carmen is the only one who came to help me when I tried to get guardianship of Mom. No one else tried to help. 
 
-I sent everyone a letter. No one came to help, except Carmen. Paul is the only one who tried to talk to me. To ask me how I was doing. I didn't respond. Carmen asked me why. I told her I wasn't good at talking to me. She said I had autism. 
+I sent everyone a letter. Billy, Carmen, Chris, Terry. No one came to help, except Carmen. Paul is the only one who tried to talk to me. To ask me how I was doing. I didn't respond. Carmen asked me why. I told her I wasn't good at talking to people. She said I had autism. 
 
 Why am I so distant? Why do I push everyone away? I know it doesn't have to be this way, but I don't know how to change it. 
 
 I am an addict. Down to weed and cigarettes. I guess that was the real purpose of this trip. To put some distance between me and the substances that have come to control my life. 
 
-Mom called me a drug addict during one of her fits of dementia. I don't know if she meant it, if what she was saying was some sort of truth uncorked by the loss of inhibitions, or a delusion fueled by the madness ravaging her mind. She made fun of me for not having friends. She was right on both accounts, of course.
+Mom called me a drug addict during one of her fits of dementia, when I was begging her to go to the doctor. I don't know if she meant it, if what she was saying was some sort of truth uncorked by the loss of inhibitions, or a delusion fueled by the madness ravaging her mind. She made fun of me for not having friends. She was right on both accounts, of course.
 
 May 25, 2026
 ------------
 
-**Sorrel Ridge**, 7:50 AM, raining
+**Sorrel Ridge**
 
-I didn't sleep at all. I kept dozing to the edge of sleep and then waking back up. It started raining last night and hasn't ceased. The tent bleeds condensation. Everything is wet. My sleeping bad is still mostly dry, though. I won't be able to leave until it stops raining so much, unless I want to risk getting more clothes soaked. I have two more shirts and one more pairs of pants besides the ones I have on, and I can't take the risk. I will have to stay here until it stops.
+- 7:50 AM
+- Raining
+- Mile Marker: 154
+
+I didn't sleep at all. I kept dozing right to the edge of sleep and then waking back up. It started raining last night and hasn't ceased. The tent bleeds condensation. Everything is wet. My sleeping bad is still mostly dry, but I feel moisture starting to build and pool in the corners, where the zipper meets the material. I won't be able to leave until it stops raining so much, unless I want to risk getting more clothes soaked. I have two more shirts and one more pairs of pants besides the ones I have on, and I can't take the risk. I will have to stay here until it stops.
 
 I have some sort of rash on both of my lower legs. Feels like some sort of allergic reaction. When I lay curled in my sleeping bag, my inner legs press together and burn as though they were aflame.
 
@@ -433,33 +469,37 @@ Every important person in my life is gone. Leah, my friends, my family.
 
 I think about what I would be doing if I hadn't gotten it into my head this kayak trip was a good idea. Probably nothing. Same thing I have been for years, even before dad died and mom went insane. This is probably the first day in over a decade I haven't been high. Everything I have ruined in my life comes down to drugs and alcohol.
 
-I fucked up everything with Leah because I was an alcoholic. I let my dad waste away in his final years so I could get high. I could have a real relationship with him. I could have told him I loved him. Instead my life is a ruin.
+I fucked up everything with Leah because I was an alcoholic. I let my dad waste away in his final years so I could get high. I could have a real relationship with him in those last few years. He tried to connect with me so many times. I never knew what to say, instead preferring to be alone. I could have told him I loved him. Instead my life is a ruin.
 
-I was given every opportunity in this life. Every change to not be who I am. I was selfish. All I cared about was the feeling being high. No one else mattered.
+I was given every opportunity in this life. Every change to not be who I am. I was selfish. All I cared about was the feeling of being high. No one else mattered.
 
 And now I am alone, stranded on the river as it pours rain and tiny droplets bead down the inside of the tent. 
 
-Nothing has dired. My two jacekts are still soaked. I need sun. Everything will be miserable until the
+Nothing has dried. My two jackets are still soaked. I need sun. Everything will be miserable until the sun returns.
 
 I keep thinking back to the garage and dad's stuff covered in tarps. I'm 36 miles away from Cumberland, but the hand crank radio tells me it's raining there too. The roof is probably leaking.
 
-All because I was too lazy to clean the fucking roof. Why do I fuck everything up? I am going to come back to ruined inheritance. 
+All because I was too lazy to clean the fucking spout. Why do I fuck everything up? I am going to come back to ruined inheritance. 
 
 I should have brought a gun. I could walk into the woods and kill myself. No one would ever find me if I went deep enough. 
 
 Why do I continue to cling to life? I suppose I still have a shred of hope of meeting someone and starting a family of my own.
 
-The rain has let up, but it still trickles down and thuds against the tarp intermittently I have rigged above the tent last night in the pouring rain. 
+The rain has let up, but it still trickles down and thuds intermittently against the tarp I rigged above the tent last night in the pouring rain, flashlight clamped between my teeth, its beam washed out and diluted by the endless fucking rain.
 
 I prayed last night to a God I don't believe in to stop the rain.
 
-**Sorrel Ridge**, 9:30 AM, raining
+**Sorrel Ridge**
 
-The rain has started again in force. The cold, unfeeling rain. How many lives have been claimed in silence by the rain? What hunters in ages past fell to the chill?
+- 9:30 AM
+- Raining
+- Mile Marker: 154
+
+The rain has started again in force. The cold, unfeeling weather. How many lives have been claimed in silence by the rain? What hunters in ages past fell to the chill?
 
 My mind is made of drugs. Without them, I have no thoughts. No poetry. Just words and consciousness. A dull pain.
 
-I never write for myself. Always for an imaginary audience. I know not who I am, truly. 
+I never write for myself. Always for an imaginary audience. I know not who I am, truly. Or to whom I am now writing.
 
 I think I used to be charming and funny, but that was a long time ago and perhaps a figment of my imagination.
 
@@ -469,9 +509,9 @@ It doesn't stop. It just keeps raining and raining. Every ebb reveals another ru
 
 Father, what have I done? I cry and the sky mocks me.
 
-Mom said the body at the wake didn't look like you. I wonder if her mind has already cracking. When did it start? I think she was losing her memory while you were still alive. I think you were an essential piece of her and once you died, her mind couldn't hold itself together anymore.
+Mom said the body at the wake didn't look like you. I wonder if her mind was already cracking. When did it start? I think she was losing her memory while you were still alive. I think you were an essential piece of her and once you died, her mind couldn't hold itself together anymore.
 
-I was never as smart as you. I can do all the fancy math in the world, but I don't understand reality like you did. You never seemed to fail like me.
+I was never as smart as you. I can do all the fancy math in the world, but I don't understand reality like you did. You never seemed to fail like me. You mastered a craft, understood the precision of creation.
 
 God, I miss you so much.
 
@@ -485,76 +525,104 @@ I can't say I don't deserve it. I have been a terrible person and treated everyo
 
 "*Would you believe I have changed?*" I texted her.
 
-"*Not really*", She responded. 
+"*Not really*," She responded. 
 
 Almost 10 am. Still raining. The tent floor seeps moisture. I am totally alone here, in a way I have never been. 
 
 All I have are demons and ghosts to keep me company. Father, are you there? Please watch out for me.
 
-Why did I waste my life? Why, not that you are dead, do I talk to you?
+Why did I waste my life? Why, now that you are dead, do I talk to you?
 
-"*You can tell me anything*," You said, because you thought I was gay. You were the best person I ever knew. No one compared to you. There was no pretension, no ego, just love and kindness. Your workers, Jimmy, Taz, Dicky, Bob, you took care of them, taught them your trade, paid for their expenses, gave them room and board when they fell on hard times. You gave me everything and I returned nothing. I failed as your son.
+"*You can tell me anything*," You said, because you thought I was gay. You were the best person I ever knew. No one compared to you. There was no pretension, no ego, just love and kindness. Your workers, Jimmy, Taz, Dicky, Bob, you took care of them, taught them your trade, paid for their expenses, gave them room and board when they fell on hard times. You did that for strangers and for me, so much more. My education. My life. You gave me everything and I returned nothing. I failed as your son.
 
 It hurts so badly. It hasn't gone away a single bit. It still hurts like the day you died. I don't think I will ever recover. 
 
-What did I think this would be? I knew it would be a cleansing and a detox. I didn't think it would be this painfulll.
+What did I think this would be? I knew it would be a cleansing and a detox. I didn't think it would be this painfull.
 
 I just want to go home. But there is no home left for me anymore.
 
-**Little Orleans**, 4:29 PM, cloudy but dry
+**Little Orleans**
 
-I managed to break camp around 11 and make a few miles. I'm ten miles from Hancock. My legs are definitely sunburnt. It must be sunburn, though my face isn't sunburnt. I assume sitting in the kayak all day, even if it is cloudy, is not good. The burns sting quite badly. Broke into the first aid kit. Best I have is hydrocortisone cream. Did not seem to help in the slightest. I'll have to pick up sunscreen and calamine lotion in Hancock. Why didn't I think of sunscreen? So stupid.
+- 4:29 PM
+- Cloudy But Dry
+- Mile Marker: 141
 
-When I was unpacking the kayak at the boat ramp, a couple pulled up in their truck to check the water level. The boat ramp was marked with lines indicating CAUTION and DANGER. The water line had breached the red DANGER marker and now extended past where the marks could measure. Trees could be seen rolling down the rain swept river, muddy and unknowable. They asked what I was doing. I told them I was kayaking the North Branch of the Potomac. They looked at the cheap, tiny kayak and said in astonishment, "*In that tiny thing? Isn't that dangerous?*". I shrugged and agreed. The husband was smoking a cigarette. All I could think was how much I wanted one. 
+I managed to break camp around 11 AM and made a few miles. I'm ten or so miles from Hancock, I think. My legs are definitely sunburnt. It must be sunburn, though my face isn't sunburnt. I assume sitting in the kayak all day, even if it is cloudy, is not good. I didn't even think about the sun when I was preparing. The burns sting and I can think of little else besides the pain. Like my legs are no longer part of my body. Blisters have started to spread up and down my red skin. Pretty sure that means second-degree burns. Broke into the first aid kit. Best I have is hydrocortisone cream. Did not seem to help in the slightest. I'll have to pick up sunscreen and calamine lotion in Hancock tomorrow. Why didn't I think of sunscreen before? So stupid.
+
+When I was unpacking the kayak at the boat ramp, a couple pulled up in their truck to check the water level. The boat ramp was marked with lines indicating CAUTION and DANGER. The water line had breached the red DANGER marker and now extended well past where the marks could measure. Rain-swept trees could be seen rolling down the muddy and unknowable river. They asked what I was doing. I told them I was kayaking the North Branch of the Potomac. They looked at the cheap, tiny kayak and said in astonishment, "*In that tiny thing? Isn't that dangerous?*". I shrugged and agreed it was, but said it was too late. I had a truck parked in Brunswick and no other way to get to it besides the kayak they now questioned. The husband was smoking a cigarette. All I could think was how much I wanted one. 
 
 As soon as I got my gear unpacked, I cracked open the nicorette lozenges and fed my addiction. 
 
-The sun is actually visible throught the clouds and the solar panel, to my chagrin, works. Was able to charge my phone to 26%. There was a voicemail from Mom. I expected it to be a dementia-fuled rant accusing of me of breaking into the house and stealing whatever item she happened to have misplaced, but it wasn't. She went to the graveyard to find Dad's grave, but couldn't remember where it iwas. 
+The sun is actually visible throught the clouds and the solar panel, to my chagrin, works. Was able to charge my phone to 26%. There was a voicemail from Mom. I expected it to be a dementia-fuled rant accusing of me of breaking into the house and stealing whatever item she happened to have misplaced today, but it wasn't. She went to the graveyard to find Dad's grave, but couldn't remember where it was. 
 
-I called her back, assured her it was still there. I said I would take her there, but I'm kayaking the Potomac. She asked me if I was doing it alone. I told her yes, and that I had parked Dad's truck in Brunswick, so I could pull out of the river and load it up right then and there and drive back. She didn't remember signing the truck over to me, much less what it looked like. I explained it was an old white Ford ranger. She said I could call her if I needed someone to pick me up. I would liek to take her up on her offer, but I am not sure I would trust her to go this far from home without getting lost.
+I called her back, assured her it was still there because I gone to see it just a few weeks ago. I said I would take her there, but I'm kayaking the Potomac. She asked me if I was doing it alone. I told her yes, and that I had parked Dad's truck in Brunswick, so I could pull out of the river and load it up right then and there and drive back without much hassle. She didn't remember signing the truck over to me, much less what it looked like. I explained it was an old white Ford Ranger. She said I could call her if I needed someone to pick me up. I would lieketo take her up on her offer, but I am not sure I would trust her to go this far from home without getting lost.
 
 As my mother's memory goes, so does the radius of her movement.
 
-**Little Orleans**, 5:04 PM, cloudy but dry
+.. topic:: Text to Paul
 
-About five rabbits just ran by my tent. Which reminds me I saw a bald eagle swoop across the width of the river and disappear into the forest today. Also, turtles are everywhere. They appear to be seeking refuge from the flooding Potomac by crawling up the sides of trees en masse. Dozens of them, ascending from the depths.
+  *Grant [3:16 PM]*
+
+  Hello, sorry. I have been going through a lot and haven't been very thoughtful to others. I am sorry. 
+
+**Little Orleans**
+
+- 5:04 PM
+- Cloudy But Dry
+- Mile Marker: 141
+
+About five rabbits just ran by my tent. Which reminds me I saw a bald eagle swoop across the width of the river and disappear into the forest today. 
+
+Turtles are everywhere along the river. I must have seen over thirty. They appear to be seeking refuge from the flooding Potomac by crawling up the sides of trees en masse. Dozens of them, ascending from the depths, with nothing else but the blind impulse to weather the storm and survive.
 
 May 26, 2026
 ------------
 
-**Little Orleans**, 6:55 AM, cloudy 
+**Little Orleans**
 
-10 miles of so from Hancock, the approximate halfway point. I should be to restock there, though I haven't eaten much this entire trip so far. I feel like I should be hungrier than I am, but mostly I just feel tired. Atleast I'll be able to get supplies for my sunburn.
+- 6:55 AM
+- Cloudy 
+- Mile Marker: 141
+
+10 miles of so from Hancock, the approximate halfway point. I should be to restock there, though I haven't eaten much this entire trip so far. I think like I should be hungrier than I am, but mostly I just feel tired. Atleast I'll be able to get supplies for my sunburn.
 
 It's been three mornings without coffee. Of all the drugs, I didn't expect caffeine to be the one I missed the most. I suppose that's what getting older means. 
 
-**Outside of Hancock**, 11:40 AM, cloudy 
+**Outside of Hancock**
+
+- 11:03 AM
+- Cloudy
+- Mile Marker: 128
 
 More than once this has happened: A mother duck and her chicks sense my approach. The mother starts squawking and beating her wings against the water, driving directly into my line of motion. Her chicks then disperse into the tall grass that sticks above the river, disappearing from sight. The mother leads me forward, calling after me to follow her, making herself a noisy target. As I paddle, she eventually takes flight and circles overhead until I am well past her nest, to land behind me and retrieve her chicks.
 
-I have no ill intentions, but it's good rehearsal for the actual show.
+I have no ill intentions, but it's good dress rehearsal for the actual show.
 
-**Clear Spring**, 7:58 PM, cloudy with light rain
+**Clear Spring**
 
-As soon as I stepped off the kayak in Hancock, a cramp in my lower left leg started screaming. It has gotten worse ever since. I have been limbing the whole evening. Dragging the kayak ashore was an ordeal in and of itself. It feels like the tendons in my leg are severed. I had to haul the kayak across the wooden bridge of Lock 49 and stopped every few yards to rest. The kayak trolley refused to work, wobbling and losing balance every chance it got. It appears the straps are not set correctly. I'll have to adjust them before tomorrow morning.
+- 7:58 PM
+- Cloudy With Light Rain
+- Mile Marker: 109
 
-Paid $5 for a shower at trailhead shop. Hot water was nice, but it burned like a thousand hells across my sunburns whenver they got water on them. I am in a sorry state. 
+As soon as I stepped off the kayak in Hancock, a cramp in my lower left leg started screaming. It has gotten worse with each passing minute, each step I take. I have been limbing the whole evening. Dragging the kayak ashore was an ordeal in and of itself. It feels like the tendons in my leg are severed. I had to haul the kayak across the wooden bridge of Lock 49 and stopped every few yards to rest. The kayak trolley refused to work, wobbling and losing balance every time they bounced over the rocky path. It appears the straps are not set correctly. I'll have to adjust them before tomorrow morning.
 
-My hands are calloused and sore from the constant paddling for three days. Found an abandoned pair of biker gloves at the Fifteen Mile camp and have been using them ever since. They have been a godsend. Solar panel works, except it's been cloudy non-stop. I've sene the sun maybe two hours the entire trip. 
+Paid $5 for a shower at trailhead shop. Hot water was nice, but it burned like a thousand hells across my sunburns whenever they got wet. I am in a sorry state. 
+
+My hands are calloused and sore from the constant paddling for three days. Found an abandoned pair of biker gloves at the Fifteen Mile camp and have been using them ever since. They have been a godsend. Solar panel works, except it's been cloudy non-stop. My phone is done to 9%. I've seen the sun maybe three hours the entire trip. 
 
 Tomorrow is going to be a rough one. By river, I am less than day from my goal. However, there are three dams between me and Brunswick: Dam #5, the Power Plant Dam and Dam #4. I'll have to put ashore above Dam #5 and haul the kayak until I can put in past the Power Plant Dam at Williamsport. Then I'll be able to make ten or so miles by river to Dam #4, before I have to take out one more time and go around. The `C&O Companion Book <C&O Companion>`_ has been indispensable in this regard. 
 
-(There's currently a groundhug snuffling around the ruins of Lock 49.)
+(There's currently a groundhug snuffling around the ruins of Lock 49 as I write this.)
 
-The kayak trolley has been hit or miss. Atleast the terrain should be level. Mostly. 
+The kayak trolley has been hit or miss. Tomorrow it gets put to the test, a trial by fire. Atleast the terrain should be level. Mostly. 
 
-The one saving garve is Lock House #49. The C&O Authority rents it out to hikers, so I used the 15% of my phone to reserve it for tonight, though the door was unlocked. I could have easily squatted in the place, but decided the Authority deserved some compensation for the good luck they have bestowed upon me. $135 a night, but worth it. A bed to sleep in will be a miracle compared the sleepless nights I have been spending, sunburnt, on the rocky ground.
+The one saving grace is Lock House #49. The C&O Authority rents it out to hikers, so I used the remaining charge on my phone to reserve it for tonight, though the door was unlocked. I could have easily squatted in the place, but decided the Authority deserved some compensation for the good fortune they have bestowed upon me. $135 a night, but worth every penny. A bed to sleep in will be a miracle compared the sleepless nights I have been spending, sunburnt, on the rocky ground. Best of all is the oven. I am currently baking my soaked clothing. The entire place reeks of roasted mildew.
 
-I bought a pack of cigarettes and coffee at Hancock. Couldn't take it anymore. Another addiction, I suppose, I willd tame. Atleast my consumption has been way done, less than a half a pack a day. but that is probably me trying to bargain for my vice.
+I bought a pack of cigarettes and coffee at Hancock. Couldn't take it anymore. Another addiction, I suppose, I will never tame. Atleast my consumption has been way done, less than a half a pack a day, but that is probably me trying to bargain for my vice.
 
-Started a campfire and fired up some sausage. The meal tasted better than anything I've ever eaten.
+Started a campfire and fired up some sausage. The meal tasted liked nothing, but it filled my stomach.
 
-Hopefully tomorrow will be the end of this forsaken trip. If not, then Thursday at the latest. It all depends on how quickly i can get around the dams. 
+Hopefully tomorrow will be the end of this forsaken trip. If not, then Thursday at the latest. It all depends on how quickly I can get around the dams. 
 
 May 27, 2026
 ------------
