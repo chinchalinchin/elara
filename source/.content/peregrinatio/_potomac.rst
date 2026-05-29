@@ -339,11 +339,13 @@ Geese honk. The man sitting on the platform next to me lights up another cylinde
 
 The night descends. I charge my phone with the remainder of my laptop battery while looking up the `average delays of Amtrack Train 40 <Train Delay Data>`_, the Floridian. The line was formed when Amtrak merged with Capitol Limited, expanding its length across the entire eastern seaboard. Unfortunately, the longer a track is, the more delays accumulate. Spreadsheets calculate the average delay time. One hour and forty minutes. Train 40 was scheduled to leave Harper's Ferry at 5:00 PM and the current time is 8:37 PM.
 
-.. topic:: Text Alert
+.. topic:: Text 
 
+  *AMTRAK [8:42 PM]*
+  
   AMTRAK Travel Update: As of 8:42 PM ET, Train 40 remains stopped north of Rockville (RKV) due to crews performing mechanical assessments. A recovery locomotive is en route from Brunswick and will be added to the trainset. Once completed, service will continue. An additional delay of up to approx. 90 minutes or more is anticipated. We appreciate your patience and will provide an update as more information becomes available. We sincerely apologize for this delay and appreciate your continued pateince.
 
-.. topic:: Text Alert 
+  *AMTRAK [10:04 PM]*
 
   AMTRAK Travel Update: As of 10:04 PM ET, Train 40 has resumed service and is operating approx. 4 hours and 55 minutes late. We sincerely appreciate your continued patience and apologize for the lengthy delay. 
 
@@ -559,7 +561,7 @@ I called her back, assured her it was still there because I gone to see it just 
 
 As my mother's memory goes, so does the radius of her movement.
 
-.. topic:: Text to Paul
+.. topic:: Text
 
   *Grant [3:16 PM]*
 
@@ -624,7 +626,7 @@ Started a campfire and fired up some sausage. The meal tasted liked nothing, but
 
 Hopefully tomorrow will be the end of this forsaken trip. If not, then Thursday at the latest. It all depends on how quickly I can get around the dams. 
 
-.. topic:: Text From Paul
+.. topic:: Text
 
   *Paul [10:47 PM]*
 
@@ -635,7 +637,7 @@ May 27, 2026
 
 This was the day I gave up. What you now read are recollections after the fact.
 
-.. topic:: Texts
+.. topic:: Text
 
   *Grant [1:08 PM]*
 
