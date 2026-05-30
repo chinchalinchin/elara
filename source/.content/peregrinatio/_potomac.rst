@@ -465,7 +465,7 @@ May 25, 2026
 - Raining
 - Mile Marker: 154
 
-I didn't sleep at all. I kept dozing right to the edge of sleep and then waking back up. It started raining last night and hasn't ceased. The tent bleeds condensation. Everything is wet. My sleeping bad is still mostly dry, but I feel moisture starting to build and pool in the corners, where the zipper meets the material. I won't be able to leave until it stops raining so much, unless I want to risk getting more clothes soaked. I have two more shirts and one more pairs of pants besides the ones I have on, and I can't take the risk. I will have to stay here until it stops.
+I didn't sleep at all. I kept dozing right to the edge of sleep and then waking back up. It started raining last night and hasn't ceased. The tent bleeds condensation. Everything is wet. My sleeping bag is still mostly dry, but I feel moisture starting to build and pool in the corners, where the zipper meets the material. I won't be able to leave until it stops raining so much, unless I want to risk getting more clothes soaked. I have two more shirts and one more pairs of pants besides the ones I have on, and I can't take the risk. I will have to stay here until it stops.
 
 I have some sort of rash on both of my lower legs. Feels like some sort of allergic reaction. When I lay curled in my sleeping bag, my inner legs press together and burn as though they were aflame.
 
@@ -491,7 +491,7 @@ I should have brought a gun. I could walk into the woods and kill myself. No one
 
 Why do I continue to cling to life? I suppose I still have a shred of hope of meeting someone and starting a family of my own.
 
-The rain has let up, but it still trickles down and thuds intermittently against the tarp I rigged above the tent last night in the pouring rain, flashlight clamped between my teeth, its beam washed out and diluted by the endless fucking rain.
+The shower has let up, but it still trickles down and thuds intermittently against the tarp I rigged above the tent last night in the pouring rain, flashlight clamped between my teeth, its beam washed out and diluted by the endless fucking rain.
 
 I prayed last night to a God I don't believe in to stop the rain.
 
