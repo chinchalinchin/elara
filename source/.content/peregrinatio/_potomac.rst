@@ -321,7 +321,7 @@ It wound up there after one of the properties in his estate caught fire in a fre
 
 I had been hauling scrap metal, on a particularly rainy day, from the wreckage of the property. The truck struggled up an embankment, flinging mud behind it in an attempt to stay on solid ground. Eventually, realizing the futility of its course, it gave up, sliding down into the ditch that would become its temporary home.
 
-Over the two and half years since his death, mice had taken up residence in the glove box, infiltrating the cab through a hole rusted through the floor. Unconstrained by human law, their mammalian instincts uninhibited, they built a bustling little colony in my father's decaying truck. The cab reeked of rodent, the nauseating, cloying smell of piss, like an ether-soaked rag pressed to your face each time the door opened. The battery was dead and the tires were flat. The passenger side door was crushed into inoperability when the tow truck line pulled it taut against a protuding stump, leaving a long cut across its white surface, a cleft that revealed the barren metal beneeath.
+Over the two and half years since his death, mice had taken up residence in the glove box, infiltrating the cab through a hole rusted through the floor. Unconstrained by human law, their mammalian instincts uninhibited, they built a bustling little colony in my father's decaying truck. The cab reeked of rodent, the nauseating, cloying smell of piss, like an ether-soaked rag pressed to your face each time the door opened. The battery was dead and the tires were flat. The passenger side door was crushed into inoperability when the tow truck line pulled it taut against a protuding stump, leaving a long cut across its white surface, a cleft that revealed the barren metal underneath.
 
 After jumping the battery and filling the tires, I scrubbed for hours, but could not exorcise the smell of rodent piss. When the mechanic who did the oil change came out of the garage, he was wearing a face mask and regarded me as though I were a disgusting degenerate, living in my own filth.
 
@@ -387,7 +387,7 @@ Lost a day to rain. Stayed in Cumberland Saturday because the roof was leaking. 
 
 I left at 4 AM. Hauled the kayak for a mile by hand down to the river, through the silent streets of Cumberland. As I passed the last restaurant, the last vestige of civilization before the Canal, the smell of bacon wafting through vents, a cook smoking a cigarette called out me, "*Hey, brother*". I wiped the sweat from my eyes and waved back. 
 
-I hauled the kayak up the ramp up to start of the canal, past mile marker 184, where the concrete planes of the flood controls constructed by the Army Corps of Engineers decline in sharp angles towards the rushing water of the Potomac. I rigged the rope around a pole and lowered the kayak's length down the hill. Thought I might die. Thought about giving up, calling this stupid trip a wash, but here I am cold and wet. 
+I hauled the kayak up the ramp up to start of the canal, past Mile Marker 184, where the concrete planes of the flood controls constructed by the Army Corps of Engineers decline in sharp angles towards the rushing water of the Potomac. I rigged the rope around a pole and lowered the kayak's length down the hill. Thought I might die. Thought about giving up, calling this stupid trip a wash, but here I am cold and wet. 
 
 Thought I might get hypothermia when I pulled off here. I slipped on the embankment as I was pulling the kayak ashore and fell hands and knees into the river, soaking my clothes. I had to rush to get my bags unpacked from the tangle of ropes and knots, and then change into something dry before I stopped shivering. 
 
@@ -412,7 +412,7 @@ He told me that he was glad I was there before he died. I wish I could have been
 - Cold and Wet
 - Mile Marker: 154
 
-The current pulled me like a gravity towards the Oldtown Bridge, an old one lane toll bridge that, when the river levels are normal, barely leaves any clearance under which to kayak. I had to lay flat against the plastic and turn my face sideways as the current drove me underneath, the underside of the bridge mere inches from my eyes, furious waves of water ricocheting off the rusted metal and spraying me. 
+The current pulled me like a gravity towards the Oldtown Bridge, an old one lane toll bridge that, when the river levels are normal, barely leaves any clearance under which to kayak. I had to lay flat against the plastic and turn my face sideways as the current drove me underneath, the underside of the bridge inches from my eyes, furious waves of water ricocheting off the rusted metal, spraying me. 
 
 The entire trip so far has been an erratic zigzag across the river, dodging spinning trees and limbs caught in the whirlpools and vortices revealed by the turbulence of the quickening current. Every bridge has grown a makeshift dam of detritus, a web of debris that accumulates as it sieves the runoff of the storm. I have to angle the kayak precisely through narrow lanes. The slightest prod or poke sends the kayak reeling.
 
@@ -420,7 +420,7 @@ I don't think I can go on much longer. I don't know why I am doing any of this. 
 
 Dad is dead. So is mom, her body just hasn't caught up.
 
-The kayak nearly capsized when I tried to stand up in it to urinate. Sent me hurling into the water. My jacket and clothes are socked again. I have them up on a line, but it's too cold for them to dry. 
+The kayak nearly capsized when I tried to stand up in it to urinate. Sent me hurling into the water. My jacket and clothes are soaked again. I have them up on a line, but it's too cold for them to dry. 
 
 I don't think I am as prepared as I should be. The kayak, cheap as it is, takes on water; the scupper holes do their job for the most part, but the bucket seat has a permanet puddle of dank water festering within it. The vessel sits too close to the water. Everything gets soaked. My backpack, attached to the front with a strap, got wet all the way through, soaking the sweatshirt that wouldn't fit into the waterproof rollbags. 
 
@@ -438,9 +438,9 @@ There is a loneliness in me I can't get rid of. I desparately want a friend. The
 
 Chris no longer talks to this side of the family. I never took the time to fully understand why. He and mom never got along. My father wasn't his father, and one day he decided to contact his real father. My mother never forgave him. He stopped coming to family gatherings and dropped out of contact. I have seen him since, but we're not family anymore. That is a strange feeling to describe. Meeting someone who used to be your family. It is perhaps the closest approximation to the abstract concept of alienation that exists in this life.
 
-Billy wanted me to read his screenplay, which I never did. I don't think he ever forgave me. He's always had mental problems, quick to anger and selfish. In his fifties, It's like he's not even there anymore. I wonder if I could have changed things, just by not being so anti-social and distant. I remember when I was trying to get guardianship of my mother, my sister revealed to me that years ago, after my father had been diagnosed with Parkinson's, Billy had a falling out with my mother. He allegedly said, "*The old man needs to die*". I don't know how true that is.
+Billy wanted me to read his screenplay, which I never did. I don't think he ever forgave me. He's always had mental problems, quick to anger and selfish. In his fifties, it's like he's not even there anymore. I wonder if I could have changed things, just by not being so anti-social and distant. I remember when I was trying to get guardianship of my mother, my half-sister revealed to me that years ago, after my father had been diagnosed with Parkinson's, Billy had a falling out with my mother. He allegedly said, "*The old man needs to die*". I don't know how true that is.
 
-Well after it was apparent dementia had started to claim my mother's mind, well after she started to tell lies she probably believes are true, she told me Billy came to her before Dad's funeral and demanded in anger an answer to the question why I had gotten all of dad's old upholstery supplies. I never asked for any of it. I didn't realize I had gotten something. It was just stuff. Things to take care of. I suppose he wanted to sell all of it. Mom said she gave him $20,000. Again, I don't know how much of this is true. My mother hasn't lived in reality for some time. 
+Well after it was apparent dementia had started to claim my mother's mind, well after she started to tell lies she probably believes are true, she told me Billy came to her before Dad's funeral and demanded in anger an answer to the question why I had gotten all of dad's old upholstery supplies. I never asked for any of it. I didn't realize I had gotten anything. It was just stuff. Things to take care of. I suppose he wanted to sell all of it. Mom said she gave him $20,000. Again, I don't know how much of this is true. My mother hasn't lived in reality for some time. 
 
 When I sent the letters out to everyone telling them I was going to try and get guardianship of her, I never heard back from Chris. The only thing Billy said, when he came to claim my father's workshop property from his estate, "*She's always been crazy.*". I tried to explain to him it wasn't the normal kind of crazy, that she was losing her memory and I needed to get her to a doctor to find out what was wrong. This was after she had filed police reports about me breaking into her house and stealing common household items, like couch cushions, weed whackers and medication. After she sent me a No Trespassing Order drafted by her lawyer. After I had tried everything to get her to see a doctor. 
 
@@ -475,9 +475,9 @@ Every important person in my life is gone. Leah, my friends, my family.
 
 I think about what I would be doing if I hadn't gotten it into my head this kayak trip was a good idea. Probably nothing. Same thing I have been for years, even before dad died and mom went insane. This is probably the first day in over a decade I haven't been high. Everything I have ruined in my life comes down to drugs and alcohol.
 
-I fucked up everything with Leah because I was an alcoholic. I let my dad waste away in his final years so I could get high. I could have a real relationship with him in those last few years. He tried to connect with me so many times. I never knew what to say, instead preferring to be alone. I could have told him I loved him. Instead my life is a ruin.
+I fucked up everything with Leah because I was an alcoholic. I let my dad waste away in his final years so I could get high. I could have had a real relationship with him in those last few years. He tried to connect with me so many times. I never knew what to say, instead preferring to be alone. I could have told him I loved him. Instead my life is a ruin.
 
-I was given every opportunity in this life. Every change to not be who I am. I was selfish. All I cared about was the feeling of being high. No one else mattered.
+I was given every opportunity in this life. Every chance to not be who I am. I was selfish. All I cared about was the feeling of being high. No one else mattered.
 
 And now I am alone, stranded on the river as it pours rain and tiny droplets bead down the inside of the tent. 
 
@@ -525,7 +525,7 @@ Why is this world so full of pain and no relief?
 
 I can't say I don't deserve it. I have been a terrible person and treated everyone around me as though they weren't human.
 
-"*Enjoy going through life thinking you are better than everyone else*," My best friend said to me the last time I saw hiim. He's not wrong, of course.
+"*Enjoy going through life thinking you are better than everyone else*," My best friend said to me the last time I saw him. He's not wrong, of course.
 
 "*I thought about it. I just don't have fun with you*," Leah said the last I heard from her, when we had planned to meet after years of absence and she decided at the last moment to cancel.
 
@@ -533,7 +533,7 @@ I can't say I don't deserve it. I have been a terrible person and treated everyo
 
 "*Not really*," She responded. 
 
-Almost 10 am. Still raining. The tent floor seeps moisture. I am totally alone here, in a way I have never been. 
+Almost 10 AM. Still raining. The tent floor seeps moisture. I am totally alone here, in a way I have never been. 
 
 All I have are demons and ghosts to keep me company. Father, are you there? Please watch out for me.
 
@@ -543,7 +543,7 @@ Why did I waste my life? Why, now that you are dead, do I talk to you?
 
 It hurts so badly. It hasn't gone away a single bit. It still hurts like the day you died. I don't think I will ever recover. 
 
-What did I think this would be? I knew it would be a cleansing and a detox. I didn't think it would be this painfull.
+What did I think this would be? I knew it would be a cleansing and a detox. I didn't think it would be this painful.
 
 I just want to go home. But there is no home left for me anymore.
 
@@ -561,7 +561,7 @@ As soon as I got my gear unpacked, I cracked open the nicorette lozenges and fed
 
 The sun is actually visible throught the clouds and the solar panel, to my chagrin, works. Was able to charge my phone to 26%. There was a voicemail from Mom. I expected it to be a dementia-fuled rant accusing of me of breaking into the house and stealing whatever item she happened to have misplaced today, but it wasn't. She went to the graveyard to find Dad's grave, but couldn't remember where it was. 
 
-I called her back, assured her it was still there because I gone to see it just a few weeks ago. I said I would take her there, but I'm kayaking the Potomac. She asked me if I was doing it alone. I told her yes, and that I had parked Dad's truck in Brunswick, so I could pull out of the river and load it up right then and there and drive back without much hassle. She didn't remember signing the truck over to me, much less what it looked like. I explained it was an old white Ford Ranger. She said I could call her if I needed someone to pick me up. I would lieketo take her up on her offer, but I am not sure I would trust her to go this far from home without getting lost.
+I called her back, assured her it was still there because I gone to see it just a few weeks ago. I said I would take her there, but I'm kayaking the Potomac. She asked me if I was doing it alone. I told her yes, and that I had parked Dad's truck in Brunswick, so I could pull out of the river and load it up right then and there and drive back without much hassle. She didn't remember signing the truck over to me, much less what it looked like. I explained it was an old white Ford Ranger. She said I could call her if I needed someone to pick me up. I would like to take her up on her offer, but I am not sure I would trust her to go this far from home without getting lost.
 
 As my mother's memory goes, so does the radius of her movement.
 
@@ -610,11 +610,13 @@ I have no ill intentions, but it's good dress rehearsal for the actual show.
 - Cloudy With Light Rain
 - Mile Marker: 109
 
-As soon as I stepped off the kayak in Hancock, a cramp in my lower left leg started screaming. It has gotten worse with each passing minute, each step I take. I have been limbing the whole evening. Dragging the kayak ashore was an ordeal in and of itself. It feels like the tendons in my leg are severed. I had to haul the kayak across the wooden bridge of Lock 49 and stopped every few yards to rest. The kayak trolley refused to work, wobbling and losing balance every time they bounced over the rocky path. It appears the straps are not set correctly. I'll have to adjust them before tomorrow morning.
+As soon as I stepped off the kayak in Hancock, a cramp in my lower left leg started screaming. It has gotten worse with each passing minute, each step I take. I have been limbing the whole evening. Dragging the kayak ashore was an ordeal in and of itself. It feels like the tendons in my leg are severed. I had to haul the kayak across the wooden bridge of Lock 49 and stopped every few yards to rest. The kayak trolley refused to work, wobbling and losing balance every time the wheels bounced over the rocky path. It appears the straps are not set correctly. I'll have to adjust them before tomorrow morning.
 
 Paid $5 for a shower at trailhead shop. Hot water was nice, but it burned like a thousand hells across my sunburns whenever they got wet. I am in a sorry state. 
 
-My hands are calloused and sore from the constant paddling for three days. Found an abandoned pair of biker gloves at the Fifteen Mile camp and have been using them ever since. They have been a godsend. Solar panel works, except it's been cloudy non-stop. My phone is done to 9%. I've seen the sun maybe three hours the entire trip. 
+My hands are calloused and sore from the constant paddling for three days. Found an abandoned pair of biker gloves at the Fifteen Mile camp and have been using them ever since. They have been a godsend. 
+
+Solar panel works, except it's been cloudy non-stop. My phone is done to 9%. I've seen the sun maybe three hours the entire trip. 
 
 Tomorrow is going to be a rough one. By river, I am less than day from my goal. However, there are three dams between me and Brunswick: Dam #5, the Power Plant Dam and Dam #4. I'll have to put ashore above Dam #5 and haul the kayak until I can put in past the Power Plant Dam at Williamsport. Then I'll be able to make ten or so miles by river to Dam #4, before I have to take out one more time and go around. The `C&O Companion Book by Mike High <C&O Companion>`_ has been indispensable in this regard. 
 
@@ -647,25 +649,25 @@ This was the day I gave up. What you now read are recollections after the fact.
 - Cloudy With Light Rain
 - Mile Marker: 109
 
-I woke up dry, the sunburns bearable after applying the calamine lotion. My clothes had been dried in the oven and the stench still wafted through the house, but everything was finally dry. I opened all of the doors to let the smell air out and started packing, leaving the remainder of my rations, besides the peanut butter, trail mix and water, sitting in the kitchen for the next hiker. I realized, as I sat for the final time at the Lock House kitchen table, I had no seen a soul on the river the entire journey.
+I woke up dry around 5 AM, the sunburns bearable after applying the calamine lotion. My remaining wet clothes baked in the oven for an hour in the morning before I left. The stench wafted through the house, but everything was finally dry. I opened all of the doors to let the smell air out and started packing, leaving the remainder of my rations, besides the peanut butter, trail mix and water, sitting in the kitchen for the next hiker. I realized, as I sat for the final time at the Lock House kitchen table, I had no seen a soul on the river the entire journey.
 
-The night previous I had gone around the Lock House several times, making sure all of the doors were locked, simply because the house was built in the 1800s, saw the generational wasteland of the Civil War and ghost stories had since been traded like precious gold between the locals. Even as far as Cumberland, when I was in the Boy Scouts, we talked of the dark alleys of Antietam, where the blood of soldiers still seeped through the ground, or the roaming ghosts of Gettysburg. The guest room had a ledger where all of the previous guests had signed, so I added an entry,
+The night previous I had gone around the Lock House several times, making sure all of the doors were locked, simply because the house was built in the 1800s; it had seen the generational wasteland of the Civil War; ghost stories had grown from the destruction to be traded like precious gold between the locals. Even as far as Cumberland, when I was in the Boy Scouts, we talked of the dark alleys of Antietam, where the blood of soldiers still seeped through the ground, or the roaming ghosts of Gettysburg. The guest room had a ledger where all of the previous guests had signed, so I added an entry,
 
   | Don't mind the ghosts; they're harmless once they consume the soul of your first born. 
 
-As I attached the kayak trolley and made sure the straps were set correctly, rain began to fall in light showers again, nowhere near enough to discourage further progress. Limbing down the dirt road leading to Lock House #49, I followed the detour along the main road, the main canal gated off for construction. The entire park was a labyrinth of shuttered passages, makeshift bridges and signs pointing in contradictory directions to follow the detour. 
+As I attached the kayak trolley and made sure the straps were set correctly, rain began to fall in light showers again, nowhere near enough to discourage further progress. Limping down the dirt road leading to Lock House #49, I followed the detour along the main road, the main Canal gated off for construction. The entire park was a labyrinth of shuttered passages, makeshift bridges and signs pointing in contradictory directions to follow the detour. 
 
 I made it back onto the Canal around Mile Marker 108, lugging the kayak behind me, carefully balancing it on the dirt path. The storms began in earnest, as though aware I were now in my final stretch. Thunder echoed through the sky like bomb blasts. The rain began to fall harder than it had the entire journey. Every few hundred yards, I had to stop and tip the water out of the kayak, until I took the tarp and strapped it over the whole vessel to stop the rainwater from collecting.
 
 The kayak compliantly followed behind me, exhausting to pull but manageable with the trolley. I carefully steered it around the puddles and mud that were expanding their territory across the towpath. The rain showed no signs of stopping.
 
-I arrived at Dam #5 to find the entire area under heavy construction, surrounded by overlapping lines of fences that blocked the canal, directing all travellers through a narrow lane that passed under the front porch of Lock House #47. The site was empty for the rain, but impassable, heavy machinery shedding solid lines of water, glittering in the stormy dark, forming constellations of streams that flushed the dirt and gravel through flooding crevices. To my right, through the thick, dripping forest, the river flung itself headlong over a 30 feet drop, the current furiously coursing over the dam. 
+I arrived at Dam #5 to find the entire area under heavy construction, surrounded by overlapping lines of fences that blocked the canal, directing all travellers through a narrow lane that passed under the front porch of Lock House #47. The site was empty for the rain, but impassable, heavy machinery shedding solid lines of water, glittering in the stormy dark, forming constellations of streams that flushed the dirt and gravel through flooding crevices. To my right, through the thick, dripping forest, the river flung itself headlong over a thirty feet drop, the current furiously coursing over the dam. 
 
-The only way forward was a impromptu flight of stairs, crisscrossing up a hill, made of boards and sheet laid into the mud in the approximate shape of steps, held together by unseen joints. I pulled the kayak up the first flight, but as I switched directions to start the next leg of the crisscross, I slipped on the slick wood and lost my grip. The kayak went careening down the stairs, thudding like thunder in the rain, to capsize in a pit of mud at the base. In the fall, the kayak trolley snapped in two and went spinning into the forest, wheels flying in different directions. Without the trolley, there was little hope of completing the trip. I stared down at my fallen kayak for several minutes before picking myself self up from the mud.
+The only way forward was a impromptu flight of stairs, crisscrossing up a hill, made of boards and sheets laid into the mud in the approximate shape of steps, held together by unseen joints. I pulled the kayak up the first flight, but as I switched directions to start the next leg of the crisscross, I slipped on the slick wood and lost my grip. The kayak went careening down the stairs, thudding like thunder in the rain, to capsize in a pit of mud at the base. In the fall, the kayak trolley snapped in two and went spinning into the forest, wheels flying in different directions. Without the trolley, there was little hope of completing the trip. I stared down at my fallen kayak for several minutes before picking myself self up from the mud.
 
 I was less than ten miles from Williamsport, on the other side of the Power Plant Dam, where I could put the kayak back into the river. If I turned back, I was only two miles from Lock House #47. Despite the prescriptions of good sense, I decided to keep going. I picked up the broken trolley and pitched it into the woods, consigned it to oblivion.
 
-I unrolled the 1" root and rigged a harness around my chest and attached the other end to the kayak, after putting it upright. Through sharp gasps of cold air like knives into my lungs, I grunted and fought the kayak up the steps without the trolley, eventually winning the top, where I sat in the kayak a final time, resting in the rain for an amount of time I never measured. After standing back up, I struggled through the circuitous detour, slipped through the mud, as rain poured. Twice the kayak tipped over and three times I fell. I was covered head to toe in mud and shivering. 
+I unrolled the 1" root, rigged a harness around my chest and attached the other end to the kayak, after putting it upright. Through sharp gasps of cold air like knives into my lungs, I grunted and fought the kayak up the steps without the trolley, eventually winning the top, where I sat in the kayak a final time, resting in the rain for an amount of time I never measured. After standing back up, I struggled through the circuitous detour, slipped through the mud, as rain poured. Twice the kayak tipped over and three times I fell. I was covered head to toe in mud and shivering. 
 
 Finally, the detour lead me onto another backroad, Dam #5 Road, a flat expanse of blacktop that I thought would be a blessing. If I only had the kayak trolley. For a mile I pulled the kayak through the rain with the harness until I finally collapsed in exhaustion and realized there was no way I was going to make it. I simply did not have the energy to haul a hundred pounds of gear against the force of grating friction another eight miles, all while the rain poured and poured and poured.
 
@@ -673,9 +675,9 @@ I sat on the edge of the road, wondering what to do, as the rain washed over me.
 
 Factoring in what I deemed essential should I need to spend another night in the wilderness, I left the sleeping bag, tent and rest of my rations, save the trail mix which I stuffed into my pack. I hooked my waterproof rollbags, which contained my mercifully still dry clothes, to the front straps of my backpack and hoisted fifty pounds of gear onto my shoulders, taking my last gallon of water in hand. 
 
-For eight miles, I trudged through the never-ending rain. Every inch of the world was wet to the bone, to the core. The towpath was alive with nightcrawlers and milipedes slithering through the mud and murk. I felt nothing but the strain of my muscles, heedless of the passing seconds beyond the slow backwardation of the Mile Markers down to 100, where Williamsport lay hidden from me. Several times I came upon boat ramps, where I could have put in and let the current take me the rest of way, had I had the strength to pull the kayak this far. 
+For eight miles, I trudged through the never-ending rain. Every inch of the world was wet to the bone, to the core. The towpath was alive with nightcrawlers and milipedes slithering through the mud and murk. I felt nothing but the strain of my muscles, heedless of the passing seconds beyond the slow backwardation of the Mile Markers down to 100, where Williamsport lay hidden from me. Several times I came upon boat ramps, where I could have put in and let the current take me the rest of way, had I had the strength to pull the kayak that far. 
 
-I sat on a bench near one of the ruined locks. I forget which, or never bothered to look. My glasses were streaking with fog and droplets of rain, so that the world was little more than vague gray and black blurs. I measured my progress by the transition of the towpath from mud to rocks to decaying pavement. The concrete path curled around slate bluffs, the forest falling away, revealing the rushing river mere feet away, without any railing or barrier to prevent falling into its churning wastes. It was a torrent of commotion, of a million explosions of the relentless rain upon its contorting surface.
+I sat on a bench near one of the ruined locks to rest. I forget which, or never bothered to look. My glasses were streaking with fog and droplets of rain, so that the world was little more than vague gray and black blurs. I measured my progress by the transition of the towpath from mud to rocks to decaying pavement. The concrete path curled around slate bluffs, the forest falling away, revealing the rushing river mere feet away, without any railing or barrier to prevent falling into its churning wastes. It was a torrent of commotion, of a million explosions of the relentless rain upon its contorting surface.
 
 It was there I realized I had left my father's truck key in the pocket of my jacket, packaged in one of the 50 gallon contractor bags. I cursed myself for my stupidity and hurled my gallon of water as hard I could in whatever direction I happened to be standing. I heard it explode somewhere in the distance, another falling drop of rain.
 
@@ -685,9 +687,9 @@ Eventually, I started to pass normal people, walking the trail with umbrellas. T
 
 The surreality of my ascent from the aqueduct to the main street of Williamsport is an experience I will never forget. Under my feet, the stone arches carried a stream perpendicular to the water rushing underneath it. I crossed a bridge over the stream into the parking lot and climbed up the incline. As I marched up from the aqueduct into Williamsport proper, the rain started to go slack and the noonday bells began to ring, playing a facsimile of *My Country, 'Tis of Thee*. I remembered the line from the bell's song, "*Land where my fathers died*", as the skies cleared. My boots squished with every step while the sun appeared behind the dispersing clouds. 
 
-At the gas station, I bought a phone charger and sat on the patio cross-legged beneath an outlet as the bars onscreen slowly filled. The sun dried out my clothing while I waited on my Uber. Google Maps told me I was only 22 miles from my father's truck. I had almost made it.
+At the gas station, I bought a phone charger and sat on the patio beneath an outlet as the bars onscreen slowly filled. The sun dried out my clothing while I waited on my Uber. Google Maps told me I was only 22 miles from my father's truck. I had almost made it.
 
-My driver had a stature of Siddhartha Gautama on his dashboard. He asked questions in broken English about what brought me to Williamsport. As he drove me back to my kayak so I could get my father's truck key, I explained the entire journey to him. The week I told off of work, the plan to go from Cumberland to Brunswick along the North branch, the endless rain, the current, the difficulty, the annihilation. After hearing all of it, he smirked and said to me, "*I am glad to have met you. You are crazy, man.*" I agreed.
+My driver had a statue of Siddhartha Gautama on his dashboard. He asked questions in broken English about what brought me to Williamsport. As he drove me back to my kayak so I could get my father's truck key, I explained the entire journey to him. The week I told off of work, the plan to go from Cumberland to Brunswick along the North Branch, the endless rain, the current, the difficulty, the annihilation. After hearing all of it, he smirked and said to me, "*I am glad to have met you. You are crazy, man.*" I agreed.
 
 He waited for me while I ran into the woods and exhumed the remains of my expedition from the now humid forest, steaming with the last vestiges of the rain. The driver laughed as I waddled back up to the car. I don't think he believed any of my story until that moment. 
 
