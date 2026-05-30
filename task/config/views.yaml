@@ -230,6 +230,29 @@ views:
             conf/fluid.cfg: conf
             docs/board/closed/issues.md: markdown
             docs/board/closed/phases.md: markdown
+        # ---------------------- SCRILLA
+        scrilla_build:
+          title: "Scrilla Build"
+          files:
+            MANIFEST.in: text
+            pyproject.toml: toml
+            requirements.txt: text
+            setup.cfg: toml
+            env/.sample.env: env
+        scrilla_docs:
+          title: "Scrilla Docs"
+          files:
+        scrilla_main: 
+          title: "Scrilla Main"
+          files:
+            src/scrilla/__init__.py: python
+            src/scrilla/cache.py: python
+            src/scrilla/files.py: python
+            src/scrilla/main.py: python
+            src/scrilla/services.py: python
+            src/scrilla/settings.py: python
+        scrilla_anaylsis:
+          title: "Scrilla Analysis"
     # --- 4. JENKINS VIEWS
     jenkins:
       config: {}

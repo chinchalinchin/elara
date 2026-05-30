@@ -1,3 +1,5 @@
+.. RESOURCES
+
 .. _Train Delay Data: https://juckins.net/amtrak_status/archive/html/history.php?train_num=40
 .. _Will's Creek CFS: https://waterdata.usgs.gov/monitoring-location/USGS-01601500/
 .. _Shepherdstown CFS: https://waterdata.usgs.gov/monitoring-location/USGS-01618000/
@@ -5,6 +7,8 @@
 .. _Floridian: https://www.amtrak.com/floridian-train
 .. _MARC Station Parking Lot: https://www.mta.maryland.gov/marc-parking-details
 .. _C&O Companion: https://press.jhu.edu/books/title/10639/co-canal-companion
+.. _USGS Water Data: https://waterdata.usgs.gov
+.. _Interstate Commission on the Potomac River Basin: https://www.potomacriver.org/resources/
 
 .. _potomac-river:
 
@@ -23,8 +27,8 @@ Potomac River
 
 **Resources**
 
-- `USGS Water Data <https://waterdata.usgs.gov>`_
-- `Interstate Commission on the Potomac River Basin <https://www.potomacriver.org/resources/>`_
+- `USGS Water Data`_
+- `Interstate Commission on the Potomac River Basin`_
 
 Prologmena
 ==========
@@ -64,13 +68,15 @@ It is a river flowing through never-ending mountains. It is the incomprehensible
 
 It is the annihilation of the soul, the loss of all earthly attachments. It the destruction of a family. The loss of all love and worth. The abject and base alienation of the self from the world. The malaise of not being known to anyone but one's self. It is the realization that one is alone without the possibility of it being otherwise.
 
+The self has been called by some a *strange loop*, an epiphenomenon of recurion on nigh infinite scales, a special geometry, a mathematical curiosity inevitably spun from the permutations of the finite. But this is incorrect. The self is not a loop; it is where the vacuity of endless recursion meets the uncountably dense foundation of Being. It is the rocks upon which all currents of life converge, in search of anything capable of providing the anchor against which to halt its relentless advance. It is the ground towards which all water flows.
+
 Contrary to modern thought, though perhaps elucidated by Whitehead and Cioran, the self is not an abstraction. It is the fundamental constituent of the universe. That is the lesson of Tarskian satisfaction, Kripkean possibility, Sartre's for-itself, Heidegger's Dasein and the irreconcilable uncertainty discovered in quantum theory. Abstractions cannot in and of themselves contain truth; they are purely vacuous and tautologous. To be is, therefore, fundamentally, the descent of the subjective self to the objective world. It is the act of interpretation and observation. To be is how the subjective becomes the objective.
 
 The history of thought is replete with examples of the limits of language. All stony men are gray. This sentence is false. The set of sets which don't contain themselves. The predication of the impredicable. 
 
 One cannot know the heights of despair through language. It is internal. One tries to define the river. The best available human models currently struggle to understand rotating fluids through anything but brute force approximation. The infinite energies of Navier-Stokes stand like an impassable barrier between the abstraction and the violence which desires nothing, is nothing but raw elemental force.
 
-Wittgenstein spoke of how language evolves, of the network of associations that wax and wane like rain. The pragmatics and contextualization of words. How meaning is not a unitary point, but a smear across the horizon of understanding. So we say "*it is impossible this cat is green*" and also "*it is impossible this cat is not a cat*" and use the word "*impossible*" in two different ways. employing two different meanings with the same symbol. He taught us to think of language as endless nodes connected by endless edges. The inherent contradiction of language that propels it forward is to take this finite structure and somehow use it to enumerate the continuum of all that is. So it spreads like life, like a dark forest dripping with venomous rain, in search of the point in which it becomes itself.
+Wittgenstein spoke of how language evolves, of the network of associations that wax and wane like rain. The pragmatics and contextualization of words. How meaning is not a unitary point, but a smear across the horizon of understanding. So we say "*it is impossible this river is alive*" and also "*it is impossible this river is not a river*" and use the word "*impossible*" in two different ways, employing two different meanings with the same symbol. He taught us to think of language as endless nodes connected by endless edges. The inherent contradiction of language that propels it forward is to take this finite structure and somehow use it to enumerate the continuum of all that is. So it spreads like life, like a dark forest dripping with venomous rain, in search of the point in which it becomes itself.
 
 Despair is the realization the very tools we use to think pale in comparison to the task to which we have set them to work. 
 
@@ -100,7 +106,7 @@ Gear
 
 .. topic:: Equipment
 
-    - `The C&O Companion <http://www.lesserscribe.net/CNOCANweb/index.html>`_
+    - `C&O Companion`_
     - `Potomac Watershed Maps <https://www.potomacriver.org/resources/maps/mapdownload/>`_
     - `BigBlue 28W Solar Charger <https://bigblue-tech.com/products/28w-sunpower-solar-charger>`_
     - `Suunto M3 Compass <https://us.suunto.com/products/suunto-m-3-g-compass>`_
@@ -612,7 +618,7 @@ Paid $5 for a shower at trailhead shop. Hot water was nice, but it burned like a
 
 My hands are calloused and sore from the constant paddling for three days. Found an abandoned pair of biker gloves at the Fifteen Mile camp and have been using them ever since. They have been a godsend. Solar panel works, except it's been cloudy non-stop. My phone is done to 9%. I've seen the sun maybe three hours the entire trip. 
 
-Tomorrow is going to be a rough one. By river, I am less than day from my goal. However, there are three dams between me and Brunswick: Dam #5, the Power Plant Dam and Dam #4. I'll have to put ashore above Dam #5 and haul the kayak until I can put in past the Power Plant Dam at Williamsport. Then I'll be able to make ten or so miles by river to Dam #4, before I have to take out one more time and go around. The `C&O Companion Book <C&O Companion>`_ has been indispensable in this regard. 
+Tomorrow is going to be a rough one. By river, I am less than day from my goal. However, there are three dams between me and Brunswick: Dam #5, the Power Plant Dam and Dam #4. I'll have to put ashore above Dam #5 and haul the kayak until I can put in past the Power Plant Dam at Williamsport. Then I'll be able to make ten or so miles by river to Dam #4, before I have to take out one more time and go around. The `C&O Companion Book by Mike High <C&O Companion>`_ has been indispensable in this regard. 
 
 (There's currently a groundhug snuffling around the ruins of Lock 49 as I write this.)
 
@@ -636,6 +642,35 @@ May 27, 2026
 ------------
 
 This was the day I gave up. What you now read are recollections after the fact.
+
+**Clear Spring**
+
+- 7:00 AM
+- Cloudy With Light Rain
+- Mile Marker: 109
+
+I woke up dry, the sunburns bearable after applying the calamine lotion. My clothes had been dried in the oven and the stench still wafted through the house, but everything was finally dry. I opened all of the doors to let the smell air out and started packing, leaving the remainder of my rations, besides the peanut butter, trail mix and water, sitting in the kitchen for the next hiker. 
+
+The night previous I had gone around the Lock House several times, making sure all of the doors were locked, simply because the house was built in the 1800s, saw the generational wasteland of the Civil War and ghost stories had since been traded like precious gold between the locals. Even as far as Cumberland, when I was in the Boy Scouts, we talked of the blood alleys in Antietam, where the blood of soldiers still seeped through the ground, or the roaming ghosts of Gettysburg. The guest room had a ledger where all of the previous guests had signed, so I added an entry,
+
+  | Don't mind the ghosts; they're harmless once they consume the soul of your first born. 
+
+As I attached the kayak trolley and made sure the straps were set correctly, rain began to fall in light showers again, nowhere near enough to discourage further progress. Limbing down the dirt road leading to Lock House #49, I followed the detour along the main road, the main canal gated off for construction. The entire park was a labyrinth of shuttered passages, makeshift bridges and signs pointing in contradictory directions to follow the detour. 
+
+I made it back onto the Canal around Mile Marker 108, lugging the kayak behind me, carefully balancing it on the dirt path. The storms began in earnest, as though aware I were now in my final stretch. Thunder echoed through the sky like bomb blasts. The rain began to fall harder than it had the entire journey. Every few hundred yards, I had to stop and tip the water out of the kayak, until I took the tarp and strapped it over the whole vessel. 
+
+The kayak compliantly followed behind me, exhausting to pull but manageable with the trolley. I carefully steered it around the puddles and mud that were expanding their territory across the towpath. The rain showed no signs of stopping.
+
+I arrived at Dam #5 to find the entire area under heavy construction, surrounded by overlapping lines of fences that blocked the canal, directing all travellers through a narrow lane that passed under the front porch of Lock House #47. The site was empty for the rain, but impassable, heavy machinery shedding solid lines of water, glittering in the stormy dark, forming constellations of streams that flushed the dirt and gravel through flooding crevices. To my right, through the thick, dripping forest, the river flung itself headlong over a 30 feet drop, the current furiously coursing over the dam. 
+
+The only way forward was a makeshift flight of stairs, crisscrossing up a hill. I pulled the kayak up the first flight, but as I switched directions to start the next leg of the crisscross, I slipped on the slick wood and lost my grip. The kayak went careening down the stairs, thudding like thunder in the rain, to capsize in a pit of mud at the base. In the fall, the kayak trolley snapped in two and went spinning into the forest, wheels flying in different directions. Without the trolley, there was little hope of completing the trip.
+
+I was less than ten miles from Williamsport, on the other side of the Power Plant Dam, where I could put the kayak back into the river. If I turned back, I was only two miles from Lock House #47. Despite the prescriptions of good sense, I decided to keep going. I took the 1" root and rigged a harness around my chest and attached the other end to the kayak. I struggled through the circuitous detour, slipped through the mud, as rain poured, soaking everything all over again. Twice the kayak tipped over and three times I fell. 
+
+Finally, the detour lead me onto a backroad, the Dam #5 Road, a flat expanse of blacktop that I thought would be a blessing. If I only had the kayak trolley. For a mile I pulled the kayak through the rain with the harness until I finally collapsed in exhaustion and realized there was no way I was going to make it. I simply did not have the energy to haul a hundred pounds of gear against the force of grating friction another eight miles. 
+
+I sat on the edge of the road, wondering what to do, as the rain washed over me. There was no other choice but to abandon the kayak and make my way to Williamsport on foot. 
+
 
 .. topic:: Text
 
