@@ -691,7 +691,7 @@ The surreality of my ascent from the aqueduct to the main street of Williamsport
 
 At the gas station, I bought a phone charger and sat on the patio beneath an outlet as the bars onscreen slowly filled. The sun dried out my clothing while I waited on my Uber. Google Maps told me I was only 22 miles from my father's truck. I had almost made it.
 
-My driver had a statue of Siddhartha Gautama on his dashboard. He asked questions in broken English about what brought me to Williamsport. As he drove me back to my kayak so I could get my father's truck key, I explained the entire journey to him. The week I told off of work, the plan to go from Cumberland to Brunswick along the North Branch, the endless rain, the current, the difficulty, the annihilation. After hearing all of it, he smirked and said to me, "*I am glad to have met you. You are crazy, man.*" I agreed.
+My driver had a statue of Siddhartha Gautama on his dashboard. He asked questions in broken English about what brought me to Williamsport. As he drove me back to my kayak so I could get my father's truck key, I explained the entire journey to him. The week I took off of work, the plan to go from Cumberland to Brunswick along the North Branch, the endless rain, the current, the difficulty, the annihilation. After hearing all of it, he smirked and said to me, "*I am glad to have met you. You are crazy, man.*" I agreed.
 
 He waited for me while I ran into the woods and exhumed the remains of my expedition from the now humid forest, steaming with the vestiges of the rain. The driver laughed as I waddled back up to the car. I don't think he believed any of my story until that moment. 
 
