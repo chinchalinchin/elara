@@ -683,7 +683,7 @@ I sat on a bench near one of the ruined locks to rest. I forget which, or never 
 
 It was there I realized I had left my father's truck key in the pocket of my jacket, packaged in one of the 50 gallon contractor bags. I cursed myself for my stupidity and hurled my gallon of water as hard I could in whatever direction I happened to be standing. I heard it explode somewhere in the distance, another falling drop of rain.
 
-It was then I gave up. I unzipped my backpack and left everything but my clothes, wallet and phone sitting on the side of the towpath for the next traveller or scavenger: poncho, gloves, sweatshirt, messkit, first aid kit, ducttape, rope, all of it but what I absolutely needed in the civilized world to barter my way back to the truck. I walked the rest of the way to Williamsport in total silence, the absence of thought. The rain continued to fall. I counted down through 104, 103, 102, 101, 100.
+It was then I gave up. I unzipped my backpack and left everything but my clothes, wallet and phone sitting on the side of the towpath for the next traveller or scavenger: poncho, gloves, sweatshirt, messkit, first aid kit, duct tape, rope, all of it but what I absolutely needed in the civilized world to barter my way back to the truck. I walked the rest of the way to Williamsport in total silence, the absence of thought. The rain continued to fall. I counted down through 104, 103, 102, 101, 100.
 
 Eventually, I started to pass normal people, walking the trail with umbrellas. They called "*good morning*" to me. I mindlessly called the same to them. The towpath rounded the corner and I saw the Conococheague Aqueduct peak out from between the trees ahead. I emerged from the forest into civilization.
 
@@ -693,7 +693,7 @@ At the gas station, I bought a phone charger and sat on the patio beneath an out
 
 My driver had a statue of Siddhartha Gautama on his dashboard. He asked questions in broken English about what brought me to Williamsport. As he drove me back to my kayak so I could get my father's truck key, I explained the entire journey to him. The week I told off of work, the plan to go from Cumberland to Brunswick along the North Branch, the endless rain, the current, the difficulty, the annihilation. After hearing all of it, he smirked and said to me, "*I am glad to have met you. You are crazy, man.*" I agreed.
 
-He waited for me while I ran into the woods and exhumed the remains of my expedition from the now humid forest, steaming with the last vestiges of the rain. The driver laughed as I waddled back up to the car. I don't think he believed any of my story until that moment. 
+He waited for me while I ran into the woods and exhumed the remains of my expedition from the now humid forest, steaming with the vestiges of the rain. The driver laughed as I waddled back up to the car. I don't think he believed any of my story until that moment. 
 
 Thirty minutes later, he dropped me off at the foot of my father's truck in the Brunswick MARC Train Station parking lot. I opened the door to the familiar smell of rodent piss and ignited the engine.
 
