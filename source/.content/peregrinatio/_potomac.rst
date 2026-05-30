@@ -594,13 +594,21 @@ May 26, 2026
 
 It's been three mornings without coffee. Of all the drugs, I didn't expect caffeine to be the one I missed the most. I suppose that's what getting older means. 
 
-**Outside of Hancock**
+**Hancock**
 
 - 11:03 AM
 - Cloudy
-- Mile Marker: 128
+- Mile Marker: 125
 
-More than once this has happened: A mother duck and her chicks sense my approach. The mother starts squawking and beating her wings against the water, driving directly into my line of motion. Her chicks then disperse into the tall grass that sticks above the river, disappearing from sight. The mother leads me forward, calling after me to follow her, making herself a noisy target. As I paddle, she eventually takes flight and circles overhead until I am well past her nest, to land behind me and retrieve her chicks.
+As soon as I stepped off the kayak here, a cramp in my lower left leg started screaming. It has gotten worse with each passing minute, each step I take. I looked a sorry sight limping up into the main town.
+
+Paid $5 for a shower at trailhead shop. Shower was a hot spigot hanging from the ceiling of a converted porta potty behind the shop, next to a dumpster and pit of mud. Hot water was nice, but it burned like a thousand hells across my sunburns whenever they got wet. I am in a state. 
+
+My hands are calloused and sore from the constant paddling for three days. Found an abandoned pair of biker gloves at the Fifteen Mile camp and have been using them ever since. They have been a godsend. 
+
+After picking up sunscreen and calamine lotion at the pharmacy, I bought a pack of cigarettes and coffee at gas station here. Couldn't take it anymore. Another addiction, I suppose, I will never tame. I am currently sitting next to the boat ramp, gathering my strength for the next leg.
+
+More than once this has happened today on the river: A mother duck and her chicks sense my approach. The mother starts squawking and beating her wings against the water, driving directly into my line of motion. Her chicks then disperse into the tall grass that sticks above the river, disappearing from sight. The mother leads me forward, calling after me to follow her, making herself a noisy target. As I paddle, she eventually takes flight and circles overhead until I am well past her nest, to land behind me and retrieve her chicks.
 
 I have no ill intentions, but it's good dress rehearsal for the actual show.
 
@@ -610,25 +618,19 @@ I have no ill intentions, but it's good dress rehearsal for the actual show.
 - Cloudy With Light Rain
 - Mile Marker: 109
 
-As soon as I stepped off the kayak in Hancock, a cramp in my lower left leg started screaming. It has gotten worse with each passing minute, each step I take. I have been limbing the whole evening. Dragging the kayak ashore was an ordeal in and of itself. It feels like the tendons in my leg are severed. I had to haul the kayak across the wooden bridge of Lock 49 and stopped every few yards to rest. The kayak trolley refused to work, wobbling and losing balance every time the wheels bounced over the rocky path. It appears the straps are not set correctly. I'll have to adjust them before tomorrow morning.
+I have been limbing the whole evening. Dragging the kayak ashore was an ordeal in and of itself. It feels like the tendons in my leg are severed. I had to haul the kayak across the wooden bridge of Lock 49 and stopped every few yards to rest. The kayak trolley refused to work, wobbling and losing balance every time the wheels bounced over the rocky path. It appears the straps are not set correctly. I'll have to adjust them before tomorrow morning.
 
-Paid $5 for a shower at trailhead shop. Hot water was nice, but it burned like a thousand hells across my sunburns whenever they got wet. I am in a sorry state. 
+Once the kayak was ashore, I sat on the embankment, trying to charge my phone. Solar panel works, except it's been cloudy non-stop. I've seen the sun maybe three hours the entire trip. My phone was down to 3%. A few errant rays that peaked through the clouds managed to bring it back up to 9% while I was sitting here. 
 
-My hands are calloused and sore from the constant paddling for three days. Found an abandoned pair of biker gloves at the Fifteen Mile camp and have been using them ever since. They have been a godsend. 
+Tomorrow is going to be a rough one. By river, I am less than day from my goal. However, there are three dams between me and Brunswick: Dam #5, the Power Plant Dam and Dam #4. I'll have to put ashore above Dam #5 and haul the kayak until I can put in past the Power Plant Dam at Williamsport. Then I'll be able to make ten or so miles by river to Dam #4, before I have to take out one more time and go around. The `C&O Companion Book by Mike High <C&O Companion>`_ has been indispensable in its granular detail of the trail and the river. 
 
-Solar panel works, except it's been cloudy non-stop. My phone is done to 9%. I've seen the sun maybe three hours the entire trip. 
-
-Tomorrow is going to be a rough one. By river, I am less than day from my goal. However, there are three dams between me and Brunswick: Dam #5, the Power Plant Dam and Dam #4. I'll have to put ashore above Dam #5 and haul the kayak until I can put in past the Power Plant Dam at Williamsport. Then I'll be able to make ten or so miles by river to Dam #4, before I have to take out one more time and go around. The `C&O Companion Book by Mike High <C&O Companion>`_ has been indispensable in this regard. 
-
-(There's currently a groundhug snuffling around the ruins of Lock 49 as I write this.)
+(There's currently a groundhug snuffling around the ruins of Lock #49 as I write this.)
 
 The kayak trolley has been hit or miss. Tomorrow it gets put to the test, a trial by fire. Atleast the terrain should be level. Mostly. 
 
 The one saving grace is Lock House #49. The C&O Authority rents it out to hikers, so I used the remaining charge on my phone to reserve it for tonight, though the door was unlocked. I could have easily squatted in the place, but decided the Authority deserved some compensation for the good fortune they have bestowed upon me. $135 a night, but worth every penny. A bed to sleep in will be a miracle compared the sleepless nights I have been spending, sunburnt, on the rocky ground. Best of all is the oven. I am currently baking my soaked clothing. The entire place reeks of roasted mildew.
 
-I bought a pack of cigarettes and coffee at Hancock. Couldn't take it anymore. Another addiction, I suppose, I will never tame. Atleast my consumption has been way done, less than a half a pack a day, but that is probably me trying to bargain for my vice.
-
-Started a campfire and fired up some sausage. The meal tasted liked nothing, but it filled my stomach.
+Started a campfire in the ring outside and fired up some sausage. The meal tasted liked nothing, but it filled my stomach.
 
 Hopefully tomorrow will be the end of this forsaken trip. If not, then Thursday at the latest. It all depends on how quickly I can get around the dams. 
 
@@ -645,11 +647,11 @@ This was the day I gave up. What you now read are recollections after the fact.
 
 **Clear Spring**
 
-- 7:00 AM
+- 5:00 AM
 - Cloudy With Light Rain
 - Mile Marker: 109
 
-I woke up dry around 5 AM, the sunburns bearable after applying the calamine lotion. My remaining wet clothes baked in the oven for an hour in the morning before I left. The stench wafted through the house, but everything was finally dry. I opened all of the doors to let the smell air out and started packing, leaving the remainder of my rations, besides the peanut butter, trail mix and water, sitting in the kitchen for the next hiker. I realized, as I sat for the final time at the Lock House kitchen table, I had no seen a soul on the river the entire journey.
+I woke up dry around 5 AM, the sunburns bearable after applying the calamine lotion. My remaining wet clothes baked in the oven for an hour in the morning before I left. The stench wafted through the house, but everything was finally dry. I opened all of the doors to let the smell air out and started packing, leaving the remainder of my rations, besides the peanut butter, trail mix and water, sitting in the kitchen for the next hiker. I realized, as I sat for the final time at the Lock House kitchen table, I had not seen a soul on the river the entire journey.
 
 The night previous I had gone around the Lock House several times, making sure all of the doors were locked, simply because the house was built in the 1800s; it had seen the generational wasteland of the Civil War; ghost stories had grown from the destruction to be traded like precious gold between the locals. Even as far as Cumberland, when I was in the Boy Scouts, we talked of the dark alleys of Antietam, where the blood of soldiers still seeped through the ground, or the roaming ghosts of Gettysburg. The guest room had a ledger where all of the previous guests had signed, so I added an entry,
 
