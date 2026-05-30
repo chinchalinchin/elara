@@ -579,7 +579,7 @@ As my mother's memory goes, so does the radius of her movement.
 
 Five rabbits just ran by my tent. Which reminds me I saw a bald eagle swoop across the width of the river and disappear into the forest today. 
 
-Turtles are everywhere along the river. I must have seen over thirty. They appear to be seeking refuge from the flooding Potomac by crawling up the sides of trees en masse. Dozens of them, ascending from the depths, with nothing else but the blind impulse to weather the storm and survive.
+Turtles are everywhere along the river. I must have seen over a hundred. They appear to be seeking refuge from the flooding Potomac by crawling up the sides of trees en masse. Dozens of them, ascending from the depths, with nothing else but the blind impulse to weather the storm and survive.
 
 May 26, 2026
 ------------
