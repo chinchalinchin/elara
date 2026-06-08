@@ -19,9 +19,15 @@ task:
     title: "Scrilla"
     # -------------------------------------------
     content: |
-      <task goes here>
+      Debug why the cache isn't working. The issue is twofold.
+
+      1. The length calculation is incorrect.
+      2. Cache prices and stats are being overwritten each iteration.
     # -------------------------------------------
-    shell: []
+    shell: 
+      - echo "here"
+      # - LOG_LEVEL=debug scrilla risk-profile ALLY GD
+      # - LOG_LEVEL=verbose scrilla optimize-portfolio ALLY SONY AMZN
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -31,3 +37,11 @@ task:
           group: chinchalinchin
         views:
           directory: true
+          scrilla_build: true
+          scrilla_docs: false
+          scrilla_main: true
+          scrilla_analysis: true
+          scrilla_objects: true
+          scrilla_models: true
+          scrilla_util: true
+          scrilla_static: true

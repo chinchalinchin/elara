@@ -242,6 +242,15 @@ views:
         scrilla_docs:
           title: "Scrilla Docs"
           files:
+            README.md: markdown
+            docs/source/.content/00_overview.md: markdown
+            docs/source/.content/01_setup.md: markdown
+            docs/source/.content/02_configuration.md: markdown
+            docs/source/.content/03_usage.md: markdown
+            docs/source/.content/04_architecture.md: markdown
+            docs/source/.content/05_development.md: markdown
+            docs/source/.content/06_deployment.md: markdown
+            docs/source/.content/_appendix.md: markdown
         scrilla_main: 
           title: "Scrilla Main"
           files:
@@ -251,8 +260,39 @@ views:
             src/scrilla/main.py: python
             src/scrilla/services.py: python
             src/scrilla/settings.py: python
-        scrilla_anaylsis:
+        scrilla_util:
+          title: "Scrilla Utilities"
+          files:
+            src/scrilla/util/dater.py: python
+            src/scrilla/util/errors.py: python
+            src/scrilla/util/helper.py: python
+            # src/scrilla/util/outputter.py: python
+        scrilla_analysis:
           title: "Scrilla Analysis"
+          files: 
+            src/scrilla/analysis/estimators.py: python
+            src/scrilla/analysis/markets.py: python
+            src/scrilla/analysis/optimizer.py: python
+            # src/scrilla/analysis/plotter.py: python
+        scrilla_objects: 
+          title: "Scrilla Objects"
+          files:
+            src/scrilla/analysis/objects/cashflow.py: python
+            src/scrilla/analysis/objects/portfolio.py: python
+        scrilla_models:
+          title: "Scrilla Models"
+          files:
+            src/scrilla/analysis/models/geometric/probability.py: python
+            src/scrilla/analysis/models/geometric/statistics.py: python
+        scrilla_static:
+          title: "Scrilla Static"
+          files:
+            src/scrilla/static/config.py: python
+            src/scrilla/static/constants.py: python
+            src/scrilla/static/definitions.py: python
+            src/scrilla/static/formats.py: python
+            src/scrilla/static/functions.py: python
+            src/scrilla/static/keys.py: python
     # --- 4. JENKINS VIEWS
     jenkins:
       config: {}

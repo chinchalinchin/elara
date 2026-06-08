@@ -27,3 +27,10 @@ The grand theory of everything: Some things are.
 .. math::
 
     \exists x: \forall y: y \notin x
+
+.. _2026-june:
+
+June
+----
+
+Dirac: The sample space doesn't exist until measured. 

@@ -21,7 +21,9 @@ task:
     content: |
       <task goes here>
     # -------------------------------------------
-    shell: []
+    shell: [ ]
+      # - LOG_LEVEL=debug scrilla risk-profile ALLY GD
+      # - LOG_LEVEL=verbose scrilla optimize-portfolio ALLY SONY AMZN
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -31,3 +33,11 @@ task:
           group: chinchalinchin
         views:
           directory: true
+          scrilla_build: true
+          scrilla_docs: false
+          scrilla_main: true
+          scrilla_analysis: true
+          scrilla_objects: true
+          scrilla_models: true
+          scrilla_util: true
+          scrilla_static: true
