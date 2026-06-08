@@ -3591,324 +3591,589 @@ I drink but don't get drunk. I shake until sleep finally takes me.
 SUNDAY, OCTOBER 27th
 --------------------
 
-.. TODO: format 
-
 I wake up in my car to a text message from Dakota. Without going back to the motel to change or shower, I get to the diner before him and order breakfast. The waiter brings a plate of grease and eggs from the kitchen window and sets it in front of me. Hobbled by withdrawal, I crouch over the plate and mutter thanks under my breath. I can barely hold the fork and knife with my shaking hands, but I'm starving so I make do.   
+
 As I wait for Dakota, my attention anxiously skips through thoughts, too manic to settle on any one for more than few seconds. Every question I chase leads back to the only one that matters: *who are the Harts*? I pull out Lynn Martin's piece and stare down at their story, stretching across these sheets of paper back through the centuries. Like holy scripture, I peel the pages back and search the verses for where I left off, 
 
 *Of Harfords and Harts*
 
 *Henry and Frances were born in 1768\. Due to their mother's heavily publicized court case, it was widely known they were Frederick Calvert's illegitimate children, but that did not stop Sarah Woodcock's new husband Peter Harford from raising them as his own; They were both brought up as Harfords in his home in London.*  
+
 *Henry and Frances were inseparable as children. They were attended by the same tutors, worked in the Woodcock Hattery through their adolescence together and were never seen apart. Beyond these meager facts, not much else can be said; The Harfords were neither landed nor titled, and they did not live extravagant lives, so they did not accumulate a paper trail for history to unpack. Their residence on Bond Street in London was more than adequate for their small family, but the nearby mansions on Oxford Street belonging to the gentry dwarfed their apartment by comparison. Henry and Frances Harford would have walked by them every day as they crossed Piccadilly, on their way to their family's hattery.*   
-*Later in life, Henry Harford would write in a letter to one of his associates that it was in his home on Bond Street, at the age of 13, where his mother told him who his real father was; whether or not she divulged the circumstances that led to his birth is unknown. In any case, the seed was planted. "*It was in that moment*," he writes, "*where I felt myself being lifted up by fate and ferried towards some greater end*." According to English Common Law, Henry Harford was the heir to Frederick Calvert's title of the Proprietorship of Maryland, and thus he was owed thirteen years of rent. However, by then, the American Revolution had ended, and the colonies were now the United States; the territory of Maryland was no longer under British rule and he had little chance of acquiring his inheritance.*   
+
+*Later in life, Henry Harford would write in a letter to one of his associates that it was in his home on Bond Street, at the age of 13, where his mother told him who his real father was; whether or not she divulged the circumstances that led to his birth is unknown. In any case, the seed was planted. "It was in that moment," he writes, "where I felt myself being lifted up by fate and ferried towards some greater end." According to English Common Law, Henry Harford was the heir to Frederick Calvert's title of the Proprietorship of Maryland, and thus he was owed thirteen years of rent. However, by then, the American Revolution had ended, and the colonies were now the United States; the territory of Maryland was no longer under British rule and he had little chance of acquiring his inheritance.*   
+
 *Nevertheless, at the age of 15, Henry Harford appeared before the court of King George III and requested formal recognition as the heir to Frederick Calvert and the restoration of his title as the Proprietor of Maryland. The King, with no actual authority over Maryland, granted his request without issue. Henry Harford left court bearing a writ that he hoped would cement his fortune.*  
-*Henry and Frances sailed to the United States together at the age of 17\. According to the ship's manifest, they shared a single room below deck for seven weeks before they laid sights on their new home. Most of that time Henry spent seasick.*   
+
+*Henry and Frances sailed to the United States together at the age of 17\. According to the ship's manifest, they shared a single room below deck for seven weeks before they laid sights on their new home. Most of that time Henry spent seasick.*
+
 *When they finally landed at the new state capital and port city of Annapolis in 1785, Henry and Frances entered the Maryland General Assembly and submitted their claim. Henry had carefully devised the submission to avoid political traps: abandoning a large portion of his inheritance to the circumstances of history, the essence of the claim stated that he was owed rents from the period of 1771, when his father died, to 1776, when Maryland declared independence. In addition, all land falling above the northwest branch of the Potomac River not already claimed by free settlers, what is today Western Maryland, belonged by rights to his family, as his deeds and title attested.*    
+
 *However, as if its simultaneity were planned, another claim was presented to the Assembly. A man named Robert Hart entered the State House with his wife Elizabeth, formerly Elizabeth Calvert, granddaughter of Charles Calvert I, through his third son Cecilus. Years prior, the son of John Hart had married into a vestige of the continental branch of the Calvert family and entangled the two families together. As Hart's wife could trace her heritage to a former Proprietor with legitimacy, whereas Henry Harford's claim rested on his illegitimacy, Robert Hart moved that the Assembly grant all lands and incomes in dispute to his family.*   
+
 *Before the Assembly could issue any decision on the matter, they adjourned their session for the year, leaving Hart and Harford to simmer through the heat of an unusually hot Annapolis summer. Henry and Frances had sailed halfway around the world to claim their inheritance and a stranger had appeared out of nowhere to deny them; they could not have been happy. There are no accounts of what precisely transpired among the two families in the summer of 1785, but there are a few facts that have come down through time. During the summer, three things occurred with certainty:*  
+
 *Elizabeth Calvert died for reasons unknown. Robert Hart and Frances Harford were married. Frances Harford, now Frances Hart, became pregnant.*  
-*The next year, when the General Assembly called session again, Henry Harford and Robert Hart entered the State House together and presented their unified claim; Frances, now six months pregnant, did not join them. Henry Harford acquiesced before the Assembly and yielded to Robert Hart, who now submitted a new claim for all the lands and rents previously disputed. The motion passed the lower House of the Assembly easily enough, with famous Revolutionary figures like Samuel Chase arguing in its favor, but the Senate rejected it out of hand, citing Harford's "*absence during the war, and his father Frederick's alienation of his subjects.*" Harford and Hart left the State House empty-handed and in a foul mood.*   
-*A reporter from the Maryland Gazette was present to record the ensuing chaos, "*the two parties adjourned into the lobby of the State House, whereupon a scuffle broke out between them. Henry Harford, the shorter of the two and a boy to look upon, enraged beyond reprieve, screamed for all in attendance to hear, 'You cannot have her\!' before throwing his fists in wild manner at the barrel-chested Robert Hart. A half dozen bailiffs descended on the brawl before any bodily harm could come to any involved.*"*  
+
+*The next year, when the General Assembly called session again, Henry Harford and Robert Hart entered the State House together and presented their unified claim; Frances, now six months pregnant, did not join them. Henry Harford acquiesced before the Assembly and yielded to Robert Hart, who now submitted a new claim for all the lands and rents previously disputed. The motion passed the lower House of the Assembly easily enough, with famous Revolutionary figures like Samuel Chase arguing in its favor, but the Senate rejected it out of hand, citing Harford's "absence during the war, and his father Frederick's alienation of his subjects." Harford and Hart left the State House empty-handed and in a foul mood.*   
+
+*A reporter from the Maryland Gazette was present to record the ensuing chaos, "the two parties adjourned into the lobby of the State House, whereupon a scuffle broke out between them. Henry Harford, the shorter of the two and a boy to look upon, enraged beyond reprieve, screamed for all in attendance to hear, 'You cannot have her!' before throwing his fists in wild manner at the barrel-chested Robert Hart. A half dozen bailiffs descended on the brawl before any bodily harm could come to any involved."*
+
 *The embittered Harford left Annapolis by carriage the next day. Before leaving, he went that morning to the Hart residence on Chester Street and stole into his sister's room. History cannot be found in the moments they shared in that room. Whether or not Henry tried to convince his sister to come with him is unknown, but she would have been in no state to accompany him even if he had. Henry left his sister with Robert Hart that day and went west.* 	  
 *A few months later, Henry Hart was born--*
 
 The eggs are a mistake. They soak up last night's booze and inflate my abdomen to twice its size. A queasy vertigo liquefies my intestines into soup, a vile paste that crawls up my throat in violent heaves. I gallop through the diner towards the bathroom. By the time I'm done vomiting into the restaurant's porcelain toilet, three people have come and gone from the neighboring stall.   
+
 I stagger back out into the diner, wondering which pairs of eyes that now harshly judge me bore witness to my morning ritual. If I hadn't pulled over last night and passed out in my car on the side of the road, only the motel walls would judge me right now. As it stands, I can tell I've ruined a few breakfasts.   
+
 The only bright face in the whole place is Dakota. While I was emptying the contents of my stomach, the waiter must have seated him. He smiles warmly at me. I'm right in the sweet spot, halfway between drunk and sober. I better get the news from him before the equilibrium shatters into a hangover.   
+
 He slides the envelope across the table and asks, "Thinking about going into politics?"  
+
 "Come again?" I mutter, swishing a mouthful of cold coffee through my teeth. I spit the coffee back into the cup. Dakota is unfazed.  
+
 "Everyone on the force knows he's going to run again next year."  
+
 Suddenly, the table elongates. The envelope is now miles away, stranded in the vast openness between me and Dakota. The next question asks itself, "Who is going to run again next year?"  
+
 I peel open the envelope and look at the results.   
+
 My tail's car is registered to Abner Hart. 
 
-\*
+---
 
 The address from Dakota's results leads me down winding dirt roads without names. High up in the mountains, I pull off the side of the road and gaze out over the vast stretch of Earth before me. New Harford is like a terrarium from this distance, an enclosure where the activities of the city can be studied without bias.   
+
 The city sits in a wooded valley, as if weighing the ground down with its concrete bulk. Mountains rise on all sides to form a natural barrier. The only connections to the outside world are a span of highway winding through the troughs of the mountain range and the train tracks running parallel. My motel sits on the outskirts, half-hidden by the encroaching forest. Lilly's house is on the opposite end of the city, in the suburbs that curl around the base of a mountain and ascend towards its summit, where the hospital and Calvert Catholic sit, a water tower standing between them.   
+
 This far from the city is all state land, farms and private estates. I pass a grain silo and fields of wheat grown from flats carved out of the mountainside. A mansion sits next to its enterprise, showcasing its productive wealth. Then field after field of grazing cows, spilled across the landscape like puddles of black and white.   
+
 Here I weave through the vital reserves of the city. Imagine a patient strapped to a table, his organs excised from his body with surgical precision and placed around his hollowed chest while still pumping, then you will have some idea of New Harford's anatomy. These farms feed the city, pumping into it their essence, although technically they sit outside its taxable boundaries.     
+
 My cellphone loses its signal, but the last message from the GPS tells me I'm a mile away. I pull off to the side of the road again and leave my car in a ditch, so that passing cars won't be able to see until they're right up on it. I haven't seen another car in an hour, but caution has become paramount. In the trunk, I retrieve a pair of binoculars and my gun.   
-    It's not hard to find my destination for the same reason getting in is going to be impossible. The Hart Estate is surrounded by two concentric walls, the inner taller than the outer, enclosing at least ten acres of meadow. Spirals of razor wire wind around top of the outer wall and the inner wall watches the outside world through cameras placed at evenly spaced intervals around its circumference. The only entrance is a series of gates controlled electronically from a guardhouse on the other side.   
+
+It's not hard to find my destination for the same reason getting in is going to be impossible. The Hart Estate is surrounded by two concentric walls, the inner taller than the outer, enclosing at least ten acres of meadow. Spirals of razor wire wind around top of the outer wall and the inner wall watches the outside world through cameras placed at evenly spaced intervals around its circumference. The only entrance is a series of gates controlled electronically from a guardhouse on the other side.   
+
 This isn't an estate, I think, it's a compound. A fortress.   
+
 The mansion itself sits atop a rising hill, separate and disjunct from the menace of its guarding walls. The building was old a century ago, now it's practically ancient, a relic. Its entrance is hidden behind a row of marble columns that support a slanted roof that stretches over the vast three-story structure. The symmetry of the mansion has been broken over time by additional wings, the eastern half of the building an odd conjunction of pods and towers while the western half is traditional Victorian architecture. Orange light glows from a few select windows, while the rest are dark.  
+
 I skirt the edges of the estate, keeping a healthy distance away from it. I climb a small rise and take refuge between a huddle of pine trees. I peer through my binoculars.  
+
 Figures in black suits make patrols around the building's exterior. A guard smokes a cigarette outside of the guardhouse next to the gate. Another guard shuffles through a tended garden a half mile west, a secondary guest house sitting amidst the flowers and shrubs. I find the stable further west still, its door open and a beautiful woman leading a muscled stallion out into the yard. Henrietta Vander-Strauss. She saddles the horse and climbs onto his back, goading him through worn tracks. She disappears galloping behind the mansion, golden blonde hair streaming behind her.   
+
 I scan the walls, looking for outlets into the outside world. The row of power lines that follow the dirt road leading to the Hart Estate are buried in the ground for at least three hundred yards before tunneling underneath the walls, so no luck there. I keep scanning. I find a thin black cable threading up the eastern wall like a tiny capillary. It disappears through the wall. I smile.   
+
 This might be not be so hard after all.
 
-\*
+---
 
 "Elliot, oh good," Lilly says upon opening her front door, "Listen, about the other night--"  
+
 "Not now," I interject, pushing through into the house, "I found something. I need to look around Rachel's room again."  
+
 She follows after me like the dog that follows after her. On the way through the chaos of Lilly's living room, I feel the clicking. The snapping into place of pieces. The picture is becoming clearer in my head, much clearer. I'm fairly certain about the abstract, but the particulars elude me. I need to sound out the depth of this rabbit-hole one more time.  
+
 In her room, I'm spinning. Who's in on it? The teachers? The cops? The whole city?   
+
 Her shelf, the missing books from her locker. I retrieve a physics textbook. The pages are slippery plastic in my fingers. A flurry of rifled paper, blindly searching. Page 134, Chapter 4, Newton's Three Laws of Motion. For every action, there is an equal, but opposite reaction. Rachel's handwriting all over the place, leading my eyes to the margins where I see...  
+
 *Brandon Hart* circled in hearts. Next to it, similarly decorated, *Rachel Hart*.  
+
 I am crouching in the middle of Rachel's room like an animal nervously guarding its fallen hunt. Lilly walks up behind me and lays her hand on my shoulder. I nearly jolt out of my skin.   
+
 "What's going on?" She asks, concerned.  
+
 "Look." I push the book into her hands.  
+
 She examines the margins, "She has a crush."  
+
 I need to show her the trail, let her catch the scent before I pull the rug out from under her, "I've talked to this Mr. Hart. Twice. The first time, he told me they don't have a relationship outside of class and never talk except in school. Then I found these diary entries."  
+
 I pull Rachel's diary from my bag and show her the entries about staying late after Mr. Hart's class and talking to him. Lilly nervously takes the diary, as if she's handling radioactive material. She becomes glass, delicate and fragile. After several pregnant moments of Lilly reading, I continue, "She writes about talking with Mr. Hart more than once. Enough that it was pattern. Yet Mr. Hart insisted he hardly knew her."  
+
 "What do you think?" She quietly asks.  
+
 "That he wants me to think that."   
+
 "What are you saying?"  
+
 "Rachel writes a lot about him in her diary."  
+
 "And?"  
+
 "She went missing before Mr. Hart's class," I remind her.  
+
 "I don't know, Elliot. Are you saying he took her? Rachel went missing at lunch. He was there the whole day, until school got out."  
+
 "That he was," I agree, "Did you know Rachel missed soccer practice and the school newspaper meetings a week before she went missing? Coach Phillips told me the other day."  
+
 "What?" She doesn't know, it's obvious, "But, I dropped her off at school..."  
+
 "Where did she go when she was supposed to be at practice?" I trace the outline of Rachel's disappearance with a series of questions, "Where was she when she was supposed to be at the newspaper? Who did she meet instead? What was she planning?"   
+
 I flip to the penultimate entry on September 25th,
 
 *OMG. IT FINALLY HAPPENED. HE KISSED ME.*
 
 I show Lilly the entry. As she is reading it, I explain, "I thought she meant Billy, but Billy said they've never kissed. I believe him," I explain, punctuating the thought with another question, "Who was she talking about then?  
+
 I pause, catching my breath, "I went to Alexandria yesterday--"  
+
 "Outside of DC?"  
+
 I nod. She peers through confusion, another non sequitur woven into the obscuring veil that I am spinning around her. I explain, peeling back the curtains, "I found a case down there about a missing girl from three years ago. I went to interview the detective assigned to the case. The girl went missing from Hart State College. The detective showed me evidence that suggests Brandon's brother, Christopher, was involved in her disappearance."  
+
 I breathe heavily, "It's too much of a coincidence."  
+
 A wave of dizziness washes over Lilly. Hot breath and a slowed pulse. She clutches the cover of Rachel's diary with curled fingers. Hushed words in a measured tone, "She was just a girl, my little girl--"  
+
 "Rachel disappears," I say, leading Lilly back to the moment it all started, "Right before Mr. Hart's class."  
+
 "Elliot," Lilly squeaks, "What happened?"  
+
 I launch into my prevailing theory, its previous vague outline solidifying into stone now that I hear the words out loud, "She went missing before Mr. Hart's class, so he could make sure the kidnapper had at least an hour head-start before anyone had the chance to catch on."  
+
 Her silence is all the permission I require to continue.  
+
 "I think he's been grooming her for the past year. I think maybe that's why he transferred here in the first place. Rachel was in the paper all the time because of soccer. Maybe he saw her picture in the paper and found her that way. Maybe he's been planning this for a long time. Maybe he told her they were going to run off together and get married. Whatever fantasies she needed to hear, I'm sure he supplied. It would explain the lack of any signs of struggle. Someone should have seen something, but she simply disappeared, like that's exactly what she intended to do."  
+
 "But--" Lilly interrupts, "How can you be sure?"   
+
 "There's more," I hand her the results from Dakota, the final nail in the coffin.  
+
 She experiences every emotion along spectrum of human emotion in a matter of seconds before managing to choke out, "This is the car that was following you?"   
+
 "Twice. They followed me again yesterday. I forgot to mention it--," Lilly in a green dress, swaying in my arms. I banish the thought and say, "Anyway, same car, both times."  
+
 "Abner..." The name is vile on Lilly's tongue, "Hart."   
+
 "Rich and powerful, but not particularly smart. He gave my tail his own car. It would seem his brothers got all of the brains in the family," Or at least I hope so, I think, "He's been on my trail almost since I got here. Why? How did he know about me? Someone must have told him."  
+
 "Oh," The realization passes through Lilly's eyes like an eighteen-wheeler barreling down a mountain, "Oh."  
+
 "I bet Brandon didn't wait five minutes after I talked to him to call his brother," I conjecture. It's so obvious now, why didn't I put it together sooner? Where else would I get a tail? It had to have been someone at the school, snitching on me.  
+
 Or the hospital.   
+
 I count the degrees of separation. Barney, to Boyd, to McMullen, to Hart. Either way is plausible, either way the Harts are at the center.   
+
 It's all around me and it's been there the whole time. A dragnet, tangling me in invisible knots. Every road leads back to the Harts. Every avenue has a hundred gazing eyes, watching my every move, reporting it back to Abner Hart. Maybe even to Elroy himself.   
+
 And somewhere in all this mess, Rachel Walters. Are you still alive, Rachel? How do you fit into all of this? I find myself praying, hoping. I won't let myself think it, but I know. I know what's happened to you, and maybe is still happening right now, at this very moment. And I have a pretty good clue where.   
+
 Who to trust? Boyd? Dakota? A sad state of affairs when my only confidants are a ladder-climbing careerist and a lovestruck fool.   
+
 And Lilly.  
+
 I take her hands in mine, "Listen to me. Don't do anything. Do you understand? I will take care of this."  
 Her eyes find their resting spot in mine, alight with fear, "Okay, Elliot." 
 
-\*
+---
 
 Back in my motel room, I collect my thoughts. More importantly, my ammunition. Everything reorders into new compositions, facts rearranging into a new narrative. Abner Hart has been following me since almost the beginning.   
+
 A sudden thought occurs to me. The Charity Auction. That was stupid, so stupid. Did they notice me? Do they know--  
+
 Lilly.  
+
 They know about Lilly. They know she hired me.   
+
 I'm putting on my jacket to go back to Lilly's when I see the shapes moving through the curtains. I freeze in place. The room lights are on, broadcasting my presence through the window to the entire world. Stupid, Elliot. So stupid.   
+
 The knock on the door triggers primordial instincts. Suddenly, it's twenty million years ago, and I'm a tiny rodent on the jungle floor, being stalked by lumbering lizards and birds of prey.   
+
 They knock again. I hear their muffled voices through the door. I get up the courage to peer through the peephole. Thugs, there's no other way to describe them. Leather jacketed and slick-backed hair. Sunglasses and blank expressions. I slip back towards the far wall, pressing myself against chipped yellow paint.  
+
 The window shatters inward, sending slivered shards slicing through the air. Acting on impulses beyond my control, I duck behind the bed. Something thuds into the room and shatters. Then there is a *whoosh* and crackling. Heat rises in shimmering contortions to the blackening ceiling. Long flames twist in a typhoon on my bed.   
+
 I dive headlong into the bathroom and shut the door behind me. Smoke seeps through the crack under the door. The window, I remember, scrambling. I unlatch it and squeeze my body through the tiny slot, plopping onto a pile of leaves outside. My eyes scan frantically. The forest stretches out behind the hotel into darkness. I am a crouching phantom, slipping into the night. I glance back and see a roaring inferno consuming the motel.   
+
 Into the comforting clutch of darkness, I disappear, swinging around the motel. I emerge in the bushes by the parking lot, encased in leaves and branches. I watch, still as a statue. Flames are leaping from the front of my motel room into the air. Smoke pours out in dark, thick columns, twisting into one large stack that smears across the encroaching night, as if its very source.    
+
 The two thugs now stand in the parking lot with weapons drawn. The flames have consumed the roof and turned the motel into a runaway disaster. A third man appears from behind the motel and yells something at the other two. The hissing flames eat his voice. They peer around in response, searching for me. I sink into the shadows, flattened against the forest floor.   
+
 Sirens shriek above the flames.  
+
 The three men get back into their car and peel out of the parking lot. I have nowhere to write down its license plate. I know who the car belongs to anyway.   
+
 I'm dizzy. I need a gallon of vodka, a carton of cigarettes and a hole to die in. There's no time for any of it. I take stock of what has survived the fire; my cellphone, my money and my gun. Enough to get the job done.  
+
 Lilly picks up my call after the first ring. I'm already hurrying over the highway bridge into town. I hear my ammunition popping in the flames behind me, given to the fire like everything else I left in the room in my rush to get out.   
+
 "Get out of your house. Right now," I command her, "Leave."  
+
 "Elliot—what is going—"  
+
 "No, no questions. Do as I say."  
+
 I hear uneven breathes. Doors closing. A car engine rumbling to life. A loose fan belt squealing. A hurried voice gasping, "Okay, I'm pulling out of the driveway."  
+
 "Is there anyone following you?"  
+
 "I-Elliot," She is heaving, out of breath, "I don't think. I don't know."  
+
 "Get out of there and meet me at this address."  
+
 I give her a street name and a number. I'm going to have to hoof it without my car keys.   
+
 "Elliot, what's going on? Tell me. I'm scared."  
+
 "There's no time, Lilly," I explain, "Someone just tried to kill me. They know about you."  
+
 "Oh God, the rifle," She says.  
+
 "Don't go back for it. I have a gun."  
+
 "Okay, I'm coming."  
+
 "If I'm not there when you get there, drive around the block until I am. Do not stop moving. Look for people following you. Run red lights, make turns without signals, do whatever you have to, but get away from them."  
+
 "Okay, Elliot, I will." She says, "Elliot? I'm scared."  
+
 "Me too. We'll be together soon."  
+
 "Okay. Elliot?"  
+
 "Yes, Lilly?"  
+
 "Don't hang up. You don't have to say anything, but can you just stay on the line?"  
+
 "Of course, Lilly."  
+
 I'm jogging down a crowded street. Packs of people emerge from the inside of buildings, to gaze and gape at the blazing ball illuminating the horizon and its accompanying smokestack drawn west by the breeze, stretching out like a length of rope thrown from the surface of the Earth. I dodge a huddle of kids watching through their cellphones, broadcasting the event into the ether.   
+
 "Elliot."  
+
 "Yes?"  
+
 "Is she alive?"  
+
 Do I tell the truth? The minute I entered the picture, I changed the calculation. Rachel's life was hanging by thread before I got here; what did the Hart brothers do when they discovered a new threat, one that couldn't be bribed, bought or cajoled?   
+
 I'm standing by a river, ten years ago.   
+
 "I don't know, Lilly," I say, mustering my best response, "I'm still here. I'm not going to give up."  
+
 She is crying, "Elliot."  
+
 "Lilly?"  
+
 "If she's dead, I won't be able--" She can't finish.  
+
 "Where are you?" I ask, trying to focus her on the task at hand.  
+
 "Hastings Street," Her voice breaks and then recovers, "The light next to the bowling alley."  
+
 "Take a left and then take Galveston all the way to market," I explain, revising our plans, "Pick me up at the front entrance."  
+
 I'm finishing my cigarette when I hear Lilly again, "I see you."  
+
 I toss the butt to the ground and climb into Lilly's car. She is a mess, her face like a weeping sore. We exchange seats. I pull the van out of the lot and down the road, taking note of the tank.  
+
 "What's your mile per gallon?" I ask.  
+
 She looks up, "I don't know. Thirty?"  
+
 "What's this thing hold?"  
+
 "Ten gallons, give or take."  
+
 "Enough to make it to Baltimore."  
+
 She blusters, "Why are we going to Baltimore?"  
+
 "You," I explain, pressing a crumpled enveloped filled with money into her lap with one hand while steering with the other, "You are going to Baltimore. Here," I explain, "Take half. I'll need the rest. I'm going to need to buy some supplies."  
+
 "Elliot, I can't take this," She whispers, "It must be at least--"  
+
 "Five grand," I approximate, subtracting the price of the motel, food and booze plus my half from my total, "More or less. Enough to keep you holed up for a month or more."  
+
 "Elliot, what's going on?"  
+
 "I'm taking you somewhere safe."  
     
-\*
+---
 
 "Anything she needs," I say, pressing a wad of bills into Esmeralda's wrinkled hands, "You get it yourself. Understand me?"  
+
 The old European lady nods her beak of a nose, counting the roll of money. She doesn't look at me.   
+
 "Try to keep her inside," I add, looking around her apartment; colorful tapestries hang from the ceiling, catching the haze of incense and pipe tobacco, "I'll be back for her in a few days, but if I don't get a hold of you by Wednesday," I hand her a piece of paper with the name and number of one of my contacts, "This is someone called the Cleaner. He'll get her out of the state and set up with a cover, no questions asked. There should be enough there for his fee, minus your expenses."  
+
 She nods again. Her hair is tied up in a scarf and her back is crooked. She mutters blurbs in the lilting tones of Eastern Europe and her eyes dart around the room as if not comprehending me, but I've known Esmeralda Broslowski for the last eight years. She understands everything I say, but only speaks English on rare occasions. This is one of those occasions. She says something else in a language I don't understand and then turns to me, "You go find girl, yes?"  
+
 "Yes, Esme. I go find girl."	  
+
 "Good boy," She says, her voice thick with the Old World. She reaches over and pats me on the head, "You good boy. Make mother proud."  
+
 Her words are like a knife in my gut. She sees me wince and begins howling in her native tongue again. I find myself ushered into the kitchen, where Lilly sits. Esme puts a pot of water on the stove and disappears behind a veil of clattering beads. We are alone, both aware the other is averting their gaze.   
+
 "Are you going?" She finally asks.   
+
 "Yes."  
+
 "Oh."  
+
 "I have to be out of contact for a while," I add.  
+
 "Why?" She nervously drums her fingers on the table.  
+
 "I can't risk having the battery in my phone except when I absolutely need it," I tell her, presenting a facade of confidence, as if I have some notion of what I am doing,  "They can track me that way. You should take yours out, too."  
+
 She takes my hand. I'm putty in her palm.  
+
 "Elliot, before you go," She says, electricity running through the tips of her fingers into mine, "I have to tell you something."  
+
 "Lilly--" I interrupt, "Don't--"  
+
 "No, you don't understand," She replies, "I chose you, Elliot."  
+
 She's right. I don't understand.  
+
 "I—I saw your name on the list of private detectives. There were others, closer to New Harford I could have gone to. But I saw your name and remembered you."  
+
 I open and close my fists. Her hands brace mine on my table. Our eyes dance.   
+
 "What happened to her, Elliot?"  
+
 I close my eyes and enter a past life.   
+
 "I was..." Can I do it? Can I say it? I see it coming, in the darkness, like a movie screen getting closer and closer, "It was...it was just a stranger," I say.   
+
 "We went...we went to the playground down the street," And then it's rushing out, like a dam bursting, "She loved that jungle gym and wouldn't play on any of the others, no matter where we took her.  
+
 "Leah was over at the foot stand, in line to get hot-dogs. I was the one who was supposed to be watching," The memory evaporates before my very eyes. I feel nothing, I see nothing. I am simply saying empty words now, recitations with nothing behind them. The memory isn't there anymore. Maybe I've finally killed it. Whether it drowned in a decade of liquor or died of its own accord, I'll never know, but it's gone regardless, "I turned away. For a second. Maybe ten seconds. Maybe it was an hour. I can't remember, no matter how hard I try.   
+
 "When I turned back, she was gone."  
+
 The gap is crossed. Images come flooding back.  
+
 Leah shrieking, beating on my chest.  
+
 "I found security footage at the bank down the street a week later."  
+
 A battering ram taken to a door. An empty living room.   
+
 "In the house, in *his* house--"   
+
 A drawing in my hands. Boyd screaming at the SWAT team. A mattress knifed open. Sledgehammers sundering walls. They'll find nothing. They're already gone.   
+
 A drawing in my hands, staining with tears.   
+
 You drew me in my uniform, baby girl.  
+
 "He found out her father was a cop."  
+
 Why did you draw me in my uniform?   
+
 "We followed him three hundred miles, across five counties," I'm back in the room with Lilly, "It was already too late by then, we just didn't know it.  
+
 "He confessed the minute Boyd put the screws to him. Told us where to find her.  
+
 "If I hadn't looked away--" Who is this stranger talking? "If I had just thought to check the security footage sooner--" Is this the man you used to be? "If I had never become a fucking cop--"  
+
 Lilly touches my arm and whispers, "Then Rachel would be lost."  
+
 She holds me for hours. I leave as the sun casts its rays across a waking city. In another life, I now find myself. In someone else's shoes. In love with a woman who is not my wife. Whose daughter is not my own. Whose daughter I have to find.  
+
 Will find. Whatever it takes.
 
-**MONDAY, OCTOBER 28th** 
+MONDAY, OCTOBER 28th
+--------------------
 
 I smoke a pack of cigarette waiting for the sign and decal store in Baltimore to open. I pace the parking lot with Lynn Martin's article in my hands, pages crinkling under hooked fingers, searching for the thread that will lead me to corrupted heart of this story. The words are a portal to another world, one that has been unfolding in parallel to this one, grazing against it, now exposed in the light of day,
 
-*\--Individual lives are often obscured by history. During this time, the Napoleonic Wars were cascading across Europe, heralding a new era; Ripples were felt the world over as country after country was pulled through France's epochal wake. In America, the British Navy had blockaded the east coast to prevent French supplies in Canada from making their way to Napoleon's armies in Europe. Trade in the United States suffered as a result and old battle lines three decades old were redrawn across maps. The conflict became a war in its own right, labeled by historians as the War of 1812, though the conflict wouldn't be resolved until 1815\.*   
-    *In May 1813, a battalion of British soldiers sailed up the Potomac river. Among them was a young recruit of fourteen years whose name on the enlistment form was scrawled in chicken scratch:* Jeremiah Hart*. They descended on the newly incorporated town of Harford and put it to the torch. The town would never recover; still to this day, it is little more than a few, desolate streets in the middle of nowhere. Among the many buildings destroyed over the course of the two-day sacking at the beginning of the nineteenth century, known today as the Burning of Harford, the courthouse and register of the wills were razed to the ground, everything within consumed by flames. Any records of the Harford family, from the point in time when Henry Harford left Annapolis in 1786 to the moment the torches touched the tinder, were utterly destroyed. The town itself was decimated and all but erased from historical records. All that is known about the town of Harford and its inhabitants has to be inferred from the business ledgers in nearby cities and documents filed in other jurisdictions.*   
-    *At some point between 1786 and 1790, Henry Harford found a stretch of land within the boundaries he had tried to win from the General Assembly as his birthright and settled there, claiming it instead through homesteading. By 1800, a small town had sprouted in the mountains of Western Maryland, far away from the intrigue and politics of the capital, christened with his surname. The closest trading post at Fort Frederick details accounts settled in Harford's name on a bi-annual basis from 1795 until 1811, orders comprised mostly of animal pelts and lumber. A census in 1810 records the population of Harford at 15,580. The census in 1820 does not even mention Harford as one of its municipalities, instead including the population living within its former limits in the county total of 2,300.*   
-    *The fate of Henry Harford himself cannot even be stated with any certainty. He may have died on one of those days in May 1813 or he may have died years prior. All knowledge of Henry passed with the destruction of Harford. If he did indeed die during the Burning of Harford, then the tragic element of his passing cannot be understated; Jeremiah Hart would have been his grandnephew, the son of his namesake, Henry Hart.*   
-    *After the war was settled, a new municipality was incorporated thirty miles west. Among the signatories on the Articles of Incorporation, Henry Hart's bold handwriting deliberately stands out between the smaller signatures of his peers. Which makes the name chosen for this town even more curious: New Harford.*   
-    *From the very beginning of the town's history, the Hart name is literally writ large. By 1816, the family had relocated to an estate in their new domain and planted their roots deep in its soil.*   
-    *On January 5th, 1817, Frances Hart left her new estate in Western Maryland, climbed a ridge along Collier Mountain in Allegany County and threw herself from a height of 800 feet onto jagged rocks--* 
+*--Individual lives are often obscured by history. During this time, the Napoleonic Wars were cascading across Europe, heralding a new era; Ripples were felt the world over as country after country was pulled through France's epochal wake. In America, the British Navy had blockaded the east coast to prevent French supplies in Canada from making their way to Napoleon's armies in Europe. Trade in the United States suffered as a result and old battle lines three decades old were redrawn across maps. The conflict became a war in its own right, labeled by historians as the War of 1812, though the conflict wouldn't be resolved until 1815.*
+
+*In May 1813, a battalion of British soldiers sailed up the Potomac river. Among them was a young recruit of fourteen years whose name on the enlistment form was scrawled in chicken scratch: Jeremiah Hart. They descended on the newly incorporated town of Harford and put it to the torch. The town would never recover; still to this day, it is little more than a few, desolate streets in the middle of nowhere. Among the many buildings destroyed over the course of the two-day sacking at the beginning of the nineteenth century, known today as the Burning of Harford, the courthouse and register of the wills were razed to the ground, everything within consumed by flames. Any records of the Harford family, from the point in time when Henry Harford left Annapolis in 1786 to the moment the torches touched the tinder, were utterly destroyed. The town itself was decimated and all but erased from historical records. All that is known about the town of Harford and its inhabitants has to be inferred from the business ledgers in nearby cities and documents filed in other jurisdictions.*   
+
+*At some point between 1786 and 1790, Henry Harford found a stretch of land within the boundaries he had tried to win from the General Assembly as his birthright and settled there, claiming it instead through homesteading. By 1800, a small town had sprouted in the mountains of Western Maryland, far away from the intrigue and politics of the capital, christened with his surname. The closest trading post at Fort Frederick details accounts settled in Harford's name on a bi-annual basis from 1795 until 1811, orders comprised mostly of animal pelts and lumber. A census in 1810 records the population of Harford at 15,580. The census in 1820 does not even mention Harford as one of its municipalities, instead including the population living within its former limits in the county total of 2,300.*   
+
+*The fate of Henry Harford himself cannot even be stated with any certainty. He may have died on one of those days in May 1813 or he may have died years prior. All knowledge of Henry passed with the destruction of Harford. If he did indeed die during the Burning of Harford, then the tragic element of his passing cannot be understated; Jeremiah Hart would have been his grandnephew, the son of his namesake, Henry Hart.*   
+
+*After the war was settled, a new municipality was incorporated thirty miles west. Among the signatories on the Articles of Incorporation, Henry Hart's bold handwriting deliberately stands out between the smaller signatures of his peers. Which makes the name chosen for this town even more curious: New Harford.*   
+
+*From the very beginning of the town's history, the Hart name is literally writ large. By 1816, the family had relocated to an estate in their new domain and planted their roots deep in its soil.*   
+
+*On January 5th, 1817, Frances Hart left her new estate in Western Maryland, climbed a ridge along Collier Mountain in Allegany County and threw herself from a height of 800 feet onto jagged rocks--* 
 
 One tragedy after another, I think. This whole family is a Shakespearean nightmare. Another point wiggles in brain: Henry Hart *founded* New Harford. What exactly am I dealing with here? The question re-emerges: Who *are* the Harts?   
 Before I can pick up where I left off, a teenager in overalls pulls up in a two-door truck and steps out. He opens the store and I push in before he has time to turn on the lights.   
+
 "I need a decal for a van," I explain, "Quickly."  
+
 "Alright, mister, hold on a second," The kid rushes to the counter, switching on a computer hidden in a cubby-hole, "What did you have in mind?"  
+
 I consider that a moment. I am running blind here, acting on impulse. I am conjuring prophecies from the haze of the future, "Well," I say before the plan is even formed in my head, "I'm with Comcast. We need a new van for our fleet, so I need to get our logo on the side."  
+
 "Easy enough," The kid answers, taking out a clipboard and form, pushing it in front of me, "Just fill out these forms--"  
+
 "I won't have the van for another hour yet," I improvise, "Is that alright?"	  
+
 "Not a problem. We can get its info later."  
+
 I nod, "When you're done, can you have it delivered to this address?"  
+
 "Of course," He looks at the address, "This is a parking garage."  
+
 "It is. Is that a problem?"  
+
 "A bit unusual. You're with Comcast, you said?"  
+
 "I am," I reply, sensing his suspicion."  
+
 "You got some ID? Employee number? Badge?"  
+
 "Sure do," I slide a thousand dollars across the counter.  
+
 The boy smiles, all teeth and shining eyes, "One logo coming right up." 
 
-\*   
+---
 
 I nearly crash Lilly's van when the radio broadcasts the hourly news. I pull off the highway and turn the volume up to a thunderclap. I am breathless as the voice modulates overs a range of frequencies, dispersed into static and born again in audible chunks. Behind the news cast, I hear the twang of country music from another station. I am right on the edge of both broadcasts, picking sounds out of the noise, listening to the thread of information woven into the chaos, "...when he apparently lost control of his vehicle. Detective Dakota Jones was taken by helicopter to Willowbrook Hospital but passed away this morning due to injuries sustained in the crash..." the broadcast is swept away by the sad refrain of a drunken country song.      
+
 I buy every newspaper from the gas station at the next exit. The only one that mentions Dakota is the *New Harford Times News.* They use a photo from twenty years ago, back from when everyone on the force gave him hell for his peach fuzz.  
 Stephanie, I think. Their kids. Two boys and girl. I don't remember their names.    
+
 The details are sketchy. He lost control of his car on Galveston Boulevard and plowed into oncoming traffic. The tractor-trailer that hit him left only a streak on the road and a trail of debris. I don't buy any of it for a second.   
+
 My jaw grinds and my teeth crack. They've drawn first blood, I think. There is fury boiling inside of me, steaming rage shooting through my veins. My stomach seethes with a hot, hot hatred, like a poison leaking into my body.   
+
 The clerk isn't anywhere to be seen. I crawl over the counter and take a carton of cigarettes. The van squeals out of the lot following after my thoughts.
 
-\*
+---
 
 On my way back to New Harford, I pull off the highway three exits from town. Lilly's van putters to a halt in front of a row of storage sheds. The bells chime as I enter the lobby of the main shop. The lady behind the counter pulls out a contract, gets my information and shows me the unit I just rented.    
+
 "How often do you do checks on the units?"  
+
 Her eyebrows arch in response, "The contract you just signed prevents you from occupying these quarters as a residence."  
+
 "Oh no," I half-lie, "I only meant, I'm going to be keeping some valuables in here. I want to know they're secure."  
+
 "Ah," She replies, "We've got cameras on every unit that feed off site. They're watched 24/7."  
+
 Are they now?  
+
 "You know what?" I say, "I think I've changed my mind. Let's go ahead and cancel that contract."  
+
 Bafflement and bewilderment. Confusion muddies her expression, "But—there's a termination fee."  
+
 Beautiful, Elliot. If you didn't know before, you know now. You're a fool for the ages, "How much?"  
+
 "But sir, you just--" She attempts.  
+
 I hand her a hundred, "Is that enough?"  
+
 "Yes, but sir," She protests.  
+
 I'm back on the highway before I can get change. I check out two more storage places before I find one without cameras. I don't sign anymore contracts until I'm certain. 
 
-\*
+---
 
 Back in New Harford, I leave Lilly's van parked innocuously on a residential street. I walk down the incline of Washington Street towards downtown, searching for any reason whatsoever to not go where I am going.  
+
 Two parallel streets hoist Downtown New Harford between three blocks of potholes and receding pavement. I look down from an adjacent hill in the Historic District on the sprawl of red-brick buildings holding an array of boutiques and small businesses behind plate glass windows. Crossing train tracks and cutting across an unkempt field, I skirt the edges of a gazebo now claimed by the catatonic bodies of dope fiends; one lone, conscious junkie scratching his arm watches me with glazed eyes as I pass through the nearby stalks of overgrown grass. A bridge leads me over a murky creek where islands of silt have begun to grow trees and shrubs. I descend through winding racks of stairs towards Downtown, smoking cigarettes in a frenzy as I draw nearer.  
+
 A crowd milling around the entrance of City Hall provides a blessed distraction. I wander into the mass of people and become another appendage of the audience gathered around an elevated podium adorned with a bouquet of microphones. I search the faces of the crowd. Video cameras poke between heads. A dozen conservations with twice as many participants blend into garbled hissing. I pick a bow-tied, corduroy-jacketed man from the line-up and saddle up next to him.   
+
 He types furiously on his phone. I glance over, watching him send blurb after blurb of unedited stream-of-consciousness into a storming sea of comments and reactions. I lean in close and ask from the side of my mouth, "What's all this about?"  
-The man jerks away from his phone, surprised at the interruption. He studies me with rapprochement, "Remender's holding a press conference."  
+
+The man jerks away from his phone, surprised at the interruption. He studies me with rapprochement, "Remender's holding a 
+press conference."  
+
 "The mayor?" I ask, suddenly interested.  
+
 "Mmmhmm," He hums, returning to his phone.  
+
 "What about?" I ask, insistent.   
+
 He looks at me askance, “Don't know. That's why I'm here."  
+
 "What do you think's going on?"  
+
 He shrugs and turns away. 	  
+
 I always hated journalists.   
+
 I disappear back into the crowd, in search of a more pliable target. I find a group of older women in sweatpants and fanny-packs, holding poster-board signs scrawled with political epithets. One of them reads, *Remember Rolling Mills, Remender*. They chat in chirpy voices with each other and stop in unison when I interrupt. I slide myself into their midst and switch on whatever charm the ravages a decade of substance abuse has left me, "Say, would any of you young ladies know what's going on here?"   
+
 They cackle with irreverent glee. A silver-haired woman from the group replies, holding her hand over mouth, "The mayor's about to get on stage."  
+
 I nod, bending my expression into faux consternation, "Any idea what he's going to talk about?"  
+
 "Who the fuck cares?" The heavyset one blurts.  
-"Gladys\!" One of the women reprimands while Silver takes me by the arm and pulls me towards her. She explains in a hushed voice, "We don't much care for the current mayor."  
+
+"Gladys!" One of the women reprimands while Silver takes me by the arm and pulls me towards her. She explains in a hushed voice, "We don't much care for the current mayor."  
+
 I scrunch my brow and inquire, "Why's that?"  
-"He's taking our homes\!" The heavyset one shouts against the wishes of her compatriots.   
+
+"He's taking our homes!" The heavyset one shouts against the wishes of her compatriots.   
+
 "Oh, Gladys," Silver sighs and turns back to me, "She's not wrong. He's trying to demolish our homes to make way for a new business-zoned area."   
+
 "What for?"  
+
 "Oh, some fucking shop plaza--" Gladys exclaims.  
-"Gladys\!"  
+
+"Gladys!"
+
 "It's true," She replies a in huff, "They want to put in a dollar store, a gas station, one of them AFI's--"  
+
 "AFI?" I cut her off, the acronym triggering a base instinct as I recall its meaning, "Allegany Farmers Insurance?"   
+
 "Yep," She sneers, "And they ain't even going to pay us a fair price. Either we take what they give us, or they use eminent domain--"  
+
 "And they want to put in an Allegany Farmers Insurance?" I ask, pressing the issue, "How do you know?"  
 Silver responds, "It was in the paper the other week."  
+
 "And after that cocksucker ran against Abner Hart last election and couldn't say one good word about him, would you believe it," Gladys adds, seething with unbridled rage, "I even voted for the weasel-y slug, God forgive me--"  
-"Gladys\!"  
+
+"Gladys!"
+
 "Oh, fuck off," She grunts and grimaces, crossing her arms, "If God didn't want me to say bad things about that swine fucker, he shouldn't have gave me a tongue to say them with."  
+
 Their conversation continues and might even include me, but I've left my body, riven from reality and pulled back into the dark rabbit-hole. They're everywhere, the Harts. They've been here for decades upon decades, generations, spreading their roots through my city and I didn't even notice. How many times have I driven by those insurance offices on every other street corner? How many times has my life been touched by the Harts without my knowledge? How many times have I grazed this conspiracy?   
+
 At some point while I'm not paying attention, Rick Remender takes the podium. He's a young guy with the first traces of white crawling up his beard. I come back down to Earth towards the end of the prepared portion of his speech and zone back in, picking up the scattered details of a housing program for low-income families and it's recent implementation in his concluding remarks. He opens the floor to questions.  
+
 "Would you care to comment on the fire at the old Diplomat Motel now being investigated as an arson by the New Harford Police Department Fire Investigation Unit?"  
+
 "That is a question for the police department," Remender replies, "They do their job as they see fit. I have full faith in the police."  
+
 From the barrage of questions and camera flashes, a reporter from the New Harford Times trumps everyone else, "Mayor Remender, Abner Hart has already launched his campaign to run for your office next year. When will you be formally starting your own campaign?"   
+
 Rick Remender frowns, "I have decided not to run for mayor next year--"  
+
 He barely finishes before the floodgates burst. The anxious crowd unleashes a deluge of questions, with everyone talking over each other. The commotion provides an opportunity for the mayor to thank everyone for their time and slink off stage. Camera flashes and microphones follow him back into City Hall. The crowd, without a center of gravity to hold them in orbit, disperses into clusters across the pavement.   
+
 Curiouser and curiouser, I think. I slip through the thinning crowd and swing around City Hall. On the backside of the structure, a secondary entrance leads down into the building's underbelly. The entrance opens into a hallway of supply closets and locked doors. The only door that I can open leads to a stairwell rising two floors. On the first floor, I peer through the window and see a crowd of diligent reporters congregated around an orating man. I climb upward and come out on the second floor, on the balcony above the mob. Like cackling vultures, they swoop around the poor secretary and hound him with questions.  
+
 "--influenced the mayor's decision--"  
+
 "--withdrawal affect the Rolling Mills project--"  
+
 "--endorses Abner Hart--"  
+
 I leave behind their cawing and slip down a hallway with aerials maps of the city plastered all over the walls. At the end of the hallway, a door labeled *Mayor's Office* sits slightly cracked open. From inside, a conversation creeps through the crack.  
+
 "--on the phone again," a woman says.  
+
 "Jesus, already?" Remender curses, "What more does he want?"  
+
 "He's very insistent--"  
+
 "Alright, fine. Frances, cancel my meetings for the day. Reschedule them for later this week," Remender says, "I'll meet him over at my law office."  
+
 "Certainly, sir," comes the chirpy reply.  
+
 I pretend to study one of the aerial maps of New Harford's elevation contours as Remender comes barreling out of the mayor's office with his briefcase in tow, paying me no mind whatsoever. Giving him a moment's head start, I follow him down the way I came, through the back stairwell, waiting at the lip of the basement for him to leave before jogging after him.   
+
 Before I get outside, he slips away sight unseen. No matter. I've dealt with enough lawyers in this town to know where they all hang their hats. A few blocks away, back over the river and train tracks, the district courthouse towers atop Washington Street, rising above all the surrounding structures with a piercing steeple. An aisle of law offices crests the base of the hill on which it sits, like kneeling pilgrims at an altar. Strolling down the street, I read partner names from hanging signs on otherwise identical suites until I find Remender's name.   
+
 Lighting up a cigarette, I peer through the window into Remender's first floor office. An unfamiliar man sits behind a desk, typing at a computer. Behind him a row of book-filled shelves leads to a back office where the door is closed, but the light is on. I decide to wait.  
+
 Across the street from Remender's office, I find a parklet filled with gardens and benches. Amongst the shrubbery and flowers, a boulder sits with a placard bolted across its face. A path of stones provides a template for my feet so that I may approach and read its inscription,
 
 *At this location on December 25th, 1816, the first Christmas mass in New Harford was performed by Rev. James Beall. Among those the many in attendance were notables local figures Henry Hart and his son, Jeremiah. Rev. Beall read the following verse from Isaiah 45:1-4,*
@@ -3916,31 +4181,50 @@ Across the street from Remender's office, I find a parklet filled with gardens a
 *Thus says the Lord to his anointed, to Cyrus, whose right hand I have grasped, to subdue nations before him and to loose the belts of kings, to open doors before him that gates may not be closed: “I will go before you and level the exalted places, I will break in pieces the doors of bronze and cut through the bars of iron, I will give you the treasures of darkness and the hoards in secret places, that you may know that it is I, the Lord, who call you by your name."*
 
 There are more paragraphs about the sermon itself, but the mental fog cluttering my thoughts is too dense to penetrate. Pieces of the story are everywhere. This entire city, I realize, is one gigantic monument to the Harts. How was I able to live here for half of my life and not realize that?   
+
 In this new light, I consider the events of the previous day. They burned down a motel and killed a cop like it was nothing, which means three things: first, they have someone in the police department feeding them information. Second, they are cleaning up loose ends. Three, they are capable of doing exactly that. I have to hurry before whatever this is disappears back into the shadows of the city, but first I have to figure out what exactly *this* is.   
+
 I feel the sudden weight of my bag on my shoulder and find a bench to unload its contents. In my hands, I grasp the travel guide that has been leading me through these twisted yarns. I study the name of the author. Lynn Martin. A research analyst at the *Maryland Current Affairs & Policies* periodical who writes exposes on the Hart family and happens to a pull a police report on a missing girl who has been abducted by one of the Harts. An unlikely story, I think. There's more going on here than these words I hold will tell me. Nevertheless, whatever fragment of the story they contain I need to know.  
+
 Waiting for Remender to exit his office, I chew on an unlit cigarette and dive back in Lynn's article,
 
-    *The Queen City* 
+*The Queen City* 
 
-*In 1825, President James Monroe signed a bill "*to effectuate a comprehensive system of roads and canals*". One of the canals thus proposed would extend from Washington DC to New Harford and then from there up into Pittsburgh. All cargo transported on this new waterway would be free of taxation, as long as construction was completed within five years. A flurry of industry reoriented towards this new source of capital and strategically deployed to take advantage of natural waterways in Maryland.*  
-    *Days after the bill was signed into law, a legion of engineers descended on the Hotel Gunter in New Harford at the request of Henry Hart. Within the walls of that hotel, the Potomac and Ohio Company was formed with Henry Hart installed as its chief executive officer. A plan was devised to construct the canal in two parts, first from New Harford to DC along the Potomac River and once that was done, attention would shift to the construction of the north branch to Pittsburgh. The massive undertaking would be the largest transformation of cash and capital into productive faculties in Maryland's history up to that point.*  
+*In 1825, President James Monroe signed a bill "to effectuate a comprehensive system of roads and canals". One of the canals thus proposed would extend from Washington DC to New Harford and then from there up into Pittsburgh. All cargo transported on this new waterway would be free of taxation, as long as construction was completed within five years. A flurry of industry reoriented towards this new source of capital and strategically deployed to take advantage of natural waterways in Maryland.*  
+
+*Days after the bill was signed into law, a legion of engineers descended on the Hotel Gunter in New Harford at the request of Henry Hart. Within the walls of that hotel, the Potomac and Ohio Company was formed with Henry Hart installed as its chief executive officer. A plan was devised to construct the canal in two parts, first from New Harford to DC along the Potomac River and once that was done, attention would shift to the construction of the north branch to Pittsburgh. The massive undertaking would be the largest transformation of cash and capital into productive faculties in Maryland's history up to that point.*  
+
 *By 1828, with the help of a fresh batch of German and Irish immigrant labor, the first section of the canal was completed; New Harford's economy became woven into the surrounding area as trade trickled down the canal into cities like Frederick and Baltimore. It was in this time period New Harford earned its moniker of the Queen City of Maryland, as its population blossomed to become the second biggest in Maryland, next to Baltimore. Coal mined in the Appalachian Mountains flowed like an avalanche down the P\&O canal. An extraordinary amount of money changed hands and in the ledgers of every transaction, more than likely one would find the name Hart somewhere in the fine print.*   
 *However, as plans were being finalized for the north branch, the American economy was upended by the steam-powered locomotive. A new technology supplanted colonial trade routes as tracks were laid all across the country, exposing markets that couldn't be reached by water. In Maryland, the Baltimore Railroad Company became very interested in a track of land currently owned by the Potomac and Ohio Company. A series of misfortunes in the coming years would leave the Hart family exposed to the ambitions of a new generation of capitalists.*   
-*In 1832, a cholera epidemic swept through the camps of laborers working on the north branch of the P\&O Canal. According to records, 1 in 3 workers died within a six-month period. Smokestacks stained the skies for weeks on end as corpses were burned en masse to preventing the disease from spreading. Those who survived looked around and saw their circumstances plainly enough; by 1833, the workers were unionized and on strike. A pamphlet distributed around the camps entitled "*The Rights of Canallers*" specifically mentions Henry Hart and his "*desire for Earthly delectations*" as "*the sole reason a third of \[our\] friends and family lay buried in the ground.*"*  
+
+*In 1832, a cholera epidemic swept through the camps of laborers working on the north branch of the P\&O Canal. According to records, 1 in 3 workers died within a six-month period. Smokestacks stained the skies for weeks on end as corpses were burned en masse to preventing the disease from spreading. Those who survived looked around and saw their circumstances plainly enough; by 1833, the workers were unionized and on strike. A pamphlet distributed around the camps entitled "The Rights of Canallers" specifically mentions Henry Hart and his "desire for Earthly delectations" as "the sole reason a third of our friends and family lay buried in the ground."*
+
 *When Henry Hart brought in Chinese immigrants to fill the strikers' positions, riots broke out. Mobs of Irish workers formed ranks around the Chinese laborer camps and refused to let anyone in or out; at some point on August 11th, 1833, violence broke out and a fire started in one of the makeshift habitations. Three people were killed in the ensuing chaos that day. The Maryland State Militia was eventually required to put the riots down. By the end, a dozen people were dead with twice as many wounded.*   
+
 *Before he could see his great project concluded, Henry Hart died of a heart attack on May 1st, 1834\. The Potomac and Ohio Company likewise would not survive the year; when Jeremiah Hart took over, he immediately went into negotiations with the Baltimore Railroad Company and sold his entire stake in his father's company to the burgeoning railroad industry.*   
-*Much has been written about the first Jeremiah Hart; A biographer in the 1908, writing decades after his death, would call him "*one of the deftest political operators in Maryland's history*." However, at the time, he was decried by the public. Newspapers published scathing editorials, accusing him of "*selling out Western Maryland and leaving behind a grand old ditch*," referring to the P\&O canal that would never be completed. The Hart estate in Maryland became the center of so many protests over the years that he had walls built around the entire property and brought in Pinkerton security guards to walk the perimeter.*   
-*Nevertheless, in 1836, Jeremiah Hart was appointed by the electoral college to serve as a State Senator in the Maryland General Assembly. One of his first acts as State Senator was helping craft a constitutional amendment that would prevent future representatives from attaining office the way he had; Chapter 197, Section 4 of the new amendment stated "*that elections for senators shall be conducted and as soon as a new senate shall be elected hereinafter provided, and a quorum of its members shall have qualified as directed by the constitution and laws of this State.*" Jeremiah Hart effectively burned the bridge that he himself had crossed into public office.*  
+
+*Much has been written about the first Jeremiah Hart; A biographer in the 1908, writing decades after his death, would call him "one of the deftest political operators in Maryland's history." However, at the time, he was decried by the public. Newspapers published scathing editorials, accusing him of "selling out Western Maryland and leaving behind a grand old ditch," referring to the P&O canal that would never be completed. The Hart estate in Maryland became the center of so many protests over the years that he had walls built around the entire property and brought in Pinkerton security guards to walk the perimeter.*
+
+*Nevertheless, in 1836, Jeremiah Hart was appointed by the electoral college to serve as a State Senator in the Maryland General Assembly. One of his first acts as State Senator was helping craft a constitutional amendment that would prevent future representatives from attaining office the way he had; Chapter 197, Section 4 of the new amendment stated "that elections for senators shall be conducted and as soon as a new senate shall be elected hereinafter provided, and a quorum of its members shall have qualified as directed by the constitution and laws of this State." Jeremiah Hart effectively burned the bridge that he himself had crossed into public office.*  
+
 *Over the next few years, Jeremiah Hart maneuvered himself onto the proper subcommittees within the Assembly and by 1838 was the de-facto legislator in charge of drafting the tax code for the railroad industry. Western Maryland suddenly found itself awash in tax revenue. Each mile of track laid westward was another percentage point on the local balance sheet. In New Harford, the mayoral campaign of 1840 drew special attention; one of the candidates was Jeremiah's son, George Hart. In a short time, thanks to new money stuffing so many pockets, public opinion about the Harts shifted radically; The younger Hart rode a popular upswell into a landslide victory against his opponent, whose name history does not even record.*   
-*With the Hart family operating the levers of government on both the state and local level, a new era of politics dawned. A political historian writing in 1951 would facetiously coin the term "*Pax Hart*" to refer to the years in Maryland history between 1843 and 1859, when Maryland, and Western Maryland in particular, underwent an economic boom. The Baltimore Railroad Company completed their line to New Harford in 1842 and in the following years, it opened the Appalachian coal mines to the entire eastern seaboard. The population of New Harford more than tripled from 12,000 in 1840 to 40,000 in 1860\. It seemed to everyone their prosperity would never end--*
+
+*With the Hart family operating the levers of government on both the state and local level, a new era of politics dawned. A political historian writing in 1951 would facetiously coin the term "Pax Hart" to refer to the years in Maryland history between 1843 and 1859, when Maryland, and Western Maryland in particular, underwent an economic boom. The Baltimore Railroad Company completed their line to New Harford in 1842 and in the following years, it opened the Appalachian coal mines to the entire eastern seaboard. The population of New Harford more than tripled from 12,000 in 1840 to 40,000 in 1860\. It seemed to everyone their prosperity would never end--*
 
 A movement in my periphery pulls me out of the story. The cigarette dangling on my lips drops into my lap along with my jaw as I glimpse the man responsible for the distraction climbing the stoop steps into Rick Remender's law office, his crisp pressed uniform falling cleanly from his square shoulders and a peaked officer's cap tucked under his armpit. His hair is gray where it used to be reddish brown and he walks with a limp now, but other than that, he looks much the same as the day I left this wretched city.  
+
 Joseph McMullen, New Harford Police Commissioner.   
+
 "Well, fuck me sideways," I mutter, putting the article down, "I was wondering when you'd show up."  
+
 With no hope of putting myself back into Lynn's story now, I fidget anxiously. Fifteen minutes and as many cigarettes later, my old boss exits the building with Remender at his side. Talking quietly with one another, they round the curve of Greene Avenue and disappear around the corner. I briefly consider following them, but there's one thing I've learned about lawyers over the years: they always keep a paper trail.  
+
 Through the window to Remender's office, I spy the man at the desk still typing away at his computer. I glance around, searching. A strip of pavement coming from the main road serves as a makeshift driveway for the building; Atop the concrete rests a luxury model sedan and a station wagon. The sedan has a bumper sticker that reads *Vote Remender 2016\.* On the ground, I find a suitably large rock and heft into the air, testing its weight with my palm. Good enough, I think.  
+
 Winding up with both fists like a baseball pitcher, I hurl the rock at the station wagon's windshield. The glass ripples with crystalline shards at the point of impact but holds together. The headlights shoot on like an awakened animal's wide-eyed charge and its horns howl in protest. The screeching of the car alarm echoes down the street.  
+
 In the next moment, the man from inside rushes down the stoop and past my leaning spot to find the source of the commotion. He grasps the sides of his head with angry fingertips and wails like grieving lover, screaming incomprehensibly at the senselessness of the crime that has been committed. While he is distracted, I slip inside and scurry past the main desk.   
+
 I close the door behind me and take a look around at the legion of photos, certificates and diplomas decorating Remender's room. Portraits of men in powdered wigs line the walls of his inner office. On his desk sits a picture of him and a brunette woman with opposite hands resting on, presumably, their daughter's shoulders. I circle around the desk and open the drawers, finding offices supplies and case files of no interest. The main drawer contains a day planner; I flip through the pages and take note of a few interesting entries,
 
 *October 7th, 11:00 AM:            …. J. McMullen*  
@@ -3948,200 +4232,361 @@ I close the door behind me and take a look around at the legion of photos, certi
 *October 28th, 12:30 PM:          …. J. McMullen*
 
 Remender is a stickler for the details; The last entry clocks in at mere moments ago, according to the clock on the wall. In and of itself, there's nothing too terribly suspect about a mayor meeting his police commissioner, but I'm well past the point of questioning my assumptions. I need to abandon everything I think I know about this city.   
+
 Underneath the glazed mahogany desk, my foot bumps against something metallic. I crouch down and find a small safe sitting against the desk's corner, hidden from view. I reach in and scoop the tiny box into my arms, no heavier or bigger than a small child. A combination lock embedded into the vault prevents me from opening it. I suppose Remender thought that would be enough to stop someone.  
+
 As I leave the law offices of Rick Remender carrying his safe under my arm, the man still frets over the shrieking station wagon as he explains the situation to his cellphone. 
 
-\*
+---
 
 "Christ," Ogie says, "I can't believe you used to be a cop."  
+
 "Yeah, yeah, spare me the sermon," I retort, "Can you open it or not?"  
+
 Ogie spins the safe in his hands like a rotisserie, inspecting its edges with calloused fingertips, "Ain't nothing special about this far as I can tell. I wouldn't even need a thermal lance," He sets the safe back on the desk between us and shambles past me out into the mechanic's garage. He shouts, "Larry, grab me a crowbar, will you?"  
+
 "A crowbar?" I ask, "Really? I could have done that."  
+
 "But you didn't, did you?"  
+
 Several moments later, Ogie has his foot clamped tightly on the safe and the crowbar wedged into a paper-thin crevice along its front door, throwing all of his weight into torque. The metal creaks and resists until a loud pop thumps against my ears and the safe door busts open.   
+
 I crouch next to the sundered safe and peer inside. A single Polaroid photo hides face down. I slide it out just enough to grab the edge and then flip it over. Ripples of overhead light reflect across the glossy surface as I inspect its contents: Rick Remender sits behind the steering wheel of a motorboat with a young girl on his lap, his arm wrapped around her waist. Their laughing expressions are frozen in time, caught by the camera and memorialized. In the margins of the photograph, along the whitespace on the bottom, a note scrawled in permanent marker reads, "Let's talk."   
+
 The girl in the photo has blonde hair and wears a bikini top with jean shorts; She can't be older than sixteen, I think. A familiar feeling of unease creeps up my spine. A lump slides up and down my throat like a metronome.    
+
 "What is it?" Ogie asks, curiosity overcoming his professional demeanor.   
+
 Stuttering words trip over my lips, "I—I don't—"  
+
 Ogie snaps the photo from my fingertips, "Is that the mayor?"  
+
 I nod.  
+
 "Who's that with him? His daughter?"  
+
 "No," I whisper, remembering the photo on his desk, "His daughter is a brunette."  
+
 Ogie furrows his brow, "States, what the hell is this?"  
+
 I take the photo back and slip it into the inside pocket of my jacket. I explain as I press a wad of bills into Ogie's hairy knuckles, "This whole town's rotten, Ogie. And it's high time someone did something about it."
 
-\*
+---
 
 The headquarters stands on the corner of Baltimore and Mechanic, a few blocks from City Hall. I follow neon poster boards stuck in the ground down Baltimore Street, reading slogans: *Hart for Mayor*. *New Harford's Hart*. *Elect Hart*.   
 The campaign operates out of an old bar, the *Governor's Club,* a nondescript one floor building without windows. The typically low-lit ceilings have been exposed by bright cones of light cast from impromptu floodlights, revealing walls yellowed by decades of cigarette smoke. Posters plaster walls with Abner's visage, his smiling face plump and round with his pate covered by a cap of neatly trimmed hair.   
+
 Turning away from her conversation, a lady with a clipboard greets me with a warm smile, "What can I do for you?"  
+
 "Is this the Hart campaign headquarters?"  
+
 She grins and looks at one of the posters, "Seems that way."  
+
 "I want to volunteer," I state simply.  
-"Of course\!" She exclaims, "We can always use more canvassers\! Follow me right this way\!"  
+
+"Of course!" She exclaims, "We can always use more canvassers! Follow me right this way!"
+
 She leads me behind the bar, now doubling as a call center with a row of people at telephones diligently plumbing the depths of New Harford citizenry for campaign contributions. An office in the back has been converted into a campaign war room. A map of New Harford on its wall is tacked with a million little pins, detailing different demographics with color-coded pinheads. Mounds of files and folders grow like wildflowers across the linoleum. Behind the desk, a woman sits in a swivel chair, legs crossed. She peers up from the newspaper as we enter. I try to pretend I don't recognize her, but I feel the skin on my face tighten as I realize who she is.   
-"Ah," The clipboard woman hums with warmth, "Mrs. Vander-Strauss\! What are you doing here?"  
+
+"Ah," The clipboard woman hums with warmth, "Mrs. Vander-Strauss! What are you doing here?"
+
 Thick, golden locks curl down her shoulders and spill across her crimson blazer and ruffled blouse. She licks her polished red lips and replies, "Hello Judy. I’m just waiting for Abner and Chris. They should be here soon."  
 Not good, I think.  
-"Very good\!" Clipboard Judy responds, "I just needed to grab a volunteer form and then I'll be out of your way."  
+
+"Very good!" Clipboard Judy responds, "I just needed to grab a volunteer form and then I'll be out of your way."  
+
 Henrietta nods ambivalently, returning to the folded paper in her lap. Without giving me a second thought, she scribbles a word into a checkered crossword puzzle. Judy grabs a form from a filing cabinet and then escorts me back into the bar.  
+
 "Does Abner come here often?" I ask as she leads me to a dining booth.  
+
 "Oh, don't worry," Judy says, placing the form and a pen in front of me, “If you volunteer here, you'll be sure to meet him eventually."  
+
 I grimace, "Let me ask something. Why do you support Abner?"  
+
 "He's a great man," The reply is automatic, "HBC is one of the largest employers in the area. We'd be lost without him. Half of the city works for HBC in some way, shape or form. He's done so much for us already that I know as mayor he could do great things."  
+
 I absorb her propaganda with a smile as I jot a fake name on the line, "What do you know about his family?"  
-"Oh\!" She exclaims happily, "They're just the best. That was Mrs. Vander-Strauss in the office, Elroy Hart's wife. You know Elroy, right?"  
+
+"Oh!" She exclaims happily, "They're just the best. That was Mrs. Vander-Strauss in the office, Elroy Hart's wife. You know Elroy, right?"  
+
 "Who doesn't?"  
+
 "They met back in the nineties, when the Vander Chocolate company was in talks with HBC to use our milk in their chocolate. She's been instrumental in bringing even more jobs into our area."  
+
 "Sounds wonderful," I reply, handing her back the form.  
+
 She glances over my information, "Perfect. When can you start, Mr. Spade?"  
+
 "Would tomorrow be fine?"  
-"Yes, great\!" Her bubbly cheer overflows and puddles at my feet, "I will have Ralph Stead show you around and introduce you to everyone, then we'll get you started on the phones. Sounds good?"  
-A forced reply, dripping with insincerity, "Sounds great\!"  
-"Excellent. Just ask for Ralph, okay? See you then\!"  
+
+"Yes, great!" Her bubbly cheer overflows and puddles at my feet, "I will have Ralph Stead show you around and introduce you to everyone, then we'll get you started on the phones. Sounds good?"  
+
+A forced reply, dripping with insincerity, "Sounds great!"  
+
+"Excellent. Just ask for Ralph, okay? See you then!"  
+
 Outside, I lean on a telephone pole around the block and smoke cigarettes in rapid succession. Oceans of tar slosh around in my lungs. I hack a fistful of black gunk into my hand and spit a wad of bile onto the pavement.   
+
 Ten minutes later, I see them. Abner and Christopher.   
+
 Abner gyrates wildly with his hands, gesturing like an orchestral conductor, whereas Christopher paces with hands in his pockets, hanging intently on Abner's every word. Abner looks like a water-logged version of Christopher, inflated and stretched beyond his normal proportions, as if he were a figure sketched on a balloon before being blown up.   
+
 Abner disappears inside, but Christopher hangs outside for a moment, typing into his phone. Against my better judgment, I stroll by and steal a glance at his screen. He writes a few short sentences into an email template and with a click, sends it through the internet to wherever it is going.  
+
 I slip around the corner unnoticed with a new idea percolating through my brain.   
     
-\*  
-    
+---
+
 The internet is vast. It doesn't take me long to find her.  
+
 She lives on the second floor of the JFK Apartment Building in Frederick, Maryland. The door is guarded by a keypad. I stand outside and lean on Lilly's van as I smoke a cigarette, until I see an older lady carrying two large grocery bags towards the building.   
+
 Perfect, I think, flicking the burning butt to the ground.  
+
 "Ma'am," I say, rushing over to the encumbered woman, "Let me help you with those."  
+
 "Oh, why, thank you, young man," She gushes, handing over the brown paper bags, "I live just over here, on the fifth floor. It's awful enough on my back walking up and down those stops without groceries, don't you know."  
 I smile, "Of course."  
+
 "There's not enough young people in the world today like yourself," She says as she taps the pass-code into the keypad and the air from inside escapes in a hissing rush, "Honest, I mean. Everyone's always up to something, you know?"  
+
 "I'm not so young anymore," I reply, walking through the building entrance into the dim light of the apartment lobby.  
+
 "Compared to me, you're a spring chicken," She winks at me, "You've still got a few good years left, trust me. Soon enough you'll be old and useless like me."  
+
 "I should be so lucky," I say, "You don't look a day over twenty."  
+
 She laughs, "Oh, I like this one."  
+
 We creep up the stairwell. I match pace with the woman's hobbled steps. She asks me, "So what do you do, young man?"  
+
 "I'm-uh," I briefly consider lying, an instinct as automatic as breathing, "A private investigator."  
 She eyes me curiously, "There's something you don't hear every day. What do you investigate?"  
-I sigh and respond, "Well, to be honest, the last eight years, it's been one infidelity after another. Spouses asking me to spy on other spouses. But, now..."  
-"Now what?"  
-"Now," I say, rounding the final length of stair, "I have a case bigger than anything I've ever had and..."  
-"Yes?" The woman asks, stopping to look at me. Her crooked back makes her peer up at me from an angle.  
-"Lives are at stake," I tell her simply, leaving it at that.  
-She worries over my words, "Have you gone to the police?"  
-"I have," I explain, remembering McMullen limping down the street with Remender, "But sometimes you have to do things yourself or else they won't get done."  
-She hums approvingly, "That's the God's honest truth."  
-I help the lady into her apartment, and she thanks me. After the door is shut, I go to work. Down the stairs three floors, I find apartment 25\. The door is locked, but I came prepared. I jam an icepick into the lock and let myself in.
 
-\*
+I sigh and respond, "Well, to be honest, the last eight years, it's been one infidelity after another. Spouses asking me to spy on other spouses. But, now..."  
+
+"Now what?"  
+
+"Now," I say, rounding the final length of stair, "I have a case bigger than anything I've ever had and..."  
+
+"Yes?" The woman asks, stopping to look at me. Her crooked back makes her peer up at me from an angle.  
+
+"Lives are at stake," I tell her simply, leaving it at that.  
+
+She worries over my words, "Have you gone to the police?"  
+
+"I have," I explain, remembering McMullen limping down the street with Remender, "But sometimes you have to do things yourself or else they won't get done."  
+
+She hums approvingly, "That's the God's honest truth."  
+
+I help the lady into her apartment, and she thanks me. After the door is shut, I go to work. Down the stairs three floors, I find apartment 25. The door is locked, but I came prepared. I jam an icepick into the lock and let myself in.
+
+---
 
 A few hours later, the door opens. The lights come on and a man walks inside, absentmindedly tossing his keys into a bowl on a stand next to the door and throwing his jacket across the couch. He walks right by without noticing me.	  
+
 "That's far enough," I say.  
+
 The man whips around and freezes in place when he sees my gun pointed at his stomach.  
+
 "Who are you?" He asks, offering me the flat of his palms as he backs towards the wall, "What are you doing here?"  
+
 "Why don't you come have a seat?" I order, waving my gun at the recliner across from me. He doesn't move. I add, "That wasn't a request." After a moment's consideration, he hesitantly obeys. I ask, "Where's Lynn?"  
+
 He gapes and stutters through a response, "Listen, just take whatever you want. Leave her out of this."  
+
 I snort with amusement, "I understand how this looks, buddy, but you've got the wrong idea."  
+
 "George--" Another voice interrupts. A bag of fruit spills across the floor, lopsided pears tumbling around the next entrant's feet. Lynn Martin asks, "What's going on?"  
+
 "Lynn, get out--" The man starts.  
+
 "Lynn," I cut him off, "So nice to meet you. Why don't you join us? We're having a party."  
+
 Unmoved, she stares at me. An invisible calculus shunts thought through her head. Finally, she says, "I'm surprised it took this long," Her voice is monotone, strangely undisturbed by my presence, "I almost thought this day would never come. I guess I shouldn't be surprised, though. Getting me fired wasn't enough for you people."  
+
 "Who do you think I am?" I ask.  
+
 "Who else?" She says with perfect nonchalance, sitting on the armrest of her husband's chair, "One of the Hart lackeys."  
+
 I laugh, "You couldn't be further from the truth."  
+
 She studies me with hard eyes, "Who are you then?"  
+
 I stand up and holster my gun in my belt. From my bag, I retrieve a stack of paper. I set the stack down on the kitchenette counter. The front page reads *Empire Lost*. I ask, tapping the stack with a sturdy index finger, "Why did you write this?"  
+
 Lynn wanders over to the counter and studies the papers with a cocked head. Her eyes go wide and then narrow into suspicious slits. She thumbs through the pages, her lips tracing a faint smile, "I thought I was going to change the world with this. Did you read it?"  
+
 "Most of it."  
+
 "I think you're the only one," She replies with melancholy, "All that work for nothing."  
-    "It wasn't for nothing if you can tell me one thing," I ask the one question begging for an answer, "Who are the Harts?"  
+
+"It wasn't for nothing if you can tell me one thing," I ask the one question begging for an answer, "Who are the Harts?"  
+
 More confusion muddies her expression. She gulps and thinks on her response for a moment before asking, "What are you asking exactly?"  
+
 "I know you pulled the Rachel Walters police report."  
+
 "I-yes, I did."  
+
 "Why?"  
+
 Biting her lips, she replies, "How much do you know?"  
+
 "I know there's a trail of missing girls that leads right to the Hart family."  
+
 "You know about Diana, then," She says with a hint of sadness. Her husband approaches from behind and places a hand on her shoulder. She grimaces but doesn't pull away.  
+
 "I do."  
+
 "Do you know what they did with her?"  
+
 I nod.  
+
 "There was another, years before that. Same story. Mary-Jane Witmer. Another student at Hart State College. They found her in a dumpster."  
+
 "I didn't know about that one."  
+
 She replies, "There's probably more, but that's all I could find. All of them blonde-haired and blue-eyed."  
+
 "Why? What's the significance of that?"  
+
 "I don't know, but Rachel fit the description. That's why I pulled her police report. I take it you know Brandon Hart was a teacher at her school?"  
+
 "I do," I reply, "I've met him on several occasions."  
+
 Her lips press into a solid line and turn white.   
+
 "Why didn't you write about them in your article?" I ask.   
+
 "And do what? Accuse public figures of a crime without evidence?" She sighs, "No editor in their right mind would have let me print that."  
+
 "I see," I reply, "I need to find Rachel. Do you understand?"  
+
 She nods.  
+
 "Do you have any idea where she might be?"  
+
 She shakes her head, "I wish I knew."  
+
 I hand her the photograph from Remender's safe, "What do you make of this?"  
+
 Her eyes widen, "Where did you get this?"  
+
 "Don't worry about it," I say, "The important thing is I have it. And now you do. Tell me, what do you think it is?"  
+
 "If I had to guess, blackmail," She sighs, waving the photo, "Remender just withdrew from the New Harford mayoral race. This is probably why."  
+
 I pause, wondering if this plan will even work, "I have request."  
+
 She laughs, "Oh, this should be a good."  
+
 "Look, I'm sorry I broke in, but I can't take any chances," I explain, "I need help and you are one of the only people I can trust."  
+
 She furrows her brow but says nothing.  
+
 "Do you know anyone who's good with computers?"  
+
 "I might," She replies, "Why?"  
+
 I continue, "Let's say I had access to Hart's campaign servers. How would a person go about reading everyone's emails?"  
+
 She stares at me with licorice pupils brimmed in milky white, "That's very illegal."  
+
 "Sure," I say, "So how would you do it?"  
+
 She bites her lip and looks around her apartment, "Who are you, exactly? What's your name?"  
+
 "No names," I reply, "It's easier that way."  
+
 "You know mine."  
+
 My eyebrows jump and I grin.  
+
 "Uh huh," She replies, "You're not making it easy to trust you."  
+
 "I'm not asking you to trust me," I explain, "I'm asking you to help me."  
+
 A resigned sigh, "Fine. George, can you go get the address book?"  
+
 The man glances back and forth between me and Lynn. Finally, he throws his arms up in exasperation, "What the fuck is going on here?"  
+
 "I'll explain later," She insists, "Just go get the goddamn book."  
+
 With a mixture of worry and confusion painting his face, George disappears down the hallway, leaving me and Lynn to stand in silence, tension boiling between us.   
+
 "What are you going to do?" She finally asks.  
+
 "Whatever I need to," I explain, "I'm going to find Rachel Walters, even if I have to break every law on the books to do it."  
+
 "And when you find her," She says, skipping the criminal implications of my statement, "What happens to the Harts?"  
+
 Her question throws me through a loop; with everything happening so fast, I haven't given any thought to what happens after I find Rachel, dead or alive. Suddenly, I am aware of the gun in my belt. Involuntarily, I graze the grip with my fingertips. I say, "I'll worry about that after."  
+
 "You should worry about that now," She states simply.  
+
 "What are you suggesting?"	  
+
 "I need evidence. Give me what I need," She explains, "And I will bring them down."  
+
 "Why do you care so much?" I ask.  
+
 Her lip snarl in response, "Do you know what my maiden name is?"  
+
 I shake my head.  
+
 "Ah, something you don't know," She frowns, "My birth name is Lynn Hofstetler."
 
-\*  
+---
     
 "It's a worm," Bethany explains as she slides the USB thumb drive across the diner booth table with a tattooed hand, "It will hijack their domain, pull a list of everyone's IPs and replicate its codebase on each machine--"  
+
 "I don't need to understand how it works," I cut her off, "I just need to know what to do with it."  
 Saddened at being unable to share her enthusiasm for minutia, Bethany frowns. The chains on her ears that loop around her face and connect to her nose rings sway with the motion of words as she talks, "Whatever you say, mister.  You need to find one of the computers on their network and plug it in. Open the file explorer and execute the program that's on there. It will run in the background."  
+
 "That's it?" I pluck the tiny device from the table and appraise it like a gold carat watch, "Do I need to leave it plugged in or anything?"   
+
 She cocks her head and squints through heavy eyeshadow, "Do you even understand how computers work?"  
-    "It's a miracle I can even dress myself," I retort, "So what happens after I have it up and running?"  
+
+"It's a miracle I can even dress myself," I retort, "So what happens after I have it up and running?"  
+
 "Then you come see me again and we'll take a peek," Her black lipsticks dissolves her smile into a void, a scar of emptiness slashed across her face. 
 
-\*
+---
 
 Lilly's van pulls into the shopping plaza. The engine putters to halt. I crawl into the backseat to go to sleep. Hours seem to go by as I toss and turn, but my wristwatch assures me only ten minutes have elapsed. With so much energy kneading my muscles, I sit up and look around at the neon signs starting to shut off along the sidewalks. One lone sign remains glowing in the night.   
+
 I buy a fifth of vodka from the liquor store and chug until vertigo sweeps me onto my back. Across closed eyelids, I see phantoms of lives past and present, all muddled into one. A girl I couldn't save no matter how hard I tried. A city so corrupt it's spilling into the corners, puddling into pools of scum.   
+
 And a girl. My daughter. My baby girl.   
-Every night, every dream, I think of you, Jules. My life ended when yours did. I have nothing left. Nothing but Rachel. Please let me find her. Please, Jules. I won't be able to live myself if she's dead. She's all I have.   
+
+Every night, every dream, I think of you, Jules. My life ended when yours did. I have nothing left. Nothing but Rachel Please let me find her. Please, Jules. I won't be able to live myself if she's dead. She's all I have.   
 The weight of a gun pulls me down into the depths of sleep.
 
-**TUESDAY, OCTOBER 29th**  
+TUESDAY, OCTOBER 29th
+---------------------
 
 I fiddle with the thumb-drive in my pocket as I wait for Ralph in the sunken cushions of a vinyl booth. A glass mosaic lamp hangs overhead casting jeweled rays of multicolored light. The hour hand of the clock on the wall edges barely past 8, but already the campaign headquarters is buzzing with activity. Chirpy voices bleat into telephone receivers in between sips of coffee. Three people in various states of distress fret over a map of New Harford, moving and swapping pins as they compare the distribution to a printout.   
+
 "Mr. Spade, I presume?" A ragged voice rasps. The voice belongs to a heavyset man bulging against his button up shirt, a drooping stomach spilling over his beltline, "We need to find you a phone."  
+
 He leads me back into the office Judy showed me yesterday. On the desk where I saw Henrietta Vander-Strauss doing her crossword, my eyes are instantly drawn to the screen saver ping-ponging across the computer monitor. With scrying eyes, I follow the cords coming out of a monitor to their source: a computer tower sitting between a modem and printer on a countertop.  
+
 Ralph curses and bends over into a series of cabinet doors, shuffling through their contents in search of a telephone. With his head buried underneath the counter, I saddle up to the computer tower and plug the thumb-drive into one of the outlets on its backside. The mouse awakens the screen. I hurriedly click onto the idled account, but a password prompt prevents me from getting onto the desktop.   
+
 "Ah," Ralph exclaims, struggling to his feet with an old rotary phone in his hands as I retreat back into place, "This will have to do until we can you get a newer one. Come on, let's get you set up."  
+
 He starts back into the bar. Thoughts race through my head as the opportunity slips through my fingers, "Say, I just remembered, my electric bill is due today," The lie assembles itself from a random clutch of half-formed ideas, "Would it be alright if I used your computer to pay it real quick?"  
+
 He shrugs, "Don't see why not. Hold on, let me log you on."  
+
 His pudgy fingers push on the keyboard like fat sausages. A bell chimes from a speaker somewhere and he offers me the mouse. While he distracts himself with the rotary phone, I load up Bethany's program. An electric poison spreads invisible through its wires.    
+
 As I follow Ralph back to the bar, I slip into a hallway adorned with bathrooms on either side. The hallway leads to an exit that I push open. I disappear back into the city.   
     
-\*
+---
+
+.. TODO: FORMAT
 
 After a quick phone call, I pry my cellphone battery from its place and shove it back into my pocket. I meet my conspiracy of accomplices at the diner on Pagoda.   
 "I pulled a little over three thousand emails from their server database," Bethany explains as she navigates a plate of nachos piled high with meat and cheese,  "They've had this domain for a few years, it seems," She shovels foods down her throat with all the grace of backhoe and continues with a full mouth, "They must have bought it after the last mayoral last election."    
