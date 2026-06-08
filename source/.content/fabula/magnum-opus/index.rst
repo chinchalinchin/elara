@@ -14,25 +14,25 @@
 .. ## Chronological Order
 ..
 .. - exegesis/000: Sibylline Prophecy
-.. - archive/oubliette-b/000: The Lost Dialogue of Critias
+.. - reliquaries/oubliette-b/000: The Lost Dialogue of Critias
 .. - exegesis/001: Gospel of Matthew
-.. - archive/oubliette-d/000: Journal of Captain Ryckert van Rensselaer
-.. - archive/oubliette-b/002: Mysterium Hyperboreum: Sive, De Spiritu Mundi in Materia Spitsbergensi Captivo
-.. - archive/oubliette-c/000: Illustrations of Masonry
-.. - archive/oubliette-d/002: The Correspondences of Stephen van Rensselaer
-.. - archive/oubliette-d/003: Notes from Joseph Henry's Lectures
-.. - archive/oubliette-c/002: Post Office Field Reports
-.. - archive/oubliette-c/003: The Coriolis File
-.. - archive/oubliette-c/004: Falkland Islands Dispatch
-.. - archive/oubliette-d/005: The Correspondences of Killaen Maunsell van Rensselaer
-.. - archive/oubliette-c/005: The Euphemia Experiments
-.. - archive/oubliette-f/discovery/000: Mesmeria Van Rensselaer Interrogation
-.. - archive/oubliette-f/discovery/001: Mesmeria van Rensselaer's Harddrive
-.. - archive/oubliette-a/000: Paradise Revealed
+.. - reliquaries/oubliette-d/000: Journal of Captain Ryckert van Rensselaer
+.. - reliquaries/oubliette-b/002: Mysterium Hyperboreum: Sive, De Spiritu Mundi in Materia Spitsbergensi Captivo
+.. - reliquaries/oubliette-c/000: Illustrations of Masonry
+.. - reliquaries/oubliette-d/002: The Correspondences of Stephen van Rensselaer
+.. - reliquaries/oubliette-d/003: Notes from Joseph Henry's Lectures
+.. - reliquaries/oubliette-c/002: Post Office Field Reports
+.. - reliquaries/oubliette-c/003: The Coriolis File
+.. - reliquaries/oubliette-c/004: Falkland Islands Dispatch
+.. - reliquaries/oubliette-d/005: The Correspondences of Killaen Maunsell van Rensselaer
+.. - reliquaries/oubliette-c/005: The Euphemia Experiments
+.. - reliquaries/oubliette-f/discovery/000: Mesmeria Van Rensselaer Interrogation
+.. - reliquaries/oubliette-f/discovery/001: Mesmeria van Rensselaer's Harddrive
+.. - reliquaries/oubliette-a/000: Paradise Revealed
 .. - index: Gruta do Carimbado, 2152
-.. - archive/index: Ouro Preto, 2153
-.. - archive/oubliette-a/index: Gruta do Carimbado, 2155
-.. - archive/oubliette-e/001: The Lament of the Leviathan
+.. - reliquaries/index: Ouro Preto, 2153
+.. - reliquaries/oubliette-a/index: Gruta do Carimbado, 2155
+.. - reliquaries/oubliette-e/001: The Lament of the Leviathan
 ..
 .. ------------------------------------------------------------------------------------------------------------------
 ..
@@ -169,6 +169,6 @@ The world has been taken from us. So we must take it back.
    :maxdepth: 1
    :caption: Contents:
 
-   archives/index
+   reliquaries/index
    exegesis/index
    appendices/index

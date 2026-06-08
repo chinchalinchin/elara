@@ -1,10 +1,10 @@
 .. TITLE: Magnum Opus
-.. SECTION: Archives
+.. SECTION: Reliquaries
 
-.. _archives:
+.. _Reliquaries:
 
-Archives
-========
+Reliquaries
+===========
 
 The tunnels that suspend the Esconderijo in the underground core of the Serra da Mantiqueira are a labyrinth of intersecting coils. Once you leave the safety of the Authority's domain and step into the smooth, unadorned passages of the Galerias, the only bulwark against losing your way is memory, the pedantic accounting of every meter and angle, projecting every turn onto the course of maps, hoping nothing has collapsed or shifted since they were written a hundred years ago. Tunnels split like roots that endlessly probe the depths, twisting into knots and growing in chaotic patterns, grafted into the natural caverns, where meandering passages, hewn by the unaccountable forces of nature, meet the intentional straight edges of human design. The further one moves from the Esconderijo, where the geometric surfaces bear the cuts and slices of long dead engineers, the more one relies on the improbable coincidences of geological events, even further removed from the present and more inscrutable in their ends.
 
