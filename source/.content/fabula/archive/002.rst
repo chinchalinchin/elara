@@ -1261,7 +1261,7 @@ He places the bet and meets me back in the stands. He tries to tell me his name,
 
 I leave a thousand dollars poorer, but it doesn't bother me much; Sometimes you simply have to give the gods their due. Now with them distracted and their greed sated, I might be able to get some real work done.
 
-THURSDAY, OCTOBER 24th** 
+THURSDAY, OCTOBER 24th
 ----------------------
 
 The morning finds me awake in my motel room and half-sober, surrounded by coffee cups filled with cigarette ash and vodka. My notebook sits on the bed, flipped to a random page. Three days, I've been back. Three days and I know almost nothing about Rachel Walters' disappearance. Some shapes on a video. Conflicting accounts of a teenage romance. Nothing at all that tells me where Rachel might be, even if that happens to be underground.  
@@ -1545,41 +1545,41 @@ Anderson disappears back into the offices, leaving me to idle in furious anxiety
 I force myself to smile in turn as I grab the envelope, "Thank you very much. Do you have a public restroom?"  
 Without waiting for an answer, I flee down an adjacent hallway and push into the men's restroom. I flip the locks to a stall and sit down on the toilet, emptying the contents of the envelope onto my lap. The single sheet of paper that slips from inside is still warm from the printer. I pull it out and examine it,  
 
-*Incident Report \#3397806*  
-*Date: 9/30/19*  
-*Time: 10:05 pm*  
-*Incident Type: Missing Person*  
-*Reporting Officer:*   
-    *Name: Peirce Boyd*  
-    *ID: 3J9570*  
-*Approving Officer:*   
-    *Name: Joseph McMullen*  
-    *ID: 56M0K6*  
-    
-*Persons of Interest:*  
-    *Last Name: 	First Name: 	Sex:	Address: 		Phone:*  
-    *Walters	Lillith		F	redacted reda	cted	redacted*  
-    *Walters	Rachel		F	redacted redacted	redacted*  
-    
-*Summary of Events:*  
-    *At 5:17 pm, I was radioed by central dispatch informing me of a*  
-    *9-11 call from the residence of redacted redacted. The occupant,*  
-    *Lilly Walters, had reported her teenage daughter, Rachel Walters,*   
-    *missing. I arrived at redacted redacted at approximately 5:30 pm*   
-    *and proceeded to interview Mrs. Walters. I learned her daughter*   
-    *had gone missing during school that day. Mrs. Walters informed me*   
-    *Rachel is enrolled at Calvert Catholic High School.*
-
-    *Mrs. Walters said Rachel's phone goes to voice mail. A search of*   
-    *her daughter's room yielded no relevant evidence.  A more thorough*   
-    *investigation is required.* 
-
-*Actions Taken:*  
-    *Case will be filed under Statute 10.254.A and an investigation*   
-    *opened per the mandate. As the reporting officer, I will take the*   
-    *lead on the investigation. Based on my knowledge, training*   
-    *and skill, I determine the best course of action is to interview persons*  
-    *of interest at the aforementioned high school.*
+| *Incident Report #3397806*  
+| *Date: 9/30/19*  
+| *Time: 10:05 pm*  
+| *Incident Type: Missing Person*  
+| *Reporting Officer:*   
+|   *Name: Peirce Boyd*  
+|   *ID: 3J9570*
+| *Approving Officer:*   
+|   *Name: Joseph McMullen*  
+|   *ID: 56M0K6*  
+|
+| *Persons of Interest:*  
+|   *Last Name: 	First Name: 	Sex:	Address: 		Phone:*  
+|   *Walters	   Lillith		F	redacted reda	cted	redacted*  
+|   *Walters	   Rachel		F	redacted redacted	redacted*  
+|    
+| *Summary of Events:*  
+|   *At 5:17 pm, I was radioed by central dispatch informing me of a*  
+|   *9-11 call from the residence of redacted redacted. The occupant,*  
+|   *Lilly Walters, had reported her teenage daughter, Rachel Walters,*   
+|   *missing. I arrived at redacted redacted at approximately 5:30 pm*   
+|   *and proceeded to interview Mrs. Walters. I learned her daughter*   
+|   *had gone missing during school that day. Mrs. Walters informed me*   
+|   *Rachel is enrolled at Calvert Catholic High School.*
+|
+|   *Mrs. Walters said Rachel's phone goes to voice mail. A search of*   
+|   *her daughter's room yielded no relevant evidence.  A more thorough*   
+|   *investigation is required.* 
+|
+| *Actions Taken:*  
+|   *Case will be filed under Statute 10.254.A and an investigation*   
+|   *opened per the mandate. As the reporting officer, I will take the*   
+|   *lead on the investigation. Based on my knowledge, training*   
+|   *and skill, I determine the best course of action is to interview persons*  
+|   *of interest at the aforementioned high school.*
 
 Worthless. Nothing new here. My hands are already shaking; my body knows what needs to be done before I'm even aware the thought has entered my head. I know there's more information here, hidden behind magnetic card locks and passwords. In my wallet, I find my old swipe card. I turn it over in my palms, wondering if it still works. The gears of government grind slowly, after all.  
 
@@ -1623,113 +1623,71 @@ I empty my jacket pockets onto the counter and sort through a crushed pack of ci
 
 I slide a pile of coins towards her and she hands me a stack of papers. I disappear into the bookshelves and find a wooden desk secluded in the *Fantasy* section. A hand-drawn poster of a pointy-capped wizard watches me as I sort through the stack containing the hard-copies of all the files I stole from the police department servers. I find the main report again, but also all of the supporting documents. The first one reads, 
 
-*Addendum Form 56A \#678491*  
-*Date: 10/3/19*  
-*Reference Codes: \#I-3397806*	  
-*Reporting Officer:*   
-    *Name: Peirce Boyd*  
-    *ID: 3J9570*  
-*Approving Officer:*   
-    *Name: Joseph McMullen*  
-    *ID: 56M0K6*
-
-*Summary:*  
-    *Rachel Walter's cell phone was found in her locker*   
-    *at Calvert Catholic High School. Text message*   
-    *records show conversations between the subject*   
-    *and Lydia Steinbeck, Cynthia Roswell, Stevie Rejnik,*   
-    *Billy Lumbar and an unnamed contact. I have*   
-    *submitted a motion to Judge Finan of the Second*   
-    *Allegany County District Court to run a trace on the*   
-    *number of the unnamed contact.  Attached is the*   
-    *contents of the submitted motion.*
+| *Addendum Form 56A #678491*  
+| *Date: 10/3/19*  
+| *Reference Codes: #I-3397806*	  
+| *Reporting Officer:*   
+|   *Name: Peirce Boyd*  
+|   *ID: 3J9570*  
+| *Approving Officer:*   
+|   *Name: Joseph McMullen*  
+|   *ID: 56M0K6*
+|
+| *Summary:*  
+|   *Rachel Walter's cell phone was found in her locker at Calvert Catholic High School. Text message records show conversations between the subject and Lydia Steinbeck, Cynthia Roswell, Stevie Rejnik, Billy Lumbar and an unnamed contact. I have submitted a motion to Judge Finan of the Second Allegany County District Court to run a trace on the number of the unnamed contact.  Attached is the contents of the submitted motion.*
 
 An unnamed contact? I lick my lips, pondering. Who is this person? Do I know them? Could this person be related to the mysterious kiss? Could this person be the shape on the hospital security video? What were they talking about, Rachel and this unknown? So many questions; I can only hope their answers are somewhere in this stack. I keep combing through the trove of documents, hoping for some further clue,
 
-*Addendum Form 56A \#678505*  
-*Date: 10/5/19*  
-*Reference Codes: \#I-3397806, \#A-678491*	  
-*Reporting Officer:*   
-    *Name: Peirce Boyd*  
-    *ID: 3J9570*  
-*Approving Officer:*   
-    *Name: Joseph McMullen*  
-    ID: 56M0K6  
-    
-*Summary*  
-    *Today at 3:15pm, Mrs. Lilly Walters arrived in the main*  
-    *lobby of the New Harford Police Department. She requested*  
-    *to meet with me. When the officer on duty informed her*  
-    *I was not in the office; she became enraged and berated*  
-    *him for several minutes. Afterwards, she filed a formal*   
-    *complaint. Attached are the contents of the formal complaint.* 
+| *Addendum Form 56A #678505*
+| *Date: 10/5/19*  
+| *Reference Codes: #I-3397806, #A-678491*	  
+| *Reporting Officer:*   
+|   *Name: Peirce Boyd*  
+|   *ID: 3J9570*  
+| *Approving Officer:*   
+|   *Name: Joseph McMullen*  
+|   *ID: 56M0K6*  
+|
+| *Summary*  
+|   *Today at 3:15pm, Mrs. Lilly Walters arrived in the main lobby of the New Harford Police Department. She requested to meet with me. When the officer on duty informed her I was not in the office; she became enraged and berated him for several minutes. Afterwards, she filed a formal complaint. Attached are the contents of the formal complaint.* 
 
 I flip to the next paper and read through the supplement scanned on it. Lilly's cursive is remarkably similar to Rachel's, 
 
-*The efforts of the New Harford Police Department in locating my*  
-*daughter have been utterly atrocious. No one returns my calls,*  
-*no one can tell me what's going. I have to come and file reports*  
-*to get any sort of update from anyone. I pay taxes like everyone*   
-*else and I expect my emergency to be taken seriously--*  
+| *The efforts of the New Harford Police Department in locating my daughter have been utterly atrocious. No one returns my calls, no one can tell me what's going. I have to come and file reports to get any sort of update from anyone. I pay taxes like everyone else and I expect my emergency to be taken seriously--*  
     
 A sad smile crosses my face. I wish Lilly had come to me sooner. There's so much I could have done, if I had just been here sooner. Rachel's cell phone, the security video, everything would be easier to parse if it weren't already spoiling with old age, redacted or otherwise impenetrable through the fog of three weeks. I sigh and continue. The next form reads, 
 
-*Addendum Form 56A #678563*  
-*Date: 10/9/19*  
-*Reference Codes: #I-3397806, #A-678491, #A-678505,*  
-            *#E-1043920*  
-*Reporting Officer:*   
-    *Name: Peirce Boyd*  
-    *ID: 3J9570*  
-*Approving Officer:*   
-    *Name: Joseph McMullen*  
-    *ID: 56M0K6*
-
-*Summary*  
-    *Per #678491, trace on unnamed contact in Rachel*  
-    *Walter's phone was approved. Results reveal a track*   
-    *phone purchased at Mountaineer Mart located on*   
-    *12401 Willowbrook Rd at 4:23 pm, August 15th of*   
-    *this year. A GPS signal was used to recover the phone*   
-    *from a dumpster behind Burger King on Pagoda Ave in*   
-    *New Harford. The phone's SIM card was destroyed and*   
-    *ruled un-recoverable by the tech team. Attached is*  
-    *the summary of the tech team's report.* 
+| *Addendum Form 56A #678563*  
+| *Date: 10/9/19*  
+| *Reference Codes: #I-3397806, #A-678491, #A-678505,*  
+|           *#E-1043920*  
+| *Reporting Officer:*   
+|   *Name: Peirce Boyd*  
+|   *ID: 3J9570*  
+| *Approving Officer:*   
+|   *Name: Joseph McMullen*  
+|   *ID: 56M0K6*
+|
+| *Summary*  
+|   *Per #678491, trace on unnamed contact in Rachel Walter's phone was approved. Results reveal a track phone purchased at Mountaineer Mart located on 12401 Willowbrook Rd at 4:23 pm, August 15th of this year. A GPS signal was used to recover the phone from a dumpster behind Burger King on Pagoda Ave in New Harford. The phone's SIM card was destroyed and ruled un-recoverable by the tech team. Attached is the summary of the tech team's report.* 
 
 Ominous, I think. No one innocent destroys a cell phone and throws it in a dumpster. Tiny pinpricks course down my skin in waves. There is no doubt in my mind this person is at least linked to Rachel's kidnapper, if not the kidnapper themselves. Did you come to the same conclusion, Boyd? I need to know what they talked about.   
 The tech team's report is on the next page,
 
-*Examination of the phone contained in evidence container*  
-*#1043920 revealed a SIM card damaged beyond repair.*  
-*The body of the card was lacerated and pierced in several*  
-*places. A caustic agent appears to have been used to*   
-*dissolve the circuitry inside of the card. Despite the state*  
-*of the SIM card, the phone contained an internal DRAM*  
-*storage unit connected directly to the processing unit*   
-*on the phone's motherboard which was able to be*   
-*accessed.*
-
-*The tech team was able to dump the DRAM's last state*  
-*onto a department hard-drive and load it up into an*  
-*emulated device on the department's servers. From this,*  
-*the team has been able to assemble a map constructed*   
-*from the GPS history of the phone. This map displays the*   
-*location of the phone in the 24 hours prior to being*   
-*destroyed.* 
-
-*No other relevant information can be taken from the*   
-*phone using department equipment. Recommend*   
-*submission of container \#1043920 to the Federal Bureau*  
-*of Investigation Quantico Office down state for further*   
-*analysis.* 
+| *Examination of the phone contained in evidence container 1043920 revealed a SIM card damaged beyond repair.*
+|
+| *The body of the card was lacerated and pierced in several places. A caustic agent appears to have been used to dissolve the circuitry inside of the card. Despite the state of the SIM card, the phone contained an internal DRAM storage unit connected directly to the processing unit on the phone's motherboard which was able to be accessed.*
+|
+| *The tech team was able to dump the DRAM's last state onto a department hard-drive and load it up into an emulated device on the department's servers. From this, the team has been able to assemble a map constructed from the GPS history of the phone. This map displays the location of the phone in the 24 hours prior to being destroyed.* 
+|
+| *No other relevant information can be taken from the phone using department equipment. Recommend submission of container #1043920 to the Federal Bureau of Investigation Quantico Office down state for further analysis.* 
 
 Worse and worse. Someone is covering their tracks, someone meticulous. Someone with a plan. The method, the precision, it's too calculated for someone caught up in the heat of the moment, being driven by passion and circumstance. Someone was planning to take Rachel Walters and once they did, they hid their trail with mechanical certainty.   
 
 Beneath the body of the report, fat letters cased in a rectangle read *REJECTED*. A handwritten note is scrawled below the stamp, explaining further,
 
-*Due to budget concerns, present analysis is deemed*   
-*sufficient for purposes of the current investigation.*    
-    *\-Joseph McMullen, New Harford Police Commissioner*
+| Due to budget concerns, present analysis is deemed sufficient for purposes of the current investigation.    
+| - Joseph McMullen, New Harford Police Commissioner*
 
 There's the McMullen I know. Pinching pennies and cutting expenses, no matter the real cost. My jaw grinds sideways. I never should have left, I think. I never should have let McMullen get his hooks in the department like this.   
 
@@ -1741,31 +1699,18 @@ This is the person, the kidnapper. I know it is. This is the person who took Rac
 
 Breathless, I pull the next form from the stack, 
 
-*Addendum Form 56A #678633*  
-*Date: 10/14/19*  
-*Reference Codes: #I-3397806, #A-678491, #A-678505,*  
-            *#A- 678563, #E-17689*  
-*Reporting Officer:*   
-    *Name: Peirce Boyd*  
-    *ID: 3J9570*  
-*Approving Officer:*   
-    *Name: Joseph McMullen*  
-    *ID: 56M0K6*
-
-*Summary*  
-    *Davis Fairbanks, father of Rachel Walters, was*  
-    *located in Jackson County, Florida. The Jackson*  
-    *County Police Department were informed and*   
-    *they dispatched a deputy to investigate.*   
-    *Fairbanks was found in a state of inebriation and*   
-    *did not immediately acknowledge his relation to*   
-    *Rachel Walters. After subsequent questioning,*   
-    *Fairbanks admitted being the biological father*  
-    *of Rachel Walters but said he has never met her.*  
-    *Interviews with Lilly Walters corroborate this.*   
-    *Fairbanks is not considered a likely suspect*   
-    *or person of interest, barring any contrary*   
-    *developments.* 
+| *Addendum Form 56A #678633*  
+| *Date: 10/14/19*  
+| *Reference Codes: #I-3397806, #A-678491, #A-678505, #A- 678563, #E-17689*  
+| *Reporting Officer:*   
+|   *Name: Peirce Boyd*  
+|   *ID: 3J9570*  
+| *Approving Officer:*   
+|   *Name: Joseph McMullen*  
+|   *ID: 56M0K6*
+|
+| *Summary*  
+|   *Davis Fairbanks, father of Rachel Walters, was located in Jackson County, Florida. The Jackson County Police Department were informed and they dispatched a deputy to investigate. Fairbanks was found in a state of inebriation and did not immediately acknowledge his relation to Rachel Walters. After subsequent questioning, Fairbanks admitted being the biological father of Rachel Walters but said he has never met her. Interviews with Lilly Walters corroborate this. Fairbanks is not considered a likely suspect or person of interest, barring any contrary developments.* 
 
 This would be the father Lilly mentioned, or what's left of him. How different things could have been, if Rachel had had a father. If someone had been here to protect her, someone who understood the way things are, someone who could see this coming, she could still be here right now.   
 
@@ -1773,49 +1718,35 @@ If I had never left, if I had been here when that call came in instead of Boyd, 
 
 I take the next form in hand and continue reading, 
 
-*Addendum Form 56A #678701*  
-*Date: 10/18/19*  
-*Reference Codes: #I-3397806, #A-678491, #A-678505,*  
-            *#A- 678563, #A-678633*  
-*Reporting Officer:*   
-    *Name: Peirce Boyd*  
-    *ID: 3J9570*  
-*Approving Officer:*   
-    *Name: Joseph McMullen*  
-    *ID: 56M0K6*  
-    
-Summary  
-    *Despite diligent investigation no information*  
-    *regarding the whereabouts of Rachel Walters*  
-    *has been found. Per approving officer's*   
-    *recommendation, case will be filed on the*   
-    *stet docket pending new developments.* 	
+| *Addendum Form 56A #678701*  
+| *Date: 10/18/19*  
+| *Reference Codes: #I-3397806, #A-678491, #A-678505, #A- 678563, #A-678633*  
+| *Reporting Officer:*   
+|   *Name: Peirce Boyd*  
+|   *ID: 3J9570*  
+| *Approving Officer:*   
+|   *Name: Joseph McMullen*  
+|   *ID: 56M0K6*  
+|
+| *Summary*  
+|   *Despite diligent investigation no information regarding the whereabouts of Rachel Walters has been found. Per approving officer's recommendation, case will be filed on the stet docket pending new developments.* 	
 
 They shut the investigation down three days before I got here. Eighteen days they spent looking into her disappearance, more than I would have thought. I'll give Boyd credit there; Most crimes are solved within a few days of the initial report or not at all. McMullen couldn't have been happy signing the expense reports on a long, dawdling investigation like this one.
 
 I find one more addendum attached to the main report,  
     
-*Addendum Form 56A \#678701*  
-*Date: 10/23/19*  
-*Reference Codes: \#I-3397806, \#A-678491, \#A-678505,*  
-            *\#A- 678563, \#A-678633, \#A-678701*  
-*Reporting Officer:*   
-    *Name: Peirce Boyd*  
-    *ID: 3J9570*  
-*Approving Officer:*   
-    *Name: Joseph McMullen*  
-    *ID: 56M0K6*
-
-*Summary*  
-    *At 4:30 pm I received a call from Sacred Heart hospital*   
-    *informing me they had discovered a security video that*   
-    *would be of interest to the referenced case. The caller*  
-    *indicated the video was found by former officer Elliot*  
-    *States. The reporting officer reviewed the contents of*  
-    *this video and found it to contain images of two people*  
-    *appearing to flee through the woods on the date and*  
-    *time of Rachel Walter's disappearance. Recommend*  
-    *immediate re-opening of primary investigation.*
+| *Addendum Form 56A #678701*  
+| *Date: 10/23/19*  
+| *Reference Codes: #I-3397806, #A-678491, #A-678505, #A- 678563, #A-678633, #A-678701*  
+| *Reporting Officer:*   
+|   *Name: Peirce Boyd*  
+|   *ID: 3J9570*  
+| *Approving Officer:*   
+|   *Name: Joseph McMullen*  
+|   *ID: 56M0K6*
+|
+| *Summary*  
+|   *At 4:30 pm I received a call from Sacred Heart hospital informing me they had discovered a security video that would be of interest to the referenced case. The caller indicated the video was found by former officer Elliot States. The reporting officer reviewed the contents of this video and found it to contain images of two people appearing to flee through the woods on the date and time of Rachel Walter's disappearance. Recommend immediate re-opening of primary investigation.*
 
 They always told us to be clinical in our reports, so it's hard to gauge Boyd's reaction to finding me tangled up in all of us. I have a feeling I'll get the chance to ask him myself eventually. We’ve been circling each other for a while; it's only a matter of time before we stumble across each another. Something tells me it won't be a joyous reunion.    
 
@@ -1823,17 +1754,17 @@ I close my eyes and hear a distant gunshot echo in my memory.
 
 The last page of the report contains a list of everyone who has accessed the initial incident report since the investigation was opened. I search the lines and find a few unfamiliar entries,
 
-*Record of Activity*  
-*Date		Last Name	First Name*  
-*10/1/19	 Walters	Lillith*	  
-*10/2/19	 Walters	Lillith*  
-*10/3/19	 Walters	Lillith*  
-*10/4/19 	 Martin	           Lynn*  
-*10/4/19 	Walters	Lillith*  
-*10/7/19	Walters	Lillith*  
-*10/9/19	Kolinsky	Emile*  
-*10/13/19	Kolinsky	Emile*  
-*10/24/19	States		Elliot*  
+| Record of Activity*  
+| Date		Last Name	First Name*  
+| 10/1/19	 Walters	Lillith*	  
+| 10/2/19	 Walters	Lillith*  
+| 10/3/19	 Walters	Lillith*  
+| 10/4/19 	 Martin	    Lynn*  
+| 10/4/19 	 Walters	Lillith*  
+| 10/7/19	 Walters	Lillith*  
+| 10/9/19	 Kolinsky	Emile*  
+| 10/13/19	 Kolinsky	Emile*  
+| 10/24/19	 States		Elliot*  
     
 I add the names *Emile Kolinsky* and *Lynn Martin* to the growing list of names in my notebook. So many people, so many threads, all connected to a single missing girl. Every branch leads to two more and the explosion of possible endpoints in this tree is beginning to eclipse my potential to navigate, let alone understand.  
 
@@ -4607,36 +4538,36 @@ Lynn spins her laptop around and pushes it towards me. She clicks an arrow key a
 
 "Trust me," Lynn grimaces, tapping the arrow key again, "Keep reading."
 
-*To: ahart@hart2020.com*  
-*From: speerhead12345@cbz.com*  
-*Subject: <blank>*  
-*Date: 06/15/2019*  
-
-*fish was fantastic\! spoiled in the fridge tho, can we get another order of tuna for the weekend? -L*
+| *To: ahart@hart2020.com*  
+| *From: speerhead12345@cbz.com*  
+| *Subject: <blank>*  
+| *Date: 06/15/2019*  
+|
+| *fish was fantastic\! spoiled in the fridge tho, can we get another order of tuna for the weekend? -L*
 
 "Anything suspicious?" Lynn asks, clicking to another email, "Anything at all?"
 
-*To: ahart@hart2020.com*  
-*From: kentucky_gentlemen22@buzz.net*  
-*Subject: re: last order*  
-*Date: 07/24/2019*  
-
-*catfish was not to our liking. can we return for mahi-mahi?*   
-*> catfish is on ice and en route.*   
-    
+| *To: ahart@hart2020.com*  
+| *From: kentucky_gentlemen22@buzz.net*  
+| *Subject: re: last order*  
+| *Date: 07/24/2019*  
+|
+| *catfish was not to our liking. can we return for mahi-mahi?*   
+| *> catfish is on ice and en route.*   
+  
 "They're not--" I stutter, "What are they talking about?"  
 
 "You tell me," Lynn retorts, "You're the guy who knows everything."	
 
-*To: ahart@hart2020.com*  
-*From: bhart@calvert.edu*	  
-*Subject: re: re: re: re: \<blank\>*  
-*Date: 09/07/2019*
-
-*i'm doing the best i can. should be done by end of month.
- > hes impatient. It's never taken you this long before.  
-    > > tell him fishing takes time.*  	  
-        > > > chris wants to know how long*
+| *To: ahart@hart2020.com*  
+| *From: bhart@calvert.edu*	  
+| *Subject: re: re: re: re: \<blank\>*  
+| *Date: 09/07/2019*
+|
+| i'm doing the best i can. should be done by end of month.
+| > hes impatient. It's never taken you this long before.  
+|       >> tell him fishing takes time.*  	  
+|           >>> chris wants to know how long*
 
 "They're not talking about fish," The realization hits me like a speeding train. Before I have a chance to fully process anything, my body is in motion, gathering up my jacket and standing up to leave.   
 
@@ -4948,221 +4879,403 @@ WEDNESDAY, OCTOBER 30th
 
 I wake up in an alley outside of a bar. The sun beats down on my curled form. Flies from a dumpster swirl above my semi-conscious body. My head is screwed on backwards. My eyes burn with the phantoms of withdrawal. The dream fades back into the shadows of my mind.   
 
-My legs are Jell-O. People cross the street to get out of my way as I stumble down the sidewalk, alcohol still pumping through my veins, pulling me sideways. I look a mess as I see my reflection in a store front window. My new shirt is ruffled and stained with a rainbow of colors. My hair looks like a wild animal has taken up residence on my head. I spit in my hand and slick my hair back, gazing at the stranger I see in my reflection.   
+My legs are Jell-O. People cross the street to get out of my way as I stumble down the sidewalk, alcohol still pumping through my veins, pulling me sideways. I look a mess as I see my reflection in a store front window. My new shirt is ruffled and stained with a rainbow of colors. My hair looks like a wild animal has taken up residence on my head. I spit in my hand and slick my hair back, gazing at the stranger I see in my reflection.
+
 Sweat pours from my face even though a chill is rising on the lazy autumn wind. My hands shake. One moment I am unbearably hot, the next I am shivering cold. Dry, cracked eyes peer out into the world, straining against the bright morning light. I lean against a wall and gather myself.  
+
 Are you ready for this, Elliot? There's no going back now. It's moving fast now. Faster than you can control. You have to stay in front of it at all costs.  
+
 Flashes of a television screen. A scared, innocent girl.   
+
 I give up wrestling my hangover into submission and get a drink at the bar. I find my head again as alcohol kneads its calming hands over my body. I barely notice my hand throbbing, my cheek pulsing, the battering Goose gave me aching all over. I am a wraith, a hollow man, drifting through this life until my purpose is complete, and I can rest. I will suffer, I will destroy my body, before I find succor.   
+
 I will find Rachel Walters and then I am free to die. 
 
-\*
+---
 
 Boyd nearly loses his head when I enter the diner.   
+
 "What in the flying fuck is going on?" He demands, hysterical.  
+
 "I need your help," I reply, sitting down. My face has been bandaged. Boyd stares at me with hard eyes. If he is suspicious about my wound, it's buried deep underneath his bristling anger.   
+
 "I need answers first," Boyd stonewalls, "I have a likely arson at the old *Diplomat* motel on route forty and a dead cop the papers are saying died in a car accident, but the entire station knows his brakes were cut. All within hours of one another. Guess whose car was parked at the motel? And guess whose number was the last call on Dakota's phone before he died?" His eyes bore into mine, twitching with anger, "Now I'm getting calls the science teacher from Calvert Catholic is missing. The same science teacher you questioned the other day. The science teacher whose last name is Hart. Related to Abner Hart, which I'm sure is no coincidence. Abner Hart, our new boss come next year. The same man who came to the station the other day and asked me about you *by name*."  
+
 "They know my name?"  
+
 Boyd nods.  
+
 "What did you tell him?"  
+
 "That you've been asking around about the Walters girls."  
+
 "Boyd, you fucking moron," I shout, drawing every eye in the place towards us, "You've killed me."	  
+
 "Keep your voice down," Boyd replies, looking askance, "You never know who's listening," He glares at me with pure hatred, "Tell me why I shouldn't haul your ass to the station right now."  
+
 "Because I'd like to think there's enough between us that you'd prefer not to see me dead," I explain.  
 Boyd sighs, "Are you going to give me anything at all?"  
+
 "It's the girl."  
+
 "What do you mean?"  
+
 "They have her. The Harts."  
+
 Boyd looks at me in disbelief, "You're serious?"  
+
 "I am."  
+
 He shakes his head, "You're out of your mind. Listen, I know you've been through a lot, but just because of what happened to Julia--"  
+
 "This has nothing to do with Julia."  
+
 "Now who's the moron?" He asks, "Of course it does."  
+
 "Boyd--"  
+
 "States," Boyd interrupts, "Listen to me. Why in the world would the Harts toss away an empire for a girl?"  
+
 A waitress interrupts us and pours me a cup of coffee. Boyd and I stare at each other in silence as she asks, "Can I get you guys anything to eat?"  
+
 "Fuck off," Boyd growls. A look of shock blossoms on the waitress's face as she scampers away.   
+
 I swirl my cup of coffee, "He confessed."  
+
 Boyd stares at me, astonished, "What are you saying?"  
+
 "I have the science teacher."  
+
 "Elliot," Boyd reaches across the table and grasps my forearm. His eyes are on fire with fear, "What the *fuck* are you saying?"  
+
 "I took him yesterday," I explain simply, flexing my broken fingers as best I can, ignoring the pain beating through my body, "He confessed."  
+
 Boyd is thunderstruck, "What--?"  
+
 "They have her on the Hart estate, up on Big Savage Mountain."  
+
 Boyd opens his mouth, but his words tangle on his tongue.  
+
 "I need to spoof a call," I tell him, "I have a plan, but for it to work, I have to be able to fake a phone number. Do you remember the Wharton killings out near the old airport on Dry Creek Run?"  
+
 Boyd continues to stare dumbfounded at me.  
+
 "We had a search warrant, but the place was a fortress. They would have flushed or destroyed anything they had before we even brought up the battering ram, plus whatever casualties we would have taken storming the place. They had a murder-hole, for Christ's sakes. Probably boiling oil too. Do you remember?"  
+
 Boyd slowly nods his head.  
+
 "Scarpelli had a stroke of genius. That kid was unnatural, best cop I've ever seen. Shame the Bureau sniped him from us. I could use him right now," I remember bright eyes and a quick wit, "Anyway, he got a box of bedbugs from the university and explained his plan to us. We intercepted a package headed to the place on Dry Creek in the post office and filled it with the little fuckers and resealed it. Then we tapped into the phone line and sat on it for a week. We caught the outgoing call to the pest people and rerouted it to our burner. They let the entire SWAT team through the door before they realized who we were.  
+
 "Boyd, I need that equipment."  
+
 More threats to throw me in cuffs and drag me to a dank cell somewhere in the bowels of the city, but I know he's already acquiesced. We're just haggling over the details. 
 
-\*
+---
 
 After the line is cut, we sit in Boyd's car for hours, saying nothing to each other. It's just like old times. Boyd takes off the construction helmet and sets it in the backseat, muttering to himself, "I can't fucking believe I'm doing this," and that's the last I hear from him for a while. He looks dapper in his overalls and disguise, despite his scowl.  
-The device clutches near the base of a metal box atop one of the telephone lines. In the distance, the Hart estate rises on a hill. While Boyd was ascending the ladder to install the device, I swung around the edge of the estate with a pair of sheers.    
+The device clutches near the base of a metal box atop one of the telephone lines. In the distance, the Hart estate rises on a hill. While Boyd was ascending the ladder to install the device, I swung around the edge of the estate with a pair of sheers.
+
 I peel the gloves off my hands, tenderly tugging at my throbbing right hand. I have control of my index finger and thumb, but the other three are useless, mangled and broken. I'd go to a hospital if I didn't think I'd wind up with a severe case of bullet-through-head. I'll live. It's enough to pull a trigger and that's all that matters.  
+
 "What if they use a cellphone?" Boyd asks.  
+
 "Then we're fucked," I respond bluntly, "That place is ancient, though. It must have a land-line--"  
+
 The burner rings, cutting me off. Boyd and I look at one another. He offers me the electronic recorder. I answer and hit play on the recorder.   
+
 "Thank you for calling Comcast," The computerized voice begins, "Please listen to our menu options, as they may have changed."  
+
 Several beeps later, I guide the call to me, "I'm sorry, I don't understand. Please wait on the line for the next available customer service associate to assist you."  
+
 I play the waiting music. An old Ozzy song roars out of the car speakers on the trail of a blazing electric guitar. Boyd's idea; our old battle hymn, probably has never left the tape deck since the last time I was in his squad car. I wait for the chorus before I come on the line, "Comcast Cable. Jordan speaking. May I please have the name and address on the account you are calling us about today?"  
+
 It's Henrietta. She gives me the address as if I don't already know. Her thick German accent obscures her voice over the line, "Yes, I will be needing service. The internet has gone out."   
+
 "Indeed, ma'am. I am not picking up any signals on my end. There seems to be a technical issue on your end," I lay the trap, "We can get a technician out there this evening at 4 pm.  
+
 "That is...poor timing. We currently have bit of a family emergency. Will tomorrow work?"  
+
 I grit my teeth and silently curse. Unintended consequences, I think. Ripples in the pond. More waiting. More long hours where Rachel's life hangs by a thread. I improvise, "I can get a man out there by 10 am. Will that work?"  
+
 "That will be fine. They will have to check in at the gate."  
+
 "Very good. I will have someone out at that time. If you could have someone there to leave him in, we will get this problem resolved in no time."  
+
 The bait is taken. The trap is set.  
     
-\*
+---
 
 I have Boyd drop me off on the Strip. He looks at me with inquisitive eyes but doesn't ask any questions. Instead, he refuses to let me go alone tomorrow. I tell him to meet at the diner again in the morning and we can head out together. I still haven't decided if I'll actually show up tomorrow morning as I wander down the Strip, avoiding the cat calls from the industrious, early morning hookers hanging from door frames, their makeup still fresh and un-befouled.   
+
 I watch a man in a business suit buy a small plastic bag from a hoodlum. Further down, a huddle of older men on a stoop pass a forty-ounce bottle of malt liquor between them. I skirt the edges of a quarrel they are egging on, the screaming parties arguing over a woman not in attendance. Down the street, I hear the slap of flesh and the smack of pavement, but I'm already around the corner.   
+
 The sleeping *Havana* greets me with its dead neon signs and empty parking lot. The club won't be open for a few hours yet, but I know Big Wally's in there. I push open the pair of doors and step into the rank air left over from last night's debauchery. A man pushes a broom across the dance floor and stops to look up at me, "Can I help you? We're not open yet."  
+
 "I'm here to see Mr. Bigelow," I lie, "He's expecting me."  
+
 Big Wally is hiding in the same corner I left him in. This time he is accompanied by a pile of documents and receipts. A paper trail I once would have paid a fortune to have in my hands.    
+
 "States," My name is acid on his tongue, "I had a feeling I'd see you again."  
+
 "Here I am."  
+
 "Did I leave any doubt as to where we stood on our last parting?"  
+
 "I heard you loud and clear, Albert."  
+
 He winches at his real name. I remember he hates it, a name thrown at him by schoolyard bullies. Instead he prefers to wear the moniker he won in the city's underbelly, a fact I discovered interviewing his childhood friends a lifetime ago, when Big Wally was still a mystery to me. Those days are long gone; this man is no longer an enigma. I understand his brand of evil; greed and vice, motives I can wrap my head around. It is those other, darker impulses I now grope blindly after that leave me gasping for air. Big Wally is talking, "Out with it, States. Why are you here?"  
+
 "I require your services," I say, sitting down.   
+
 "You want to book a room here for a party?" He smiles.  
+
 "Not exactly what I had in mind," I reply, "I have need of your...illicit connections."  
+
 "I didn't know you were a comedian now," He says, sliding his flat palms across the table, "It's a piss poor joke, this one. I surely don't know what you're implying. I'm just an honest businessman, trying to make my way in this crazy, mixed up world."  
+
 "I'm not wearing a wire, Wally."  
+
 He smirks, "Show me."  
+
 I do. He waves at someone. A guard materializes from the shadows. I realize I'm skating on thin ice here, glancing at the other shadows that may hide similar foes. A wand passes over the length of my body. Big Wally is satisfied. I sit back down.  
+
 "What's this about, States? You turn your cloak while I wasn't looking?"  
+
 "I found the girl."	  
+
 His eyes go wide, "The Walters girl?"  
+
 I nod.  
+
 "Where is she?"  
+
 "Doesn't matter. That's not why I need you."  
+
 "Enough suspense, States. Tell me why you're here or I'll go get Goose again."  
+
 "I need protection," I say.  
+
 Big Wally laughs, "Go fuck yourself, States."  
+
 "Not for me," I explain, "Someone else."  
+
 He leans in, "You're a cop. Get your cop friends to do it."  
+
 "I can't trust them with this. Everyone on the force is comprised. I don't know who to trust."  
+
 His grin grows wide, "And what makes you think you can trust me?"  
+
 "Money," I reply, "I'll pay whatever you ask."  
+
 He shakes his head, "You can't afford me."  
+
 "Name a price."  
+
 Without a moment's hesitation, he replies, "A quarter million dollars."  
+
 Despite my best efforts, I can't help but cringe at the number.   
+
 "I told you," Big Wally says.   
+
 "Fine," I reply, "A quarter million."	  
+
 Like a lagged reflection of my own shock, Wally's jaw drops, and he scrutinizes me with renewed interest, "Who is so important that you'd drop a quarter million just like that?"  
+
 "My wife. Leah," I reply, "I want someone watching her at all hours for the next few months. Someone armed. Do you understand?"  
+
 Wally licks his lips and leans closer, "What the fuck is going on, States?"  
+
 I shrug, "Watch the news tomorrow."  
+
 "Is this about the Walters girl?"  
+
 "I'll get you your money," I stand up to leave without answering his question, "Just make sure you have someone watching her. Do you understand?" 
 
-\*
+---
 
 I close my IRA and transfer it into my savings account, paying a fortune in fees. I squander years of investments with a single phone call. The bank representative fumes on the other end of the line.   
+
 "Sir," The customer service associate explains anxiously, "We can't possibly withdraw that much money with such short notice. It will take at least three days before we have sufficient funds on hand."  
+
 "That's too long," I reply, "I need that money now."  
+
 "I'm sorry, sir."  
+
 I squeeze my eyes shut, "Can I have someone make the withdrawal for me in three days?"  
+
 "Certainly, sir. We just need to add a certified user to your account," She says, "Can I get the name of the party you will be authorizing to make a withdrawal on your behalf?"  
+
 Boyd, you son of a bitch. How much can I actually trust you? I'm about to find out.
 
-\*
+---
 
 The wait is all that remains. It drives me mad with its long moments stretching into eternity. Every second that passes is another coin toss and the outcome is Rachel's life. I wander through the city, leaving a trail of cigarette butts behind me. My feet lead me down streets I walked in a different life. I remember a tiny hand in mine. Ice cream cones dripping from a summer heat wave. Fire hydrants pouring water into the street.  
+
 I shake the memory off. A drink at a bar steadies my hand.   
+
 The avenues are long and twisted. The city was built before automobiles transformed the country's topology. Streets wind around corners and end in dead ends without rhyme or reason. In forgotten corners, pavement recedes and exposes the brick and mortar heart of the old city.    
+
 I know where I'm going, but I won't let myself think about my destination. I walk down a residential street a mile, the houses petering out around me. I walk past fields and forests. I pass a church and cross the street. I trace my left hand across the gigantic concrete walls that protect the graveyard.   
+
 I wander through the gates and float like a ghost through the headstones and monuments. Statues of goddesses and saints, weathered and beaten down by the elements, haunt the spaces between graves. The entire history of the city decomposes underneath my feet.  
+
 A familiar lane leads me to a low curving hill and the shade of an apple blossom. Pink petals gliding on the breeze fall on my hair. I reach down and touch the grass, wet blades sliding through my fingers. The inscription blurs in my eyes.  
+
 *Julia Amber States, 2002 – 2010\.*   
+
 "I knew you'd come eventually," Leah materializes underneath the apple blossom. She stands and my heart is on a high wire, suspended above a void. Her voice leads me over the yawning gap, "Shirley told me you were back a few days ago."  
+
 She glides over the ground, a wisp of smoke caught in the wind.  
+
 "I never thought to see you at the store."  
+
 I can't find any words. They are all gone.  
+
 "I'm sorry," She says sadly, passing within my grasp.   
+
 She continues on, crouching down by Julia's grave, "I come here every morning."  
+
 "She loved apple blossoms," I reply, grasping at straws.	  
+
 She frowns. I cry.   
+
 "I loved you," I find myself saying. I'm not in control of my mouth, "I love you."  
+
 "I know," She replies without looking at me.  
+
 Silence sits between us.  
+
 "I can't look at you," Leah tells me, "Without seeing her."  
+
 "I know," It's my turn to reply.   
+
 "Why did you come back?"  
+
 I hesitate, knowing it will hurt, but the truth pours out regardless, "I came back to find Rachel Walters."  
+
 She stares at me and swallows a reply. A pause then a whisper, "Was that her photo?"  
+
 I nod.	  
+
 "She looks just like..."   
+
 "...she would have," I finish her thought.  
+
 Tears form in the corners of her eyes.  She quietly asks, "Did you find her this time?"  
+
 I look at my wife and see looks back. I finally see her for the first time in nine years, "I think so, but there's something I need to do. Something I might not come back from."  
+
 She pauses, lost in thought, "Will it save her?"   
+
 I nod, "I hope so."  
+
 She steps forward, cups my cheek in her hand and whispers, "Then do it."   
+
 Leah turns and walks away. The silence she leaves me standing in is furious in its depth. This moment turns into the next and I am alone with only one thing left to do. I'm coming, Rachel. Just be alive. That's all I ask. Give me that one thing.   
+
 As I leave, I know with a dreadful certainty that I will never see my wife again.
 
-\*
+---
 
 Lilly's number sits on my phone screen. My hand hovers over the call button, idling. Thoughts turn over in my head. I pry the battery out and toss the phone aside. The van veers into the vehicle impound lot. My car sits on the other side of the chain link fence.   
+
 I get out of the van and duck into an alley. After climbing onto a dumpster and hopping the fence, I dart around through the maze of impounded cars. Crouching against the back wheel of my car, I pat blindly around, finding the spare trunk key magnetically attached to the undercarriage. The trunk pops open. I grab my binoculars, a bag stuffed with supplies and my notebook. My eyes fall on a book sitting in the back seat, *For Whom The Bell Tolls*.  
+
 I hear dogs barking. I grab the book and dash back over the fence.   
+
 In a shopping mall parking lot, I shut off the van and begin to examine my hand. I don't know what else to do but to wrap my three fingers in all the gauze I can find. I eat a mouthful of aspirin and find myself with nothing to do. I numbly flip through my notebook, but there's nothing for me there anymore. The book from the library burns in my periphery.   
+
 I spend the next eight hours reading Hemingway by the light of a streetlamp. The Bandidos are making their final stand against the Fascists when sleep finally finds me.
 
-**THURSDAY, OCTOBER 31st** 
+THURSDAY, OCTOBER 31st
+----------------------
 
 The sun dawns on my first sober morning in a decade. My hands shake, not from withdrawal, but with nervous energy overflowing from the pit of my stomach. The new day finds me a different man. I crawl from the backseat of Lilly's van and peer through the fogged windows out into the shopping mall parking lot.   
+
 I exchange Lilly’s van for the decoy van stashed at a nearby hotel. I don't bother to wipe Lilly's van down. By the time anyone finds it, fingerprints will be the least of my worries. Besides, I'm already a marked man. Boyd's incompetence saw to that.   
+
 The dumb bastard waits for me outside of the diner, with our disguises in a duffel bag at his feet. When he gets into the van, I hand him a notebook.  
+
 "What's this?" He asks as he crawls into the passenger seat.   
+
 "That's the whole case," I explain, "If something should go wrong--"  
+
 "Right, right, spare me," Boyd cuts me off, "I get it."  
+
 “Just listen to me, Boyd,” I implore, “There’s a name in there. Lynn Martin. Find her. She will know what to do with these,” I set a stack of three DVD cases on the armrest between us.  
+
 Boyd picks one of the blank cases up and examines it, “What’s on it?”  
+
 “Evidence,” I reply, snatching it from his grip and replacing it in the stack, “She needs hard evidence to accuse any of the Harts publicly and there it is.”  
+
 Boyd nods, “Who is she? A lawyer?”  
+
 “She’s a journalist.”  
+
 He smirks, “I thought you hated journalists.”  
+
 “Misery acquaints a man with strange bedfellows,” I mutter.  
+
 “Huh?”  
+
 "Forget it. There's more," I say, passing him a slip of paper.  He unfolds the note and studies the series of letters and numbers hidden inside. I explain, "That's a bank account at First United. By Monday, you should be able to empty it."  
+
 He waves the note back at me, "Care to explain yourself?"  
+
 "I need you to make a delivery for me."  
+
 His face scrunches into confusion. I continue, "There should be roughly three hundred and twenty thousand dollars in there. Take the twenty and change for yourself and let's call it three hundred thousand."  
+
 He licks his bottom lip with the slightest hint of greed and inquires, "What's the rest for?"  
+
 I stare into his eyes, "Do you trust me?"  
+
 Boyd frowns, "Why else would I be here”  
+
 I grit my teeth and brace myself, "I need you to take two hundred and fifty-grand to Albert Bigelow at the *Havana*."  
+
 The air leaves the van. His reply comes after a wordless moment, "I don't want to know."  
+
 "No, you don't," I retort.   
+
 "That still leaves another fifty thousand. What's that for?"  
+
 I smile, remembering a green dress, "It's for someone else."
 
-\*
+---
 
 Before leaving New Hartford’s city limits, we pull the van off the side of the road and change into costume. Boyd insists on driving once we’re done. When he takes a left at Saratoga Street, I realize why. I know where he is taking me.  
+
 I begin, "Why are you--"  
+
 Boyd interrupts, "Just a slight detour. Don't worry. It won't take but a minute."   
+
 The road leads over the train tracks and into the ghetto of Old Harford, where centuries old houses now abandoned crumble into the street for want of repair and apartment high-rises grow in clusters from their desiccated remains. We navigate a maze of one-way streets looping around boarded up buildings in a chaotic squiggle, until we arrive at a Chinese take-out restaurant slotted into a wall between a deli and a liquor store. We pull into an adjacent gravel lot growing back into wilderness and he shuts the van off.  
+
 "We don't have time for this," I say.  
+
 "I told you, it'll be quick," Boyd replies, "I promise."  
+
 "What could you possibly need in here?" I ask, wary, "Why didn't you get it before you came?"  
+
 Boyd gulps and states in a measured tone, "I thought we could use this time to talk."  
+
 "Boyd--"  
+
 "We need to talk, Elliot."  
+
 "There's no time. It’s already 8:30--" The words marching from my mouth halt on my tongue with his reply.   
+
 "Hart," Boyd states, his hands planted on the steering wheel. He stares ahead, puzzling over phantoms unknown to me with a furrowed brow. He states more than asks, "He's the one that did Dakota."  
+
 He catches me off guard and I have no other response but to nod.  
+
 Boyd sneers, "Then McMullen knows."  
+
 I glance over at Boyd, my skin prickling with gooseflesh. I reply, "I don't see how he can't. It doesn't make sense otherwise. They've got to have someone in the department. Someone who knew Dakota was helping me."  
+
 Boyd sighs and closes his eyes. After a moment of silent contemplation, he turns back to me, "Come inside. Trust me."  
+
 I shrug and concede to Boyd. We exit the van. Knee high weeds force us to hopscotch through the vacant lot. The morning sun reflects off something metallic hidden in the grass and catches my eye. I push aside the brush with my foot and find an engraved plaque bolted to a stone block embedded in the ground and overgrown with weeds. Some of the words on the plaque hook into my thoughts and pull my attention towards the inscription. The bronze words read,
 
 *Here stood the Old Harford Courthouse. The building was destroyed in a fire started by British forces in 1813 during the two-day battle known to history as the* Burning of Harford*. Overwhelmed American forces were driven back on the first day and found refuge inside the Courthouse. All who did perished in the fire started on the morning of the second day. This monument commemorates those unknown soldiers who died defending the United States of America. Let no building stand here until the end of time so their sacrifice will not be forgotten.* 
@@ -5170,270 +5283,499 @@ I shrug and concede to Boyd. We exit the van. Knee high weeds force us to hopsco
 The inscription recalls Lynn’s article in my mind. Two hundred years ago, this is where the Harts conquered Harford and rebuilt it in their image, where they finally passed the apex and ascended to the heights of empire. I gaze around at the desolate emptiness that remains in their wake.   
     
 Across the street, a passage leads us between hunched brick buildings leaning against one another and into the shadows of the city's perpetual darkness. At the other end of an alley, he pushes open a heavy steel door and suddenly we are in a kitchen. The wafting scent of scallions and boiling peanut oil drift through the air. Men in stained aprons chop vegetables on cutting boards. They don't acknowledge us. I follow Boyd past the manager's office, back through a dark, gurgling room with a water heater and furnace, and up a flight of narrow stairs. The door to his apartment swings open and he ushers me inside.  
+
 Boyd's apartment has no furniture. He sleeps on a sheet thrown over a wooden floor with a few flat pillows and a ratty blanket that probably hasn’t been washed since the day it was bought. The kitchenette is an array of emptied boxes and overturned take-out cartons. Bottles of booze are everywhere. Piles of documents and folders stacked against the far wall threaten to topple, teetering as I walk by. Down the only hallway in the cramped apartment, I find Boyd rummaging through the bathroom linen closet by the light of a shade-less lamp.   
+
 "You still like those old 38s?" He asks me, peaking behind his shoulder as he wrestles with something wedged in the back of the top shelf.   
+
 I nod, "What's this about?"  
+
 “I know what you’re planning,” He says, pulling down from the top shelf a polished wooden box.   
+
 “I hope so,” I reply, “We’ve only gone over the plan at least twenty times,”  
+
 “No,” Boyd replies, “That’s not what I mean.”  
+
 He opens the box and pulls out a curled-up leather satchel fastened with a belt. He looks at me. I have no idea what is going on, what he is going to pull from that satchel.   
+
 “Boyd,” I ask, "What is that?"  
+
 “Don’t forget,” Boyd states plainly, ignoring my question, “We have history, Elliot.”  
+
 "What are you talking about?"  
+
 He frowns, "You know exactly what I'm talking about."  
+
 I freeze in place. A vault of memories long sealed cracks open. Another night, one that has been erased from history. One without dreams to accompany it.    
+
 “When we found him, I knew what we were going to do," Boyd explains, unwrapping the satchel, "There wasn’t even any question of letting it go to trial.”   
+
 Vertigo sweeps me into the past.  
+
 A drop into nothingness, back to the night my old life ended. Boyd pulls the keys from the ignition, switches off his radio and closes the door to the squad car. I am motion without awareness. A set of blank eyes carried by feet I don't control. A motel room with a red door looms in my vision. The door hinges shatter with a thundering kick from Boyd. The man inside scrambles, but Boyd is faster. The man is in cuffs in seconds, but I don't care. I am looking. Searching.   
+
 Where are you, baby girl?  
+
 "Where is she?" Boyd screams, spittle flying from his mouth.  
+
 The man replies through broken teeth and the memory dissolves, replaced by another.  
+
 An empty dirt road. Boyd leans on the hood of the squad car, smoking a cigarette. I am already dead. The man in my body stands off the side of the road and stares into the horizon, with only a single thought to accompany him. A deranged thought that twists him around its base, coiling like a spring.   
+
 A pair of headlights crest the hill. Boyd tosses his cigarette to the ground. A plain black sedan pulls up and its driver-side window winds down. Boyd exchanges words with the driver, but I don't hear anything that is said. I am not here, not really, not anymore.   
+
 Boyd pulls the man from the backseat of the black sedan and tosses him at my feet. I bend down and peer into his eyes.  
+
 "Please," He cries, words constricting in his throat as realization dawns on him, "You don't have to do this."    
 My lip twitches.   
+
 Baby girl. Jules. I would set the world on fire to get you back.   
+
 "It's already done."  
+
 A gun taken from my hands and then the deafening silence of a gunshot.  
+
 “Boyd, what we did, it isn’t on you,” I explain, back in the present, “It’s on me.”  
+
 “No, Elliot, that’s where you’re wrong,” Boyd says, “I made it sure it *was* on me. What I did that night,” He stares at his hands, “That was all me.  
+
 “Whatever else you might think of me,” Boyd says, “You’re my friend, Elliot. I wasn’t going to let you do that.”  
+
 “Boyd—”  
+
 “Just listen to me,” He says, sitting down and placing the leather satchel on his lap, “I’m not particularly smart, not like you or Scarpelli, but I understand some things. I know what this world is. It don’t favor right or wrong. It’s got no dog in the fight. Evil exists right alongside good and the universe don’t mind one bit. That’s just the way it is. If you want things set right in this life, you have to do it yourself. They won’t just work out if you leave them be.  
+
 “But setting things right,” Boyd flexes his fingers, "It don't work the way you think.  
+
 “When we—when I,” Boyd stutters, trying to find the correct words, “When we found him and he told us where Julia was, I knew I had to be one to do it. It couldn’t be you.   
+
 “He would have gotten life at the penitentiary, and God knows what they would have done to him in there, but that wasn’t enough. Not for what he did to her.  
+
 “So, I did it. *I* did it. And I don’t regret it.  
+
 “But it took something from me. Some part of me that made me whole. Nothing’s ever been the same. I don't—I can't be with people anymore. That’s why Angelina left. I know what they are, and I know what I am, and I know those two things don't mix.  
+
 “And, Elliot, what you’re about to do, it’s going to take everything you have. It’s going to leave you empty and alone. Just like me."  
+
 Silence.  
+
 “Boyd, if you’re trying to talk me out of this—”  
+
 “Not at all,” Boyd replies, unrolling the leather satchel, “The opposite in fact,” From inside the satchel, he retrieves a bundle. He delicately unwraps tissue paper. He holds the revealed contents in the palm of his hands, cradling the hollow metal cylinder.   
+
 He hands me a silencer for my gun, “I just want you to know the stakes.”  
     
-\*
+---
 
 Into the mountains, we ascend. The rocky heights wear fallen clouds like scarfs. We careen through the mist, leaving swirling eddies in our wake. The crackling radio signal dissolves into low, humming static and then ceases altogether another mile up the incline. An eerie quiet engulfs everything.  
+
 “You’re sure she’s in the basement?” Boyd asks for the hundredth time.  
+
 “No, but that’s what Brandon told me,” I reply for the hundredth time.	  
+
 The van zigzags up the switchback carved into the face of the alpine heights of Big Savage Mountain. The air thins and ours ears pop. The forest grows dense, filtering the sunlight down into dew that leaves everything wet and dripping. Our windshield accumulates a translucent layer of moisture so Boyd flips on the wipers. The rubber blades squeak against the glass.  
+
 Out of nowhere, Boyd turns to me and says, "So my girlfriend's dog died the other day--"  
+
 "You're still with Angelina?" I ask, genuinely curious.  
+
 "Christ no, not for eight years," Boyd replies, rubbing his forehead with one hand while driving with other, "I was trying to tell a joke. You know, break the tension,” He sighs, “You always make shit difficult."  
+
 "Ah," I say, "Well, go ahead. Get it over with."  
+
 Boyd snorts, "So anyway, like I was saying, my girlfriend's dog died the other day, so to make her feel better, I went out and got an identical dog for her. I give it to her, and she says me, 'What am I supposed to do with *two dead dogs?*'"   
+
 I cock a bemused eyebrow in his direction, "I'd tell you to keep your day job, but you're fucking awful at that too."  
+
 "I don't care what you say," He chuckles, "That shit's hilarious."  
+
 A litany of insults are forming in my mind, but we crest a hump in the dirt road and the Hart Estate appears in the distance, standing on an outcrop above the layer of fog, as if disconnected from the surface of the Earth, floating in the clouds like the kingdom of Heaven. We lose sight of the mansion as we dip back into fog.    
+
 Our conversation evaporates, replaced by an all-consuming anxiety. The seconds pass in slow motion. We arrive at the gate and wait. A guard in a black suit and tie approaches the driver side. The window screeches as Boyd winds it down.  
+
 "We're the cable guys," Boyd says, swallowing a lump in his throat. The guard checks a clipboard and then peers over his glasses at me. I put on my best smile.  
+
 I know what the men huddled in the belly of the Trojan Horse felt like now. The guard waves us through the front entrance of the Hart Estate. Boyd is drenched in sweat. I haven't felt in my hands in five minutes. At least I'm not shaking.   
+
 "Stay in the van," I tell him, "Abner knows you."  
+
 He shakes his head, "I can't let you go in there alone."  
+
 "You can," I explain, "And you will. We've been over this a hundred time already and we don't have time again now. Be ready to leave. I'll be coming out in the hurry"  
+
 "What am I supposed to do?"  
+
 "I don't know, shove your thumb up your ass and count to ten," I offer, "That ought to keep you occupied for a while."  
+
 "I would, but it's still sore from your mother's tongue. Tell her to shave it next time."  
+
 I smile. Exactly like old times.   
+
 "Thirty minutes," I say, now deadly serious, banishing all levity, "Thirty minutes and then you leave, no matter what. Find Lynn. Call every fucking newspaper in the country. Ring the bell from every tower. Burn this place to the ground if you have to."  
+
 Boyd solemnly nods. He places a hand on my shoulder. We share a silent moment.  
+
 The overalls don't fit, but no one notices. The bandage on my face gets a curious glance, but they let it go without question. A guard escorts me under the marble arches of the mansion's front entrance. The scale of everything dwarfs us as we pass across lacquered stone. I get the sense I am entering another realm of existence, where elder beings dwell and decide the fate of mortals. I am sneaking into God's bedroom to smother him with a pillow and steal a soul stuck in limbo from his clutches.   
+
 Warm light simmers in elegant copper lamps hanging from the walls of the foyer. The floors are polished marble where inverted reflections skate at my feet. Standing on a small island of carpet, a blonde-haired woman in a blouse buttoned up to her neck greets me, “You must be the cable man.”  
+
 I nod, swallowing a taste of fear to hide my surprise at seeing her. I never accounted for this woman when I cased the place, never included her in the mental arithmetic of the plan. I reply, trying to stave off doubts and maintain course, “Yes, ma’am. If you could just point me to the modem, I’ll get to work.”  
+
 She smiles back at me, “Of course. One moment please. We just need to get the keys.”  
+
 The guard disappears up a flight of stairs that wind around the foyer, leading into the heart of the mansion. The woman turns to me and indicates to follow her, “This way please.”  
-    She leads me to the left, through a double door, into an enormous room with high ceilings that disappear into darkness. Rows of shelves and books break the room into avenues. The air reeks with the must of old paper. The woman says, “Emile will be back shortly. We shall wait here in the meantime.”  
+
+She leads me to the left, through a double door, into an enormous room with high ceilings that disappear into darkness. Rows of shelves and books break the room into avenues. The air reeks with the must of old paper. The woman says, “Emile will be back shortly. We shall wait here in the meantime.”  
+
 After a moment of awkward silence, the woman claps her hands and offers, “Would you like to see the family portraits?”  
+
 “—what?” I stutter.  
+
 “While Emile fetches the keys to the study,” She explains, “To pass the time, I mean”  
+
 “Oh,” I reply, groping for a response. The woman is an unexpected variable, throwing off my balance. Not knowing what to make of her, I venture blindly, hoping my response sounds natural enough, “Sure, why not?”  
+
 “This way,” She says, leading me to a wall of portraits. Lightheaded, I glide across the floor. With her back to me, my frantic eyes skitter across the library, searching for an opportunity to slip away.  
+
 “Ah, here we are,” The woman says, stopping in front of an ancient painting faded with age, “The first Hart, as far as we know, John Hart.”  
+
 The man in the portrait grimaces down at us with the face of a hollowed corpse. A wound he suffered in life left one side of his face lacerated with scars and a milky cataract in place of an eye.   
+
 “Do you work for the Harts?”  
+
 Her head cocks to the side and answers hesitantly, “I—yes, I do.”  
     
 I follow a line of portraits down a wall, old paintings of past Harts. The whole history of their family is contained in these pictures, I realize, as I pass the portrait of Jeremiah Hart, George Hart, all the way down to Elroy Hart. The senator stares at me from fifty years ago, a young man. His dark eyes peer out from the painting and find mine. Muscles clench. A fire burns in my stomach.   
+
 Where did this twisted story begin? Which one of these portraits marks the beginning of the Harts' downward spiral into the abyss of sadism? 
 
 The painting next to Elroy sends my head spinning. A blonde woman in a white dress leaning against a velvet armchair. Her blue eyes pierce through the canvas and leave me stranded in their gravity, with pupils like stained glass revealing the interior of her thoughts.   
+
 Victoria Eleanor Hart. Elroy's first wife. The brood mare who birthed these monsters into the world. She's been dead for nearly four decades, but if she stepped out of the painting right now and touched me, somehow, I wouldn't be surprised.   
 Something wiggles in my brain, an implication begging to be uncovered. I stare at the phantom in the painting. Why does she look so familiar?   
+
 The woman acting as my escort materializes at my side, “Ah, this would be the late Victoria Hart, the love of Elroy’s life.”  
+
 I turn from the painting and find myself looking at a live rendition of it. The woman standing next to me looks exactly like the portrait, I realize. The same eyes, the same hair, the same everything.   
+
 “Are you—” I stutter, words drippling over my lips, “Do you—”  
+
 “Sir,” The woman asks, “Are you okay?”  
+
 Wide-eyed, I blurt, grabbing her arm, “Are you?”  
+
 She pulls away from me, “Sir, get off—”  
+
 “Do you need help—” 
 
 “Alice?” A voice calls from the entrance of the library, interrupting our slipshod argument. It echoes through the shelves, "Is anyone in here?"   
+
 It's him.
 
 I skate through a haze and find myself in front of Abner Hart.  
+
 "Ah, yes," Abner says, his voice thick and slurred through his blubbering jowls, "My mother called you yesterday. I wish she would have consulted me first. We really don't have time for this right now."  
+
 He talks about Henrietta as if she were his real mother. Revulsion crawls up my throat, but I swallow it and nod. Abner continues talking, unaware of the hatred boiling through my body, "But you're already here, so do what you can I suppose," He continues, waving me through the double doors, leading me down hallways, "The modem is in the study down the hall here."   
+
 A guard meets us in the study. Abner explains, "I must attend to my mother. Emile here will see to your needs," He leaves me with the guard. Emile leads me to a mahogany desk and shows me the computer and the router. I pretend to have the slightest clue what I'm doing, unhooking the router and looking at the wires plugged into the back of the computer.   
+
 "It looks like the cable here goes down into the basement," I explain, assembling the best lie I can, "Can you show me where it comes out?"  
+
 A fog descends on me. I am vaguely aware of doors opening and long hallways. Emile leads me over paneled floors, down a flight of stairs into the stark white of a basement. Bright lights disperse shadows so that corners bleed into one another without definition. I step into the shapeless white of an infinite space. I am in a dream.  
+
 I follow Emile past a red-painted door floating in the void.  
+
 Around the corner, Emile opens another door and shows me an electrical room. Bundles of cords droop from above and weave into ceiling, the exposed roots of the Hart Estate stretching deep into the Earth below.   
+
 "Do you have a ladder?" I ask, pointing to the ceiling, "I need to get up there."   
 Emile grunts and disappears from the room. I wait several moments and then poke my head out the door. Glancing left and right, I find the hallway empty. My feet carry me into the blinding white, towards the looming red door.   
 As I reach for the doorknob, a sudden clanging jolts me from my trajectory. I turn and see Emile jogging towards me, the ladder he dropped rattling against the cold white floors. He grabs me and pulls me back, sneering, "You can't go in there."  
+
 "I-" I stutter, pushing past him towards the red door, "It looks like the cables in the ceiling feed over into this room."  
+
 He places a hand on my chest, preventing my forward progress, "You can't go in there."  
+
 "But I need to," I say. My muscles tense. The moment approaches; the reveal is coming; I can feel it. I sidestep him and place my hand on the knob.   
+
 He grabs me by the shoulder and yanks me back, "I said you can't go in there--"  
+
 "I can't fix the cable unless I can get to it," I lie through my teeth, "Do you want it fixed or not?"  
+
 Emile growls at me, "I guess we're getting satellite."  
+
 "Have it your way," I tell the guard. In a flash, I have the gun in my hand and there are three bullets buried in his groin. He collapses into a groaning mess. Another shot puts him out of his misery. The silencer Boyd gave me muffles the thunderous clap down to a low angry grumble. I crouch and glance around, waiting. The stairs remain empty.   
+
 One, I think.  
+
 In another life, at another time, I would pause and consider the monumental thing I have just done. But there's no time. The red door looms in my vision, begging to be opened. It's locked, but I find the key on the guard's body. I carefully step around the pool of blood growing around the motionless heap.   
+
 The door opens into pitch black.   
+
 I stumble through a haze of dizziness into the dark room. I hear breathing. Movement, metallic clinking, scrapping. I hit the light switch and I am greeted by a scene from a nightmare.  
+
 Five girls sit hunched against the far wall, draped in chains. They are linked together at the ankle, with both ends of the chain bolted to the wall. They all wear the same gray sweatpants and dirty white t-shirts. They all stare at me with the same blank expression of fear. They all have the same blonde hair and blue eyes.  
+
 "Rachel Walters," I say. The girl on the far end peaks up from behind her knees. She bursts out crying and huddles deeper into the corner. Her hair is a mess. She looks nothing like her photos.  
+
 I creep closer. One of the other girls begin howling in a language I don't understand. I glance at her with eyes of death and put my index finger to my lips, shushing her. She recoils in her chains and backs against the wall, retreating into silence.    
+
 I bend down in front of Rachel. Her eyes dart around in her skull like bouncing billiard balls.   
+
 "Are you Rachel Walters?"  
+
 She sobs, but otherwise doesn't reply.   
+
 "I'm not going to hurt you," I say, reaching out. She flinches where I touch her. I pull my hand back, "Your mother sent me to find you. Your mother, Lilly."  
+
 She doesn't react. I look around, searching for some way to get her out of these chains.   
+
 "Rachel," I say, turning back, "Where do they keep the keys?"  
+
 She's catatonic; There's no talking to her.   
+
 "Rachel," I explain, holding her shoulders between my hands, "I am here to take you back to your mother, but I need to get you out of these chains first--"  
+
 "The keys are in a cabinet in the hallway," One of the other girls replies. I look at the source of the reply, down through the series of girls, like a hallway of mirrors, each one the same, yet different. It's uncanny, how similar they look, as if they were chosen for that very reason...  
+
 They all look like Victoria Eleanor Hart, I realize.  
+
 The unknown girl continues squeaking, "Are you really here to save us?"  
+
 I don't reply, reeling from the sudden revelation of their appearances. I stagger into the hallway and trip over the corpse on the floor. A sharp pain jolts up my knees and sends daggers into my stomach. I stumble to my feet and crawl over the wall with my hands until I find the cabinet. I rip its door open and find a ring of keys, my fingers like alien digits balking at my suggestions.  
+
 I stumble back into the room in a near-drunken stupor.  
+
 Yanking the chains from Rachel's ankles, she begins to emerge from her catatonia. She looks at me with an expression of sheer terror. I grab her and hug her. I speak softly into her ear, "It's almost over. I need you to be brave for a little while longer. Can you do that for me?"  
+
 She meekly nods.  
+
 "Most of all," I continue, "I need you to do exactly what I say, when I say it. Do you understand?"  
+
 She nods again.  
+
 "What about us?" The girl who told me about the keys inquires.  
+
 I look at the others. A herd of eyes looks at me expectantly. I hand the closest girl the ring of keys and explain, "You too. Do what I say, and I will get you out of here. First, get yourself out of these chains."  
 While the other girls begin to free themselves, I pick Rachel up and brush her off. I take off my jacket and wrap her in it, covering her hair. The other girls are unlocking the shackles from their legs. I hold Rachel tight. The foreign girls begin wailing. I tell them to shush, but they don't seem to understand English. The moment the first of the wailing girls is free, she dashes for the door, but I grab her and push her back to the ground. The other girls look at me, frightened and uncertain of my intentions.  
+
 "You need to trust me," I explain, "I'm going to help you. I promise."  
+
 I gulp and glance around. I need to leave, I think. I need to get Rachel out of here. I pull her out into the hall, putting myself between her and the corpse crumbled on the floor.   
+
 "Stay here," I tell the girls in the room as I close the door, "I have a van out front, but the way isn't clear yet. I'll be back."   
-"You're taking her\!" One of them screams. I shut the door and lock it. I stuff the keys into my overalls and turn to face Rachel. I lead her around the corpse, hiding her face in my chest. She is crying, leaving a mess of snot and tears on my shirt.   
+
+"You're taking her!" One of them screams. I shut the door and lock it. I stuff the keys into my overalls and turn to face Rachel. I lead her around the corpse, hiding her face in my chest. She is crying, leaving a mess of snot and tears on my shirt.
+
 A voice from upstairs. A shout. Hurried footsteps. A man in a suit sprints down the stairs. I hold Rachel tight with one hand and my gun in the other. I fire three shots blindly. The figure tumbles down the remaining steps. We step over the body and I push Rachel up the flight of stairs. We leave the man groaning in a puddle of his own blood.   
+
 Two.  
+
 Our shadows follow us down long hallways.  
+
 In the lobby now. Almost free. Classical music drifts from upstairs down into the voluminous acoustics of the lobby.  I hear voices from the second floor. Laughter. Good. They have no idea what's just happened. I open the door to outside and find myself face to face with a guard.  
+
 Rachel slams against the door as the guard tackles me to the floor. The gun clatters against the marble tiles and spins at Rachel's feet. The guard head butts me, and I go blind. I have his throat in my good hand. With my broken hand, I dig a finger into his eye. He yelps in pain and then I have the advantage. We roll across the floor and I bury my fist in his mouth, grabbing his tongue. My broken hand shatters against his face. I bite his throat and feel his skin tear in my mouth. I taste a mouthful of his blood.   
+
 Then I have Rachel again. The guard is gurgling on the floor. My white overalls are red. I pick up my gun and then we are outside.   
+
 Outside the mansion, empty fields surround the house. I glance around, looking for more guards. On the driveway loop, Boyd stands beside the driver side door of the van with a gun drawn, staring at me in wide-eyed horror. I push Rachel into his hands.  
+
 "Take her," I tell Boyd, "I'm going back in."  
+
 Boyd's voice is shrill, "Are you out of your fucking mind?"  
+
 "There were more girls."  
+
 Boyd gapes at me, "What the fuck?"  
+
 I shake my head.  
+
 "Then go, Jesus," Boyd is holding Rachel, looking in my eyes, "Get it done. We've got to go."  
+
 I leave as Boyd ushers Rachel into the back of the van. I scan the fields, anxiety rippling through my body. After a moment, I duck back inside.   
+
 In the lobby of the mansion, I find a fork in the road. To the left, the basement and the other girls. To the right, laughter and the soft melodies of a piano.  
+
 A moment passes into an eternity as I stand there, unstuck in time. I am everywhere at once. I am standing by a river. Boyd is taking a gun out of my hands. Tiny arms clutch mine.   
+
 I follow the sound of classical music up a flight of stairs.   
+
 At the end of a hallway, I find a pair of doors cracked open. Light seeps from inside onto the carpet at my feet. I hear voices.  
+
 "–your brother?" A woman asks.   
+
 "Oh, mother," Abner replies, "You know Brandon, always disappearing. I'm sure he'll pop up eventually. Last time we found him in Texas shacked up with some seventeen-year-old boy. They had snorted or shot up at least a half million dollars before he had to use the credit card and we found him. That one was a mess. It was a good thing Father happened to know Governor Daimler or that could have turned into a situation.   
+
 "Besides," Abner continues, "With Chris in Washington with father, now I have you all to myself."  
+
 A wet kiss and then the whispered reply, "Oh, Abner," More laughter and the unnerving sound of pursed lips sucking flesh, "You need to get ready."  
+
 "Of course, mother," He says. A door shuts. Moments later, the pipes in the walls begin to hum, rumbling under my feet. I press my hand against the door to the master bedroom and gently swing it open.  
 Obscured through translucent curtains hanging from carved wooden posts, I find Henrietta naked on a bed, absently paging through a magazine, her back turned to me.  She is an overturned hourglass, poured out onto satin sheets. I study her for a moment and then glance around the room. Walking over to the dresser, I pick up the needle from the record player and the music stops.   
+
 "My, but you are insatiable today," She drawls. She licks a finger and flips a page with a single flowing twist of her wrist, "I'm tired, dear. Shall I have Alice fetch one of the girls?" She turns to reveal herself to me. She's in her fifties, but money has halted the deterioration of age. Her body on another woman would be beautiful; I am repulsed by the sight of her. Surprise electrifies her eyes, “You—No, listen—please—"   
+
 She barely has time to cover herself before I put two slugs in her chest.   
+
 The deadened thumps from the silencer draw a response from a cracked bathroom door, "What's all the commotion, mother? Are you being naughty?"  
+
 Abner Hart emerges from a cloud of steam wearing only a towel. The towel drops to the floor when he sees Henrietta drowning in a pool of her blood and me standing patiently by the bedside.  
+
 He turns to flee. I pull the trigger. Three flashes alight the room in rhythmic sequence.   
+
 I walk up to Abner's twitching body. I unload my clip until he stops moving, but it's useless. By the end, I might as well be treading water. I feel no relief. I tuck the gun into my belt, and I leave. 
 
-\*
+---
 
 When the last girl is loaded into the van, I gaze around at the lifeless Hart Estate. A wind whistles through blades of yellow grass. To the west, the sun has started its downward trajectory through the sky, arcing towards its target: New Harford.    
+
 It's over, I think, as I crawl into the passenger seat next to Boyd. But it doesn't feel over. I peel off my blood-stained overalls and kick them under the seat. A few puddles have soaked through to my undershirt. I pull on Boyd's jacket and button up, covering the evidence of my crime best I can. Boyd pretends not to notice.   
+
 The van creeps to a stop in front of the gate. Boyd waves to a guard watching television in the guardhouse. The guard, blissfully unaware of the carnage just unleashed in the mansion, lets us back through without issue. Boyd pulls onto the dirt roads and lets out of a gasp.   
+
 He looks behind him, where the girls have sheltered in one another's arms. He shrugs and asks, "What are we supposed to do with the rest of them?"  
+
 I glance back at the gaggle of girls huddled in the back of the van. I reply, "You need to find their parents. Make sure they are safe, and no one can find them," I explain, "It's very important you make sure the girls are safe. There's no telling who was involved with this, how high up they go. If they get the chance, they will silence them. Just like they did with Dakota. Do you understand?"  
+
 Boyd nods. After a moment, he looks at me askance and asks, "And what are *you* going to do?"  
+
 The landscape flies past the window as I stare out into the world, streaking pastels blurring into a muddy dream, churning green and brown rippling like a river. I reply, "I'm going to make sure this never happens again."   
+
 He opens his mouth to reply but finds no suitable words.  
+
 "Don't forget," I explain, "In three days, get that money to Big Wally."  
+
 Boyd finally finds his tongue, but I cut him off by slipping between the driver and passenger seats into the back of the van. I sit down beside Rachel. She clutches the sleeves of my jacket and pulls it snug around her shivering body. The other girls watch us.  
+
 I hug the shivering girl tight as Boyd steers the van, directing us down dirt roads, back towards civilization. I'm shaking again; It's too much, this image pulled from a parallel universe. I'm holding a strange girl. I'm holding my daughter.    
+
 "You're safe now," I tell her, "We're taking you to your mother."   
+
 I reach into the front seat and retrieve my bag. A familiar object rests at the bottom. I hand Rachel back her diary. Her trembling grip matches mine. I add after a few seconds, "I prefer Stevie."  
+
 The sound that escapes her lips is the stepchild of a laugh and a sob. The girl is broken, crazed. I hold her head against my chest and whisper delicately into her ear, "It's okay. They're gone.   
+
 "I saved you, baby girl." 
 
-\*  
-    
+---
+
 The girls in back nervously chatter to one another as I sit and wait.   
+
 From the windshield, I watch Boyd deliver Rachel to Esmeralda's doorstep. Lilly materializes in the doorway.  Her eyes go wide, and she collapses onto her knees, wrapping her arms around Rachel. An engulfing hug from a disbelieving mother. A trembling girl snatched from the jaws of death.  Boyd awkwardly standing by the door, glancing back at me.   
+
 I crawl out behind the van and light up a cigarette, letting them have their moment in privacy. This is something that doesn't belong to me. I am of a different world. A quiet minute where I collect my thoughts in the shadows of the city street, smoke hovering around my face in stringy clouds. One last thing to do. One more item on the list.   
+
 "Got one for me?" Lilly appears by my side.   
+
 I hand her a cigarette, conscious of the way her fingers graze mine as she takes it from me.   
+
 "You shouldn't smoke, you know," She says as she lights her cigarette up, "It's bad for you."  
+
 "Now you tell me."  
+
 We both laugh uncontrollably, like a gaggle of a maniacs.   
+
 After a moment, I begin to explain the next few days to her, "Boyd's stay with you for a while. He's going to have some money for you in a few days and then he's going to take you to see someone called the Cleaner. He'll get you and Rachel out of the country under fake names," She processes the news without reaction. I continue, "Leave, Lilly. Take Rachel and leave. Don't come back."  
+
 She steps closers, hovering near, her fingers touching mine again, working their way into the crook of my mangled digits, grasping, "Come with us."  
+
 There it is. A doorway to another life, to a happy ending.  An offer another version of me would happily accept. But that would be leaving things half-done. And that's not who I am. I explain, "I can't, Lilly. It's not over yet. She's still not safe."  
+
 She chews on my response a moment, "Will I see you again?" She asks. Her face is inches from mine.   
+
 "I'll find you when this is all I over," I lie, "I promise."	  
+
 "How will you know where we are?"  
+
 I smile sadly, "It's what I do."  
+
 She kisses me. Her hand slides down my back. I feel the notches in her spine through my unbroken fingers. She pulls back and I taste her breath.  
+
 "Bring her back to life," I say, grabbing her hand, "For me."  
+
 Her lips draw close to mine again. Another moment to be conjured in the coming days. She says her name, "For Julia." 
 
-\*
+---
 
 Boyd drops me off at Lilly's van. I glance back at the girls once last time, but I don't say good-bye. Instead, I leave without a word. Boyd says something, but the door slams shut and then I am alone. We stare at each other through silent glass. He frowns. I spark up my last cigarette and turn to leave, walking down the dark streets of New Harford.   
+
 I buy an envelope from an all-night pharmacy. Inside, I deposit the stack of DVDs I took from Brandon's house. My right hand is now entirely useless, palsied and paralyzed beyond feeling, so I make do scratching out an address on the front of it with an unsteady left hand.  
+
 *To: Lynn Martin.*    
+
 Someone has to tell this story and it can't be me. Where I am going, there will be no justice. 
 
-\*
+---
 
 A switch flips and light pours into the darkness of the storage shed. Mr. Hart is huddled in the corner with wild eyes. He's managed to get a few strips of duct tape unwound from his face, but enough remains to keep the sock planted firmly in his mouth. Snot and mucus trail down his cheeks in slick streams. He's been beating himself silly against the wall, but to no avail. He's still mine.  
+
 He grunts and heaves as I approach, flopping helplessly on the ground like a beached fish.  
+
 "I have Rachel," I tell him, lowering myself onto one knee so that I can address him at eye-level, "The other girls, too."  
+
 His muffled reply chokes on the sock stuffed down his throat. I yank the slimy rag from his mouth and fling it aside. He gasps in between heavy breaths, "Water. Please"  
+
 I smile and cock my head at him, "I know the accommodations here are pretty lavish, but this isn't a fucking hotel, Brandon."  
+
 "You have her," His rasping voice grates like sandpaper up his throat, "Let me go. My father will forget this ever happened, I promise," His voice shatters into high-pitched shards, "Just let me walk away."   
+
 I shake my head, "No."   
+
 "What?" He stutters, "You don't understand. You have to--"  
+
 "That's where you're wrong, Brandon," I explain, "I don't have to do anything. After what I did, there's no walking away from any of this."  
+
 His eyes go wide as dinner plates, "What did you do?"  
+
 I pause and smile at him.  
+
 "I killed your brother and your step-mother," I reply, adding after a moment, "Some guards, too. Don't think they'll make the headlines, though." 		  
+
 "You--what?" He stares at me in gaping disbelief.   
+
 For some inexplicable reason, perhaps because I know he's already dead, but fate hasn't had the chance to catch with him yet, I find myself explaining, "I gunned them down while they were defenseless. I could have left them alone. There was a moment where I could have..." I drift off, losing my train of thought. A stairwell or a hallway. A simple choice. Not even a choice, really.  
+
 Dredging myself from my thoughts, I reply without further explanation, "Anyway, it's done."  
 He balks at my story and swallows hard through dry, cracked lips. He asks with delicate words, "Which brother?"  
+
 I arch an eyebrow at him curiously, "Does it matter?"  
+
 "Yes."  
+
 "Abner," I shrug. 	   
+
 I glimpse fragments of mental arithmetic cascading behind his eyes as pinpoint pupils dart chaotically around in red-veined white. Filtering the information, I've given him down into its salient variables and processing it through cold logic gates, he remains silent for moments on end. At last, I realize, I am talking to the real Brandon Hart. He finally replies, "It's not too late. For the girls, I mean. I trust you know you're a dead man."  
+
 I nod in grim affirmation.  
+
 "Let me go and I promise the girls will be safe,"  	  
+
 "No."  
+
 "What do you want?" Flailing blindly, he probes at my defenses, falling against cold steel, "Money?"  
+
 "No."  
+
 "The mother. Millie," Another sortie, waiting at the gates to be slaughtered, "We can deposit eight figures in a Swiss bank account for her--"  
+
 Without a moment's hesitation, the reply comes automatically, "No."  
+
 "Don't you understand?" He pleads frantically, "You don't have a choice. You have no idea what you're up against--"  
+
 "Oh, I have some idea," I respond, "Don't sell me short, Brandon. I know what you are. I see you."  
 He sneers, an ugly expression contorting his mangled face into a demonic avatar, "Then you know you won't win. It wasn't just me and my brothers. People in places of power that could crush you with a single phone call, a world you can't imagine. We're everywhere. The media, the police, the government. We own it all. There's nowhere you can go."  
+
 "I know," I reply.  
+
 "Then what's the point?" He breaks down, the menace dissolving from his face, "What are you trying to—to accomplish?"  
+
 "I've thought about it," I sigh, rubbing my chin, "I thought it was about Rachel, but now that she's safe, I know that isn't true. I can't justify it to myself anymore, but I know what I'm going to do. I know what I am now," I pause, before adding,  "I'm going to kill your entire family," I explain with gritted teeth, peering down at the pathetic heap of a man at my feet, "All of them, until the Hart name is a distant memory, a footnote in a forgotten history book."  
+
 My reply hangs thick in the air. Brandon Hart chokes.   
+
 Fear consumes him. He shivers and shakes. He fights against his constraints, pulling wildly at the knotted mess of chain and rope that sheathes his entire body. I let the moment stretch into long minutes, savoring it, watching him in a motionless daze, until it's clear even to him that it's pointless. His vain struggle peters out and he goes slack as a ragdoll. Tears pour over his cheeks in wheezing tremors. His garbled voice asks a single question, "Why?"  
+
 Standing up, I reply, "I thought about asking you the same," I pull the 38 from my belt and turn it over in my palm, inspecting the dull gray metal, "But we're different creatures, you and I. Incapable of communicating. You could tell me, explain in great detail, but I wouldn't understand, no matter what you said. The same way I will never understand the barking of a dog. But everyone knows when a dog has to be put down," I chamber a round and watch Brandon's gutless, winching reaction, "But I'll tell you what, I'll throw you a bone before you have to go," I lean closer. He flinches when I press the barrel of my gun into the meat of his gullet, but I grab a handful of hair with my good hand and pull his head tight against the cool concrete of the shed floor. I whisper into his ear, wet syllables poured into the brine of his final moments, "It's no great mystery, Brandon," I declare, "I'm just doing my job."  
 And then I put a bullet through his skull. 
 
@@ -5465,6 +5807,7 @@ On an impromptu dais, McMullen stands behind a podium in a crisp, pressed suit. 
 "Commissioner! Do you have a suspect?"  
 
 "We have a suspect and several leads, but due to the nature of the crime, we are keeping this investigation secret until he has been apprehended--"  
+
 "So, it is a male--"  
 
 I duck into the public restroom. The news cast thuds against the door, muffled into dull words. I lock myself in a stall and search through my bag, sifting through the few remaining possessions I can still claim to own. Anxious thoughts chase me around in my head. As I pull a pair of scissors from the depths of the bag, I silently hope Boyd will be able to empty my bank account before they find and freeze all my assets, if they haven't already.   
@@ -5472,6 +5815,6 @@ I duck into the public restroom. The news cast thuds against the door, muffled i
 The scissors sheer through my passport. Strips of paper swirls down the toilet like pinwheels caught in a breeze. Next, I grab fistfuls of hair and cut chunks from my head. Strands of hair dance atop the water in tangled constellations.   
 A speaker hanging on the wall next to the restroom entrance blares, "The bus to Washington DC will depart in five minutes. Please proceed to the boarding area."  
 
-I leave the bathroom with ribbons of hair still clinging to my scalp. Pulling a hood over my head, bristles of hair adhere to the soft cotton like Velcro. The bus driver clips my ticket and I find seat in the back, away from curious eyes. My mangled hand slips into the bag on my lap and finds a resting spot on the grip of my 38\. With every passenger that steps on the bus, my one good finger grazes against the trigger, reassuring myself that I am in control. That I know what I am doing.   
+I leave the bathroom with ribbons of hair still clinging to my scalp. Pulling a hood over my head, bristles of hair adhere to the soft cotton like Velcro. The bus driver clips my ticket and I find seat in the back, away from curious eyes. My mangled hand slips into the bag on my lap and finds a resting spot on the grip of my 38. With every passenger that steps on the bus, my one good finger grazes against the trigger, reassuring myself that I am in control. That I know what I am doing.   
 
 The bus pulls onto the road and then up a ramp onto the highway. New Harford dwindles in the distance, mountains pulling back across it like curtains on a stage.

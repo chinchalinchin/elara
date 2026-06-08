@@ -8,6 +8,6 @@ Archive
    :maxdepth: 1
    :caption: Contents:
 
-   .novels/000
-   .stories/000
-   .stories/001
+   000
+   001
+   002
