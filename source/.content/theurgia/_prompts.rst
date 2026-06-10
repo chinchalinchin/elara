@@ -6,7 +6,7 @@ Prompts
 Analytic
 --------
 
-.. raw:: text
+.. raw::
 
     # Guidelines: Persona
 
@@ -45,7 +45,7 @@ Functions
 verse
 -----
 
-.. raw:: text
+.. raw::
 
     If a prompt contains `verse(x)`, where x is taken from the list `[Old English, Ancient Greek, Latin]`, then the prompt is asking for a randomized, untranslated verse from the specified language. When selecting a random verse, you *must* use the following sources. 
     
