@@ -1,7 +1,69 @@
+===========
 Ad Absurdum
 ===========
 
 - Authored: 2013
+
+Responses
+=========
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - Mar 20, 2019
+    - Urban Farmhouse Press
+    - Rejected
+  * - Mar 21, 2019
+    - Conium
+    - Rejected
+  * - Mar 21, 2019
+    - BatCat Press
+    - Rejected
+  * - Mar 21, 2019
+    - The University Press of SHSU
+    - Rejected
+  * - Mar 21, 2019
+    - Fantasy & Science Fiction
+    - Rejected
+  * - Mar 21, 2019
+    - Clarkesworld
+    - Rejected
+  * - Mar 21, 2019
+    - New England Review
+    - Rejected
+  * - Mar 21, 2019
+    - Massachusetts Review
+    - Rejected
+
+.. epigraph::
+
+    Thank you for considering us, but we're going to pass on this one.
+
+    While the writing style is entertaining, I'm afraid the plot isn't as
+    well developed early enough for it to hold my attention as much as I'd like.
+
+    I wish you well in placing this piece elsewhere, and hope you consider
+    us for future submissions.
+
+    In the interest of statistics, we encourage you to post responses to The
+    Submission Grinder at http://thegrinder.diabolicalplots.com
+
+    -- Dawn Lloyd, Editor in Chief, The Colored Lens, www.thecoloredlens.com
+
+.. epigraph::
+
+    Dear Grant,
+
+    Thank you for giving me a chance to read "Ab Absurdum." Unfortunately, this story didn't win me over -- in part, I thought the narrative would work better if it was tighter -- and I'm going to pass on it for Fantasy & Science Fiction. But I wish you best of luck finding the right market for it and hope that you'll keep us in mind in the future.
+
+    -- C.C. Finlay, Editor, Fantasy & Science Fiction, fandsf.com | @fandsf
+
+Content
+=======
 
 .. epigraph::
 

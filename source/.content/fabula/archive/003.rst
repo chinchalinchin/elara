@@ -1,7 +1,32 @@
+================
 The Long Goodbye
 ================
 
 - Authored: 2018
+
+
+Responses
+=========
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 18, 2020
+    - Donald Mass Literary Agency
+    - Rejected
+  * - April 18, 2020
+    - Nelson Literary Agency
+    - Rejected
+  * - April 18, 2020
+    - BookEnds Literary Agency
+    - Rejected
+
+Content
+=======
 
 My knees sink into the muck. The overhead clouds catch and throw back down to the ground the flashing lights coming from the mess of ambulances and firetrucks, a swirling display of light coating everything in shifting colors. Vague shades that in life were people move through the kaleidoscopic commotion. Beside them, a river rushes through the dark, spotlights shining down on a section of it, revealing the churning green surface.    
 

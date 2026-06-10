@@ -1,7 +1,25 @@
+========
 Hegeline
 ========
 
 - Authored: 2016
+
+Responses
+=========
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - Mar 20, 2017
+    - Asimov's Magazine
+    - Rejected
+
+Content
+=======
 
 In the third octant of the Magellan cloud, two dueling suns circled one another, each movement measured in the other’s calculated steps that kept them opposed. Around this cosmic standoff, a chorus of planets clustered in orbits, skirting the boundaries of the elliptic. Among these mostly unremarkable rocks, the second planet from the center stood out, its surface buzzing with activity as tubular shuttles ferried cargoes to and from merchant cruisers docked in orbit. Hegeline had been one of the first planets colonized in the Great Expansion following the unification of the Imperium from the remnants of the various space empires that had survived the System Wars. Originally controlled by a preindustrial society of natives called sardanians, an amphibiod race summoned in their prehistory from the sullen swamps on their planet’s equator, who thought themselves alone in the universe, contact with the Imperium had transformed Hegeline, leveling its culture and upsetting its social order in a single generation with imperial technology and influence.
 
