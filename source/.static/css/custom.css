@@ -134,6 +134,15 @@ nav.contents {
     background-color: var(--color-background-panel);
 }
 
+.wrap pre {
+    white-space: pre-wrap !important;       /* CSS3 */
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap !important;      /* Opera 4-6 */
+    white-space: -o-pre-wrap !important;    /* Opera 7 */
+    word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    overflow-wrap: break-word !important;   /* Modern browsers */
+}
+
 /* -- Sidebar Navigation Expansion Animation -- */
 
 .bd-docs-nav details[open] > ul {
