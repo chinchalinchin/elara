@@ -1,5 +1,4 @@
-.. This document is formatted in RestructuredText (RST)
-.. 
+.. _prompts:
 
 Prompts
 =======
