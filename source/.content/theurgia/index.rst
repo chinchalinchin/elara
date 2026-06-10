@@ -10,3 +10,4 @@ Theurgia
 
    palindromics/index
    poetics/index
+   _prompts

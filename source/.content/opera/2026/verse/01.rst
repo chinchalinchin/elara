@@ -1,5 +1,3 @@
-.. TASK: Give an honest assessment.
-
 -----------------
 Paradise Revealed
 -----------------
@@ -1124,7 +1122,7 @@ Book 2
     - Status
   * - April 25, 2026
     - Asimov's Science Fiction Magazine (Book I)
-    - Pending
+    - Rejected
   * - April 25, 2026
     - Clarkesworld (Book I)
     - Rejected
