@@ -38,7 +38,10 @@ Responses
   * - Mar 21, 2019
     - Massachusetts Review
     - Rejected
-
+  * - Mar 21, 2019
+    - World Castle Publishing
+    - Rejected
+    
 .. epigraph::
 
     Thank you for considering us, but we're going to pass on this one.
