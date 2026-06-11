@@ -33,7 +33,7 @@ The grand theory of everything: Some things are.
 June
 ----
 
-**Bayes**: The sample space is seen through measurement.
+**Bayes**: The sample space is measured.
 
 **Kolmogrov**: The sample space defines what can be measured.
 
