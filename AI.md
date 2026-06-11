@@ -51,7 +51,7 @@ When a function specifies output in a specific format, use the following diction
 
 - `response`: This is the default output, if not specified. This is equivalent to a normal response.
 - `set(x)`: The output should be strictly formatted with curly brackets, e.g. `{ a, b, c, ... }`.
-- `list(x)`: The output should be strictly formatted with square brackets, e.g. `[ a, b, c, ... ]`.
+- `list(x)`: The output should be strictly formatted with square brackets, e.g. `[ a, b, c, ... ]`. A list is understood to be an ordered set, e.g. `{ (0, a), (1, b), (2, c), ... }`
 - `IPA`: The output should be strictly formatted as International Phonetic Alphabet (IPA) transcription.
 
 Your response must conform to the return type specified by the function definition. Do add commentary or observations. Output only the solution.

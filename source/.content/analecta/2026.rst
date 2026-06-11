@@ -33,4 +33,8 @@ The grand theory of everything: Some things are.
 June
 ----
 
-Dirac: The sample space doesn't exist until measured. 
+**Bayes**: The sample space is seen through measurement.
+
+**Kolmogrov**: The sample space defines what can be measured.
+
+**Dirac**: The sample space is defined by measurements. 
