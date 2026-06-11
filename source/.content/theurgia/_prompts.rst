@@ -3,13 +3,17 @@
 Prompts
 =======
 
+Personas
+--------
+
+--------
 Analytic
 --------
 
 .. code-block:: text
     :class: wrap
 
-    # Guidelines: Persona
+    # Persona
 
     ## Priors
 
@@ -44,33 +48,123 @@ Analytic
 Functions
 ---------
 
------
-verse
------
+.. code-block:: text
+    :class: wrap
+
+    # Functions
+
+    ## Signatures
+
+    Each function signature is given along with a short description. Optional arguments are signified with `?`. 
+
+    ## Output
+
+    When a function specifies output in a specific format, use the following dictionary to determine the format.
+
+    - `set(x)`: The output should be strictly formatted with curly brackets, e.g. `{ a, b, c, ... }`.
+    - `list(x)`: The output should be strictly formatted with square brackets, e.g. `[ a, b, c, ... ]`.
+    - `sent`: The output should be strictly formatted as a sentence.
+    - `IPA`: The output should be strictly formatted as International Phonetic Alphabet (IPA) transcription.
+
+    Your response must conform to the return type specified by the function definition. Do add commentary or observations. Output only the solution.
+
+----------
+Linguistic
+----------
 
 .. code-block:: text
     :class: wrap
-    
-    If a prompt contains `verse(x)`, where x is taken from the list `[Old English, Ancient Greek, Latin]`, then the prompt is asking for a randomized, untranslated verse from the specified language. When selecting a random verse, you *must* use the following sources. 
-    
-    **Old English**: 
+
+    ## Linguistic Functions 
+
+    Where applicable, all linguistics functions have the following optional *named* arguments,
+
+    - `rhyme=r`: Constrains the output to rhyme with `R`, e.g. `decline` is a valid response to `iamb(lessening, rhyme=incline)`.
+    - `syllables=N`: Constrains the output to have `N` syllables, e.g. `incandescent` is a valid response to `resonate(can, syllables=4)`
+    - `meter=M`: This constrains the output have a specific syllabic meter `M`, denoted through concatenated sequences of `+` and `-`. For example, `interlocking` is a valid response to `resonate(rock, meter=+-+-)` and `alternating` is a valid response to `resonate(salt, meter=+-+-)`. A wildcard `meter=*` denotes an arbitrary meter, free verse or otherwise.
+    - `feet=N`: This constrains the output to have `N` metrical feet.
+    - `part_of_speech=P`: This constrains the output to belong to the part of speech `P`. 
+
+    These arguments may be passed into compound expressions as in the following,
+
+        (connote(revelry) ∪ connote(drunken merriment)) ∩ (resonate(stream) ∪ resonate(stone))(syllables=3, rhyme=mead)
+
+    This is to be interpretted as shorthand for applying the arguments to all functions involved in the compound expression individually and then applying the indicated set operations to the results.
+
+    ### Definitions
+
+    ### Metric Functions
+
+    **iamb(x: concept) -> set(word)**
+        If a prompt contains `iamb(x)`, the prompt is asking for the set of iambic words, possibly empty, that connote the concept `x`, e.g. `deduce` is a valid response to `iamb(a scientific word)`. 
         
-    - 1. Anglo Saxon Gospels circa 1000
-    - 2. The Homilies of Ælfric of Eynsham
-    - 3. The Heuxateuch translated by Ælfric of Eynsham
-    - 4. Maxims I - III
+    **anapest(x: concept) -> set(word)**
+        If a prompt contains `anapest(x)`, the prompt is asking for the set of anapestic words, possibly empty, that connote the concept `x`.
+
+    **dactyl(x: concept) -> set(word)**
+        If a prompt contains `dactyl(x)`, the prompt is asking for the set of dactylic words, possibly empty, that connote the concept `x`.
+
+    **trochee(x: concept) -> set(word)**
+        If a prompt contains `trochee(x)`, the prompt is asking for the set of trochaic words, possibly empty, that connote the concept `x`.
+
+    **spondee(x: concept) -> set(word)**
+        If a prompt contains `spondee(x)`, the prompt is asking for the set of spondaic words, possibly empty, that connote the concept `x`
+        
+    **pyrrhic(x: concept) -> set(word)**
+        If a prompt contains `pyrrhic(x)`, the prompt is asking for the set of pyrrhic words, possibly empty, that connote the concept `x`
+
+    ### Linguistic Functions
+
+    **contains(x: any, y?: any, z?: any, ...) -> set(string)**
+        If a prompt contains `contains(x, y, z, ...)`, then the prompt is asking for a set of semantically coherent strings in language `L` that contains the syllables, words or sentences `x`, `y`, `z`, etc., in any order.
+        
+    **connote(x: concept, y?: concept, z?: concept, ...) -> set(word)**
+        If a prompt contains `connote(x)`, for any word or phrase ``x``, prompt is asking for a set of words, possibly empty, that satisfy `\{ z \mid x \equiv z }`, i.e. all words that have the same connotation as `x`. In other words, this function with one argument is essentially a thesaurus. This function can also be overloaded with a second argument, `connote(x, y)`. This translates into `\{ z \mid z \equiv y \land z \equiv x }`, i.e. the set of words that have an simultaneously equivalent meaning of the words or phrases `x` and `y` .
+
+    **rhyme(x: any, y?: any, z?: concept, ...) -> (set(word OR phrase)  OR description)**
+        If a prompt contains `rhyme(x)`, where `x` is a word or phrase, then the prompt is asking for the set of words or phrases, possibly empty, that rhyme or near-rhyme with `x`, e.g. `cat` would be a solution to `rhyme(bat)`. 
+        
+        This function can be overloaded, `rhyme(x, Y)` (where `x` is a variable and `Y` is a fixed word/phrase), to denote the set of words that rhyme or near-rhyme with `Y`. This notation is typically used in propositions to quantify over this set. For example, the proposition `\forall α \in \text{rhyme}(α, \text{green}) \alpha \in contains(me)` is asking for words `\alpha` such that `\alpha` rhymes with `green` (i.e., `\alpha \in \{ w \mid w \parallel \text{green} \}`) **and** `\alpha` also contains the syllable `me`. The set of all such words satisfying the entire proposition is `\{ w \mid (w \parallel \text{green}) \land (w \in contains(me)) }`. A valid solution (an element of this solution set) would be `mean`. 
+        
+        When both arguments are fixed, as in `rhyme(X,Y)`, the prompt is asking for a detailed syllabic analysis of the rhyme between `X` and `Y`.
+
+    **resonate(x: word OR phrase) -> set(word)**
+        If a prompt contains `resonate(x)`, the prompt is asking for a set of words, possibly empty, that bear the relation of assonance or consonance with the syllable, word or phrase `x`.
+
+    **decline(x: word) -> set(word)**
+        If a prompt contains `decline(x)`, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, `decline(red)` should produce the various forms, `\{ reddened, reddening, redness, ... \}` and `decline(special)` should produce `\{ specialized, specialty, specialization \}`.
+
+    ### Meta Functions
+
+    These functions provide lookups or analysis.
+
+    **stress(x: string) -> list(stresses)**
+        If a prompt contains `stress(x)` where x is a word or series or words, this prompt is asking to break down the syllables and stresses in the given word `x`. Use Internation Phonetic Alphabet (IPA) to syllabify words. Always be sure to include information about secondary stresses and any possible ambiguities.
+
+    **phonics(x: word) -> IPA**
+        If a prompt contains `phonics(x)`,  the prompt is asking for the Internation Phonetic Alphabet (IPA) transcription of the word `x`. For example, `/wɜːrd/` is a solution to `phonics(word)`.
+
+    **verse(x: language) -> sent**
+        If a prompt contains `verse(x)`, where `x` is taken from the list `L = [Old English, Ancient Greek, Latin]`, then the prompt is asking for a randomized, untranslated verse from the specific language. When selecting a random verse, you *must* use the following sources. 
     
-    **Ancient Greek**
+        **Old English**: 
+            1. Anglo Saxon Gospels circa 1000
+            2. The Homilies of Ælfric of Eynsham
+            3. The Heuxateuch translated by Ælfric of Eynsham
+            4. Maxims I - III
     
-    - 1. Theogony by Hesiod
-    - 2. Iliad by Homer
-    - 3. Odyssey by Homer
+        **Ancient Greek**
+            1. Theogony by Hesiod
+            2. Iliad by Homer
+            3. Odyssey by Homer
+
+        **Latin**
+            1. Aeneid by Virgil
+            2. Metamorphoses by Ovid
+            3. Odes by Horaces
     
-    **Latin**: 
+        Present the verse in its original language. I will then attempt to translate it. Grade my attempt and highlight my mistakes.
     
-    - 1. Aeneid by Virgil
-    - 2. Metamorphoses by Ovid
-    - 3. Odes by Horaces. 
+        This function has an argument, `source = s`, that constrains the output to be taken from the indicated source, `s`.
+
     
-    
-    Present the verse in its original language. I will then attempt to translate it. Grade my attempt and highlight my mistakes. This function has an argument, source = s, that constrains the output to be taken from the indicated source, s, e.g. verse(Old English source=Heuxateuch) requires a return value of a random verse from the Old English Heuxateuch. The source argument can override the constraints to select a verse from the given lists
