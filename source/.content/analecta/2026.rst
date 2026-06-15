@@ -37,4 +37,4 @@ June
 
 **Kolmogrov**: The sample space defines what can be measured.
 
-**Dirac**: The sample space is defined by measurements. 
+**Dirac**: The sample space is created by measurements.
