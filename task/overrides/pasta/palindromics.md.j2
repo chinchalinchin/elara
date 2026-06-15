@@ -1,0 +1,23 @@
+{% set root = "/Users/gmoore/Home/projects/elara/" %}
+{% set sections                 = [
+    "source/.content/theurgia/palindromics/introduction/index.rst",
+    "source/.content/theurgia/palindromics/introduction/intro-i_overview.rst",
+    "source/.content/theurgia/palindromics/introduction/intro-ii_motivation.rst",
+    "source/.content/theurgia/palindromics/section-i/i-i_formalization.rst",
+    "source/.content/theurgia/palindromics/section-i/i-ii_strings.rst",
+    "source/.content/theurgia/palindromics/section-i/i-iii_words.rst",
+    "source/.content/theurgia/palindromics/section-i/i-iv_sentences.rst",
+    "source/.content/theurgia/palindromics/section-i/i-v_summary.rst",
+    "source/.content/theurgia/palindromics/section-ii/ii-i_delimiters.rst",
+    "source/.content/theurgia/palindromics/section-ii/ii-ii_pivots.rst",
+    "source/.content/theurgia/palindromics/section-ii/ii-iii_reductions.rst",
+    "source/.content/theurgia/palindromics/section-ii/ii-iv_palindromes.rst",
+    "source/.content/theurgia/palindromics/section-ii/ii-v_summary.rst",
+    "source/.content/theurgia/palindromics/section-iii/iii-i_priors.rst",
+    "source/.content/theurgia/palindromics/section-iii/iii-ii_postulates.rst",
+] %}
+
+{% for sect in sections %}
+{{ file(root+sect) }}
+
+{% endfor %}

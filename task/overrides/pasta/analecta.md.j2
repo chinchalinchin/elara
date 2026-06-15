@@ -1,0 +1,18 @@
+{% set root = "/Users/gmoore/Home/projects/elara/" %}
+{% set years                 = [
+    "source/.content/analecta/2012.rst",
+    "source/.content/analecta/2014.rst",
+    "source/.content/analecta/2015.rst",
+    "source/.content/analecta/2016.rst",
+    "source/.content/analecta/2021.rst",
+    "source/.content/analecta/2022.rst",
+    "source/.content/analecta/2023.rst",
+    "source/.content/analecta/2024.rst",
+    "source/.content/analecta/2025.rst",
+    "source/.content/analecta/2026.rst"
+] %}
+
+{% for year in years %}
+{{ file(root+year) }}
+
+{% endfor %}

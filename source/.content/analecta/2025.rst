@@ -191,6 +191,10 @@ The important point in this formalization is that the token and the representati
 
 In other words, this model seems to assert that when a speaker utters "*the cat is here*", the speaker is necessarily comprehending the word "*cat*" indirectly as the result of applying a :math:`\text{singular}()` operator to an underlying *essence*. Linguistics, it seems, has an implicit stance on the Aristotelian problem of the Universal, namely that universals exist, insofar as language is concerned.
 
+---
+
+at dusk the grass evaporates into droplets of fire. 
+
 .. _creation-myths:
 
 --------------
@@ -659,6 +663,10 @@ Language does not seem possible without admitting that it's nature is inextricab
 
 ---
 
+never trust the motives of a fancy haircut.
+
+---
+
 .. epigraph::
 
     Where but to think is to be full of sorrow.
@@ -825,6 +833,16 @@ Consider selecting a random word with :math:`M` characters. If the event of each
 
 
 This shows, as the number of characters in a word increases, the probability of it being reflective drops exponentially. In other words, there is a combinatorial reason for reflective words occuring more frequently within the intersection of monosyllabic words. Monosyllabic words, by their nature, cannot be iambic. Moreover, monosyllabic words are finite, if it assumed every language has some upper bound for its syllabic lengths, e.g. the longest syllable in English is typically cited as 9 ("scrunched"). Once the monosyllabic words of a language have been assigned meanings, the possibility of randomly generating new reflective words diminishes rapidly. Therefore, as the number of words in a language increases, the probability of :math:`P(R | M_{-+})` decreases. 
+
+---
+
+.. epigraph::
+
+    if only hearts could feel the heat
+    their leaves receive on summer days. 
+
+    instead they spiral incomplete
+    and branch their bodies like a maze.
 
 .. _october-2025:
 
