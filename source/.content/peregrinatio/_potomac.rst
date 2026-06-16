@@ -73,7 +73,7 @@ It is a river flowing through never-ending mountains. It is felt in the incompre
 
 The current, grown bold from rain, strains the muscles which fight against it.
 
-Despair is the annihilation of the soul, the loss of all earthly attachments. It is the destruction of a family, te loss of all love and worth, the abject and base alienation of the self from the world. Despair is the malaise of not being known to anyone but one's self. It is the realization that one is alone without the possibility of it being otherwise.
+Despair is the annihilation of the soul, the loss of all earthly attachments. It is the destruction of a family, the loss of all love and worth, the abject and base alienation of the self from the world. Despair is the malaise of not being known to anyone but one's self. It is the realization that one is alone without the possibility of it being otherwise.
 
 The self has been called by some a *strange loop*, an epiphenomenon of recursion on nigh infinite scales, a specialized geometry, a mathematical curiosity inevitably spun from the permutations of the finite. But this is incorrect. The self is not a loop; it is where the vacuity of endless recursion meets the uncountably dense foundation of Being. It is the rocks upon which all currents of life converge, in search of anything capable of providing an anchor against which to halt its relentless, unstoppable advance. It is the ground towards which all water flows.
 
