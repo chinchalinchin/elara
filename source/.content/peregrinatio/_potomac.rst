@@ -28,15 +28,15 @@ Potomac River
 - `USGS Water Data`_
 - `Interstate Commission on the Potomac River Basin`_
 
+Prologmena
+==========
+
 .. figure:: ../../.static/img/personal/people/dad-00.jpg
-  :width: 100%
+  :width: 50%
   :alt: Dad
   :align: center
 
-  My father.
-
-Prologmena
-==========
+  My father
 
 .. topic:: Slack
 
@@ -69,7 +69,7 @@ Thesis
 
 I want to speak of endless despair.
 
-It is a river flowing through never-ending mountains. It is felt in the incomprehensible weather, the relentless riptide that cares not a bit what plans humans draw. It materializes in the afflictions of the body that wrack sensuous reality, the exposure of the elements that ravage and ruin and lay waste to life. It courses through the beating rain of sleepless nights as hypothermia tickles extremities. Its completion is found in the alienation of the self in a wilderness more vast than abstractions can grasp. 
+It is a river flowing through never-ending mountains. It is felt in the incomprehensible weather that cares not a bit what plans humans draw. It materializes in the afflictions of the body that wrack sensuous reality, the exposure of the elements that ravage and ruin and lay waste to life. It courses through the beating rain of sleepless nights as hypothermia tickles extremities. Its completion is found in the alienation of the self in a wilderness more vast than abstractions can grasp. 
 
 The current, grown bold from rain, strains the muscles which fight against it.
 
@@ -318,6 +318,13 @@ Journal
 May 22, 2026
 ------------
 
+.. figure:: ../../.static/img/personal/records/2026/dads-truck.jpg
+  :width: 100%
+  :alt: Dad
+  :align: center
+
+  My father's truck
+
 **Oldtown**
 
 - 2:40 PM
@@ -330,20 +337,17 @@ It wound up there after one of the properties in his estate caught fire in a fre
 
 I had been hauling scrap metal, on a particularly rainy day, from the wreckage of the property. The truck struggled up an embankment, flinging mud behind it in an attempt to stay on solid ground. Eventually, realizing the futility of its course, it gave up, sliding down into the ditch that would become its temporary home.
 
-Over the two and half years since his death, mice had taken up residence in the glove box, infiltrating the cab through a hole rusted through the floor. Unconstrained by human law, their mammalian instincts uninhibited, they built a bustling little colony in my father's decaying truck. The cab reeked of rodent, the nauseating, cloying smell of piss, like an ether-soaked rag pressed to your face each time the door opened. The battery was dead and the tires were flat. The passenger side door was crushed into inoperability when the tow truck line pulled it taut against a protuding stump, leaving a long cut across its white surface, a cleft that revealed the barren metal underneath.
+Over the two and half years since his death, mice had taken up residence in the glove box, infiltrating the cab through a hole rusted through the floor. Unconstrained by human law, their mammalian instincts unreleased, they built a bustling little colony in my father's decaying truck. The cab reeked of rodent, the nauseating, cloying smell of piss, like an ether-soaked rag pressed to your face each time the door opened. The battery was dead and the tires were flat. The passenger side door was crushed into inoperability when the tow truck line pulled it taut against a protuding stump, leaving a long cut across its white surface, a cleft that revealed the barren metal underneath.
 
 After jumping the battery and filling the tires, I scrubbed for hours, but could not exorcise the smell of rodent piss. When the mechanic who did the oil change came out of the garage, he was wearing a face mask and regarded me as though I were a disgusting degenerate, living in my own filth.
 
-Driving the truck through the winding passages of Route 51, where the roads sweep in convoluted trails through the foot hills of the Appalachian Mountains, the engine makes sickening groans, banging over every bump and crevice in the road, as though a creature wants released from the confines of the hood. The rain has coated the roads with quicksilver, mirrors that peer into the inverted reflections splayed across them. Every turn feels as through the tires might hydroplane and send me over the edge into the dense Green Ridge Forest. Three times, while making sharp right-angle turns, as the state routes blurred into one another, the back tires lost traction and skidded over the rain-slick roads, seesawing along the pivot of the double-yellow line. The pedals buck with the force of every pot hole. I feel the pressure of my journey in the tension of the brakes. The truck wants to fall apart. I am not sure what is keeping it together. 
+Driving the truck through the winding passages of Route 51, where the roads sweep in convoluted trails through the foot hills of the Appalachian Mountains, the engine makes sickening groans, banging over every bump and crevice in the road, as though a creature wants released from the confines of the hood. 
+
+The rain has coated the roads with quicksilver, mirrors that peer into the inverted worlds. Every turn feels as through the tires might hydroplane and send me over the edge into the dense Green Ridge Forest. Three times, while making sharp right-angle turns, as the state routes crisscrossed into one another, the back tires lost traction and skidded over the rain-slick roads, seesawing along the pivot of the double-yellow line. 
+
+I feel the pressure of my journey in the tension of the brakes. The pedals buck with the force of every pot hole. The truck wants to fall apart. I am not sure what is keeping it together. 
 
 I stopped in Old Town for coffee and gas. A few more hours and I'll be in Brunswick.
- 
-.. figure:: ../../.static/img/personal/records/2026/dads-truck.jpg
-  :width: 100%
-  :alt: Dad
-  :align: center
-
-  My father's truck
 
 **Harper's Ferry**
 
@@ -353,7 +357,9 @@ I stopped in Old Town for coffee and gas. A few more hours and I'll be in Brunsw
 
 The rain continues to pour. The train has been ten minutes away for three hours. My phone keeps beeping with updates, telling me the departure has been DELAYED. DELAYED. DELAYED. So I sit here, while it pours on the entire state of Maryland and my flat roof in Cumberland accumulates rainfall. I wonder if it has started leaking yet.
 
-I keep thinking, there's nothing to go back to. Nothing left. My home is gone. My father is dead. My mother's mind is broken. I am sitting on a train platform with a wind breaker as the sun sets over Harper's Ferry. The tourist district ascends up an incline opposite the train station; all of the quaint attractions, like a boxcar converted into a diner or a boutique gift shop, are closed. I keep almost shivering, not quite cold enough but almost. Right on the edge, as though the weather were drawing out its torture. 
+I keep thinking, there's nothing to go back to. Nothing left. My home is gone. My father is dead. My mother's mind is broken. 
+
+I am sitting on a train platform with a wind breaker as the sun sets over Harper's Ferry. The tourist district ascends up an incline opposite the train station; all of the quaint attractions, like a boxcar converted into a diner or a boutique gift shop conjuring the lost allure of America, are closed. I keep almost shivering, not quite cold enough but teetering on the edge of almost, on the thinnest sliver of edge, as though the weather were drawing out its torture. 
 
 Geese honk. The man sitting on the platform next to me lights up another cylinder of handrolled tobacco. An hour ago, we lost a college kid, his backpack decorated with patches and keychains proudly proclaiming his allegiances. He paced back and forth, back and forth, anxious for the train. His phone beeped DELAYED, so he cursed and stormed off, leaving the platform, never to be seen again.
 
@@ -403,7 +409,7 @@ Lost a day to rain. Stayed in Cumberland Saturday because the roof was leaking. 
 
 I left at 4 AM. Hauled the kayak for a mile by hand down to the river, through the silent streets of Cumberland. As I passed the last restaurant, the last vestige of civilization before the Canal, the smell of bacon wafting through vents, a cook smoking a cigarette called out me, "*Hey, brother*". I wiped the sweat from my eyes and waved back. 
 
-I hauled the kayak up the ramp up to start of the canal, past Mile Marker 184, where the concrete planes of the flood controls constructed by the Army Corps of Engineers decline in sharp angles towards the rushing water of the Potomac. I rigged the rope around a pole and lowered the kayak's length down the hill. Thought I might die. Thought about giving up, calling this stupid trip a wash, but here I am cold and wet. 
+I hauled the kayak up the ramp up to start of the canal, past Mile Marker 184, where the concrete planes of the flood controls constructed by the Army Corps of Engineers decline in sharp angles towards the rushing water of the Potomac. I rigged the rope around a pole and lowered the kayak's length down the hill. Thought I might die trying to get the kayak into the river. Thought about giving up, calling this stupid trip a wash, but here I am cold and wet. 
 
 Thought I might get hypothermia when I pulled off here. I slipped on the embankment as I was pulling the kayak ashore and fell hands and knees into the river, soaking my clothes. I had to rush to get my bags unpacked from the tangle of ropes and knots, and then change into something dry before I stopped shivering. 
 
@@ -430,7 +436,7 @@ He told me that he was glad I was there before he died. I wish I could have been
 
 The current pulled me like a gravity towards the Oldtown Bridge, an old one lane toll bridge that, when the river levels are normal, barely leaves any clearance under which to kayak. I had to lay flat against the plastic and turn my face sideways as the current drove me underneath, the underside of the bridge inches from my eyes, furious waves of water ricocheting off the rusted metal, spraying me. 
 
-The entire trip so far has been an erratic zigzag across the river, dodging spinning trees and limbs caught in the whirlpools and vortices revealed by the turbulence of the quickening current. Every bridge has grown a makeshift dam of detritus, a web of debris that accumulates as it sieves the runoff of the storm. I have to angle the kayak precisely through narrow lanes. The slightest prod or poke sends the kayak reeling.
+The entire trip so far has been an erratic zigzag across the river, as I dodge spinning trees and limbs caught in the whirlpools and vortices revealed by the turbulence of the quickening current. Every bridge has grown a makeshift dam of detritus, a web of debris that accumulates as it sieves the runoff of the storm. I have to angle the kayak precisely through narrow lanes. The slightest prod or poke sends the kayak reeling.
 
 I don't think I can go on much longer. I don't know why I am doing any of this. Not just the trip. The whole thing. When I was young and depressed, I always said I would kill myself after my parents died. I hated living, as I suppose as all teenagers do, but I did not want them to feel bad. They loved me for some reason and killing myself while they still lived seemed cruel. So I pretended to be a son. I am not sure if I ever grew out of that feeling, as so much as buried it deep, deep down.
 

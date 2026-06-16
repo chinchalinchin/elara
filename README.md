@@ -2,6 +2,10 @@
 
 [elara.chinchalinchin.com](https://elara.chinchalinchin.com)
 
+```bash
+make html && python -m http.server -d build/html
+```
+
 ## Quickstart
 
 ```bash
