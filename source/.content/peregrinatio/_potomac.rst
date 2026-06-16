@@ -420,7 +420,7 @@ I cried on the river. I miss my dad so much. I wish I could talk to him one more
 He told me that he was glad I was there before he died. I wish I could have been a better son.
 
 .. figure:: ../../.static/img/historical/oldtown-toll-bridge.jpg
-  :width: 100%
+  :width: 50%
   :alt: Potomac River Basin
   :align: center
 
@@ -569,7 +569,7 @@ What did I think this would be? I knew it would be a cleansing and a detox. I di
 
 I just want to go home. But there is no home left for me anymore.
 
-.. figure:: ../../.static/img/personal/records/2026/little-orleans.jpg
+.. figure:: ../../.static/img/personal/records/2026/boat-ramp.jpg
   :width: 100%
   :alt: Dad
   :align: center
