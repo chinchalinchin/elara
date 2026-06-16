@@ -16,12 +16,12 @@ February
 
 .. epigraph::
 
-    the rhythm lurks in motion's pull
-    it rules the rhyme
-    then cruelly works its notions out. 
-
-    its potion works like poison pills
-    then spills in words from cups unfilled.
+    | the rhythm lurks in motion's pull
+    | it rules the rhyme
+    | then cruelly works its notions out. 
+    |
+    | its potion works like poison pills
+    | then spills in words from cups unfilled.
     
 .. _2026-march:
 
@@ -30,13 +30,13 @@ March
 
 .. epigraph::
 
-    the spirals sing in river waves
-    in floamy, flowing flutes of fluff
-    across the crests, the Spring breaks free
-    as undulations made of geese recede
-
-    some lovers crowd around a pond
-    their secret blooms in whispered breath
+    | the spirals sing in river waves
+    | in floamy, flowing flutes of fluff
+    | across the crests, the Spring breaks free
+    | as undulations made of geese recede
+    | 
+    | some lovers crowd around a pond
+    | their secret blooms in whispered breath
     
 ---
 
@@ -74,15 +74,15 @@ May
 
 .. epigraph::
 
-    And if all stony men are leaden gray, 
-    sweet Adelbard to Elouise would say:
-    this contradiction, dear, declares a rift
-    between the formal lines I write to you
-    and secret form inside that beats for you,
-    for men of stone would here consist of lies;
-    these written marks permit delusions' spread;
-    the Word creates a space for worlds to grow
-    but Words require a captive world to show.
+    | And if all stony men are leaden gray, 
+    | sweet Adelbard to Elouise would say:
+    | this contradiction, dear, declares a rift
+    | between the formal lines I write to you
+    | and secret form inside that beats for you,
+    | for men of stone would here consist of lies;
+    | these written marks permit delusions' spread;
+    | the Word creates a space for worlds to grow
+    | but Words require a captive world to show.
 
 .. _2026-june:
 
@@ -99,32 +99,32 @@ June
 
 .. epigraph::
 
-    regret, my love, we meet again
-    pretending to forget the end
-    our faces close enough to hear
-    the echoes in our empty heads
+    | regret, my love, we meet again
+    | pretending to forget the end
+    | our faces close enough to hear
+    | the echoes in our empty heads
 
 ---
 
 .. epigraph::
 
-    the world of inscrutable things
-
-    these words i learned to speak
-    what use are they
-    the dawn cements the day
-    they say
-
-    people towers
-    steeple powers
-
-    grammatical degrees convey a sense
-    perceived beneath
-    where points convene, embrace a thought
-    the implication's destiny
-
-    chiasmatic plasmates
-    descend down
-    their control controls
-    integrated 
-    reformulated
+    | the world of inscrutable things
+    |
+    | these words i learned to speak
+    | what use are they
+    | the dawn cements the day
+    | they say
+    | 
+    | people towers
+    | steeple powers
+    | 
+    | grammatical degrees convey a sense
+    | perceived beneath
+    | where points convene, embrace a thought
+    | the implication's destiny
+    | 
+    | chiasmatic plasmates
+    | descend down
+    | their control controls
+    | integrated 
+    | reformulated

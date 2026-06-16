@@ -838,11 +838,11 @@ This shows, as the number of characters in a word increases, the probability of 
 
 .. epigraph::
 
-    if only hearts could feel the heat
-    their leaves receive on summer days. 
-
-    instead they spiral incomplete
-    and branch their bodies like a maze.
+    | if only hearts could feel the heat
+    | their leaves receive on summer days. 
+    | 
+    | instead they spiral incomplete
+    | and branch their bodies like a maze.
 
 .. _october-2025:
 
