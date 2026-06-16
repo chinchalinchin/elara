@@ -28,6 +28,13 @@ Potomac River
 - `USGS Water Data`_
 - `Interstate Commission on the Potomac River Basin`_
 
+.. figure:: ../../.static/img/personal/people/dad-00.jpg
+  :width: 100%
+  :alt: Dad
+  :align: center
+
+  My father.
+
 Prologmena
 ==========
 
@@ -62,15 +69,17 @@ Thesis
 
 I want to speak of endless despair.
 
-It is a river flowing through never-ending mountains. It is the incomprehensible weather that cares not a bit what plans humans draw. The afflictions of the body that wrack your sensuous reality, the exposure of the elements that ravage and ruin. The beating rain of sleepless nights as hypothermia tickles your extremities. The alienation of the self in a wilderness more vast than abstractions can grasp. The current, grown bold from rain, that strains the muscles which fight against it.
+It is a river flowing through never-ending mountains. It is felt in the incomprehensible weather, the relentless riptide that cares not a bit what plans humans draw. It materializes in the afflictions of the body that wrack sensuous reality, the exposure of the elements that ravage and ruin and lay waste to life. It courses through the beating rain of sleepless nights as hypothermia tickles extremities. Its completion is found in the alienation of the self in a wilderness more vast than abstractions can grasp. 
 
-It is the annihilation of the soul, the loss of all earthly attachments. It the destruction of a family. The loss of all love and worth. The abject and base alienation of the self from the world. The malaise of not being known to anyone but one's self. It is the realization that one is alone without the possibility of it being otherwise.
+The current, grown bold from rain, strains the muscles which fight against it.
+
+Despair is the annihilation of the soul, the loss of all earthly attachments. It is the destruction of a family, te loss of all love and worth, the abject and base alienation of the self from the world. Despair is the malaise of not being known to anyone but one's self. It is the realization that one is alone without the possibility of it being otherwise.
 
 The self has been called by some a *strange loop*, an epiphenomenon of recursion on nigh infinite scales, a specialized geometry, a mathematical curiosity inevitably spun from the permutations of the finite. But this is incorrect. The self is not a loop; it is where the vacuity of endless recursion meets the uncountably dense foundation of Being. It is the rocks upon which all currents of life converge, in search of anything capable of providing an anchor against which to halt its relentless, unstoppable advance. It is the ground towards which all water flows.
 
 Contrary to modern thought, though perhaps elucidated by Whitehead and Cioran, the self is not an abstraction. It is the fundamental constituent of the universe. That is the lesson of Tarskian satisfaction, Kripkean possibility, Sartre's for-itself, Heidegger's Dasein and the irreconcilable uncertainty discovered in quantum theory. Abstractions cannot in and of themselves contain truth; they are purely vacuous and tautologous. To be is, therefore, fundamentally, the descent of the subjective self to the objective world. It is the act of interpretation and observation. To be is how the subjective becomes the objective.
 
-The history of thought is replete with examples of the limits of language. All stony men are gray. This sentence is false. The set of sets which don't contain themselves. The predication of the impredicable. 
+The history of thought is replete with examples of the limits of language. All stony men are gray. This sentence is false. The set of sets which don't contain themselves. To predicate the impredicable. 
 
 One cannot know the heights of despair through language. It is internal. One tries to define the river. The best available human models currently struggle to understand rotating fluids through anything but brute force approximation. The infinite energies of Navier-Stokes stand like an impassable barrier between the abstraction and the violence which desires nothing, is nothing but raw elemental force.
 
@@ -78,7 +87,7 @@ Wittgenstein spoke of how language evolves, of the network of associations that 
 
 Despair is the realization the very tools we use to think pale in comparison to the task to which we have set them to work. 
 
-St. John of the Cross said this is equivalent to God's love secretly flooding your spirit and cleaving the way to true discovery and union with the divine. God's love is the suffering of Job. The nature of love is found in despair. In bankruptcy, stricken with ailments, blinded, your family dead, your name forgotten, with nothing at all on which to steady your self. The inescapable fall of the self into the objective world, to be racked, crucified and fed to lions. To drown in the inhuman depths of a raging river. God, says St. John of the Cross, can only be known by the total annihilation of the self and soul.
+St. John of the Cross said this is equivalent to God's love secretly flooding your spirit and cleaving the way to true discovery and union with the divine. God's love is the suffering of Job. The nature of love is found in despair. In bankruptcy, stricken with ailments, blinded, your family dead, your name forgotten, with nothing at all on which to steady your self. Despar is the inescapable fall of the self into the objective world, to be racked, crucified and fed to lions. To drown in the inhuman depths of a raging river. God, says St. John of the Cross, can only be known by the total annihilation of the self and soul. God is despair.
 
 Preparations
 ============
@@ -205,7 +214,7 @@ Parking
 Train
 -----
 
-.. figure:: ../../.static/img/personal/records/2026-hfy-ticket.png
+.. figure:: ../../.static/img/personal/records/2026/hfy-ticket.png
   :width: 100%
   :alt: Floridian Line Ticket
   :align: center
@@ -329,6 +338,13 @@ Driving the truck through the winding passages of Route 51, where the roads swee
 
 I stopped in Old Town for coffee and gas. A few more hours and I'll be in Brunswick.
  
+.. figure:: ../../.static/img/personal/records/2026/dads-truck.jpg
+  :width: 100%
+  :alt: Dad
+  :align: center
+
+  My father's truck
+
 **Harper's Ferry**
 
 - 8:30 PM
@@ -397,7 +413,7 @@ I cried on the river. I miss my dad so much. I wish I could talk to him one more
 
 He told me that he was glad I was there before he died. I wish I could have been a better son.
 
-.. figure:: ../../.static/img/personal/records/oldtown-toll-bridge.jpg
+.. figure:: ../../.static/img/historical/oldtown-toll-bridge.jpg
   :width: 100%
   :alt: Potomac River Basin
   :align: center
@@ -547,6 +563,13 @@ What did I think this would be? I knew it would be a cleansing and a detox. I di
 
 I just want to go home. But there is no home left for me anymore.
 
+.. figure:: ../../.static/img/personal/records/2026/little-orleans.jpg
+  :width: 100%
+  :alt: Dad
+  :align: center
+
+  Flooded boat ramp at Little Orleans
+
 **Little Orleans**
 
 - 4:29 PM
@@ -564,6 +587,13 @@ The sun is actually visible throught the clouds and the solar panel, to my chagr
 I called her back, assured her it was still there because I gone to see it just a few weeks ago. I said I would take her there, but I'm kayaking the Potomac. She asked me if I was doing it alone. I told her yes, and that I had parked Dad's truck in Brunswick, so I could pull out of the river and load it up right then and there and drive back without much hassle. She didn't remember signing the truck over to me, much less what it looked like. I explained it was an old white Ford Ranger. She said I could call her if I needed someone to pick me up. I would like to take her up on her offer, but I am not sure I would trust her to go this far from home without getting lost.
 
 As my mother's memory goes, so does the radius of her movement.
+
+.. figure:: ../../.static/img/personal/records/2026/little-orleans.jpg
+  :width: 100%
+  :alt: Dad
+  :align: center
+
+  Little Orleans campground
 
 .. topic:: Text
 
@@ -593,6 +623,13 @@ May 26, 2026
 10 miles of so from Hancock, the approximate halfway point. I should be to restock there, though I haven't eaten much this entire trip so far. I think like I should be hungrier than I am, but mostly I just feel tired. Atleast I'll be able to get supplies for my sunburn.
 
 It's been three mornings without coffee. Of all the drugs, I didn't expect caffeine to be the one I missed the most. I suppose that's what getting older means. 
+
+.. figure:: ../../.static/img/personal/records/2026/sideling-hill.jpg
+  :width: 100%
+  :alt: Dad
+  :align: center
+
+  Sideling Hill
 
 **Hancock**
 
@@ -629,6 +666,13 @@ Tomorrow is going to be a rough one. By river, I am less than day from my goal. 
 The kayak trolley has been hit or miss. Tomorrow it gets put to the test, a trial by fire. Atleast the terrain should be level. Mostly. 
 
 The one saving grace is Lock House #49. The C&O Authority rents it out to hikers, so I used the remaining charge on my phone to reserve it for tonight, though the door was unlocked. I could have easily squatted in the place, but decided the Authority deserved some compensation for the good fortune they have bestowed upon me. $135 a night, but worth every penny. A bed to sleep in will be a miracle compared the sleepless nights I have been spending, sunburnt, on the rocky ground. Best of all is the oven. I am currently baking my soaked clothing. The entire place reeks of roasted mildew.
+
+.. figure:: ../../.static/img/personal/records/2026/lockhouse-49.jpg
+  :width: 100%
+  :alt: Dad
+  :align: center
+
+  Lockhouse #49
 
 Started a campfire in the ring outside and fired up some sausage. The meal tasted liked nothing, but it filled my stomach.
 
@@ -690,6 +734,13 @@ Eventually, I started to pass normal people, walking the trail with umbrellas. T
 The surreality of my ascent from the aqueduct to the main street of Williamsport is an experience I will never forget. Under my feet, the stone arches carried a stream perpendicular to the water rushing underneath it. I crossed a bridge over the stream into the parking lot and climbed up the incline. As I marched up from the aqueduct into Williamsport proper, the rain started to go slack and the noonday bells began to ring, playing a facsimile of *My Country, 'Tis of Thee*. I remembered the line from the bell's song, "*Land where my fathers died*", as the skies cleared. My boots squished with every step while the sun appeared behind the dispersing clouds. 
 
 At the gas station, I bought a phone charger and sat on the patio beneath an outlet as the bars onscreen slowly filled. The sun dried out my clothing while I waited on my Uber. Google Maps told me I was only 22 miles from my father's truck. I had almost made it.
+
+.. figure:: ../../.static/img/personal/records/2026/sheetz.jpg
+  :width: 100%
+  :alt: Dad
+  :align: center
+
+  Charging my phone 
 
 My driver had a statue of Siddhartha Gautama on his dashboard. He asked questions in broken English about what brought me to Williamsport. As he drove me back to my kayak so I could get my father's truck key, I explained the entire journey to him. The week I took off of work, the plan to go from Cumberland to Brunswick along the North Branch, the endless rain, the current, the difficulty, the annihilation. After hearing all of it, he smirked and said to me, "*I am glad to have met you. You are crazy, man.*" I agreed.
 

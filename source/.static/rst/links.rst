@@ -28,6 +28,7 @@
 .. _Cathedral: https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore
 .. _Christmas: https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore
 .. _Anniversary: https://www.ultramarinereview.com/post/three-poems-by-grant-a-moore
+.. _Paradise Revealed: https://www.infocalypse.press/paradise-revealed/
 
 .. ## EXTERNAL
 ..

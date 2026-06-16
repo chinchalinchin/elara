@@ -55,14 +55,14 @@ Publications
 - `Floods`_, Four Tulips Magazine, 2026 Anthology
 - `Absurdity (2)`_ & `The Gap`_, Infocalypse Press, Issue 2
 - `Cathedral`_, `Christmas`_ & `Anniversary`_, Ultramarine Literary Review
-- *Paradise Revealed*, Infocalpyse Press, Issue 3 (Forthcoming)
+- `Paradise Revealed`_, Infocalpyse Press, Issue 3
 
 .. _contests:
 
 Contests
 --------
 
-.. image:: ../../.static/img/personal/wd-94th-annual-2025-winnerseal.png
+.. image:: ../../.static/img/personal/records/2025/wd-94th-annual-winnerseal.png
   :alt: 94th Writer's Digest Winner
   :align: center
   :class: transparent

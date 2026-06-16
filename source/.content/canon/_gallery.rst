@@ -10,7 +10,7 @@ Americorps
 .. collapse:: Exhibit A, 2015
     :class: collapse-panel
 
-    .. image:: ../../.static/img/personal/americorps/americorps-01.jpg
+    .. image:: ../../.static/img/personal/records/2015/americorps-01.jpg
         :alt: Americorps #1
         :align: center
         :width: 80%
@@ -18,7 +18,7 @@ Americorps
 .. collapse:: Exhibit B, 2015
     :class: collapse-panel
 
-    .. image:: ../../.static/img/personal/americorps/americorps-02.jpg
+    .. image:: ../../.static/img/personal/records/2015/americorps-02.jpg
         :alt: Americorps #2
         :align: center
         :width: 80%
@@ -26,7 +26,7 @@ Americorps
 .. collapse:: Exhibit C, 2015
     :class: collapse-panel
 
-    .. image:: ../../.static/img/personal/americorps/americorps-03.jpg
+    .. image:: ../../.static/img/personal/records/2015/americorps-03.jpg
         :alt: Americorps #3
         :align: center
         :width: 80%
@@ -34,7 +34,7 @@ Americorps
 .. collapse:: Exhibit D, 2015
     :class: collapse-panel
 
-    .. image:: ../../.static/img/personal/americorps/americorps-04.jpg
+    .. image:: ../../.static/img/personal/records/2015/americorps-04.jpg
         :alt: Americorps #4
         :align: center
         :width: 80%
@@ -42,7 +42,7 @@ Americorps
 .. collapse:: Exhibit E, 2015
     :class: collapse-panel
 
-    .. image:: ../../.static/img/personal/americorps/americorps-05.jpg
+    .. image:: ../../.static/img/personal/records/2015/americorps-05.jpg
         :alt: Americorps #5
         :align: center
         :width: 80%
@@ -53,7 +53,7 @@ Cincinnati
 .. collapse:: Fifth and Third Building, 2017
     :class: collapse-panel
 
-    .. image:: ../../.static/img/personal/cincinnati/cincinnati-00.jpg
+    .. image:: ../../.static/img/personal/records/2017/cincinnati-00.jpg
         :alt: Cincinnati #1
         :align: center
         :width: 80%
@@ -61,7 +61,7 @@ Cincinnati
 .. collapse:: Skyline Chili, 2017
     :class: collapse-panel
 
-    .. image:: ../../.static/img/personal/cincinnati/cincinnati-01.jpg
+    .. image:: ../../.static/img/personal/records/2017/cincinnati-01.jpg
         :alt: Cincinnati #2
         :align: center
         :width: 80%
