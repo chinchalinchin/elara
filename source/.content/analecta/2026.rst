@@ -10,7 +10,7 @@ February
 
 .. epigraph::
 
-    unwind the finely latticed mind
+    | unwind the finely latticed mind
 
 ---
 
@@ -31,7 +31,7 @@ March
 .. epigraph::
 
     | the spirals sing in river waves
-    | in floamy, flowing flutes of fluff
+    | in foamy, flowing flutes of fluff
     | across the crests, the Spring breaks free
     | as undulations made of geese recede
     | 
@@ -40,14 +40,18 @@ March
     
 ---
 
-The sequins in sequence on satin sewn straight.
+.. epigraph::
+
+    The sequins in sequence on satin sewn straight.
 
 .. _2026-april:
 
 April
 -----
 
-The grand theory of everything: Some things are.
+.. topic:: The Grand Theory of Everything
+
+    Some things are.
 
 **Existence is identity**: There is a thing which is itself.
 

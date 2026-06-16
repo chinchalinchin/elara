@@ -649,6 +649,10 @@ Language does not seem possible without admitting that it's nature is inextricab
 
 ---
 
+unfinished thoughts collect in stacks.
+
+---
+
 **Plato**: A name is an essence.
 
 **Aristotle**: A name is a substance. 
@@ -680,6 +684,12 @@ The :ref:`world <world>` is an ocean of contradiction upon contradiction, absurd
 The world will defy every expectation, slip every knot and dissolve in front of your eyes. Give it a name and it will immediately exceed that name, for now the totality of the world is now what was plus what has been named. :ref:`Being <being>` refuses to be abstracted out of the :ref:`world <world>`, for the abstraction cannot help but become part of the :ref:`world <world>`. 
 
 How could it be otherwise? Would the questions have meaning if their answers were immediately rendered simply by asking? If our lives are to have meaning, unassailable in its foundations, then the :ref:`world <world>` ipso facto must be inexplicable. If the :ref:`world <world>` meant anything beyond the meaning we give it, then the meaning we find in the :ref:`world <world>` would not be ours. But all meaning we find is by necessity *ours*, for it is impossible that a thought we think should be otherwise.
+
+---
+
+.. epigraph::
+
+    | crumble, crumble, world of man.
 
 ---
 
@@ -741,6 +751,21 @@ Hume argued that causality of events is inferred through the correlation of even
 
 .. epigraph::
 
+    | the forest chorus lines
+
+---
+
+.. epigraph::
+
+    | the silent rain is like a lashing flail.
+    | the silent rain in lines begins to flail
+    | the silent rain in puddles tells our tale.
+    | the silent rain begins to tell our tale.
+
+---
+
+.. epigraph::
+
     There is great danger in me; for who doth not understand these runes shall make a great miss. He shall fall down into the pit called Because, and there he shall perish with the dogs of Reason.
 
     -- `Book of the Law`_, Aleister Crowley
@@ -750,6 +775,17 @@ Hume argued that causality of events is inferred through the correlation of even
 The problem of *faith* cast into the :ref:`language <language>` of necessity and sufficiency is thus: God is sufficient for existence, but not necessarily necessary. Thus, the concept of God cannot be comprehended syntactically (logically) as a *cause* unless one consents to the clause: God is necessary for existence. 
 
 The crux of faith, the essential leap into the unknown, boils down to whether one can imagine a world without God and whether doubts in the affirmative direction can be exorcised from the mind.
+---
+
+stained glass rivers ripples underbridge.
+
+graffitied engines coal black plunge through forests. 
+
+---
+
+.. epigraph::
+
+    | the setting world ignores the sun
 
 .. _2025-june:
 
@@ -876,6 +912,53 @@ There is no motion. Only potential.
 Potential only means: that which would be observed, if only it were the case. 
 
 ---
+
+.. epigraph::
+
+    | though rhyme accents the metaphor
+    |   discretion is advised.
+    | reserve the piece, it's better for
+    |   the ends that plans devised. 
+    |
+    | the flowing meter often heard 
+    | aligns precise in time with stress.
+    | the steady thrum of logic's pulse, 
+    | deduction hums in ordered flow.
+    | 
+    | power packs a different shape with
+    | forceful gusts of shouted words that
+    | stop the sentence cold for thought to
+    | ponder slow the spots that linger.
+    | 
+    | but just as easily whimsical,
+    | poetry carelessly galloping,
+    | valiantly posturing endlessly,
+    | effortless visual symphony. 
+    | 
+    | the way words weigh different in sequence.
+    | in sequence the different way words weigh.
+    | the different way words in sequence weigh.
+    | 
+    | the novel fluid in fluid novels. 
+    | the alternate interpretations that alternate. 
+    | each life lives in words a hundred different lives.
+    |
+    | the aibohphobia of semiordnilaps, 
+    | the parts that strap
+    | a spool of loops.
+    | on serif peels sleep fires, no? 
+    |
+    | an aim that hides a name
+    | a name that hides an aim
+    | the flow ingrained composes
+    | the flowing rain decomposes
+    |
+    | until all that remains
+    | is the pure image 
+    | of red as deep as blood
+    | and lines as straight as bone
+    | the skeletal structure
+    | that wears words like skin.
 
 .. _december-2025:
 
