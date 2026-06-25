@@ -20,8 +20,9 @@ February
     | it rules the rhyme
     | then cruelly works its notions out. 
     |
-    | its potion works like poison pills
-    | then spills in words from cups unfilled.
+    | its potion spurts from poison pills
+    | to spill in words
+    | this swill
     
 .. _2026-march:
 
