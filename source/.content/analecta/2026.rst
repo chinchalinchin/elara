@@ -98,7 +98,7 @@ June
 
 **Kolmogrov**: The sample space defines what can be measured.
 
-**Dirac**: The sample space is created by measurements.
+**Dirac**: The sample space is created by measurement.
 
 ---
 
@@ -133,3 +133,24 @@ June
     | their cortical controls
     | integrated 
     | reformulated
+
+---
+
+.. epigraph::
+
+    | provocative velocities
+    | of pure and sudden speed
+    |
+    | the rusted tracks on which
+    | the trains are racked
+    |
+    | and I, here dying, falling
+    | towards the end
+
+---
+
+.. epigraph::
+
+    | a book of letters fading fast to dust
+    | 
+    | delicate things destroyed with a deed
