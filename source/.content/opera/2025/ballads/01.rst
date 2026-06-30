@@ -72,7 +72,7 @@ III - May (Fixed Earth)
 
 .. verse::
   :increment: 5
-  
+
   A barren hump prepared with zeal
     as sparrows plow their seeds.
   From sprouted weed to plants' reveal
@@ -101,92 +101,105 @@ III - May (Fixed Earth)
 II - Summer
 -----------
 
-| I - June (Mutable Air)
-| 
-| When stellar swans survey the dawn
-|   of constellated shores,
-| their forms in flight are downward drawn
-|   towards gravitating cores. 
-|
-| They veer through plumes of pheromone,
-|   converge at silent points.
-| Diverging tracts, though yearly grown, 
-|   lead back where June annoints.
-|
-| At last the Summer bursts with life
-|   and summons forth its herds
-| to open market pastures rife
-|   with bounty born by birds. 
-|  
-| In shallows deer appear to graze
-|   beside the lazing drapes
-| of rays, the incandescent haze
-|   that veils their swaying shapes.
-|
-| Then maiden buds unfold to bees 
-|   their sweetly nectared heat;
-| unladen, drowsy, through the breeze,
-|   the teasing fumes secrete. 
-|
-| II - July (Cardinal Water)
-|
-| Along the flowing inlet streams 
-|   the festival begins.
-| Caressing music tinges dreams
-|   with cricket violins.
-|
-| Soft underfoot the cancers tap,
-|   enrapt by vibrant chords. 
-| The snapping prance of shells enwrap
-|   the island shore with hordes.
-|
-| As gondolas of lilies' bud
-|   that carry courting toads
-| through swampy bogs to ports of mud
-|   relieve their tadpole loads.
-|
-| Oh! Jubilee, this boon, July
-|   through fallow leas by moon,
-| when rodents swoon in cups of rye 
-|   and fall to bed too soon.
-|
-| Amid the revelry a kiss
-|   to memory's delight,
-| two larks alight in fading bliss
-|   fulfill this final night. 
-|
-| III - August (Fixed Fire)
-|
-| What bittersweet perfumes release
-|   in looming throes of age,
-| when isle matures through orange cerise, 
-|   engulfed in scents of sage.
-|
-| Though leonine its roar in youth,
-|   the shedding source of mane
-| replies with veins of blood vermouth
-|   through suffocating grain.
-|
-| Of August lines that empire grew,
-|   once cloaked in ermine garbs,
-| unkempt and molting, flake sinew,
-|   their branches wreathed in barbs.
-|
-| Though riches hide in golden limb,
-|   the leaves dissolve to dust,
-| consoled in wind to hushing skim
-|   what wealth remains in gust. 
-|
-| Discreetly cloaked from time the Fall
-|   of secret reign's decline
-| through crimson's spectrum vine, all
-|   gone brown, forgetting shine.
+I - June (Mutable Air)
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. verse::
+  :increment: 5
+
+  When stellar swans survey the dawn
+    of constellated shores,
+  their forms in flight are downward drawn
+    towards gravitating cores. 
+
+  They veer through plumes of pheromone,
+    converge at silent points.
+  Diverging tracts, though yearly grown, 
+    lead back where June annoints.
+  
+  At last the Summer bursts with life
+    and summons forth its herds
+  to open market pastures rife
+    with bounty born by birds. 
+
+  In shallows deer appear to graze
+    beside the lazing drapes
+  of rays, the incandescent haze
+    that veils their swaying shapes.
+
+  Then maiden buds unfold to bees 
+    their sweetly nectared heat;
+  unladen, drowsy, through the breeze,
+    the teasing fumes secrete. 
+
+II - July (Cardinal Water)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. verse::
+  :increment: 5
+
+  Along the flowing inlet streams 
+    the festival begins.
+  Caressing music tinges dreams
+    with cricket violins.
+
+  Soft underfoot the cancers tap,
+    enrapt by vibrant chords. 
+  The snapping prance of shells enwrap
+    the island shore with hordes.
+
+  As gondolas of lilies' bud
+    that carry courting toads
+  through swampy bogs to ports of mud
+    relieve their tadpole loads.
+
+  Oh! Jubilee, this boon, July
+    through fallow leas by moon,
+  when rodents swoon in cups of rye 
+    and fall to bed too soon.
+
+  Amid the revelry a kiss
+    to memory's delight,
+  two larks alight in fading bliss
+    fulfill this final night. 
+
+III - August (Fixed Fire)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. verse::
+  :increment: 5
+
+  What bittersweet perfumes release
+    in looming throes of age,
+  when isle matures through orange cerise, 
+    engulfed in scents of sage.
+
+  Though leonine its roar in youth,
+    the shedding source of mane
+  replies with veins of blood vermouth
+    through suffocating grain.
+
+  Of August lines that empire grew,
+    once cloaked in ermine garbs,
+  unkempt and molting, flake sinew,
+    their branches wreathed in barbs.
+
+  Though riches hide in golden limb,
+    the leaves dissolve to dust,
+  consoled in wind to hushing skim
+    what wealth remains in gust. 
+
+  Discreetly cloaked from time the Fall
+    of secret reign's decline
+  through crimson's spectrum vine, all
+    gone brown, forgetting shine.
 
 III - Autumn
 ------------
 
-| I - September (Mutable Earth)
-|
+I - September (Mutable Earth)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 | September storms suspend the skies
 |   resplendent morning pinks
 | above the waking window eyes
