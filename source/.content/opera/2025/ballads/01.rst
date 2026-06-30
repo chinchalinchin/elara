@@ -5,86 +5,98 @@ The Ballad of the Isle
 I - Spring
 ----------
 
-| I - March (Mutable Water)
-|
-| The island formed where rivers meet,
-|   where silt through vortex fords.
-| The place emerged a brokered feat, 
-|   a land of met accords.
-|
-| A mantle crown, in breaching air,
-|   the regents all proclaim
-| a vessel poured from blooded heir
-|   of season's last remain.
-|
-| So March the army sorties cease,
-|   embarking east and west 
-| to mark the chartered pact with peace,
-|   obeisance paid and blessed.
-| 
-| Here pairs of fish in lunar sway
-|    coordinate their fins
-| in swooping ornament display
-|    with flocking mirrored twins.
-|
-| Behold the treaty words in ink,
-|   the scrolls in future's brine,
-| the sutures binding swords in sync
-|   to island's hallow shrine.
-|
-| II - April (Cardinal Fire)
-|
-| The webs of Spring such crude affairs
-|   when strung with spinning songs;
-| the threaded compromise ensnares
-|   the spidered plotting throngs. 
-|  
-| The April session clauses creep
-|   and wolves with sharpened claws,
-| deceived by strategems of sheep,
-|   retract their motioned laws.  
-|
-| But blurting rams befoul the ploy,
-|   with filibuster bleets
-| that break the still the ewes enjoy;
-|   the argument repeats.
-|
-| To raven galleries' refrain
-|    in rabble squalls of wind,
-| they find in mutual disdain
-|    their hopes together pinned. 
-|
-| Elusive votes are overcast 
-|   on cloudy ballots posed.
-| By noon, the forum order passed
-|   conceded plans proposed.
-|
-| III - May (Fixed Earth)
-|
-| A barren hump prepared with zeal
-|   as sparrows plow their seeds.
-| From sprouted weed to plants' reveal
-|   through curtains made of reeds. 
-|
-| The shoots are sunk and water sewn
-|   through roots of flooded banks
-| where mudded flanks of fish cyclone
-|   around the studded ranks. 
-| 
-| A retinue arrives from sea
-|   atop a snow-white bull.
-| Its royalty with one decree
-|   begins the reign in full.
-|
-| The trees then stake foundations firm,
-|   cement what's broken free, 
-| confirm the seed to bring to term
-|   the squawking newborn plea.
-|
-| A birth announced to kneeling crowds
-|   in congregation's girth, 
-| by May pronounced through sealing clouds
-|   of consecrated Earth.
+I - March (Mutable Water)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. verse::
+  :increment: 5
+
+  The island formed where rivers meet,
+    where silt through vortex fords.
+  The place emerged a brokered feat, 
+    a land of met accords.
+
+  A mantle crown, in breaching air,
+    the regents all proclaim
+  a vessel poured from blooded heir
+    of season's last remain.
+
+  So March the army sorties cease,
+    embarking east and west
+  to mark the chartered pact with peace,
+    obeisance paid and blessed.
+
+  Here pairs of fish in lunar sway
+    coordinate their fins
+  in swooping ornament display
+    with flocking mirrored twins.
+
+  Behold the treaty words in ink,
+    the scrolls in future's brine,
+  the sutures binding swords in sync
+    to island's hallow shrine.
+
+II - April (Cardinal Fire)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. verse::
+  :increment: 5
+
+  The webs of Spring such crude affairs
+    when strung with spinning songs;
+  the threaded compromise ensnares
+    the spidered plotting throngs. 
+
+  The April session clauses creep
+    and wolves with sharpened claws,
+  deceived by strategems of sheep,
+    retract their motioned laws.  
+
+  But blurting rams befoul the ploy,
+    with filibuster bleets
+  that break the still the ewes enjoy;
+  the argument repeats.
+
+  To raven galleries' refrain
+    in rabble squalls of wind,
+  they find in mutual disdain
+    their hopes together pinned. 
+
+  Elusive votes are overcast 
+    on cloudy ballots posed.
+  By noon, the forum order passed
+    conceded plans proposed.
+
+III - May (Fixed Earth)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. verse::
+  :increment: 5
+  
+  A barren hump prepared with zeal
+    as sparrows plow their seeds.
+  From sprouted weed to plants' reveal
+    through curtains made of reeds. 
+
+  The shoots are sunk and water sewn
+    through roots of flooded banks
+  where mudded flanks of fish cyclone
+    around the studded ranks. 
+
+  A retinue arrives from sea
+    atop a snow-white bull.
+  Its royalty with one decree
+    begins the reign in full.
+
+  The trees then stake foundations firm,
+    cement what's broken free, 
+  confirm the seed to bring to term
+    the squawking newborn plea.
+  
+  A birth announced to kneeling crowds
+    in congregation's girth, 
+  by May pronounced through sealing clouds
+    of consecrated Earth.
 
 II - Summer
 -----------
