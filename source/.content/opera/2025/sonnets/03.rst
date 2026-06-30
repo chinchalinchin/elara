@@ -2,26 +2,29 @@
 Windfall
 --------
 
-| if every word is written on the wind
-| then every sentence grows into a storm. 
-| 
-| so when you breathed my breath, then gasped and grinned,
-| in fronts the future gales began to form.
-| 
-| and when you spoke, that tempest swelled to swarm,
-| converging now to sweep my thoughts away
-| 
-| right back to where our swirling words perform,
-| around our promise howling disarray.
-|
-| our fate is spelled in thunder struck display,
-| in lightning arcs the clouds now ionize. 
-| 
-| my every breath is filled with yesterday,
-| each passing sigh is mixed with our demise.
-| 
-| the silent rain begins to tell our tale.
-| in shallow breaths, your words i still inhale. 
+.. verse::
+  :increment: 5
+
+  if every word is written on the wind
+  then every sentence grows into a storm. 
+
+  so when you breathed my breath, then gasped and grinned,
+  in fronts the future gales began to form.
+
+  and when you spoke, that tempest swelled to swarm,
+  converging now to sweep my thoughts away
+  
+  right back to where our swirling words perform,
+  around our promise howling disarray.
+
+  our fate is spelled in thunder struck display,
+  in lightning arcs the clouds now ionize. 
+
+  my every breath is filled with yesterday,
+  each passing sigh is mixed with our demise.
+
+  the silent rain begins to tell our tale.
+  in shallow breaths, your words i still inhale. 
 
 - August 2025
 
