@@ -70,6 +70,9 @@ Sonnet #2
   * - July 1st, 2026
     - St. Katherine Review (#2)
     - Pending
-
+  * - July 1st, 2026
+    - Oxford Review (#2)
+    - Pending
+    
 .. Sonnet #3
 .. ^^^^^^^^^

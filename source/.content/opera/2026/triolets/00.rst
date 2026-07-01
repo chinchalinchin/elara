@@ -35,3 +35,6 @@ Ontology
   * - July 1st, 2026
     - St. Katherine Review
     - Pending
+  * - July 1st, 2026
+    - Oxford Review (#2)
+    - Pending
