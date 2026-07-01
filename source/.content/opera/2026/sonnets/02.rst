@@ -3,7 +3,7 @@ Jasilynn
 --------
 
 Sonnet #1
----------
+^^^^^^^^^
 
 .. verse::
     :increment: 5
@@ -29,7 +29,7 @@ Sonnet #1
 - June 2026
 
 Sonnet #2
----------
+^^^^^^^^^
 
 .. verse::
     :increment: 5
@@ -45,7 +45,7 @@ Sonnet #2
     the tremors building up from cheek to cheek.
     
     what words escape are afterthoughts that leak
-    despite restraint you place upon their choice,
+    despite restraint you place upon their choice;
     what tears then follow after only seek
     the force contained within your inner voice.
 
