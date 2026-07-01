@@ -54,5 +54,22 @@ Sonnet #2
 
 - July 2026
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - July 1st, 2026
+    - Macrame Literary Journal (#2)
+    - Pending
+  * - July 1st, 2026
+    - Merion West (#2)
+    - Pending
+  * - July 1st, 2026
+    - St. Katherine Review (#2)
+    - Pending
+
 .. Sonnet #3
 .. ^^^^^^^^^
