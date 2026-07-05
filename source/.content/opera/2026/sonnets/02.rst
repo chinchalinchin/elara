@@ -3,7 +3,7 @@ Jasilynn
 --------
 
 - June - July 2026
- 
+
 Sonnet #1
 ^^^^^^^^^
 
@@ -75,6 +75,30 @@ Sonnet #3
 
   my heart was never made to hold the weight
   of things in expectation you await.
+
+Sonnet #4
+^^^^^^^^^
+
+.. verse::
+  :increment: 5
+
+  my every thought is made to gaze on you,
+  though eyes imagine more than what remains,
+  despite your absence, as the days accrue,
+  of moments now distilled within my veins. 
+
+  the line you traced upon my skin retains
+  electric residues of fingertips
+  whose glow for now provides but ever wanes,
+  as current seeps discharged in leaks and drips.
+
+  my heart begins its nightly new eclipse,
+  as dwarfed within the shadow of your own,
+  and sunk below horizons where it dips
+  in darkness, there to fester all alone.
+
+  a lack confirms my heart was shaped for you,
+  yet known too late this simple thing was true. 
 
 .. list-table:: Submission History
   :widths: 15 15 15
