@@ -156,9 +156,12 @@ Sonnet #5
     - The Great Smokies Review (#1 - 5)
     - Pending
   * - July 6th, 2026
-    - The Wild Umbrell (#1 - 5)
+    - The Wild Umbrella (#1 - 5)
     - Pending
-    
+  * - July 6th, 2026
+    - Rattle Poetry (#1 - 5)
+    - Pending
+
 .. # EDITS
 .. 
 .. ## Sonnet #1
