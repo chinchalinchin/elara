@@ -200,84 +200,95 @@ III - Autumn
 I - September (Mutable Earth)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-| September storms suspend the skies
-|   resplendent morning pinks
-| above the waking window eyes
-|   despairing foregone winks. 
-| 
-| What ears of wheat will balance scales? 
-|   What maiden disappears? 
-| Condensing answers dance in gales,
-|   descending hemispheres.
-|
-| Now Autumn comes with heavy rain 
-|   to test the borders drawn.
-| The water drained from level plain
-|   in flooding rose the dawn.
-|
-| The thunder heralds sundered age 
-|   besieged by droplets fat 
-| with blood of yearly plundered wage, 
-|   enraged what Spring begat.   
-| 
-| What muddy lanes then sluice the drowned
-|   debris and sweep from field
-| the tumbling tumult, turned aground
-|   and heaped by waves to wield.
-|
-| II - October (Cardinal Air)
-|
-| Divided sky once halved in poise, 
-|   succumbs to blackened press,
-| the hours compress to whiter noise
-|   in surging strained excess.
-|
-| October chopping peaks depressed
-|   through interlocking weeks
-| deplete reserves that Summer stressed
-|   to balking vassal shrieks. 
-|
-| Retreating columns' sullen flight,
-|   deserting homes and kin, 
-| the fleeing wash through rapids white
-|   with waters steeped in sin.
-|
-| So inch by inch the tides reclaim
-|   the island kingdom keep
-| and cast it down without a name
-|   to swirling depths of sleep.
-|
-| The atlas page is ripped anew,
-|   schematic contour holes
-| where once there rose a sprout to blue
-|   now rising streams of souls. 
-|
-| III - November (Fixed Water)
-|
-| Orion's arrow point is plunged
-|   through lunging fronts of hail
-| across the waves where life expunged
-|   remains through shadowed veil.  
-|
-| For down below, the stones make schemes
-|   in skipping sprees like drunks,
-| inlaid in sunken trees through seams
-|   as ballast for their trunks.
-| 
-| Arise the turret towers stark
-|   against the ruddered land 
-| to touch the ceiling shuttered dark
-|   and brace what sprawling spanned. 
-|
-| Beneath the surface flowers form
-|   as shades of algae grow
-| atop the castle walls in swarm,
-|   the borough glade aglow.
-|
-| November's embers burn a while
-|   between the exiled graves.
-| Remembered nocturnes sung beguile
-|   the damned, forgottten knaves. 
+.. verse::
+  :increment: 5
+
+  September storms suspend the skies
+    resplendent morning pinks
+  above the waking window eyes
+    despairing foregone winks. 
+
+  What ears of wheat will balance scales? 
+    What maiden disappears? 
+  Condensing answers dance in gales,
+    descending hemispheres.
+
+  Now Autumn comes with heavy rain 
+    to test the borders drawn.
+  The water drained from level plain
+    in flooding rose the dawn.
+
+  The thunder heralds sundered age 
+    besieged by droplets fat 
+  with blood of yearly plundered wage, 
+    enraged what Spring begat.   
+
+  What muddy lanes then sluice the drowned
+    debris and sweep from field
+  the tumbling tumult, turned aground
+    and heaped by waves to wield.
+
+II - October (Cardinal Air)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. verse::
+  :increment: 5
+
+  Divided sky once halved in poise, 
+    succumbs to blackened press,
+  the hours compress to whiter noise
+    in surging strained excess.
+
+  October chopping peaks depressed
+    through interlocking weeks
+  deplete reserves that Summer stressed
+    to balking vassal shrieks. 
+
+  Retreating columns' sullen flight,
+    deserting homes and kin, 
+  the fleeing wash through rapids white
+    with waters steeped in sin.
+
+  So inch by inch the tides reclaim
+    the island kingdom keep
+  and cast it down without a name
+    to swirling depths of sleep.
+
+  The atlas page is ripped anew,
+    schematic contour holes
+  where once there rose a sprout to blue
+    now rising streams of souls. 
+
+III - November (Fixed Water)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. verse::
+  :increment: 5
+
+  Orion's arrow point is plunged
+    through lunging fronts of hail
+  across the waves where life expunged
+    remains through shadowed veil.  
+
+  For down below, the stones make schemes
+    in skipping sprees like drunks,
+  inlaid in sunken trees through seams
+    as ballast for their trunks.
+
+  Arise the turret towers stark
+    against the ruddered land 
+  to touch the ceiling shuttered dark
+    and brace what sprawling spanned. 
+
+  Beneath the surface flowers form
+    as shades of algae grow
+  atop the castle walls in swarm,
+    the borough glade aglow.
+
+  November's embers burn a while
+    between the exiled graves.
+  Remembered nocturnes sung beguile
+    the damned, forgottten knaves. 
 
 IV - Winter
 -----------
