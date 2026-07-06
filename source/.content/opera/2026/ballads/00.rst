@@ -2,10 +2,11 @@
 Hyperboreá
 ----------
 
+I - Into The Middle of Things
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. verse::
     :increment: 5
-
-    I - Into The Middle of Things
 
     The snow descends upon a place
         sequestered on a crown,
@@ -112,7 +113,11 @@ Hyperboreá
     conceals in prose, but still imparts 
         to Hyperborea.
     
-    II - From The Egg
+II - From The Egg
+^^^^^^^^^^^^^^^^^
+
+.. verse::
+    :increment: 5
 
     Once long ago, when men were brutes,
         and mountains hid in knolls,
@@ -199,20 +204,25 @@ Hyperboreá
     then days again when wind replayed
         their cries reborn in squalls. 
 
-    III - Resonance
 
-    IN PROGRESS
+III - Resonance
+^^^^^^^^^^^^^^^
+
+IN PROGRESS
     
-    IV - Echoes & Avalanches
+IV - Echoes & Avalanches
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-    IN PROGRESS
+IN PROGRESS
 
 - *Original*: Feburary 2025
 - *Revision I*: September 2025
 - *Revision II*: February 2026
 - *Revision III*: May 2026
 
-.. | clearly, it has to end with an avalanche.
+.. # EDITS
+..
+.. clearly, it has to end with an avalanche.
 ..
 .. --
 ..

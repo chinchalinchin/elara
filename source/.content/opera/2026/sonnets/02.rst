@@ -21,9 +21,9 @@ Sonnet #1
   the gentle lips of sighing Jasilynn.
 
   the ocean claims the lives of countless men,
-  their water graves become the pulse of veins;
+  so water graves become our source of blood;
   the drying words of ink within my pen
-  are made of what their ancient blood contains.
+  are tributaries of an ancient flood.
 
   her eyes awash in mine, we drift and sway
   to let the waves convey our hearts away.
@@ -94,7 +94,7 @@ Sonnet #4
 
   my heart begins its nightly new eclipse,
   as dwarfed within the shadow of your own,
-  and sunk below horizons where it dips
+  thus sunk below horizons where it dips
   in darkness, there to fester all alone.
 
   a lack confirms my heart was shaped for you,
@@ -103,6 +103,7 @@ Sonnet #4
 .. Sonnet #5
 .. ^^^^^^^^^
 
+.. the sleepless nights persist in lieu of dreams
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -123,3 +124,12 @@ Sonnet #4
   * - July 1st, 2026
     - Oxford Review (#2)
     - Pending
+
+.. # EDITS
+.. 
+.. ## Sonnet #1
+..
+.. the ocean claims the lives of countless men,
+.. their water graves become the pulse of veins;
+.. the drying words of ink within my pen
+.. are made of what their ancient blood contains.
