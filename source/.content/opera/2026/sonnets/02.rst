@@ -100,12 +100,10 @@ Sonnet #4
   a lack confirms my heart was shaped for you,
   yet known too late this simple thing was true. 
 
-Sonnet #5
-^^^^^^^^^
+.. Sonnet #5
+.. ^^^^^^^^^
 
-.. verse::
-  :increment: 5
-  
+
 .. list-table:: Submission History
   :widths: 15 15 15
   :header-rows: 1
