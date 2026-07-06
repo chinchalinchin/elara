@@ -2,35 +2,38 @@
 Your Hand
 ---------
 
-| My overflowing palm retains your hand,
-| my soundless searching grip constrains your hand.
-|
-| Campaigns were waged behind our dinner plates
-| so in my weakened state now reigns your hand. 
-|
-| Champagne on lips recalls our lightning strike, 
-| its faded charge at least sustains your hand.
-|
-| Your face betrays unknown terrains of thought,
-| I ask, what other vision gains your hand?
-|
-| Today's performance wanes around your eyes,
-| the last remaining fragment feigns your hand.
-|
-| Though yesterday what we ingrained was real,
-| it's only habit now that trains your hand. 
-|
-| Our anthem drains its notes on evening wind,
-| not even beating rhythm reins your hand. 
-|
-| The grain of folds within your clenching fist 
-| reveals the tangled web that veins your hand.
-|
-| My fingers trace disdain beneath a strand
-| of silver thread. What bracelet chains your hand? 
-|
-| Bewitched, your straining wrist displays a charm, 
-| another's secret heart ordains your hand. 
+.. verse::
+  :increment: 5
+
+  My overflowing palm retains your hand,
+  my soundless searching grip constrains your hand.
+
+  Campaigns were waged behind our dinner plates
+  so in my weakened state now reigns your hand. 
+
+  Champagne on lips recalls our lightning strike, 
+  its faded charge at least sustains your hand.
+
+  Your face betrays unknown terrains of thought,
+  I ask, what other vision gains your hand?
+
+  Today's performance wanes around your eyes,
+  the last remaining fragment feigns your hand.
+
+  Though yesterday what we ingrained was real,
+  it's only habit now that trains your hand. 
+
+  Our anthem drains its notes on evening wind,
+  not even beating rhythm reins your hand. 
+  
+  The grain of folds within your clenching fist 
+  reveals the tangled web that veins your hand.
+
+  My fingers trace disdain beneath a strand
+  of silver thread. What bracelet chains your hand? 
+
+  Bewitched, your straining wrist displays a charm, 
+  another's secret heart ordains your hand. 
 
 - September 2025
 
