@@ -90,7 +90,7 @@ Sonnet #4
   the line you traced upon my skin retains
   electric residues of fingertips
   whose glow for now provides but ever wanes,
-  as current seeps discharged in leaks and drips.
+  as current seeps discharged in leaking drips.
 
   my heart begins its nightly new eclipse,
   as dwarfed within the shadow of your own,
@@ -100,10 +100,21 @@ Sonnet #4
   a lack confirms my heart was shaped for you,
   yet known too late this simple thing was true. 
 
-.. Sonnet #5
-.. ^^^^^^^^^
+Sonnet #5
+^^^^^^^^^
 
-.. the sleepless nights persist in lieu of dreams
+.. verse::
+  :increment: 5
+
+  the sleepless night persists in lieu of dreams,
+  for dreams are made of vague forgotten things
+  and everywhere i look it always seems
+  the real of waking sorrow ever rings.
+
+  tomorrow morning with its coming brings 
+  hallucinations of the prior day,
+  as though a puppet drawn on practiced strings
+  repeating thoughts of you in loops replay.
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -133,3 +144,15 @@ Sonnet #4
 .. their water graves become the pulse of veins;
 .. the drying words of ink within my pen
 .. are made of what their ancient blood contains.
+..
+.. # Soonnet #5
+..
+.. and nothing here seems
+.. and you are still as real as waking deems
+.. and you are still recalled when waking deems
+.. and you are still recalled 
+..
+.. --
+..
+.. tomorrow morning with its weather brings
+.. each drop from heights that flings
