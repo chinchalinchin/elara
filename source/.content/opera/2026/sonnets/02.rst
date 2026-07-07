@@ -18,7 +18,7 @@ Sonnet #1
   commotion sweeps away what parts collide,
   as skin begins to stick to her again
   and thoughts recede upon the breaking tide,
-  the tender sighs of smitten Jasilynn.
+  the tender sighs of glancing Jasilynn.
 
   the ocean claims the lives of countless men,
   so water graves become our source of blood;
@@ -124,6 +124,16 @@ Sonnet #5
   and then the dreams descend to smother you,
   to leave me nothing but the lies they spew.
 
+.. Sonnet #6
+.. ^^^^^^^^^
+
+.. tattoos entwined around her arms embrace 
+.. the tiny torso where her heart's encased;
+.. the image ends when lines run out of space
+.. so further frames are drawn when more's erased.
+..
+.. laced/raced/faced/paced/ 
+
 .. list-table:: Submission History
   :widths: 15 15 15
   :header-rows: 1
@@ -171,7 +181,7 @@ Sonnet #5
 .. the drying words of ink within my pen
 .. are made of what their ancient blood contains.
 ..
-.. # Soonnet #5
+.. ## Sonnet #5
 ..
 .. and nothing here seems
 .. and you are still as real as waking deems
@@ -182,3 +192,9 @@ Sonnet #5
 ..
 .. tomorrow morning with its weather brings
 .. each drop from heights that flings
+..
+.. ## Sonnet #6
+..
+.. tattoos entwined around her arms embrace 
+.. the tiny torso where her heart's encased;
+.. the story ends when lines run out of space
