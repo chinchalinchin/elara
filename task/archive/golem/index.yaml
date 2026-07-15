@@ -1,0 +1,46 @@
+task:
+# ------------------------------------------------
+  context: true
+# ------------------------------------------------
+  system: 
+    guidelines: 
+      coding: true
+      latex: false
+      pronouns: false
+      notation: false
+      interaction: false
+    functions:
+      linguistic: false
+    procedures:
+      poetics: false
+# ------------------------------------------------
+  ticket: 
+    # -------------------------------------------
+    title: "Golem: <title>"
+    # -------------------------------------------
+    content: |
+      <content>
+    # -------------------------------------------
+    shell: []
+# ------------------------------------------------
+  tools:
+    # -------------------------------------------
+    github: 
+      - parameters:
+          repo: golem
+          group: chinchalinchin
+        views:
+          directory: true
+          # Golem Documentation Views
+          golem/board: false
+          golem/docs: true
+          golem/theory: false
+          golem/mkdocs: false
+          # Golem Source Code Views
+          golem/config: true
+          golem/pipeline: false
+          golem/model: false
+          golem/client: true
+          golem/etc: false
+          # Golem Testing Views
+          golem/ci: false

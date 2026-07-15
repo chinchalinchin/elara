@@ -1,7 +1,5 @@
 task:
 # ------------------------------------------------
-  context: true
-# ------------------------------------------------
   system: 
     guidelines: 
       coding: true
@@ -16,7 +14,7 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Elara"
+    title: "Elara: Create Directive"
     # -------------------------------------------
     content: |
       Create a `graph` directive that satisfies the following constraints.
@@ -75,8 +73,8 @@ task:
           group: chinchalinchin
         views:
           directory: true
-          elara_build: true
-          elara_linguistics: false
-          elara_extensions: true
-          elara_styles: true
-          elara_templates: true
+          elara/build: true
+          elara/linguistics: false
+          elara/extensions: true
+          elara/styles: true
+          elara/templates: true

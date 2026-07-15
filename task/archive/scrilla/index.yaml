@@ -1,7 +1,5 @@
 task:
 # ------------------------------------------------
-  context: true
-# ------------------------------------------------
   system: 
     guidelines: 
       coding: true
@@ -16,10 +14,10 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Scrilla"
+    title: "Scrilla: <title>"
     # -------------------------------------------
     content: |
-      <task goes here>
+      <task>
     # -------------------------------------------
     shell: [ ]
       # - LOG_LEVEL=debug scrilla risk-profile ALLY GD
@@ -33,11 +31,11 @@ task:
           group: chinchalinchin
         views:
           directory: true
-          scrilla_build: true
-          scrilla_docs: false
-          scrilla_main: true
-          scrilla_analysis: true
-          scrilla_objects: true
-          scrilla_models: true
-          scrilla_util: true
-          scrilla_static: true
+          scrilla/build: true
+          scrilla/docs: false
+          scrilla/main: true
+          scrilla/analysis: true
+          scrilla/objects: true
+          scrilla/models: true
+          scrilla/util: true
+          scrilla/static: true

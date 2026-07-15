@@ -1,15 +1,23 @@
 task:
 # ------------------------------------------------
-  context: true
-# ------------------------------------------------
-  system: true
+  system: 
+    guidelines: 
+      coding: true
+      latex: false
+      pronouns: false
+      notation: false
+      interaction: false
+    functions:
+      linguistic: false
+    procedures:
+      poetics: false
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Arena Hosting"
+    title: "Golem: Arena Hosting"
     # -------------------------------------------
     content: |
-      {{ }}
+      <content>
     # -------------------------------------------
     shell: 
       # --------------------- ARENA BENCHMARKING
@@ -30,15 +38,15 @@ task:
         views:
           directory: true
           # Golem Documentation Views
-          golem_board: false
-          golem_docs: true
-          golem_theory: false
-          golem_mkdocs: false
+          golem/board: false
+          golem/docs: true
+          golem/theory: false
+          golem/mkdocs: false
           # Golem Source Code Views
-          golem_config: true
-          golem_pipeline: false
-          golem_model: false
-          golem_client: true
-          golem_etc: false
+          golem/config: true
+          golem/pipeline: false
+          golem/model: false
+          golem/client: true
+          golem/etc: false
           # Golem Testing Views
-          golem_ci: false
+          golem/ci: false

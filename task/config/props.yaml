@@ -11,6 +11,7 @@ properties:
   inventory:
     host:
       username: gmoore
+      key: /Users/gmoore/.ssh/id_ed25519
     local:
       username: gmoore
       home: /Users/gmoore/

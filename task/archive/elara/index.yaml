@@ -1,7 +1,5 @@
 task:
 # ------------------------------------------------
-  context: true
-# ------------------------------------------------
   system: 
     guidelines: 
       coding: true
@@ -16,54 +14,10 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Elara"
+    title: "Elara: <title>"
     # -------------------------------------------
     content: |
-      Create a `graph` directive that satisfies the following constraints.
-
-      - Accepts two-dimension lists OR a file path to a CSV containing two columns of data.
-      - Creates a scatterplot
-      - Optionally interpolates between the provided points with a spline if :interpolate: is present. Should default to a scatter plot.
-      - Should size the graph appropriately and dynamically based on the scale of the data.
-      - Should use a Jinja2 template for the HTML component. 
-      - All styles should be kept in the appropriate CSS file.
-      - Should accept a width argument and align argument that control the styling of the graph.
-      - Graph should have principles of Material UI applied to it to make it look smooth and pop.
-      - Should assume the CSV always has a header row for the variable names.
-
-      **Example Usage**
-
-      .. graph::
-        :width: 80% 
-        :align: center
-        :interpolate:
-
-        * - x
-          - y
-        * - 1
-          - 1
-        * - 2
-          - 4
-        * - 3
-          - 6
-
-        Or if the CSV file is present, for example, 
-
-        ```csv
-        Timestamp,CFS
-        2026-05-28 03:45:00+00:00,17500
-        2026-05-28 03:30:00+00:00,17400
-        2026-05-28 03:15:00+00:00,17400
-        2026-05-28 03:00:00+00:00,17300
-        2026-05-28 02:45:00+00:00,17200
-        2026-05-28 02:30:00+00:00,17100
-        2026-05-28 02:15:00+00:00,17100
-        ```
-
-        .. graph:: /local/absolute/path/to/file
-          :width: 80% 
-          :align: center
-          :interpolate:
+      <text>
     # -------------------------------------------
     shell: []
       # - cat /Users/gmoore/Home/projects/elara/build/html/index.html
@@ -76,8 +30,8 @@ task:
           group: chinchalinchin
         views:
           directory: true
-          elara_build: true
-          elara_linguistics: false
-          elara_extensions: true
-          elara_styles: true
-          elara_templates: true
+          elara/build: true
+          elara/linguistics: false
+          elara/extensions: true
+          elara/styles: true
+          elara/templates: true

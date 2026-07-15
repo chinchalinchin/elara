@@ -1,8 +1,16 @@
 task:
 # ------------------------------------------------
-  context: true
-# ------------------------------------------------
-  system: true
+  system: 
+    guidelines: 
+      coding: true
+      latex: false
+      pronouns: false
+      notation: false
+      interaction: false
+    functions:
+      linguistic: false
+    procedures:
+      poetics: false
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
@@ -198,15 +206,15 @@ task:
         views:
           directory: true
           # Golem Documentation Views
-          golem_board: false
-          golem_docs: true
-          golem_theory: true
-          golem_mkdocs: false
+          golem/board: false
+          golem/docs: true
+          golem/theory: true
+          golem/mkdocs: false
           # Golem Source Code Views
-          golem_config: true
-          golem_pipeline: true
-          golem_model: true
-          golem_client: false
-          golem_etc: false
+          golem/config: true
+          golem/pipeline: true
+          golem/model: true
+          golem/client: false
+          golem/etc: false
           # Golem Testing Views
-          golem_ci: false
+          golem/ci: false

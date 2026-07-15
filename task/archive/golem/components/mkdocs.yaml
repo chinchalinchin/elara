@@ -1,12 +1,20 @@
 task:
 # ------------------------------------------------
-  context: true
-# ------------------------------------------------
-  system: true
+  system: 
+    guidelines: 
+      coding: true
+      latex: false
+      pronouns: false
+      notation: false
+      interaction: false
+    functions:
+      linguistic: false
+    procedures:
+      poetics: false
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Documentation Update: {{ target_doc }}"
+    title: "Golemn: Documentation Update: {{ target_doc }}"
     # -------------------------------------------
     content: |
       Update the indicated documentation page. Be as thorough and precise as possible. The target audience is technical and versed in the subject matter. 
@@ -24,15 +32,15 @@ task:
         views:
           directory: false
           # Golem Documentation Views
-          golem_board: false
-          golem_docs: true
-          golem_theory: true
-          golem_mkdocs: true
+          golem/board: false
+          golem/docs: true
+          golem/theory: true
+          golem/mkdocs: true
           # Golem Source Code Views
-          golem_config: false
-          golem_pipeline: false
-          golem_model: false
-          golem_client: false
-          golem_etc: false
+          golem/config: false
+          golem/pipeline: false
+          golem/model: false
+          golem/client: false
+          golem/etc: false
           # Golem Testing Views
-          golem_ci: false
+          golem/ci: false

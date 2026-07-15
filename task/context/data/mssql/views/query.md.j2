@@ -1,12 +1,17 @@
-### View: Query
+{% set host = properties.data.mssql.host %}
+{% for task_data in task.data.mssql if task_data.views.query %}
+{% set database = task_data.parameters.database %}
+{% set query = task_data.parameters.query %}
+### View: Query({{host}}/{{database}})
 
 ```bash
 {{ properties.inventory.local.username}}@localhost % sqlcmd \
-    -S {{ properties.data.mssql.host }} \
+    -S {{ host }} \
     -U $MSSQL_USER \
     -P $MSSQL_PASSWORD \
     -d {{ properties.data.mssql.database }} \
     -Q "{{ task.data.mssql.parameters.query }}"
 
-{{ command("sqlcmd -S " + properties.data.mssql.host + " -U $MSSQL_USER -P $MSSQL_PASSWORD -d " + properties.data.mssql.database + " -Q '" + task.data.mssql.parameters.query + "'") }}
+{{ command("sqlcmd -S " + host + " -U $MSSQL_USER -P $MSSQL_PASSWORD -d " + database + " -Q '" + query  + "'") }}
 ```
+{% endfor %}

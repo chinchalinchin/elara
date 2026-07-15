@@ -1,7 +1,5 @@
 task:
 # ------------------------------------------------
-  context: true
-# ------------------------------------------------
   system: 
     guidelines: 
       coding: true
@@ -33,5 +31,5 @@ task:
           group: chinchalinchin
         views:
           directory: true
-          elara_build: true
-          elara_linguistics: true
+          elara/build: true
+          elara/linguistics: true

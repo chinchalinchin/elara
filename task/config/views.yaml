@@ -41,13 +41,13 @@ views:
       blobs:
         # ------------------ ELARA
         # ----------------------------
-        elara_build:
+        elara/build:
           title: "Elara: Build Files"
           files:
             requirements.txt: text
             Dockerfile: docker
             source/conf.py: python
-        elara_linguistics:
+        elara/linguistics:
           title: "Elara: Linguistic Scripts"
           files:
             source/.scripts/py/linguistics/poetics.py: python
@@ -56,14 +56,14 @@ views:
             source/.scripts/py/linguistics/synonyms.py: python
             source/.scripts/py/palindromics/data.py: python
             source/.scripts/py/palindromics/functions.py: python
-        elara_extensions:
+        elara/extensions:
           title: "Elara: Extensions"
           files:
             source/.extensions/directives/toc.py: python
             source/.extensions/directives/panels.py: python
             source/.extensions/roles/classes.py: python
             source/.extensions/roles/widgets.py: python
-        elara_templates:
+        elara/templates:
           title: "Elara: Templates"
           files:
             source/.templates/theme-switcher.html: jinja2
@@ -73,7 +73,7 @@ views:
             source/.templates/panels/verse.html: jinja2
             source/.templates/widgets/back.html: jinja2
             source/.templates/widgets/share.html: jinja2
-        elara_styles:
+        elara/styles:
           title: "Elara: Styles"
           files:
             source/.static/css/custom.css: css
@@ -84,7 +84,7 @@ views:
             # source/.static/rst/links.rst: rst
         # ------------------ TERRAFORM
         # ----------------------------
-        tf_platform:
+        tf/platform:
           title: 'Terraform Module: Core'
           files:
             README.md: markdown
@@ -96,7 +96,7 @@ views:
             metadata/environments.json: json
             metadata/regions.json: json
             metadata/subnets.json: json
-        tf_ec2: 
+        tf/ec2: 
           title: 'Terraform Module: S3'
           files:
             README.md: markdown
@@ -108,7 +108,7 @@ views:
             terraform.tf: terraform
             variables.tf: terraform
             user-data/user-data.sh: bash
-        tf_iam:
+        tf/iam:
           title: 'Terraform Module: IAM'
           files: 
             README.md: markdown
@@ -128,19 +128,19 @@ views:
         # ---------------------- GOLEM
         # ----------------------------
         # -------------- DOCUMENTATION
-        golem_board:
+        golem/board:
           title: Golem Task Board
           files:
             docs/board/roadmap.md: markdown
             docs/board/issues.md: markdown
-        golem_docs:
+        golem/docs:
           title: "Golem Documentation"
           files:
             README.md: markdown
             # docs/index.md: markdown
             docs/configuration.md: markdown
             docs/guide.md: markdown
-        golem_theory:
+        golem/theory:
           title: "Golem Documentation (Theory)"
           files:
             docs/environment.md: markdown
@@ -149,33 +149,33 @@ views:
             docs/model/training.md: markdown
         # -------------- SOURCE CODE
         # ----- CONFIGURATION & ENTRYPOINTS
-        golem_core: 
+        golem/core: 
           title: "Golem Core"
           files: 
             main.py: python
             app/utils/doom.py: python
-        golem_config:
+        golem/config:
           title: "Golem Configuration"
           files: 
             requirements.txt: text
             conf/app.yaml: yaml
             conf/simple.cfg: conf
         # ----- MODULES
-        golem_metrics:
+        golem/metrics:
           title: "Golem Metrics Source Code"
           files:
             app/metrics/audit.py: python
             app/metrics/examine.py: python
             app/metrics/inspect.py: python
             app/metrics/summary.py: python
-        golem_pipeline:
+        golem/pipeline:
           title: "Golem Pipeline Source Code"
           files:
             app/pipeline/intervene.py: python
             app/pipeline/record.py: python
             app/pipeline/run.py: python
             app/pipeline/train.py: python
-        golem_model:
+        golem/model:
           title: "Golem Model Source Code"
           files: 
             app/models/config.py: python
@@ -183,7 +183,7 @@ views:
             app/models/dataset.py: python
             app/models/loss.py: python
             app/utils/model.py: python
-        golem_client:
+        golem/client:
           title: "Golem Client Source Code"
           files:
             docker-compose.yml: yaml
@@ -191,7 +191,7 @@ views:
             app/client/agent.py: python
             app/client/arena.py: python
             app/client/host.py: python
-        golem_sample:
+        golem/sample:
           title: "Golem Random Source Code"
           files:
             Dockerfile.oblige: dockerfile
@@ -200,14 +200,14 @@ views:
             app/sample/generate.py: python
             app/sample/randomize.py: python
         # -------------- CONTINUOUS INTEGRATION
-        golem_ci:
+        golem/ci:
           title: "Golem Continuous Integration"
           files:
             .github/workflows/ci.yml: yaml
             Dockerfile.agent: dockerfile
             Dockerfile.ci: dockerfile
             tests/test_dataset.py: python
-        golem_mkdocs:
+        golem/mkdocs:
           title: "Golem MkDocs Configuration"
           files:
             .github/workflows/ci.yml: yaml
@@ -215,7 +215,7 @@ views:
             mkdocs.yml: yaml
             docs/javascripts/mathjax.js: javascript
         # -------------- EVERYTHING ELSE
-        golem_etc:
+        golem/etc:
           title: "Golem ETC"
           files:
             app/client/__init__.py: python
@@ -231,7 +231,7 @@ views:
             docs/board/closed/issues.md: markdown
             docs/board/closed/phases.md: markdown
         # ---------------------- SCRILLA
-        scrilla_build:
+        scrilla/build:
           title: "Scrilla Build"
           files:
             MANIFEST.in: text
@@ -239,7 +239,7 @@ views:
             requirements.txt: text
             setup.cfg: toml
             env/.sample.env: env
-        scrilla_docs:
+        scrilla/docs:
           title: "Scrilla Docs"
           files:
             README.md: markdown
@@ -251,7 +251,7 @@ views:
             docs/source/.content/05_development.md: markdown
             docs/source/.content/06_deployment.md: markdown
             docs/source/.content/_appendix.md: markdown
-        scrilla_main: 
+        scrilla/main: 
           title: "Scrilla Main"
           files:
             src/scrilla/__init__.py: python
@@ -260,31 +260,31 @@ views:
             src/scrilla/main.py: python
             src/scrilla/services.py: python
             src/scrilla/settings.py: python
-        scrilla_util:
+        scrilla/util:
           title: "Scrilla Utilities"
           files:
             src/scrilla/util/dater.py: python
             src/scrilla/util/errors.py: python
             src/scrilla/util/helper.py: python
             # src/scrilla/util/outputter.py: python
-        scrilla_analysis:
+        scrilla/analysis:
           title: "Scrilla Analysis"
           files: 
             src/scrilla/analysis/estimators.py: python
             src/scrilla/analysis/markets.py: python
             src/scrilla/analysis/optimizer.py: python
             # src/scrilla/analysis/plotter.py: python
-        scrilla_objects: 
+        scrilla/objects: 
           title: "Scrilla Objects"
           files:
             src/scrilla/analysis/objects/cashflow.py: python
             src/scrilla/analysis/objects/portfolio.py: python
-        scrilla_models:
+        scrilla/models:
           title: "Scrilla Models"
           files:
             src/scrilla/analysis/models/geometric/probability.py: python
             src/scrilla/analysis/models/geometric/statistics.py: python
-        scrilla_static:
+        scrilla/static:
           title: "Scrilla Static"
           files:
             src/scrilla/static/config.py: python
