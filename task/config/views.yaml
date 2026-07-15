@@ -129,19 +129,19 @@ views:
         # ----------------------------
         # -------------- DOCUMENTATION
         golem/board:
-          title: Golem Task Board
+          title: "Golem: Task Board"
           files:
             docs/board/roadmap.md: markdown
             docs/board/issues.md: markdown
         golem/docs:
-          title: "Golem Documentation"
+          title: "Golem: Documentation"
           files:
             README.md: markdown
-            # docs/index.md: markdown
+            docs/index.md: markdown
             docs/configuration.md: markdown
             docs/guide.md: markdown
         golem/theory:
-          title: "Golem Documentation (Theory)"
+          title: "Golem: Documentation (Theory)"
           files:
             docs/environment.md: markdown
             docs/model/philosophy.md: markdown
@@ -150,12 +150,12 @@ views:
         # -------------- SOURCE CODE
         # ----- CONFIGURATION & ENTRYPOINTS
         golem/core: 
-          title: "Golem Core"
+          title: "Golem: Core"
           files: 
             main.py: python
             app/utils/doom.py: python
         golem/config:
-          title: "Golem Configuration"
+          title: "Golem: Configuration"
           files: 
             requirements.txt: text
             conf/app.yaml: yaml

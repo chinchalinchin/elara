@@ -13,7 +13,7 @@ task:
       poetics: false
 # ------------------------------------------------
   ticket: 
-    title: "<TITLE>"
+    title: "<title>"
     content: |
       <task>
     shell: [ ]
@@ -21,76 +21,104 @@ task:
 # ------------------------------------------------
   data:
     logs: []
+    logs: []
       # - parameters:
-      #     host: <hostname>
-      #     app: <apache | java-app>
+      #     host: <host>
+      #     app: <apache | java>
       #     search:
       #       # --- APACHE LOG FORMAT
-      #       # format: '<DD/Month/YYYY:HH:MM:SS>''
+      #       #   <DD/Mon/YYYY:HH:MM:SS>
+      #       start: 'DD/Mon/YYYY:HH:MM:SS'
+      #       end: 'DD/Mon/YYYY:HH:MM:SS
       #       # --- JAVA LOG FORMAT
-      #       # format: '<YYYY-MM-DD HH:MM:SS>''
-      #       # ------------------------
-      #       # start: 14/Feb/2026:13:36:00
-      #       # end: 14/Feb/2026:13:37:00
-      #       start: '2026-02-15 11:20:00'
-      #       end: '2026-02-15 11:21:00'
+      #       #   <YYYY-MM-DD HH:MM:SS>'
+      #       start: 'YYYY-MM-DD HH:MM:SS'
+      #       end: 'YYYY-MM-DD HH:MM:SS'
       #   views:
       #     search: false
     mssql: []
       # - parameters:
-      #     database: <database_name>
+      #     database: <database>
       #     query: <query>
       #   views:
       #     query: true
+      #     specifications: true
 # ------------------------------------------------
   inventory:
     # -------------------------------------------
     host: []
       # - parameters:
-      #     hostname: integ.chinchalinchin.com
+      #     hostname: <hostname>
       #     command: 
-      #       - sudo docker ps
+      #       - <command>
       #   views:
       #     certificates: false
-      #     command: true
+      #     command: false
       #     docker: false
       #     specifications: false
 
     # -------------------------------------------
     k8s: []
       # - parameters:
-      #     namespace: devops
+      #     namespace: <namespace>
       #   views:
-      #     pods: true
+      #     pods: false
 # ------------------------------------------------
   tools:
     # -------------------------------------------
     artifactory: []
       # - parameters:
-      #     repo: chinchalinchin
-      #     artifact: java-app
+      #     repo: <repo>
+      #     artifact: <artifact>
       #   views:
-      #     latest: true
+      #     latest: false
     # -------------------------------------------
     github: []
     #   - parameters:
-    #       repo: golem
-    #       group: chinchalinchin
+    #       repo: <repo>
+    #       group: <group>
     #     views:
-    #       directory: true
-    #       ai_doom_docs: true
-    #       ai_doom_src: true
+    #       directory: false
+    #       elara/build: false
+    #       elara/linguistics: false
+    #       elara/extensions: false
+    #       elara/templates: false
+    #       elara/styles: false
+    #       golem/board: false
+    #       golem/docs: false
+    #       golem/theory: false
+    #       golem/core: false
+    #       golem/config: false
+    #       golem/metrics: false
+    #       golem/pipeline: false
+    #       golem/model: false
+    #       golem/client: false
+    #       golem/sample: false
+    #       golem/ci: false
+    #       golem/mkdocs: false
+    #       golem/etc: false
+    #       scrilla/build: false
+    #       scrilla/docs: false
+    #       scrilla/main: false
+    #       scrilla/util: false
+    #       scrilla/analysis: false
+    #       scrilla/objects: false
+    #       scrilla/models: false
+    #       scrilla/static: false
+    #       tf/platform: false
+    #       tf/ec2: false
+    #       tf/iam: false
     # -------------------------------------------
     prometheus: []
       # - parameters:
-      #     hostname: testing.chinchalinchin.com
-      #     application: java-app
+      #     hostname: <hostname>
+      #     application: <application>
       #   views: 
-      #     metrics: true
+      #     metrics: false
     # -------------------------------------------
     jenkins: []
       # - parameters:
-      #     job: dxs-tasks
+      #     job: <job>
       #   views:
       #     config: false
       #     console: false

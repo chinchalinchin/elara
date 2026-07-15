@@ -1,8 +1,18 @@
-{% set version = 'sqlcmd -S ' + properties.data.mssql.host + ' -d ' + properties.data.mssql.database + ' -U "$MSSQL_USER" -P "$MSSQL_PASSWORD" -Q "' + views.data.mssql.specifications.version + '"'%}
-### View: Specifications
+{# ------------------------------------------------------------------------------------- #}
+{% set host = properties.data.mssql.host %}
+{% set version = views.data.mssql.specifications.version %}
+{# ------------------------------------------------------------------------------------- #}
+{% for task_data in task.data.mssql if task_data.views.specifications %}
+{# ------------------------------------------------------------------------------------- #}
+{% set database = task_data.parameters.database %}
+{% set cmd = 'sqlcmd -S ' + host + ' -d ' + database + ' -U "$MSSQL_USER" -P "$MSSQL_PASSWORD" -Q "' + version + '"'%}
+{# ------------------------------------------------------------------------------------- #}
+### View: Specifications({{ host }}/{{ database}})
 
 ```bash
-{{ properties.inventory.local.username }}@localhost % {{ version }}
+{{ properties.inventory.local.username }}@localhost % {{ cmd }}
 
-{{ command(version) }}
+{{ command(cmd) }}
 ```
+{% endfor %}
+{# ------------------------------------------------------------------------------------- #}

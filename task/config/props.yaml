@@ -3,7 +3,6 @@ properties:
   data: 
     mssql:
       host: mssql.chinchalinchin.com
-      database: chinchalinchin
     logs:
       username: gmoore
       path: /var/log/

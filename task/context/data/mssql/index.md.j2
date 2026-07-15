@@ -2,9 +2,9 @@
 
 [{{ properties.data.mssql.host }}](https://{{ properties.data.mssql.host }}) is a database cluster used as a persistence backend for Java web applications.
 
-{% include './context/data/mssql/views/specifications.md.j2' %}
-
 {%- if task.data.mssql | length > 0 -%}
 ## Views{{ '\n' }}
 {%- include './context/data/mssql/views/query.md.j2' -%}
+{{ '\n' }}
+{%- include './context/data/mssql/views/specifications.md.j2' -%}
 {%- endif -%}
