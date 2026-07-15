@@ -14,7 +14,7 @@
     -U $MSSQL_USER \
     -P $MSSQL_PASSWORD \
     -d {{ database }} \
-    -Q "{{ task.data.mssql.parameters.query }}"
+    -Q "{{ query }}"
 
 {{ command("sqlcmd -S " + host + " -U $MSSQL_USER -P $MSSQL_PASSWORD -d " + database + " -Q '" + query  + "'") }}
 ```
