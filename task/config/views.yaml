@@ -162,21 +162,21 @@ views:
             conf/simple.cfg: conf
         # ----- MODULES
         golem/metrics:
-          title: "Golem Metrics Source Code"
+          title: "Golem: Metrics Source Code"
           files:
             app/metrics/audit.py: python
             app/metrics/examine.py: python
             app/metrics/inspect.py: python
             app/metrics/summary.py: python
         golem/pipeline:
-          title: "Golem Pipeline Source Code"
+          title: "Golem: Pipeline Source Code"
           files:
             app/pipeline/intervene.py: python
             app/pipeline/record.py: python
             app/pipeline/run.py: python
             app/pipeline/train.py: python
         golem/model:
-          title: "Golem Model Source Code"
+          title: "Golem: Model Source Code"
           files: 
             app/models/config.py: python
             app/models/brain.py: python
@@ -184,7 +184,7 @@ views:
             app/models/loss.py: python
             app/utils/model.py: python
         golem/client:
-          title: "Golem Client Source Code"
+          title: "Golem: Client Source Code"
           files:
             docker-compose.yml: yaml
             Dockerfile.agent: dockerfile
