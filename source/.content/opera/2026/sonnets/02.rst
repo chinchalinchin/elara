@@ -172,7 +172,7 @@ Sonnet #6
     - Pending
   * - July 6th, 2026
     - Artists from Maryland (#2 - 6)
-    - Pending
+    - Rejected
   * - July 6th, 2026
     - Grand Little Things (#2 - 6)
     - Pending
@@ -186,6 +186,21 @@ Sonnet #6
     - Rattle Poetry (#2 - 6)
     - Pending
 
+Responses
+~~~~~~~~~
+
+.. epigraph::
+
+  Dear Grant,
+
+  Thank you for taking the time to submit to Artists from Maryland, but unfortunately, we're going to pass on this submission.
+
+  However, we did enjoy this selection (especially the fourth sonnet!). This is not our standard rejection. We truly hope to see more of your work soon.
+
+  We're grateful for being able to read your work, and we hope you keep us in mind for the future. Best of luck finding the perfect home for this selection!
+
+  -- Aldrin Badiola, Editor-in-chief of Artists from Maryland
+  
 .. # EDITS
 .. 
 .. ## Sonnet #1
