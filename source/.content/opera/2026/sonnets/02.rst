@@ -133,7 +133,7 @@ Sonnet #6
   the sleepless night persists in lieu of dreams,
   for dreams are made of vague forgotten things
   and everywhere i look it always seems
-  the real of waking sorrow ever rings.
+  the real of waking sorrow ever stings.
 
   tomorrow morning with its coming brings 
   hallucinations of the prior day,
@@ -185,6 +185,18 @@ Sonnet #6
   * - July 6th, 2026
     - Rattle Poetry (#2 - 6)
     - Pending
+  * - July 16th, 2026
+    - Mangrove Review (#1 - 6)
+    - Pending
+  * - July 16th, 2026
+    - Lunchbreak Review (#1 - 6)
+    - Pending
+  * - July 16th, 2026
+    - Raleigh Review (#1 - 6)
+    - Pending
+  * - July 16th, 2026
+    - January House Literary Journal (#1 - 6)
+    - Pending
 
 Responses
 ~~~~~~~~~
@@ -200,7 +212,7 @@ Responses
   We're grateful for being able to read your work, and we hope you keep us in mind for the future. Best of luck finding the perfect home for this selection!
 
   -- Aldrin Badiola, Editor-in-chief of Artists from Maryland
-  
+
 .. # EDITS
 .. 
 .. ## Sonnet #1
