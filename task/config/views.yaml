@@ -216,7 +216,7 @@ views:
             docs/javascripts/mathjax.js: javascript
         # -------------- EVERYTHING ELSE
         golem/etc:
-          title: "Golem ETC"
+          title: "Golem: ETC"
           files:
             app/client/__init__.py: python
             app/metrics/__init__.py: python
@@ -230,6 +230,53 @@ views:
             conf/fluid.cfg: conf
             docs/board/closed/issues.md: markdown
             docs/board/closed/phases.md: markdown
+        # ---------------------- ONTOLOGY
+        ontology/docs:
+          title: "Ontology: Documentation"
+          files:
+            docs/index.md: markdown
+            docs/00-overview.md: markdown
+            docs/01-assets.md: markdown
+            docs/02-schema.md: markdown
+            docs/03-api.md: markdown
+            docs/04-pseudocode.md: markdown
+            docs/.static/yaml/property-objects.yaml: yaml
+            docs/.static/yaml/property-sheets.yaml: yaml
+            docs/.static/yaml/property-tiles.yaml: yaml
+            docs/.static/yaml/state-immutable.yaml: yaml
+            docs/.static/yaml/state-mutable-inanimate.yaml: yaml
+            docs/.static/yaml/state-mutable-animate.yaml: yaml
+        ontology/app:
+          title: "Ontology: App"
+          files:
+            main.py: python
+            src/cli.py: python
+            src/app/asset.py: python
+            src/app/intent.py: python
+        ontology/app/interface:
+          title: "Ontology: Interface"
+          files:
+            src/app/interface/controller.py: python
+            src/app/interface/keyboard.py: python
+            src/app/interface/player.py: python
+        ontology/app/models:
+          title: "Ontology: Models"
+          files:
+            src/app/models/base.py: python
+            src/app/models/objects.py: python
+            src/app/models/sheets.py: python
+            src/app/models/tiles.py: python
+        ontology/app/world:
+          title: "Ontology: World"
+          files:
+            src/app/world/board.py: python
+            src/app/world/engine.py: python
+            src/app/world/view.py: python
+        ontology/cython:
+          title: "Ontology: Cython"
+          files:
+            setup.py: python
+            libs/sdl2.pyx: python
         # ---------------------- SCRILLA
         scrilla/build:
           title: "Scrilla Build"

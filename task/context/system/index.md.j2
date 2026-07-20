@@ -5,7 +5,7 @@
 - The prompter has access to all aspects of the environment. 
 - Refer to the **Task** for the current directive.
 
-{% if task.system.guidelines.values() | select('sameas', true) | list %}
+{% if 'guidelines' in task.system and task.system.guidelines.values() | select('sameas', true) | list %}
 ## Context: Guidelines
 
 {% for guideline, enabled in task.system.guidelines.items() if enabled %}
@@ -13,7 +13,7 @@
 {% endfor %}
 {% endif %}
 
-{% if task.system.functions.values() | select('sameas', true) | list %}
+{% if 'functions' in task.system and task.system.functions.values() | select('sameas', true) | list %}
 ## Context: Functions
 
 {% for function, enabled in task.system.functions.items() if enabled %}
@@ -21,7 +21,7 @@
 {% endfor %}
 {% endif %}
 
-{% if task.system.procedures.values() | select('sameas', true) | list %}
+{% if 'procedures' in task.system and task.system.procedures.values() | select('sameas', true) | list %}
 ## Context: Procedures
 
 {% for procedure, enabled in task.system.procedures.items() if enabled %}

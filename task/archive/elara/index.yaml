@@ -1,5 +1,6 @@
 task:
 # ------------------------------------------------
+  context: true
   system: 
     guidelines: 
       coding: true
