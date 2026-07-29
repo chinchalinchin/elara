@@ -8,10 +8,10 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: <title>"
+    title: "Ontology: Design & Architecture"
     # -------------------------------------------
     content: |
-      <text>
+      Discuss the design and architecture of this application with respect to the discussion just had. 
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
@@ -24,8 +24,10 @@ task:
         views:
           directory: true
           ontology/docs: true
-          ontology/app: true
-          ontology/app/interface: true
+          ontology/board: true
+          ontology/app/assets: true
+          ontology/app/game: true
+          ontology/app/main: true
           ontology/app/models: true
-          ontology/app/world: true
+          ontology/app/physics: true
           ontology/cython: true

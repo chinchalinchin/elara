@@ -23,7 +23,7 @@ Sonnet #1
   contagious magic cast by hand creates 
   allure no eyes perceive and then forget,
   instead entranced by what she radiates,
-  the passion forming in the beads of sweat.
+  the potion forming in the beads of sweat.
 
   my fate was sealed before i had a chance,
   the moment when i stole from her a glance.
@@ -160,7 +160,7 @@ Sonnet #6
     - Pending
   * - July 1st, 2026
     - Merion West (#3)
-    - Pending
+    - Rejected
   * - July 1st, 2026
     - St. Katherine Review (#3)
     - Pending
@@ -196,7 +196,7 @@ Sonnet #6
     - Pending
   * - July 16th, 2026
     - January House Literary Journal (#1 - 6)
-    - Pending
+    - Rejected
 
 Responses
 ~~~~~~~~~
@@ -212,6 +212,18 @@ Responses
   We're grateful for being able to read your work, and we hope you keep us in mind for the future. Best of luck finding the perfect home for this selection!
 
   -- Aldrin Badiola, Editor-in-chief of Artists from Maryland
+
+.. epigraph::
+
+  Dear Grant,
+
+  I do love sonnets. Yours includes meter and rhyme scheme. Impressive, Sir. I did not select this poem, Grant. You can send me Sonnets as you please. Merion West is a fan.
+
+  Continue to revel in the craft of writing. I am a poet as well. The process of publishing poems is subjective and challenging. Words do float off the page with consistent effort. Poets discover fresh use of diction and syntax.
+
+  Thank you for sharing your work with Merion West. We wish you the best in your writing.
+
+  -- Austin Allen James, Arts Editor, Merion West
 
 .. # EDITS
 .. 

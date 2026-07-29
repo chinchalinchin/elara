@@ -231,52 +231,76 @@ views:
             docs/board/closed/issues.md: markdown
             docs/board/closed/phases.md: markdown
         # ---------------------- ONTOLOGY
+        ontology/board:
+          title: "Ontology: Task Board"
+          files:
+            docs/.board/index.md: markdown
         ontology/docs:
           title: "Ontology: Documentation"
           files:
             docs/index.md: markdown
             docs/00-overview.md: markdown
             docs/01-assets.md: markdown
-            docs/02-schema.md: markdown
-            docs/03-api.md: markdown
-            docs/04-pseudocode.md: markdown
-            docs/.static/yaml/property-objects.yaml: yaml
-            docs/.static/yaml/property-sheets.yaml: yaml
-            docs/.static/yaml/property-tiles.yaml: yaml
-            docs/.static/yaml/state-immutable.yaml: yaml
-            docs/.static/yaml/state-mutable-inanimate.yaml: yaml
-            docs/.static/yaml/state-mutable-animate.yaml: yaml
-        ontology/app:
-          title: "Ontology: App"
+            docs/02-sprites.md: markdown
+            docs/03-player.md: markdown
+            docs/04-menus.md: markdown
+            docs/05-plots.md: markdown
+            docs/06-architecture.md: markdown
+            docs/.static/yaml/examples/default-disposition-matrix.yaml: yaml
+            docs/.static/yaml/asset-property-cursors.yaml: yaml
+            docs/.static/yaml/asset-property-effects.yaml: yaml
+            docs/.static/yaml/asset-property-objects.yaml: yaml
+            docs/.static/yaml/asset-property-sheets.yaml: yaml
+            docs/.static/yaml/asset-property-tiles.yaml: yaml
+            docs/.static/yaml/data-intents.yaml: yaml
+            docs/.static/yaml/data-personas.yaml: yaml
+            docs/.static/yaml/data-state-immutable-animate.yaml: yaml
+            docs/.static/yaml/data-state-immutable-inanimate.yaml: yaml
+            docs/.static/yaml/data-state-mutable-animate.yaml: yaml
+            docs/.static/yaml/data-state-mutable-inanimate.yaml: yaml
+        ontology/app/main:
+          title: "Ontology: App Entrypoints"
           files:
             main.py: python
             src/cli.py: python
-            src/app/asset.py: python
-            src/app/intent.py: python
-        ontology/app/interface:
-          title: "Ontology: Interface"
+            src/app/player.py: python
+            src/app/screen.py: python
+        ontology/app/input:
+          title: "Ontology: Input"
           files:
-            src/app/interface/controller.py: python
+            src/app/input/controller.py: python
             src/app/interface/keyboard.py: python
-            src/app/interface/player.py: python
+        ontology/app/physics:
+          title: "Ontology: Physics"
+          files:
+            src/app/physics/collisions.py: python
         ontology/app/models:
           title: "Ontology: Models"
           files:
-            src/app/models/base.py: python
-            src/app/models/objects.py: python
-            src/app/models/sheets.py: python
-            src/app/models/tiles.py: python
-        ontology/app/world:
-          title: "Ontology: World"
+            src/app/models/__init__.py: python
+            src/app/models/properties.py: python
+            src/app/models/state.py: python
+        ontology/app/game:
+          title: "Ontology: Game"
           files:
-            src/app/world/board.py: python
-            src/app/world/engine.py: python
-            src/app/world/view.py: python
+            src/app/game/board.py: python
+            src/app/game/engine.py: python
+        ontology/app/assets:
+          title: "Ontology: Assets"
+          files:
+            src/app/assets/base.py: python
+            src/app/assets/cursors.py: python
+            src/app/assets/effects.py: python
+            src/app/assets/objects.py: python
+            src/app/assets/sheets.py: python
+            src/app/assets/tiles.py: python
         ontology/cython:
           title: "Ontology: Cython"
           files:
             setup.py: python
-            libs/sdl2.pyx: python
+            libs/calculate.pyx: python
+            libs/render.pyx: python
+            libs/register.pyx: python
         # ---------------------- SCRILLA
         scrilla/build:
           title: "Scrilla Build"

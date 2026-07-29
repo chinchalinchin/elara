@@ -8,10 +8,10 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: <title>"
+    title: "Ontology: Design & Architecture"
     # -------------------------------------------
     content: |
-      <text>
+      Read over the documentation and the current source code. Update the project plan detailed in the Board. Create tasks and subtasks that will results in the completion of a project that meets the specifications detailed in the documentation.
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
