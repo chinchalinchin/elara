@@ -253,7 +253,6 @@ views:
             docs/.static/yaml/asset-property-sheets.yaml: yaml
             docs/.static/yaml/asset-property-tiles.yaml: yaml
             docs/.static/yaml/data-intents.yaml: yaml
-            docs/.static/yaml/data-personas.yaml: yaml
             docs/.static/yaml/data-state-immutable-animate.yaml: yaml
             docs/.static/yaml/data-state-immutable-inanimate.yaml: yaml
             docs/.static/yaml/data-state-mutable-animate.yaml: yaml
@@ -269,15 +268,12 @@ views:
           title: "Ontology: Input"
           files:
             src/app/input/controller.py: python
-            src/app/interface/keyboard.py: python
-        ontology/app/physics:
-          title: "Ontology: Physics"
-          files:
-            src/app/physics/collisions.py: python
+            src/app/input/keyboard.py: python
         ontology/app/models:
           title: "Ontology: Models"
           files:
             src/app/models/__init__.py: python
+            src/app/models/configuration.py: python
             src/app/models/properties.py: python
             src/app/models/state.py: python
         ontology/app/game:
@@ -298,9 +294,9 @@ views:
           title: "Ontology: Cython"
           files:
             setup.py: python
-            libs/calculate.pyx: python
+            libs/math.pyx: python
             libs/render.pyx: python
-            libs/register.pyx: python
+            libs/registry.pyx: python
         # ---------------------- SCRILLA
         scrilla/build:
           title: "Scrilla Build"

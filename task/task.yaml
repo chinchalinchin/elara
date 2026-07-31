@@ -2,16 +2,16 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: 
-    guidelines: 
-      coding: true
+  # system: 
+  #   guidelines: 
+  #     coding: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
     title: "Ontology: Design & Architecture"
     # -------------------------------------------
     content: |
-      Discuss the design and architecture of this application with respect to the discussion just had. 
+      Discuss the design and architecture of this application. Evaluate and critique it. Suggest improvements.
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
@@ -24,10 +24,9 @@ task:
         views:
           directory: true
           ontology/docs: true
-          ontology/board: true
+          ontology/board: false
           ontology/app/assets: true
           ontology/app/game: true
           ontology/app/main: true
           ontology/app/models: true
-          ontology/app/physics: true
           ontology/cython: true

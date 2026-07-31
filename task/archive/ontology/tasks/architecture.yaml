@@ -11,7 +11,7 @@ task:
     title: "Ontology: Design & Architecture"
     # -------------------------------------------
     content: |
-      Discuss the design and architecture of this application with respect to the Cython discussion just had. Identify how the design and architecture should be updated to integrate Cython SDL interfaces to efficiently render the assets.
+      Discuss the design and architecture of this application. Evaluate and critique it.
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
@@ -24,8 +24,10 @@ task:
         views:
           directory: true
           ontology/docs: true
+          ontology/board: true
           ontology/app/assets: true
           ontology/app/game: true
           ontology/app/main: true
+          ontology/app/math: true
           ontology/app/models: true
           ontology/cython: true

@@ -24,9 +24,10 @@ task:
         views:
           directory: true
           ontology/docs: true
-          ontology/app: true
           ontology/board: true
-          ontology/app/interface: true
+          ontology/app/assets: true
+          ontology/app/game: true
+          ontology/app/main: true
+          ontology/app/math: true
           ontology/app/models: true
-          ontology/app/world: true
           ontology/cython: true
