@@ -11,7 +11,9 @@ task:
     title: "Ontology: Design & Architecture"
     # -------------------------------------------
     content: |
-      Discuss the design and architecture of this application. Evaluate and critique it. Suggest improvements.
+      Discuss the design and architecture of this application. Evaluate and critique it. Suggest improvements. Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured raytraced 3D graphics from scratch. 
+
+
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
