@@ -268,8 +268,7 @@ views:
         ontology/app/input:
           title: "Ontology: Input"
           files:
-            src/app/input/controller.py: python
-            src/app/input/keyboard.py: python
+            src/app/input/devices.py: python
         ontology/app/models:
           title: "Ontology: Models"
           files:
@@ -295,6 +294,8 @@ views:
           title: "Ontology: Cython"
           files:
             setup.py: python
+            libs/core.pxd: python
+            libs/core.pyx: python
             libs/math.pyx: python
             libs/render.pyx: python
             libs/registry.pyx: python

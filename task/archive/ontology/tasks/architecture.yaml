@@ -2,16 +2,18 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: 
-    guidelines: 
-      coding: true
+  # system: 
+  #   guidelines: 
+  #     coding: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
     title: "Ontology: Design & Architecture"
     # -------------------------------------------
     content: |
-      Discuss the design and architecture of this application. Evaluate and critique it.
+      Discuss the design and architecture of this application. Evaluate and critique it. Suggest improvements. 
+      
+      Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured raytraced 3D graphics from scratch. 
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
@@ -23,11 +25,11 @@ task:
           group: chinchalinchin
         views:
           directory: true
-          ontology/docs: true
-          ontology/board: true
+          ontology/docs: false
+          ontology/board: false
           ontology/app/assets: true
           ontology/app/game: true
           ontology/app/main: true
-          ontology/app/math: true
           ontology/app/models: true
+          ontology/app/input: true
           ontology/cython: true
