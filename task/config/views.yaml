@@ -267,7 +267,6 @@ views:
         ontology/app/models:
           title: "Ontology: Models"
           files:
-            src/app/models/__init__.py: python
             src/app/models/configuration.py: python
             src/app/models/properties.py: python
             src/app/models/state.py: python
