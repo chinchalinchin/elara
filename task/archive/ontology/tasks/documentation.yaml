@@ -8,12 +8,13 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Design & Architecture"
+    title: "Ontology: Documentation"
     # -------------------------------------------
     content: |
-      Discuss the design and architecture of this application. Evaluate and critique it. Suggest improvements. 
+      Update the following mkdocs pages to reflect the current state of the application:
       
-      Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured raytraced 3D graphics from scratch. 
+      - 01-assets.md
+      - 06-architecture.md
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
@@ -24,12 +25,12 @@ task:
           repo: ontology
           group: chinchalinchin
         views:
-          directory: true
+          directory: false
           ontology/docs: true
-          ontology/board: true
-          ontology/app/assets: true
-          ontology/app/game: true
-          ontology/app/main: true
-          ontology/app/models: true
-          ontology/app/input: true
-          ontology/cython: true
+          ontology/board: false
+          ontology/app/assets: false
+          ontology/app/game: false
+          ontology/app/main: false
+          ontology/app/models: false
+          ontology/app/input: false
+          ontology/cython: false
