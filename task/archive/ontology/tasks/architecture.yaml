@@ -11,9 +11,9 @@ task:
     title: "Ontology: Design & Architecture"
     # -------------------------------------------
     content: |
-      Discuss the design and architecture of this application. Evaluate and critique it. Suggest improvements. 
+      Discuss the design and architecture of this application. Evaluate and critique it. Suggest improvements, if applicable. 
       
-      Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured raytraced 3D graphics from scratch. 
+      Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured ray-traced 3D graphics from scratch. 
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
@@ -25,7 +25,7 @@ task:
           group: chinchalinchin
         views:
           directory: true
-          ontology/docs: false
+          ontology/docs: true
           ontology/board: false
           ontology/app/assets: true
           ontology/app/game: true
