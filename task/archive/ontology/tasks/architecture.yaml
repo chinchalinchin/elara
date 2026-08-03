@@ -11,9 +11,11 @@ task:
     title: "Ontology: Design & Architecture"
     # -------------------------------------------
     content: |
-      Discuss the design and architecture of this application. Evaluate and critique it. Suggest improvements. 
+      Discuss the design and architecture of this application with respect to the current phase of the Task Board. Evaluate and critique it. Suggest improvements, if applicable. Discuss what needs modified in the task backlog, if at all.
       
-      Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured raytraced 3D graphics from scratch. 
+      Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured ray-traced 3D graphics from scratch. 
+
+      I believe the load() in libs/render.pyx should probably be in the libs/registry.pyx, along with the definition of the TexturePtr wrapper. Anaylze the design of the Registry. Ensure tasking aligns with architecture.
     # -------------------------------------------
     shell: []
 # ------------------------------------------------

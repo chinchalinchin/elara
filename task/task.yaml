@@ -2,19 +2,16 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  # system: 
-  #   guidelines: 
-  #     coding: true
+  system: 
+    guidelines: 
+      coding: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Documentation"
+    title: "Ontology: Rendering"
     # -------------------------------------------
     content: |
-      Update the following mkdocs pages to reflect the current state of the application:
-      
-      - 01-assets.md
-      - 06-architecture.md
+      Explain the SDL flow. It seems like there needs to be a function to crop the rendered image so that it is centered on the player, except in the cases where the player is approaching the edges of the board. 
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
@@ -25,12 +22,12 @@ task:
           repo: ontology
           group: chinchalinchin
         views:
-          directory: false
+          directory: true
           ontology/docs: true
           ontology/board: false
-          ontology/app/assets: false
-          ontology/app/game: false
-          ontology/app/main: false
-          ontology/app/models: false
-          ontology/app/input: false
-          ontology/cython: false
+          ontology/app/assets: true
+          ontology/app/game: true
+          ontology/app/main: true
+          ontology/app/models: true
+          ontology/app/input: true
+          ontology/cython: true

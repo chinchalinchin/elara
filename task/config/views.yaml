@@ -247,16 +247,11 @@ views:
             docs/05-plots.md: markdown
             docs/06-architecture.md: markdown
             docs/.static/yaml/examples/default-disposition-matrix.yaml: yaml
-            docs/.static/yaml/asset-property-cursors.yaml: yaml
-            docs/.static/yaml/asset-property-effects.yaml: yaml
-            docs/.static/yaml/asset-property-objects.yaml: yaml
-            docs/.static/yaml/asset-property-sheets.yaml: yaml
-            docs/.static/yaml/asset-property-tiles.yaml: yaml
+            docs/.static/yaml/asset-recipes.yaml: yaml
+            docs/.static/yaml/asset-properties.yaml: yaml
+            docs/.static/yaml/asset-state.yaml: yaml
+            docs/.static/yaml/data-equipment.yaml: yaml
             docs/.static/yaml/data-intents.yaml: yaml
-            docs/.static/yaml/data-state-immutable-animate.yaml: yaml
-            docs/.static/yaml/data-state-immutable-inanimate.yaml: yaml
-            docs/.static/yaml/data-state-mutable-animate.yaml: yaml
-            docs/.static/yaml/data-state-mutable-inanimate.yaml: yaml
         ontology/app/main:
           title: "Ontology: App Entrypoints"
           files:
@@ -281,15 +276,14 @@ views:
           files:
             src/app/game/board.py: python
             src/app/game/engine.py: python
+            src/app/game/mechanics.py: python
+            src/app/game/factory.py: python
         ontology/app/assets:
           title: "Ontology: Assets"
           files:
             src/app/assets/base.py: python
-            src/app/assets/cursors.py: python
-            src/app/assets/effects.py: python
-            src/app/assets/objects.py: python
-            src/app/assets/sheets.py: python
-            src/app/assets/tiles.py: python
+            src/app/assets/animations.py: python
+            src/app/assets/frames.py: python
         ontology/cython:
           title: "Ontology: Cython"
           files:

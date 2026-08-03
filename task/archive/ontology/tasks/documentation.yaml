@@ -13,8 +13,7 @@ task:
     content: |
       Update the following mkdocs pages to reflect the current state of the application:
       
-      - 01-assets.md
-      - 06-architecture.md
+      - <docs>
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
