@@ -65,3 +65,10 @@ python main.py [template_file] [-o output_file] [-v vars_file]
 Some blocks in the `task.yml` have parameters. These parameters are ingested by the views to dynamically modify the generated context. 
 
 The *scope* of parameters extends down the task tree, but not up. In other words, `parameters` defined under `task.inventory.host.parameters` are not shared by `parameters` defined under the `task.inventory.local.parameters`.
+
+### Task Board
+
+The Task Board is an Story Board for development and implementation. The `task.tools.github[*].views.board` assumes the following directory and page structure. These properties can be configured in the `config/props.yaml` file.
+
+- `docs/.board/index.md`: Board Index
+- `docs/.board/phases/phase-*.md`: Description of the phase, broken down by tasks.

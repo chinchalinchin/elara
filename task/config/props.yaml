@@ -29,5 +29,8 @@ properties:
         ## MACOS
         # chinchalinchin: /Users/gmoore/Home/Projects/
         # cumberland-cloud: /Users/gmoore/Home/tf-modules/
+      docs: docs/
+      board: docs/.board/index.md
+      phases: docs/.board/phases
     jenkins:
       url: jenkins.chinchalinchin.com

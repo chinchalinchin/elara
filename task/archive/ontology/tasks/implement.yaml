@@ -21,14 +21,13 @@ task:
       - parameters:
           repo: ontology
           group: chinchalinchin
-          phase: i
         views:
           directory: true
-          board: true
-          ontology/docs: false
-          ontology/app/assets: false
-          ontology/app/game: false
-          ontology/app/main: false
-          ontology/app/math: false
-          ontology/app/models: false
-          ontology/cython: false
+          ontology/docs: true
+          ontology/board: true
+          ontology/app/assets: true
+          ontology/app/game: true
+          ontology/app/main: true
+          ontology/app/math: true
+          ontology/app/models: true
+          ontology/cython: true

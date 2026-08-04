@@ -235,6 +235,8 @@ views:
           title: "Ontology: Task Board"
           files:
             docs/.board/index.md: markdown
+            docs/.board/phases/phase-i.md: markdown
+            # docs/.boards/phases/phase-ii.md: markdown
         ontology/docs:
           title: "Ontology: Documentation"
           files:
