@@ -92,6 +92,38 @@ def file(file_path: str) -> str:
         return f"Error reading file: {str(e)}"
 
 
+def contents(path: str) -> list:
+    """
+    Returns a list of all Markdown (.md) files contained directly in the specified path,
+    excluding 'index.md'. Ignores subdirectories.
+
+    Args:
+        path (str): The directory path to inspect. Supports `~` expansion.
+
+    Returns:
+        list: A list of filenames ending in '.md' (excluding index.md). Returns an empty 
+              list if the path is invalid, not a directory, or unreadable.
+    """
+    full_path = os.path.expanduser(path)
+    
+    # Verify the path exists and is indeed a directory
+    if not os.path.exists(full_path) or not os.path.isdir(full_path):
+        return []
+
+    try:
+        # Iterate over directory entries and filter for files ending with .md, ignoring index.md
+        md_files = [
+            f for f in os.listdir(full_path)
+            if f.lower().endswith('.md') 
+            and f.lower() != 'index.md' 
+            and os.path.isfile(os.path.join(full_path, f))
+        ]
+        return md_files
+    except Exception as e:
+        print(f"Error reading directory '{path}': {e}")
+        return []
+
+
 def load(vars_path: str) -> dict:
     """
     Loads variables from a YAML file.
@@ -136,8 +168,9 @@ def render(template_path: str, output_path: str, vars_path: str) -> None:
     Orchestrates the Jinja2 rendering workflow.
 
     Initializes a Jinja2 Environment with the directory containing this script as the loader.
-    Injects the custom `command` and `file` functions into the global namespace,
-    loads optional variables from YAML, renders the specified template, and writes the result to disk.
+    Injects the custom `command`, `file`, `now`, and `contents` functions into the global 
+    namespace, loads optional variables from YAML, renders the specified template, 
+    and writes the result to disk.
 
     Args:
         template_path (str): The filename of the Jinja2 template to render.
@@ -167,6 +200,7 @@ def render(template_path: str, output_path: str, vars_path: str) -> None:
     env.globals['command'] = command
     env.globals['file'] = file
     env.globals['now'] = now
+    env.globals['contents'] = contents
 
     # Load both context files
     task_data = load(vars_path)

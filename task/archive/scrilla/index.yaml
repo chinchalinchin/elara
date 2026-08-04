@@ -31,8 +31,8 @@ task:
           group: chinchalinchin
         views:
           directory: true
+          docs: true
           scrilla/build: true
-          scrilla/docs: false
           scrilla/main: true
           scrilla/analysis: true
           scrilla/objects: true

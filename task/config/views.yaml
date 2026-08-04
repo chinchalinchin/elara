@@ -39,7 +39,15 @@ views:
     # --- 3. GITHUB VIEWS
     github:
       blobs:
-        # ------------------ ELARA
+        # ------------ GENERAL PURPOSE
+        # ----------------------------
+        mkdocs:
+          title: "MkDocs: Configuration"
+          files:
+            .github/workflows/docs.yml: yaml
+            mkdocs.yml: yaml
+            docs/.static/js/mathjax.js: javascript
+        # ---------------------- ELARA
         # ----------------------------
         elara/build:
           title: "Elara: Build Files"
@@ -127,19 +135,6 @@ views:
             policies/sts/assume-role.tftpl: template
         # ---------------------- GOLEM
         # ----------------------------
-        # -------------- DOCUMENTATION
-        golem/board:
-          title: "Golem: Task Board"
-          files:
-            docs/board/roadmap.md: markdown
-            docs/board/issues.md: markdown
-        golem/docs:
-          title: "Golem: Documentation"
-          files:
-            README.md: markdown
-            docs/index.md: markdown
-            docs/configuration.md: markdown
-            docs/guide.md: markdown
         golem/theory:
           title: "Golem: Documentation (Theory)"
           files:
@@ -147,8 +142,6 @@ views:
             docs/model/philosophy.md: markdown
             docs/model/brain.md: markdown
             docs/model/training.md: markdown
-        # -------------- SOURCE CODE
-        # ----- CONFIGURATION & ENTRYPOINTS
         golem/core: 
           title: "Golem: Core"
           files: 
@@ -160,7 +153,6 @@ views:
             requirements.txt: text
             conf/app.yaml: yaml
             conf/simple.cfg: conf
-        # ----- MODULES
         golem/metrics:
           title: "Golem: Metrics Source Code"
           files:
@@ -199,7 +191,6 @@ views:
             app/sample/interfaces.py: python
             app/sample/generate.py: python
             app/sample/randomize.py: python
-        # -------------- CONTINUOUS INTEGRATION
         golem/ci:
           title: "Golem Continuous Integration"
           files:
@@ -207,14 +198,6 @@ views:
             Dockerfile.agent: dockerfile
             Dockerfile.ci: dockerfile
             tests/test_dataset.py: python
-        golem/mkdocs:
-          title: "Golem MkDocs Configuration"
-          files:
-            .github/workflows/ci.yml: yaml
-            Dockerfile.ci: dockerfile
-            mkdocs.yml: yaml
-            docs/javascripts/mathjax.js: javascript
-        # -------------- EVERYTHING ELSE
         golem/etc:
           title: "Golem: ETC"
           files:
@@ -230,30 +213,8 @@ views:
             conf/fluid.cfg: conf
             docs/board/closed/issues.md: markdown
             docs/board/closed/phases.md: markdown
-        # ---------------------- ONTOLOGY
-        ontology/board:
-          title: "Ontology: Task Board"
-          files:
-            docs/.board/index.md: markdown
-            docs/.board/phases/phase-i.md: markdown
-            # docs/.boards/phases/phase-ii.md: markdown
-        ontology/docs:
-          title: "Ontology: Documentation"
-          files:
-            docs/index.md: markdown
-            docs/00-overview.md: markdown
-            docs/01-assets.md: markdown
-            docs/02-sprites.md: markdown
-            docs/03-player.md: markdown
-            docs/04-menus.md: markdown
-            docs/05-plots.md: markdown
-            docs/06-architecture.md: markdown
-            docs/.static/yaml/examples/default-disposition-matrix.yaml: yaml
-            docs/.static/yaml/asset-recipes.yaml: yaml
-            docs/.static/yaml/asset-properties.yaml: yaml
-            docs/.static/yaml/asset-state.yaml: yaml
-            docs/.static/yaml/data-equipment.yaml: yaml
-            docs/.static/yaml/data-intents.yaml: yaml
+        # ------------------- ONTOLOGY
+        # ----------------------------
         ontology/app/main:
           title: "Ontology: App Entrypoints"
           files:
@@ -292,9 +253,20 @@ views:
             libs/core.pxd: python
             libs/core.pyx: python
             libs/math.pyx: python
+            libs/render.pxd: python
             libs/render.pyx: python
             libs/registry.pyx: python
-        # ---------------------- SCRILLA
+        ontology/schemas:
+          title: "Ontology: Schemas"
+          files:
+            docs/.static/yaml/examples/default-disposition-matrix.yaml: yaml
+            docs/.static/yaml/asset-recipes.yaml: yaml
+            docs/.static/yaml/asset-properties.yaml: yaml
+            docs/.static/yaml/asset-state.yaml: yaml
+            docs/.static/yaml/data-equipment.yaml: yaml
+            docs/.static/yaml/data-intents.yaml: yaml
+        # -------------------- SCRILLA
+        # ----------------------------
         scrilla/build:
           title: "Scrilla Build"
           files:

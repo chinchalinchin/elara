@@ -25,10 +25,11 @@ task:
         views:
           directory: true
           board: true
-          ontology/docs: false
-          ontology/app/assets: false
-          ontology/app/game: false
+          docs: true
           ontology/app/main: false
-          ontology/app/math: false
+          ontology/app/input: false 
           ontology/app/models: false
+          ontology/app/game: false
+          ontology/app/assets: false
           ontology/cython: false
+          ontology/schemas: false

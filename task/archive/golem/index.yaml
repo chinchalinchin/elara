@@ -29,18 +29,22 @@ task:
       - parameters:
           repo: golem
           group: chinchalinchin
+          phase: iii
         views:
+          # GENERAL VIEWS
           directory: true
-          # Golem Documentation Views
-          golem/board: false
-          golem/docs: true
+          board: false
+          docs: true
+          # LIBRARY VIEWS
+          mkdocs: false
+          # GOLEM VIEWS
+          ## Golem Documentation Views
           golem/theory: false
-          golem/mkdocs: false
-          # Golem Source Code Views
+          ## Golem Source Code Views
           golem/config: true
           golem/pipeline: false
           golem/model: false
           golem/client: true
           golem/etc: false
-          # Golem Testing Views
+          ## Golem Testing Views
           golem/ci: false

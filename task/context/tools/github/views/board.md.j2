@@ -1,7 +1,7 @@
 {% for task_data in task.tools.github if task_data.views.board %}
 {% set repo_path = properties.tools.github.groups[task_data.parameters.group] + task_data.parameters.repo %}
-{% set board_index = properties.tools.github.board %}
-{% set phase_path = properties.tools.github.phases %}
+{% set board_index = properties.tools.github.board.path + properties.tools.github.board.index %}
+{% set phase_path = properties.tools.github.phases.path %}
 {% set phase = task_data.parameters.phase %}
 ### View: {{ task_data.parameters.repo | capitalize }} Task Board
 
@@ -9,5 +9,5 @@
 
 {{ file(repo_path +  "/" + board_index) }}
 
-{{ file(repo_path + "/" +phase_path + "/phase-" + phase + ".md") }}
+{{ file(repo_path + "/" + phase_path + "/phase-" + phase + ".md") }}
 {% endfor %}
