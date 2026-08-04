@@ -66,7 +66,14 @@ Some blocks in the `task.yml` have parameters. These parameters are ingested by 
 
 The *scope* of parameters extends down the task tree, but not up. In other words, `parameters` defined under `task.inventory.host.parameters` are not shared by `parameters` defined under the `task.inventory.local.parameters`.
 
-### Task Board
+### Github View: Docs
+
+The `task.tools.github[*].views.docs` view reads in all markdown found in `properties.tools.github.docs.path` and injects them into a view. The view will format the index at `properties.tools.github.docs.index` first and include all documentation in alphabetic order of filename. All properties can be configured in the `config/props.yaml`.
+
+- `docs/index.md`: Main documentation file.
+- `docs/*.md`: Markdown file injections.
+
+### Github View: Task Board
 
 The Task Board is an Story Board for development and implementation. The `task.tools.github[*].views.board` assumes the following directory and page structure. These properties can be configured in the `config/props.yaml` file.
 

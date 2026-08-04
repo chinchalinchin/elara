@@ -78,36 +78,12 @@ task:
     #       repo: <repo>
     #       group: <group>
     #     views:
+    # # GENERAL VIEWS
     #       directory: false
-    #       elara/build: false
-    #       elara/linguistics: false
-    #       elara/extensions: false
-    #       elara/templates: false
-    #       elara/styles: false
-    #       golem/board: false
-    #       golem/docs: false
-    #       golem/theory: false
-    #       golem/core: false
-    #       golem/config: false
-    #       golem/metrics: false
-    #       golem/pipeline: false
-    #       golem/model: false
-    #       golem/client: false
-    #       golem/sample: false
-    #       golem/ci: false
-    #       golem/mkdocs: false
-    #       golem/etc: false
-    #       scrilla/build: false
-    #       scrilla/docs: false
-    #       scrilla/main: false
-    #       scrilla/util: false
-    #       scrilla/analysis: false
-    #       scrilla/objects: false
-    #       scrilla/models: false
-    #       scrilla/static: false
-    #       tf/platform: false
-    #       tf/ec2: false
-    #       tf/iam: false
+    #       docs: false
+    #       board: false
+    # # CUSTOM VIEWS
+    #       ... 
     # -------------------------------------------
     prometheus: []
       # - parameters:

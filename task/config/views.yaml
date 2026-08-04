@@ -255,6 +255,7 @@ views:
             libs/math.pyx: python
             libs/render.pxd: python
             libs/render.pyx: python
+            libs/registry.pxd: python
             libs/registry.pyx: python
         ontology/schemas:
           title: "Ontology: Schemas"
