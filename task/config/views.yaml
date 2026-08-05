@@ -223,6 +223,7 @@ views:
             src/app/player.py: python
             src/app/screen.py: python
             src/app/constants.py: python
+            src/app/orchestration.py: python
         ontology/app/input:
           title: "Ontology: Input"
           files:
@@ -233,6 +234,7 @@ views:
             src/app/models/configuration.py: python
             src/app/models/properties.py: python
             src/app/models/state.py: python
+            src/app/models/recipes.py: python
         ontology/app/game:
           title: "Ontology: Game"
           files:

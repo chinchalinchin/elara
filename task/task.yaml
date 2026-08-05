@@ -2,16 +2,18 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: 
-    guidelines: 
-      coding: true
+  # system: 
+  #   guidelines: 
+  #     coding: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Implementation"
+    title: "Ontology: Design & Architecture"
     # -------------------------------------------
     content: |
-      Implement the next task on the Task Board.
+      Discuss the design and architecture of this application with respect to the current phase of the Task Board. Evaluate and critique it. Suggest improvements, if applicable. Discuss what needs modified in the task backlog, if changes are required. Ensure tasking aligns with architecture.
+      
+      Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured ray-traced 3D graphics from scratch. 
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
