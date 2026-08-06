@@ -2,16 +2,22 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: 
-    guidelines: 
-      coding: true
+  # system: 
+  #   guidelines: 
+  #     coding: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Implementation"
+    title: "Ontology: Data Structures"
     # -------------------------------------------
     content: |
-      Implement the next task on the Task Board.
+      Discuss the design and schemas of the data structures (state, properties, recipes, etc.) with respect to the current phase of the Task Board and the overall goal of the project. Evaluate and critique it. 
+
+      What models need further consideration, development and attention? What potential bugs or code issues arise from the data structures in the game? 
+      
+      Suggest improvements, if applicable. Discuss what needs modified in the task backlog, if changes are required to any of the models. Ensure tasking aligns with architecture.
+      
+      Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured ray-traced 3D graphics from scratch. 
     # -------------------------------------------
     shell: []
 # ------------------------------------------------

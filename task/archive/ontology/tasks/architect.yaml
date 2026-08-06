@@ -33,5 +33,6 @@ task:
           ontology/app/models: true
           ontology/app/game: true
           ontology/app/assets: true
-          ontology/cython: true
+          ontology/cython/core: true
+          ontology/cython/graphics: true
           ontology/schemas: true

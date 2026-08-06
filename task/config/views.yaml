@@ -235,6 +235,7 @@ views:
             src/app/models/properties.py: python
             src/app/models/state.py: python
             src/app/models/recipes.py: python
+            src/app/models/hierarchy.py: python
         ontology/app/game:
           title: "Ontology: Game"
           files:
@@ -248,13 +249,17 @@ views:
             src/app/assets/base.py: python
             src/app/assets/animations.py: python
             src/app/assets/frames.py: python
-        ontology/cython:
-          title: "Ontology: Cython"
+        ontology/cython/core:
+          title: "Ontology: Cython Core"
           files:
             setup.py: python
             libs/core.pxd: python
             libs/core.pyx: python
+            libs/math.pyd: python
             libs/math.pyx: python
+        ontology/cython/graphics:
+          title: "Ontology: Cython Graphics"
+          files:
             libs/render.pxd: python
             libs/render.pyx: python
             libs/registry.pxd: python
