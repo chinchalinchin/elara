@@ -27,10 +27,12 @@ task:
           board: true
           docs: true
           ontology/app/main: true
-          ontology/app/input: true
+          ontology/app/input: false
           ontology/app/models: true
           ontology/app/game: true
           ontology/app/assets: true
           ontology/cython/core: true
           ontology/cython/graphics: true
-          ontology/schemas: true
+          ontology/schemas/assets: true
+          ontology/schemas/intents: true
+          ontology/schemas/items: false

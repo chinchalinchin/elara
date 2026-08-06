@@ -94,15 +94,15 @@ def file(file_path: str) -> str:
 
 def contents(path: str) -> list:
     """
-    Returns a list of all Markdown (.md) files contained directly in the specified path,
-    excluding 'index.md'. Ignores subdirectories.
+    Returns an alphabetized list of all Markdown (.md) files contained directly 
+    in the specified path, excluding 'index.md'. Ignores subdirectories.
 
     Args:
         path (str): The directory path to inspect. Supports `~` expansion.
 
     Returns:
-        list: A list of filenames ending in '.md' (excluding index.md). Returns an empty 
-              list if the path is invalid, not a directory, or unreadable.
+        list: An alphabetized list of filenames ending in '.md' (excluding index.md). 
+              Returns an empty list if the path is invalid, not a directory, or unreadable.
     """
     full_path = os.path.expanduser(path)
     
@@ -118,11 +118,13 @@ def contents(path: str) -> list:
             and f.lower() != 'index.md' 
             and os.path.isfile(os.path.join(full_path, f))
         ]
-        return md_files
+        
+        # Return the list alphabetized
+        return sorted(md_files)
+        
     except Exception as e:
         print(f"Error reading directory '{path}': {e}")
         return []
-
 
 def load(vars_path: str) -> dict:
     """

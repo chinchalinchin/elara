@@ -255,7 +255,7 @@ views:
             setup.py: python
             libs/core.pxd: python
             libs/core.pyx: python
-            libs/math.pyd: python
+            libs/math.pxd: python
             libs/math.pyx: python
         ontology/cython/graphics:
           title: "Ontology: Cython Graphics"
@@ -264,15 +264,20 @@ views:
             libs/render.pyx: python
             libs/registry.pxd: python
             libs/registry.pyx: python
-        ontology/schemas:
-          title: "Ontology: Schemas"
+        ontology/schemas/assets:
+          title: "Ontology: Asset Schemas"
           files:
-            docs/.static/yaml/examples/default-disposition-matrix.yaml: yaml
             docs/.static/yaml/asset-recipes.yaml: yaml
             docs/.static/yaml/asset-properties.yaml: yaml
             docs/.static/yaml/asset-state.yaml: yaml
-            docs/.static/yaml/data-equipment.yaml: yaml
+        ontology/schemas/intents:
+          title: "Ontology: Intent Schemas"
+          files:
+            docs/.static/yaml/examples/default-disposition-matrix.yaml: yaml
             docs/.static/yaml/data-intents.yaml: yaml
+        ontology/schemas/items:
+            docs/.static/yaml/data-equipment.yaml: yaml
+
         # -------------------- SCRILLA
         # ----------------------------
         scrilla/build:

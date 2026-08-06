@@ -5,10 +5,12 @@
 ### View: {{ task_data.parameters.repo | capitalize }} Documentation 
 
 ----------- START HEADING BREAK: HEADING LEVELS RESET -----------
+
 {{ file(docs_path +  "/" + docs_index) }}
 
 {% for doc in contents(docs_path) %}
 {{ file(docs_path +  "/" + doc) }}
+
 {% endfor %}
 
 ----------- END HEADING BREAK: HEADING LEVELS RESUME -----------
