@@ -41,6 +41,10 @@ views:
       blobs:
         # ------------ GENERAL PURPOSE
         # ----------------------------
+        python: 
+          title: "Python: Configuration"
+          files:
+            requirements.txt: text
         mkdocs:
           title: "MkDocs: Configuration"
           files:

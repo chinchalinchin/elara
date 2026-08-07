@@ -2,18 +2,30 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: 
-    guidelines: 
-      coding: true
+  # system: 
+  #   guidelines: 
+  #     coding: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Implementation"
+    title: "Ontology: Debugging"
     # -------------------------------------------
     content: |
-      Implement the next task on the Task Board.
+      This command is about to run from the root project directory,
+
+      ```bash
+      python src/cli.py construct world-01 \
+        --layer 0 \
+        --out /home/grant/Projects/ontology
+      ```
+
+      The state files are given below in the Shell section.
+
+      Do a final review of the application and ensure nothing obvious needs changed before it is invoked for the first time. The results of the above command will be shared after the review.
     # -------------------------------------------
-    shell: []
+    shell: 
+      - ls /home/grant/Projects/ontology/src/data/state/world-01
+      - cat  /home/grant/Projects/ontology/src/data/state/world-01/tiles.yaml
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -24,15 +36,15 @@ task:
           phase: i
         views:
           directory: true
-          board: true
+          board: false
           docs: true
           python: true
           ontology/app/main: true
           ontology/app/input: false
           ontology/app/models: true
-          ontology/app/game: false
+          ontology/app/game: true
           ontology/app/assets: true
-          ontology/cython/core: false
+          ontology/cython/core: true
           ontology/cython/graphics: true
           ontology/schemas/assets: true
           ontology/schemas/intents: false

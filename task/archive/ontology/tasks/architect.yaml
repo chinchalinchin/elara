@@ -28,6 +28,7 @@ task:
           directory: true
           board: true
           docs: true
+          python: true
           ontology/app/main: true
           ontology/app/input: false
           ontology/app/models: true

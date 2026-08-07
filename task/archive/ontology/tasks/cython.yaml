@@ -11,9 +11,9 @@ task:
     title: "Ontology: Cython"
     # -------------------------------------------
     content: |
-      Evaluate the Cython setup. Document how to compile the libraries and import them.
+      Evaluate the Cython setup. Document how to compile the libraries and import them in the README below. Add instructions for getting VSCode to recognize the libraries.
 
-      # Ontology README
+      # Ontology
 
       ## Development Setup
 
@@ -43,7 +43,10 @@ task:
 
       ### /libs
 
-      - `sdl2.pyx`: Cython interfaces for SDL2 rendering (currently toy example to illustrate functionality)
+      - `render.pyx`: Cython interfaces for SDL2 rendering
+      - `registry.pyx`: Cython class for storing textures 
+      - `core.pyx`: Cython data classes.
+      - `math.pyh`: Cython calculations
 
       ### /src
 
@@ -72,6 +75,7 @@ task:
           directory: true
           board: false
           docs: true
+          python: true
           ontology/app/main: true
           ontology/app/input: false
           ontology/app/models: false
