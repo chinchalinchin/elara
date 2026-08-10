@@ -49,3 +49,4 @@ task:
           ontology/schemas/assets: false
           ontology/schemas/intents: false
           ontology/schemas/items: false
+          ontology/schemas/player: false
