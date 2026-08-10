@@ -2,12 +2,14 @@
 {% set repo_path = properties.tools.github.groups[task_data.parameters.group] + task_data.parameters.repo %}
 {% set board_index = properties.tools.github.board.path + properties.tools.github.board.index %}
 {% set phase_path = properties.tools.github.phases.path %}
-{% set phase = task_data.parameters.phase %}
+{% set phase = task_data.parameters.board.phase %}
+{% set action = task_data.parameters.board.action %}
 ### View: {{ task_data.parameters.repo | capitalize }} Task Board
 
 - **Current Phase**: Phase {{ phase | upper }}
+- **Current Phase Action**: {{ action | upper }}
 
 {{ file(repo_path +  "/" + board_index) }}
 
-{{ file(repo_path + "/" + phase_path + "/phase-" + phase + ".md") }}
+{{ file(repo_path + "/" + phase_path + "/" + action + "/phase-" + phase + ".md") }}
 {% endfor %}

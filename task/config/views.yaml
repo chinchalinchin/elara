@@ -224,29 +224,34 @@ views:
           files:
             main.py: python
             src/cli.py: python
-            src/app/player.py: python
-            src/app/screen.py: python
-            src/app/constants.py: python
-            src/app/orchestration.py: python
+        ontology/app/config:
+          title: "Ontology: Configuration"
+          files:
+            src/app/config/settings.py: python
+            src/app/config/enums.py: python
+            src/app/config/validators.py: python
         ontology/app/input:
           title: "Ontology: Input"
           files:
+            src/app/input/player.py: python
             src/app/input/devices.py: python
         ontology/app/models:
           title: "Ontology: Models"
           files:
-            src/app/models/configuration.py: python
             src/app/models/properties.py: python
             src/app/models/state.py: python
-            src/app/models/recipes.py: python
-            src/app/models/hierarchy.py: python
+        ontology/app/hooks:
+          title: "Ontology: Hooks"
+          files:
+            src/app/hooks/orchestrator.py: python
+            src/app/hooks/factory.py: python
         ontology/app/game:
           title: "Ontology: Game"
           files:
             src/app/game/board.py: python
-            src/app/game/engine.py: python
             src/app/game/mechanics.py: python
-            src/app/game/factory.py: python
+            src/app/game/resolvers.py: python
+            src/app/game/screen.py: python
         ontology/app/assets:
           title: "Ontology: Assets"
           files:
@@ -280,8 +285,15 @@ views:
             docs/.static/yaml/examples/default-disposition-matrix.yaml: yaml
             docs/.static/yaml/data-intents.yaml: yaml
         ontology/schemas/items:
+          title: "Ontology: Item Schemas"
+          files: 
+            docs/.static/yaml/examples/default-equipment-matrix.yaml: yaml
             docs/.static/yaml/data-equipment.yaml: yaml
-
+        ontology/schemas/player:
+          title: "Ontology: Player Schemas"
+          files: 
+            docs/.static/yaml/examples/default-mappings-matrix.yaml: yaml
+            docs/.static/yaml/data-mappings.yaml: yaml
         # -------------------- SCRILLA
         # ----------------------------
         scrilla/build:

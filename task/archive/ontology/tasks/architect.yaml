@@ -8,12 +8,14 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Design & Architecture"
+    title: "Ontology: Design & Architect"
     # -------------------------------------------
     content: |
       Discuss the design and architecture of this application with respect to the current phase of the Task Board. Evaluate and critique it. Suggest improvements, if applicable. Discuss what needs modified in the task backlog, if changes are required. Ensure tasking aligns with architecture.
       
       Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured ray-traced 3D graphics from scratch. 
+
+      Do not suggest C-level optimizations at this stage of the application.
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
@@ -23,19 +25,23 @@ task:
       - parameters:
           repo: ontology
           group: chinchalinchin
-          phase: i
+          board: 
+            phase: i
+            action: implement
         views:
           directory: true
-          board: true
+          board: false
           docs: true
           python: true
           ontology/app/main: true
           ontology/app/input: false
+          ontology/app/config: true
           ontology/app/models: true
-          ontology/app/game: false
+          ontology/app/hooks: true
+          ontology/app/game: true
           ontology/app/assets: true
-          ontology/cython/core: false
+          ontology/cython/core: true
           ontology/cython/graphics: true
-          ontology/schemas/assets: true
+          ontology/schemas/assets: false
           ontology/schemas/intents: false
           ontology/schemas/items: false

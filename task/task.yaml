@@ -8,14 +8,20 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Factory & Orchestration Refactor"
+    title: "Ontology: Groom"
     # -------------------------------------------
     content: |
-      Analyze the Factory and Orchestration packages. It seems like it should be possible to use the Factory pattern for Pydantic state models and re-leverage the Asset recipes, instead of instantiating the state models through a messy loop.
+      Create tasks in the Task Board to achieve the next Phase of the application. Lay out, step-by-step, what must be done.
 
-      Discuss how to architect a more Pythonic, elegant way of instantiating the Asset states DTOs and transferring them to the POPO Asset states.
+      **Goal:** We need to integrate the Player and input devices into the game engine. 
+     
+      **Guidelines**
+
+      - Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured ray-traced 3D graphics from scratch. 
+      - Do not suggest C-level optimizations at this stage of the application.
+    
     # -------------------------------------------
-    shell: [ ]
+    shell: []
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -23,19 +29,23 @@ task:
       - parameters:
           repo: ontology
           group: chinchalinchin
-          phase: i
+          board: 
+            phase: ii
+            action: implement
         views:
           directory: true
-          board: false
+          board: true
           docs: true
           python: true
-          ontology/app/main: true
-          ontology/app/input: false
+          ontology/app/main: false
+          ontology/app/input: true
+          ontology/app/config: true
           ontology/app/models: true
+          ontology/app/hooks: true
           ontology/app/game: true
           ontology/app/assets: true
-          ontology/cython/core: true
-          ontology/cython/graphics: true
-          ontology/schemas/assets: true
+          ontology/cython/core: false
+          ontology/cython/graphics: false
+          ontology/schemas/assets: false
           ontology/schemas/intents: false
           ontology/schemas/items: false

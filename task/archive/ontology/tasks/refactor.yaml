@@ -2,22 +2,16 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  # system: 
-  #   guidelines: 
-  #     coding: true
+  system: 
+    guidelines: 
+      coding: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Data Structures"
+    title: "Ontology: Refactor"
     # -------------------------------------------
     content: |
-      Discuss the design and schemas of the data structures (state, properties, recipes, etc.) with respect to the current phase of the Task Board and the overall goal of the project. Evaluate and critique it. 
-
-      What models need further consideration, development and attention? What potential bugs or code issues arise from the data structures in the game? 
-      
-      Suggest improvements, if applicable. Discuss what needs modified in the task backlog, if changes are required to any of the models. Ensure tasking aligns with architecture.
-      
-      Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured ray-traced 3D graphics from scratch. 
+      Implement the next task on the Refactor Task Board.
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
@@ -27,7 +21,9 @@ task:
       - parameters:
           repo: ontology
           group: chinchalinchin
-          phase: i
+          board: 
+            phase: i
+            action: refactor
         views:
           directory: true
           board: true
@@ -35,10 +31,12 @@ task:
           python: true
           ontology/app/main: true
           ontology/app/input: false
+          ontology/app/config: true
           ontology/app/models: true
-          ontology/app/game: false
+          ontology/app/orchestration: true
+          ontology/app/engine: true
           ontology/app/assets: true
-          ontology/cython/core: false
+          ontology/cython/core: true
           ontology/cython/graphics: true
           ontology/schemas/assets: true
           ontology/schemas/intents: false

@@ -21,17 +21,21 @@ task:
       - parameters:
           repo: ontology
           group: chinchalinchin
-          phase: i
+          board: 
+            phase: i
+            action: refactor
         views:
           directory: true
           board: true
           docs: true 
           ontology/app/main: true
           ontology/app/input: false
+          ontology/app/config: true
           ontology/app/models: true
-          ontology/app/game: false
+          ontology/app/orchestration: true
+          ontology/app/engine: true
           ontology/app/assets: true
-          ontology/cython/core: false
+          ontology/cython/core: true
           ontology/cython/graphics: true
           ontology/schemas/assets: true
           ontology/schemas/intents: false

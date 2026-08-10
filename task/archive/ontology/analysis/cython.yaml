@@ -70,7 +70,9 @@ task:
       - parameters:
           repo: ontology
           group: chinchalinchin
-          phase: i
+          board: 
+            phase: i
+            action: phase
         views:
           directory: true
           board: false
@@ -78,11 +80,13 @@ task:
           python: true
           ontology/app/main: true
           ontology/app/input: false
-          ontology/app/models: false
-          ontology/app/game: false
-          ontology/app/assets: false
+          ontology/app/config: true
+          ontology/app/models: true
+          ontology/app/orchestration: true
+          ontology/app/engine: true
+          ontology/app/assets: true
           ontology/cython/core: true
           ontology/cython/graphics: true
-          ontology/schemas/assets: false
+          ontology/schemas/assets: true
           ontology/schemas/intents: false
           ontology/schemas/items: false
