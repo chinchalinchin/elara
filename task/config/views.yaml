@@ -250,7 +250,7 @@ views:
           files:
             src/app/game/board.py: python
             src/app/game/mechanics.py: python
-            src/app/game/resolvers.py: python
+            src/app/game/maps.py: python
             src/app/game/screen.py: python
         ontology/app/assets:
           title: "Ontology: Assets"
@@ -264,6 +264,7 @@ views:
             setup.py: python
             libs/core.pxd: python
             libs/core.pyx: python
+            libs/input.pyx: python
             libs/math.pxd: python
             libs/math.pyx: python
         ontology/cython/graphics:
@@ -276,23 +277,24 @@ views:
         ontology/schemas/assets:
           title: "Ontology: Asset Schemas"
           files:
+            docs/.static/yaml/examples/default-recipes.yaml: yaml
             docs/.static/yaml/asset-recipes.yaml: yaml
             docs/.static/yaml/asset-properties.yaml: yaml
             docs/.static/yaml/asset-state.yaml: yaml
         ontology/schemas/intents:
-          title: "Ontology: Intent Schemas"
+          title: "Ontology: Intention Schemas"
           files:
-            docs/.static/yaml/examples/default-disposition-matrix.yaml: yaml
-            docs/.static/yaml/data-intents.yaml: yaml
+            docs/.static/yaml/examples/default-intention-matrix.yaml: yaml
+            docs/.static/yaml/data-intentions.yaml: yaml
         ontology/schemas/items:
-          title: "Ontology: Item Schemas"
+          title: "Ontology: Inventory Schemas"
           files: 
             docs/.static/yaml/examples/default-equipment-matrix.yaml: yaml
             docs/.static/yaml/data-equipment.yaml: yaml
         ontology/schemas/player:
           title: "Ontology: Player Schemas"
           files: 
-            docs/.static/yaml/examples/default-mappings-matrix.yaml: yaml
+            docs/.static/yaml/examples/default-mapping-matrix.yaml: yaml
             docs/.static/yaml/data-mappings.yaml: yaml
         # -------------------- SCRILLA
         # ----------------------------

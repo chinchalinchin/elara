@@ -2,13 +2,11 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  # system: 
-  #   guidelines: 
-  #     coding: true
+  system: null
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Analyze"
+    title: "Ontology - Analyze"
     # -------------------------------------------
     content: |
       Look over the codebase for errors, type mismatches and logical problems.

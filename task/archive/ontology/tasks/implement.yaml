@@ -8,7 +8,7 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Implementation"
+    title: "Ontology - Implement"
     # -------------------------------------------
     content: |
       Implement the next task on the Task Board.

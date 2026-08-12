@@ -2,13 +2,11 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  # system: 
-  #   guidelines: 
-  #     coding: true
+  system: null
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Debugging"
+    title: "Ontology - Debug"
     # -------------------------------------------
     content: |
       Assist in debugging the app invocation in the [next section](#shell-localhost).

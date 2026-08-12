@@ -2,13 +2,11 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  # system: 
-  #   guidelines: 
-  #     coding: true
+  system: null
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Documentation"
+    title: "Ontology - Document"
     # -------------------------------------------
     content: |
       Update the following mkdocs pages to reflect the current state of the application:
