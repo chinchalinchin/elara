@@ -37,7 +37,6 @@ task:
           docs: true
           python: false
           ontology/app/main: false
-          ontology/app/input: true
           ontology/app/config: true
           ontology/app/models: true
           ontology/app/hooks: true

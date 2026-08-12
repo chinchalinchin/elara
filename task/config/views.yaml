@@ -230,11 +230,6 @@ views:
             src/app/config/settings.py: python
             src/app/config/enums.py: python
             src/app/config/validators.py: python
-        ontology/app/input:
-          title: "Ontology: Input"
-          files:
-            src/app/input/player.py: python
-            src/app/input/devices.py: python
         ontology/app/models:
           title: "Ontology: Models"
           files:
@@ -249,6 +244,7 @@ views:
           title: "Ontology: Game"
           files:
             src/app/game/board.py: python
+            src/app/game/devices.py: python
             src/app/game/mechanics.py: python
             src/app/game/maps.py: python
             src/app/game/screen.py: python

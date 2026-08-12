@@ -2,22 +2,32 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: null
+  system: 
+    guidelines: 
+      coding: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
     title: "Ontology - Debug"
     # -------------------------------------------
     content: |
-      Assist in debugging the app invocation in the [next section](#shell-localhost).
+      Assist in debugging the application.
     # -------------------------------------------
-    shell: 
-      - ls /home/grant/Projects/ontology/src/data/state/world-01
-      - cat /home/grant/Projects/ontology/src/data/state/world-01/tiles.yaml
-      - cat /home/grant/Projects/ontology/src/assets/main.yaml
-      - cat /home/grant/Projects/ontology/src/assets/tiles/main.yaml
-      - python /home/grant/Projects/ontology/src/cli.py construct world-01 --layer 0 --out /home/grant/Projects/ontology
-
+    shell:
+    # 1. Asset Configurations
+    - ls /home/grant/Projects/ontology/src/data/mappings
+    - cat /home/grant/Projects/ontology/src/data/mappings/main.yaml
+    - cat /home/grant/Projects/ontology/src/data/equipment/main.yaml
+    - cat /home/grant/Projects/ontology/src/assets/main.yaml
+    - cat /home/grant/Projects/ontology/src/assets/sheets/main.yaml
+    # 2. State Files
+    - ls /home/grant/Projects/ontology/src/data/state/world-01
+    - cat /home/grant/Projects/ontology/src/data/state/world-01/tiles.yaml
+    - cat /home/grant/Projects/ontology/src/data/state/world-01/player.yaml  
+    # 3. Render Background
+    - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
+    # 4. Render Stateful Assets
+    - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -26,22 +36,21 @@ task:
           repo: ontology
           group: chinchalinchin
           board: 
-            phase: i
-            action: phase
+            phase: ii
+            action: debug
         views:
           directory: true
-          board: false
+          board: true
           docs: true
-          python: true
-          ontology/app/main: false
-          ontology/app/input: true
-          ontology/app/config: true
+          python: false
+          ontology/app/main: true
+          ontology/app/config: false
           ontology/app/models: true
           ontology/app/hooks: true
           ontology/app/game: true
           ontology/app/assets: true
           ontology/cython/core: false
-          ontology/cython/graphics: false
+          ontology/cython/graphics: true
           ontology/schemas/assets: false
           ontology/schemas/intents: false
           ontology/schemas/items: false

@@ -2,26 +2,32 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: null
+  system: 
+    guidelines: 
+      coding: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology - Groom"
+    title: "Ontology - Debug"
     # -------------------------------------------
     content: |
-      Discuss the design and architecture of this application with respect to the current phase of the Task Board. Do not implement anything; rather step back and examine the big picture. Focus on the logical flow of the application. Suggest improvements, if applicable. Discuss what needs modified in the task backlog, if changes are required. Ensure tasking aligns with architecture. Break everything down, step-by-step.
-      
-      Discuss the finite automata implied by the Intention Transition Matrix. Examine its consistency. Suggest ways of completing the matrix.
-
-      **Grooming Guidelines**
-
-      - Create tasks in the Task Board to achieve the next Phase of the application. Lay out, step-by-step, what must be done.
-      - Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured ray-traced 3D graphics from scratch. 
-      - Do not suggest C-level optimizations at this stage of the application.
-      - Do not worry about Python GIL locks yet.
-
+      Assist in debugging the application.
     # -------------------------------------------
-    shell: []
+    shell:
+    # 1. Asset Configurations
+    - ls /home/grant/Projects/ontology/src/data/mappings
+    - cat /home/grant/Projects/ontology/src/data/mappings/main.yaml
+    - cat /home/grant/Projects/ontology/src/data/equipment/main.yaml
+    - cat /home/grant/Projects/ontology/src/assets/main.yaml
+    - cat /home/grant/Projects/ontology/src/assets/sheets/main.yaml
+    # 2. State Files
+    - ls /home/grant/Projects/ontology/src/data/state/world-01
+    - cat /home/grant/Projects/ontology/src/data/state/world-01/tiles.yaml
+    - cat /home/grant/Projects/ontology/src/data/state/world-01/player.yaml  
+    # 3. Render Background
+    - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
+    # 4. Render Stateful Assets
+    - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -30,23 +36,22 @@ task:
           repo: ontology
           group: chinchalinchin
           board: 
-            phase: iv
-            action: implement
+            phase: ii
+            action: debug
         views:
           directory: true
           board: true
           docs: true
           python: false
-          ontology/app/main: false
-          ontology/app/input: true
-          ontology/app/config: true
+          ontology/app/main: true
+          ontology/app/config: false
           ontology/app/models: true
           ontology/app/hooks: true
           ontology/app/game: true
           ontology/app/assets: true
           ontology/cython/core: false
-          ontology/cython/graphics: false
-          ontology/schemas/assets: true
-          ontology/schemas/intents: true
-          ontology/schemas/items: true
-          ontology/schemas/player: true
+          ontology/cython/graphics: true
+          ontology/schemas/assets: false
+          ontology/schemas/intents: false
+          ontology/schemas/items: false
+          ontology/schemas/player: false
