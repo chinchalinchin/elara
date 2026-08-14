@@ -22,7 +22,7 @@ task:
           repo: ontology
           group: chinchalinchin
           board: 
-            phase: i-ii
+            phase: ii-ii
             action: refactor
         views:
           directory: true
@@ -35,8 +35,8 @@ task:
           ontology/app/hooks: true
           ontology/app/game: true
           ontology/app/assets: true
-          ontology/cython/core: false
-          ontology/cython/graphics: false
+          ontology/libs/core: false
+          ontology/libs/graphics: false
           ontology/schemas/assets: false
           ontology/schemas/intents: false
           ontology/schemas/items: false

@@ -223,12 +223,14 @@ views:
           title: "Ontology: App Entrypoints"
           files:
             main.py: python
+            setup.py: python
             src/cli.py: python
         ontology/app/config:
           title: "Ontology: Configuration"
           files:
-            src/app/config/settings.py: python
             src/app/config/enums.py: python
+            src/app/config/loader.py: python
+            src/app/config/settings.py: python
             src/app/config/validators.py: python
         ontology/app/models:
           title: "Ontology: Models"
@@ -245,6 +247,7 @@ views:
           files:
             src/app/game/board.py: python
             src/app/game/devices.py: python
+            src/app/game/engine.py: python
             src/app/game/mechanics.py: python
             src/app/game/maps.py: python
             src/app/game/screen.py: python
@@ -254,22 +257,21 @@ views:
             src/app/assets/base.py: python
             src/app/assets/animations.py: python
             src/app/assets/frames.py: python
-        ontology/cython/core:
+        ontology/libs/core:
           title: "Ontology: Cython Core"
           files:
-            setup.py: python
-            libs/core.pxd: python
-            libs/core.pyx: python
-            libs/input.pyx: python
-            libs/math.pxd: python
-            libs/math.pyx: python
-        ontology/cython/graphics:
+            libs/core/models.pxd: python
+            libs/core/models.pyx: python
+            libs/core/input.pyx: python
+            libs/core/math.pxd: python
+            libs/core/math.pyx: python
+        ontology/libs/graphics:
           title: "Ontology: Cython Graphics"
           files:
-            libs/render.pxd: python
-            libs/render.pyx: python
-            libs/registry.pxd: python
-            libs/registry.pyx: python
+            libs/graphics/render.pxd: python
+            libs/graphics/render.pyx: python
+            libs/graphics/registry.pxd: python
+            libs/graphics/registry.pyx: python
         ontology/schemas/assets:
           title: "Ontology: Asset Schemas"
           files:
@@ -292,6 +294,11 @@ views:
           files: 
             docs/.static/yaml/examples/default-mapping-matrix.yaml: yaml
             docs/.static/yaml/data-mappings.yaml: yaml
+        ontology/schemas/widgets:
+          title: "Ontology: Widget Schemas"
+          files: 
+            docs/.static/yaml/data-menus.yaml: yaml
+            docs/.static/yaml/examples/default-menus.yaml: yaml
         # -------------------- SCRILLA
         # ----------------------------
         scrilla/build:

@@ -2,31 +2,31 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: 
-    guidelines: 
-      coding: true
+  system: null
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
     title: "Ontology - Debug"
     # -------------------------------------------
     content: |
-      Assist in debugging the application.
+      Assist in debugging the application. The most recent application execution is available in the Shell section directly below.
     # -------------------------------------------
     shell:
-    # 1. Asset Configurations
-    - ls /home/grant/Projects/ontology/src/data/mappings
+    # 1. Asset State
     - cat /home/grant/Projects/ontology/src/data/mappings/main.yaml
     - cat /home/grant/Projects/ontology/src/data/equipment/main.yaml
+    # 2. Asset Configurations
     - cat /home/grant/Projects/ontology/src/assets/main.yaml
     - cat /home/grant/Projects/ontology/src/assets/sheets/main.yaml
-    # 2. State Files
+    # 3. State Files
     - ls /home/grant/Projects/ontology/src/data/state/world-01
     - cat /home/grant/Projects/ontology/src/data/state/world-01/tiles.yaml
     - cat /home/grant/Projects/ontology/src/data/state/world-01/player.yaml  
-    # 3. Render Background
+    # 4. Compile Cython
+    - python setup.py build_ext --inplace
+    # 5. Render Background
     - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
-    # 4. Render Stateful Assets
+    # 6. Render Stateful Assets
     - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build
 # ------------------------------------------------
   tools:
@@ -49,8 +49,8 @@ task:
           ontology/app/hooks: true
           ontology/app/game: true
           ontology/app/assets: true
-          ontology/cython/core: false
-          ontology/cython/graphics: true
+          ontology/libs/core: false
+          ontology/libs/graphics: true
           ontology/schemas/assets: false
           ontology/schemas/intents: false
           ontology/schemas/items: false

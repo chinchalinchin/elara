@@ -4,7 +4,7 @@
 - The user employs **Tools** to provide **Views** into the environment. A **View** is context. 
 - Refer to the **Task** for the current directive. All context is provided in support of accomplishing the **Task**.
 
-{%- if task.system -%}
+{% if task.system %}
 {% if 'guidelines' in task.system and task.system.guidelines.values() | select('sameas', true) | list %}
 ## Context: Guidelines
 
