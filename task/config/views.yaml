@@ -219,12 +219,18 @@ views:
             docs/board/closed/phases.md: markdown
         # ------------------- ONTOLOGY
         # ----------------------------
-        ontology/app/main:
+        ontology/main:
           title: "Ontology: App Entrypoints"
           files:
             main.py: python
             setup.py: python
             src/cli.py: python
+        ontology/app/assets:
+          title: "Ontology: Assets"
+          files:
+            src/app/assets/base.py: python
+            src/app/assets/animations.py: python
+            src/app/assets/frames.py: python
         ontology/app/config:
           title: "Ontology: Configuration"
           files:
@@ -232,16 +238,6 @@ views:
             src/app/config/loader.py: python
             src/app/config/settings.py: python
             src/app/config/validators.py: python
-        ontology/app/models:
-          title: "Ontology: Models"
-          files:
-            src/app/models/properties.py: python
-            src/app/models/state.py: python
-        ontology/app/hooks:
-          title: "Ontology: Hooks"
-          files:
-            src/app/hooks/orchestrator.py: python
-            src/app/hooks/factory.py: python
         ontology/app/game:
           title: "Ontology: Game"
           files:
@@ -251,12 +247,18 @@ views:
             src/app/game/mechanics.py: python
             src/app/game/maps.py: python
             src/app/game/screen.py: python
-        ontology/app/assets:
-          title: "Ontology: Assets"
+        ontology/app/hooks:
+          title: "Ontology: Hooks"
           files:
-            src/app/assets/base.py: python
-            src/app/assets/animations.py: python
-            src/app/assets/frames.py: python
+            src/app/hooks/orchestrator.py: python
+            src/app/hooks/factory.py: python
+        ontology/app/models:
+          title: "Ontology: Models"
+          files:
+            src/app/models/config.py: python
+            src/app/models/groups.py: python
+            src/app/models/properties.py: python
+            src/app/models/state.py: python
         ontology/libs/core:
           title: "Ontology: Cython Core"
           files:
@@ -275,26 +277,23 @@ views:
         ontology/schemas/assets:
           title: "Ontology: Asset Schemas"
           files:
-            docs/.static/yaml/examples/default-recipes.yaml: yaml
-            docs/.static/yaml/asset-recipes.yaml: yaml
             docs/.static/yaml/asset-properties.yaml: yaml
             docs/.static/yaml/asset-state.yaml: yaml
+            docs/.static/yaml/data-recipes.yaml: yaml
+            docs/.static/yaml/data-actions.yaml: yaml
+            docs/.static/yaml/examples/default-recipes.yaml: yaml
+            docs/.static/yaml/examples/default-actions.yaml: yaml
         ontology/schemas/intents:
           title: "Ontology: Intention Schemas"
           files:
             docs/.static/yaml/examples/default-intention-matrix.yaml: yaml
             docs/.static/yaml/data-intentions.yaml: yaml
-        ontology/schemas/items:
-          title: "Ontology: Inventory Schemas"
+        ontology/schemas/mappings:
+          title: "Ontology: Mapping Schemas"
           files: 
-            docs/.static/yaml/examples/default-equipment-matrix.yaml: yaml
-            docs/.static/yaml/data-equipment.yaml: yaml
-        ontology/schemas/player:
-          title: "Ontology: Player Schemas"
-          files: 
-            docs/.static/yaml/examples/default-mapping-matrix.yaml: yaml
+            docs/.static/yaml/examples/default-mappings.yaml: yaml
             docs/.static/yaml/data-mappings.yaml: yaml
-        ontology/schemas/widgets:
+        ontology/schemas/menus:
           title: "Ontology: Widget Schemas"
           files: 
             docs/.static/yaml/data-menus.yaml: yaml

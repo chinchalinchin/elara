@@ -6,17 +6,10 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology - <title>"
+    title: "Ontology: <title>"
     # -------------------------------------------
     content: |
       <content>
-
-      **Task Guidelines**
-
-      - Create tasks in the Task Board to achieve the next Phase of the application. Lay out, step-by-step, what must be done.
-      - Keep in mind, this is a 2D game engine that is cropping pre-rendered assets on the fly, not rendering fully-textured ray-traced 3D graphics from scratch. 
-      - Do not suggest C-level optimizations at this stage of the application.
-      - Do not worry about Python GIL locks yet.
     # -------------------------------------------
     shell: []
 # ------------------------------------------------
@@ -27,22 +20,23 @@ task:
           repo: ontology
           group: chinchalinchin
           board: 
-            phase: <phase>
-            action: <action>
+            phase: ii-i
+            action: refactor
         views:
           directory: true
           board: true
           docs: true
-          python: true
-          ontology/app/main: false
-          ontology/app/config: true
+          python: false
+          ontology/main: false
+          ontology/app/config: false
           ontology/app/models: true
           ontology/app/hooks: true
           ontology/app/game: true
           ontology/app/assets: true
           ontology/libs/core: false
-          ontology/libs/graphics: false
+          ontology/libs/graphics: true
           ontology/schemas/assets: false
-          ontology/schemas/intents: false
-          ontology/schemas/items: false
-          ontology/schemas/player: false
+          ontology/schemas/intentions: false
+          ontology/schemas/equipment: false
+          ontology/schemas/mappings: false
+          ontology/schemas/menus: true

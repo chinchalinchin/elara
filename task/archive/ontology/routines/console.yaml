@@ -6,27 +6,27 @@ task:
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology - Debug"
+    title: "Ontology: Console"
     # -------------------------------------------
     content: |
-      Assist in debugging the application. The most recent application execution is available in the Shell section directly below.
+      <content>
     # -------------------------------------------
     shell:
-    # 1. Asset State
-    - cat /home/grant/Projects/ontology/src/data/mappings/main.yaml
-    - cat /home/grant/Projects/ontology/src/data/equipment/main.yaml
-    # 2. Asset Configurations
-    - cat /home/grant/Projects/ontology/src/assets/main.yaml
+    ## INITIAL CONDITIONS
+    # 1. Configuration Files
+    - cat /home/grant/Projects/ontology/src/data/config/actions/main.yaml
+    - cat /home/grant/Projects/ontology/src/data/config/recipes/main.yaml
+    - cat /home/grant/Projects/ontology/src/data/config/mappings/main.yaml
+    # 2. Property Files
     - cat /home/grant/Projects/ontology/src/assets/sheets/main.yaml
     # 3. State Files
     - ls /home/grant/Projects/ontology/src/data/state/world-01
     - cat /home/grant/Projects/ontology/src/data/state/world-01/tiles.yaml
     - cat /home/grant/Projects/ontology/src/data/state/world-01/player.yaml  
-    # 4. Compile Cython
-    - python setup.py build_ext --inplace
-    # 5. Render Background
+    ## EXECUTION
+    # 1. Render Background
     - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
-    # 6. Render Stateful Assets
+    # 2. Render Stateful Assets
     - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build
 # ------------------------------------------------
   tools:
@@ -36,14 +36,14 @@ task:
           repo: ontology
           group: chinchalinchin
           board: 
-            phase: ii
-            action: debug
+            phase: ii-iii
+            action: refactor
         views:
           directory: true
           board: true
           docs: true
           python: false
-          ontology/main: false
+          ontology/main: true
           ontology/app/assets: true
           ontology/app/config: true
           ontology/app/game: true
@@ -51,7 +51,7 @@ task:
           ontology/app/models: true
           ontology/libs/core: false
           ontology/libs/graphics: true
-          ontology/schemas/assets: true
+          ontology/schemas/assets: false
           ontology/schemas/intentions: false
           ontology/schemas/mappings: false
           ontology/schemas/menus: false

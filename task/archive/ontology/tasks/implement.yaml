@@ -22,22 +22,22 @@ task:
           repo: ontology
           group: chinchalinchin
           board: 
-            phase: ii-ii
+            phase: ii-i
             action: refactor
         views:
           directory: true
           board: true
           docs: true
-          python: true
-          ontology/app/main: false
-          ontology/app/config: true
-          ontology/app/models: true
-          ontology/app/hooks: true
-          ontology/app/game: true
+          python: false
+          ontology/main: false
           ontology/app/assets: true
+          ontology/app/config: true
+          ontology/app/game: true
+          ontology/app/hooks: true
+          ontology/app/models: true
           ontology/libs/core: false
-          ontology/libs/graphics: false
-          ontology/schemas/assets: false
-          ontology/schemas/intents: false
-          ontology/schemas/items: false
-          ontology/schemas/player: false
+          ontology/libs/graphics: true
+          ontology/schemas/assets: true
+          ontology/schemas/intentions: false
+          ontology/schemas/mappings: false
+          ontology/schemas/menus: false
