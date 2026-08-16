@@ -28,8 +28,8 @@ task:
           directory: true
           board: true
           docs: true
-          python: true
-          ontology/main: false
+          python: false
+          ontology/main: true
           ontology/app/assets: true
           ontology/app/config: true
           ontology/app/game: true
@@ -37,7 +37,7 @@ task:
           ontology/app/models: true
           ontology/libs/core: false
           ontology/libs/graphics: true
-          ontology/schemas/assets: true
+          ontology/schemas/assets: false
           ontology/schemas/intentions: false
           ontology/schemas/mappings: false
           ontology/schemas/menus: false
