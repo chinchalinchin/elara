@@ -2,14 +2,13 @@
 {% include "./context/index.md.j2" %}
 ---
 {{ '\n' }}
-{%- endif -%}
-# Task: {{ task.ticket.title }}
-
-{{ task.ticket.content }}
+{% endif %}
 {% if task.ticket.shell | length > 0 -%}
----
+# Tool: Shell
 
-# Shell: localhost
+## Views
+
+### View: localhost
 
 - This section contains additional information, scraped at prompt-time.
 
@@ -21,4 +20,10 @@
 ```
 
 {% endfor %}
-{% endif %}
+
+---
+{{ '\n' }}
+{%- endif -%}
+# Task: {{ task.ticket.title }}
+
+{{ task.ticket.content }}

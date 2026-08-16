@@ -244,9 +244,12 @@ views:
             src/app/game/board.py: python
             src/app/game/devices.py: python
             src/app/game/engine.py: python
-            src/app/game/mechanics.py: python
-            src/app/game/maps.py: python
             src/app/game/screen.py: python
+        ontology/app/game/logic:
+          title: "Ontology: Logic"
+          files:
+            src/app/game/logic/mechanics.py: python
+            src/app/game/logic/maps.py: python
         ontology/app/hooks:
           title: "Ontology: Hooks"
           files:
@@ -259,6 +262,31 @@ views:
             src/app/models/groups.py: python
             src/app/models/properties.py: python
             src/app/models/state.py: python
+        ontology/data/properties:
+          title: "Ontology: Properties Data"
+          files:
+            src/assets/crafts/main.yaml: yaml
+            src/assets/cursors/main.yaml: yaml
+            src/assets/effects/main.yaml: yaml
+            src/assets/objects/main.yaml: yaml
+            src/assets/resources/main.yaml: yaml
+            src/assets/sheets/main.yaml: yaml
+            src/assets/sounds/main.yaml: yaml
+            src/assets/tiles/main.yaml: yaml
+            src/assets/widgets/main.yaml: yaml
+        ontology/data/configuration:
+          title: "Ontology: Configuration Data"
+          files:
+            src/data/config/actions/main.yaml: yaml
+            src/data/config/intentions/main.yaml: yaml
+            src/data/config/mappings/main.yaml: yaml
+            src/data/config/menus/main.yaml: yaml
+            src/data/config/recipes/main.yaml: yaml
+        ontology/data/state:
+          title: "Ontology: State Data"
+          files:
+            src/data/state/world-01/tiles.yaml: yaml
+            src/data/state/world-01/player.yaml: yaml
         ontology/libs/core:
           title: "Ontology: Cython Core"
           files:
@@ -281,23 +309,12 @@ views:
             docs/.static/yaml/asset-state.yaml: yaml
             docs/.static/yaml/data-recipes.yaml: yaml
             docs/.static/yaml/data-actions.yaml: yaml
-            docs/.static/yaml/examples/default-recipes.yaml: yaml
-            docs/.static/yaml/examples/default-actions.yaml: yaml
-        ontology/schemas/intents:
-          title: "Ontology: Intention Schemas"
+        ontology/schemas/configuration:
+          title: "Ontology: Configuration Schemas"
           files:
-            docs/.static/yaml/examples/default-intention-matrix.yaml: yaml
             docs/.static/yaml/data-intentions.yaml: yaml
-        ontology/schemas/mappings:
-          title: "Ontology: Mapping Schemas"
-          files: 
-            docs/.static/yaml/examples/default-mappings.yaml: yaml
             docs/.static/yaml/data-mappings.yaml: yaml
-        ontology/schemas/menus:
-          title: "Ontology: Widget Schemas"
-          files: 
             docs/.static/yaml/data-menus.yaml: yaml
-            docs/.static/yaml/examples/default-menus.yaml: yaml
         # -------------------- SCRILLA
         # ----------------------------
         scrilla/build:

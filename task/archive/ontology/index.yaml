@@ -48,11 +48,13 @@ task:
           ontology/app/assets: true
           ontology/app/config: true
           ontology/app/game: true
+          ontology/app/game/logic: false
           ontology/app/hooks: true
           ontology/app/models: true
+          ontology/data/configuration: false
+          ontology/data/state: false
+          ontology/data/properties: false
           ontology/libs/core: false
           ontology/libs/graphics: true
           ontology/schemas/assets: false
-          ontology/schemas/intentions: false
-          ontology/schemas/mappings: false
-          ontology/schemas/menus: false
+          ontology/schemas/configurations: false
