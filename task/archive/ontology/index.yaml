@@ -48,7 +48,8 @@ task:
           ontology/app/assets: true
           ontology/app/config: true
           ontology/app/game: true
-          ontology/app/game/logic: false
+          ontology/app/game/logic/maps: true
+          ontology/app/game/logic/mechanics: true
           ontology/app/hooks: true
           ontology/app/models: true
           ontology/data/configuration: false

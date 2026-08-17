@@ -50,7 +50,8 @@ task:
           ontology/app/assets: false
           ontology/app/config: false
           ontology/app/game: true
-          ontology/app/game/logic: false
+          ontology/app/game/logic/maps: true
+          ontology/app/game/logic/mechanics: true
           ontology/app/hooks: true
           ontology/app/models: false
           ontology/libs/core: true

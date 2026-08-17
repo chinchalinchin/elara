@@ -245,11 +245,17 @@ views:
             src/app/game/devices.py: python
             src/app/game/engine.py: python
             src/app/game/screen.py: python
-        ontology/app/game/logic:
-          title: "Ontology: Logic"
+        ontology/app/game/logic/maps:
+          title: "Ontology: Maps"
           files:
-            src/app/game/logic/mechanics.py: python
             src/app/game/logic/maps.py: python
+        ontology/app/game/logic/mechanics:
+          title: "Ontology: Mechanics"
+          files:
+            src/app/game/logic/mechanics/core.py: python
+            src/app/game/logic/mechanics/spatial.py: python
+            src/app/game/logic/mechanics/intentional.py: python
+        ontology/app/game/logic/mechanics/intentional:
         ontology/app/hooks:
           title: "Ontology: Hooks"
           files:

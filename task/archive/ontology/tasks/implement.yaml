@@ -14,10 +14,10 @@ task:
       **Priorities**
 
       1. Implement the next task on the Task Board. See [Task Board](#view-ontology-task-board) for current tasking.
-      2. If applicable, debug the latest execution of the test pipeline. See [Shell](#tool-shell) for test pipeline output.
+    # 2. If applicable, debug the latest execution of the test pipeline. See [Shell](#tool-shell) for test pipeline output.
     # -------------------------------------------
-    shell:
-      - python /home/grant/Projects/ontology/src/cli.py start world-01
+    shell: []
+      # - python /home/grant/Projects/ontology/src/cli.py start world-01
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -35,15 +35,16 @@ task:
           python: false
           ontology/main: false
           ontology/app/assets: true
-          ontology/app/config: true
+          ontology/app/config: false
           ontology/app/game: true
-          ontology/app/game/logic: true
-          ontology/app/hooks: true
+          ontology/app/game/logic/maps: true
+          ontology/app/game/logic/mechanics: true
+          ontology/app/hooks: false
           ontology/app/models: true
           ontology/data/configuration: false
           ontology/data/state: false
           ontology/data/properties: false
-          ontology/libs/core: false
+          ontology/libs/core: true
           ontology/libs/graphics: false
           ontology/schemas/assets: false
           ontology/schemas/configurations: false
