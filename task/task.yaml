@@ -2,49 +2,52 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: 
-    guidelines: 
-      coding: true
+  system: null
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology - Implement"
+    title: "Ontology: Console"
     # -------------------------------------------
-    content: |
-      **Priorities**
-
-      1. Implement the next task on the Task Board. See [Task Board](#view-ontology-task-board) for current tasking.
-    # 2. If applicable, debug the latest execution of the test pipeline. See [Shell](#tool-shell) for test pipeline output.
+    content: 
+      Debug the test pipeline located in the [Shell](#tool-shell) section.
     # -------------------------------------------
-    shell: []
-      # - python /home/grant/Projects/ontology/src/cli.py start world-01
+    shell:
+      ## EXECUTION
+      # 1. Render Background
+      # - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
+      # 2. Render Stateful Assets
+      # - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build/ 
+      # 3. Start Engine
+      - python /home/grant/Projects/ontology/src/cli.py start world-01
 # ------------------------------------------------
   tools:
     # -------------------------------------------
-    github: 
-      - parameters:
-          repo: ontology
-          group: chinchalinchin
-          board: 
-            phase: '04'
-            action: implement
-        views:
-          directory: true
-          board: true
-          docs: true
-          python: false
-          ontology/main: false
-          ontology/app/assets: true
-          ontology/app/config: false
-          ontology/app/game: true
-          ontology/app/game/logic/maps: true
-          ontology/app/game/logic/mechanics: true
-          ontology/app/hooks: false
-          ontology/app/models: true
-          ontology/data/configuration: false
-          ontology/data/state: false
-          ontology/data/properties: false
-          ontology/libs/core: true
-          ontology/libs/graphics: false
-          ontology/schemas/assets: false
-          ontology/schemas/configurations: false
+    # github: 
+    #   - parameters:
+    #       repo: ontology
+    #       group: chinchalinchin
+    #       board: 
+    #         phase: '04'
+    #         action: implement
+    #     views:
+    #       directory: false
+    #       board: false
+    #       docs: false
+    #       python: false
+    #       ontology/main: false
+    #       ontology/app/assets: false
+    #       ontology/app/config: false
+    #       ontology/app/game: false
+    #       ontology/app/game/logic/maps: false
+    #       ontology/app/game/logic/mechanics: false
+    #       ontology/app/game/logic/mechanics/spatial: false
+    #       ontology/app/game/logic/mechanics/intentional: false
+    #       ontology/app/hooks: false
+    #       ontology/app/models: false
+    #       ontology/data/configuration: false
+    #       ontology/data/state: true
+    #       ontology/data/properties: true
+    #       ontology/libs/core: false
+    #       ontology/libs/graphics: false
+    #       ontology/schemas/assets: false
+    #       ontology/schemas/configurations: false

@@ -43,18 +43,23 @@ task:
             action: report
         views:
           directory: true
-          board: false
-          docs: false
+          board: true
+          docs: true
           python: false
-          ontology/main: true
-          ontology/app/assets: false
+          ontology/main: false
+          ontology/app/assets: true
           ontology/app/config: false
           ontology/app/game: true
-          ontology/app/game/logic/maps: true
+          ontology/app/game/logic/maps: false
           ontology/app/game/logic/mechanics: true
-          ontology/app/hooks: true
-          ontology/app/models: false
+          ontology/app/game/logic/mechanics/spatial: true
+          ontology/app/game/logic/mechanics/intentional: false
+          ontology/app/hooks: false
+          ontology/app/models: true
+          ontology/data/configuration: false
+          ontology/data/state: false
+          ontology/data/properties: false
           ontology/libs/core: true
-          ontology/libs/graphics: true
+          ontology/libs/graphics: false
           ontology/schemas/assets: false
           ontology/schemas/configurations: false

@@ -1,6 +1,6 @@
 task:
 # ------------------------------------------------
-  context: false
+  context: true
 # ------------------------------------------------
   system: null
 # ------------------------------------------------
@@ -14,9 +14,9 @@ task:
     shell:
       ## EXECUTION
       # 1. Render Background
-      - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
+      # - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
       # 2. Render Stateful Assets
-      - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build/ 
+      # - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build/ 
       # 3. Start Engine
       - python /home/grant/Projects/ontology/src/cli.py start world-01
 # ------------------------------------------------
@@ -30,20 +30,22 @@ task:
             phase: '04'
             action: implement
         views:
-          directory: true
-          board: true
-          docs: true
+          directory: false
+          board: false
+          docs: false
           python: false
-          ontology/main: true
-          ontology/app/assets: true
+          ontology/main: false
+          ontology/app/assets: false
           ontology/app/config: false
-          ontology/app/game: true
-          ontology/app/game/logic/maps: true
-          ontology/app/game/logic/mechanics: true
-          ontology/app/hooks: true
-          ontology/app/models: true
+          ontology/app/game: false
+          ontology/app/game/logic/maps: false
+          ontology/app/game/logic/mechanics: false
+          ontology/app/game/logic/mechanics/spatial: false
+          ontology/app/game/logic/mechanics/intentional: false
+          ontology/app/hooks: false
+          ontology/app/models: false
           ontology/data/configuration: false
-          ontology/data/state: false
+          ontology/data/state: true
           ontology/data/properties: false
           ontology/libs/core: false
           ontology/libs/graphics: false

@@ -11,24 +11,7 @@ task:
     content: |
       <content>
     # -------------------------------------------
-    shell:
-      ## INITIAL CONDITIONS
-      # 1. Configuration Files
-      - cat /home/grant/Projects/ontology/src/data/config/actions/main.yaml
-      - cat /home/grant/Projects/ontology/src/data/config/intentions/main.yaml
-      - cat /home/grant/Projects/ontology/src/data/config/recipes/main.yaml
-      - cat /home/grant/Projects/ontology/src/data/config/mappings/main.yaml
-      # 2. Property Files
-      - cat /home/grant/Projects/ontology/src/assets/sheets/main.yaml
-      # 3. State Files
-      - ls /home/grant/Projects/ontology/src/data/state/world-01
-      - cat /home/grant/Projects/ontology/src/data/state/world-01/tiles.yaml
-      - cat /home/grant/Projects/ontology/src/data/state/world-01/player.yaml  
-      ## EXECUTION
-      # 1. Render Background
-      - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
-      # 2. Render Stateful Assets
-      - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build/ --layer '0' --out /home/grant/Projects/ontology/build
+    shell: [ ]
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -37,25 +20,27 @@ task:
           repo: ontology
           group: chinchalinchin
           board: 
-            phase: ii-iii
+            phase: 04-01
             action: refactor
         views:
           directory: true
           board: true
           docs: true
           python: false
-          ontology/main: true
+          ontology/main: false
           ontology/app/assets: true
-          ontology/app/config: true
+          ontology/app/config: false
           ontology/app/game: true
-          ontology/app/game/logic/maps: true
+          ontology/app/game/logic/maps: false
           ontology/app/game/logic/mechanics: true
-          ontology/app/hooks: true
+          ontology/app/game/logic/mechanics/spatial: true
+          ontology/app/game/logic/mechanics/intentional: false
+          ontology/app/hooks: false
           ontology/app/models: true
           ontology/data/configuration: false
           ontology/data/state: false
           ontology/data/properties: false
-          ontology/libs/core: false
-          ontology/libs/graphics: true
+          ontology/libs/core: true
+          ontology/libs/graphics: false
           ontology/schemas/assets: false
           ontology/schemas/configurations: false

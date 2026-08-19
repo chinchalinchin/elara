@@ -237,11 +237,11 @@ views:
             src/app/config/enums.py: python
             src/app/config/loader.py: python
             src/app/config/settings.py: python
-            src/app/config/validators.py: python
         ontology/app/game:
           title: "Ontology: Game"
           files:
             src/app/game/board.py: python
+            src/app/game/cradle.py: python
             src/app/game/devices.py: python
             src/app/game/engine.py: python
             src/app/game/screen.py: python
@@ -253,9 +253,22 @@ views:
           title: "Ontology: Mechanics"
           files:
             src/app/game/logic/mechanics/core.py: python
-            src/app/game/logic/mechanics/spatial.py: python
             src/app/game/logic/mechanics/intentional.py: python
+        ontology/app/game/logic/mechanics/spatial:
+          title: "Ontology: Spatial Mechanics"
+          files:
+            src/app/game/logic/mechanics/spatial/base.py: python
+            src/app/game/logic/mechanics/spatial/collision.py: python
+            src/app/game/logic/mechanics/spatial/combat.py: python
+            src/app/game/logic/mechanics/spatial/projectile.py: python 
+            src/app/game/logic/mechanics/spatial/switch.py: python
         ontology/app/game/logic/mechanics/intentional:
+          title: "Ontology: Intentional Mechanics"
+          files:
+            src/app/game/logic/mechanics/intentional/commerce.py: python
+            src/app/game/logic/mechanics/intentional/player.py: python
+            src/app/game/logic/mechanics/intentional/speech.py: python
+            src/app/game/logic/mechanics/intentional/transition.py: python
         ontology/app/hooks:
           title: "Ontology: Hooks"
           files:
@@ -264,6 +277,7 @@ views:
         ontology/app/models:
           title: "Ontology: Models"
           files:
+            src/app/models/adapters.py: python
             src/app/models/config.py: python
             src/app/models/groups.py: python
             src/app/models/properties.py: python
@@ -293,6 +307,7 @@ views:
           files:
             src/data/state/world-01/tiles.yaml: yaml
             src/data/state/world-01/player.yaml: yaml
+            src/data/state/world-01/objects.yaml: yaml
         ontology/libs/core:
           title: "Ontology: Cython Core"
           files:
@@ -313,11 +328,11 @@ views:
           files:
             docs/.static/yaml/asset-properties.yaml: yaml
             docs/.static/yaml/asset-state.yaml: yaml
-            docs/.static/yaml/data-recipes.yaml: yaml
-            docs/.static/yaml/data-actions.yaml: yaml
         ontology/schemas/configuration:
           title: "Ontology: Configuration Schemas"
           files:
+            docs/.static/yaml/data-actions.yaml: yaml
+            docs/.static/yaml/data-recipes.yaml: yaml
             docs/.static/yaml/data-intentions.yaml: yaml
             docs/.static/yaml/data-mappings.yaml: yaml
             docs/.static/yaml/data-menus.yaml: yaml

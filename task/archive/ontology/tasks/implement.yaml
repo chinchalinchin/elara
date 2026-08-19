@@ -13,11 +13,10 @@ task:
     content: |
       **Priorities**
 
-      1. Implement the next task on the Task Board. See [Task Board](#view-ontology-task-board) for current tasking.
-    # 2. If applicable, debug the latest execution of the test pipeline. See [Shell](#tool-shell) for test pipeline output.
+      - Implement the next task on the Task Board. See [Task Board](#view-ontology-task-board) for current tasking.
     # -------------------------------------------
     shell: []
-      # - python /home/grant/Projects/ontology/src/cli.py start world-01
+
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -26,8 +25,8 @@ task:
           repo: ontology
           group: chinchalinchin
           board: 
-            phase: '04'
-            action: implement
+            phase: '04-01'
+            action: refactor
         views:
           directory: true
           board: true
@@ -37,8 +36,10 @@ task:
           ontology/app/assets: true
           ontology/app/config: false
           ontology/app/game: true
-          ontology/app/game/logic/maps: true
+          ontology/app/game/logic/maps: false
           ontology/app/game/logic/mechanics: true
+          ontology/app/game/logic/mechanics/spatial: true
+          ontology/app/game/logic/mechanics/intentional: false
           ontology/app/hooks: false
           ontology/app/models: true
           ontology/data/configuration: false
