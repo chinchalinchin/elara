@@ -36,7 +36,7 @@ task:
           repo: ontology
           group: chinchalinchin
           board: 
-            phase: '04-02'
+            phase: '04-03'
             action: refactor
         views:
           directory: true
@@ -45,13 +45,14 @@ task:
           python: false
           ontology/main: false
           ontology/app/assets: true
-          ontology/app/config: true
+          ontology/app/config: false
           ontology/app/game: true
-          ontology/app/game/logic/maps: true
+          ontology/app/game/logic/maps: false
           ontology/app/game/logic/mechanics: true
+          ontology/app/game/logic/mechanics/motion: true
           ontology/app/game/logic/mechanics/spatial: true
           ontology/app/game/logic/mechanics/intentional: false
-          ontology/app/hooks: true
+          ontology/app/hooks: false
           ontology/app/models: true
           ontology/data/configuration: false
           ontology/data/state: false

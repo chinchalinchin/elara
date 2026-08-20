@@ -254,6 +254,12 @@ views:
           files:
             src/app/game/logic/mechanics/core.py: python
             src/app/game/logic/mechanics/intentional.py: python
+        ontology/app/game/logic/mechanics/motion:
+          title: "Ontology: Motion"
+          files:
+            src/app/game/logic/mechanics/motion/frictive.py: python
+            src/app/game/logic/mechanics/motion/kinematics.py: python
+            src/app/game/logic/mechanics/motion/motive.py: python
         ontology/app/game/logic/mechanics/spatial:
           title: "Ontology: Spatial Mechanics"
           files:
@@ -308,6 +314,7 @@ views:
             src/data/state/world-01/tiles.yaml: yaml
             src/data/state/world-01/player.yaml: yaml
             src/data/state/world-01/objects.yaml: yaml
+            src/data/state/world-01/struts.yaml: yaml
         ontology/libs/core:
           title: "Ontology: Cython Core"
           files:

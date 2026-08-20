@@ -40,6 +40,7 @@ task:
           ontology/app/game: false
           ontology/app/game/logic/maps: false
           ontology/app/game/logic/mechanics: false
+          ontology/app/game/logic/mechanics/motion: false
           ontology/app/game/logic/mechanics/spatial: false
           ontology/app/game/logic/mechanics/intentional: false
           ontology/app/hooks: false

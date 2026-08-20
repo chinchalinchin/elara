@@ -52,6 +52,7 @@ task:
           ontology/app/game: true
           ontology/app/game/logic/maps: false
           ontology/app/game/logic/mechanics: true
+          ontology/app/game/logic/mechanics/motion: true
           ontology/app/game/logic/mechanics/spatial: true
           ontology/app/game/logic/mechanics/intentional: false
           ontology/app/hooks: false
