@@ -26,29 +26,7 @@ task:
       - parameters:
           repo: ontology
           group: chinchalinchin
-          board: 
-            phase: '04'
-            action: implement
         views:
-          directory: false
-          board: false
-          docs: false
-          python: false
-          ontology/main: false
-          ontology/app/assets: false
-          ontology/app/config: false
-          ontology/app/game: false
-          ontology/app/game/logic/maps: false
-          ontology/app/game/logic/mechanics: false
-          ontology/app/game/logic/mechanics/motion: false
-          ontology/app/game/logic/mechanics/spatial: false
-          ontology/app/game/logic/mechanics/intentional: false
-          ontology/app/hooks: false
-          ontology/app/models: false
           ontology/data/configuration: false
           ontology/data/state: true
           ontology/data/properties: false
-          ontology/libs/core: false
-          ontology/libs/graphics: false
-          ontology/schemas/assets: false
-          ontology/schemas/configurations: false

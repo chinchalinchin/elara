@@ -29,13 +29,14 @@ task:
           python: false
           ontology/main: false
           ontology/app/assets: true
-          ontology/app/config: false
+          ontology/app/config: true
           ontology/app/game: true
           ontology/app/game/logic/maps: false
-          ontology/app/game/logic/mechanics: true
-          ontology/app/game/logic/mechanics/spatial: true
+          ontology/app/game/logic/mechanics: false
+          ontology/app/game/logic/mechanics/motion: false
+          ontology/app/game/logic/mechanics/spatial: false
           ontology/app/game/logic/mechanics/intentional: false
-          ontology/app/hooks: false
+          ontology/app/hooks: true
           ontology/app/models: true
           ontology/data/configuration: false
           ontology/data/state: false

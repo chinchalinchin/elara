@@ -13,7 +13,7 @@ task:
     content: |
       **Priorities**
 
-      - Implement the next task on the Task Board. See [Task Board](#view-ontology-task-board) for current tasking.
+      - Implement the next task(s) on the [Task Board](#view-ontology-task-board).
     # -------------------------------------------
     shell: []
 
@@ -25,8 +25,8 @@ task:
           repo: ontology
           group: chinchalinchin
           board: 
-            phase: '04-03'
-            action: refactor
+            phase: '04-02'
+            action: implement
         views:
           directory: true
           board: true
@@ -37,15 +37,12 @@ task:
           ontology/app/config: false
           ontology/app/game: true
           ontology/app/game/logic/maps: false
-          ontology/app/game/logic/mechanics: true
-          ontology/app/game/logic/mechanics/motion: true
+          ontology/app/game/logic/mechanics: false
+          ontology/app/game/logic/mechanics/motion: false
           ontology/app/game/logic/mechanics/spatial: true
           ontology/app/game/logic/mechanics/intentional: false
           ontology/app/hooks: false
           ontology/app/models: true
-          ontology/data/configuration: false
-          ontology/data/state: false
-          ontology/data/properties: false
           ontology/libs/core: true
           ontology/libs/graphics: false
           ontology/schemas/assets: false

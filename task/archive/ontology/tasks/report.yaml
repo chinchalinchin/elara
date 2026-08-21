@@ -57,9 +57,6 @@ task:
           ontology/app/game/logic/mechanics/intentional: false
           ontology/app/hooks: false
           ontology/app/models: true
-          ontology/data/configuration: false
-          ontology/data/state: false
-          ontology/data/properties: false
           ontology/libs/core: true
           ontology/libs/graphics: false
           ontology/schemas/assets: false

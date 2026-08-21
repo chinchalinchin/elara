@@ -1,24 +1,22 @@
 task:
 # ------------------------------------------------
-  context: false
+  context: true
 # ------------------------------------------------
-  system: null
+  system: 
+    guidelines: 
+      coding: true
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology: Console"
+    title: "Ontology - Implement"
     # -------------------------------------------
-    content: 
-      Debug the test pipeline located in the [Shell](#tool-shell) section.
+    content: |
+      **Priorities**
+
+      - Implement the next task(s) on the [Task Board](#view-ontology-task-board).
     # -------------------------------------------
-    shell:
-      ## EXECUTION
-      # 1. Render Background
-      # - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
-      # 2. Render Stateful Assets
-      # - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build/ 
-      # 3. Start Engine
-      - python /home/grant/Projects/ontology/src/cli.py start world-01
+    shell: []
+
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -27,28 +25,25 @@ task:
           repo: ontology
           group: chinchalinchin
           board: 
-            phase: '04'
-            action: implement
+            phase: '04-02'
+            action: refactor
         views:
-          directory: false
-          board: false
-          docs: false
+          directory: true
+          board: true
+          docs: true
           python: false
           ontology/main: false
-          ontology/app/assets: false
+          ontology/app/assets: true
           ontology/app/config: false
-          ontology/app/game: false
+          ontology/app/game: true
           ontology/app/game/logic/maps: false
           ontology/app/game/logic/mechanics: false
           ontology/app/game/logic/mechanics/motion: false
-          ontology/app/game/logic/mechanics/spatial: false
+          ontology/app/game/logic/mechanics/spatial: true
           ontology/app/game/logic/mechanics/intentional: false
           ontology/app/hooks: false
-          ontology/app/models: false
-          ontology/data/configuration: false
-          ontology/data/state: true
-          ontology/data/properties: false
-          ontology/libs/core: false
+          ontology/app/models: true
+          ontology/libs/core: true
           ontology/libs/graphics: false
           ontology/schemas/assets: false
           ontology/schemas/configurations: false
