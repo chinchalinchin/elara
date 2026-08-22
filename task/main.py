@@ -25,7 +25,7 @@ import sys
 # External Libraries
 
 import jinja2
-import yaml
+import yaml as pyyaml
 
 # -------------------- Configuration
 
@@ -92,7 +92,7 @@ def file(file_path: str) -> str:
         return f"Error reading file: {str(e)}"
 
 
-def contents(path: str) -> list:
+def markdown(path: str) -> list:
     """
     Returns an alphabetized list of all Markdown (.md) files contained directly 
     in the specified path, excluding 'index.md'. Ignores subdirectories.
@@ -126,6 +126,35 @@ def contents(path: str) -> list:
         print(f"Error reading directory '{path}': {e}")
         return []
 
+
+def yaml(path: str) -> list:
+    """
+    Returns a list of all YAML (.yaml, .yml) files contained directly in the 
+    specified path. Ignores subdirectories.
+
+    Args:
+        path (str): The directory path to inspect. Supports `~` expansion.
+
+    Returns:
+        list: A list of filenames ending in '.yaml' or '.yml'. Returns an empty 
+              list if the path is invalid, not a directory, or unreadable.
+    """
+    full_path = os.path.expanduser(path)
+
+    if not os.path.exists(full_path) or not os.path.isdir(full_path):
+        return []
+
+    try:
+        return [
+            f for f in os.listdir(full_path)
+            if (f.lower().endswith('.yaml') or f.lower().endswith('.yml'))
+            and os.path.isfile(os.path.join(full_path, f))
+        ]
+    except Exception as e:
+        print(f"Error reading directory '{path}': {e}")
+        return []
+
+
 def load(vars_path: str) -> dict:
     """
     Loads variables from a YAML file.
@@ -145,10 +174,10 @@ def load(vars_path: str) -> dict:
     try:
         with open(vars_path, 'r', encoding='utf-8') as f:
             # Use safe_load to avoid arbitrary code execution from YAML tags
-            data = yaml.safe_load(f)
+            data = pyyaml.safe_load(f)
             print(f"Loaded variables from '{vars_path}'.")
             return data if data else {}
-    except yaml.YAMLError as e:
+    except pyyaml.YAMLError as e:
         print(f"Error parsing YAML from '{vars_path}': {e}")
         return {}
     except Exception as e:
@@ -159,10 +188,10 @@ def load(vars_path: str) -> dict:
 def now(kind: str = None):
     dt = datetime.now()
     if kind == "apache":
-        return dt.strftime("%d/%b/%Y:%H:%M:%S") # 14/Feb/2026:13:36:00
+        return dt.strftime("%d/%b/%Y:%H:%M:%S")
     if kind == "java":
-        return dt.strftime("%Y-%m-%d %H:%M:%S") # 2026-02-14 13:36:00
-    return dt.strftime("%Y-%m-%d %H:%M:%S") # 2026-02-14 13:36:00
+        return dt.strftime("%Y-%m-%d %H:%M:%S")
+    return dt.strftime("%Y-%m-%d %H:%M:%S")
 
 
 def render(template_path: str, output_path: str, vars_path: str) -> None:
@@ -170,9 +199,8 @@ def render(template_path: str, output_path: str, vars_path: str) -> None:
     Orchestrates the Jinja2 rendering workflow.
 
     Initializes a Jinja2 Environment with the directory containing this script as the loader.
-    Injects the custom `command`, `file`, `now`, and `contents` functions into the global 
-    namespace, loads optional variables from YAML, renders the specified template, 
-    and writes the result to disk.
+    Injects the custom template functions into the global namespace, loads optional 
+    variables from YAML, renders the specified template, and writes the result to disk.
 
     Args:
         template_path (str): The filename of the Jinja2 template to render.
@@ -183,17 +211,15 @@ def render(template_path: str, output_path: str, vars_path: str) -> None:
         jinja2.TemplateNotFound: If the specified template file does not exist.
         Exception: For generic IO or rendering errors.
     """
-    # Determine the directory where this script is located
     script_dir = os.path.dirname(os.path.abspath(__file__))
     props_path = os.path.join(script_dir, DEFAULT_PROPS_FILE)
     views_path = os.path.join(script_dir, DEFAULT_VIEWS_FILE)
     overrides  = os.path.join(script_dir, OVERRIDES) 
 
     # Set up the Jinja2 environment
-    # Use FileSystemLoader to load templates from the script's directory
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader([ script_dir, overrides ]),
-        autoescape=False,  # False is preferred for Markdown generation
+        autoescape=False,
         trim_blocks=True,
         lstrip_blocks=True
     )
@@ -201,15 +227,15 @@ def render(template_path: str, output_path: str, vars_path: str) -> None:
     # Register custom functions into the Jinja globals
     env.globals['command'] = command
     env.globals['file'] = file
+    env.globals['markdown'] = markdown
+    env.globals['yaml'] = yaml
     env.globals['now'] = now
-    env.globals['contents'] = contents
 
-    # Load both context files
+    # Load context files
     task_data = load(vars_path)
     props_data = load(props_path)
     views_data = load(views_path)
 
-    # If keys collide, task_context (the specific task) wins.
     context = props_data | views_data | task_data
 
     try:

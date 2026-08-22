@@ -29,6 +29,7 @@ properties:
         ## MACOS
         # chinchalinchin: /Users/gmoore/Home/Projects/
         # cumberland-cloud: /Users/gmoore/Home/tf-modules/
+      directory: tree -L 3 --gitignore -I "build|*.so|*.png|__pycache__"
       docs: 
         path: docs/
         index: index.md
@@ -37,5 +38,7 @@ properties:
         index: index.md
       phases: 
         path: docs/.board/phases
+      actions:
+        path: .github/workflows
     jenkins:
       url: jenkins.chinchalinchin.com

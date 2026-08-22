@@ -12,13 +12,17 @@ task:
       Debug the test pipeline located in the [Shell](#tool-shell) section.
     # -------------------------------------------
     shell:
-      ## EXECUTION
+      ## -------- TESTING PIPELINE
+      ## ---- UNIT TESTS
+      # 1. Pytest
+      - pytest /home/grant/Projects/ontology/
+      ## ---- FUNCTIONAL TESTS 
       # 1. Render Background
       # - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
       # 2. Render Stateful Assets
       # - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build/ 
       # 3. Start Engine
-      - python /home/grant/Projects/ontology/src/cli.py start world-01
+      # - python /home/grant/Projects/ontology/src/cli.py start world-01
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -28,5 +32,5 @@ task:
           group: chinchalinchin
         views:
           ontology/data/configuration: false
-          ontology/data/state: true
+          ontology/data/state: false
           ontology/data/properties: false

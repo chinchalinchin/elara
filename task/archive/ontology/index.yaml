@@ -23,14 +23,20 @@ task:
             phase: 04-01
             action: refactor
         views:
+          # ------------------------------
+          # ----------------- GITHUB VIEWS
+          actions: true
           directory: true
           board: true
           docs: true
           python: false
+          # ------------------------------
+          # ------------------ SOURCE CODE
           ontology/main: false
+          # ---- APPLICATION LIBRARIES
           ontology/app/assets: true
-          ontology/app/config: true
-          ontology/app/game: true
+          ontology/app/config: false
+          ontology/app/game: false
           ontology/app/game/logic/maps: false
           ontology/app/game/logic/mechanics: false
           ontology/app/game/logic/mechanics/motion: false
@@ -38,10 +44,14 @@ task:
           ontology/app/game/logic/mechanics/intentional: false
           ontology/app/hooks: true
           ontology/app/models: true
+          # ---- CYTHON LIBRARIES
+          ontology/libs/core: false
+          ontology/libs/graphics: true
+          # ---- DATA & CONFIGURATION
+          ontology/data/properties: true
           ontology/data/configuration: false
           ontology/data/state: false
-          ontology/data/properties: false
-          ontology/libs/core: true
-          ontology/libs/graphics: false
-          ontology/schemas/assets: false
-          ontology/schemas/configurations: false
+          # ----- UNIT TESTS
+          ontology/tests/unit: true
+          ontology/tests/unit/app: false
+          ontology/tests/unit/libs: true

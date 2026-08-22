@@ -21,7 +21,6 @@ task:
 # ------------------------------------------------
   data:
     logs: []
-    logs: []
       # - parameters:
       #     host: <host>
       #     app: <apache | java>
@@ -77,13 +76,19 @@ task:
     #   - parameters:
     #       repo: <repo>
     #       group: <group>
+    #       board: 
+    #         phase: <phase>
+    #         action: <action>
     #     views:
-    # # GENERAL VIEWS
+    # # ------------------------ GENERAL VIEWS
+    #       actions: false
     #       directory: false
     #       docs: false
     #       board: false
-    # # CUSTOM VIEWS
-    #       ... 
+    #       python: false
+    # # ------------------------ CUSTOM VIEWS
+    #       app/main: false
+    # # ...
     # -------------------------------------------
     prometheus: []
       # - parameters:

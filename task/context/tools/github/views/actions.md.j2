@@ -1,0 +1,13 @@
+{% for task_data in task.tools.github if task_data.views.actions %}
+{% set repo_path = properties.tools.github.groups[task_data.parameters.group] + task_data.parameters.repo %}
+{% set actions_path = repo_path + "/" + properties.tools.github.actions.path %}
+### View: {{ task_data.parameters.repo | capitalize }} Github Actions
+
+{% for action in yaml(actions_path) %}
+**{{ actions_path }}/{{action}}**
+
+```yaml
+{{ file(actions_path + "/" + action) }}
+```
+{% endfor %}
+{% endfor %}

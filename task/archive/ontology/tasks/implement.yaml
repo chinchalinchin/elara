@@ -26,24 +26,37 @@ task:
           group: chinchalinchin
           board: 
             phase: '04-02'
-            action: implement
+            action: refactor
         views:
+          # ------------------------------
+          # ----------------- GITHUB VIEWS
+          actions: true
           directory: true
           board: true
           docs: true
           python: false
+          # ------------------------------
+          # ------------------ SOURCE CODE
           ontology/main: false
+          # ---- APPLICATION LIBRARIES
           ontology/app/assets: true
           ontology/app/config: false
-          ontology/app/game: true
+          ontology/app/game: false
           ontology/app/game/logic/maps: false
           ontology/app/game/logic/mechanics: false
           ontology/app/game/logic/mechanics/motion: false
-          ontology/app/game/logic/mechanics/spatial: true
+          ontology/app/game/logic/mechanics/spatial: false
           ontology/app/game/logic/mechanics/intentional: false
-          ontology/app/hooks: false
+          ontology/app/hooks: true
           ontology/app/models: true
-          ontology/libs/core: true
-          ontology/libs/graphics: false
-          ontology/schemas/assets: false
-          ontology/schemas/configurations: false
+          # ---- CYTHON LIBRARIES
+          ontology/libs/core: false
+          ontology/libs/graphics: true
+          # ---- DATA & CONFIGURATION
+          ontology/data/properties: true
+          ontology/data/configuration: false
+          ontology/data/state: false
+          # ----- UNIT TESTS
+          ontology/tests/unit: true
+          ontology/tests/unit/app: false
+          ontology/tests/unit/libs: true

@@ -292,30 +292,29 @@ views:
           title: "Ontology: Properties Data"
           files:
             src/assets/crafts/main.yaml: yaml
-            # src/assets/cursors/main.yaml: yaml
-            # src/assets/effects/main.yaml: yaml
+            src/assets/cursors/main.yaml: yaml
+            src/assets/effects/main.yaml: yaml
             src/assets/objects/main.yaml: yaml
-            # src/assets/resources/main.yaml: yaml
+            src/assets/resources/main.yaml: yaml
             src/assets/sheets/main.yaml: yaml
-            # src/assets/sounds/main.yaml: yaml
-            # src/assets/tiles/main.yaml: yaml
-            # src/assets/widgets/main.yaml: yaml
+            src/assets/sounds/main.yaml: yaml
+            src/assets/tiles/main.yaml: yaml
+            src/assets/widgets/main.yaml: yaml
         ontology/data/configuration:
           title: "Ontology: Configuration Data"
           files:
             src/data/config/compositions/main.yaml: yaml
-            # src/data/config/actions/main.yaml: yaml
-            # src/data/config/intentions/main.yaml: yaml
+            src/data/config/actions/main.yaml: yaml
+            src/data/config/intentions/main.yaml: yaml
             src/data/config/mappings/main.yaml: yaml
-            # src/data/config/menus/main.yaml: yaml
-            # src/data/config/recipes/main.yaml: yaml
+            src/data/config/menus/main.yaml: yaml
+            src/data/config/recipes/main.yaml: yaml
         ontology/data/state:
           title: "Ontology: State Data"
           files:
-            # src/data/state/world-01/tiles.yaml: yaml
+            src/data/state/world-01/tiles.yaml: yaml
             src/data/state/world-01/player.yaml: yaml
-            # src/data/state/world-01/objects.yaml: yaml
-            # src/data/state/world-01/crafts.yaml: yaml
+            src/data/state/world-01/objects.yaml: yaml
             src/data/state/world-01/compositions.yaml: yaml
         ontology/libs/core:
           title: "Ontology: Cython Core"
@@ -345,6 +344,23 @@ views:
             docs/.static/yaml/data-intentions.yaml: yaml
             docs/.static/yaml/data-mappings.yaml: yaml
             docs/.static/yaml/data-menus.yaml: yaml
+        ontology/tests/unit:
+          title: "Ontology: Unit Tests"
+          files:
+            pytest.ini: ini
+            tests/unit/conftest.py: python
+        ontology/tests/unit/app:
+          title: "Ontology: Application Tests"
+          files:
+            tests/unit/test_app_game_board.py: python
+            tests/unit/test_app_game_cradle.py: python
+            tests/unit/test_app_hooks_orchestrator.py: python
+            tests/unit/test_app_hooks_decomposer.py: python
+            tests/unit/test_app_hooks_factory.py: python
+        ontology/tests/unit/libs:
+          title: "Ontology: Library Tests"
+          files:
+            tests/unit/test_libs_graphics_registry.py: python
         # -------------------- SCRILLA
         # ----------------------------
         scrilla/build:

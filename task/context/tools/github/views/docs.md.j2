@@ -8,7 +8,7 @@
 
 {{ file(docs_path +  "/" + docs_index) }}
 
-{% for doc in contents(docs_path) %}
+{% for doc in markdown(docs_path) %}
 {{ file(docs_path +  "/" + doc) }}
 
 {% endfor %}

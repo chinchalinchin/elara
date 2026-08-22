@@ -11,26 +11,7 @@ task:
     content: |
       Assist in debugging the incident and create an RCA. Suggest ways of approaching the problem. Provide concrete debugging steps. If information is not present, do not make inferences; implement ways of scraping and dumping the data. The goal is to perform an exhaustive forensic autopsy of the application and its environment to isolate the cause of the behavior. Do not alter code unless it is to inject debugging output.
     # -------------------------------------------
-    shell:
-      ## INITIAL CONDITIONS
-      # 1. Configuration Files
-      # - cat /home/grant/Projects/ontology/src/data/config/actions/main.yaml
-      # - cat /home/grant/Projects/ontology/src/data/config/intentions/main.yaml
-      # - cat /home/grant/Projects/ontology/src/data/config/recipes/main.yaml
-      # - cat /home/grant/Projects/ontology/src/data/config/mappings/main.yaml
-      # 2. Property Files
-      # - cat /home/grant/Projects/ontology/src/assets/sheets/main.yaml
-      # 3. State Files
-      # - ls /home/grant/Projects/ontology/src/data/state/world-01
-      # - cat /home/grant/Projects/ontology/src/data/state/world-01/tiles.yaml
-      # - cat /home/grant/Projects/ontology/src/data/state/world-01/player.yaml  
-      ## EXECUTION
-      # 1. Render Background
-      - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
-      # 2. Render Stateful Assets
-      - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build/
-      # 3. Start Engine
-      # - python /home/grant/Projects/ontology/src/cli.py start world-01
+    shell: []
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -42,22 +23,35 @@ task:
             phase: 2026-08-09
             action: report
         views:
+          # ------------------------------
+          # ----------------- GITHUB VIEWS
+          actions: true
           directory: true
           board: true
           docs: true
           python: false
+          # ------------------------------
+          # ------------------ SOURCE CODE
           ontology/main: false
+          # ---- APPLICATION LIBRARIES
           ontology/app/assets: true
           ontology/app/config: false
-          ontology/app/game: true
+          ontology/app/game: false
           ontology/app/game/logic/maps: false
-          ontology/app/game/logic/mechanics: true
-          ontology/app/game/logic/mechanics/motion: true
-          ontology/app/game/logic/mechanics/spatial: true
+          ontology/app/game/logic/mechanics: false
+          ontology/app/game/logic/mechanics/motion: false
+          ontology/app/game/logic/mechanics/spatial: false
           ontology/app/game/logic/mechanics/intentional: false
-          ontology/app/hooks: false
+          ontology/app/hooks: true
           ontology/app/models: true
-          ontology/libs/core: true
-          ontology/libs/graphics: false
-          ontology/schemas/assets: false
-          ontology/schemas/configurations: false
+          # ---- CYTHON LIBRARIES
+          ontology/libs/core: false
+          ontology/libs/graphics: true
+          # ---- DATA & CONFIGURATION
+          ontology/data/properties: true
+          ontology/data/configuration: false
+          ontology/data/state: false
+          # ----- UNIT TESTS
+          ontology/tests/unit: true
+          ontology/tests/unit/app: false
+          ontology/tests/unit/libs: true
