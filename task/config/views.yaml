@@ -225,6 +225,7 @@ views:
             main.py: python
             setup.py: python
             src/cli.py: python
+        # ---- APPLICATION PACKAGES
         ontology/app/assets:
           title: "Ontology: Assets"
           files:
@@ -288,6 +289,7 @@ views:
             src/app/models/groups.py: python
             src/app/models/properties.py: python
             src/app/models/state.py: python
+        # ---- DATA & CONFIGURATION
         ontology/data/properties:
           title: "Ontology: Properties Data"
           files:
@@ -316,21 +318,23 @@ views:
             src/data/state/world-01/player.yaml: yaml
             src/data/state/world-01/objects.yaml: yaml
             src/data/state/world-01/compositions.yaml: yaml
+        # ---- CYTHON LIBRARIES
         ontology/libs/core:
           title: "Ontology: Cython Core"
           files:
-            libs/core/models.pxd: python
-            libs/core/models.pyx: python
-            libs/core/input.pyx: python
-            libs/core/math.pxd: python
-            libs/core/math.pyx: python
+            src/libs/core/models.pxd: python
+            src/libs/core/models.pyx: python
+            src/libs/core/input.pyx: python
+            src/libs/core/math.pxd: python
+            src/libs/core/math.pyx: python
         ontology/libs/graphics:
           title: "Ontology: Cython Graphics"
           files:
-            libs/graphics/render.pxd: python
-            libs/graphics/render.pyx: python
-            libs/graphics/registry.pxd: python
-            libs/graphics/registry.pyx: python
+            src/libs/graphics/render.pxd: python
+            src/libs/graphics/render.pyx: python
+            src/libs/graphics/registry.pxd: python
+            src/libs/graphics/registry.pyx: python
+        # ---- SCHEMAS & EXAMPLES
         ontology/schemas/assets:
           title: "Ontology: Asset Schemas"
           files:
@@ -344,6 +348,7 @@ views:
             docs/.static/yaml/data-intentions.yaml: yaml
             docs/.static/yaml/data-mappings.yaml: yaml
             docs/.static/yaml/data-menus.yaml: yaml
+        # ---- UNIT TESTS
         ontology/tests/unit:
           title: "Ontology: Unit Tests"
           files:
@@ -352,11 +357,12 @@ views:
         ontology/tests/unit/app:
           title: "Ontology: Application Tests"
           files:
-            tests/unit/test_app_game_board.py: python
-            tests/unit/test_app_game_cradle.py: python
-            tests/unit/test_app_hooks_orchestrator.py: python
-            tests/unit/test_app_hooks_decomposer.py: python
-            tests/unit/test_app_hooks_factory.py: python
+            # tests/unit/test_app_game_board.py: python
+            # tests/unit/test_app_game_cradle.py: python
+            tests/unit/test_app_game_screen.py: python
+            # tests/unit/test_app_hooks_decomposer.py: python
+            # tests/unit/test_app_hooks_factory.py: python
+            # tests/unit/test_app_hooks_orchestrator.py: python
         ontology/tests/unit/libs:
           title: "Ontology: Library Tests"
           files:

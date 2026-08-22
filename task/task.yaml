@@ -38,7 +38,7 @@ task:
           # ------------------------------
           # ------------------ SOURCE CODE
           ontology/main: false
-          # ---- APPLICATION LIBRARIES
+          # ---- APPLICATION PACKAGES
           ontology/app/assets: true
           ontology/app/config: false
           ontology/app/game: true
