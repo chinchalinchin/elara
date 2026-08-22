@@ -31,6 +31,11 @@ task:
           repo: ontology
           group: chinchalinchin
         views:
+          # ---- DATA & CONFIGURATION
+          ontology/data/properties: false
           ontology/data/configuration: false
           ontology/data/state: false
-          ontology/data/properties: false
+          # ----- UNIT TESTS
+          ontology/tests/unit: false
+          ontology/tests/unit/app: false
+          ontology/tests/unit/libs: false

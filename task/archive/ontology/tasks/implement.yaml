@@ -30,7 +30,7 @@ task:
         views:
           # ------------------------------
           # ----------------- GITHUB VIEWS
-          actions: true
+          actions: false
           directory: true
           board: true
           docs: true
@@ -38,12 +38,12 @@ task:
           # ------------------------------
           # ------------------ SOURCE CODE
           ontology/main: false
-          # ---- APPLICATION LIBRARIES
+          # ---- APPLICATION PACKAGES
           ontology/app/assets: true
           ontology/app/config: false
-          ontology/app/game: false
+          ontology/app/game: true
           ontology/app/game/logic/maps: false
-          ontology/app/game/logic/mechanics: false
+          ontology/app/game/logic/mechanics: true
           ontology/app/game/logic/mechanics/motion: false
           ontology/app/game/logic/mechanics/spatial: false
           ontology/app/game/logic/mechanics/intentional: false
@@ -51,12 +51,12 @@ task:
           ontology/app/models: true
           # ---- CYTHON LIBRARIES
           ontology/libs/core: false
-          ontology/libs/graphics: true
+          ontology/libs/graphics: false
           # ---- DATA & CONFIGURATION
-          ontology/data/properties: true
+          ontology/data/properties: false
           ontology/data/configuration: false
           ontology/data/state: false
           # ----- UNIT TESTS
           ontology/tests/unit: true
-          ontology/tests/unit/app: false
-          ontology/tests/unit/libs: true
+          ontology/tests/unit/app: true
+          ontology/tests/unit/libs: false

@@ -2,21 +2,27 @@ task:
 # ------------------------------------------------
   context: true
 # ------------------------------------------------
-  system: 
-    guidelines: 
-      coding: true
+  system: null
 # ------------------------------------------------
   ticket: 
     # -------------------------------------------
-    title: "Ontology - Implement"
+    title: "Ontology: Console"
     # -------------------------------------------
-    content: |
-      **Priorities**
-
-      - Implement the next task(s) on the [Task Board](#view-ontology-task-board).
+    content: 
+      Debug the test pipeline located in the [Shell](#tool-shell) section.
     # -------------------------------------------
-    shell: []
-
+    shell:
+      ## -------- TESTING PIPELINE
+      ## ---- UNIT TESTS
+      # 1. Pytest
+      - pytest /home/grant/Projects/ontology/
+      ## ---- FUNCTIONAL TESTS 
+      # 1. Render Background
+      # - python /home/grant/Projects/ontology/src/cli.py prerender world-01 --layer '0' --out /home/grant/Projects/ontology/build
+      # 2. Render Stateful Assets
+      # - python /home/grant/Projects/ontology/src/cli.py render world-01 --layer '0' --out /home/grant/Projects/ontology/build/ 
+      # 3. Start Engine
+      # - python /home/grant/Projects/ontology/src/cli.py start world-01
 # ------------------------------------------------
   tools:
     # -------------------------------------------
@@ -24,39 +30,12 @@ task:
       - parameters:
           repo: ontology
           group: chinchalinchin
-          board: 
-            phase: '04-02'
-            action: refactor
         views:
-          # ------------------------------
-          # ----------------- GITHUB VIEWS
-          actions: false
-          directory: true
-          board: true
-          docs: true
-          python: false
-          # ------------------------------
-          # ------------------ SOURCE CODE
-          ontology/main: false
-          # ---- APPLICATION PACKAGES
-          ontology/app/assets: true
-          ontology/app/config: false
-          ontology/app/game: true
-          ontology/app/game/logic/maps: false
-          ontology/app/game/logic/mechanics: false
-          ontology/app/game/logic/mechanics/motion: false
-          ontology/app/game/logic/mechanics/spatial: false
-          ontology/app/game/logic/mechanics/intentional: false
-          ontology/app/hooks: true
-          ontology/app/models: true
-          # ---- CYTHON LIBRARIES
-          ontology/libs/core: false
-          ontology/libs/graphics: true
           # ---- DATA & CONFIGURATION
-          ontology/data/properties: true
+          ontology/data/properties: false
           ontology/data/configuration: false
           ontology/data/state: false
           # ----- UNIT TESTS
-          ontology/tests/unit: true
+          ontology/tests/unit: false
           ontology/tests/unit/app: false
-          ontology/tests/unit/libs: true
+          ontology/tests/unit/libs: false

@@ -222,8 +222,8 @@ views:
         ontology/main:
           title: "Ontology: App Entrypoints"
           files:
-            main.py: python
             setup.py: python
+            src/main.py: python
             src/cli.py: python
         # ---- APPLICATION PACKAGES
         ontology/app/assets:
@@ -305,12 +305,12 @@ views:
         ontology/data/configuration:
           title: "Ontology: Configuration Data"
           files:
-            src/data/config/compositions/main.yaml: yaml
-            src/data/config/actions/main.yaml: yaml
-            src/data/config/intentions/main.yaml: yaml
+            # src/data/config/compositions/main.yaml: yaml
+            # src/data/config/actions/main.yaml: yaml
+            # src/data/config/intentions/main.yaml: yaml
             src/data/config/mappings/main.yaml: yaml
-            src/data/config/menus/main.yaml: yaml
-            src/data/config/recipes/main.yaml: yaml
+            # src/data/config/menus/main.yaml: yaml
+            # src/data/config/recipes/main.yaml: yaml
         ontology/data/state:
           title: "Ontology: State Data"
           files:
@@ -359,7 +359,10 @@ views:
           files:
             # tests/unit/test_app_game_board.py: python
             # tests/unit/test_app_game_cradle.py: python
-            tests/unit/test_app_game_screen.py: python
+            # tests/unit/test_app_game_devices.py: python
+            tests/unit/test_app_game_engine.py: python
+            tests/unit/test_app_game_mechanics_core.py: python
+            # tests/unit/test_app_game_screen.py: python
             # tests/unit/test_app_hooks_decomposer.py: python
             # tests/unit/test_app_hooks_factory.py: python
             # tests/unit/test_app_hooks_orchestrator.py: python
